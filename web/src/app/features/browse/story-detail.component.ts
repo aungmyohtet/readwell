@@ -11,7 +11,7 @@ import { Story, ChapterSummary } from '../../core/models/story.model';
       <a routerLink="/browse" class="back-link">← Back to Browse</a>
 
       @if (story()) {
-        <div class="story-hero">
+        <section class="story-hero section-card">
           <div class="hero-cover">
             @if (story()!.coverImageUrl) {
               <img [src]="story()!.coverImageUrl" [alt]="story()!.title" />
@@ -20,23 +20,47 @@ import { Story, ChapterSummary } from '../../core/models/story.model';
             }
           </div>
           <div class="hero-info">
-            <span class="level-badge {{ story()!.level }}">{{ story()!.level }}</span>
+            <div class="hero-topline">
+              <span class="level-badge {{ story()!.level }}">{{ story()!.level }}</span>
+              <span class="reading-copy">Read for meaning. Notice the form. Retrieve with the quiz.</span>
+            </div>
             <h1>{{ story()!.title }}</h1>
             <p class="description">{{ story()!.description }}</p>
             @if (story()!.author) {
-              <p class="author">by {{ story()!.author }}</p>
+              <p class="author">Written by {{ story()!.author }}</p>
             }
-          </div>
-        </div>
 
-        <div class="progress-bar-wrap">
-          <div class="progress-bar-track">
-            <div class="progress-bar-fill" [style.width.%]="completionPct()"></div>
+            <div class="hero-metrics">
+              <div class="metric card">
+                <span class="metric-value">{{ chapters().length }}</span>
+                <span class="metric-label">Chapters</span>
+              </div>
+              <div class="metric card">
+                <span class="metric-value">{{ totalVocabulary() }}</span>
+                <span class="metric-label">Vocabulary items</span>
+              </div>
+              <div class="metric card">
+                <span class="metric-value">{{ totalQuestions() }}</span>
+                <span class="metric-label">Quiz questions</span>
+              </div>
+            </div>
           </div>
-          <span class="progress-label">{{ completedCount() }}/{{ chapters().length }} completed</span>
-        </div>
+        </section>
 
-        <h2 class="section-title">Chapters</h2>
+        <section class="progress-panel card">
+          <div>
+            <span class="eyebrow">Story Progress</span>
+            <h2 class="section-title">Move chapter by chapter, with visible mastery.</h2>
+          </div>
+          <div class="progress-bar-wrap">
+            <div class="progress-bar-track">
+              <div class="progress-bar-fill" [style.width.%]="completionPct()"></div>
+            </div>
+            <span class="progress-label">{{ completedCount() }}/{{ chapters().length }} completed</span>
+          </div>
+        </section>
+
+        <h2 class="section-title chapter-heading">Chapters</h2>
         @if (loading()) {
           <div class="loading">Loading chapters...</div>
         } @else {
@@ -48,7 +72,7 @@ import { Story, ChapterSummary } from '../../core/models/story.model';
                   <div class="chapter-info">
                     <div class="chapter-title">{{ ch.title }}</div>
                     <div class="chapter-meta">
-                      <span>Complete Chapter {{ i }} to unlock</span>
+                      <span>Complete Chapter {{ i }} to unlock this one</span>
                     </div>
                   </div>
                 </div>
@@ -58,10 +82,11 @@ import { Story, ChapterSummary } from '../../core/models/story.model';
                     @if (ch.completed) { ✓ } @else { {{ ch.chapterNumber }} }
                   </div>
                   <div class="chapter-info">
+                    <div class="chapter-kicker">Chapter {{ ch.chapterNumber }}</div>
                     <div class="chapter-title">{{ ch.title }}</div>
                     <div class="chapter-meta">
-                      <span>{{ ch.vocabularyCount }} words</span>
-                      <span>{{ ch.comprehensionCount }} questions</span>
+                      <span>{{ ch.vocabularyCount }} vocabulary targets</span>
+                      <span>{{ ch.comprehensionCount }} quiz prompts</span>
                     </div>
                   </div>
                   <div class="chapter-right">
@@ -81,68 +106,115 @@ import { Story, ChapterSummary } from '../../core/models/story.model';
     </div>
   `,
   styles: [`
-    .back-link { color: #2d6cdf; font-size: 0.9rem; display: inline-block; margin-bottom: 20px; }
-    .story-hero { display: flex; gap: 24px; margin-bottom: 24px; align-items: flex-start; }
+    .back-link { color: var(--accent-strong); font-size: 0.92rem; display: inline-block; margin-bottom: 1rem; font-weight: 700; }
+    .story-hero {
+      display: grid;
+      grid-template-columns: 14rem minmax(0, 1fr);
+      gap: 1.35rem;
+      align-items: stretch;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
     .hero-cover {
-      flex-shrink: 0; width: 120px; height: 120px;
-      border-radius: 12px; overflow: hidden;
-      background: linear-gradient(135deg, #e3f0ff 0%, #f3e5f5 100%);
+      width: 100%; min-height: 14rem;
+      border-radius: 1.5rem; overflow: hidden;
+      background: linear-gradient(135deg, rgba(15, 118, 110, 0.16), rgba(245, 158, 11, 0.14));
       display: flex; align-items: center; justify-content: center;
       img { width: 100%; height: 100%; object-fit: cover; }
     }
-    .hero-emoji { font-size: 3rem; }
-    .hero-info { flex: 1; }
-    h1 { font-size: 1.5rem; margin: 8px 0 6px; }
-    .description { color: #555; font-size: 0.9rem; margin-bottom: 6px; }
-    .author { color: #888; font-size: 0.85rem; }
+    .hero-emoji { font-size: 4.4rem; }
+    .hero-info { display: flex; flex-direction: column; justify-content: center; }
+    .hero-topline { display: flex; align-items: center; gap: 0.8rem; flex-wrap: wrap; }
+    .reading-copy { color: var(--muted); font-size: 0.84rem; font-weight: 700; }
+    h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0.8rem 0 0.55rem; }
+    .description { color: var(--muted); font-size: 1rem; max-width: 42rem; }
+    .author { color: var(--muted); font-size: 0.88rem; margin-top: 0.55rem; }
 
-    .progress-bar-wrap {
-      display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin-top: 1.2rem;
     }
+    .metric {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.66);
+    }
+    .metric-value { font-size: 1.6rem; font-weight: 800; }
+    .metric-label { font-size: 0.8rem; color: var(--muted); }
+
+    .progress-panel {
+      display: grid;
+      gap: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+    .section-title { font-size: 1.4rem; }
+    .chapter-heading { margin-bottom: 0.95rem; }
+    .progress-bar-wrap { display: flex; align-items: center; gap: 12px; }
     .progress-bar-track {
-      flex: 1; height: 8px; background: #e8e8e8; border-radius: 4px; overflow: hidden;
+      flex: 1; height: 10px; background: rgba(29, 42, 40, 0.08); border-radius: 999px; overflow: hidden;
     }
     .progress-bar-fill {
-      height: 100%; background: #2d6cdf; border-radius: 4px;
+      height: 100%; background: linear-gradient(90deg, var(--accent), #14532d); border-radius: 999px;
       transition: width 0.4s ease;
     }
-    .progress-label { font-size: 0.8rem; color: #888; white-space: nowrap; }
+    .progress-label { font-size: 0.82rem; color: var(--muted); white-space: nowrap; font-weight: 700; }
 
-    .section-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; }
-    .loading { color: #888; padding: 24px 0; }
-    .chapter-list { display: flex; flex-direction: column; gap: 10px; }
+    .loading { color: var(--muted); padding: 24px 0; }
+    .chapter-list { display: flex; flex-direction: column; gap: 12px; }
 
     .chapter-item {
       display: flex; align-items: center; gap: 16px;
-      background: #fff; border: 1px solid #e8e8e8; border-radius: 10px;
-      padding: 14px 16px;
-      transition: background 0.15s, box-shadow 0.15s;
+      background: rgba(255, 252, 247, 0.8); border: 1px solid rgba(29, 42, 40, 0.08); border-radius: 20px;
+      padding: 16px 18px;
+      transition: background 0.15s, box-shadow 0.15s, transform 0.15s, border-color 0.15s;
       &:not(.locked) {
         cursor: pointer;
-        &:hover { background: #f8f9ff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+        &:hover {
+          background: #fffdf9;
+          box-shadow: 0 18px 30px rgba(29, 42, 40, 0.08);
+          transform: translateY(-2px);
+          border-color: rgba(15, 118, 110, 0.16);
+        }
       }
-      &.locked { opacity: 0.5; cursor: default; background: #fafafa; }
+      &.locked { opacity: 0.58; cursor: default; background: rgba(255, 255, 255, 0.52); }
     }
     .chapter-num {
-      width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
-      background: #e8f0fe; color: #2d6cdf;
+      width: 44px; height: 44px; border-radius: 14px; flex-shrink: 0;
+      background: rgba(15, 118, 110, 0.12); color: var(--accent-strong);
       display: flex; align-items: center; justify-content: center;
-      font-weight: 700; font-size: 0.9rem;
-      &.done { background: #e8f5e9; color: #2e7d32; }
+      font-weight: 800; font-size: 0.95rem;
+      &.done { background: rgba(47, 133, 90, 0.14); color: #236342; }
     }
     .locked-num {
-      width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
-      background: #f0f0f0;
+      width: 44px; height: 44px; border-radius: 14px; flex-shrink: 0;
+      background: rgba(29, 42, 40, 0.08);
       display: flex; align-items: center; justify-content: center;
       font-size: 1rem;
     }
     .chapter-info { flex: 1; }
-    .chapter-title { font-weight: 600; font-size: 0.95rem; }
-    .chapter-meta { display: flex; gap: 12px; font-size: 0.8rem; color: #888; margin-top: 3px; }
+    .chapter-kicker { font-size: 0.74rem; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.2rem; }
+    .chapter-title { font-weight: 800; font-size: 1.02rem; }
+    .chapter-meta { display: flex; gap: 12px; flex-wrap: wrap; font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
     .chapter-right { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
-    .stars { font-size: 0.95rem; }
-    .score-text { font-size: 0.75rem; color: #888; }
-    .arrow { color: #aaa; font-size: 1.2rem; }
+    .stars { font-size: 1rem; }
+    .score-text { font-size: 0.76rem; color: var(--muted); }
+    .arrow { color: var(--accent-strong); font-size: 1.2rem; }
+
+    @media (max-width: 860px) {
+      .story-hero { grid-template-columns: 1fr; }
+      .hero-cover { min-height: 12rem; }
+      .hero-metrics { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .progress-bar-wrap { flex-direction: column; align-items: stretch; }
+      .chapter-item { align-items: start; }
+      .chapter-right { align-items: start; }
+    }
   `],
 })
 export class StoryDetailComponent implements OnInit {
@@ -190,5 +262,13 @@ export class StoryDetailComponent implements OnInit {
   starsDisplay(ch: ChapterSummary): string {
     const n = this.getStars(ch);
     return '⭐'.repeat(n) + '☆'.repeat(3 - n);
+  }
+
+  totalVocabulary(): number {
+    return this.chapters().reduce((sum, chapter) => sum + chapter.vocabularyCount, 0);
+  }
+
+  totalQuestions(): number {
+    return this.chapters().reduce((sum, chapter) => sum + chapter.comprehensionCount, 0);
   }
 }

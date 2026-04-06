@@ -32,5 +32,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./features/progress/progress.component').then((m) => m.ProgressComponent),
   },
+  {
+    path: 'profile',
+    canActivate: [authGuard],
+    loadComponent: () =>
+      import('./features/profile/profile.component').then((m) => m.ProfileComponent),
+  },
   { path: '**', redirectTo: 'browse' },
 ];

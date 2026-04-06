@@ -7,49 +7,61 @@ import { AuthService } from './core/services/auth.service';
   imports: [RouterOutlet, RouterLink],
   template: `
     @if (isLoggedIn()) {
-      <nav class="navbar">
-        <a class="brand" routerLink="/browse">📖 ReadWell</a>
-        <div class="nav-links">
-          <a routerLink="/browse" class="nav-link">Browse</a>
-          <a routerLink="/progress" class="nav-link">Progress</a>
+      <header class="shell-header">
+        <nav class="navbar">
+          <a class="brand" routerLink="/browse">
+            <span class="brand-mark">RW</span>
+            <span class="brand-copy">
+              <strong>ReadWell</strong>
+              <small>Read deeply. Notice grammar. Remember vocabulary.</small>
+            </span>
+          </a>
 
-          <!-- Profile menu -->
-          <div class="profile-menu">
-            <button class="avatar-btn" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()">
-              <span class="avatar">{{ userInitial() }}</span>
-            </button>
+          <div class="nav-links">
+            <a routerLink="/browse" class="nav-link">Library</a>
+            <a routerLink="/progress" class="nav-link">Progress</a>
+            <a routerLink="/profile" class="nav-pill">Study Profile</a>
 
-            @if (menuOpen()) {
-              <div class="dropdown">
-                <div class="dropdown-header">
-                  <div class="dropdown-avatar">{{ userInitial() }}</div>
-                  <div class="dropdown-user-info">
-                    <span class="dropdown-name">{{ displayName() }}</span>
-                    <span class="dropdown-email">{{ userEmail() }}</span>
+            <div class="profile-menu">
+              <button class="avatar-btn" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()">
+                <span class="avatar">{{ userInitial() }}</span>
+              </button>
+
+              @if (menuOpen()) {
+                <div class="dropdown">
+                  <div class="dropdown-header">
+                    <div class="dropdown-avatar">{{ userInitial() }}</div>
+                    <div class="dropdown-user-info">
+                      <span class="dropdown-name">{{ displayName() }}</span>
+                      <span class="dropdown-email">{{ userEmail() }}</span>
+                    </div>
                   </div>
+
+                  <div class="dropdown-divider"></div>
+
+                  <a class="dropdown-item" routerLink="/browse" (click)="closeMenu()">
+                    <span class="item-icon">📚</span> Story Library
+                  </a>
+                  <a class="dropdown-item" routerLink="/progress" (click)="closeMenu()">
+                    <span class="item-icon">📊</span> Learning Progress
+                  </a>
+                  <a class="dropdown-item" routerLink="/profile" (click)="closeMenu()">
+                    <span class="item-icon">🧭</span> Study Profile
+                  </a>
+
+                  <div class="dropdown-divider"></div>
+
+                  <button class="dropdown-item sign-out" (click)="signOut()">
+                    <span class="item-icon">🚪</span> Sign Out
+                  </button>
                 </div>
-
-                <div class="dropdown-divider"></div>
-
-                <a class="dropdown-item" routerLink="/progress" (click)="closeMenu()">
-                  <span class="item-icon">📊</span> My Progress
-                </a>
-                <a class="dropdown-item" routerLink="/profile" (click)="closeMenu()">
-                  <span class="item-icon">👤</span> Profile
-                </a>
-
-                <div class="dropdown-divider"></div>
-
-                <button class="dropdown-item sign-out" (click)="signOut()">
-                  <span class="item-icon">🚪</span> Sign Out
-                </button>
-              </div>
-            }
+              }
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
     }
-    <main [class.with-nav]="isLoggedIn()">
+    <main class="app-main" [class.with-nav]="isLoggedIn()">
       <router-outlet />
     </main>
   `,
