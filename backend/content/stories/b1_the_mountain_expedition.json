@@ -57,27 +57,87 @@
         {
           "order": 1,
           "text": "Fifteen students from Westfield Academy arrived at base camp on a crisp September morning. None of them had ever attempted anything like this before. The mountain rose ahead of them like a grey wall against the pale sky. Maya stood at the back of the group and looked up. She had signed up for the expedition on impulse — her hand went up in assembly before her brain caught up — and now, standing at the foot of the mountain with a thirty-litre pack on her back, she was beginning to wonder what exactly she had agreed to.",
-          "imagePlaceholder": "⛺"
+          "imagePlaceholder": "⛺",
+          "grammarAnnotations": [
+            {
+              "targetText": "had ever attempted anything like this before",
+              "tone": "aux",
+              "note": "life experience before now"
+            },
+            {
+              "targetText": "had signed up for the expedition on impulse",
+              "tone": "structure",
+              "note": "past action with present consequence"
+            }
+          ]
         },
         {
           "order": 2,
           "text": "Mr Osei, their guide, had led groups up this mountain for twelve years. He was a quiet man who moved quickly and gave instructions once. He gathered them in a circle at base camp. \"You have trained for eight weeks,\" he said. \"Your bodies know what to do. The question on a mountain is always whether your mind will let them.\" He looked around the group. \"The summit is two days away. We won't rush. We will go steadily and we will reach it.\" He said this the way people say things they have said many times and still mean.",
-          "imagePlaceholder": "👨‍🏫"
+          "imagePlaceholder": "👨‍🏫",
+          "grammarAnnotations": [
+            {
+              "targetText": "have trained for eight weeks",
+              "tone": "aux",
+              "note": "duration up to now"
+            },
+            {
+              "targetText": "had led groups up this mountain for twelve years",
+              "tone": "structure",
+              "note": "long experience"
+            }
+          ]
         },
         {
           "order": 3,
           "text": "That first evening, Maya sat outside her tent and looked at the valley below. The altitude was already affecting her — not badly, just a slight heaviness in her head and a shortness of breath when she climbed the small slope to the water supply. She has been trying to adjust, she told herself. She just needed more time. Her tentmate Zara appeared beside her. Zara had never been on a hiking trip either, but she seemed completely unbothered by this fact. She sat down and opened a bag of trail mix.",
-          "imagePlaceholder": "🌄"
+          "imagePlaceholder": "🌄",
+          "grammarAnnotations": [
+            {
+              "targetText": "has been trying to adjust",
+              "tone": "aux",
+              "note": "ongoing effort"
+            },
+            {
+              "targetText": "had never been on a hiking trip either",
+              "tone": "structure",
+              "note": "past experience"
+            }
+          ]
         },
         {
           "order": 4,
           "text": "\"I've been nervous about this since January,\" Zara said, passing the bag to Maya. \"Every single day. And yet here I am.\" Maya looked at her. \"You don't seem nervous,\" she said. Zara shrugged. \"I've learned that seeming nervous and being nervous are two different things. One you can choose.\" Maya thought about this. She has never been good at hiding how she feels — her face, her teacher once told her, is like a window with no curtain. She took some trail mix. \"I've never done anything like this,\" she said. \"I know,\" said Zara. \"That's why it might matter.\"",
-          "imagePlaceholder": "🤝"
+          "imagePlaceholder": "🤝",
+          "grammarAnnotations": [
+            {
+              "targetText": "I've been nervous about this since January",
+              "tone": "aux",
+              "note": "state continuing until now"
+            },
+            {
+              "targetText": "I've never done anything like this",
+              "tone": "structure",
+              "note": "experience up to now"
+            }
+          ]
         },
         {
           "order": 5,
           "text": "They sat in the quiet until the stars appeared. Maya has thought about giving up before she even started. She has thought about what it would feel like to persevere and what it would feel like to turn back. But Zara's words stayed with her: that's why it might matter. She pulled her sleeping bag tighter. Tomorrow, the first real climb would begin. She has never been someone who gave up easily, she told herself — even if she has never been tested quite like this.",
-          "imagePlaceholder": "🌟"
+          "imagePlaceholder": "🌟",
+          "grammarAnnotations": [
+            {
+              "targetText": "has thought about giving up before she even started",
+              "tone": "aux",
+              "note": "recent thought with present effect"
+            },
+            {
+              "targetText": "has never been someone who gave up easily",
+              "tone": "structure",
+              "note": "life experience and identity"
+            }
+          ]
         }
       ],
       "comprehension": [
@@ -175,27 +235,83 @@
         {
           "order": 1,
           "text": "They set off at six in the morning. Mr Osei said the first section was demanding but manageable — he had been leading people through it for years and had chosen the route carefully. Maya had been awake since four, lying in her sleeping bag and going over everything in her mind. She had committed to this. She had trained consistently for eight weeks. She had not come this far to turn around on day two. She picked up her pack, adjusted the straps, and walked into the grey morning.",
-          "imagePlaceholder": "🌄"
+          "imagePlaceholder": "🌄",
+          "grammarAnnotations": [
+            {
+              "targetText": "had been awake since four",
+              "tone": "aux",
+              "note": "ongoing state before that moment"
+            },
+            {
+              "targetText": "had been leading people through it for years",
+              "tone": "structure",
+              "note": "duration before now"
+            }
+          ]
         },
         {
           "order": 2,
           "text": "The first hour was manageable. The path was wide and the gradient steady. Then the path narrowed and turned sharply upward, and everything changed. Maya's legs began to burn. She had been walking on flat ground for most of her life. She had trained in a gym — consistent mornings, three times a week — but this was completely different. The weight of her pack pulled at her shoulders. She counted her steps. One. Two. Three. Keep going.",
-          "imagePlaceholder": "🏔️"
+          "imagePlaceholder": "🏔️",
+          "grammarAnnotations": [
+            {
+              "targetText": "had been walking on flat ground for most of her life",
+              "tone": "aux",
+              "note": "long background situation"
+            }
+          ]
         },
         {
           "order": 3,
           "text": "A student named Marcus had been setting a fast pace at the front of the group. Some of the others were falling behind. Maya was near the back. Zara was beside her, breathing steadily. \"Don't watch Marcus,\" Zara said quietly. \"He's been running ahead since we started. That's a distraction. Watch the path in front of you.\" Maya didn't answer. She was using every piece of breath for climbing. But she moved her eyes to the path and kept them there.",
-          "imagePlaceholder": "🧗"
+          "imagePlaceholder": "🧗",
+          "grammarAnnotations": [
+            {
+              "targetText": "had been setting a fast pace",
+              "tone": "aux",
+              "note": "ongoing action before now"
+            },
+            {
+              "targetText": "He's been running ahead since we started.",
+              "tone": "structure",
+              "note": "action continuing from the start"
+            }
+          ]
         },
         {
           "order": 4,
           "text": "At a rest stop on a flat rock, Mr Osei sat down beside Maya. \"How long have you been feeling this way?\" he asked. Maya looked at him. \"Since about the second hour,\" she admitted. \"My legs aren't doing what I ask them.\" Mr Osei nodded. \"I've been watching you,\" he said. \"You haven't stopped. You haven't asked to rest. You haven't told yourself a story about giving up.\" He paused. \"That is worth more than fast legs.\" Maya looked at the valley below. They had been climbing for three hours. The view was extraordinary.",
-          "imagePlaceholder": "🗣️"
+          "imagePlaceholder": "🗣️",
+          "grammarAnnotations": [
+            {
+              "targetText": "How long have you been feeling this way?",
+              "highlightText": "have you been feeling",
+              "tone": "question",
+              "note": "question about duration"
+            },
+            {
+              "targetText": "I've been watching you,",
+              "tone": "structure",
+              "note": "action over recent time"
+            }
+          ]
         },
         {
           "order": 5,
           "text": "When they reached the first camp at four in the afternoon, Maya sat on a boulder and looked at her hands. They were red and slightly swollen from gripping her poles. Her back ached. But she had been going — consistently, steadily — for the whole day. She had not stopped when she wanted to. She had not watched Marcus. She had not turned around. Mr Osei called the group together. \"You've been working hard today,\" he said. \"That was the most demanding section. It's behind you now.\" Maya looked at Zara. Zara raised her eyebrows slightly. \"Told you it would be rewarding,\" she said. And she was right.",
-          "imagePlaceholder": "⛺"
+          "imagePlaceholder": "⛺",
+          "grammarAnnotations": [
+            {
+              "targetText": "had been going — consistently, steadily — for the whole day",
+              "tone": "aux",
+              "note": "effort over a period"
+            },
+            {
+              "targetText": "You've been working hard today,",
+              "tone": "structure",
+              "note": "today so far"
+            }
+          ]
         }
       ],
       "comprehension": [
@@ -298,27 +414,87 @@
         {
           "order": 1,
           "text": "On the morning of day three, Mr Osei stopped the group at a viewing point. He had his weather radio out. A storm system was moving in from the west — probably by afternoon, possibly sooner. \"If the weather changes before we reach the summit ridge,\" he said, \"we'll turn back immediately. No discussion.\" No one argued. They had been on the mountain long enough to understand that weather here was not like weather at home.",
-          "imagePlaceholder": "🌩️"
+          "imagePlaceholder": "🌩️",
+          "grammarAnnotations": [
+            {
+              "targetText": "If the weather changes before we reach the summit ridge,",
+              "tone": "structure",
+              "note": "real future condition"
+            },
+            {
+              "targetText": "we'll turn back immediately",
+              "tone": "structure",
+              "note": "likely result"
+            }
+          ]
         },
         {
           "order": 2,
-          "text": "While they rested, Mr Osei pointed out the glacier on the north face. It had shrunk considerably, even in the twelve years he had been coming here. \"If emissions continue at the current rate,\" he said, \"this glacier will be gone within thirty years. Not smaller — gone.\" Maya looked at it. She had learned about climate change in school but seeing a glacier in person — understanding it had been larger once, and would be smaller still — made it feel different. More real. More urgent.",
-          "imagePlaceholder": "🧊"
+          "text": "While they rested, Mr Osei pointed out the glacier on the north face. It had shrunk considerably, even in the twelve years he had been coming here. \"If emissions continue at the current rate,\" he said, \"this glacier will be gone within thirty years. Not smaller — gone.\" He added that the weather station nearby now ran on renewable energy because the park was trying to model more sustainable ways of working. Maya looked at the glacier. She had learned about climate change in school but seeing a glacier in person — understanding it had been larger once, and would be smaller still — made it feel different. More real. More urgent.",
+          "imagePlaceholder": "🧊",
+          "grammarAnnotations": [
+            {
+              "targetText": "If emissions continue at the current rate,",
+              "tone": "structure",
+              "note": "real future condition"
+            },
+            {
+              "targetText": "this glacier will be gone within thirty years",
+              "tone": "structure",
+              "note": "predicted result"
+            }
+          ]
         },
         {
           "order": 3,
           "text": "The national park had strict conservation rules. Mr Osei went through them again as they put their packs back on. \"If you go off the marked path, you'll damage the root systems of plants that have grown here for centuries. If you leave waste of any kind, you'll face a serious fine and you'll be asked to leave the park.\" He paused. \"These rules aren't difficult to follow. As long as you treat this place with respect, it will look the same for the people who come after you.\"",
-          "imagePlaceholder": "🌲"
+          "imagePlaceholder": "🌲",
+          "grammarAnnotations": [
+            {
+              "targetText": "If you go off the marked path, you'll damage the root systems of plants that have grown here for centuries.",
+              "tone": "structure",
+              "note": "if + present, will result"
+            },
+            {
+              "targetText": "As long as you treat this place with respect, it will look the same for the people who come after you.",
+              "tone": "structure",
+              "note": "condition with as long as"
+            }
+          ]
         },
         {
           "order": 4,
           "text": "Marcus came to walk beside Maya on the final section. They had not spoken much since base camp — Maya had been too focused on her own pace to think about others. \"If we make it to the top,\" Marcus said, \"I'll feel like a completely different person.\" Maya thought about this. \"If we make it,\" she said. Marcus grinned. \"When we make it,\" he corrected. They walked side by side. The wind had picked up slightly, and the sky to the west had turned the colour of old silver.",
-          "imagePlaceholder": "🚶‍♀️"
+          "imagePlaceholder": "🚶‍♀️",
+          "grammarAnnotations": [
+            {
+              "targetText": "If we make it to the top,",
+              "tone": "structure",
+              "note": "possible future condition"
+            },
+            {
+              "targetText": "When we make it,",
+              "tone": "structure",
+              "note": "certain future event"
+            }
+          ]
         },
         {
           "order": 5,
           "text": "They reached the summit at noon, just as the first clouds began to move in. Mr Osei gathered them at the highest point. The view in every direction was vast and extraordinary — valley floors like green and brown patches far below, the ribbon of a river, the edges of other mountains. \"Unless I count wrong,\" Mr Osei said, \"this is fifteen for fifteen. Everyone who started has arrived.\" There was a moment of complete quiet. Then someone started clapping, and everyone joined in. Maya stood and looked at the glacier — smaller than it should have been, still there, still beautiful. She thought: if we look after this, it will still be here. She hoped they would.",
-          "imagePlaceholder": "🏔️"
+          "imagePlaceholder": "🏔️",
+          "grammarAnnotations": [
+            {
+              "targetText": "Unless I count wrong,",
+              "tone": "structure",
+              "note": "unless = if not"
+            },
+            {
+              "targetText": "if we look after this, it will still be here",
+              "tone": "structure",
+              "note": "real future result"
+            }
+          ]
         }
       ],
       "comprehension": [

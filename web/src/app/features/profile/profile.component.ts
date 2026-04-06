@@ -16,6 +16,11 @@ import { ProgressRecord } from '../../core/models/progress.model';
             <span class="eyebrow">Study Profile</span>
             <h1 class="page-title">{{ displayName() }}</h1>
             <p class="page-subtitle">{{ email() || 'Signed in learner' }}</p>
+            <div class="identity-meta">
+              <span>{{ history().length }} chapters</span>
+              <span>{{ averagePct() }}% avg</span>
+              <span>{{ storiesExplored() }} stories</span>
+            </div>
           </div>
         </div>
 
@@ -135,6 +140,24 @@ import { ProgressRecord } from '../../core/models/progress.model';
     .muted-copy {
       color: var(--muted);
     }
+    .identity-meta {
+      display: flex;
+      gap: 0.55rem;
+      flex-wrap: wrap;
+      margin-top: 0.85rem;
+    }
+    .identity-meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2rem;
+      padding: 0.38rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(29, 42, 40, 0.08);
+      color: var(--ink);
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
 
     .profile-grid {
       display: grid;
@@ -221,10 +244,85 @@ import { ProgressRecord } from '../../core/models/progress.model';
     }
 
     @media (max-width: 640px) {
+      .profile-hero {
+        padding: 1.05rem;
+        gap: 1rem;
+      }
+
       .identity-block,
       .recent-item {
         align-items: flex-start;
         flex-direction: column;
+      }
+
+      .identity-meta {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 0.35rem;
+        scrollbar-width: none;
+      }
+
+      .identity-meta::-webkit-scrollbar {
+        display: none;
+      }
+
+      .identity-meta span {
+        flex: 0 0 auto;
+      }
+
+      .guidance-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .guidance-actions .btn {
+        width: 100%;
+      }
+
+      .summary-stats {
+        display: flex;
+        overflow-x: auto;
+        gap: 0.75rem;
+        padding-bottom: 0.35rem;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+      }
+
+      .summary-stats::-webkit-scrollbar {
+        display: none;
+      }
+
+      .summary-stats div {
+        min-width: min(74vw, 13rem);
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+      }
+
+      .recent-item {
+        padding: 0.95rem 1rem;
+      }
+
+      .recent-score {
+        display: inline-flex;
+        min-height: 2.2rem;
+        align-items: center;
+        justify-content: center;
+        padding: 0.35rem 0.7rem;
+        border-radius: 999px;
+        background: rgba(15, 118, 110, 0.08);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .profile-avatar {
+        width: 4.4rem;
+        height: 4.4rem;
+        border-radius: 1.2rem;
+        font-size: 1.5rem;
+      }
+
+      .hero-note strong {
+        font-size: 1.18rem;
       }
     }
   `],

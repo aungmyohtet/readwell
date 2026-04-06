@@ -44,6 +44,7 @@ ng serve
 
 ```bash
 cd backend
+python -m pip install -r content/requirements.txt
 python content/import.py                  # import all story files
 python content/import.py --clear          # clear and re-import
 python content/validate.py content/stories/my_story.json  # validate before import

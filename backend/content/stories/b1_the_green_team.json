@@ -74,23 +74,77 @@
       "content": [
         {
           "order": 1,
-          "text": "It started with a dog lead. Priya was walking her neighbour's terrier through Eastgate Park on a Tuesday afternoon when the dog stopped at the edge of the pond and refused to move. Priya looked down. The ground around the water was covered: crisp packets, broken glass, the crushed remains of a plastic bottle, a tangle of fishing wire wrapped around a fallen branch. The dog sat down and looked up at her as if to say: well?"
+          "text": "It started with a dog lead. Priya was walking her neighbour's terrier through Eastgate Park on a Tuesday afternoon when the dog stopped at the edge of the pond and refused to move. Priya looked down. The ground around the water was covered: crisp packets, broken glass, the crushed remains of a plastic bottle, a tangle of fishing wire wrapped around a fallen branch. The dog sat down and looked up at her as if to say: well?",
+          "imagePlaceholder": "🐕",
+          "grammarAnnotations": []
         },
         {
           "order": 2,
-          "text": "Priya took seven photographs and sent them to the school's messaging group without a caption. Within an hour, Rosa had replied: 'If we show this to Ms Okafor, she'll help us do something.' Tariq replied three minutes later: 'If we don't do something, who will?' That was all it took. By the following morning the three of them were sitting in the geography teacher's office with the photographs printed out on a single sheet."
+          "text": "Priya took seven photographs and sent them to the school's messaging group without a caption. Within an hour, Rosa had replied: \"If we show this to Ms Okafor, she'll help us do something.\" Tariq replied three minutes later: \"If we don't do something, who will?\" That was all it took. By the following morning the three of them were sitting in the geography teacher's office with the photographs printed out on a single sheet.",
+          "imagePlaceholder": "📱",
+          "grammarAnnotations": [
+            {
+              "targetText": "If we show this to Ms Okafor, she'll help us do something.",
+              "tone": "structure",
+              "note": "real future condition"
+            },
+            {
+              "targetText": "If we don't do something, who will?",
+              "tone": "question",
+              "note": "conditional question"
+            }
+          ]
         },
         {
           "order": 3,
-          "text": "Ms Okafor listened carefully. She was the kind of teacher who let you finish your sentences. 'If you start a club,' she said, when they had explained everything, 'I'll supervise it and help you apply for a small grant from the council. But only if you come with a proper plan, not just feelings.' She paused. 'Feelings are important. But as long as you also have data, people will listen.'"
+          "text": "Ms Okafor listened carefully. She was the kind of teacher who let you finish your sentences. \"If you start a club,\" she said, when they had explained everything, \"I'll supervise it and help you apply for a small grant from the council. But only if you come with a proper plan, not just feelings.\" She paused. \"Feelings are important. But as long as you also have data, people will listen.\"",
+          "imagePlaceholder": "👩‍🏫",
+          "grammarAnnotations": [
+            {
+              "targetText": "If you start a club,",
+              "tone": "structure",
+              "note": "if + present clause"
+            },
+            {
+              "targetText": "as long as you also have data, people will listen.",
+              "tone": "structure",
+              "note": "condition with as long as"
+            }
+          ]
         },
         {
           "order": 4,
-          "text": "That week, the three of them split the work. Rosa researched the park's history and found that the pond had once supported fourteen species of bird and was now home to three — a sign of serious biodiversity loss. She calculated that the emissions from the nearby road, combined with litter, had reduced the area's carbon footprint as a green space by nearly half. The council had promised sustainable management and renewable planting three years ago, but none of it had happened. 'If we present this to the council meeting,' she told the others, 'they won't be able to ignore us.' Tariq mapped the pollution zone across six sections. Priya wrote the draft proposal and was told, twice, that she was being too polite."
+          "text": "That week, the three of them split the work. Rosa researched the park's history and found that the pond had once supported fourteen species of bird and was now home to three — a sign of serious biodiversity loss. She calculated that the emissions from the nearby road, combined with litter, had reduced the area's carbon footprint as a green space by nearly half. The council had promised sustainable management and renewable planting three years ago, but none of it had happened. \"If we present this to the council meeting,\" she told the others, \"they won't be able to ignore us.\" Tariq mapped the pollution zone across six sections. Priya wrote the draft proposal and was told, twice, that she was being too polite.",
+          "imagePlaceholder": "📊",
+          "grammarAnnotations": [
+            {
+              "targetText": "If we present this to the council meeting,",
+              "tone": "structure",
+              "note": "real condition"
+            },
+            {
+              "targetText": "they won't be able to ignore us.",
+              "tone": "structure",
+              "note": "future result"
+            }
+          ]
         },
         {
           "order": 5,
-          "text": "The proposal was submitted on Friday. Ms Okafor said it was the best she had seen from students. She did not say that often. 'Unless the council rejects it completely — which I don't think they will — you'll get a response within three weeks,' she said. 'And if they do reject it, we'll revise and resubmit. Conservation work doesn't stop when one door closes.' Outside, Priya looked at the park through the staffroom window. The pond was still grey. The litter was still there. But something had shifted. If they kept going, things would change. She was almost sure of it."
+          "text": "The proposal was submitted on Friday. Ms Okafor said it was the best she had seen from students. She did not say that often. \"Unless the council rejects it completely — which I don't think they will — you'll get a response within three weeks,\" she said. \"And if they do reject it, we'll revise and resubmit. Conservation work doesn't stop when one door closes.\" Outside, Priya looked at the park through the staffroom window. The pond was still grey. The litter was still there. But something had shifted. If they kept going, things would change. She was almost sure of it.",
+          "imagePlaceholder": "🪟",
+          "grammarAnnotations": [
+            {
+              "targetText": "Unless the council rejects it completely — which I don't think they will — you'll get a response within three weeks,",
+              "tone": "structure",
+              "note": "unless = if not"
+            },
+            {
+              "targetText": "If they kept going, things would change.",
+              "tone": "structure",
+              "note": "imagined future result"
+            }
+          ]
         }
       ],
       "comprehension": [
@@ -216,23 +270,72 @@
       "content": [
         {
           "order": 1,
-          "text": "The council meeting was held in a room that smelled of carpet and old decisions. Priya, Rosa, and Tariq sat in a row at the back, dressed in the smartest things they owned. They had sacrificed their lunch breaks for three weeks to prepare the slides. Tariq had printed two extra copies of the data in case the projector failed. The councillors filed in, looking tired, and one of them — a short man with reading glasses pushed up on his forehead — looked at the three teenagers and said, in a tone that was not unkind but not encouraging either: 'Are you certain you're in the right room?'"
+          "text": "The council meeting was held in a room that smelled of carpet and old decisions. Priya, Rosa, and Tariq sat in a row at the back, dressed in the smartest things they owned. They had sacrificed their lunch breaks for three weeks to prepare the slides. Tariq had printed two extra copies of the data in case the projector failed. The councillors filed in, looking tired, and one of them — a short man with reading glasses pushed up on his forehead — looked at the three teenagers and said, in a tone that was not unkind but not encouraging either: \"Are you certain you're in the right room?\"",
+          "imagePlaceholder": "🏛️",
+          "grammarAnnotations": []
         },
         {
           "order": 2,
-          "text": "Rosa stood up and answered him. She was the one who could do this — stay calm, speak clearly, not be put off by a look. She had aspired to be a lawyer since she was eleven, and this felt like a rehearsal. 'If every school in the borough adopted one green space,' she began, 'the biodiversity loss across the district would stop within a generation. We're asking for permission to start with Eastgate Park.' The councillors exchanged glances. The short man took his glasses down from his forehead and put them on."
+          "text": "Rosa stood up and answered him. She was the one who could do this — stay calm, speak clearly, not be put off by a look. She had aspired to be a lawyer since she was eleven, and this felt like a rehearsal. \"If every school in the borough adopted one green space,\" she began, \"the biodiversity loss across the district would stop within a generation. We're asking for permission to start with Eastgate Park.\" The councillors exchanged glances. The short man took his glasses down from his forehead and put them on.",
+          "imagePlaceholder": "🎤",
+          "grammarAnnotations": [
+            {
+              "targetText": "If every school in the borough adopted one green space,",
+              "tone": "structure",
+              "note": "imagined condition"
+            },
+            {
+              "targetText": "the biodiversity loss across the district would stop within a generation.",
+              "tone": "structure",
+              "note": "hypothetical result"
+            }
+          ]
         },
         {
           "order": 3,
-          "text": "The grant was approved for one term. It was smaller than they had hoped. But Ms Okafor had told them to be realistic, and a realistic start was still a start. 'If we had more funding,' Tariq said on the walk home, 'we could plant wildflowers across the whole eastern section.' 'We can apply again in spring,' said Priya. 'If we showed results this term, we'd have a much stronger case.' Rosa was already writing notes on her phone."
+          "text": "The grant was approved for one term. It was smaller than they had hoped. But Ms Okafor had told them to be realistic, and a realistic start was still a start. \"If we had more funding,\" Tariq said on the walk home, \"we could plant wildflowers across the whole eastern section.\" \"We can apply again in spring,\" said Priya. \"If we showed results this term, we'd have a much stronger case.\" Rosa was already writing notes on her phone.",
+          "imagePlaceholder": "💷",
+          "grammarAnnotations": [
+            {
+              "targetText": "If we had more funding,",
+              "tone": "structure",
+              "note": "imagined condition"
+            },
+            {
+              "targetText": "we could plant wildflowers across the whole eastern section.",
+              "tone": "structure",
+              "note": "hypothetical result"
+            }
+          ]
         },
         {
           "order": 4,
-          "text": "The clean-up day was held the following Saturday. Forty-three students came. If they had asked for volunteers without the petition, maybe five would have shown up — but the petition had made the project visible, and visible things attract people. By noon, seven bin bags were filled. A small group of Year 7 students, who had not been asked, appeared at the pond edge with gloves they had brought from home. Tariq looked at them and turned to Priya: 'If I were a teacher, I would give all of them full marks in geography right now.'"
+          "text": "The clean-up day was held the following Saturday. Forty-three students came. If they had asked for volunteers without the petition, maybe five would have shown up — but the petition had made the project visible, and visible things attract people. By noon, seven bin bags were filled. A small group of Year 7 students, who had not been asked, appeared at the pond edge with gloves they had brought from home. Tariq looked at them and turned to Priya: \"If I were a teacher, I would give all of them full marks in geography right now.\"",
+          "imagePlaceholder": "🧤",
+          "grammarAnnotations": [
+            {
+              "targetText": "If I were a teacher,",
+              "tone": "structure",
+              "note": "imagined present state"
+            },
+            {
+              "targetText": "I would give all of them full marks in geography right now.",
+              "tone": "structure",
+              "note": "hypothetical result"
+            }
+          ]
         },
         {
           "order": 5,
-          "text": "By the end of the day, the pond was clear. A moorhen that nobody had seen in two years came back to the bank and sat there, looking unimpressed but present. Priya took a photograph. The park was not transformed. There was still broken glass in the corner by the fence, and the stream behind the trees was still running that particular shade of brown. But the potential was visible now — really visible, not just imagined. Priya's vision for the place had always been simple: a space where something lived and grew and was looked after. If they kept the determination going, this place could be that. The question was not whether it was possible. The question was whether enough people would decide it was worth the obstacle of trying."
+          "text": "By the end of the day, the pond was clear. A moorhen that nobody had seen in two years came back to the bank and sat there, looking unimpressed but present. Priya took a photograph. The park was not transformed. There was still broken glass in the corner by the fence, and the stream behind the trees was still running that particular shade of brown. But the potential was visible now — really visible, not just imagined. Priya's vision for the place had always been simple: a space where something lived and grew and was looked after. If they kept the determination going, this place could be that. The question was not whether it was possible. The question was whether enough people would decide it was worth the obstacle of trying.",
+          "imagePlaceholder": "🦆",
+          "grammarAnnotations": [
+            {
+              "targetText": "If they kept the determination going, this place could be that.",
+              "tone": "structure",
+              "note": "imagined future result"
+            }
+          ]
         }
       ],
       "comprehension": [

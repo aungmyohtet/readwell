@@ -10,34 +10,7 @@ interface LastChapter {
   chapterTitle: string;
 }
 
-interface LevelPath {
-  level: 'A2' | 'B1' | 'B2';
-  title: string;
-  summary: string;
-  guidance: string;
-}
-
 const LEVELS = ['All', 'A2', 'B1', 'B2'] as const;
-const LEVEL_PATHS: LevelPath[] = [
-  {
-    level: 'A2',
-    title: 'Build confidence with clear everyday English',
-    summary: 'Shorter chapters, familiar situations, and visible grammar signals help learners gain control fast.',
-    guidance: 'Best for learners building routine, question forms, and core sentence patterns.',
-  },
-  {
-    level: 'B1',
-    title: 'Move into richer situations and stronger inference',
-    summary: 'Stories become more layered, with longer paragraphs, more nuance, and broader grammar contrast.',
-    guidance: 'Best for learners ready to connect meaning, time, and consequence across a chapter.',
-  },
-  {
-    level: 'B2',
-    title: 'Read for nuance, style, and advanced control',
-    summary: 'The reading becomes more literary and interpretive, with subtler grammar choices and denser meaning.',
-    guidance: 'Best for learners aiming for exam-level reading maturity and stylistic awareness.',
-  },
-];
 
 @Component({
   selector: 'app-browse',
@@ -99,25 +72,12 @@ const LEVEL_PATHS: LevelPath[] = [
         </div>
       </section>
 
-      <section class="level-paths">
-        @for (path of levelPaths; track path.level) {
-          <button class="level-path-card card" [class.selected]="selectedLevel() === path.level" (click)="selectLevel(path.level)">
-            <div class="level-path-topline">
-              <span class="level-badge {{ path.level }}">{{ path.level }}</span>
-              <span class="path-count">{{ storyCountFor(path.level) }} stories</span>
-            </div>
-            <h3>{{ path.title }}</h3>
-            <p>{{ path.summary }}</p>
-            <span class="path-guidance">{{ path.guidance }}</span>
-          </button>
-        }
-      </section>
-
       <section id="library" class="library-section">
         <div class="library-header">
           <div>
             <span class="eyebrow">Library</span>
             <h2 class="library-title">Choose a level, then enter a story world.</h2>
+            <p class="library-guidance">A2 builds confidence, B1 deepens inference, and B2 focuses on nuance and style.</p>
           </div>
 
           <div class="level-tabs">
@@ -189,7 +149,6 @@ const LEVEL_PATHS: LevelPath[] = [
   styles: [``],
 })
 export class BrowseComponent implements OnInit {
-  levelPaths = LEVEL_PATHS;
   levels = LEVELS;
   selectedLevel = signal<string>('All');
   stories = signal<Story[]>([]);

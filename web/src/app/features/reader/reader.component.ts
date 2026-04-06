@@ -102,7 +102,6 @@ function annotateSimplePast(html: string): string {
 function annotatePresentPerfect(html: string): string {
   let next = wrapMatches(html, /\b(has|have)\b/gi, 'gh-aux');
   next = wrapMatches(next, /\bbeen\b/gi, 'gh-structure');
-  next = transformTextSegments(next, (segment) => segment.replace(/\b([A-Za-z]+?)(ing)\b/gi, (_m, stem: string, ending: string) => `${stem}<mark class="gh gh-ending">${ending}</mark>`));
   return next;
 }
 
@@ -208,9 +207,8 @@ const GRAMMAR_SPECS: GrammarSpec[] = [
     legend: [
       { tone: 'aux', label: 'Has or have' },
       { tone: 'structure', label: 'Been or past participle frame' },
-      { tone: 'ending', label: '-ing when the action is ongoing' },
     ],
-    coachTip: 'Present perfect links past and present. The helper verb matters first, then the participle or continuous form shows the type of meaning.',
+    coachTip: 'Present perfect links past and present. Focus first on has or have, then on the participle frame that shows how the earlier action still matters now.',
     annotate: annotatePresentPerfect,
   },
   {

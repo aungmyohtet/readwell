@@ -80,23 +80,68 @@
       "content": [
         {
           "order": 1,
-          "text": "Selin had been sitting in the mountain rescue briefing room for eleven minutes when she understood, with sudden clarity, how she had arrived there. Not the logistical sequence — the deferred university place, the internship application, the eight-hour coach from her parents' house in October — but the actual chain of choices, stretching back three years. If she had not failed that chemistry mock in Year 12, she would not have spent the following summer rebuilding her confidence in a different way. If she had not spent that summer differently, she would never have met Dr Farida Osei. And if she had not met Dr Osei, she would be sitting in a first-year lecture right now, studying the wrong subject."
+          "text": "Selin had been sitting in the mountain rescue briefing room for eleven minutes when she understood, with sudden clarity, how she had arrived there. Not the logistical sequence — the deferred university place, the internship application, the eight-hour coach from her parents' house in October — but the actual chain of choices, stretching back three years. If she had not failed that chemistry mock in Year 12, she would not have spent the following summer rebuilding her confidence in a different way. If she had not spent that summer differently, she would never have met Dr Farida Osei. And if she had not met Dr Osei, she would be sitting in a first-year lecture right now, studying the wrong subject.",
+          "imagePlaceholder": "🧭",
+          "grammarAnnotations": [
+            {
+              "targetText": "If she had not failed that chemistry mock in Year 12, she would not have spent the following summer rebuilding her confidence in a different way.",
+              "tone": "structure",
+              "note": "past imagined cause and result"
+            },
+            {
+              "targetText": "if she had not met Dr Osei, she would be sitting in a first-year lecture right now, studying the wrong subject.",
+              "tone": "structure",
+              "note": "past cause, present result"
+            }
+          ]
         },
         {
           "order": 2,
-          "text": "The gap year had been a deliberate decision, but its repercussions had been harder to foresee. Her parents had been supportive in a careful way — the kind of support that asks 'are you sure?' at regular intervals until you are no longer sure yourself. She had mitigated their concern with a spreadsheet: two placements, measurable goals, a date by which she would re-confirm her deferred place. Accountability in a document. It had worked. What the spreadsheet had not accounted for was the dilemma that emerged in month four: she was good at the lab work and she was good at the rescue coordination, and the two skills pointed in opposite directions."
+          "text": "The gap year had been a deliberate decision, but its repercussions had been harder to foresee. Her parents had been supportive in a careful way — the kind of support that asks \"are you sure?\" at regular intervals until you are no longer sure yourself. She had mitigated their concern with a spreadsheet: two placements, measurable goals, a date by which she would re-confirm her deferred place. Accountability in a document. It had worked.",
+          "imagePlaceholder": "📊",
+          "grammarAnnotations": []
         },
         {
           "order": 3,
-          "text": "If she were less stubborn by nature, she might have asked Dr Osei what to do. Dr Osei was the kind of mentor who gave excellent advice when asked and none at all when not. Instead Selin drove to the mountain station on a Tuesday evening after a long day in the lab and sat with the rescue team's coordinator, a weathered woman called Birte who had been running operations in the valley for twenty-two years. 'All the choices that seem irreversible,' Birte said, not looking up from the radio, 'usually turn out not to be. And all the ones you assume you can take back — those are the ones that matter.' It was not specific advice. It was, Selin thought later, exactly the right thing to say."
+          "text": "What the spreadsheet had not accounted for was the dilemma that emerged in month four: she was good at the lab work and she was good at the rescue coordination, and the two skills pointed in opposite directions.",
+          "imagePlaceholder": "⚖️",
+          "grammarAnnotations": []
         },
         {
           "order": 4,
-          "text": "She thought about trade-offs a lot during the weeks that followed. If she had taken the direct university path, she would now have three months of her first year behind her — a foundation, a peer group, a sense of trajectory. What she had instead was a different kind of foundation: the knowledge that she could be dropped into unfamiliar work, in an unfamiliar place, with unfamiliar people, and find a way to function without falling apart. She could not yet say, with any certainty, which foundation was more valuable. That was the dilemma, and it did not resolve cleanly."
+          "text": "If she were less stubborn by nature, she might have asked Dr Osei what to do. Dr Osei was the kind of mentor who gave excellent advice when asked and none at all when not. Instead Selin drove to the mountain station on a Tuesday evening after a long day in the lab and sat with the rescue team's coordinator, a weathered woman called Birte who had been running operations in the valley for twenty-two years. 'All the choices that seem irreversible,' Birte said, not looking up from the radio, 'usually turn out not to be. And all the ones you assume you can take back — those are the ones that matter.' It was not specific advice. It was, Selin thought later, exactly the right thing to say.",
+          "imagePlaceholder": "📻",
+          "grammarAnnotations": [
+            {
+              "targetText": "If she were less stubborn by nature, she might have asked Dr Osei what to do.",
+              "tone": "structure",
+              "note": "present trait, past result"
+            }
+          ]
         },
         {
           "order": 5,
-          "text": "The briefing began. A call had come in — a walker reported overdue on the eastern ridge, weather closing in, light failing. Selin checked her kit, noted the coordinates, and followed Birte to the door. If she had not been here for this year, she would not know how to read a contour map under pressure, would not know how to manage her own fear on a steep traverse, would not know that she was capable of making a quick decision in a situation where being wrong carries real consequence. She did not know yet where these things would take her. She had learned, over the past eight months, that not knowing was, in itself, a reasonable place from which to start."
+          "text": "She thought about trade-offs a lot during the weeks that followed. If she had taken the direct university path, she would now have three months of her first year behind her — a foundation, a peer group, a sense of trajectory. What she had instead was a different kind of foundation: the knowledge that she could be dropped into unfamiliar work, in an unfamiliar place, with unfamiliar people, and find a way to function without falling apart. She could not yet say, with any certainty, which foundation was more valuable. That was the dilemma, and it did not resolve cleanly.",
+          "imagePlaceholder": "🛤️",
+          "grammarAnnotations": [
+            {
+              "targetText": "If she had taken the direct university path, she would now have three months of her first year behind her",
+              "tone": "structure",
+              "note": "past choice, present consequence"
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "text": "The briefing began. A call had come in — a walker reported overdue on the eastern ridge, weather closing in, light failing. Selin checked her kit, noted the coordinates, and followed Birte to the door. If she had not been here for this year, she would not know how to read a contour map under pressure, would not know how to manage her own fear on a steep traverse, would not know that she was capable of making a quick decision in a situation where being wrong carries real consequence. She did not know yet where these things would take her. She had learned, over the past eight months, that not knowing was, in itself, a reasonable place from which to start.",
+          "imagePlaceholder": "🗺️",
+          "grammarAnnotations": [
+            {
+              "targetText": "If she had not been here for this year, she would not know how to read a contour map under pressure",
+              "tone": "structure",
+              "note": "past experience, present ability"
+            }
+          ]
         }
       ],
       "comprehension": [
@@ -240,23 +285,95 @@
       "content": [
         {
           "order": 1,
-          "text": "The device on the table looked like nothing. It was a grey rectangle, approximately the size of a hardback book, with two small ports on one side and a single amber light. It had been designed, Selin was told, by a team of eleven engineers over a period of four years. The first prototype had been built by two of them in a space that was described as a 'converted basement' and was almost certainly a garden shed. The finished version was now being tested in six locations across the country. Response times were being tracked, failure rates were being logged, and the data was being fed back to the development team every forty-eight hours. 'It has been estimated that this will cut mountain rescue response times by thirty-eight percent,' said Kai, the engineer running the demonstration. 'It hasn't been released yet. But it will be.'"
+          "text": "The device on the table looked like nothing. It was a grey rectangle, approximately the size of a hardback book, with two small ports on one side and a single amber light. It had been designed, Selin was told, by a team of eleven engineers over a period of four years. The first prototype had been built by two of them in a space that was described as a 'converted basement' and was almost certainly a garden shed. The finished version was now being tested in six locations across the country. Response times were being tracked, failure rates were being logged, and the data was being fed back to the development team every forty-eight hours. \"It has been estimated that this will cut mountain rescue response times by thirty-eight percent,\" said Kai, the engineer running the demonstration. \"It hasn't been released yet. But it will be.\"",
+          "imagePlaceholder": "🖥️",
+          "grammarAnnotations": [
+            {
+              "targetText": "had been designed",
+              "tone": "aux",
+              "note": "past perfect passive"
+            },
+            {
+              "targetText": "was now being tested",
+              "tone": "structure",
+              "note": "present continuous passive"
+            }
+          ]
         },
         {
           "order": 2,
-          "text": "The device integrated sensor data from the surrounding terrain with the rescue team's GPS and communication systems, processing it through an algorithm that had been continuously refined over three years. Selin found the refinement process more interesting than the device itself. 'How is it being updated?' she asked. Kai said: 'Every time it's deployed in a real scenario, the outcome is logged and reviewed. If an error was made by the system — not by the operator — the algorithm is adjusted. It can't be changed in the field, but it can be patched overnight and redeployed by morning.' The interface had been redesigned four times. Kai acknowledged this without defensiveness: the first three versions had been built for engineers, not for people whose hands might be cold and whose attention might be divided between a screen and a hillside in the dark."
+          "text": "The device integrated sensor data from the surrounding terrain with the rescue team's GPS and communication systems, processing it through an algorithm that had been continuously refined over three years. Selin found the refinement process more interesting than the device itself. \"How is it being updated?\" she asked. Kai said: \"Every time it's deployed in a real scenario, the outcome is logged and reviewed. If an error was made by the system — not by the operator — the algorithm is adjusted. It can't be changed in the field, but it can be patched overnight and redeployed by morning.\" The interface had been redesigned four times. Kai acknowledged this without defensiveness: the first three versions had been built for engineers, not for people whose hands might be cold and whose attention might be divided between a screen and a hillside in the dark.",
+          "imagePlaceholder": "⚙️",
+          "grammarAnnotations": [
+            {
+              "targetText": "How is it being updated?",
+              "tone": "question",
+              "note": "present continuous passive"
+            },
+            {
+              "targetText": "the algorithm is adjusted",
+              "tone": "structure",
+              "note": "simple present passive"
+            }
+          ]
         },
         {
           "order": 3,
-          "text": "Birte had looked at the device when it first arrived and said very little. The paper log system had been used in the valley for nineteen years. It had been made partially obsolete by the new database, though Birte still kept a hard copy updated by hand. 'Technology that can't be trusted in a power cut doesn't deserve to be trusted at all,' she said, and nobody argued. But she had allowed the device to be trialled, because she also understood that what couldn't be scaled couldn't protect a region, only a valley. A decision had been made, months before Selin arrived, that the old system would be retained in parallel until the new one had been tested thoroughly. Both would be run simultaneously. Nothing would be discarded until it was proven unnecessary."
+          "text": "Birte had looked at the device when it first arrived and said very little. The paper log system had been used in the valley for nineteen years. It had been made partially obsolete by the new database, though Birte still kept a hard copy updated by hand. \"Technology that can't be trusted in a power cut doesn't deserve to be trusted at all,\" she said, and nobody argued. But she had allowed the device to be trialled, because she also understood that a scalable system with careful automation could protect a region, not only a valley. A decision had been made, months before Selin arrived, that the old system would be retained in parallel until the new one had been tested thoroughly. Both would be run simultaneously. Nothing would be discarded until it was proven unnecessary.",
+          "imagePlaceholder": "🗃️",
+          "grammarAnnotations": [
+            {
+              "targetText": "had been used",
+              "tone": "aux",
+              "note": "past perfect passive"
+            },
+            {
+              "targetText": "would be retained in parallel",
+              "tone": "structure",
+              "note": "future in the past passive"
+            }
+          ]
         },
         {
           "order": 4,
-          "text": "Selin was asked to write a short report on the integration process — what had worked, what had caused friction, what the rescue team had found disruptive versus useful. She took the task seriously. It was the kind of work she was good at: observational, analytical, requiring her to hold two perspectives simultaneously without collapsing them into one. The lab valued precision. The rescue team valued reliability under pressure. Both values were legitimate. The report was expected by the end of the month and would be used to inform the next phase of deployment. It had been made clear to her — politely but unmistakably — that vague conclusions would not be useful. Concrete observations were required."
+          "text": "Selin was asked to write a short report on the integration process — what had worked, what had caused friction, what the rescue team had found disruptive versus useful. She took the task seriously. It was the kind of work she was good at: observational, analytical, requiring her to hold two perspectives simultaneously without collapsing them into one. The lab valued precision. The rescue team valued reliability under pressure. Both values were legitimate. The report was expected by the end of the month and would be used to inform the next phase of deployment. It had been made clear to her — politely but unmistakably — that vague conclusions would not be useful. Concrete observations were required.",
+          "imagePlaceholder": "📑",
+          "grammarAnnotations": [
+            {
+              "targetText": "was asked to write a short report",
+              "tone": "aux",
+              "note": "simple past passive"
+            },
+            {
+              "targetText": "would be used to inform the next phase of deployment",
+              "tone": "structure",
+              "note": "future passive"
+            }
+          ]
         },
         {
           "order": 5,
-          "text": "She submitted the report on a Thursday afternoon. It was twelve pages. The gap year, she reflected, would end in three weeks. The university place had been confirmed. A subject had been chosen. By the time she arrived, she would have been away from formal education for nearly eleven months, and she could not tell, with any certainty, whether that had made her more prepared or less. What she knew was that she had been changed by the year — not in the dramatic way the brochures described, where young people are found in distant countries and return as completely different people — but quietly, in the way that things change when they are used regularly and taken seriously. She took the completed report to Birte's office. The amber light on the device on the desk was still on, as it had been since the day the device arrived. It was impossible to say whether it meant everything was working or whether it was simply waiting to be asked."
+          "text": "She submitted the report on a Thursday afternoon. It was twelve pages. The gap year, she reflected, would end in three weeks. The university place had been confirmed. A subject had been chosen. By the time she arrived, she would have been away from formal education for nearly eleven months, and she could not tell, with any certainty, whether that had made her more prepared or less.",
+          "imagePlaceholder": "🎓",
+          "grammarAnnotations": [
+            {
+              "targetText": "had been confirmed",
+              "tone": "aux",
+              "note": "past perfect passive"
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "text": "What she knew was that she had been changed by the year — not in the dramatic way the brochures described, where young people are found in distant countries and return as completely different people — but quietly, in the way that things change when they are used regularly and taken seriously. She took the completed report to Birte's office. The amber light on the device on the desk was still on, as it had been since the day the device arrived. It was impossible to say whether it meant everything was working or whether it was simply waiting to be asked.",
+          "imagePlaceholder": "💡",
+          "grammarAnnotations": [
+            {
+              "targetText": "had been changed by the year",
+              "tone": "structure",
+              "note": "past perfect passive result"
+            }
+          ]
         }
       ],
       "comprehension": [

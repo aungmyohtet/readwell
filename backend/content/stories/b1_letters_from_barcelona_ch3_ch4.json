@@ -73,23 +73,88 @@
       "content": [
         {
           "order": 1,
-          "text": "Dear Mum, I have been meaning to write this letter for four days now, but every evening I have been so tired that I fall asleep before I can pick up a pen. I am not complaining — the tiredness feels like proof that something real is happening here. I have been studying Spanish for three weeks and, slowly, it is starting to work."
+          "text": "Dear Mum, I have been meaning to write this letter for four days now, but every evening I have been so tired that I fall asleep before I can pick up a pen. I am not complaining — the tiredness feels like proof that something real is happening here. I have been studying Spanish for three weeks and, slowly, it is starting to work.",
+          "imagePlaceholder": "✉️",
+          "grammarAnnotations": [
+            {
+              "targetText": "have been meaning to write this letter for four days now",
+              "tone": "aux",
+              "note": "ongoing intention"
+            },
+            {
+              "targetText": "have been studying Spanish for three weeks",
+              "tone": "structure",
+              "note": "activity continuing over time"
+            }
+          ]
         },
         {
           "order": 2,
-          "text": "The classes are more demanding than anything I have done at school. Four hours every morning with a teacher called Señora Valls, who speaks quickly on purpose and refuses to switch to English even when we look completely lost. I have been sitting in the front row because I want to commit fully — no distractions, no whispering with the students at the back. It has not been easy. But it has been consistent, and I think that is what is making the difference."
+          "text": "The classes are more demanding than anything I have done at school. Four hours every morning with a teacher called Señora Valls, who speaks quickly on purpose and refuses to switch to English even when we look completely lost. I have been sitting in the front row because I want to commit fully — no distractions, no whispering with the students at the back. It has not been easy. But it has been consistent, and I think that is what is making the difference.",
+          "imagePlaceholder": "🧑‍🏫",
+          "grammarAnnotations": [
+            {
+              "targetText": "have been sitting in the front row",
+              "tone": "aux",
+              "note": "repeated action over time"
+            },
+            {
+              "targetText": "has been consistent",
+              "tone": "structure",
+              "note": "continuing state up to now"
+            }
+          ]
         },
         {
           "order": 3,
-          "text": "In the afternoons I have been working at a small café called Café Marta, two streets from the language school. The owner, Dolors, has been running the café for thirty-one years and speaks a Catalan dialect that I cannot follow at all. But her son, Marc, speaks slow and careful Spanish with me, and we have been having short conversations about the neighbourhood while I clear tables. Last Tuesday a customer asked me where the nearest metro station was, and I answered without thinking. Then I stood there for a moment, realising what had just happened. It felt rewarding in a way that is hard to explain."
+          "text": "In the afternoons I have been working at a small café called Café Marta, two streets from the language school. The owner, Dolors, has been running the café for thirty-one years and speaks a Catalan dialect that I cannot follow at all. But her son, Marc, speaks slow and careful Spanish with me, and we have been having short conversations about the neighbourhood while I clear tables. Last Tuesday a customer asked me where the nearest metro station was, and I answered without thinking. Then I stood there for a moment, realising what had just happened. \"You answered before you even thought,\" Marc said later. It felt rewarding in a way that is hard to explain.",
+          "imagePlaceholder": "☕",
+          "grammarAnnotations": [
+            {
+              "targetText": "have been working at a small café",
+              "tone": "aux",
+              "note": "ongoing job"
+            },
+            {
+              "targetText": "have been having short conversations",
+              "tone": "structure",
+              "note": "repeated recent activity"
+            }
+          ]
         },
         {
           "order": 4,
-          "text": "The writing portfolio has a deadline — the last Friday of the programme — and I have been working on my longest piece all week. It is a description of the street outside my window at six in the morning: the fruit seller who sets up before sunrise, the woman who walks two small dogs the same colour as the pavement, the distant sound of someone practising guitar. I have been getting up early just to watch, because the most productive hours in this city are the ones before the tourists arrive."
+          "text": "The writing portfolio has a deadline — the last Friday of the programme — and I have been working on my longest piece all week. It is a description of the street outside my window at six in the morning: the fruit seller who sets up before sunrise, the woman who walks two small dogs the same colour as the pavement, the distant sound of someone practising guitar. I have been getting up early just to watch, because the most productive hours in this city are the ones before the tourists arrive.",
+          "imagePlaceholder": "📝",
+          "grammarAnnotations": [
+            {
+              "targetText": "have been working on my longest piece all week",
+              "tone": "aux",
+              "note": "unfinished work over time"
+            },
+            {
+              "targetText": "have been getting up early",
+              "tone": "structure",
+              "note": "habit in progress"
+            }
+          ]
         },
         {
           "order": 5,
-          "text": "I miss home. I am not going to pretend otherwise. But I have been discovering something I did not expect: the harder a thing is, the more real it feels. Tell Dad his Spanish phrase book is finally getting used — I have been carrying it in my bag since the very first week. — Nadia"
+          "text": "I miss home. I am not going to pretend otherwise. But I have been discovering something I did not expect: the harder a thing is, the more real it feels. Tell Dad his Spanish phrase book is finally getting used — I have been carrying it in my bag since the very first week. — Nadia",
+          "imagePlaceholder": "🎒",
+          "grammarAnnotations": [
+            {
+              "targetText": "have been discovering something I did not expect",
+              "tone": "aux",
+              "note": "idea developing over time"
+            },
+            {
+              "targetText": "have been carrying it in my bag since the very first week",
+              "tone": "structure",
+              "note": "since + ongoing action"
+            }
+          ]
         }
       ],
       "comprehension": [
@@ -215,23 +280,74 @@
       "content": [
         {
           "order": 1,
-          "text": "Dear Gran, I am writing to you separately because this letter is different from the ones I send Mum. Mum wants to know if I am eating and sleeping enough. You want to know something else. I have been thinking about home — not because I am unhappy here, but because being somewhere new makes the old place more visible, somehow. Like looking at a photograph you forgot you had taken."
+          "text": "Dear Gran, I am writing to you separately because this letter is different from the ones I send Mum. Mum wants to know if I am eating and sleeping enough. You want to know something else. I have been thinking about home — not because I am unhappy here, but because being somewhere new makes the old place more visible, somehow. It has made me strangely nostalgic, like looking at a photograph you forgot you had taken.",
+          "imagePlaceholder": "💌",
+          "grammarAnnotations": []
         },
         {
           "order": 2,
-          "text": "I used to cycle to school every morning on the old blue bicycle, the one that made a clicking sound on cold days. I used to leave early enough to take the long road by the river, even though the shorter route saved twelve minutes. I didn't use to understand why I chose the longer way. I think I understand now. It was the only part of the day that belonged completely to me. Every spring, the wild flowers would come up along the fence by the mill, and I would slow down to look at them even when I was already late. I never told anyone I did that."
+          "text": "I used to cycle to school every morning on the old blue bicycle, the one that made a clicking sound on cold days. I used to leave early enough to take the long road by the river, even though the shorter route saved twelve minutes. I didn't use to understand why I chose the longer way. I think I understand now. It was the only part of the day that belonged completely to me. Every spring, the wild flowers would come up along the fence by the mill, and I would slow down to look at them even when I was already late. I never told anyone I did that.",
+          "imagePlaceholder": "🚲",
+          "grammarAnnotations": [
+            {
+              "targetText": "used to cycle",
+              "tone": "structure",
+              "note": "past habit"
+            },
+            {
+              "targetText": "would slow down to look at them",
+              "highlightText": "would",
+              "tone": "structure",
+              "note": "repeated past action"
+            }
+          ]
         },
         {
           "order": 3,
-          "text": "We used to have a tradition on Sunday evenings. Dad would carry the wooden table out to the garden, even if the sky looked uncertain, and we would eat dinner outside. Mum would pretend to complain about the flies. You would always bring something — a tart, or those small pastries with the sugar on top. After dinner, when it got dark, nobody would want to go inside, and we would stay out there talking until the candles burned down. I used to think that was just an ordinary evening. I didn't use to know it was the kind of thing people miss."
+          "text": "We used to have a tradition on Sunday evenings. Dad would carry the wooden table out to the garden, even if the sky looked uncertain, and we would eat dinner outside. Mum would pretend to complain about the flies. You would always bring something — a tart, or those small pastries with the sugar on top. After dinner, when it got dark, nobody would want to go inside, and we would stay out there talking until the candles burned down. \"Bring another candle before this one dies,\" you would say. I used to think that was just an ordinary evening. I didn't use to know it was the kind of thing people miss.",
+          "imagePlaceholder": "🕯️",
+          "grammarAnnotations": [
+            {
+              "targetText": "used to have a tradition",
+              "tone": "structure",
+              "note": "past state"
+            },
+            {
+              "targetText": "would carry the wooden table out to the garden",
+              "highlightText": "would",
+              "tone": "structure",
+              "note": "repeated past action"
+            }
+          ]
         },
         {
           "order": 4,
-          "text": "I didn't use to think much about my identity. That is not a word teenagers in my town used very often. But living here — among people with different upbringings, different languages, different ways of being in the world — I have started asking questions about it. Who am I when nobody around me knows who I used to be? The answer, I think, is that I am the same person. But something is being added. Like a second language growing alongside the first."
+          "text": "I didn't use to think much about my identity. That is not a word teenagers in my town used very often. But living here — among people with different upbringings, different languages, different ways of being in the world — I have started asking questions about it. Who am I when nobody around me knows who I used to be? The answer, I think, is that I am the same person. But something is being added. Like a second language growing alongside the first.",
+          "imagePlaceholder": "🪞",
+          "grammarAnnotations": [
+            {
+              "targetText": "didn't use to think much about my identity",
+              "tone": "structure",
+              "note": "past negative state"
+            },
+            {
+              "targetText": "used to be",
+              "tone": "structure",
+              "note": "past identity"
+            }
+          ]
         },
         {
           "order": 5,
-          "text": "My peers at the language school are lovely, Gran. There is a girl from Poland named Zosia who makes me laugh, and a very serious boy from Japan who always finishes the grammar exercises first but looks genuinely surprised when a joke lands. We didn't use to talk much — adolescence makes everyone a little cautious. But this week we walked to the harbour after class and watched the light on the water and talked about nothing in particular. It was carefree. It reminded me of the river road. — Nadia"
+          "text": "My peers at the language school are lovely, Gran. There is a girl from Poland named Zosia who makes me laugh, and a very serious boy from Japan who always finishes the grammar exercises first but looks genuinely surprised when a joke lands. We didn't use to talk much — adolescence makes everyone a little cautious. But this week we walked to the harbour after class and watched the light on the water and talked about nothing in particular. It was carefree. It reminded me of the river road. — Nadia",
+          "imagePlaceholder": "🌊",
+          "grammarAnnotations": [
+            {
+              "targetText": "didn't use to talk much",
+              "tone": "structure",
+              "note": "past negative habit"
+            }
+          ]
         }
       ],
       "comprehension": [

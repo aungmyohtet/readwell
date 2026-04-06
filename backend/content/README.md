@@ -77,8 +77,8 @@ python content/status.py --missing --level B1
 ## Import Script
 
 ```bash
-# Install dependency
-pip install pymongo
+# Install content tool dependencies
+python -m pip install -r content/requirements.txt
 
 # Validate AND import in one step (recommended)
 python content/import.py --validate stories/my_story.json
@@ -92,6 +92,8 @@ python content/import.py stories/my_story.json
 # Clear and re-import all
 python content/import.py --clear
 ```
+
+Use the same environment for both validation and import so `validate.py` and `import.py` see the same installed packages.
 
 ## Environment Variables
 

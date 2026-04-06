@@ -80,23 +80,56 @@
       "content": [
         {
           "order": 1,
-          "text": "Vera Marsh had been working in the Aldwich Street Library for thirty years when the demolition notice arrived. She had catalogued nearly eleven thousand items in that time — books, pamphlets, maps, correspondence, the miscellaneous documents that accumulate in old institutions like sediment at the bottom of a river. She knew the layout of the archive the way other people know their own kitchens. When the notice was slid under the door one Wednesday morning and she picked it up and read it, she did not make a sound. She scrutinised it once more, set it down, and went to her office to think."
+          "text": "Vera Marsh had been working in the Aldwich Street Library for thirty years when the demolition notice arrived. She had catalogued nearly eleven thousand items in that time — books, pamphlets, maps, correspondence, the miscellaneous documents that accumulate in old institutions like sediment at the bottom of a river. She knew the layout of the archive the way other people know their own kitchens. When the notice was slid under the door one Wednesday morning and she picked it up and read it, she did not make a sound. She scrutinised it once more, set it down, and went to her office to think.",
+          "imagePlaceholder": "📄",
+          "grammarAnnotations": []
         },
         {
           "order": 2,
-          "text": "Her analytical approach to problems had always been the same: define the question precisely, then gather evidence before drawing any conclusion. She had been scrutinising the council's records for weeks by the time the heritage consultant arrived, and the preliminary findings were already organised in a folder with tabs and marginal notes written in her small, rigorous hand. 'I've been building this case for forty-three days,' Vera told her. 'I've found procedural errors in the demolition order and what may be an 1891 land deed that changes the legal status of the building entirely.' The consultant looked at the folder and then at Vera with an expression of visible relief. She had been dealing with rushed campaigns and incomplete paperwork all year. This was different."
+          "text": "Her analytical approach to problems had always been the same: define the question precisely, then gather evidence before drawing any conclusion. She had been scrutinising the council's records for weeks by the time the heritage consultant arrived, and the preliminary findings were already organised in a folder with tabs and marginal notes written in her small, rigorous hand. \"I've been building this case for forty-three days,\" Vera told her. \"I've found procedural errors in the demolition order and what may be an 1891 land deed that changes the legal status of the building entirely.\" The consultant looked at the folder and then at Vera with an expression of visible relief. She had been dealing with rushed campaigns and incomplete paperwork all year. This was different.",
+          "imagePlaceholder": "🗂️",
+          "grammarAnnotations": [
+            {
+              "targetText": "I've been building this case for forty-three days,",
+              "tone": "aux",
+              "note": "focus on duration"
+            },
+            {
+              "targetText": "I've found procedural errors in the demolition order",
+              "tone": "structure",
+              "note": "focus on result"
+            }
+          ]
         },
         {
           "order": 3,
-          "text": "The most important document was in Box 19 — a box Vera had not opened since 2017 because its contents were listed in the index as 'administrative correspondence, 1880–1920, miscellaneous' and nothing she had needed before had pointed her there. She had been working methodically through the archive since the notice arrived, and Box 19 came in sequence. She opened it on a Tuesday afternoon. The deed was on the third page, folded inside a letter about gas lighting repairs, dated September the fourth, 1891. Vera read it once, then again. Then she called Professor Osei at the university."
+          "text": "The most important document was in Box 19 — a box Vera had not opened since 2017 because its contents were listed in the index as 'administrative correspondence, 1880–1920, miscellaneous' and nothing she had needed before had pointed her there. She had been working methodically through the archive since the notice arrived, and Box 19 came in sequence. She opened it on a Tuesday afternoon. The deed was on the third page, folded inside a letter about gas lighting repairs, dated September the fourth, 1891. Vera read it once, then again. Then she called Professor Osei at the university.",
+          "imagePlaceholder": "📦",
+          "grammarAnnotations": []
         },
         {
           "order": 4,
-          "text": "He validated it within a week. The land on which the library stood had been donated to the city by a merchant named Thomas Aldwich — the library's namesake — on the condition that it remain a public institution in perpetuity. The council had not violated this condition intentionally; the deed had simply been lost. But its implication was clear: the building could not be sold or demolished without a formal hearing and the reclassification of the land title, a process that would take, at minimum, two years. 'You have been working toward this without knowing what you'd find,' Professor Osei said. Vera said: 'The methodology stays the same either way.'"
+          "text": "He validated it within a week. The land on which the library stood had been donated to the city by a merchant named Thomas Aldwich — the library's namesake — on the condition that it remain a public institution in perpetuity. The council had not violated this condition intentionally; the deed had simply been lost. But its implication was clear: the building could not be sold or demolished without a formal hearing and the reclassification of the land title, a process that would take, at minimum, two years. \"You have been working toward this without knowing what you'd find,\" Professor Osei said. Vera said: \"The methodology stays the same either way.\"",
+          "imagePlaceholder": "⚖️",
+          "grammarAnnotations": [
+            {
+              "targetText": "You have been working toward this without knowing what you'd find,",
+              "tone": "aux",
+              "note": "ongoing effort up to now"
+            }
+          ]
         },
         {
           "order": 5,
-          "text": "The council's legal team confirmed the finding on a Friday. There would be no demolition in the spring. Vera sat at her desk after the phone call and looked at the room: the card catalogue that nobody used anymore, the shelf of local history monographs that smelled faintly of damp, the window that overlooked a street she had watched change its shops four times since she began. She had been defending this place for months. She had found what she needed to defend it. The two things were separate — the work and the discovery — but they had arrived together, and the result was the same. The library would stand. For now, that was enough. She had synthesised forty-three days of evidence into one document, rigorous and clear. She turned back to the shelf. There were still fourteen boxes she had not opened."
+          "text": "The council's legal team confirmed the finding on a Friday. There would be no demolition in the spring. Vera sat at her desk after the phone call and looked at the room: the card catalogue that nobody used anymore, the shelf of local history monographs that smelled faintly of damp, the window that overlooked a street she had watched change its shops four times since she began. She had been defending this place for months. She had found what she needed to defend it.",
+          "imagePlaceholder": "☎️",
+          "grammarAnnotations": []
+        },
+        {
+          "order": 6,
+          "text": "The two things were separate — the work and the discovery — but they had arrived together, and the result was the same. The library would stand. For now, that was enough. She had synthesised forty-three days of evidence into one document, rigorous and clear. She turned back to the shelf. There were still fourteen boxes she had not opened.",
+          "imagePlaceholder": "📚",
+          "grammarAnnotations": []
         }
       ],
       "comprehension": [

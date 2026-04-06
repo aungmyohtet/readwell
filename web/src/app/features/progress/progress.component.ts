@@ -13,6 +13,10 @@ import { ProgressRecord } from '../../core/models/progress.model';
           <span class="eyebrow">Learning Dashboard</span>
           <h1 class="page-title">See what you are mastering, not just what you finished.</h1>
           <p class="page-subtitle">Use your history to spot strengths, weak points, and where to review next.</p>
+          <div class="progress-hero-actions">
+            <a routerLink="/browse" class="btn btn-primary">Browse Stories</a>
+            <a routerLink="/profile" class="btn btn-secondary">Study Profile</a>
+          </div>
         </div>
 
         <div class="hero-mini card">
@@ -104,6 +108,12 @@ import { ProgressRecord } from '../../core/models/progress.model';
     .hero-mini strong { font-size: 2.4rem; line-height: 1; }
     .mini-label { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-strong); }
     .hero-mini p { color: var(--muted); font-size: 0.88rem; }
+    .progress-hero-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
     .loading { padding: 48px; text-align: center; color: var(--muted); }
     .empty-state { text-align: center; padding: 60px 20px; }
     .empty-icon { font-size: 3rem; margin-bottom: 12px; }
@@ -131,15 +141,88 @@ import { ProgressRecord } from '../../core/models/progress.model';
 
     @media (max-width: 860px) {
       .progress-hero,
-      .stats-row,
       .insight-strip {
         grid-template-columns: 1fr;
+      }
+
+      .stats-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
     @media (max-width: 640px) {
-      .history-item { flex-direction: column; align-items: flex-start; }
-      .history-score { text-align: left; }
+      .progress-hero {
+        padding: 1.05rem;
+        gap: 1rem;
+      }
+
+      .progress-hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .progress-hero-actions .btn {
+        width: 100%;
+      }
+
+      .stats-row,
+      .insight-strip {
+        display: flex;
+        overflow-x: auto;
+        gap: 0.85rem;
+        padding-bottom: 0.35rem;
+        margin-inline: -0.15rem;
+        scroll-snap-type: x proximity;
+        scrollbar-width: none;
+      }
+
+      .stats-row::-webkit-scrollbar,
+      .insight-strip::-webkit-scrollbar {
+        display: none;
+      }
+
+      .stat-card,
+      .insight-card {
+        min-width: min(82vw, 15.5rem);
+        flex: 0 0 auto;
+        scroll-snap-align: start;
+      }
+
+      .history-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.95rem 1rem;
+        border-radius: 1.15rem;
+      }
+
+      .history-info {
+        width: 100%;
+      }
+
+      .history-score {
+        text-align: left;
+        width: 100%;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-mini strong {
+        font-size: 2rem;
+      }
+
+      .history-score {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+
+      .score-value {
+        font-size: 1.15rem;
+      }
     }
   `],
 })

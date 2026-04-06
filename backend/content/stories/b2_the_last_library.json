@@ -69,32 +69,72 @@
         {
           "order": 1,
           "text": "In the window of the old Hartwell Library there was a sign Mara had never noticed before. She walked past it every morning on her way to school, and every afternoon on the way back. But today the sign was new — printed on white paper in clean black letters: PLANNING PERMISSION GRANTED. DEMOLITION: OCTOBER 14TH. Mara stopped on the pavement. She looked at the building properly for the first time. The iron gate. The wide stone steps, worn smooth in the middle from decades of feet. The name carved above the door: HARTWELL, 1943. She had visited this library exactly twice, both times for school projects. Now, standing in front of it, she felt inexplicably as though something important was about to be taken away — not from her exactly, but from the air around her.",
-          "imagePlaceholder": "🏛️"
+          "imagePlaceholder": "🏛️",
+          "grammarAnnotations": []
         },
         {
           "order": 2,
           "text": "She pushed the gate open and went inside. The library smelled of old paper and wood polish and something faintly sweet she could not identify. A man in his mid-seventies sat behind the main desk, reading. He looked up without alarm. \"I saw the sign,\" Mara said. She was not sure what else to say. The man — his name badge read MR FENNICK — nodded slowly. \"If the council had listened to us three years ago, we wouldn't be in this situation,\" he said. \"We submitted a heritage petition. Thirty-seven signatures. They rejected it.\" He opened a drawer beneath the desk and placed a manila folder carefully on the surface between them. \"But if you have a few minutes, and if you're interested in why this building matters, I think you should look at this.\"",
-          "imagePlaceholder": "📖"
+          "imagePlaceholder": "📖",
+          "grammarAnnotations": [
+            {
+              "targetText": "If the council had listened to us three years ago, we wouldn't be in this situation",
+              "tone": "structure",
+              "note": "past cause, present result"
+            }
+          ]
         },
         {
           "order": 3,
           "text": "The folder contained letters. Old ones — some typed on thin yellowed paper, others handwritten in a neat slanted script in faded blue ink. They were written by a woman named Agnes Hartwell. She built the library in 1943, during the second year of heavy bombing, when half the town had been evacuated and the other half was trying to carry on. Agnes had written to the town council asking for funding to create a reading room. They refused. She wrote to her neighbours, her colleagues, her former teachers. She organised fundraising events in her own kitchen. She sold her furniture — her own furniture — to cover the cost of the first books. \"If she hadn't been the catalyst she was,\" Mr Fennick said quietly, \"this library would never have existed. Three generations of this town learned to read here. If she hadn't started it, none of that would have happened.\" He looked at the shelves for a long moment.",
-          "imagePlaceholder": "✉️"
+          "imagePlaceholder": "✉️",
+          "grammarAnnotations": [
+            {
+              "targetText": "If she hadn't been the catalyst she was,",
+              "tone": "structure",
+              "note": "imaginary past cause"
+            },
+            {
+              "targetText": "If she hadn't started it, none of that would have happened.",
+              "tone": "structure",
+              "note": "imaginary past result"
+            }
+          ]
         },
         {
           "order": 4,
           "text": "Mara carried the folder to a corner table and read for an hour. The letters revealed something she had not expected — Agnes was not certain she would succeed. In one letter, written in the autumn of 1943, she described the feeling precisely: \"If I had known at the outset how difficult this would be, I am not sure I would have started. But here is what I also know: if I hadn't started, no one else would have. And that thought, more than any other, is enough to keep me going.\" Mara read those two sentences three times. She thought about the sign in the window. She thought about thirty-seven signatures. Agnes's decision to continue had been pivotal — that much was clear. If the petition had reached more people, if someone with more influence had cared, would the building still be standing in fifty years? Would Agnes's legacy still be intact?",
-          "imagePlaceholder": "💭"
+          "imagePlaceholder": "💭",
+          "grammarAnnotations": [
+            {
+              "targetText": "If I had known at the outset how difficult this would be, I am not sure I would have started.",
+              "tone": "structure",
+              "note": "imagined different past"
+            },
+            {
+              "targetText": "if I hadn't started, no one else would have.",
+              "tone": "structure",
+              "note": "imaginary past consequence"
+            }
+          ]
         },
         {
           "order": 5,
           "text": "She photographed every letter on her phone. Then she went home and opened the town's digital archive — she had never used it before — and spent three hours searching. She found newspaper articles from 1943, photographs of the library's opening day, a typed list of the first week's borrowers. She found an interview Agnes gave in 1971, twenty-eight years after the library opened: \"The building is not the point,\" Agnes had said. \"The building is just the shape of the point. The point is what happens inside it. If we ever lose this building, I hope we don't lose the habit.\" The letters, the photographs, the interview — they were all irreplaceable. Mara understood now that to demolish the building was not simply to knock down old walls — it was to erase something that could not be recovered.",
-          "imagePlaceholder": "🗄️"
+          "imagePlaceholder": "🗄️",
+          "grammarAnnotations": []
         },
         {
           "order": 6,
           "text": "The next morning, Mara went to school early and knocked on the door of her history teacher, Mrs Albright. \"I want to start a new petition,\" Mara said. \"But I want it to be different from the last one. I want people to read these letters first. If Agnes hadn't cared about this town in 1943, three generations of people would have grown up without this place. That's not just a statistic — it's a story. And if they hear the story, they might feel differently.\" Mrs Albright looked at her carefully across the desk. \"The last petition had thirty-seven signatures,\" she said. \"You'll need considerably more than that.\" \"I know,\" said Mara. \"I'm starting with thirty-eight.\" Mrs Albright looked at her for another moment. Then she picked up a pen.",
-          "imagePlaceholder": "✊"
+          "imagePlaceholder": "✊",
+          "grammarAnnotations": [
+            {
+              "targetText": "If Agnes hadn't cared about this town in 1943, three generations of people would have grown up without this place.",
+              "tone": "structure",
+              "note": "imaginary past and result"
+            }
+          ]
         }
       ],
       "comprehension": [
