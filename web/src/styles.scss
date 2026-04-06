@@ -498,6 +498,128 @@ h1, h2 {
   padding: 0.2rem 0;
 }
 
+.mobile-stage-nav,
+.mobile-stage-footer {
+  display: none;
+}
+
+.mobile-stage-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.mobile-stage-count {
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.mobile-stage-current {
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: var(--accent-strong);
+}
+
+.mobile-stage-track {
+  display: flex;
+  gap: 0.55rem;
+  overflow-x: auto;
+  padding-bottom: 0.35rem;
+  scrollbar-width: none;
+}
+
+.mobile-stage-track::-webkit-scrollbar {
+  display: none;
+}
+
+.mobile-stage-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  flex-shrink: 0;
+  padding: 0.72rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(29, 42, 40, 0.1);
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--muted);
+  font-size: 0.84rem;
+  font-weight: 800;
+}
+
+.mobile-stage-chip.active {
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.16), rgba(245, 158, 11, 0.16));
+  color: var(--accent-strong);
+  border-color: rgba(15, 118, 110, 0.18);
+}
+
+.mobile-stage-chip-index {
+  width: 1.45rem;
+  height: 1.45rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(29, 42, 40, 0.08);
+  color: var(--ink);
+  font-size: 0.72rem;
+}
+
+.mobile-stage-chip.active .mobile-stage-chip-index {
+  background: rgba(15, 118, 110, 0.16);
+  color: var(--accent-strong);
+}
+
+.mobile-stage-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.9rem;
+}
+
+.mobile-nav-btn {
+  flex: 1;
+  min-height: 2.9rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(29, 42, 40, 0.1);
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.mobile-nav-btn:disabled {
+  opacity: 0.45;
+}
+
+.mobile-nav-btn-primary {
+  background: linear-gradient(135deg, var(--accent) 0%, #14532d 100%);
+  color: #fffdf9;
+  border-color: transparent;
+}
+
+.mobile-stage-footer {
+  margin-top: 1rem;
+  background: linear-gradient(180deg, rgba(255, 253, 249, 0.94), rgba(238, 247, 242, 0.9));
+}
+
+.mobile-stage-footer-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.mobile-stage-footer-copy strong {
+  font-size: 0.98rem;
+}
+
+.mobile-stage-footer-copy span {
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
 .vocab-header {
   display: flex;
   align-items: end;
@@ -1484,21 +1606,119 @@ h1, h2 {
 }
 
 @media (max-width: 700px) {
-  .reader .tab-bar {
-    overflow-x: auto;
-    padding-bottom: 0.9rem;
+  .reader-header {
+    padding: 1.1rem;
   }
 
-  .reader .tab {
-    min-width: 9rem;
+  .chapter-meta {
+    align-items: flex-start;
+  }
+
+  .chapter-stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .learning-loop {
+    display: none;
+  }
+
+  .mobile-stage-nav,
+  .mobile-stage-footer {
+    display: block;
+  }
+
+  .reader .tab-bar {
+    display: none;
+  }
+
+  .vocab-header,
+  .story-toolbar {
+    align-items: stretch;
+  }
+
+  .vocab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vocab-card {
+    height: 188px;
   }
 
   .paragraph-block {
     flex-wrap: wrap;
+    gap: 0.9rem;
+    padding: 0.9rem;
+  }
+
+  .para-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .para-text {
+    font-size: 0.96rem;
+    line-height: 1.72;
   }
 
   .focus-metrics {
     grid-template-columns: 1fr;
+  }
+
+  .quiz-progress-row,
+  .question-header,
+  .result-actions,
+  .mobile-stage-actions.footer-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .result-score {
+    font-size: 2.35rem;
+  }
+
+  .answer-review {
+    flex-direction: column;
+  }
+
+  .vocab-popup-sheet {
+    padding: 18px 18px 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .reader {
+    padding-bottom: 40px;
+  }
+
+  .mobile-stage-topline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .chapter-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .story-focus,
+  .grammar-card,
+  .question-block,
+  .quiz-result,
+  .progress-panel,
+  .mobile-stage-nav,
+  .mobile-stage-footer {
+    padding: 1rem;
+  }
+
+  .story-toolbar {
+    gap: 0.65rem;
+  }
+
+  .story-legend-chip,
+  .grammar-rule-label,
+  .vocab-toggle-hint {
+    font-size: 0.74rem;
   }
 }
 

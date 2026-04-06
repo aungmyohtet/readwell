@@ -21,6 +21,13 @@ interface GrammarSpec {
   annotate: (escapedText: string) => string;
 }
 
+interface LessonTabMeta {
+  id: Tab;
+  label: string;
+  shortLabel: string;
+  icon: string;
+}
+
 const TEXT_SEGMENT_SPLIT = /(<[^>]+>)/g;
 const THIRD_PERSON_SUBJECT = String.raw`(?:He|She|It|[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?|[A-Z][a-z]+'s\s+[A-Za-z]+|His\s+[A-Za-z]+|Her\s+[A-Za-z]+|Their\s+[A-Za-z]+)`;
 const FREQUENCY_ADVERB = String.raw`(?:always|usually|often|sometimes|never|already|still|just|really)`;
@@ -241,6 +248,13 @@ const CONFETTI_PIECES = Array.from({ length: 50 }, (_, i) => ({
   height: `${8 + (i % 5) * 2}px`,
 }));
 
+const LESSON_TABS: LessonTabMeta[] = [
+  { id: 'vocabulary', label: 'Vocabulary', shortLabel: 'Words', icon: '📚' },
+  { id: 'grammar', label: 'Grammar', shortLabel: 'Grammar', icon: '✏️' },
+  { id: 'story', label: 'Story', shortLabel: 'Read', icon: '📖' },
+  { id: 'quiz', label: 'Quiz', shortLabel: 'Quiz', icon: '🎯' },
+];
+
 @Component({
   selector: 'app-reader',
   imports: [RouterLink],
@@ -300,17 +314,38 @@ const CONFETTI_PIECES = Array.from({ length: 50 }, (_, i) => ({
           </div>
         </div>
 
+        <div class="mobile-stage-nav card">
+          <div class="mobile-stage-topline">
+            <span class="mobile-stage-count">Step {{ activeTabIndex() + 1 }} of {{ lessonTabs.length }}</span>
+            <span class="mobile-stage-current">{{ activeTabMeta().icon }} {{ activeTabMeta().label }}</span>
+          </div>
+
+          <div class="mobile-stage-track" role="tablist" aria-label="Lesson sections">
+            @for (tab of lessonTabs; track tab.id; let i = $index) {
+              <button class="mobile-stage-chip" [class.active]="activeTab() === tab.id" (click)="goToTab(tab.id)">
+                <span class="mobile-stage-chip-index">{{ i + 1 }}</span>
+                <span>{{ tab.shortLabel }}</span>
+              </button>
+            }
+          </div>
+
+          <div class="mobile-stage-actions">
+            <button class="mobile-nav-btn" [disabled]="!canGoPrevious()" (click)="goPrevious()">← Previous</button>
+            <button class="mobile-nav-btn mobile-nav-btn-primary" [disabled]="!canGoNext()" (click)="goNext()">{{ nextTabCta() }}</button>
+          </div>
+        </div>
+
         <div class="tab-bar">
-          <button class="tab" [class.active]="activeTab() === 'vocabulary'" (click)="activeTab.set('vocabulary')">
+          <button class="tab" [class.active]="activeTab() === 'vocabulary'" (click)="goToTab('vocabulary')">
             <span>📚</span> Vocabulary
           </button>
-          <button class="tab" [class.active]="activeTab() === 'grammar'" (click)="activeTab.set('grammar')">
+          <button class="tab" [class.active]="activeTab() === 'grammar'" (click)="goToTab('grammar')">
             <span>✏️</span> Grammar
           </button>
-          <button class="tab" [class.active]="activeTab() === 'story'" (click)="activeTab.set('story')">
+          <button class="tab" [class.active]="activeTab() === 'story'" (click)="goToTab('story')">
             <span>📖</span> Story
           </button>
-          <button class="tab" [class.active]="activeTab() === 'quiz'" (click)="activeTab.set('quiz')">
+          <button class="tab" [class.active]="activeTab() === 'quiz'" (click)="goToTab('quiz')">
             <span>🎯</span> Quiz
           </button>
         </div>
@@ -549,6 +584,17 @@ const CONFETTI_PIECES = Array.from({ length: 50 }, (_, i) => ({
             }
           }
         </div>
+
+        <div class="mobile-stage-footer card">
+          <div class="mobile-stage-footer-copy">
+            <strong>{{ activeTabMeta().label }}</strong>
+            <span>{{ mobileSupportText() }}</span>
+          </div>
+          <div class="mobile-stage-actions footer-actions">
+            <button class="mobile-nav-btn" [disabled]="!canGoPrevious()" (click)="goPrevious()">← Previous</button>
+            <button class="mobile-nav-btn mobile-nav-btn-primary" [disabled]="!canGoNext()" (click)="goNext()">{{ nextTabCta() }}</button>
+          </div>
+        </div>
       </div>
 
       @if (activeVocabPopup()) {
@@ -576,6 +622,8 @@ const CONFETTI_PIECES = Array.from({ length: 50 }, (_, i) => ({
 })
 export class ReaderComponent implements OnInit {
   @Input() chapterId!: string;
+
+  readonly lessonTabs = LESSON_TABS;
 
   chapter = signal<ChapterDetail | null>(null);
   activeTab = signal<Tab>('vocabulary');
@@ -664,6 +712,10 @@ export class ReaderComponent implements OnInit {
 
   toggleGrammarMode() {
     this.grammarMode.update((value) => !value);
+  }
+
+  goToTab(tab: Tab) {
+    this.activeTab.set(tab);
   }
 
   highlightParagraph(paragraph: Paragraph): SafeHtml {
@@ -779,6 +831,54 @@ export class ReaderComponent implements OnInit {
     if (progress < 33) return 'Entering the chapter';
     if (progress < 75) return 'Building understanding';
     return 'Ready to retrieve';
+  }
+
+  activeTabIndex(): number {
+    return this.lessonTabs.findIndex((tab) => tab.id === this.activeTab());
+  }
+
+  activeTabMeta(): LessonTabMeta {
+    return this.lessonTabs[this.activeTabIndex()] ?? this.lessonTabs[0];
+  }
+
+  canGoPrevious(): boolean {
+    return this.activeTabIndex() > 0;
+  }
+
+  canGoNext(): boolean {
+    return this.activeTabIndex() < this.lessonTabs.length - 1;
+  }
+
+  goPrevious() {
+    const previousIndex = this.activeTabIndex() - 1;
+    if (previousIndex < 0) return;
+    this.goToTab(this.lessonTabs[previousIndex].id);
+  }
+
+  goNext() {
+    const nextIndex = this.activeTabIndex() + 1;
+    if (nextIndex >= this.lessonTabs.length) return;
+    this.goToTab(this.lessonTabs[nextIndex].id);
+  }
+
+  nextTabCta(): string {
+    const nextIndex = this.activeTabIndex() + 1;
+    if (nextIndex >= this.lessonTabs.length) return 'Finished';
+    const next = this.lessonTabs[nextIndex];
+    return `Next: ${next.label} →`;
+  }
+
+  mobileSupportText(): string {
+    switch (this.activeTab()) {
+      case 'vocabulary':
+        return 'Flip cards, review meaning, then continue when ready.';
+      case 'grammar':
+        return 'Use the examples to notice the exact pattern before reading.';
+      case 'story':
+        return 'Read carefully, tap vocabulary, and toggle grammar cues when needed.';
+      case 'quiz':
+        return 'Finish the questions, then review the feedback before moving on.';
+    }
   }
 
   grammarLegend(): GrammarLegendItem[] {
