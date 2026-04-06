@@ -49,6 +49,18 @@ public class Chapter {
     private String imagePlaceholder;
 
     private String imageUrl;
+
+    /** Optional explicit grammar spans for precise UI highlighting in the reader */
+    private List<GrammarAnnotation> grammarAnnotations;
+  }
+
+  @Data
+  public static class GrammarAnnotation {
+    private String targetText;
+    private String highlightText;
+    private String tone;
+    private String note;
+    private Integer occurrence;
   }
 
   @Data

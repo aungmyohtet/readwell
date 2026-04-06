@@ -3,7 +3,7 @@ import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { StoryService } from '../../core/services/story.service';
 import { ProgressService } from '../../core/services/progress.service';
-import { ChapterDetail, ComprehensionQuestion } from '../../core/models/story.model';
+import { ChapterDetail, ComprehensionQuestion, GrammarAnnotation, Paragraph } from '../../core/models/story.model';
 
 type Tab = 'vocabulary' | 'grammar' | 'story' | 'quiz';
 
@@ -440,7 +440,7 @@ const CONFETTI_PIECES = Array.from({ length: 50 }, (_, i) => ({
                       <span class="para-emoji">{{ para.imagePlaceholder || '📖' }}</span>
                     }
                   </div>
-                  <p class="para-text" [innerHTML]="highlightParagraph(para.text)"></p>
+                  <p class="para-text" [innerHTML]="highlightParagraph(para)"></p>
                 </div>
               }
             </div>
@@ -666,10 +666,13 @@ export class ReaderComponent implements OnInit {
     this.grammarMode.update((value) => !value);
   }
 
-  highlightParagraph(text: string): SafeHtml {
-    const escaped = this.escapeHtml(text);
+  highlightParagraph(paragraph: Paragraph): SafeHtml {
+    const escaped = this.escapeHtml(paragraph.text);
 
     if (this.grammarMode()) {
+      if (paragraph.grammarAnnotations?.length) {
+        return this.sanitizer.bypassSecurityTrustHtml(this.annotateExplicitGrammar(escaped, paragraph.grammarAnnotations));
+      }
       return this.sanitizer.bypassSecurityTrustHtml(this.annotateGrammar(escaped));
     }
 
@@ -797,5 +800,52 @@ export class ReaderComponent implements OnInit {
     if (!fallback) return escapedText;
     fallback.lastIndex = 0;
     return escapedText.replace(fallback, (match) => `<mark class="gh gh-structure">${match}</mark>`);
+  }
+
+  private annotateExplicitGrammar(escapedText: string, annotations: GrammarAnnotation[]): string {
+    let next = escapedText;
+
+    for (const annotation of annotations) {
+      const targetText = annotation.targetText?.trim();
+      if (!targetText) continue;
+
+      const targetEscaped = this.escapeHtml(targetText);
+      const occurrence = Math.max(1, annotation.occurrence ?? 1);
+      const tone = this.normalizeTone(annotation.tone);
+      const regex = new RegExp(this.escapeForRegex(targetEscaped), 'g');
+      let seen = 0;
+
+      next = transformTextSegments(next, (segment) =>
+        segment.replace(regex, (match) => {
+          seen += 1;
+          if (seen !== occurrence) return match;
+
+          const inner = annotation.highlightText?.trim();
+          if (inner) {
+            const innerEscaped = this.escapeHtml(inner);
+            const innerRegex = new RegExp(this.escapeForRegex(innerEscaped), 'g');
+            let innerSeen = 0;
+            const highlighted = match.replace(innerRegex, (innerMatch) => {
+              innerSeen += 1;
+              if (innerSeen > 1) return innerMatch;
+              return `<mark class="gh gh-${tone}">${innerMatch}</mark>`;
+            });
+            if (highlighted !== match) return highlighted;
+          }
+
+          return `<mark class="gh gh-${tone}">${match}</mark>`;
+        }),
+      );
+    }
+
+    return next;
+  }
+
+  private normalizeTone(tone?: GrammarAnnotation['tone']): GrammarTone {
+    return tone ?? 'structure';
+  }
+
+  private escapeForRegex(value: string): string {
+    return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 }

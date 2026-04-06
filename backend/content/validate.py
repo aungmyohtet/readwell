@@ -295,6 +295,25 @@ def validate_story(file_path: Path) -> bool:
                 warn(f"  Paragraph {p.get('order','?')} has no imagePlaceholder or imageUrl")
                 warnings += 1
 
+            annotations = p.get("grammarAnnotations", [])
+            for idx, annotation in enumerate(annotations, start=1):
+                target_text = annotation.get("targetText", "")
+                highlight_text = annotation.get("highlightText", "")
+                if not target_text:
+                    error(f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} is missing targetText")
+                    errors += 1
+                    continue
+                if target_text not in p.get("text", ""):
+                    error(f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} targetText '{target_text}' does not appear in paragraph text")
+                    errors += 1
+                if highlight_text and highlight_text not in target_text:
+                    error(f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} highlightText '{highlight_text}' is not inside targetText '{target_text}'")
+                    errors += 1
+                tone = annotation.get("tone")
+                if tone and tone not in {"aux", "ending", "question", "structure", "modal"}:
+                    warn(f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} tone '{tone}' is not a standard reader tone")
+                    warnings += 1
+
     # ── Summary ──
     print()
     if errors == 0 and warnings == 0:

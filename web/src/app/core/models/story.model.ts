@@ -39,6 +39,15 @@ export interface Paragraph {
   text: string;
   imagePlaceholder?: string;
   imageUrl?: string;
+  grammarAnnotations?: GrammarAnnotation[];
+}
+
+export interface GrammarAnnotation {
+  targetText: string;
+  highlightText?: string;
+  tone?: 'aux' | 'ending' | 'question' | 'structure' | 'modal';
+  note?: string;
+  occurrence?: number;
 }
 
 export interface ComprehensionQuestion {

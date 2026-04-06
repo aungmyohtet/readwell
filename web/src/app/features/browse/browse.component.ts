@@ -1,4 +1,4 @@
-import { Component, OnInit, signal } from '@angular/core';
+import { Component, OnInit, computed, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { StoryService } from '../../core/services/story.service';
 import { Story } from '../../core/models/story.model';
@@ -10,7 +10,34 @@ interface LastChapter {
   chapterTitle: string;
 }
 
+interface LevelPath {
+  level: 'A2' | 'B1' | 'B2';
+  title: string;
+  summary: string;
+  guidance: string;
+}
+
 const LEVELS = ['All', 'A2', 'B1', 'B2'] as const;
+const LEVEL_PATHS: LevelPath[] = [
+  {
+    level: 'A2',
+    title: 'Build confidence with clear everyday English',
+    summary: 'Shorter chapters, familiar situations, and visible grammar signals help learners gain control fast.',
+    guidance: 'Best for learners building routine, question forms, and core sentence patterns.',
+  },
+  {
+    level: 'B1',
+    title: 'Move into richer situations and stronger inference',
+    summary: 'Stories become more layered, with longer paragraphs, more nuance, and broader grammar contrast.',
+    guidance: 'Best for learners ready to connect meaning, time, and consequence across a chapter.',
+  },
+  {
+    level: 'B2',
+    title: 'Read for nuance, style, and advanced control',
+    summary: 'The reading becomes more literary and interpretive, with subtler grammar choices and denser meaning.',
+    guidance: 'Best for learners aiming for exam-level reading maturity and stylistic awareness.',
+  },
+];
 
 @Component({
   selector: 'app-browse',
@@ -72,6 +99,20 @@ const LEVELS = ['All', 'A2', 'B1', 'B2'] as const;
         </div>
       </section>
 
+      <section class="level-paths">
+        @for (path of levelPaths; track path.level) {
+          <button class="level-path-card card" [class.selected]="selectedLevel() === path.level" (click)="selectLevel(path.level)">
+            <div class="level-path-topline">
+              <span class="level-badge {{ path.level }}">{{ path.level }}</span>
+              <span class="path-count">{{ storyCountFor(path.level) }} stories</span>
+            </div>
+            <h3>{{ path.title }}</h3>
+            <p>{{ path.summary }}</p>
+            <span class="path-guidance">{{ path.guidance }}</span>
+          </button>
+        }
+      </section>
+
       <section id="library" class="library-section">
         <div class="library-header">
           <div>
@@ -96,7 +137,7 @@ const LEVELS = ['All', 'A2', 'B1', 'B2'] as const;
             <h3>Loading stories...</h3>
             <p>The library is being prepared.</p>
           </div>
-        } @else if (stories().length === 0) {
+        } @else if (displayedStories().length === 0) {
           <div class="empty-state section-card">
             <div class="empty-icon">📚</div>
             <h3>No stories in this level yet</h3>
@@ -104,7 +145,7 @@ const LEVELS = ['All', 'A2', 'B1', 'B2'] as const;
           </div>
         } @else {
           <div class="story-grid">
-            @for (story of stories(); track story.id) {
+            @for (story of displayedStories(); track story.id) {
               <a class="story-card" [routerLink]="['/stories', story.id]">
                 <div class="story-glow"></div>
                 <div class="cover">
@@ -145,221 +186,19 @@ const LEVELS = ['All', 'A2', 'B1', 'B2'] as const;
       </section>
     </div>
   `,
-  styles: [`
-    .browse-hero {
-      display: grid;
-      grid-template-columns: minmax(0, 1.55fr) minmax(18rem, 0.95fr);
-      gap: 1.4rem;
-      padding: 1.6rem;
-      margin-bottom: 2rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .browse-hero::after {
-      content: '';
-      position: absolute;
-      inset: auto -10% -35% 30%;
-      height: 14rem;
-      background: radial-gradient(circle, rgba(15, 118, 110, 0.15), transparent 60%);
-      pointer-events: none;
-    }
-    .hero-copy, .hero-panel { position: relative; z-index: 1; }
-    .hero-actions, .hero-principles { display: flex; flex-wrap: wrap; gap: 0.8rem; }
-    .hero-actions { margin-bottom: 1.25rem; }
-    .hero-principles { gap: 0.6rem; }
-    .principle-pill {
-      padding: 0.55rem 0.85rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(29, 42, 40, 0.08);
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--ink);
-    }
-    .hero-panel {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.9rem;
-      align-content: start;
-    }
-    .hero-stat {
-      padding: 1rem;
-      border-radius: 1.2rem;
-      background: rgba(255, 255, 255, 0.64);
-      border: 1px solid rgba(29, 42, 40, 0.08);
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-    }
-    .stat-value { font-size: 1.7rem; font-weight: 800; line-height: 1; }
-    .stat-label { font-size: 0.8rem; color: var(--muted); }
-    .continue-banner,
-    .coach-note { grid-column: 1 / -1; border-radius: 1.3rem; }
-    .continue-banner {
-      display: flex;
-      align-items: center;
-      gap: 0.9rem;
-      padding: 1rem;
-      background: linear-gradient(135deg, rgba(15, 118, 110, 0.14), rgba(245, 158, 11, 0.14));
-      border: 1px solid rgba(15, 118, 110, 0.15);
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
-    }
-    .continue-banner:hover { transform: translateY(-1px); box-shadow: 0 16px 24px rgba(29, 42, 40, 0.08); }
-    .continue-icon {
-      width: 2.8rem;
-      height: 2.8rem;
-      border-radius: 1rem;
-      background: linear-gradient(135deg, var(--accent) 0%, #14532d 100%);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .continue-text { display: flex; flex-direction: column; gap: 0.12rem; }
-    .continue-label { font-size: 0.74rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-strong); }
-    .continue-chapter { font-size: 0.94rem; font-weight: 700; }
-    .coach-note {
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.72);
-      border: 1px solid rgba(29, 42, 40, 0.08);
-    }
-    .coach-note strong { display: block; margin-bottom: 0.35rem; }
-    .coach-note p { color: var(--muted); font-size: 0.9rem; }
-
-    .library-section { display: flex; flex-direction: column; gap: 1.2rem; }
-    .library-header {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-    .library-title { font-size: clamp(1.5rem, 2.6vw, 2.2rem); }
-    .level-tabs { display: flex; gap: 0.55rem; flex-wrap: wrap; }
-    .tab {
-      padding: 0.7rem 1rem;
-      border: 1px solid rgba(29, 42, 40, 0.12);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.72);
-      cursor: pointer;
-      font-size: 0.9rem;
-      font-weight: 800;
-      color: var(--ink);
-      transition: all 0.18s ease;
-    }
-    .tab.active {
-      background: linear-gradient(135deg, var(--accent) 0%, #14532d 100%);
-      color: #fff;
-      border-color: transparent;
-      box-shadow: 0 12px 24px rgba(15, 118, 110, 0.2);
-    }
-    .tab:hover:not(.active) { background: #fffdf9; }
-    .empty-state { text-align: center; padding: 2rem 1.5rem; }
-    .empty-icon { font-size: 2.2rem; margin-bottom: 0.5rem; }
-    .empty-state h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
-    .empty-state p { color: var(--muted); }
-
-    .story-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
-      gap: 1.1rem;
-    }
-    .story-card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
-      border-radius: 1.5rem;
-      border: 1px solid rgba(29, 42, 40, 0.08);
-      background: rgba(255, 252, 247, 0.84);
-      overflow: hidden;
-      box-shadow: 0 18px 34px rgba(29, 42, 40, 0.08);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-    }
-    .story-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 24px 40px rgba(29, 42, 40, 0.12);
-      border-color: rgba(15, 118, 110, 0.2);
-    }
-    .story-glow {
-      position: absolute;
-      inset: auto -10% 60% 35%;
-      height: 9rem;
-      background: radial-gradient(circle, rgba(245, 158, 11, 0.16), transparent 60%);
-      pointer-events: none;
-    }
-    .cover {
-      height: 11rem;
-      background: linear-gradient(135deg, rgba(15, 118, 110, 0.16), rgba(245, 158, 11, 0.14));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .cover img { width: 100%; height: 100%; object-fit: cover; }
-    .cover-emoji { font-size: 4rem; }
-    .story-info {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-      padding: 1.1rem;
-      gap: 0.8rem;
-    }
-    .story-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.75rem;
-    }
-    .chapter-count { font-size: 0.78rem; font-weight: 700; color: var(--muted); }
-    h3 { font-size: 1.18rem; }
-    .description {
-      color: var(--muted);
-      font-size: 0.9rem;
-      line-height: 1.55;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .story-footer {
-      margin-top: auto;
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 0.8rem;
-    }
-    .meta-stack { display: flex; flex-direction: column; gap: 0.5rem; }
-    .meta-line { font-size: 0.8rem; color: var(--muted); }
-    .tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
-    .tag {
-      padding: 0.26rem 0.6rem;
-      border-radius: 999px;
-      background: rgba(29, 42, 40, 0.06);
-      font-size: 0.73rem;
-      font-weight: 700;
-      color: var(--ink);
-    }
-    .story-arrow { font-size: 1.3rem; color: var(--accent-strong); font-weight: 800; }
-
-    @media (max-width: 920px) {
-      .browse-hero { grid-template-columns: 1fr; }
-      .hero-panel { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-    }
-
-    @media (max-width: 640px) {
-      .browse-hero { padding: 1.15rem; }
-      .hero-panel { grid-template-columns: 1fr; }
-      .library-header { align-items: start; }
-      .story-grid { grid-template-columns: 1fr; }
-    }
-  `],
+  styles: [``],
 })
 export class BrowseComponent implements OnInit {
+  levelPaths = LEVEL_PATHS;
   levels = LEVELS;
   selectedLevel = signal<string>('All');
   stories = signal<Story[]>([]);
+  displayedStories = computed(() => {
+    const selectedLevel = this.selectedLevel();
+    const stories = this.stories();
+    if (selectedLevel === 'All') return stories;
+    return stories.filter((story) => story.level === selectedLevel);
+  });
   loading = signal(false);
   lastChapter = signal<LastChapter | null>(null);
 
@@ -381,13 +220,11 @@ export class BrowseComponent implements OnInit {
 
   selectLevel(level: string) {
     this.selectedLevel.set(level);
-    this.load();
   }
 
   private load() {
     this.loading.set(true);
-    const level = this.selectedLevel() === 'All' ? undefined : this.selectedLevel();
-    this.storyService.getStories(level).subscribe({
+    this.storyService.getStories().subscribe({
       next: (data) => { this.stories.set(data); this.loading.set(false); },
       error: () => this.loading.set(false),
     });
@@ -395,5 +232,9 @@ export class BrowseComponent implements OnInit {
 
   totalChapters(): number {
     return this.stories().reduce((sum, story) => sum + story.totalChapters, 0);
+  }
+
+  storyCountFor(level: Story['level']): number {
+    return this.stories().filter((story) => story.level === level).length;
   }
 }

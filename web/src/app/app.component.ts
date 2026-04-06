@@ -1,12 +1,12 @@
 import { Component, computed, signal, HostListener, ElementRef } from '@angular/core';
-import { Router, RouterOutlet, RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet, RouterLink } from '@angular/router';
 import { AuthService } from './core/services/auth.service';
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, RouterLink],
   template: `
-    @if (isLoggedIn()) {
+    @if (showShellNav()) {
       <header class="shell-header">
         <nav class="navbar">
           <a class="brand" routerLink="/browse">
@@ -18,9 +18,9 @@ import { AuthService } from './core/services/auth.service';
           </a>
 
           <div class="nav-links">
-            <a routerLink="/browse" class="nav-link">Library</a>
-            <a routerLink="/progress" class="nav-link">Progress</a>
-            <a routerLink="/profile" class="nav-pill">Study Profile</a>
+            <a routerLink="/browse" class="nav-link" [class.active]="isRouteActive('/browse')">Library</a>
+            <a routerLink="/progress" class="nav-link" [class.active]="isRouteActive('/progress')">Progress</a>
+            <a routerLink="/profile" class="nav-pill" [class.active]="isRouteActive('/profile')">Study Profile</a>
 
             <div class="profile-menu">
               <button class="avatar-btn" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()">
@@ -61,7 +61,7 @@ import { AuthService } from './core/services/auth.service';
         </nav>
       </header>
     }
-    <main class="app-main" [class.with-nav]="isLoggedIn()">
+    <main class="app-main" [class.with-nav]="showShellNav()">
       <router-outlet />
     </main>
   `,
@@ -70,6 +70,10 @@ import { AuthService } from './core/services/auth.service';
 export class AppComponent {
   isLoggedIn = computed(() => this.auth.user() !== null);
   menuOpen = signal(false);
+  currentUrl = signal('');
+  showShellNav = computed(() => this.isLoggedIn() && !this.isMinimalShellRoute());
+
+  private readonly minimalShellRoutes = ['/stories/', '/chapters/'];
 
   userInitial = computed(() => {
     const user = this.auth.user();
@@ -87,11 +91,21 @@ export class AppComponent {
     return this.auth.user()?.email || '';
   });
 
+  isMinimalShellRoute = computed(() => this.minimalShellRoutes.some((route) => this.currentUrl().startsWith(route)));
+
   constructor(
     private auth: AuthService,
     private router: Router,
     private elRef: ElementRef,
-  ) {}
+  ) {
+    this.currentUrl.set(this.router.url);
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.currentUrl.set(event.urlAfterRedirects);
+        this.closeMenu();
+      }
+    });
+  }
 
   toggleMenu() {
     this.menuOpen.update((v) => !v);
@@ -104,6 +118,10 @@ export class AppComponent {
   signOut() {
     this.closeMenu();
     this.auth.signOut();
+  }
+
+  isRouteActive(route: string): boolean {
+    return this.currentUrl().startsWith(route);
   }
 
   // Close the dropdown when clicking anywhere outside it

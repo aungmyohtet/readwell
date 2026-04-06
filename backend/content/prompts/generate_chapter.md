@@ -24,6 +24,10 @@ Your task is to write ONE chapter for a reading app aimed at learners of English
 - Every key structure listed in `grammarKeyStructures` must appear at least once in the story.
 - Do NOT explain the grammar in the story. The story shows it; the grammarFocus section explains it.
 - Do NOT use grammar structures from higher units in a jarring way if this is A2 or B1. Keep grammar mostly at or below the target level.
+- For the most important grammar moments in each paragraph, include optional `grammarAnnotations` so the UI can highlight the exact form learners should notice.
+- Use `tone` values only from this set: `aux`, `ending`, `question`, `structure`, `modal`.
+- Use `highlightText` when only part of `targetText` should be highlighted. Example: `targetText: "likes"`, `highlightText: "s"`.
+- Use `occurrence` only if the same `targetText` appears more than once in the paragraph. It is 1-based.
 
 **Vocabulary rule (CRITICAL):**
 - Every word in `targetWords` must:
@@ -89,7 +93,16 @@ Output ONLY valid JSON matching the structure below. No markdown fences, no extr
         {
           "order": 1,
           "text": "<paragraph text>",
-          "imagePlaceholder": "<emoji>"
+          "imagePlaceholder": "<emoji>",
+          "grammarAnnotations": [
+            {
+              "targetText": "<exact text from the paragraph>",
+              "highlightText": "<optional smaller part inside targetText>",
+              "tone": "<aux|ending|question|structure|modal>",
+              "note": "<short learner-facing label>",
+              "occurrence": 1
+            }
+          ]
         }
       ],
       "comprehension": [
@@ -139,3 +152,4 @@ Before submitting the prompt:
 - **Use `recycledVocabulary`**: if chapter 2, list words from chapter 1 to weave in
 - **Request a specific scene**: e.g. "The story must include a moment where Emma nearly gives up but doesn't"
 - **Iterate on grammar examples**: if the grammar examples feel mechanical, ask Claude to rewrite them to sound more like real dialogue or narration
+- **Prefer explicit grammar annotations**: tag only the most teachable spans, not every possible grammar form in the paragraph
