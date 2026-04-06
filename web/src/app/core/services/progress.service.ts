@@ -1,0 +1,20 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { environment } from '../../../environments/environment';
+import { ProgressRecord, SubmitProgressRequest } from '../models/progress.model';
+
+@Injectable({ providedIn: 'root' })
+export class ProgressService {
+  private base = environment.apiBaseUrl;
+
+  constructor(private http: HttpClient) {}
+
+  submit(request: SubmitProgressRequest): Observable<ProgressRecord> {
+    return this.http.post<ProgressRecord>(`${this.base}/api/progress`, request);
+  }
+
+  getHistory(): Observable<ProgressRecord[]> {
+    return this.http.get<ProgressRecord[]>(`${this.base}/api/progress/history`);
+  }
+}

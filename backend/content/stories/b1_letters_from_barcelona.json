@@ -1,0 +1,288 @@
+{
+  "story": {
+    "title": "Letters from Barcelona",
+    "description": "For two years, Nadia and Carla have been pen pals — one in England, one in Barcelona — writing long letters about their lives. Now Nadia is flying to Spain to meet Carla in person for the very first time.",
+    "level": "B1",
+    "coverEmoji": "✉️",
+    "author": "ReadWell",
+    "tags": ["friendship", "travel", "culture", "identity"]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "The Longest Wait",
+      "vocabulary": [
+        {
+          "word": "accomplish",
+          "definition": "to successfully finish something difficult or important",
+          "exampleSentence": "Nadia has accomplished something remarkable by building a real friendship entirely through letters.",
+          "emoji": "🏆"
+        },
+        {
+          "word": "milestone",
+          "definition": "an important event or stage in the development of something",
+          "exampleSentence": "Getting praise from her Spanish teacher felt like a small but meaningful milestone for Nadia.",
+          "emoji": "🚩"
+        },
+        {
+          "word": "correspondence",
+          "definition": "the letters or messages that two people exchange over a period of time",
+          "exampleSentence": "Their correspondence started with short notes but gradually grew into long, thoughtful letters.",
+          "emoji": "📬"
+        },
+        {
+          "word": "bond",
+          "definition": "a strong connection or feeling of friendship between two people",
+          "exampleSentence": "The bond between Nadia and Carla grew stronger with every letter they exchanged.",
+          "emoji": "🤝"
+        },
+        {
+          "word": "progress",
+          "definition": "improvement or development towards a goal over a period of time",
+          "exampleSentence": "Nadia has made real progress in Spanish, even though she has only been studying for six months.",
+          "emoji": "📈"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Present Perfect Simple",
+        "explanation": "We use the present perfect to connect the past to the present. Use it for experiences (with ever/never), recent events that affect now (with just/already/yet), and situations that started in the past and continue now (with since/for). Form: have/has + past participle.",
+        "examples": [
+          "Nadia has wanted to visit Barcelona for two years. (started in past, still true now)",
+          "She has already packed her suitcase three times this week. (recent action with present relevance)",
+          "Nadia and Carla have never actually spoken out loud. (experience — or lack of it)",
+          "Mr Osei has praised her pronunciation twice this term. (recent event with present result)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Nadia has wanted to visit Barcelona for two years. She met Carla through a school exchange programme when she was thirteen, and they have been exchanging letters ever since. Their correspondence started small — just a few careful sentences about school, music, and the weather — but over time it has grown into something much longer and more honest. Nadia has learned more about Barcelona from Carla's letters than from any guidebook. She has read about the smell of the Boqueria market, the sound of Catalan spoken fast, the way the light changes in the evening over the rooftops. She has already packed her suitcase three times this week, unpacked it, and started again.",
+          "imagePlaceholder": "✉️"
+        },
+        {
+          "order": 2,
+          "text": "The thing is, Nadia has never actually spoken to Carla out loud. They have only ever communicated in writing — letters, mostly, sometimes a short email. When the school exchange programme offered a two-week summer visit, Nadia said yes before she had time to think about what it meant. Her mother was pleased. \"You've accomplished something most people your age haven't,\" her mother told her. \"You've built a real friendship across a thousand miles. That is not easy.\" Nadia sat with this for a while. She has written more than forty letters. She has thought about Carla almost every day. And yet, meeting in person feels like an entirely different thing.",
+          "imagePlaceholder": "📝"
+        },
+        {
+          "order": 3,
+          "text": "She has also been studying Spanish for six months. She is not fluent — she knows enough to ask for directions and to apologise and not much else — but she has made real progress. Her Spanish teacher, Mr Osei, is not an easy man to impress. He has praised her pronunciation twice this term, which she wrote down in her journal both times. The second time he said it, she felt something she would not quite call pride but was close to it. It felt like a milestone — small, but hers. She has not told anyone that she keeps a record of her teacher's compliments. Some things are better kept quietly.",
+          "imagePlaceholder": "📚"
+        },
+        {
+          "order": 4,
+          "text": "The flight is tomorrow morning. Tonight, Nadia is sitting on her bed with Carla's most recent letter open on her lap. She has read it five times already. In the letter, Carla wrote: \"I have thought about this visit since January. I have planned so many things for us to do — food I want you to try, streets I want to show you, a bookshop I have been to every Saturday since I was seven. I can't wait.\" Nadia has tried to write a reply four times and thrown each one away. They have been too long, too nervous, too full of the wrong words. Finally she has written just two: \"Me neither.\" She seals the envelope.",
+          "imagePlaceholder": "🌙"
+        },
+        {
+          "order": 5,
+          "text": "She puts the letter on her desk. She won't post it — she will give it to Carla in person. The thought makes her stomach tighten. They have built a real bond over two years, but they have never stood in the same room. Nadia has tried to explain this to people before. They say: \"But you don't really know each other.\" Nadia disagrees. She thinks she knows Carla better than she knows most people she sees every day. She just hasn't heard her voice yet. She turns off the light. Tomorrow, she will.",
+          "imagePlaceholder": "✈️"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "How has the correspondence between Nadia and Carla changed over time?",
+          "options": [
+            "It started as long letters and became shorter and less frequent.",
+            "It started small and grew into something longer and more honest.",
+            "They switched from emails to phone calls after one year.",
+            "It has stayed the same since they first wrote to each other."
+          ],
+          "correctAnswer": "It started small and grew into something longer and more honest.",
+          "explanation": "Paragraph 1 says their correspondence 'started small — just a few careful sentences' but 'has grown into something much longer and more honest.' This shows how the correspondence has changed."
+        },
+        {
+          "order": 2,
+          "question": "Why does Nadia throw away her reply to Carla's letter four times?",
+          "options": [
+            "She keeps making spelling mistakes in Spanish.",
+            "She cannot find the right words — her drafts are too long and too nervous.",
+            "She decides not to reply and to call Carla instead.",
+            "She changes her mind about going to Barcelona."
+          ],
+          "correctAnswer": "She cannot find the right words — her drafts are too long and too nervous.",
+          "explanation": "Paragraph 4 says she has thrown away four attempts because 'They have been too long, too nervous, too full of the wrong words.' She finally settles for just two words: 'Me neither.'"
+        },
+        {
+          "order": 3,
+          "question": "Why does Nadia disagree when people say she and Carla 'don't really know each other'?",
+          "options": [
+            "Because they have already met in person once before.",
+            "Because she has memorised all of Carla's letters.",
+            "Because she feels she knows Carla deeply through their letters, even without hearing her voice.",
+            "Because she has seen photographs of Carla and knows what she looks like."
+          ],
+          "correctAnswer": "Because she feels she knows Carla deeply through their letters, even without hearing her voice.",
+          "explanation": "Paragraph 5 says Nadia 'thinks she knows Carla better than she knows most people she sees every day' and adds 'She just hasn't heard her voice yet.' This shows that Nadia believes deep knowledge of a person can come through writing, not just meeting."
+        },
+        {
+          "order": 4,
+          "question": "What does the word 'milestone' suggest in paragraph 3?",
+          "options": [
+            "That learning Spanish is very difficult",
+            "That the teacher's praise was an important achievement worth remembering",
+            "That Nadia needs to study harder before she goes to Barcelona",
+            "That the compliment was unexpected and surprising"
+          ],
+          "correctAnswer": "That the teacher's praise was an important achievement worth remembering",
+          "explanation": "In paragraph 3, Nadia writes the teacher's compliment in her journal both times, and describes the feeling as 'a milestone — small, but hers.' This shows the praise meant something significant to her progress."
+        },
+        {
+          "order": 5,
+          "question": "What does Nadia's mother mean when she says Nadia has 'accomplished something most people your age haven't'?",
+          "options": [
+            "That Nadia is unusually good at writing letters.",
+            "That Nadia has built a genuine friendship through commitment and effort, which is rare.",
+            "That Nadia is the only student in her school to join the exchange programme.",
+            "That travelling to Barcelona is a difficult journey for someone her age."
+          ],
+          "correctAnswer": "That Nadia has built a genuine friendship through commitment and effort, which is rare.",
+          "explanation": "Nadia's mother explains: 'You've built a real friendship across a thousand miles. That is not easy.' She is saying that Nadia has done something unusual and difficult — maintaining a real friendship entirely through writing — and that this is worth recognising."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "title": "Arriving in Barcelona",
+      "vocabulary": [
+        {
+          "word": "navigate",
+          "definition": "to find your way through a place, especially using knowledge or a map",
+          "exampleSentence": "Carla navigated through the unfamiliar narrow streets without once looking at her phone.",
+          "emoji": "🗺️"
+        },
+        {
+          "word": "stroll",
+          "definition": "a slow, relaxed walk, often taken for pleasure",
+          "exampleSentence": "After lunch, they went for a stroll through the old neighbourhood.",
+          "emoji": "🚶"
+        },
+        {
+          "word": "marvel",
+          "definition": "to feel great surprise and admiration at something",
+          "exampleSentence": "Nadia marvelled at the tiled wall — she had never seen so many colours in one place.",
+          "emoji": "😲"
+        },
+        {
+          "word": "immerse",
+          "definition": "to become completely involved in or surrounded by something",
+          "exampleSentence": "Walking through the city, Nadia felt completely immersed in a world she had only read about before.",
+          "emoji": "🌊"
+        },
+        {
+          "word": "vivid",
+          "definition": "very bright, clear, or strong — used for colours, memories, or experiences",
+          "exampleSentence": "The afternoon light was vivid and golden, and everything looked like something worth keeping.",
+          "emoji": "🌟"
+        },
+        {
+          "word": "unfamiliar",
+          "definition": "not known to you before; something you have not experienced",
+          "exampleSentence": "The streets were unfamiliar to Nadia, but she trusted Carla to lead the way.",
+          "emoji": "🔭"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Present Perfect vs Simple Past",
+        "explanation": "Use the present perfect (have/has + past participle) when the time is not specified or when the past connects to the present. Use the simple past when you mention a specific time in the past. The two tenses often appear together in the same conversation.",
+        "examples": [
+          "Have you ever been on a metro before? — Yes, I went to London last summer. (ever = present perfect; last summer = simple past)",
+          "I've been to that bookshop hundreds of times. (no specific time mentioned — present perfect)",
+          "We visited the National Gallery and I got completely lost. (specific past trip — simple past)",
+          "She has planned this visit since January, but she only told me yesterday. (duration = present perfect; specific moment = simple past)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "The first ten seconds were strange. Nadia walked through the arrivals gate and immediately saw a girl holding a handwritten sign: NADIA, in thick letters, with a small drawing of a sun underneath. Carla was shorter than Nadia had expected. She had dark curly hair and a small paint stain on her left hand. They stood looking at each other for a moment. Then Carla said, \"I've been practising what to say for a week and now I can't remember any of it.\" Nadia laughed, and the ten seconds ended.",
+          "imagePlaceholder": "✈️"
+        },
+        {
+          "order": 2,
+          "text": "On the metro to Carla's flat, they talked fast, sometimes at the same time. \"Have you ever been on a metro before?\" Carla asked. \"Yes — in London,\" Nadia said. \"I went there last summer on a school trip. We visited the National Gallery and I got completely lost before I even reached the first room.\" Carla nodded. \"I've been to London too. Three years ago, with my parents. I saw a street performer near the river — he juggled fire.\" She paused. \"Have you ever seen fire juggling?\" Nadia had not. She added it to her mental list of things she had not yet done but now wanted to.",
+          "imagePlaceholder": "🚇"
+        },
+        {
+          "order": 3,
+          "text": "Carla's grandmother — she said immediately to call her Àvia — met them at the door of the flat. She spoke something quick and warm in Catalan and pulled Nadia into a tight hug before Nadia had time to react. Nadia had never been hugged by someone she had met thirty seconds ago. It was warm and smelled of something baking. Àvia disappeared into the kitchen and returned with two plates. \"Has Carla told you about the bread?\" she asked in careful Spanish. \"She hasn't mentioned it,\" Nadia said. Àvia looked at Carla with an expression that needed no translation. \"I forgot,\" Carla said. Àvia shook her head slowly, the way people do when something is both terrible and completely expected.",
+          "imagePlaceholder": "🏠"
+        },
+        {
+          "order": 4,
+          "text": "After lunch, they went for a stroll through the neighbourhood. The streets were unfamiliar to Nadia, but Carla navigated through them without looking at her phone — left here, right there, through a small archway, past a pharmacy with a green cross blinking above the door. She pointed out a tiled fountain, a bookshop that sold only second-hand detective novels, and a long wall covered entirely in painted ceramic tiles. Nadia marvelled at the tiles — deep blues, terracotta reds, bright yellows, all pressed together like something from a dream. \"I've walked past that wall since I was four,\" said Carla. \"And I still stop every time.\" Nadia was completely immersed. She had already taken fifteen photographs and they had been walking for twelve minutes.",
+          "imagePlaceholder": "🏛️"
+        },
+        {
+          "order": 5,
+          "text": "At the end of the afternoon, they sat on the stone steps outside Carla's building. The light was vivid and low, turning the walls the colour of warm honey. A cat walked slowly across the road. A man on a bicycle rang his bell at a pigeon. Two small children argued loudly in rapid Catalan. \"Have you enjoyed today?\" Carla asked. Nadia thought about it carefully. \"I've thought about this trip since January,\" she said. \"I imagined it so many times. And nothing has been what I imagined.\" She paused. \"It's been better.\" Carla smiled and pulled her knees up to her chest. \"Good,\" she said. \"Because we've only just started.\"",
+          "imagePlaceholder": "🌇"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "How does the story show that Carla had been nervous about meeting Nadia?",
+          "options": [
+            "Carla did not come to the airport to meet Nadia.",
+            "Carla admits she had been practising what to say but forgot it all.",
+            "Carla sent Nadia a message asking to cancel the visit.",
+            "Carla looked angry when Nadia walked through the arrivals gate."
+          ],
+          "correctAnswer": "Carla admits she had been practising what to say but forgot it all.",
+          "explanation": "In paragraph 1, Carla says: 'I've been practising what to say for a week and now I can't remember any of it.' This shows she was nervous and had prepared, but the nerves caused her to forget everything she planned."
+        },
+        {
+          "order": 2,
+          "question": "Why does the author use simple past ('I went to London last summer') and present perfect ('I've been to London') in the same conversation in paragraph 2?",
+          "options": [
+            "It is a mistake — both should be simple past.",
+            "Nadia uses simple past because she mentions a specific time; Carla uses present perfect because she mentions no specific time.",
+            "Nadia's English is better than Carla's English.",
+            "The simple past is used for longer trips and the present perfect for shorter ones."
+          ],
+          "correctAnswer": "Nadia uses simple past because she mentions a specific time; Carla uses present perfect because she mentions no specific time.",
+          "explanation": "Nadia says 'I went there last summer' — a specific time, so simple past. Carla says 'I've been to London too' without saying when, so present perfect. This directly demonstrates the grammar focus of this chapter."
+        },
+        {
+          "order": 3,
+          "question": "What does 'Àvia shook her head slowly, the way people do when something is both terrible and completely expected' tell us about Àvia's reaction?",
+          "options": [
+            "Àvia is angry with Carla.",
+            "Àvia has experienced this kind of forgetfulness from Carla before and is not surprised.",
+            "Àvia does not speak enough English to understand what is happening.",
+            "Àvia thinks Nadia should have been told about the bread in advance."
+          ],
+          "correctAnswer": "Àvia has experienced this kind of forgetfulness from Carla before and is not surprised.",
+          "explanation": "The phrase 'completely expected' is the key. It tells us this is not the first time Carla has forgotten to mention something. Àvia's reaction shows affectionate frustration — not real anger, but the resigned reaction of someone used to this behaviour."
+        },
+        {
+          "order": 4,
+          "question": "What does the word 'immersed' suggest about Nadia's experience in paragraph 4?",
+          "options": [
+            "That Nadia is confused and lost in the unfamiliar streets",
+            "That Nadia is completely absorbed in and captivated by everything around her",
+            "That Nadia is tired after the long flight",
+            "That Nadia is trying hard to remember every detail for later"
+          ],
+          "correctAnswer": "That Nadia is completely absorbed in and captivated by everything around her",
+          "explanation": "Paragraph 4 shows Nadia stopping to marvel at the tiles, taking fifteen photographs in twelve minutes, and following every detail Carla points out. The word 'immersed' captures this state of being fully taken in by a new experience."
+        },
+        {
+          "order": 5,
+          "question": "What does Carla mean at the end when she says 'We've only just started'?",
+          "options": [
+            "They have not walked far enough yet.",
+            "Carla still has many plans and experiences she wants to share with Nadia.",
+            "Carla thinks Nadia does not yet enjoy Barcelona.",
+            "Their pen pal correspondence is only beginning."
+          ],
+          "correctAnswer": "Carla still has many plans and experiences she wants to share with Nadia.",
+          "explanation": "In chapter 1, Carla's letter mentioned she has 'planned so many things.' At the end of their first day, she says 'we've only just started', meaning the trip has more good things ahead. It is also a warm way of telling Nadia that what has already been good is only the beginning."
+        }
+      ]
+    }
+  ]
+}

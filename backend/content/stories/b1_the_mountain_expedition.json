@@ -1,0 +1,376 @@
+{
+  "story": {
+    "title": "The Mountain Expedition",
+    "description": "Fifteen students from Westfield Academy join a three-day mountain expedition. None of them have attempted anything like it before — and all of them will discover something they didn't expect about themselves.",
+    "level": "B1",
+    "coverEmoji": "⛰️",
+    "author": "ReadWell",
+    "tags": ["adventure", "teamwork", "nature", "challenge"]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "Base Camp",
+      "vocabulary": [
+        {
+          "word": "expedition",
+          "definition": "a journey made for a specific purpose, often to explore a difficult or remote place",
+          "exampleSentence": "None of the fifteen students had joined an expedition before, and the mountain looked larger than in any photograph.",
+          "emoji": "🗺️"
+        },
+        {
+          "word": "altitude",
+          "definition": "the height of a place above sea level — high altitude can affect breathing and energy",
+          "exampleSentence": "At high altitude, the air is thinner and the body needs more time to adjust.",
+          "emoji": "📏"
+        },
+        {
+          "word": "persevere",
+          "definition": "to continue doing something difficult without giving up",
+          "exampleSentence": "Maya decided to persevere, even when her legs ached and the path seemed endless.",
+          "emoji": "💪"
+        },
+        {
+          "word": "summit",
+          "definition": "the highest point of a mountain",
+          "exampleSentence": "The summit was still far above them, hidden behind cloud, but Mr Osei said they would reach it by day three.",
+          "emoji": "🏔️"
+        },
+        {
+          "word": "adjust",
+          "definition": "to change slightly in order to deal with a new situation or condition",
+          "exampleSentence": "Maya needed time to adjust to the weight of her pack and the steepness of the path.",
+          "emoji": "🔧"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Present Perfect Simple",
+        "explanation": "We use the present perfect to talk about past experiences when the specific time is not important, or to describe a situation that started in the past and is still true now. Form: have/has + past participle. Common time expressions: ever, never, already, yet, since, for.",
+        "examples": [
+          "None of the students have ever attempted anything like this. (experience — no specific time)",
+          "They have trained for eight weeks. (duration — started in past, relevant now)",
+          "Mr Osei has led groups up this mountain for twelve years. (ongoing situation)",
+          "Maya has signed up for the expedition on impulse — and now she wonders if it was right. (recent action with present consequence)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Fifteen students from Westfield Academy arrived at base camp on a crisp September morning. None of them had ever attempted anything like this before. The mountain rose ahead of them like a grey wall against the pale sky. Maya stood at the back of the group and looked up. She had signed up for the expedition on impulse — her hand went up in assembly before her brain caught up — and now, standing at the foot of the mountain with a thirty-litre pack on her back, she was beginning to wonder what exactly she had agreed to.",
+          "imagePlaceholder": "⛺"
+        },
+        {
+          "order": 2,
+          "text": "Mr Osei, their guide, had led groups up this mountain for twelve years. He was a quiet man who moved quickly and gave instructions once. He gathered them in a circle at base camp. \"You have trained for eight weeks,\" he said. \"Your bodies know what to do. The question on a mountain is always whether your mind will let them.\" He looked around the group. \"The summit is two days away. We won't rush. We will go steadily and we will reach it.\" He said this the way people say things they have said many times and still mean.",
+          "imagePlaceholder": "👨‍🏫"
+        },
+        {
+          "order": 3,
+          "text": "That first evening, Maya sat outside her tent and looked at the valley below. The altitude was already affecting her — not badly, just a slight heaviness in her head and a shortness of breath when she climbed the small slope to the water supply. She has been trying to adjust, she told herself. She just needed more time. Her tentmate Zara appeared beside her. Zara had never been on a hiking trip either, but she seemed completely unbothered by this fact. She sat down and opened a bag of trail mix.",
+          "imagePlaceholder": "🌄"
+        },
+        {
+          "order": 4,
+          "text": "\"I've been nervous about this since January,\" Zara said, passing the bag to Maya. \"Every single day. And yet here I am.\" Maya looked at her. \"You don't seem nervous,\" she said. Zara shrugged. \"I've learned that seeming nervous and being nervous are two different things. One you can choose.\" Maya thought about this. She has never been good at hiding how she feels — her face, her teacher once told her, is like a window with no curtain. She took some trail mix. \"I've never done anything like this,\" she said. \"I know,\" said Zara. \"That's why it might matter.\"",
+          "imagePlaceholder": "🤝"
+        },
+        {
+          "order": 5,
+          "text": "They sat in the quiet until the stars appeared. Maya has thought about giving up before she even started. She has thought about what it would feel like to persevere and what it would feel like to turn back. But Zara's words stayed with her: that's why it might matter. She pulled her sleeping bag tighter. Tomorrow, the first real climb would begin. She has never been someone who gave up easily, she told herself — even if she has never been tested quite like this.",
+          "imagePlaceholder": "🌟"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "How long has Mr Osei been leading groups up the mountain?",
+          "options": ["Eight weeks", "Two years", "Twelve years", "Since the previous September"],
+          "correctAnswer": "Twelve years",
+          "explanation": "Paragraph 2 says: 'Mr Osei, their guide, had led groups up this mountain for twelve years.' This uses the past perfect because the narration is set in the past, but it reflects the same meaning as the present perfect."
+        },
+        {
+          "order": 2,
+          "question": "Why is Maya surprised by Zara's attitude towards the expedition?",
+          "options": [
+            "Zara says she has never been nervous about anything.",
+            "Zara admits she has been nervous since January but still seems completely calm.",
+            "Zara has been on many hiking trips and finds it easy.",
+            "Zara told Maya she is not allowed to feel nervous."
+          ],
+          "correctAnswer": "Zara admits she has been nervous since January but still seems completely calm.",
+          "explanation": "Paragraph 4 shows Zara saying 'I've been nervous about this since January' while appearing 'completely unbothered'. Maya notices this gap and Zara explains: 'seeming nervous and being nervous are two different things.'"
+        },
+        {
+          "order": 3,
+          "question": "What does 'persevere' mean as Maya uses it in paragraph 5?",
+          "options": [
+            "To prepare thoroughly before starting something difficult",
+            "To continue doing something hard without giving up",
+            "To rest and recover after a long journey",
+            "To ask for help when something becomes too difficult"
+          ],
+          "correctAnswer": "To continue doing something hard without giving up",
+          "explanation": "In paragraph 5, Maya thinks about 'what it would feel like to persevere and what it would feel like to turn back' — the two choices are clearly opposite. Persevering means continuing; turning back means stopping. So persevere means to continue without giving up."
+        },
+        {
+          "order": 4,
+          "question": "What does Zara mean when she says 'That's why it might matter'?",
+          "options": [
+            "Things that are familiar are more important than new experiences.",
+            "Because Maya has never done this before, the experience could be especially meaningful.",
+            "It is important to attempt things you are certain you will succeed at.",
+            "The expedition will teach Maya important facts about mountains."
+          ],
+          "correctAnswer": "Because Maya has never done this before, the experience could be especially meaningful.",
+          "explanation": "Zara says this directly after Maya says 'I've never done anything like this.' The implication is that doing something genuinely new — outside your experience — is what gives it meaning and impact. This is an inferential question: the text doesn't explain it, but context makes the meaning clear."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "title": "The First Climb",
+      "vocabulary": [
+        {
+          "word": "commit",
+          "definition": "to decide firmly to do something and give it your full effort",
+          "exampleSentence": "Maya had committed to the expedition for eight weeks of training, but the real test was the mountain itself.",
+          "emoji": "🎯"
+        },
+        {
+          "word": "consistent",
+          "definition": "always behaving in the same way or producing the same quality",
+          "exampleSentence": "Mr Osei said consistent effort — not speed — was what got people to the summit.",
+          "emoji": "📐"
+        },
+        {
+          "word": "demanding",
+          "definition": "requiring a lot of effort, skill, or energy",
+          "exampleSentence": "The first section of the climb was the most demanding, and everyone could feel it in their legs.",
+          "emoji": "😤"
+        },
+        {
+          "word": "rewarding",
+          "definition": "giving you a feeling of satisfaction or achievement as a result of your effort",
+          "exampleSentence": "Standing at the top of the first section was exhausting and deeply rewarding at the same time.",
+          "emoji": "🏆"
+        },
+        {
+          "word": "distraction",
+          "definition": "something that stops you concentrating or makes it harder to focus on what you are doing",
+          "exampleSentence": "Zara told Maya that watching the faster students was a distraction — she should focus only on the path ahead.",
+          "emoji": "🔀"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Present Perfect Continuous",
+        "explanation": "We use the present perfect continuous to talk about actions that started in the past and are still in progress, or that have just stopped but have a visible result. Form: have/has been + verb-ing. It emphasises duration and ongoing effort more than the present perfect simple.",
+        "examples": [
+          "Maya has been climbing for three hours and her legs are beginning to feel it.",
+          "How long have you been feeling like this? — Since about the second hour.",
+          "Zara has been watching the path, not the other students, and she's making steadier progress.",
+          "I've been telling myself I can do this since yesterday evening."
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "They set off at six in the morning. Mr Osei said the first section was demanding but manageable — he had been leading people through it for years and had chosen the route carefully. Maya had been awake since four, lying in her sleeping bag and going over everything in her mind. She had committed to this. She had trained consistently for eight weeks. She had not come this far to turn around on day two. She picked up her pack, adjusted the straps, and walked into the grey morning.",
+          "imagePlaceholder": "🌄"
+        },
+        {
+          "order": 2,
+          "text": "The first hour was manageable. The path was wide and the gradient steady. Then the path narrowed and turned sharply upward, and everything changed. Maya's legs began to burn. She had been walking on flat ground for most of her life. She had trained in a gym — consistent mornings, three times a week — but this was completely different. The weight of her pack pulled at her shoulders. She counted her steps. One. Two. Three. Keep going.",
+          "imagePlaceholder": "🏔️"
+        },
+        {
+          "order": 3,
+          "text": "A student named Marcus had been setting a fast pace at the front of the group. Some of the others were falling behind. Maya was near the back. Zara was beside her, breathing steadily. \"Don't watch Marcus,\" Zara said quietly. \"He's been running ahead since we started. That's a distraction. Watch the path in front of you.\" Maya didn't answer. She was using every piece of breath for climbing. But she moved her eyes to the path and kept them there.",
+          "imagePlaceholder": "🧗"
+        },
+        {
+          "order": 4,
+          "text": "At a rest stop on a flat rock, Mr Osei sat down beside Maya. \"How long have you been feeling this way?\" he asked. Maya looked at him. \"Since about the second hour,\" she admitted. \"My legs aren't doing what I ask them.\" Mr Osei nodded. \"I've been watching you,\" he said. \"You haven't stopped. You haven't asked to rest. You haven't told yourself a story about giving up.\" He paused. \"That is worth more than fast legs.\" Maya looked at the valley below. They had been climbing for three hours. The view was extraordinary.",
+          "imagePlaceholder": "🗣️"
+        },
+        {
+          "order": 5,
+          "text": "When they reached the first camp at four in the afternoon, Maya sat on a boulder and looked at her hands. They were red and slightly swollen from gripping her poles. Her back ached. But she had been going — consistently, steadily — for the whole day. She had not stopped when she wanted to. She had not watched Marcus. She had not turned around. Mr Osei called the group together. \"You've been working hard today,\" he said. \"That was the most demanding section. It's behind you now.\" Maya looked at Zara. Zara raised her eyebrows slightly. \"Told you it would be rewarding,\" she said. And she was right.",
+          "imagePlaceholder": "⛺"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Why does Zara tell Maya not to watch Marcus?",
+          "options": [
+            "Because Marcus is walking in the wrong direction.",
+            "Because watching him go faster is a distraction from Maya's own pace.",
+            "Because Mr Osei told everyone to look at the path.",
+            "Because Maya and Marcus had argued at base camp."
+          ],
+          "correctAnswer": "Because watching him go faster is a distraction from Maya's own pace.",
+          "explanation": "Paragraph 3 shows Zara saying 'He's been running ahead since we started. That's a distraction.' The implication is that comparing herself to Marcus will make Maya feel worse and lose focus. Watching the path means focusing on her own consistent effort."
+        },
+        {
+          "order": 2,
+          "question": "What does Mr Osei's question 'How long have you been feeling this way?' tell us about the grammar focus?",
+          "options": [
+            "It uses the simple past to ask about a specific moment in the past.",
+            "It uses the present perfect continuous to ask about an ongoing state that started earlier.",
+            "It uses the present simple to ask about Maya's permanent feelings.",
+            "It uses the future tense to ask about how Maya will feel later."
+          ],
+          "correctAnswer": "It uses the present perfect continuous to ask about an ongoing state that started earlier.",
+          "explanation": "'How long have you been feeling...' is the present perfect continuous question form. It asks about a state (feeling tired) that started at some point in the past and is still continuing now — which is exactly the grammar focus of this chapter."
+        },
+        {
+          "order": 3,
+          "question": "What does Mr Osei value more than speed?",
+          "options": [
+            "Physical strength and fitness",
+            "Consistent effort and the refusal to give up",
+            "Having the right equipment",
+            "Experience on previous expeditions"
+          ],
+          "correctAnswer": "Consistent effort and the refusal to give up",
+          "explanation": "Mr Osei tells Maya: 'You haven't stopped. You haven't asked to rest. You haven't told yourself a story about giving up. That is worth more than fast legs.' This directly states that persistence and consistency are what he values."
+        },
+        {
+          "order": 4,
+          "question": "By the end of the chapter, what has Maya learned about herself?",
+          "options": [
+            "That she is faster than she thought.",
+            "That she needs more training before attempting a mountain.",
+            "That she can keep going consistently even when it is very hard.",
+            "That she should have listened to Zara's advice from the beginning."
+          ],
+          "correctAnswer": "That she can keep going consistently even when it is very hard.",
+          "explanation": "Paragraph 5 shows Maya reviewing what she did: she was 'consistent, steady', she 'had not stopped when she wanted to', and 'had not turned around.' This is new self-knowledge — she proved something about herself that she didn't know before."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "title": "The Storm Warning",
+      "vocabulary": [
+        {
+          "word": "renewable",
+          "definition": "coming from a natural source that is always replaced and does not run out, such as wind or sun",
+          "exampleSentence": "Mr Osei explained that the weather station on the mountain ran entirely on renewable solar energy.",
+          "emoji": "☀️"
+        },
+        {
+          "word": "sustainable",
+          "definition": "able to continue for a long time without causing damage to the environment",
+          "exampleSentence": "The mountain huts had been redesigned to be more sustainable, using local materials and minimal waste.",
+          "emoji": "🌿"
+        },
+        {
+          "word": "conservation",
+          "definition": "the careful protection of the natural environment, including plants, animals, and landscapes",
+          "exampleSentence": "The national park had strict conservation rules — no litter, no off-path walking, no fires.",
+          "emoji": "🌲"
+        },
+        {
+          "word": "emissions",
+          "definition": "gases or other substances released into the air, especially those that cause pollution or climate change",
+          "exampleSentence": "Mr Osei showed them how the glacier had shrunk over thirty years because of rising emissions.",
+          "emoji": "💨"
+        },
+        {
+          "word": "glacier",
+          "definition": "a large body of ice that moves slowly down a mountain over many years",
+          "exampleSentence": "The glacier they could see from the trail had lost nearly a third of its size in two decades.",
+          "emoji": "🧊"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "First Conditional",
+        "explanation": "We use the first conditional for real and likely future situations. If something happens (or when it happens), there will be a result. Form: If + present simple, will/won't + infinitive. We can also use 'unless' (= if not), 'as long as', and 'when' (for things that will definitely happen).",
+        "examples": [
+          "If the weather changes quickly, we'll stop and shelter on the eastern face.",
+          "Unless we leave within the hour, we won't reach the summit before dark.",
+          "As long as we stay together, we'll be fine.",
+          "When we get to the top, the view will be worth everything."
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "On the morning of day three, Mr Osei stopped the group at a viewing point. He had his weather radio out. A storm system was moving in from the west — probably by afternoon, possibly sooner. \"If the weather changes before we reach the summit ridge,\" he said, \"we'll turn back immediately. No discussion.\" No one argued. They had been on the mountain long enough to understand that weather here was not like weather at home.",
+          "imagePlaceholder": "🌩️"
+        },
+        {
+          "order": 2,
+          "text": "While they rested, Mr Osei pointed out the glacier on the north face. It had shrunk considerably, even in the twelve years he had been coming here. \"If emissions continue at the current rate,\" he said, \"this glacier will be gone within thirty years. Not smaller — gone.\" Maya looked at it. She had learned about climate change in school but seeing a glacier in person — understanding it had been larger once, and would be smaller still — made it feel different. More real. More urgent.",
+          "imagePlaceholder": "🧊"
+        },
+        {
+          "order": 3,
+          "text": "The national park had strict conservation rules. Mr Osei went through them again as they put their packs back on. \"If you go off the marked path, you'll damage the root systems of plants that have grown here for centuries. If you leave waste of any kind, you'll face a serious fine and you'll be asked to leave the park.\" He paused. \"These rules aren't difficult to follow. As long as you treat this place with respect, it will look the same for the people who come after you.\"",
+          "imagePlaceholder": "🌲"
+        },
+        {
+          "order": 4,
+          "text": "Marcus came to walk beside Maya on the final section. They had not spoken much since base camp — Maya had been too focused on her own pace to think about others. \"If we make it to the top,\" Marcus said, \"I'll feel like a completely different person.\" Maya thought about this. \"If we make it,\" she said. Marcus grinned. \"When we make it,\" he corrected. They walked side by side. The wind had picked up slightly, and the sky to the west had turned the colour of old silver.",
+          "imagePlaceholder": "🚶‍♀️"
+        },
+        {
+          "order": 5,
+          "text": "They reached the summit at noon, just as the first clouds began to move in. Mr Osei gathered them at the highest point. The view in every direction was vast and extraordinary — valley floors like green and brown patches far below, the ribbon of a river, the edges of other mountains. \"Unless I count wrong,\" Mr Osei said, \"this is fifteen for fifteen. Everyone who started has arrived.\" There was a moment of complete quiet. Then someone started clapping, and everyone joined in. Maya stood and looked at the glacier — smaller than it should have been, still there, still beautiful. She thought: if we look after this, it will still be here. She hoped they would.",
+          "imagePlaceholder": "🏔️"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "What will Mr Osei do if the weather changes before they reach the summit ridge?",
+          "options": [
+            "He will ask the group to vote on whether to continue.",
+            "He will shelter in place and wait for the storm to pass.",
+            "He will turn the group back immediately with no discussion.",
+            "He will radio for emergency help."
+          ],
+          "correctAnswer": "He will turn the group back immediately with no discussion.",
+          "explanation": "Paragraph 1 quotes Mr Osei directly: 'If the weather changes before we reach the summit ridge, we'll turn back immediately. No discussion.' This is a clear first conditional showing a plan with a specific condition."
+        },
+        {
+          "order": 2,
+          "question": "Marcus says 'If we make it to the top' and then corrects himself to say 'When we make it.' What is the difference?",
+          "options": [
+            "'If' means it is impossible; 'when' means it is possible.",
+            "'If' suggests it might not happen; 'when' expresses certainty that it will.",
+            "'If' is the correct grammar; 'when' is an error.",
+            "Both mean exactly the same thing in this context."
+          ],
+          "correctAnswer": "'If' suggests it might not happen; 'when' expresses certainty that it will.",
+          "explanation": "This is the grammar focus distinction in action. Marcus uses 'if' first, which implies doubt. He then changes to 'when', which treats reaching the summit as a certain future event. He is choosing to be confident — and the grammar change reflects that mental shift."
+        },
+        {
+          "order": 3,
+          "question": "What does the story suggest about why seeing the glacier in person affected Maya differently from learning about it in school?",
+          "options": [
+            "The glacier was larger than she had imagined from textbooks.",
+            "Seeing something real and physical made the effects of emissions feel more urgent and personal.",
+            "Her teacher had not explained climate change accurately.",
+            "She had never believed in climate change until that moment."
+          ],
+          "correctAnswer": "Seeing something real and physical made the effects of emissions feel more urgent and personal.",
+          "explanation": "Paragraph 2 says Maya 'had learned about climate change in school but seeing a glacier in person... made it feel different. More real. More urgent.' This directly states that the physical experience — not new information — was what changed how she felt."
+        },
+        {
+          "order": 4,
+          "question": "What does Mr Osei mean by 'As long as you treat this place with respect, it will look the same for the people who come after you'?",
+          "options": [
+            "The mountain will not change if the weather is good.",
+            "Future visitors will only see the mountain if the current group leaves quickly.",
+            "If they follow the conservation rules, the environment will be preserved for future generations.",
+            "The mountain has looked the same for hundreds of years and will not change."
+          ],
+          "correctAnswer": "If they follow the conservation rules, the environment will be preserved for future generations.",
+          "explanation": "'As long as' is a synonym for 'if' in first conditional sentences. Mr Osei is making a direct connection: respectful behaviour = preserved environment for future people. This links the grammar focus (first conditional with 'as long as') to the conservation theme."
+        }
+      ]
+    }
+  ]
+}

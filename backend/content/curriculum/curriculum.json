@@ -1,0 +1,384 @@
+{
+  "_description": "ReadWell curriculum map. Each level has 12 grammar units. Stories should be written to naturally demonstrate the grammar target for that unit. Vocabulary themes recycle across units within a level and carry over to the next level.",
+
+  "levels": {
+    "A2": {
+      "cefrDescription": "Elementary. Learner can understand and use everyday expressions and basic phrases.",
+      "targetWordCount": { "min": 250, "max": 380 },
+      "paragraphCount": { "min": 4, "max": 6 },
+      "comprehensionQuestions": { "min": 3, "max": 5 },
+      "vocabularyItemsPerChapter": { "min": 4, "max": 6 },
+      "approximateVocabularySize": 1500,
+      "audienceAge": "10–13",
+
+      "grammarUnits": [
+        {
+          "unit": 1,
+          "grammar": "Simple Present",
+          "focus": "Habits, routines, and facts",
+          "keyStructures": ["I/you/we/they + verb", "he/she/it + verb-s", "do/does + not", "Do/Does + subject + verb?"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "daily_routines"
+        },
+        {
+          "unit": 2,
+          "grammar": "Simple Past – Regular Verbs",
+          "focus": "Completed actions in the past",
+          "keyStructures": ["verb + -ed", "did + not + verb", "Did + subject + verb?", "time markers: yesterday, last week, ago"],
+          "avoidUntilUnit": [3],
+          "suggestedVocabTheme": "school_life"
+        },
+        {
+          "unit": 3,
+          "grammar": "Simple Past – Irregular Verbs",
+          "focus": "Common irregular past forms in context",
+          "keyStructures": ["went, said, saw, came, got, made, took, thought, knew, felt"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "family_and_home"
+        },
+        {
+          "unit": 4,
+          "grammar": "Past Continuous",
+          "focus": "Actions in progress at a past moment; interrupted actions",
+          "keyStructures": ["was/were + verb-ing", "while + past continuous", "when + simple past interrupts"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "outdoor_activities"
+        },
+        {
+          "unit": 5,
+          "grammar": "Present Continuous",
+          "focus": "Actions happening now or temporary situations",
+          "keyStructures": ["am/is/are + verb-ing", "NOT + am/is/are + verb-ing", "temporary plans: I'm meeting her tonight"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "sports_and_hobbies"
+        },
+        {
+          "unit": 6,
+          "grammar": "Going To + Will (Future)",
+          "focus": "Plans and intentions (going to) vs spontaneous decisions and predictions (will)",
+          "keyStructures": ["am/is/are going to + verb", "will + verb", "probably will", "I don't think + will"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "travel_and_transport"
+        },
+        {
+          "unit": 7,
+          "grammar": "Comparatives and Superlatives",
+          "focus": "Comparing people and things",
+          "keyStructures": ["adj + -er than", "more + adj + than", "the + adj + -est", "the most + adj", "as...as"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "food_and_shopping"
+        },
+        {
+          "unit": 8,
+          "grammar": "Modal Verbs – can, could, should, must",
+          "focus": "Ability, advice, obligation",
+          "keyStructures": ["can/can't + verb", "could + verb (past ability)", "should/shouldn't + verb", "must/mustn't + verb"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "health_and_body"
+        },
+        {
+          "unit": 9,
+          "grammar": "There is / There are + Quantifiers",
+          "focus": "Describing places and quantities",
+          "keyStructures": ["there is/are", "there was/were", "some, any, a lot of, a few, a little", "How much/many?"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "places_in_town"
+        },
+        {
+          "unit": 10,
+          "grammar": "Articles – a, an, the, zero article",
+          "focus": "Specific vs general reference",
+          "keyStructures": ["a/an for first mention", "the for known reference", "zero article for general", "the with unique nouns"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "animals_and_nature"
+        },
+        {
+          "unit": 11,
+          "grammar": "Question Forms – all types",
+          "focus": "Yes/no questions, Wh-questions, subject questions",
+          "keyStructures": ["Do/Did/Does + subject + verb?", "Wh-word + aux + subject + verb?", "Who/What + verb? (subject question)"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "weather_and_seasons"
+        },
+        {
+          "unit": 12,
+          "grammar": "Countable and Uncountable Nouns",
+          "focus": "Noun classification and appropriate determiners",
+          "keyStructures": ["countable: a book, two books", "uncountable: water, information, advice", "some/any/much/many/a lot of"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "food_and_drink"
+        }
+      ],
+
+      "vocabularyThemes": {
+        "daily_routines": ["wake up", "brush teeth", "have breakfast", "get dressed", "commute", "routine", "habit", "schedule", "alarm", "hurry"],
+        "school_life": ["classroom", "homework", "assignment", "teacher", "subject", "exam", "grade", "corridor", "locker", "timetable"],
+        "family_and_home": ["sibling", "relative", "household", "chore", "neighbourhood", "apartment", "backyard", "occasion", "celebration", "gather"],
+        "outdoor_activities": ["hiking", "camp", "trail", "forest", "explore", "adventure", "equipment", "backpack", "compass", "shelter"],
+        "sports_and_hobbies": ["practise", "compete", "tournament", "teammate", "coach", "skill", "champion", "defeat", "victory", "improve"],
+        "travel_and_transport": ["destination", "journey", "passenger", "luggage", "departure", "arrival", "platform", "passport", "sightseeing", "souvenir"],
+        "food_and_shopping": ["ingredient", "recipe", "flavour", "portion", "customer", "discount", "bargain", "receipt", "queue", "purchase"],
+        "health_and_body": ["symptom", "recover", "medicine", "appointment", "injury", "exercise", "diet", "energetic", "exhausted", "ache"],
+        "places_in_town": ["library", "museum", "stadium", "pharmacy", "post office", "roundabout", "district", "fountain", "landmark", "tourist"],
+        "animals_and_nature": ["mammal", "endangered", "habitat", "predator", "nocturnal", "migrate", "hibernate", "wildlife", "species", "ecosystem"],
+        "weather_and_seasons": ["forecast", "temperature", "storm", "drought", "humid", "freezing", "breeze", "lightning", "flood", "blossom"],
+        "food_and_drink": ["nutritious", "calories", "balanced", "thirsty", "refreshing", "portion", "cuisine", "allergic", "flavour", "preserve"]
+      }
+    },
+
+    "B1": {
+      "cefrDescription": "Intermediate. Learner can understand the main points of standard input on familiar matters.",
+      "targetWordCount": { "min": 400, "max": 560 },
+      "paragraphCount": { "min": 5, "max": 7 },
+      "comprehensionQuestions": { "min": 4, "max": 6 },
+      "vocabularyItemsPerChapter": { "min": 5, "max": 7 },
+      "approximateVocabularySize": 3500,
+      "audienceAge": "13–16",
+
+      "grammarUnits": [
+        {
+          "unit": 1,
+          "grammar": "Present Perfect Simple",
+          "focus": "Life experiences and recent events with present relevance",
+          "keyStructures": ["have/has + past participle", "ever/never", "just, already, yet", "since, for"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "achievements_and_milestones"
+        },
+        {
+          "unit": 2,
+          "grammar": "Present Perfect vs Simple Past",
+          "focus": "Choosing between experience (present perfect) and specific past time (simple past)",
+          "keyStructures": ["Have you ever...? / Did you... last year?", "I've been to... / I went to... in 2022", "contrast markers: already vs ago"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "travel_and_exploration"
+        },
+        {
+          "unit": 3,
+          "grammar": "Present Perfect Continuous",
+          "focus": "Ongoing actions that started in the past and continue or recently stopped",
+          "keyStructures": ["have/has been + verb-ing", "How long have you been...?", "I've been waiting for two hours"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "work_and_effort"
+        },
+        {
+          "unit": 4,
+          "grammar": "Used To + Would (Past Habits)",
+          "focus": "Habitual or repeated past actions that no longer happen",
+          "keyStructures": ["used to + verb", "didn't use to + verb", "Did you use to...?", "would + verb (repeated past)"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "childhood_and_growing_up"
+        },
+        {
+          "unit": 5,
+          "grammar": "First Conditional",
+          "focus": "Real and likely future conditions and their results",
+          "keyStructures": ["If + present simple, will + verb", "unless, as long as, provided that", "when instead of if (certain events)"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "environment_and_climate"
+        },
+        {
+          "unit": 6,
+          "grammar": "Second Conditional",
+          "focus": "Imaginary or unlikely present/future situations",
+          "keyStructures": ["If + past simple, would + verb", "If I were you...", "wish + past simple"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "dreams_and_ambitions"
+        },
+        {
+          "unit": 7,
+          "grammar": "Passive Voice – Present and Past",
+          "focus": "When the action matters more than who did it",
+          "keyStructures": ["is/are + past participle", "was/were + past participle", "by + agent (optional)", "passive with modal: can be, must be"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "science_and_discovery"
+        },
+        {
+          "unit": 8,
+          "grammar": "Reported Speech",
+          "focus": "Reporting what people said using correct tense backshift",
+          "keyStructures": ["said that, told me that", "tense backshift rules", "reported questions: asked if/whether, asked what"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "news_and_media"
+        },
+        {
+          "unit": 9,
+          "grammar": "Defining Relative Clauses",
+          "focus": "Identifying which person or thing is meant",
+          "keyStructures": ["who (person)", "which/that (thing)", "where (place)", "whose (possession)", "no comma rule"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "people_and_communities"
+        },
+        {
+          "unit": 10,
+          "grammar": "Gerunds and Infinitives",
+          "focus": "Verbs followed by -ing vs to-infinitive",
+          "keyStructures": ["enjoy/avoid/suggest + -ing", "want/decide/hope + to-inf", "like/hate + both (meaning difference)", "verb + object + to-inf"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "skills_and_learning"
+        },
+        {
+          "unit": 11,
+          "grammar": "Modal Verbs – might, may, must, can't (Deduction)",
+          "focus": "Deducing possibility and certainty about present and past situations",
+          "keyStructures": ["must be (almost certain)", "might/may be (possible)", "can't be (impossible)", "must have + pp, might have + pp"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "mystery_and_investigation"
+        },
+        {
+          "unit": 12,
+          "grammar": "Time Clauses",
+          "focus": "Connecting events in time with conjunctions",
+          "keyStructures": ["when, while, as, after, before, until, as soon as, by the time", "future time clauses use present tense"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "events_and_change"
+        }
+      ],
+
+      "vocabularyThemes": {
+        "achievements_and_milestones": ["accomplish", "breakthrough", "overcome", "persevere", "resilience", "milestone", "recognition", "dedication", "triumph", "setback"],
+        "travel_and_exploration": ["expedition", "altitude", "navigate", "remote", "terrain", "summit", "wilderness", "itinerary", "customs", "immerse"],
+        "work_and_effort": ["commit", "consistent", "productive", "distraction", "deadline", "prioritise", "procrastinate", "demanding", "rewarding", "burnout"],
+        "childhood_and_growing_up": ["nostalgic", "innocent", "carefree", "influence", "memories", "tradition", "upbringing", "adolescence", "peer", "identity"],
+        "environment_and_climate": ["carbon footprint", "renewable", "sustainable", "pollution", "emissions", "endangered", "biodiversity", "conservation", "drought", "glacier"],
+        "dreams_and_ambitions": ["aspire", "potential", "determination", "pursue", "obstacle", "inspire", "ambition", "vision", "realistic", "sacrifice"],
+        "science_and_discovery": ["hypothesis", "experiment", "evidence", "conclude", "analyse", "phenomenon", "theory", "research", "breakthrough", "observation"],
+        "news_and_media": ["headline", "broadcast", "reliable", "bias", "source", "investigate", "publish", "interview", "rumour", "accurate"],
+        "people_and_communities": ["volunteer", "solidarity", "diverse", "inclusive", "contribute", "cooperation", "initiative", "campaign", "awareness", "influence"],
+        "skills_and_learning": ["absorb", "technique", "fluency", "concentrate", "memorise", "revise", "evaluate", "critique", "apply", "transfer"],
+        "mystery_and_investigation": ["clue", "suspect", "evidence", "motive", "witness", "deduce", "puzzling", "reveal", "concealed", "trace"],
+        "events_and_change": ["transition", "transform", "adapt", "adjust", "significant", "consequence", "aftermath", "gradual", "sudden", "inevitable"]
+      }
+    },
+
+    "B2": {
+      "cefrDescription": "Upper-Intermediate. Learner can understand the main ideas of complex text and interact fluently.",
+      "targetWordCount": { "min": 580, "max": 800 },
+      "paragraphCount": { "min": 6, "max": 9 },
+      "comprehensionQuestions": { "min": 5, "max": 7 },
+      "vocabularyItemsPerChapter": { "min": 6, "max": 8 },
+      "approximateVocabularySize": 5000,
+      "audienceAge": "15–18",
+
+      "grammarUnits": [
+        {
+          "unit": 1,
+          "grammar": "Present Perfect Continuous vs Simple",
+          "focus": "Emphasis on duration (continuous) vs result/completion (simple)",
+          "keyStructures": ["I've been reading vs I've read", "context clues: all day, for hours vs three times, just"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "research_and_inquiry"
+        },
+        {
+          "unit": 2,
+          "grammar": "Third Conditional",
+          "focus": "Imaginary past situations and their hypothetical results",
+          "keyStructures": ["If + past perfect, would have + pp", "mixed: if it hadn't been for...", "expressing regret"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "historical_turning_points"
+        },
+        {
+          "unit": 3,
+          "grammar": "Mixed Conditionals",
+          "focus": "Linking imaginary past with present result and vice versa",
+          "keyStructures": ["If + past perfect, would + inf (past→present)", "If + past simple, would have + pp (present→past)"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "decisions_and_consequences"
+        },
+        {
+          "unit": 4,
+          "grammar": "Passive Voice – All Tenses",
+          "focus": "Extended passive including perfect and continuous forms",
+          "keyStructures": ["has been built", "was being repaired", "will be announced", "passive with reporting verbs: it is believed that"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "technology_and_innovation"
+        },
+        {
+          "unit": 5,
+          "grammar": "Reported Speech – Complex",
+          "focus": "Reporting commands, suggestions, questions with appropriate reporting verbs",
+          "keyStructures": ["advised/warned/insisted/denied/refused + gerund or infinitive", "reported questions with whether/if", "reported imperatives"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "social_issues_and_debate"
+        },
+        {
+          "unit": 6,
+          "grammar": "Non-Defining Relative Clauses",
+          "focus": "Adding extra information (with commas) without identifying",
+          "keyStructures": ["who, which, where, whose + commas", "contrast with defining clauses", "relative clauses replacing sentences: which surprised us all"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "culture_and_identity"
+        },
+        {
+          "unit": 7,
+          "grammar": "Modal Perfect",
+          "focus": "Speculating and expressing regret/criticism about the past",
+          "keyStructures": ["must have + pp", "should have + pp", "could have + pp", "might have + pp", "needn't have + pp"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "ethics_and_responsibility"
+        },
+        {
+          "unit": 8,
+          "grammar": "Wish / If Only",
+          "focus": "Expressing regret, wishes for change, complaints about the present and past",
+          "keyStructures": ["wish + past simple (present regret)", "wish + would + verb (annoyance)", "wish + past perfect (past regret)", "if only"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "relationships_and_emotions"
+        },
+        {
+          "unit": 9,
+          "grammar": "Participle Clauses",
+          "focus": "Replacing relative or adverbial clauses with participle phrases for economy",
+          "keyStructures": ["present participle: Running late, he missed the bus.", "past participle: Exhausted by the climb, she sat down.", "having + pp"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "adventure_and_challenge"
+        },
+        {
+          "unit": 10,
+          "grammar": "Emphasis – Cleft Sentences and Inversion",
+          "focus": "Foregrounding information for rhetorical or dramatic effect",
+          "keyStructures": ["It was X that/who...", "What I need is...", "Not only...but also", "Rarely/Never/Seldom + inversion"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "arts_and_expression"
+        },
+        {
+          "unit": 11,
+          "grammar": "Advanced Connectors and Discourse Markers",
+          "focus": "Building cohesive text with contrast, concession, addition, and result",
+          "keyStructures": ["despite/in spite of", "nevertheless, nonetheless", "furthermore, moreover", "as a result, consequently", "although vs even though vs however"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "global_challenges"
+        },
+        {
+          "unit": 12,
+          "grammar": "Causative Have/Get + Nominalization",
+          "focus": "Describing arrangements and formal or abstract noun use",
+          "keyStructures": ["have/get + object + past participle", "nominalization: decide → decision, fail → failure", "formal writing register"],
+          "avoidUntilUnit": [],
+          "suggestedVocabTheme": "systems_and_institutions"
+        }
+      ],
+
+      "vocabularyThemes": {
+        "research_and_inquiry": ["methodology", "analytical", "synthesise", "empirical", "scrutinise", "citation", "rigorous", "preliminary", "validate", "implication"],
+        "historical_turning_points": ["pivotal", "catalyst", "uprising", "colonise", "regime", "sovereignty", "legacy", "oppression", "liberation", "aftermath"],
+        "decisions_and_consequences": ["deliberate", "weigh up", "repercussion", "irreversible", "foresee", "accountability", "trade-off", "mitigate", "dilemma", "rational"],
+        "technology_and_innovation": ["algorithm", "automation", "disruptive", "prototype", "scalable", "cybersecurity", "artificial intelligence", "interface", "obsolete", "integrate"],
+        "social_issues_and_debate": ["inequality", "marginalise", "advocacy", "legislation", "grassroots", "privilege", "systemic", "reform", "consensus", "polarise"],
+        "culture_and_identity": ["ethnicity", "assimilate", "heritage", "stereotype", "subculture", "cosmopolitan", "minority", "representation", "diaspora", "indigenous"],
+        "ethics_and_responsibility": ["integrity", "moral", "obligation", "transparency", "exploitation", "whistleblower", "complicit", "autonomy", "conflict of interest", "virtue"],
+        "relationships_and_emotions": ["empathy", "vulnerability", "intimacy", "resentment", "reconcile", "estranged", "affection", "manipulate", "platonic", "attachment"],
+        "adventure_and_challenge": ["endurance", "perseverance", "exhilarating", "treacherous", "expedition", "navigate", "solitude", "instinct", "threshold", "adrenaline"],
+        "arts_and_expression": ["narrative", "metaphor", "composition", "critique", "aesthetic", "evocative", "symbolise", "ambiguous", "interpret", "resonate"],
+        "global_challenges": ["geopolitical", "humanitarian", "diplomacy", "sanction", "refugee", "pandemic", "infrastructure", "governance", "disparity", "sovereignty"],
+        "systems_and_institutions": ["bureaucracy", "hierarchy", "regulate", "comply", "mandate", "jurisdiction", "framework", "enforce", "protocol", "amendment"]
+      }
+    }
+  },
+
+  "progressionRules": {
+    "description": "Grammar introduced at one level should be used freely at higher levels without re-teaching.",
+    "A2_to_B1": ["All A2 grammar is assumed known at B1. Stories at B1 can freely use simple past, articles, modals, etc."],
+    "B1_to_B2": ["All B1 grammar is assumed known at B2. B2 stories may use present perfect, passives, and conditionals naturally without them being the focus."],
+    "vocabularyRecycling": "Target words from one chapter should appear at least once in the next 2 chapters without being re-defined."
+  }
+}

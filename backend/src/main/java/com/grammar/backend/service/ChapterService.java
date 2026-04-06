@@ -1,0 +1,82 @@
+package com.grammar.backend.service;
+
+import com.grammar.backend.dto.ChapterDetailResponse;
+import com.grammar.backend.dto.ChapterSummaryResponse;
+import com.grammar.backend.model.Chapter;
+import com.grammar.backend.model.UserProgress;
+import com.grammar.backend.repository.ChapterRepository;
+import com.grammar.backend.repository.UserProgressRepository;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Collectors;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ChapterService {
+
+  private final ChapterRepository chapterRepository;
+  private final UserProgressRepository progressRepository;
+
+  public ChapterService(
+      ChapterRepository chapterRepository, UserProgressRepository progressRepository) {
+    this.chapterRepository = chapterRepository;
+    this.progressRepository = progressRepository;
+  }
+
+  public List<ChapterSummaryResponse> getChapters(String storyId, String userId) {
+    List<Chapter> chapters =
+        chapterRepository.findByStoryIdOrderByChapterNumberAsc(storyId);
+
+    Map<String, UserProgress> progressMap =
+        progressRepository.findByUserIdAndStoryId(userId, storyId).stream()
+            .collect(Collectors.toMap(UserProgress::getChapterId, p -> p));
+
+    return chapters.stream()
+        .map(c -> toSummary(c, progressMap.get(c.getId())))
+        .toList();
+  }
+
+  public Optional<ChapterDetailResponse> getChapter(String chapterId, String userId) {
+    return chapterRepository
+        .findById(chapterId)
+        .map(
+            c -> {
+              Optional<UserProgress> progress =
+                  progressRepository.findByUserIdAndChapterId(userId, chapterId);
+              return toDetail(c, progress.orElse(null));
+            });
+  }
+
+  private ChapterSummaryResponse toSummary(Chapter c, UserProgress progress) {
+    ChapterSummaryResponse r = new ChapterSummaryResponse();
+    r.setId(c.getId());
+    r.setStoryId(c.getStoryId());
+    r.setChapterNumber(c.getChapterNumber());
+    r.setTitle(c.getTitle());
+    r.setVocabularyCount(c.getVocabulary() != null ? c.getVocabulary().size() : 0);
+    r.setComprehensionCount(c.getComprehension() != null ? c.getComprehension().size() : 0);
+    if (progress != null) {
+      r.setCompleted(true);
+      r.setScore(progress.getScore());
+    }
+    return r;
+  }
+
+  private ChapterDetailResponse toDetail(Chapter c, UserProgress progress) {
+    ChapterDetailResponse r = new ChapterDetailResponse();
+    r.setId(c.getId());
+    r.setStoryId(c.getStoryId());
+    r.setChapterNumber(c.getChapterNumber());
+    r.setTitle(c.getTitle());
+    r.setVocabulary(c.getVocabulary());
+    r.setGrammarFocus(c.getGrammarFocus());
+    r.setContent(c.getContent());
+    r.setComprehension(c.getComprehension());
+    if (progress != null) {
+      r.setCompleted(true);
+      r.setScore(progress.getScore());
+    }
+    return r;
+  }
+}

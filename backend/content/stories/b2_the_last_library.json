@@ -1,0 +1,176 @@
+{
+  "story": {
+    "title": "The Last Library",
+    "description": "When seventeen-year-old Mara discovers that her town's old Hartwell Library is scheduled for demolition, she finds a folder of letters written by the woman who built it in 1943 — and begins to understand what a building, and a single determined person, can mean to a whole community.",
+    "level": "B2",
+    "coverEmoji": "📚",
+    "author": "ReadWell",
+    "tags": ["history", "community", "determination", "heritage"]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "What the Walls Remember",
+      "vocabulary": [
+        {
+          "word": "demolish",
+          "definition": "to completely destroy a building, usually in a planned and deliberate way",
+          "exampleSentence": "The council planned to demolish the old library and replace it with a car park.",
+          "emoji": "🏚️"
+        },
+        {
+          "word": "petition",
+          "definition": "a document signed by many people asking for an official change or decision to be reversed",
+          "exampleSentence": "Mr Fennick had submitted a heritage petition three years ago, but it was rejected with only thirty-seven signatures.",
+          "emoji": "✍️"
+        },
+        {
+          "word": "archive",
+          "definition": "a collection of historical records, documents, or materials, or the place where they are stored",
+          "exampleSentence": "Mara spent the evening searching the town's digital archive for photographs and newspaper articles from 1943.",
+          "emoji": "🗄️"
+        },
+        {
+          "word": "legacy",
+          "definition": "something important that a person or organisation leaves behind for people in the future",
+          "exampleSentence": "Agnes's true legacy was not the building itself, but the habits of reading and learning it made possible.",
+          "emoji": "🕊️"
+        },
+        {
+          "word": "catalyst",
+          "definition": "a person or event that causes something important to happen or change",
+          "exampleSentence": "Agnes Hartwell was the catalyst — without her refusal to give up, the library would never have been built.",
+          "emoji": "⚡"
+        },
+        {
+          "word": "pivotal",
+          "definition": "of central importance; having a decisive influence on the outcome of something",
+          "exampleSentence": "Agnes's decision to keep going, after the council refused her funding, was pivotal to the library's creation.",
+          "emoji": "🔑"
+        },
+        {
+          "word": "irreplaceable",
+          "definition": "so special or unique that it cannot be replaced if lost",
+          "exampleSentence": "The letters in the folder were irreplaceable — handwritten evidence of the library's founding that existed nowhere else.",
+          "emoji": "💎"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Third Conditional",
+        "explanation": "We use the third conditional to talk about imaginary situations in the past — things that did not happen and the hypothetical results. Form: If + past perfect, would have + past participle. We use it to reflect on past events, express regret, or speculate about how history might have been different.",
+        "examples": [
+          "If Agnes hadn't refused to give up, the library would never have existed.",
+          "If the petition had reached more people, the council might have listened.",
+          "If Mara hadn't stopped to read the sign, she would never have walked inside.",
+          "Agnes wrote: 'If I had known how difficult this would be, I'm not sure I would have started.'"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "In the window of the old Hartwell Library there was a sign Mara had never noticed before. She walked past it every morning on her way to school, and every afternoon on the way back. But today the sign was new — printed on white paper in clean black letters: PLANNING PERMISSION GRANTED. DEMOLITION: OCTOBER 14TH. Mara stopped on the pavement. She looked at the building properly for the first time. The iron gate. The wide stone steps, worn smooth in the middle from decades of feet. The name carved above the door: HARTWELL, 1943. She had visited this library exactly twice, both times for school projects. Now, standing in front of it, she felt inexplicably as though something important was about to be taken away — not from her exactly, but from the air around her.",
+          "imagePlaceholder": "🏛️"
+        },
+        {
+          "order": 2,
+          "text": "She pushed the gate open and went inside. The library smelled of old paper and wood polish and something faintly sweet she could not identify. A man in his mid-seventies sat behind the main desk, reading. He looked up without alarm. \"I saw the sign,\" Mara said. She was not sure what else to say. The man — his name badge read MR FENNICK — nodded slowly. \"If the council had listened to us three years ago, we wouldn't be in this situation,\" he said. \"We submitted a heritage petition. Thirty-seven signatures. They rejected it.\" He opened a drawer beneath the desk and placed a manila folder carefully on the surface between them. \"But if you have a few minutes, and if you're interested in why this building matters, I think you should look at this.\"",
+          "imagePlaceholder": "📖"
+        },
+        {
+          "order": 3,
+          "text": "The folder contained letters. Old ones — some typed on thin yellowed paper, others handwritten in a neat slanted script in faded blue ink. They were written by a woman named Agnes Hartwell. She built the library in 1943, during the second year of heavy bombing, when half the town had been evacuated and the other half was trying to carry on. Agnes had written to the town council asking for funding to create a reading room. They refused. She wrote to her neighbours, her colleagues, her former teachers. She organised fundraising events in her own kitchen. She sold her furniture — her own furniture — to cover the cost of the first books. \"If she hadn't been the catalyst she was,\" Mr Fennick said quietly, \"this library would never have existed. Three generations of this town learned to read here. If she hadn't started it, none of that would have happened.\" He looked at the shelves for a long moment.",
+          "imagePlaceholder": "✉️"
+        },
+        {
+          "order": 4,
+          "text": "Mara carried the folder to a corner table and read for an hour. The letters revealed something she had not expected — Agnes was not certain she would succeed. In one letter, written in the autumn of 1943, she described the feeling precisely: \"If I had known at the outset how difficult this would be, I am not sure I would have started. But here is what I also know: if I hadn't started, no one else would have. And that thought, more than any other, is enough to keep me going.\" Mara read those two sentences three times. She thought about the sign in the window. She thought about thirty-seven signatures. Agnes's decision to continue had been pivotal — that much was clear. If the petition had reached more people, if someone with more influence had cared, would the building still be standing in fifty years? Would Agnes's legacy still be intact?",
+          "imagePlaceholder": "💭"
+        },
+        {
+          "order": 5,
+          "text": "She photographed every letter on her phone. Then she went home and opened the town's digital archive — she had never used it before — and spent three hours searching. She found newspaper articles from 1943, photographs of the library's opening day, a typed list of the first week's borrowers. She found an interview Agnes gave in 1971, twenty-eight years after the library opened: \"The building is not the point,\" Agnes had said. \"The building is just the shape of the point. The point is what happens inside it. If we ever lose this building, I hope we don't lose the habit.\" The letters, the photographs, the interview — they were all irreplaceable. Mara understood now that to demolish the building was not simply to knock down old walls — it was to erase something that could not be recovered.",
+          "imagePlaceholder": "🗄️"
+        },
+        {
+          "order": 6,
+          "text": "The next morning, Mara went to school early and knocked on the door of her history teacher, Mrs Albright. \"I want to start a new petition,\" Mara said. \"But I want it to be different from the last one. I want people to read these letters first. If Agnes hadn't cared about this town in 1943, three generations of people would have grown up without this place. That's not just a statistic — it's a story. And if they hear the story, they might feel differently.\" Mrs Albright looked at her carefully across the desk. \"The last petition had thirty-seven signatures,\" she said. \"You'll need considerably more than that.\" \"I know,\" said Mara. \"I'm starting with thirty-eight.\" Mrs Albright looked at her for another moment. Then she picked up a pen.",
+          "imagePlaceholder": "✊"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "What makes Mara stop and look at the library properly for the first time?",
+          "options": [
+            "Mr Fennick calls to her from inside.",
+            "She sees the demolition sign in the window.",
+            "Her history teacher asks her to research the library.",
+            "She realises she has to return an overdue book."
+          ],
+          "correctAnswer": "She sees the demolition sign in the window.",
+          "explanation": "Paragraph 1 describes Mara walking past the library as usual, until 'today the sign was new' — the demolition notice. It is this sign that makes her stop and look at the building 'properly for the first time.'"
+        },
+        {
+          "order": 2,
+          "question": "How does the story use the third conditional to show what might have been different?",
+          "options": [
+            "It uses it to describe what Mara plans to do in the future.",
+            "It uses it to reflect on past events — imagining different outcomes if Agnes or the community had acted differently.",
+            "It uses it to describe what happened to the library during the war.",
+            "It uses it only in the grammar focus section, not in the story itself."
+          ],
+          "correctAnswer": "It uses it to reflect on past events — imagining different outcomes if Agnes or the community had acted differently.",
+          "explanation": "Throughout the story, Mr Fennick says 'If the council had listened... we wouldn't be in this situation.' Agnes writes 'If I hadn't started, no one else would have.' Mara thinks 'If the petition had reached more people...' These all use third conditional to reflect on how past choices shaped present reality."
+        },
+        {
+          "order": 3,
+          "question": "What does Agnes's letter reveal about her state of mind during the project?",
+          "options": [
+            "She was confident from the beginning that the library would succeed.",
+            "She doubted whether she would succeed, but chose to continue because she knew no one else would.",
+            "She regretted starting the project and wished someone else had taken it on.",
+            "She was angry at the council for refusing to help her."
+          ],
+          "correctAnswer": "She doubted whether she would succeed, but chose to continue because she knew no one else would.",
+          "explanation": "In paragraph 4, Agnes writes: 'If I had known how difficult this would be, I am not sure I would have started. But if I hadn't started, no one else would have.' This directly expresses doubt alongside a reason to persist — she continued not from certainty, but from necessity."
+        },
+        {
+          "order": 4,
+          "question": "What does the word 'catalyst' mean in the context of paragraph 3?",
+          "options": [
+            "Someone who builds things with their own hands",
+            "A person whose actions cause important events to happen",
+            "A type of historical document",
+            "A leader who organises large groups of people"
+          ],
+          "correctAnswer": "A person whose actions cause important events to happen",
+          "explanation": "Mr Fennick says 'If she hadn't been the catalyst she was, this library would never have existed.' The meaning is clear from the sentence structure: Agnes's actions were the reason the library came into being. Without her, it would not have happened."
+        },
+        {
+          "order": 5,
+          "question": "What does Agnes mean when she says 'If we ever lose this building, I hope we don't lose the habit'?",
+          "options": [
+            "She hopes the library's books will be moved to another building.",
+            "She hopes the community will continue to value reading and learning even if the physical building disappears.",
+            "She is worried people will stop coming to the library if the building is in poor condition.",
+            "She means the habit of donating to the library should continue."
+          ],
+          "correctAnswer": "She hopes the community will continue to value reading and learning even if the physical building disappears.",
+          "explanation": "Agnes also says in the same interview 'The building is just the shape of the point. The point is what happens inside it.' This shows that for Agnes, the building matters less than the culture it enables — the habit of reading and learning. She hopes that habit survives even if the building does not."
+        },
+        {
+          "order": 6,
+          "question": "What does Mara mean by 'I'm starting with thirty-eight'?",
+          "options": [
+            "She will improve on the previous petition by getting at least thirty-eight signatures immediately.",
+            "She plans to begin by signing herself as the thirty-eighth person after the previous thirty-seven.",
+            "She will write thirty-eight letters, one for each person who signed the first petition.",
+            "She wants to open the library for thirty-eight more days before it closes."
+          ],
+          "correctAnswer": "She plans to begin by signing herself as the thirty-eighth person after the previous thirty-seven.",
+          "explanation": "The previous petition had thirty-seven signatures. Mara says she is 'starting with thirty-eight', meaning she will be number thirty-eight — adding herself to where the last petition left off. The moment is emphasised when Mrs Albright then 'picked up a pen', becoming the thirty-ninth."
+        }
+      ]
+    }
+  ]
+}

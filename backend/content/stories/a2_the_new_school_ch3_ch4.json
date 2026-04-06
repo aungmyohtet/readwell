@@ -1,0 +1,262 @@
+{
+  "story": {
+    "title": "The New School",
+    "description": "Emma moves to a new town and starts at a new school. Follow her journey as she finds the courage to make new friends and face new challenges.",
+    "level": "A2",
+    "coverEmoji": "🏫",
+    "author": "ReadWell",
+    "tags": [
+      "school",
+      "friendship",
+      "emotions"
+    ]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 3,
+      "title": "The Best Birthday",
+      "vocabulary": [
+        {
+          "word": "occasion",
+          "definition": "a special event or time, often one that is celebrated",
+          "exampleSentence": "Emma's birthday was a special occasion, even though she was far from her old friends.",
+          "emoji": "🎉"
+        },
+        {
+          "word": "relative",
+          "definition": "a person who is part of your family, such as an aunt, uncle, or cousin",
+          "exampleSentence": "Emma's relatives came from Sheffield to celebrate her birthday.",
+          "emoji": "👨‍👩‍👧"
+        },
+        {
+          "word": "gather",
+          "definition": "to come together in one place as a group",
+          "exampleSentence": "The family gathered around the table and told stories from the past.",
+          "emoji": "🤝"
+        },
+        {
+          "word": "decorate",
+          "definition": "to make something look more attractive by adding things to it",
+          "exampleSentence": "Emma's mother decorated the table with yellow flowers for the occasion.",
+          "emoji": "🌸"
+        },
+        {
+          "word": "surprise",
+          "definition": "something unexpected that happens and causes a feeling of wonder or pleasure",
+          "exampleSentence": "Sophie's visit was a wonderful surprise that Emma did not expect at all.",
+          "emoji": "🎊"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Simple Past – Irregular Verbs",
+        "explanation": "Some common verbs do not follow the regular -ed pattern in the simple past. They change their form completely. These are called irregular verbs and must be learned individually. They are very common in English stories and everyday speech.",
+        "examples": [
+          "Emma's aunt and uncle came all the way from Sheffield.",
+          "Sophie stood at the door and gave Emma a handmade card.",
+          "Emma felt something she didn't expect — this was exactly right.",
+          "Her mother made the cake from her grandmother's recipe and took a photograph of everyone."
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Emma's birthday fell on a Saturday in October. She woke up later than usual and lay in bed looking at the ceiling. Last year, her best friend Jade organised a surprise party with twelve people in Jade's garden. There were balloons, a cake, and everyone she knew. This year, Emma thought there would be no surprise. Her mother told her they would have a quiet lunch, just the three of them. Emma got up slowly, went to the bathroom, and walked downstairs.",
+          "imagePlaceholder": "🌤️"
+        },
+        {
+          "order": 2,
+          "text": "But when she came into the kitchen, she saw that her mother had decorated the table with a small vase of yellow flowers. There was a card against the vase and two extra chairs at the table. Emma's aunt and uncle sat in those chairs. They came from Sheffield — three hours by train — and said nothing about coming in advance. They just appeared. \"Happy birthday, Emma,\" her uncle said. He stood up and hugged her. Her aunt gave her a small box wrapped in blue paper. Emma had not expected this. She did not know what to say, so she just sat down.",
+          "imagePlaceholder": "🎂"
+        },
+        {
+          "order": 3,
+          "text": "The whole family gathered around the table. Her uncle told stories Emma had never heard before — stories about her mother when she was young, about a dog her grandmother once had, about a holiday where everything went wrong in the best possible way. Emma's mother laughed at things Emma had never seen her laugh at. Her aunt said something and everyone went quiet, and then they all laughed again. It was a different kind of afternoon — the kind Emma knew she would remember.",
+          "imagePlaceholder": "😄"
+        },
+        {
+          "order": 4,
+          "text": "At two o'clock, the doorbell rang. Emma's mother went to the door and came back with Sophie. Sophie stood in the hallway with a wrapped gift and a card she made herself. She looked slightly nervous. \"I hope this is okay,\" she said. \"Your mum told me it was your birthday.\" Emma took the gift and felt something she did not know how to name. It was a surprise — a real one. \"Come in,\" Emma said. \"Have some cake.\" Sophie gave her a big smile and came inside.",
+          "imagePlaceholder": "🎁"
+        },
+        {
+          "order": 5,
+          "text": "Her mother made the cake from a recipe that came from Emma's grandmother. Her uncle took a photograph of everyone at the table. Later, Emma thought about how different the day felt from what she expected. She thought she knew what a birthday away from home would feel like. She was wrong. That evening she wrote to Jade in Bristol. She told her about her relatives who came from Sheffield, about Sophie at the door, about the yellow flowers and the cake. She wrote: \"It was different from last year. But it was good.\" She sat back and read it twice. Then she sent it.",
+          "imagePlaceholder": "✍️"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Why did Emma not expect a celebration on her birthday?",
+          "options": [
+            "She told her mother she did not want a party.",
+            "Her mother said they would only have a quiet lunch, just the three of them.",
+            "Her relatives were too far away to visit.",
+            "She forgot her own birthday."
+          ],
+          "correctAnswer": "Her mother said they would only have a quiet lunch, just the three of them.",
+          "explanation": "Paragraph 1 says: 'Her mother told her they would have a quiet lunch, just the three of them.' This is why Emma expected nothing special."
+        },
+        {
+          "order": 2,
+          "question": "Which of the following uses an irregular past tense verb correctly?",
+          "options": [
+            "Emma's uncle taked a photograph of everyone.",
+            "Sophie gived Emma a handmade card.",
+            "Emma's aunt and uncle came from Sheffield by train.",
+            "Her mother maked the cake from a family recipe."
+          ],
+          "correctAnswer": "Emma's aunt and uncle came from Sheffield by train.",
+          "explanation": "'Came' is the correct irregular past form of 'come.' The other options use incorrect forms — 'taked', 'gived', and 'maked' are not real words. The correct forms are: took, gave, and made."
+        },
+        {
+          "order": 3,
+          "question": "Why was Sophie's visit a surprise?",
+          "options": [
+            "Sophie arrived with a very expensive gift.",
+            "Emma's mother had arranged it secretly without telling Emma.",
+            "Sophie lived very far away and rarely visited.",
+            "Emma and Sophie had argued the day before."
+          ],
+          "correctAnswer": "Emma's mother had arranged it secretly without telling Emma.",
+          "explanation": "Sophie says 'Your mum told me it was your birthday', which means Emma's mother invited her. Emma didn't know — so it was a surprise arranged by her mother."
+        },
+        {
+          "order": 4,
+          "question": "What does the word 'gather' suggest in paragraph 3?",
+          "options": [
+            "The family collected objects from around the house.",
+            "Everyone came together around the table as a group.",
+            "Emma's mother picked flowers from the garden.",
+            "The relatives took a long time to arrive."
+          ],
+          "correctAnswer": "Everyone came together around the table as a group.",
+          "explanation": "Paragraph 3 says 'The whole family gathered around the table' just before describing everyone telling stories together. This shows 'gather' means to come together in one place as a group."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "title": "The School Play",
+      "vocabulary": [
+        {
+          "word": "audition",
+          "definition": "a short performance to show your skills, used to decide if you can join a play, film, or group",
+          "exampleSentence": "Sophie and Emma decided to go to the audition for the school play together.",
+          "emoji": "🎭"
+        },
+        {
+          "word": "rehearse",
+          "definition": "to practise a performance, such as a play or a speech, before the real event",
+          "exampleSentence": "Emma planned to rehearse her lines every evening before the audition.",
+          "emoji": "📋"
+        },
+        {
+          "word": "perform",
+          "definition": "to do something such as acting, singing, or dancing in front of an audience",
+          "exampleSentence": "Emma was nervous about having to perform in front of the whole school.",
+          "emoji": "🌟"
+        },
+        {
+          "word": "audience",
+          "definition": "the group of people who watch or listen to a performance",
+          "exampleSentence": "Emma imagined standing on the stage in front of a large audience of parents and students.",
+          "emoji": "👥"
+        },
+        {
+          "word": "role",
+          "definition": "a character that an actor plays in a film or play",
+          "exampleSentence": "Sophie was hoping to get a role in the school play, and she thought Emma could too.",
+          "emoji": "🎬"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Going To + Will (Future)",
+        "explanation": "We use 'going to' for plans and intentions — things we have already decided to do. We use 'will' for predictions, spontaneous decisions, and things we are not yet certain about. Both talk about the future, but the choice depends on whether the decision is already made or still open.",
+        "examples": [
+          "I'm going to audition for the school play on Thursday. (decided plan)",
+          "I think it will be fine. (prediction about the future)",
+          "I won't know the result until next week. (future uncertainty)",
+          "You're probably going to forget the words the first time. (prediction based on experience)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "On a Monday in November, Sophie put a yellow flyer on Emma's desk at the start of class. \"The school play,\" Sophie said. \"Mr Hughes is holding auditions next Thursday. I'm going to try for it, and you should come too.\" Emma looked at the flyer. The school play was going to be a version of A Midsummer Night's Dream. She had seen the film once. She did not understand most of it. \"I'm not an actor,\" Emma said. Sophie smiled. \"Neither am I,\" she said. \"That's why it's called an audition and not a performance.\"",
+          "imagePlaceholder": "📄"
+        },
+        {
+          "order": 2,
+          "text": "Sophie ignored every reason Emma gave. \"I'm going to help you practise,\" she said. \"We're going to do it together. It's going to be fine.\" Emma was not certain it was going to be fine. She thought about standing on a stage in front of an audience of parents and teachers and every single student in the school. \"What if I forget the words?\" she said. \"You probably will,\" Sophie said cheerfully. \"Everyone does the first time. But you won't forget all of them. And Mr Hughes won't mind.\"",
+          "imagePlaceholder": "😟"
+        },
+        {
+          "order": 3,
+          "text": "That evening, Emma decided she was going to try. She wrote a list in her notebook: she was going to read the scenes tonight, she was going to rehearse her lines in front of the mirror every morning, and she was going to ask her mother to listen to her perform before Thursday. Her mother was very enthusiastic about this last part. She sat down in the kitchen chair, folded her hands in her lap, and became the most encouraging audience Emma had ever had. She clapped after every line, even the ones Emma said badly.",
+          "imagePlaceholder": "🪞"
+        },
+        {
+          "order": 4,
+          "text": "On Thursday, Emma and Sophie waited outside the drama room. Mr Hughes appeared at the door. He had a kind face and a large untidy beard. \"Two today,\" he said, looking at them both. \"Good. One at a time, please — Sophie first, Emma second.\" Sophie gave Emma a quick thumbs-up and went in. Emma stood in the corridor and thought: it will be over soon, and whatever happens, it will be finished. This thought was more helpful than she expected.",
+          "imagePlaceholder": "🎭"
+        },
+        {
+          "order": 5,
+          "text": "An hour later, Emma and Sophie sat on the bench outside school and waited for Emma's mother's car. Neither of them spoke for a moment. \"How do you think it went?\" Sophie asked. Emma considered this carefully. \"I won't know for certain until the list goes up,\" she said. \"But I didn't forget all the words.\" Sophie nodded seriously. \"I think you're going to get a role,\" she said. Emma looked at her. \"I think you probably will too,\" she said. They sat in the quiet November afternoon. Next week, they would find out.",
+          "imagePlaceholder": "🤞"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "What is the difference between these two sentences from the story: 'I'm going to help you practise' and 'It will be fine'?",
+          "options": [
+            "The first is in the present tense and the second is in the past tense.",
+            "'Going to' describes a plan already decided; 'will' is a prediction about the future.",
+            "Both sentences mean the same thing.",
+            "'Going to' is used for other people's plans; 'will' is used for your own."
+          ],
+          "correctAnswer": "'Going to' describes a plan already decided; 'will' is a prediction about the future.",
+          "explanation": "This is the key grammar point of this chapter. 'I'm going to help you' shows a decision Sophie has already made. 'It will be fine' is Sophie's prediction about an uncertain future event. This matches the grammar focus explanation."
+        },
+        {
+          "order": 2,
+          "question": "Why does Emma decide to try out for the play, even though she said she was 'not an actor'?",
+          "options": [
+            "Mr Hughes asked her personally to audition.",
+            "She wanted to impress her mother.",
+            "Sophie encouraged her and she decided to try despite her doubts.",
+            "She found out the play would not be performed in front of an audience."
+          ],
+          "correctAnswer": "Sophie encouraged her and she decided to try despite her doubts.",
+          "explanation": "Paragraph 3 says 'Emma decided she was going to try.' The story shows that Sophie's encouragement — and her refusal to accept Emma's reasons not to try — was what changed Emma's mind."
+        },
+        {
+          "order": 3,
+          "question": "What does 'audience' mean in paragraph 2?",
+          "options": [
+            "The actors who perform in the play",
+            "The group of people who watch a performance",
+            "The judge who decides who gets a role",
+            "The students who auditioned for the play"
+          ],
+          "correctAnswer": "The group of people who watch a performance",
+          "explanation": "Paragraph 2 describes Emma imagining 'standing on a stage in front of an audience of parents and teachers and every single student in the school.' All those people would be watching — not performing. This shows that an audience is the group who watches."
+        },
+        {
+          "order": 4,
+          "question": "At the end of the story, Emma says 'I won't know for certain until the list goes up.' Which grammar form is this?",
+          "options": [
+            "Going to — it describes a plan she has already made.",
+            "Will — it describes a future situation she is not yet certain about.",
+            "Simple present — it describes a habit.",
+            "Past tense — it describes something that already happened."
+          ],
+          "correctAnswer": "Will — it describes a future situation she is not yet certain about.",
+          "explanation": "'I won't know' uses 'will' in the negative. Emma is talking about a future result (the cast list) that has not been decided yet. She is not making a plan — she is describing an uncertain future state, which is a key use of 'will'."
+        }
+      ]
+    }
+  ]
+}

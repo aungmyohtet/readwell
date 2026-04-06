@@ -1,0 +1,296 @@
+{
+  "story": {
+    "title": "The Community Centre",
+    "description": "Nina has volunteered at the Linton Community Centre for over a year. When her classmate Tom joins as a new volunteer, she shows him how the centre works — and he discovers that learning something new is easier than he thought, as long as you are willing to start.",
+    "level": "B1",
+    "coverEmoji": "🏛️",
+    "author": "ReadWell",
+    "tags": ["community", "volunteering", "learning", "friendship"]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "The People Who Come Here",
+      "vocabulary": [
+        {
+          "word": "volunteer",
+          "definition": "a person who chooses to do work without being paid, usually to help other people or an organisation",
+          "exampleSentence": "Nina had been volunteering at the community centre for over a year.",
+          "emoji": "🤝"
+        },
+        {
+          "word": "community",
+          "definition": "a group of people who live in the same area or share the same interests, background, or values",
+          "exampleSentence": "The community centre served people of all ages from the local neighbourhood.",
+          "emoji": "👥"
+        },
+        {
+          "word": "resident",
+          "definition": "a person who lives in a particular place, especially on a long-term basis",
+          "exampleSentence": "Volunteers came to talk to elderly residents who did not have many visitors.",
+          "emoji": "🏠"
+        },
+        {
+          "word": "charity",
+          "definition": "an organisation that collects money or help to give to people in need, without making a profit",
+          "exampleSentence": "The community centre was a registered charity that relied on donations and volunteer support.",
+          "emoji": "💛"
+        },
+        {
+          "word": "neighbourhood",
+          "definition": "the area immediately around where you live, and the people who live there",
+          "exampleSentence": "Nina had grown up in the neighbourhood and knew many of the regular visitors.",
+          "emoji": "🏘️"
+        },
+        {
+          "word": "organise",
+          "definition": "to plan and arrange an event or series of activities carefully so that they run smoothly",
+          "exampleSentence": "The volunteer organisers met in the back office every Monday morning.",
+          "emoji": "📋"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Defining Relative Clauses",
+        "explanation": "A defining relative clause gives essential information about a noun — it tells us exactly which person, thing, or place we mean. Without it, the sentence would be unclear or incomplete. We use 'who' for people, 'which' or 'that' for things, 'where' for places, and 'whose' for possession. We do NOT use a comma before a defining relative clause, because the clause is part of the core meaning of the sentence.",
+        "examples": [
+          "This is the room where most things happen. (where — place)",
+          "There is a reading group that meets here on Tuesday evenings. (that — thing, identifies which group)",
+          "Mrs Obi is the person whose paintings are displayed in the corridor. (whose — possession)",
+          "There were groups that supported elderly people who lived alone. (who — person, subject)",
+          "Tom picked up a leaflet that listed every activity available that month. (that — thing, object)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Nina led Tom through the double doors of the Linton Community Centre and into the main hall. \"This is the room where most things happen,\" she said. \"On Tuesday evenings, there is a reading group that meets here. On Thursdays, this is where the local choir rehearses.\" Tom looked around. The hall was large and light, with long windows along one side. At the far end, there was a noticeboard that was covered in flyers and photographs. \"Is this run by the council?\" Tom asked. \"No,\" Nina said. \"It is a registered charity that relies on volunteers and donations.\"",
+          "imagePlaceholder": "🏛️"
+        },
+        {
+          "order": 2,
+          "text": "\"Who are the people that come here?\" Tom asked. Nina thought for a moment. \"Everyone, really. There is a woman called Mrs Obi who teaches art classes on Saturday mornings. She is the person whose paintings are displayed in the corridor.\" She pointed to a row of colourful canvases on the wall. \"And there is Mr Hale, who runs the chess club. He has been here every Wednesday for twelve years.\" Tom stopped at one of the paintings. \"I did not know you could do art classes here,\" he said. \"There are a lot of things here that people do not know about,\" Nina said.",
+          "imagePlaceholder": "👥"
+        },
+        {
+          "order": 3,
+          "text": "The centre served the whole neighbourhood — residents of all ages came through its doors every week. There were classes that helped adults improve their English, support groups for elderly residents who lived alone, and a weekend club for children whose parents worked long hours. Nina explained that the centre had been set up twenty years ago by a group of local residents who wanted a space that belonged to everyone. \"Is there anything for teenagers?\" Tom asked. \"There is a film club that meets on Friday evenings,\" Nina said. \"And a coding workshop that started last month.\"",
+          "imagePlaceholder": "🌍"
+        },
+        {
+          "order": 4,
+          "text": "Tom followed Nina into a smaller room at the back. It was the volunteer office — a space where the rota was kept, the post was sorted, and the organisers met every Monday morning. \"What do volunteers actually do?\" Tom asked. \"It depends what you are good at,\" Nina said. \"There are people who help with admin. There are others who run activities or set up rooms before events. And there are volunteers who simply come to sit with residents who do not have many visitors.\" Tom picked up a leaflet from the desk. It listed every activity that was available that month. He counted seventeen.",
+          "imagePlaceholder": "🤝"
+        },
+        {
+          "order": 5,
+          "text": "At the end of the tour, they stood outside in the cool autumn air. \"What made you want to volunteer here?\" Tom asked. Nina shrugged. \"I grew up in this neighbourhood. This is a place that gave a lot to my family when we needed it.\" She held the door open. \"Come back on Thursday,\" she said. \"You can meet the people that keep this place running.\" Tom looked at the noticeboard through the glass. It was covered in names — names of people who gave their time here every week. He decided he wanted to be one of them.",
+          "imagePlaceholder": "✨"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "What does Nina tell Tom happens in the main hall on Thursday evenings?",
+          "options": [
+            "The reading group meets there",
+            "The local choir rehearses there",
+            "Mrs Obi teaches art classes there",
+            "The chess club plays there"
+          ],
+          "correctAnswer": "The local choir rehearses there",
+          "explanation": "Nina says: 'On Thursdays, this is where the local choir rehearses.'"
+        },
+        {
+          "order": 2,
+          "question": "Why is Mrs Obi mentioned in the tour?",
+          "options": [
+            "She is the resident who helped set up the centre twenty years ago",
+            "She is the person whose paintings are displayed in the corridor",
+            "She organises the volunteer rota every Monday",
+            "She runs the English classes for adult learners"
+          ],
+          "correctAnswer": "She is the person whose paintings are displayed in the corridor",
+          "explanation": "Nina says: 'She is the person whose paintings are displayed in the corridor,' pointing to the canvases on the wall."
+        },
+        {
+          "order": 3,
+          "question": "Who originally set up the community centre, and why?",
+          "options": [
+            "The local council, to provide meeting space for registered charities",
+            "A group of local residents who wanted a space that belonged to everyone",
+            "A national charity that wanted to support elderly people in the town",
+            "A group of teachers who wanted to offer free classes to local children"
+          ],
+          "correctAnswer": "A group of local residents who wanted a space that belonged to everyone",
+          "explanation": "Nina explains that the centre 'had been set up twenty years ago by a group of local residents who wanted a space that belonged to everyone.'"
+        },
+        {
+          "order": 4,
+          "question": "What do some volunteers do for elderly residents who have few visitors?",
+          "options": [
+            "They help them with shopping and cooking",
+            "They come to sit with them and talk",
+            "They run special art and music sessions for them",
+            "They drive them to medical appointments"
+          ],
+          "correctAnswer": "They come to sit with them and talk",
+          "explanation": "Nina says there are 'volunteers who simply come to sit with residents who do not have many visitors.'"
+        },
+        {
+          "order": 5,
+          "question": "What inspires Tom to decide he wants to volunteer?",
+          "options": [
+            "Nina offers him a specific role that suits his skills",
+            "He sees all the names of regular volunteers on the noticeboard and wants to join them",
+            "His parents have already signed him up and he feels he should try it",
+            "He is impressed by Mrs Obi's paintings and wants to join the art class"
+          ],
+          "correctAnswer": "He sees all the names of regular volunteers on the noticeboard and wants to join them",
+          "explanation": "The text says Tom looked at the noticeboard 'covered in names — names of people who gave their time here every week. He decided he wanted to be one of them.'"
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "title": "Learning Something New",
+      "vocabulary": [
+        {
+          "word": "practise",
+          "definition": "to do something repeatedly in order to improve your ability or skill at it",
+          "exampleSentence": "Dana encouraged everyone to keep practising between sessions if they wanted to improve.",
+          "emoji": "🔄"
+        },
+        {
+          "word": "improve",
+          "definition": "to become better at something, or to make something better than it was before",
+          "exampleSentence": "Dana told the group that they would not improve if they stopped working after each class.",
+          "emoji": "📈"
+        },
+        {
+          "word": "technique",
+          "definition": "a particular method or way of doing something that requires skill and practice to master",
+          "exampleSentence": "Kofi explained the technique for each dish before asking his students to try it themselves.",
+          "emoji": "🎯"
+        },
+        {
+          "word": "challenge",
+          "definition": "something that is difficult and requires effort, skill, or determination to achieve",
+          "exampleSentence": "Tom began to enjoy the challenge of writing code that actually worked.",
+          "emoji": "💪"
+        },
+        {
+          "word": "progress",
+          "definition": "improvement or forward movement towards a goal over time",
+          "exampleSentence": "Dana reminded Tom that regular practice was the only reliable way to make progress.",
+          "emoji": "🌱"
+        },
+        {
+          "word": "avoid",
+          "definition": "to deliberately stay away from something, or to choose not to do it",
+          "exampleSentence": "Tom admitted that he had been avoiding anything too technical for years.",
+          "emoji": "🚫"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Gerunds and Infinitives",
+        "explanation": "Some verbs are followed by a gerund (verb + -ing), some by an infinitive (to + verb), and some by both. Common verbs followed by a gerund include: enjoy, avoid, suggest, consider, practise, keep, and mind. Common verbs followed by an infinitive include: want, decide, hope, manage, agree, refuse, and offer. Some verbs like like, love, hate, and start can be followed by either, though there is sometimes a difference in meaning. With 'stop', the choice changes the meaning completely: 'stop doing' means you quit an activity; 'stop to do' means you pause in order to do something.",
+        "examples": [
+          "Tom enjoyed reading about the different activity options. (enjoy + gerund)",
+          "He had decided to sign up for the coding workshop. (decide + infinitive)",
+          "Dana suggested spending at least twenty minutes a day on the exercises. (suggest + gerund)",
+          "Tom did not want to fall behind the rest of the group. (want + infinitive)",
+          "He had been avoiding anything too technical for years. (avoid + gerund)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Tom returned to the centre on Thursday, as Nina had suggested. She was in the main hall arranging chairs for the evening's film club. \"Did you decide to come back?\" she said with a smile. Tom nodded. He had been thinking about signing up for something since the tour. He had always wanted to learn how to code, but he had never got around to it. \"The coding workshop starts next Tuesday,\" Nina said. \"It is worth trying.\" Tom picked up the activities leaflet from the table. He enjoyed reading about the options.",
+          "imagePlaceholder": "📚"
+        },
+        {
+          "order": 2,
+          "text": "He sat down and read the leaflet carefully. The cooking class on Monday evenings also sounded good — he had always liked helping in the kitchen at home. But he also wanted to try something completely new. He had been avoiding anything too technical for years, but this felt different. \"I have decided to sign up for coding,\" he told Nina. \"And maybe cooking too.\" Nina looked up. \"Good idea. But I suggest starting with one thing first. You should avoid signing up for too many classes at once — it is easy to feel overwhelmed before you have really begun.\"",
+          "imagePlaceholder": "💻"
+        },
+        {
+          "order": 3,
+          "text": "The coding workshop was run by a woman called Dana. From the first session, she encouraged everyone to keep practising between classes. \"You will not improve if you stop after each session,\" she said. She suggested spending at least twenty minutes a day on the exercises. Tom found this difficult at first — he kept forgetting. But Dana reminded the group that learning to code was like learning a sport: you needed to practise regularly to make progress. Tom decided to set a reminder on his phone. He did not want to fall behind.",
+          "imagePlaceholder": "🎯"
+        },
+        {
+          "order": 4,
+          "text": "The cooking class was more immediately satisfying. Tom loved making things with his hands, and he found that he did not mind spending a long time in the kitchen. The teacher, a cheerful man called Kofi, explained the technique for each dish before asking students to try copying it themselves. Tom made mistakes — he forgot to add salt, and he managed to burn his first omelette. But Kofi told him not to worry. \"Making mistakes is part of learning,\" Kofi said. \"The important thing is to keep going and not give up after the first difficulty.\"",
+          "imagePlaceholder": "🍳"
+        },
+        {
+          "order": 5,
+          "text": "After three weeks, Tom found himself looking forward to both classes. He had started enjoying the challenge of writing code that actually ran without errors. He had also stopped feeling nervous about cooking in front of other people. On Friday afternoon, he told Nina about his progress. \"I cannot believe I spent so long avoiding these things,\" he said. Nina smiled. \"That is how it always goes,\" she said. \"You just need to decide to start. Once you start, it becomes much harder to stop.\" Tom thought about this on the walk home. He was already planning to continue.",
+          "imagePlaceholder": "🌟"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "What two activities does Tom decide to sign up for?",
+          "options": [
+            "Coding and the film club",
+            "Cooking and the chess club",
+            "Coding and cooking",
+            "Art and coding"
+          ],
+          "correctAnswer": "Coding and cooking",
+          "explanation": "Tom tells Nina: 'I have decided to sign up for coding. And maybe cooking too.'"
+        },
+        {
+          "order": 2,
+          "question": "What does Dana compare learning to code to?",
+          "options": [
+            "Learning a new language",
+            "Learning to drive",
+            "Learning a sport",
+            "Reading a difficult book"
+          ],
+          "correctAnswer": "Learning a sport",
+          "explanation": "Dana tells the group that 'learning to code was like learning a sport: you needed to practise regularly to make progress.'"
+        },
+        {
+          "order": 3,
+          "question": "What two mistakes does Tom make in his first cooking class?",
+          "options": [
+            "He adds too much salt and drops a pan on the floor",
+            "He uses the wrong technique and burns the vegetables",
+            "He forgets to add salt and burns his first omelette",
+            "He misses the first session and has to catch up the following week"
+          ],
+          "correctAnswer": "He forgets to add salt and burns his first omelette",
+          "explanation": "The text says: 'he forgot to add salt, and he managed to burn his first omelette.'"
+        },
+        {
+          "order": 4,
+          "question": "What does Kofi tell Tom when he makes mistakes?",
+          "options": [
+            "That he should watch more carefully before trying",
+            "That some people find cooking more difficult than others",
+            "That making mistakes is part of learning and the important thing is to keep going",
+            "That he should practise the technique more at home before the next class"
+          ],
+          "correctAnswer": "That making mistakes is part of learning and the important thing is to keep going",
+          "explanation": "Kofi says: 'Making mistakes is part of learning. The important thing is to keep going and not give up after the first difficulty.'"
+        },
+        {
+          "order": 5,
+          "question": "What does Tom mean when he says he 'cannot believe he spent so long avoiding these things'?",
+          "options": [
+            "He is frustrated that nobody recommended the classes to him sooner",
+            "He is surprised that the classes are free to attend at the community centre",
+            "He regrets not trying new activities earlier because he is genuinely enjoying them",
+            "He wishes he had started cooking before coding, as he finds it easier"
+          ],
+          "correctAnswer": "He regrets not trying new activities earlier because he is genuinely enjoying them",
+          "explanation": "Tom has been avoiding technical and new activities for years, but now that he has started both classes he loves them — so he regrets the time he spent not trying."
+        }
+      ]
+    }
+  ]
+}

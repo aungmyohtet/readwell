@@ -1,0 +1,274 @@
+{
+  "story": {
+    "title": "Seasons and Sundays",
+    "description": "Maya is ten years old and endlessly curious. On a rainy Saturday she asks her dad every question she can think of about the weather, and on Sunday morning the two of them make pancakes together — discovering that some of the best questions come from the kitchen.",
+    "level": "A2",
+    "coverEmoji": "🌦️",
+    "author": "ReadWell",
+    "tags": ["weather", "family", "food", "curiosity"]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "What's the Weather Like?",
+      "vocabulary": [
+        {
+          "word": "forecast",
+          "definition": "a description of what the weather will probably be like in the near future",
+          "exampleSentence": "Maya asked her dad to check the weather forecast on his phone.",
+          "emoji": "🌤️"
+        },
+        {
+          "word": "drizzle",
+          "definition": "very light rain that falls in fine, tiny drops",
+          "exampleSentence": "Small drops of drizzle ran slowly down the window glass.",
+          "emoji": "🌦️"
+        },
+        {
+          "word": "thunder",
+          "definition": "the loud rumbling or crashing sound in the sky during a storm",
+          "exampleSentence": "Maya was not frightened of thunder, but she always covered her ears.",
+          "emoji": "⛈️"
+        },
+        {
+          "word": "frost",
+          "definition": "a thin white layer of ice crystals that forms on surfaces when the temperature falls below zero",
+          "exampleSentence": "Maya had seen photographs of the garden covered in frost and wanted to see it herself.",
+          "emoji": "🥶"
+        },
+        {
+          "word": "horizon",
+          "definition": "the line in the far distance where the sky appears to meet the land or sea",
+          "exampleSentence": "Maya could see the horizon clearly — a thin line between the pale sky and the dark fields.",
+          "emoji": "🌅"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Question Forms \u2013 all types",
+        "explanation": "In English, we form questions in different ways depending on the type. For Yes/No questions with most verbs, we use Do/Does (present) or Did (past) before the subject. For Wh- questions, we put the question word (What, When, Where, Why, How) before Do/Does/Did + subject. For subject questions, we use Who or What directly before the verb, without Do/Did.",
+        "examples": [
+          "Does it always rain in October? (Yes/No question — does + subject + verb)",
+          "What is the weather forecast for today? (Wh- question — what + is + subject)",
+          "When did it last snow here? (Wh- question — when + did + subject + verb)",
+          "Who decides the weather forecast? (Subject question — who + verb, no Do/Did)",
+          "Do they always get the forecast right? (Yes/No question — do + subject + verb)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Maya woke up to a grey sky. She went downstairs and found her dad drinking tea by the window. Small drops of drizzle ran slowly down the glass. \"Does it always rain in October?\" Maya asked, sitting at the table. \"Not always,\" her dad said. \"But it does rain a lot in autumn.\" Maya looked out at the garden. The leaves on the trees were yellow and red, and one by one they fell softly to the ground.",
+          "imagePlaceholder": "🌧️"
+        },
+        {
+          "order": 2,
+          "text": "\"What is the weather forecast for today?\" she asked. Her dad picked up his phone and checked the weather app. \"More cloud in the morning,\" he said, \"but it might clear up by the afternoon.\" Maya tilted her head. \"Who decides the forecast?\" she asked. \"Do they always get it right?\" Her dad laughed. \"They use computers and a lot of data,\" he said. \"But no — they don't always get it right.\" Maya nodded and made a note in the small notebook she kept on the kitchen table.",
+          "imagePlaceholder": "☁️"
+        },
+        {
+          "order": 3,
+          "text": "\"When did it last snow here?\" Maya asked. She had seen photographs of the garden covered in frost and wanted to see it herself. \"It snowed last January,\" her dad said. \"Did you forget? You wore three jumpers and made a tiny snowman.\" Maya laughed. She did remember — the snowman had fallen over in twenty minutes. \"Does thunder happen in winter too?\" she asked. \"Sometimes,\" her dad said. \"You can get a thunderstorm in any season. Winter ones are less common, though.\"",
+          "imagePlaceholder": "❄️"
+        },
+        {
+          "order": 4,
+          "text": "Later, the clouds began to part. Maya pressed her face against the glass. \"Why does the sky look orange near the horizon?\" she asked. Her dad came to look. \"That happens when the sun is low,\" he said. \"The light travels a longer distance through the air and the colours change.\" Maya thought about this for a moment. \"What is the warmest month of the year?\" she asked. Her dad folded his arms and looked at her with a smile. \"Maya,\" he said gently, \"do you ever stop asking questions?\" Maya grinned. \"No,\" she said. \"I don't.\"",
+          "imagePlaceholder": "🌅"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "What is the weather like when Maya looks out of the window in the morning?",
+          "options": [
+            "Sunny with a few clouds",
+            "Grey and drizzly",
+            "Cold with frost on the ground",
+            "Stormy with thunder and lightning"
+          ],
+          "correctAnswer": "Grey and drizzly",
+          "explanation": "The text says 'Maya woke up to a grey sky' and 'small drops of drizzle ran slowly down the glass.'"
+        },
+        {
+          "order": 2,
+          "question": "What does Maya's dad say about weather forecasters?",
+          "options": [
+            "They always get the forecast right",
+            "They use computers and data but do not always get it right",
+            "They only check the weather once a day",
+            "They cannot predict rain more than one day in advance"
+          ],
+          "correctAnswer": "They use computers and data but do not always get it right",
+          "explanation": "Maya's dad says: 'They use computers and a lot of data. But no — they don't always get it right.'"
+        },
+        {
+          "order": 3,
+          "question": "What happened to Maya's snowman last January?",
+          "options": [
+            "It melted in the sun by midday",
+            "It was knocked over by the wind",
+            "It fell over in twenty minutes",
+            "It was still standing the next morning"
+          ],
+          "correctAnswer": "It fell over in twenty minutes",
+          "explanation": "The text says 'the snowman had fallen over in twenty minutes.'"
+        },
+        {
+          "order": 4,
+          "question": "Why does the sky look orange near the horizon?",
+          "options": [
+            "Because clouds reflect sunlight in the evening",
+            "Because the air is dirtier near the ground",
+            "Because the light travels a longer distance through the air when the sun is low",
+            "Because the temperature drops quickly after dark"
+          ],
+          "correctAnswer": "Because the light travels a longer distance through the air when the sun is low",
+          "explanation": "Maya's dad explains: 'That happens when the sun is low. The light travels a longer distance through the air and the colours change.'"
+        },
+        {
+          "order": 5,
+          "question": "What does Maya writing things in her notebook suggest about her character?",
+          "options": [
+            "She is worried she will forget what her dad tells her",
+            "She is doing homework about the weather for school",
+            "She is curious and likes to record what she learns",
+            "She wants to send her notes to a weather forecaster"
+          ],
+          "correctAnswer": "She is curious and likes to record what she learns",
+          "explanation": "Maya asks many questions and writes them down — this shows she is a curious person who enjoys learning and keeping a record of what she discovers."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "title": "Sunday Morning Breakfast",
+      "vocabulary": [
+        {
+          "word": "flour",
+          "definition": "a fine white powder made from ground wheat, used to make bread, cakes, and pastries",
+          "exampleSentence": "Maya's dad poured the flour carefully into the bowl and smoothed it with a spoon.",
+          "emoji": "🫙"
+        },
+        {
+          "word": "ingredient",
+          "definition": "any item of food that is combined with others to make a dish or recipe",
+          "exampleSentence": "Maya read each ingredient from the recipe card one by one.",
+          "emoji": "📋"
+        },
+        {
+          "word": "mixture",
+          "definition": "a combination of different foods stirred or blended together",
+          "exampleSentence": "Maya stirred the eggs, flour, and milk until the mixture was smooth and pale yellow.",
+          "emoji": "🥣"
+        },
+        {
+          "word": "loaf",
+          "definition": "a single piece of bread baked in one block shape, usually sliced for toast or sandwiches",
+          "exampleSentence": "There was a fresh loaf of bread on the counter next to the toaster.",
+          "emoji": "🍞"
+        },
+        {
+          "word": "portion",
+          "definition": "the amount of a particular food that is served to one person",
+          "exampleSentence": "Her dad put a generous portion of pancakes on Maya's plate.",
+          "emoji": "🍽️"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Countable and Uncountable Nouns",
+        "explanation": "Countable nouns are things we can count. They have singular and plural forms and we can use a/an or numbers with them. Uncountable nouns are things we cannot count individually — we cannot say 'a flour' or 'two milks'. With countable nouns we use many, a few, a number of. With uncountable nouns we use much, a little, a great deal of. We can use some, any, and a lot of with both types.",
+        "examples": [
+          "There are three eggs in the fridge. (countable — can be counted, plural form)",
+          "There was not much flour left in the bag. (uncountable — use much, not many)",
+          "Can I have a little honey, please? (uncountable — a little, not a few)",
+          "How many strawberries do you want? (countable — use many)",
+          "There is a lot of milk in the fridge. (a lot of — works with both types)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "On Sunday morning, Maya's dad announced that he was going to make pancakes. \"Can I help?\" Maya asked. \"Of course,\" he said. He pulled a recipe card from the kitchen drawer. \"We need flour, milk, and eggs. Do we have any eggs?\" Maya checked the fridge. \"There are three,\" she said. \"Is that enough?\" Her dad studied the card. \"We need four. I will also use some flour from that bag.\" He looked at the flour bag — it was almost empty. \"There is not much flour left,\" Maya said.",
+          "imagePlaceholder": "🥞"
+        },
+        {
+          "order": 2,
+          "text": "Her dad read out the list of ingredients. \"Two hundred grams of flour, two eggs, and some milk.\" He looked at Maya. \"How much milk is in the fridge?\" Maya checked. \"A lot,\" she said. \"Almost a full bottle.\" He cracked two eggs into a bowl and added the flour. \"How many ingredients are in the recipe?\" Maya asked, following along. \"Just three main ones,\" he said. \"But you can add a little sugar or a few drops of vanilla if you like.\" Maya stirred the mixture slowly while her dad poured in the milk.",
+          "imagePlaceholder": "🧑‍🍳"
+        },
+        {
+          "order": 3,
+          "text": "While the batter rested, her dad put some bread in the toaster. There was a fresh loaf on the counter. He cut two thick slices. \"Would you like some honey?\" he asked, taking a small jar from the shelf. \"Yes please,\" said Maya. Her dad tilted the jar. \"There is not much honey left,\" he said. \"Just a little — enough for one small portion each.\" Maya nodded. She liked having exactly the right portion — not too much, not too little.",
+          "imagePlaceholder": "🍞"
+        },
+        {
+          "order": 4,
+          "text": "The pancakes were ready in a few minutes. Her dad put two portions on Maya's plate and added some strawberries from a bowl on the table. \"How many strawberries do you want?\" he asked. \"A few,\" she said. \"Not too many.\" The pancakes were warm and soft. \"This is the best breakfast,\" Maya announced. \"Can we have pancakes every Sunday?\" Her dad poured himself some tea and sat down. \"We would need more eggs for that,\" he said, \"and more flour.\" Maya picked up her fork. \"But there is a lot of milk,\" she said. Her dad laughed.",
+          "imagePlaceholder": "😋"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Why does Maya's dad say they need to buy more eggs?",
+          "options": [
+            "The recipe needs four eggs but there are only three in the fridge",
+            "The eggs in the fridge are too old to use",
+            "He wants to make scrambled eggs as well as pancakes",
+            "Maya accidentally dropped one on the floor"
+          ],
+          "correctAnswer": "The recipe needs four eggs but there are only three in the fridge",
+          "explanation": "Maya finds three eggs in the fridge, but her dad says the recipe needs four."
+        },
+        {
+          "order": 2,
+          "question": "How much milk does Maya say is in the fridge?",
+          "options": [
+            "Not much, just a little",
+            "None — they need to buy some",
+            "A lot, almost a full bottle",
+            "Exactly enough for the recipe"
+          ],
+          "correctAnswer": "A lot, almost a full bottle",
+          "explanation": "Maya checks the fridge and says: 'A lot. Almost a full bottle.'"
+        },
+        {
+          "order": 3,
+          "question": "Why can Maya and her dad only have a small amount of honey?",
+          "options": [
+            "Because too much honey is not healthy",
+            "Because Maya's dad does not like honey very much",
+            "Because there is not much honey left in the jar",
+            "Because the recipe says to use only a small amount"
+          ],
+          "correctAnswer": "Because there is not much honey left in the jar",
+          "explanation": "Maya's dad tilts the jar and says: 'There is not much honey left. Just a little — enough for one small portion each.'"
+        },
+        {
+          "order": 4,
+          "question": "How many portions of pancakes does Maya's dad put on her plate?",
+          "options": [
+            "One",
+            "Two",
+            "Three",
+            "Four"
+          ],
+          "correctAnswer": "Two",
+          "explanation": "The text says: 'Her dad put two portions on Maya's plate.'"
+        },
+        {
+          "order": 5,
+          "question": "At the end of the story, why does Maya say 'But there is a lot of milk'?",
+          "options": [
+            "She wants to remind her dad to check the fridge before shopping",
+            "She is asking if they should use the milk before it goes bad",
+            "She is playfully joining in with the list of what they have and do not have",
+            "She wants to add more milk to her pancakes"
+          ],
+          "correctAnswer": "She is playfully joining in with the list of what they have and do not have",
+          "explanation": "When her dad lists what they would need more of (eggs, flour), Maya cheerfully adds what they do have plenty of — milk. It is a playful, humorous moment between them."
+        }
+      ]
+    }
+  ]
+}

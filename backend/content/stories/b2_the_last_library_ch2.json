@@ -1,0 +1,190 @@
+{
+  "story": {
+    "title": "The Last Library",
+    "description": "The city plans to demolish the oldest library in the district to build a car park. The archivist who has worked there for thirty years begins a quiet, meticulous campaign to save it — and discovers that the library has been hiding more than just books.",
+    "level": "B2",
+    "coverEmoji": "📚",
+    "author": "ReadWell",
+    "tags": [
+      "history",
+      "community",
+      "preservation",
+      "mystery",
+      "urban"
+    ]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 2,
+      "title": "The Hours Between Pages",
+      "vocabulary": [
+        {
+          "word": "methodology",
+          "definition": "a system of methods and principles used to do a particular kind of work or study",
+          "exampleSentence": "The heritage consultant said Vera's cataloguing methodology was the most thorough she had seen outside a national archive.",
+          "emoji": "🔬"
+        },
+        {
+          "word": "analytical",
+          "definition": "using careful examination and systematic thinking to understand something complex",
+          "exampleSentence": "Her approach to the archive was deeply analytical — each document was cross-referenced with three others before she drew any conclusion.",
+          "emoji": "🧠"
+        },
+        {
+          "word": "preliminary",
+          "definition": "done or happening before something more important, as a preparation",
+          "exampleSentence": "The preliminary findings were enough: the library had been built on land donated by the city, which meant private sale might be legally impossible.",
+          "emoji": "📋"
+        },
+        {
+          "word": "scrutinise",
+          "definition": "to examine something very carefully and critically",
+          "exampleSentence": "Vera scrutinised the council's demolition order and found three procedural errors that her solicitor said could delay the process significantly.",
+          "emoji": "🔍"
+        },
+        {
+          "word": "validate",
+          "definition": "to confirm or prove that something is correct, true, or acceptable",
+          "exampleSentence": "The university professor was able to validate the 1891 deed — it was genuine, and it changed everything.",
+          "emoji": "✅"
+        },
+        {
+          "word": "implication",
+          "definition": "a likely consequence or conclusion that is not directly stated but is suggested",
+          "exampleSentence": "The implication of the deed was clear: the land had never legally belonged to the council to sell.",
+          "emoji": "💡"
+        },
+        {
+          "word": "rigorous",
+          "definition": "extremely thorough, careful, and exact",
+          "exampleSentence": "The legal team said they needed rigorous documentation — anything vague would be challenged and thrown out.",
+          "emoji": "⚖️"
+        },
+        {
+          "word": "synthesise",
+          "definition": "to combine separate pieces of information to form a coherent whole",
+          "exampleSentence": "Vera had spent months collecting documents, but now she had to synthesise them into a single, clear argument.",
+          "emoji": "🧩"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Present Perfect Continuous vs Simple",
+        "explanation": "Both present perfect tenses connect the past to the present, but they have different emphases. Use the present perfect CONTINUOUS (have/has been + verb-ing) to focus on the duration or ongoing nature of an activity — the action is still in progress or has recently stopped and left a visible result. Use the present perfect SIMPLE (have/has + past participle) to focus on the completed result, a specific number of times, or whether something happened at all. Key contrasts: 'She has been cataloguing documents' (focus: long, ongoing activity) vs 'She has catalogued 800 documents' (focus: completed quantity). Time clues: 'all morning', 'for hours', 'lately', 'recently' → often continuous; 'three times', 'already', 'just', 'never' → often simple.",
+        "examples": [
+          "Vera has been working in this library for thirty years. (continuous — focus on duration, still true now)",
+          "She has found three legal irregularities in the demolition order. (simple — focus on completed discoveries, specific result)",
+          "Her eyes have been aching from reading microfiche all afternoon. (continuous — explains present physical state, recently stopped)",
+          "She has read every document in Box 7 twice. (simple — completed action, emphasis on the fact it is done)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Vera Marsh had been working in the Aldwich Street Library for thirty years when the demolition notice arrived. She had catalogued nearly eleven thousand items in that time — books, pamphlets, maps, correspondence, the miscellaneous documents that accumulate in old institutions like sediment at the bottom of a river. She knew the layout of the archive the way other people know their own kitchens. When the notice was slid under the door one Wednesday morning and she picked it up and read it, she did not make a sound. She scrutinised it once more, set it down, and went to her office to think."
+        },
+        {
+          "order": 2,
+          "text": "Her analytical approach to problems had always been the same: define the question precisely, then gather evidence before drawing any conclusion. She had been scrutinising the council's records for weeks by the time the heritage consultant arrived, and the preliminary findings were already organised in a folder with tabs and marginal notes written in her small, rigorous hand. 'I've been building this case for forty-three days,' Vera told her. 'I've found procedural errors in the demolition order and what may be an 1891 land deed that changes the legal status of the building entirely.' The consultant looked at the folder and then at Vera with an expression of visible relief. She had been dealing with rushed campaigns and incomplete paperwork all year. This was different."
+        },
+        {
+          "order": 3,
+          "text": "The most important document was in Box 19 — a box Vera had not opened since 2017 because its contents were listed in the index as 'administrative correspondence, 1880–1920, miscellaneous' and nothing she had needed before had pointed her there. She had been working methodically through the archive since the notice arrived, and Box 19 came in sequence. She opened it on a Tuesday afternoon. The deed was on the third page, folded inside a letter about gas lighting repairs, dated September the fourth, 1891. Vera read it once, then again. Then she called Professor Osei at the university."
+        },
+        {
+          "order": 4,
+          "text": "He validated it within a week. The land on which the library stood had been donated to the city by a merchant named Thomas Aldwich — the library's namesake — on the condition that it remain a public institution in perpetuity. The council had not violated this condition intentionally; the deed had simply been lost. But its implication was clear: the building could not be sold or demolished without a formal hearing and the reclassification of the land title, a process that would take, at minimum, two years. 'You have been working toward this without knowing what you'd find,' Professor Osei said. Vera said: 'The methodology stays the same either way.'"
+        },
+        {
+          "order": 5,
+          "text": "The council's legal team confirmed the finding on a Friday. There would be no demolition in the spring. Vera sat at her desk after the phone call and looked at the room: the card catalogue that nobody used anymore, the shelf of local history monographs that smelled faintly of damp, the window that overlooked a street she had watched change its shops four times since she began. She had been defending this place for months. She had found what she needed to defend it. The two things were separate — the work and the discovery — but they had arrived together, and the result was the same. The library would stand. For now, that was enough. She had synthesised forty-three days of evidence into one document, rigorous and clear. She turned back to the shelf. There were still fourteen boxes she had not opened."
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "What was Vera's immediate reaction when she read the demolition notice?",
+          "options": [
+            "She called the council immediately to challenge it.",
+            "She went to her office, made tea, and thought carefully about her approach.",
+            "She contacted Professor Osei to ask for legal advice.",
+            "She posted the notice on the library noticeboard to warn the public."
+          ],
+          "correctAnswer": "She went to her office, made tea, and thought carefully about her approach.",
+          "explanation": "Vera's reaction is methodical and calm — she goes to her office, puts the kettle on, and sits down to think. This establishes her analytical character immediately."
+        },
+        {
+          "order": 2,
+          "question": "Which sentence uses the present perfect correctly to focus on DURATION?",
+          "options": [
+            "She has found three errors in the demolition order.",
+            "She has already read every document in Box 7.",
+            "She has been scrutinising the council's records for weeks.",
+            "She has validated the deed twice."
+          ],
+          "correctAnswer": "She has been scrutinising the council's records for weeks.",
+          "explanation": "'Has been scrutinising... for weeks' is present perfect continuous, emphasising the duration of an ongoing activity. The others focus on completed results."
+        },
+        {
+          "order": 3,
+          "question": "Why had Box 19 not been opened since 2017?",
+          "options": [
+            "It was sealed and Vera did not have the right key.",
+            "Its contents were listed as general administrative correspondence with no specific relevance.",
+            "A previous archivist had marked it as restricted material.",
+            "Vera had been planning to open it but the demolition notice arrived first."
+          ],
+          "correctAnswer": "Its contents were listed as general administrative correspondence with no specific relevance.",
+          "explanation": "The index listed Box 19 as 'administrative correspondence, 1880–1920, miscellaneous' — nothing in Vera's previous work had pointed her there until she worked through the archive systematically."
+        },
+        {
+          "order": 4,
+          "question": "What was the legal implication of the 1891 deed?",
+          "options": [
+            "The library was entitled to a government preservation grant.",
+            "The building had to be sold to a private educational trust.",
+            "The land could not be sold or demolished without a formal reclassification process.",
+            "Thomas Aldwich's descendants had the right to reclaim the building."
+          ],
+          "correctAnswer": "The land could not be sold or demolished without a formal reclassification process.",
+          "explanation": "The deed's condition — that the land remain a public institution in perpetuity — meant the council could not demolish it without a formal hearing and reclassification, taking at least two years."
+        },
+        {
+          "order": 5,
+          "question": "What does Professor Osei mean when he says Vera 'has been working toward this without knowing what you'd find'?",
+          "options": [
+            "He is surprised she was looking in the wrong boxes all along.",
+            "He is noting that her rigorous methodology led to the discovery, not a lucky guess.",
+            "He thinks she should have contacted him earlier in the process.",
+            "He is suggesting she suspected the deed was there but said nothing."
+          ],
+          "correctAnswer": "He is noting that her rigorous methodology led to the discovery, not a lucky guess.",
+          "explanation": "Osei is acknowledging that Vera's consistent, analytical approach — working through every box in sequence — is what uncovered the deed. She did not know in advance what she would find."
+        },
+        {
+          "order": 6,
+          "question": "What does the final sentence — 'There were still fourteen boxes she had not opened' — suggest?",
+          "options": [
+            "Vera is planning to retire before finishing the catalogue.",
+            "The archive still holds undiscovered material that may be equally important.",
+            "She has been deliberately avoiding those boxes for personal reasons.",
+            "The council's legal team has sealed the remaining boxes as evidence."
+          ],
+          "correctAnswer": "The archive still holds undiscovered material that may be equally important.",
+          "explanation": "The closing line implies the archive may hold more surprises. Vera's work continues — the library is saved for now, but the catalogue is unfinished. It suggests ongoing relevance and perhaps more to discover."
+        },
+        {
+          "order": 7,
+          "question": "Choose the sentence that correctly uses present perfect SIMPLE to focus on a completed result.",
+          "options": [
+            "She has been finding three legal errors in the order.",
+            "She has found three legal errors in the order.",
+            "She was finding three legal errors in the order.",
+            "She found three legal errors in the order all morning."
+          ],
+          "correctAnswer": "She has found three legal errors in the order.",
+          "explanation": "Present perfect simple: has + past participle. 'Has found' focuses on the completed result — three errors have been found. Option A is wrong form; C is past continuous; D is simple past."
+        }
+      ]
+    }
+  ]
+}

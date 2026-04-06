@@ -1,0 +1,350 @@
+{
+  "story": {
+    "title": "The Bridge Year",
+    "description": "Eighteen-year-old Selin defers university to take a gap year working in a technology lab and a mountain rescue charity. The year forces her to reckon with the choices she has made — and those she almost didn't.",
+    "level": "B2",
+    "coverEmoji": "🌉",
+    "author": "ReadWell",
+    "tags": [
+      "coming-of-age",
+      "technology",
+      "decisions",
+      "ambition",
+      "identity"
+    ]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "The Roads Not Taken",
+      "vocabulary": [
+        {
+          "word": "deliberate",
+          "definition": "done consciously and intentionally, after careful thought",
+          "exampleSentence": "The decision to defer university was entirely deliberate — she had written a list of reasons and read it back three times before submitting the form.",
+          "emoji": "🤔"
+        },
+        {
+          "word": "repercussion",
+          "definition": "an indirect, often unintended consequence of an action or decision",
+          "exampleSentence": "The repercussions of not taking the internship had been invisible at first — she only understood them six months later.",
+          "emoji": "🌊"
+        },
+        {
+          "word": "irreversible",
+          "definition": "impossible to change back to what it was before",
+          "exampleSentence": "Some choices felt irreversible in the moment, though time usually proved that impression wrong.",
+          "emoji": "⏳"
+        },
+        {
+          "word": "accountability",
+          "definition": "the fact of being responsible for what you do and expected to explain it if asked",
+          "exampleSentence": "Her mentor at the lab was a firm believer in accountability — you either delivered what you said you would, or you explained precisely why not.",
+          "emoji": "📊"
+        },
+        {
+          "word": "dilemma",
+          "definition": "a situation where you must choose between two or more difficult or undesirable options",
+          "exampleSentence": "The dilemma at the heart of the year was simple and unsolvable: she could pursue depth or breadth, but not both.",
+          "emoji": "⚖️"
+        },
+        {
+          "word": "foresee",
+          "definition": "to know or expect that something will happen before it actually does",
+          "exampleSentence": "She could not have foreseen how much the mountain rescue work would change her relationship with risk.",
+          "emoji": "🔮"
+        },
+        {
+          "word": "mitigate",
+          "definition": "to make something less severe, serious, or painful",
+          "exampleSentence": "Taking the gap year was partly an attempt to mitigate the risk of choosing the wrong degree before she really knew herself.",
+          "emoji": "🛡️"
+        },
+        {
+          "word": "trade-off",
+          "definition": "a balance achieved between two desirable but incompatible things",
+          "exampleSentence": "Every major decision involves a trade-off — the question is whether you understand what you are exchanging and for what.",
+          "emoji": "🔄"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Mixed Conditionals",
+        "explanation": "Mixed conditionals combine elements from different conditional types to link an imaginary past situation with a present result, or an imaginary present situation with a past result. Type 1 (past→present): 'If + past perfect, would + infinitive' — an imaginary past choice affecting the present. Type 2 (present→past): 'If + past simple, would have + past participle' — an imaginary present state that would have changed a past event. Mixed conditionals allow us to express complex, layered regrets and speculations. Contrast: Third conditional (pure past): 'If she had applied, she would have got the place' vs Mixed (past→present): 'If she had applied, she would be there now.'",
+        "examples": [
+          "If Selin hadn't deferred university, she would be sitting in a lecture hall right now instead of a mountain rescue briefing room. (past decision → present result)",
+          "If she were more risk-averse by nature, she probably would never have taken the gap year. (present state → explains past action)",
+          "If I had chosen the safer option, I wouldn't still be asking the same questions. (past choice → present situation)",
+          "If she weren't so stubborn, she might have asked for help months ago. (present trait → would have changed past)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Selin had been sitting in the mountain rescue briefing room for eleven minutes when she understood, with sudden clarity, how she had arrived there. Not the logistical sequence — the deferred university place, the internship application, the eight-hour coach from her parents' house in October — but the actual chain of choices, stretching back three years. If she had not failed that chemistry mock in Year 12, she would not have spent the following summer rebuilding her confidence in a different way. If she had not spent that summer differently, she would never have met Dr Farida Osei. And if she had not met Dr Osei, she would be sitting in a first-year lecture right now, studying the wrong subject."
+        },
+        {
+          "order": 2,
+          "text": "The gap year had been a deliberate decision, but its repercussions had been harder to foresee. Her parents had been supportive in a careful way — the kind of support that asks 'are you sure?' at regular intervals until you are no longer sure yourself. She had mitigated their concern with a spreadsheet: two placements, measurable goals, a date by which she would re-confirm her deferred place. Accountability in a document. It had worked. What the spreadsheet had not accounted for was the dilemma that emerged in month four: she was good at the lab work and she was good at the rescue coordination, and the two skills pointed in opposite directions."
+        },
+        {
+          "order": 3,
+          "text": "If she were less stubborn by nature, she might have asked Dr Osei what to do. Dr Osei was the kind of mentor who gave excellent advice when asked and none at all when not. Instead Selin drove to the mountain station on a Tuesday evening after a long day in the lab and sat with the rescue team's coordinator, a weathered woman called Birte who had been running operations in the valley for twenty-two years. 'All the choices that seem irreversible,' Birte said, not looking up from the radio, 'usually turn out not to be. And all the ones you assume you can take back — those are the ones that matter.' It was not specific advice. It was, Selin thought later, exactly the right thing to say."
+        },
+        {
+          "order": 4,
+          "text": "She thought about trade-offs a lot during the weeks that followed. If she had taken the direct university path, she would now have three months of her first year behind her — a foundation, a peer group, a sense of trajectory. What she had instead was a different kind of foundation: the knowledge that she could be dropped into unfamiliar work, in an unfamiliar place, with unfamiliar people, and find a way to function without falling apart. She could not yet say, with any certainty, which foundation was more valuable. That was the dilemma, and it did not resolve cleanly."
+        },
+        {
+          "order": 5,
+          "text": "The briefing began. A call had come in — a walker reported overdue on the eastern ridge, weather closing in, light failing. Selin checked her kit, noted the coordinates, and followed Birte to the door. If she had not been here for this year, she would not know how to read a contour map under pressure, would not know how to manage her own fear on a steep traverse, would not know that she was capable of making a quick decision in a situation where being wrong carries real consequence. She did not know yet where these things would take her. She had learned, over the past eight months, that not knowing was, in itself, a reasonable place from which to start."
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Which type of mixed conditional is this: 'If she had not met Dr Osei, she would be sitting in a first-year lecture right now'?",
+          "options": [
+            "Third conditional — imaginary past, past result",
+            "Mixed conditional — imaginary past decision, present result",
+            "Second conditional — imaginary present, present result",
+            "First conditional — real past, likely future result"
+          ],
+          "correctAnswer": "Mixed conditional — imaginary past decision, present result",
+          "explanation": "This is a mixed conditional linking a past event (not meeting Dr Osei) to a present result (where she would be now). Structure: if + past perfect, would + infinitive."
+        },
+        {
+          "order": 2,
+          "question": "How did Selin convince her parents to support the gap year?",
+          "options": [
+            "She asked Dr Osei to speak to them directly about her potential.",
+            "She showed them testimonials from previous gap year students.",
+            "She created a spreadsheet with placements, goals, and a confirmation deadline.",
+            "She agreed to study during the gap year and sit external exams."
+          ],
+          "correctAnswer": "She created a spreadsheet with placements, goals, and a confirmation deadline.",
+          "explanation": "Selin mitigated their concern with a spreadsheet — two placements, measurable goals, and a date to re-confirm her deferred place. Accountability in a document."
+        },
+        {
+          "order": 3,
+          "question": "What dilemma emerged in month four of Selin's gap year?",
+          "options": [
+            "She was struggling with both placements and considering quitting.",
+            "She was talented at both the lab work and rescue coordination, but they pointed in opposite directions.",
+            "Dr Osei had offered her a full-time position that conflicted with her university offer.",
+            "She had to choose between extending her gap year or returning home."
+          ],
+          "correctAnswer": "She was talented at both the lab work and rescue coordination, but they pointed in opposite directions.",
+          "explanation": "Selin was good at both skills, but they pointed toward different futures — a scientific research path and an operational/outdoor path. She couldn't fully pursue both."
+        },
+        {
+          "order": 4,
+          "question": "What does Birte mean when she says 'the ones you assume you can take back — those are the ones that matter'?",
+          "options": [
+            "You should always avoid making permanent decisions in your career.",
+            "The choices that seem small and reversible are often the ones with the deepest consequences.",
+            "She regrets some of the decisions she made in her own career.",
+            "It is always possible to reverse a decision if you act quickly enough."
+          ],
+          "correctAnswer": "The choices that seem small and reversible are often the ones with the deepest consequences.",
+          "explanation": "Birte is inverting the expected wisdom: the decisions people think they can undo are often the ones they fail to take seriously — and those carry the most weight."
+        },
+        {
+          "order": 5,
+          "question": "What 'different kind of foundation' did Selin gain from the gap year, compared to going directly to university?",
+          "options": [
+            "Technical skills in laboratory analysis and equipment maintenance.",
+            "The confidence and experience of functioning well in unfamiliar situations.",
+            "A formal qualification in mountain rescue coordination.",
+            "A clear decision about which career path she intended to follow."
+          ],
+          "correctAnswer": "The confidence and experience of functioning well in unfamiliar situations.",
+          "explanation": "Selin reflects on knowing she can be 'dropped into unfamiliar work, in an unfamiliar place, with unfamiliar people, and find a way to function' — a foundation in adaptability, not subject knowledge."
+        },
+        {
+          "order": 6,
+          "question": "Which mixed conditional sentence correctly links a present state to a past outcome?",
+          "options": [
+            "If she had been braver, she would take the placement now.",
+            "If she were less stubborn, she might have asked Dr Osei earlier.",
+            "If she had applied, she would have got the placement.",
+            "If she studies hard, she will pass her first-year exams."
+          ],
+          "correctAnswer": "If she were less stubborn, she might have asked Dr Osei earlier.",
+          "explanation": "Present state (being stubborn) → past result (might have asked earlier). Structure: if + past simple, would have + pp. Option C is a third conditional (pure past). Option A is second conditional. Option D is first conditional."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "title": "Built by Many Hands",
+      "vocabulary": [
+        {
+          "word": "algorithm",
+          "definition": "a set of step-by-step rules or instructions that a computer follows to solve a problem or complete a task",
+          "exampleSentence": "The algorithm used to prioritise emergency calls had been developed over three years and was still being refined.",
+          "emoji": "💻"
+        },
+        {
+          "word": "prototype",
+          "definition": "an early version of a product that is built and tested before the final version is produced",
+          "exampleSentence": "The first prototype had been assembled by two engineers in a basement and looked nothing like the finished device.",
+          "emoji": "🔧"
+        },
+        {
+          "word": "automation",
+          "definition": "the use of machines or computer systems to do work that people used to do",
+          "exampleSentence": "Automation had replaced three of the manual sorting stations in the lab, but it had also created two new specialist roles.",
+          "emoji": "🤖"
+        },
+        {
+          "word": "scalable",
+          "definition": "able to be expanded or adapted to meet growing demand or requirements",
+          "exampleSentence": "The rescue coordination system needed to be scalable — what worked for one valley had to be deployable across an entire region.",
+          "emoji": "📈"
+        },
+        {
+          "word": "interface",
+          "definition": "a point of interaction between a system and a user, or between two different systems",
+          "exampleSentence": "The interface had been redesigned four times because operators under stress could not afford to waste seconds navigating menus.",
+          "emoji": "🖥️"
+        },
+        {
+          "word": "obsolete",
+          "definition": "no longer used or needed, usually because something newer has replaced it",
+          "exampleSentence": "The paper log system had been made obsolete by the new database, but Birte still kept a paper copy, just in case.",
+          "emoji": "📦"
+        },
+        {
+          "word": "integrate",
+          "definition": "to combine two or more things so that they work together as part of a whole system",
+          "exampleSentence": "The challenge was to integrate the lab's sensor data with the rescue team's mapping software without losing accuracy.",
+          "emoji": "🔗"
+        },
+        {
+          "word": "disruptive",
+          "definition": "causing significant change to an existing system, industry, or way of doing things",
+          "exampleSentence": "The technology had been disruptive in the industry — not because it was radical, but because it was relentlessly practical.",
+          "emoji": "⚡"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Passive Voice – All Tenses",
+        "explanation": "The passive voice (be + past participle) is used when the action is more important than who did it, when the agent is unknown or obvious, or in formal and technical writing. It can be formed in any tense: Simple present: 'is tested'; Simple past: 'was built'; Present continuous: 'is being developed'; Past continuous: 'was being repaired'; Present perfect: 'has been installed'; Past perfect: 'had been designed'; Future: 'will be released'; Modal: 'can be scaled', 'must be validated'. Passive with reporting verbs: 'It is believed that...', 'It has been reported that...', 'It is expected that...'",
+        "examples": [
+          "The prototype was built by two engineers working from a converted basement. (simple past passive — completed action)",
+          "The algorithm is being tested across five different emergency response scenarios. (present continuous passive — ongoing process)",
+          "It has been estimated that the system will reduce response times by forty percent. (present perfect passive reporting verb)",
+          "The interface had been redesigned four times before it was considered ready. (past perfect passive — completed before another past event)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "The device on the table looked like nothing. It was a grey rectangle, approximately the size of a hardback book, with two small ports on one side and a single amber light. It had been designed, Selin was told, by a team of eleven engineers over a period of four years. The first prototype had been built by two of them in a space that was described as a 'converted basement' and was almost certainly a garden shed. The finished version was now being tested in six locations across the country. Response times were being tracked, failure rates were being logged, and the data was being fed back to the development team every forty-eight hours. 'It has been estimated that this will cut mountain rescue response times by thirty-eight percent,' said Kai, the engineer running the demonstration. 'It hasn't been released yet. But it will be.'"
+        },
+        {
+          "order": 2,
+          "text": "The device integrated sensor data from the surrounding terrain with the rescue team's GPS and communication systems, processing it through an algorithm that had been continuously refined over three years. Selin found the refinement process more interesting than the device itself. 'How is it being updated?' she asked. Kai said: 'Every time it's deployed in a real scenario, the outcome is logged and reviewed. If an error was made by the system — not by the operator — the algorithm is adjusted. It can't be changed in the field, but it can be patched overnight and redeployed by morning.' The interface had been redesigned four times. Kai acknowledged this without defensiveness: the first three versions had been built for engineers, not for people whose hands might be cold and whose attention might be divided between a screen and a hillside in the dark."
+        },
+        {
+          "order": 3,
+          "text": "Birte had looked at the device when it first arrived and said very little. The paper log system had been used in the valley for nineteen years. It had been made partially obsolete by the new database, though Birte still kept a hard copy updated by hand. 'Technology that can't be trusted in a power cut doesn't deserve to be trusted at all,' she said, and nobody argued. But she had allowed the device to be trialled, because she also understood that what couldn't be scaled couldn't protect a region, only a valley. A decision had been made, months before Selin arrived, that the old system would be retained in parallel until the new one had been tested thoroughly. Both would be run simultaneously. Nothing would be discarded until it was proven unnecessary."
+        },
+        {
+          "order": 4,
+          "text": "Selin was asked to write a short report on the integration process — what had worked, what had caused friction, what the rescue team had found disruptive versus useful. She took the task seriously. It was the kind of work she was good at: observational, analytical, requiring her to hold two perspectives simultaneously without collapsing them into one. The lab valued precision. The rescue team valued reliability under pressure. Both values were legitimate. The report was expected by the end of the month and would be used to inform the next phase of deployment. It had been made clear to her — politely but unmistakably — that vague conclusions would not be useful. Concrete observations were required."
+        },
+        {
+          "order": 5,
+          "text": "She submitted the report on a Thursday afternoon. It was twelve pages. The gap year, she reflected, would end in three weeks. The university place had been confirmed. A subject had been chosen. By the time she arrived, she would have been away from formal education for nearly eleven months, and she could not tell, with any certainty, whether that had made her more prepared or less. What she knew was that she had been changed by the year — not in the dramatic way the brochures described, where young people are found in distant countries and return as completely different people — but quietly, in the way that things change when they are used regularly and taken seriously. She took the completed report to Birte's office. The amber light on the device on the desk was still on, as it had been since the day the device arrived. It was impossible to say whether it meant everything was working or whether it was simply waiting to be asked."
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Which passive sentence describes an ongoing process happening at the time of the demonstration?",
+          "options": [
+            "The prototype had been built by two engineers.",
+            "The interface had been redesigned four times.",
+            "Response times are being tracked across six test locations.",
+            "The first version was designed for engineers, not operators."
+          ],
+          "correctAnswer": "Response times are being tracked across six test locations.",
+          "explanation": "'Are being tracked' is present continuous passive — it describes what is happening right now, during the testing phase. The others describe completed or historical events."
+        },
+        {
+          "order": 2,
+          "question": "Why had the interface been redesigned four times?",
+          "options": [
+            "The engineers kept changing the device's technical specifications.",
+            "Early versions were designed for engineers, not operators using it under pressure.",
+            "The manufacturing process kept introducing errors into the hardware.",
+            "Birte insisted on changes to make it compatible with the paper log system."
+          ],
+          "correctAnswer": "Early versions were designed for engineers, not operators using it under pressure.",
+          "explanation": "Kai acknowledges the redesigns without defensiveness: the first three versions were built for engineers, not for people in stressful field conditions with cold hands and divided attention."
+        },
+        {
+          "order": 3,
+          "question": "Why does Birte continue to maintain the paper log system even after the database was introduced?",
+          "options": [
+            "The new database has not been approved by the regional authority yet.",
+            "She does not trust technology that fails during power cuts.",
+            "The paper system is legally required for insurance purposes.",
+            "Selin recommended it in her preliminary integration report."
+          ],
+          "correctAnswer": "She does not trust technology that fails during power cuts.",
+          "explanation": "Birte's stated principle: 'Technology that can't be trusted in a power cut doesn't deserve to be trusted at all.' The paper system is a backup for when technology fails."
+        },
+        {
+          "order": 4,
+          "question": "What tense and voice is used in: 'The algorithm is being continuously refined'?",
+          "options": [
+            "Present perfect passive",
+            "Past continuous passive",
+            "Present continuous passive",
+            "Simple present passive"
+          ],
+          "correctAnswer": "Present continuous passive",
+          "explanation": "'Is being refined' is present continuous passive: am/is/are + being + past participle. It describes an ongoing process at the current time."
+        },
+        {
+          "order": 5,
+          "question": "What did Selin's report need to include, and why?",
+          "options": [
+            "Technical specifications for the device, to help the engineers patch the algorithm.",
+            "Concrete observations from both sides of the integration, to inform the next deployment phase.",
+            "A personal account of her gap year, to demonstrate what she had learned.",
+            "A comparison of the device with similar technology used in other countries."
+          ],
+          "correctAnswer": "Concrete observations from both sides of the integration, to inform the next deployment phase.",
+          "explanation": "The report was expected to hold two perspectives — the lab's precision and the rescue team's field reliability — and would be used to inform the next deployment phase. Vague conclusions were explicitly not acceptable."
+        },
+        {
+          "order": 6,
+          "question": "What does the final image of the amber light suggest?",
+          "options": [
+            "The device has malfunctioned and Selin should report it before leaving.",
+            "Birte is unhappy with the report and wants to discuss it with Selin.",
+            "The technology is quietly present and active — ready, but still somewhat ambiguous in its meaning.",
+            "The gap year has ended and Selin must now switch off the system for the last time."
+          ],
+          "correctAnswer": "The technology is quietly present and active — ready, but still somewhat ambiguous in its meaning.",
+          "explanation": "Selin reflects that it is impossible to say whether the amber light means everything is working or whether it is simply 'waiting to be asked.' The image mirrors her own state — changed, prepared, but not yet certain of what comes next."
+        },
+        {
+          "order": 7,
+          "question": "Which sentence is an example of a passive with a reporting verb?",
+          "options": [
+            "The device was built in a converted basement.",
+            "It has been estimated that the system will cut response times by thirty-eight percent.",
+            "The interface has been redesigned to suit field conditions.",
+            "The algorithm was refined after every deployment."
+          ],
+          "correctAnswer": "It has been estimated that the system will cut response times by thirty-eight percent.",
+          "explanation": "'It has been estimated that...' is a classic passive reporting verb structure. It presents a claim without specifying who made it — common in formal and technical writing."
+        }
+      ]
+    }
+  ]
+}

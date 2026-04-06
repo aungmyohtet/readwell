@@ -1,0 +1,250 @@
+{
+  "story": {
+    "title": "The New School",
+    "description": "Emma moves to a new town and starts at a new school. Follow her journey as she finds the courage to make new friends and face new challenges.",
+    "level": "A2",
+    "coverEmoji": "🏫",
+    "author": "ReadWell",
+    "tags": [
+      "school",
+      "friendship",
+      "emotions"
+    ]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "The First Day",
+      "vocabulary": [
+        {
+          "word": "nervous",
+          "definition": "feeling worried or anxious about something that is going to happen",
+          "exampleSentence": "Emma felt nervous because she did not know anyone at her new school.",
+          "emoji": "😟"
+        },
+        {
+          "word": "hallway",
+          "definition": "a long passage inside a building that connects different rooms",
+          "exampleSentence": "The hallway was very busy with students walking to their classes.",
+          "emoji": "🚶"
+        },
+        {
+          "word": "introduce",
+          "definition": "to tell people your name or someone else's name for the first time",
+          "exampleSentence": "The teacher asked Emma to introduce herself to the class.",
+          "emoji": "👋"
+        },
+        {
+          "word": "locker",
+          "definition": "a small metal cupboard with a lock, used to store personal items at school",
+          "exampleSentence": "Emma put her bag inside her locker and locked it carefully.",
+          "emoji": "🔒"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Simple Past – Regular Verbs",
+        "explanation": "We use the simple past tense to talk about actions that started and finished in the past. For regular verbs, we add -ed to the verb. Some verbs are irregular and change their form completely.",
+        "examples": [
+          "Emma walked into the classroom and looked around carefully.",
+          "She felt nervous, so she sat down at the back of the room.",
+          "The teacher smiled at her and asked her to introduce herself.",
+          "Sophie invited Emma to sit with her at lunch."
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Emma woke up early on Monday morning. Her stomach felt strange, like it had butterflies inside. Today was her first day at Riverside Middle School. She moved to this town only two weeks ago, and she did not know anyone. She dressed slowly, ate her breakfast without speaking, and stared out of the window at the grey sky. Her mother noticed. \"You're going to be fine,\" she said softly. Emma nodded, but she did not believe it.",
+          "imagePlaceholder": "🌅"
+        },
+        {
+          "order": 2,
+          "text": "Her mother drove her to school and stopped at the gate. Emma picked up her bag — new pencils, new notebooks, a small eraser her grandmother gave her. She opened the car door, then stopped. \"What if nobody talks to me?\" she asked quietly. Her mother squeezed her hand. \"Then you talk to someone first. You've done harder things than this.\" Emma got out of the car and walked through the gate.",
+          "imagePlaceholder": "🎒"
+        },
+        {
+          "order": 3,
+          "text": "The hallway was loud and crowded. Students laughed, shouted to each other, and slammed their lockers shut. Emma found her own locker — number 47 — and tried to open it. The lock was stiff. She pulled and turned it three times before it finally opened. She put her jacket inside, took out her timetable, and looked at the paper. Room 12. She walked down the hallway slowly, trying not to bump into anyone.",
+          "imagePlaceholder": "🏫"
+        },
+        {
+          "order": 4,
+          "text": "Room 12 was at the end of the corridor. A woman with short hair and bright eyes stood at the door. She looked at Emma and smiled warmly. \"You must be Emma,\" she said. \"I'm Ms Clarke. Come in — I'd like you to introduce yourself to the class.\" Emma walked to the front of the room. Twenty-four pairs of eyes looked at her. Her face felt hot. \"Hi,\" she said, almost in a whisper. \"I'm Emma. I came from Bristol.\" She sat down quickly at the nearest empty chair.",
+          "imagePlaceholder": "👩‍🏫"
+        },
+        {
+          "order": 5,
+          "text": "At lunch, Emma carried her tray to a long table and sat at the end, alone. She looked at her food and pretended to read a book. Then a girl appeared next to her. She had curly hair and a bright yellow pencil case. \"You're Emma from Bristol, right?\" the girl said cheerfully. \"I'm Sophie. I moved here last year. It was horrible at first, but it gets better. Can I sit here?\" Emma looked up and felt something loosen in her chest. \"Yes,\" she said. \"Please.\" By the end of the day, she did not feel nervous anymore.",
+          "imagePlaceholder": "😊"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Why did Emma feel nervous on Monday morning?",
+          "options": [
+            "She forgot to do her homework.",
+            "It was her first day at a new school and she did not know anyone.",
+            "She missed the school bus.",
+            "She did not like her new teacher."
+          ],
+          "correctAnswer": "It was her first day at a new school and she did not know anyone.",
+          "explanation": "In paragraph 1, the story says 'Today was her first day at Riverside Middle School' and 'she did not know anyone', which explains why Emma felt nervous."
+        },
+        {
+          "order": 2,
+          "question": "What problem did Emma have with her locker?",
+          "options": [
+            "She could not find locker number 47.",
+            "She put the wrong combination in.",
+            "The lock was stiff and she had to try three times to open it.",
+            "She forgot the key at home."
+          ],
+          "correctAnswer": "The lock was stiff and she had to try three times to open it.",
+          "explanation": "Paragraph 3 says 'The lock was stiff. She pulled and turned it three times before it finally opened.'"
+        },
+        {
+          "order": 3,
+          "question": "What did Sophie mean when she said 'It was horrible at first, but it gets better'?",
+          "options": [
+            "Sophie did not like Emma.",
+            "Starting at a new school is hard, but things improve over time.",
+            "The school food was very bad.",
+            "Ms Clarke was a difficult teacher."
+          ],
+          "correctAnswer": "Starting at a new school is hard, but things improve over time.",
+          "explanation": "Sophie moved to the school the year before. She is telling Emma from her own experience that the feeling of being new and lonely gets better. This is an inference — the text does not say this directly, but we understand it from the context."
+        },
+        {
+          "order": 4,
+          "question": "What does the word 'introduce' mean in paragraph 4?",
+          "options": [
+            "To say goodbye to someone",
+            "To sit down quietly in class",
+            "To tell people your name for the first time",
+            "To ask someone a question"
+          ],
+          "correctAnswer": "To tell people your name for the first time",
+          "explanation": "In paragraph 4, Ms Clarke asked Emma to 'introduce herself to the class', and then Emma stood up and told the class her name. This shows that 'introduce' means to tell people your name for the first time."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "title": "The Lost Homework",
+      "vocabulary": [
+        {
+          "word": "assignment",
+          "definition": "a piece of work that a teacher gives a student to complete",
+          "exampleSentence": "Emma worked on her science assignment for two hours on Sunday evening.",
+          "emoji": "📝"
+        },
+        {
+          "word": "search",
+          "definition": "to look carefully in many places to find something",
+          "exampleSentence": "She searched every pocket of her bag but could not find the paper.",
+          "emoji": "🔍"
+        },
+        {
+          "word": "apologize",
+          "definition": "to say sorry to someone because you did something wrong or made a mistake",
+          "exampleSentence": "Emma apologized to Ms Clarke for not having her homework.",
+          "emoji": "🙏"
+        },
+        {
+          "word": "responsible",
+          "definition": "being careful to do the things that you are supposed to do",
+          "exampleSentence": "Ms Clarke said that being responsible means always being prepared for class.",
+          "emoji": "⭐"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Past Continuous",
+        "explanation": "We use the past continuous to describe an action that was in progress at a specific moment in the past. The form is: was/were + verb-ing. We often use it with the simple past to show that one action interrupted another.",
+        "examples": [
+          "Emma was searching her bag when the teacher called her name.",
+          "Her mother was cooking dinner when Emma came home.",
+          "The other students were waiting quietly while Emma looked for her paper.",
+          "It was raining heavily when Emma walked to school that morning."
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "On Wednesday, Ms Clarke's class had a science assignment to hand in. Emma finished it on Sunday evening. She checked it twice, put it in a blue folder, and placed the folder on top of her school bag. She felt pleased. For the first time since she moved, she felt organised. She went to bed early and slept well.",
+          "imagePlaceholder": "📋"
+        },
+        {
+          "order": 2,
+          "text": "But the next morning, everything went wrong. Emma was rushing to get ready because her alarm did not ring. She grabbed her bag, ran downstairs, and her mother was waiting at the car already. Emma jumped in. She did not check the bag. She did not pick up the blue folder from the table.",
+          "imagePlaceholder": "⏰"
+        },
+        {
+          "order": 3,
+          "text": "In class, Ms Clarke said, \"Please hand in your assignments.\" Emma put her hand into her bag and searched through every pocket. Pencil case. Water bottle. Three erasers. But no blue folder. She searched again, more slowly this time. Her face went red. \"Emma?\" said Ms Clarke gently. \"Is everything okay?\" The other students were watching her. Emma stood up slowly. \"I finished it,\" she said. \"But I think I left it at home. I'm really sorry, Ms Clarke. I apologize.\"",
+          "imagePlaceholder": "😰"
+        },
+        {
+          "order": 4,
+          "text": "Ms Clarke looked at her calmly. \"Bring it tomorrow. But remember — being responsible doesn't only mean finishing your work. It also means making sure it arrives here.\" Emma sat down and stared at her desk. Sophie whispered from the next chair. \"It happened to me last term. Twice.\" Emma almost laughed. She did not feel quite so terrible after that.",
+          "imagePlaceholder": "👩‍🏫"
+        },
+        {
+          "order": 5,
+          "text": "That evening, Emma walked into the kitchen and saw the blue folder immediately. It was on the table, exactly where she left it. She picked it up, opened her bag, and put it carefully inside. She zipped the bag shut. Then she went back downstairs and put the bag right next to the front door. \"I'm not going to forget it again,\" she told herself. And she did not.",
+          "imagePlaceholder": "✅"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Why did Emma forget her assignment?",
+          "options": [
+            "She did not finish it in time.",
+            "She lost it on the way to school.",
+            "Her alarm did not ring, she rushed, and she left the folder on the table.",
+            "She gave it to Sophie by mistake."
+          ],
+          "correctAnswer": "Her alarm did not ring, she rushed, and she left the folder on the table.",
+          "explanation": "Paragraph 2 explains: 'her alarm did not ring', Emma was rushing, and she left without checking the bag. Paragraph 5 confirms the folder was still on the kitchen table."
+        },
+        {
+          "order": 2,
+          "question": "Which sentence best describes what Emma was doing when Ms Clarke called her name?",
+          "options": [
+            "She was writing in her notebook.",
+            "She was searching her bag for the assignment.",
+            "She was talking to Sophie.",
+            "She was standing at the front of the class."
+          ],
+          "correctAnswer": "She was searching her bag for the assignment.",
+          "explanation": "Paragraph 3 says Ms Clarke asked for assignments, and Emma 'searched through every pocket' of her bag. When Ms Clarke spoke to her, Emma was still looking."
+        },
+        {
+          "order": 3,
+          "question": "What did Ms Clarke mean by 'being responsible doesn't only mean finishing your work'?",
+          "options": [
+            "Students should do more than one assignment.",
+            "It is okay to forget homework sometimes.",
+            "Completing work is not enough — you also need to bring it to class.",
+            "Students should help each other with their homework."
+          ],
+          "correctAnswer": "Completing work is not enough — you also need to bring it to class.",
+          "explanation": "Ms Clarke said 'It also means making sure it arrives here.' She is telling Emma that responsible behaviour includes handing in work, not just doing it. This is an inference — the full meaning is in understanding what the teacher implies."
+        },
+        {
+          "order": 4,
+          "question": "What does the word 'apologize' mean as Emma uses it in paragraph 3?",
+          "options": [
+            "To explain what happened",
+            "To say sorry for making a mistake",
+            "To ask a question politely",
+            "To promise to do better"
+          ],
+          "correctAnswer": "To say sorry for making a mistake",
+          "explanation": "Emma said 'I'm really sorry, Ms Clarke. I apologize.' Both sentences express the same idea — that she is saying sorry. This shows that 'apologize' means to say sorry."
+        }
+      ]
+    }
+  ]
+}

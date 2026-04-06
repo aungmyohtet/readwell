@@ -1,0 +1,26 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: grammar-backend
+
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017}
+      database: ${MONGODB_DATABASE:grammar}
+      auto-index-creation: true
+
+  jackson:
+    default-property-inclusion: non_null
+    serialization:
+      write-dates-as-timestamps: false
+
+cors:
+  allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:4201,http://localhost:4202}
+
+logging:
+  level:
+    com.grammar: DEBUG
+    org.springframework.security: INFO
+    org.springframework.data.mongodb: INFO

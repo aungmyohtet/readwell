@@ -1,0 +1,314 @@
+{
+  "story": {
+    "title": "The Green Team",
+    "description": "Three students at Westbrook Secondary decide to start an environmental club after finding a local park buried under litter. What begins as picking up rubbish becomes something much larger — and much harder.",
+    "level": "B1",
+    "coverEmoji": "🌿",
+    "author": "ReadWell",
+    "tags": [
+      "environment",
+      "teamwork",
+      "school",
+      "community",
+      "activism"
+    ]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "If We Do Nothing",
+      "vocabulary": [
+        {
+          "word": "carbon footprint",
+          "definition": "the total amount of greenhouse gases — especially CO₂ — produced by a person, organization, or activity",
+          "exampleSentence": "Their teacher explained that even small changes in daily routine can reduce a household's carbon footprint significantly.",
+          "emoji": "👣"
+        },
+        {
+          "word": "sustainable",
+          "definition": "able to continue for a long time without damaging the environment or using up resources",
+          "exampleSentence": "The council promised to switch to sustainable energy sources within five years, but the students had heard that before.",
+          "emoji": "♻️"
+        },
+        {
+          "word": "pollution",
+          "definition": "harmful substances that have been introduced into the environment, making it dirty or dangerous",
+          "exampleSentence": "The pollution in the stream behind the park was visible — an oily film on the water, plastic caught among the reeds.",
+          "emoji": "🏭"
+        },
+        {
+          "word": "emissions",
+          "definition": "gases or particles released into the air, especially those produced by engines or factories",
+          "exampleSentence": "If the school replaced its old boilers, it would cut emissions by thirty percent — but the head teacher said there was no budget.",
+          "emoji": "💨"
+        },
+        {
+          "word": "conservation",
+          "definition": "the careful protection of the natural world and its resources",
+          "exampleSentence": "The local conservation group had been asking the council to protect the woodland for six years without success.",
+          "emoji": "🌳"
+        },
+        {
+          "word": "renewable",
+          "definition": "referring to energy sources that are naturally replaced and will not run out, such as wind or solar power",
+          "exampleSentence": "Rosa had read that the school could run entirely on renewable energy if solar panels were installed on the main building's roof.",
+          "emoji": "☀️"
+        },
+        {
+          "word": "biodiversity",
+          "definition": "the variety of plant and animal life in a particular place or on Earth as a whole",
+          "exampleSentence": "The litter in the park was destroying biodiversity — fewer insects meant fewer birds, and the balance was shifting.",
+          "emoji": "🦋"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "First Conditional",
+        "explanation": "Use the first conditional to talk about real or likely future situations and their probable results. Structure: 'If + present simple, will + verb.' The 'if' clause describes the condition; the main clause describes the result. You can also use 'unless' (= if not), 'as long as', or 'provided that' instead of 'if'. When you are certain something will happen, use 'when' instead of 'if'.",
+        "examples": [
+          "If the council doesn't act, the stream will be completely polluted by next year. (likely future result of inaction)",
+          "Unless we do something, this park will disappear. (unless = if we don't do something)",
+          "As long as we keep collecting data, the petition will look credible. (condition for a positive result)",
+          "When the weather improves, we'll hold the clean-up day. (certain future event — we know spring will come)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "It started with a dog lead. Priya was walking her neighbour's terrier through Eastgate Park on a Tuesday afternoon when the dog stopped at the edge of the pond and refused to move. Priya looked down. The ground around the water was covered: crisp packets, broken glass, the crushed remains of a plastic bottle, a tangle of fishing wire wrapped around a fallen branch. The dog sat down and looked up at her as if to say: well?"
+        },
+        {
+          "order": 2,
+          "text": "Priya took seven photographs and sent them to the school's messaging group without a caption. Within an hour, Rosa had replied: 'If we show this to Ms Okafor, she'll help us do something.' Tariq replied three minutes later: 'If we don't do something, who will?' That was all it took. By the following morning the three of them were sitting in the geography teacher's office with the photographs printed out on a single sheet."
+        },
+        {
+          "order": 3,
+          "text": "Ms Okafor listened carefully. She was the kind of teacher who let you finish your sentences. 'If you start a club,' she said, when they had explained everything, 'I'll supervise it and help you apply for a small grant from the council. But only if you come with a proper plan, not just feelings.' She paused. 'Feelings are important. But as long as you also have data, people will listen.'"
+        },
+        {
+          "order": 4,
+          "text": "That week, the three of them split the work. Rosa researched the park's history and found that the pond had once supported fourteen species of bird and was now home to three — a sign of serious biodiversity loss. She calculated that the emissions from the nearby road, combined with litter, had reduced the area's carbon footprint as a green space by nearly half. The council had promised sustainable management and renewable planting three years ago, but none of it had happened. 'If we present this to the council meeting,' she told the others, 'they won't be able to ignore us.' Tariq mapped the pollution zone across six sections. Priya wrote the draft proposal and was told, twice, that she was being too polite."
+        },
+        {
+          "order": 5,
+          "text": "The proposal was submitted on Friday. Ms Okafor said it was the best she had seen from students. She did not say that often. 'Unless the council rejects it completely — which I don't think they will — you'll get a response within three weeks,' she said. 'And if they do reject it, we'll revise and resubmit. Conservation work doesn't stop when one door closes.' Outside, Priya looked at the park through the staffroom window. The pond was still grey. The litter was still there. But something had shifted. If they kept going, things would change. She was almost sure of it."
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "What made Priya first notice the problem at the park?",
+          "options": [
+            "She was on a school trip when the teacher pointed out the litter.",
+            "She read an article about pollution in the local newspaper.",
+            "Her neighbour's dog stopped at the edge of the polluted pond.",
+            "Rosa sent her photographs of the park from a conservation report."
+          ],
+          "correctAnswer": "Her neighbour's dog stopped at the edge of the polluted pond.",
+          "explanation": "The dog stopped at the edge of the pond and refused to move. Priya looked down and saw all the litter around the water."
+        },
+        {
+          "order": 2,
+          "question": "What condition did Ms Okafor set before agreeing to supervise the club?",
+          "options": [
+            "The students had to get permission from the head teacher first.",
+            "They had to come back with a proper plan that included data.",
+            "They needed at least ten students to sign up as members.",
+            "They had to clean up the park before submitting any proposal."
+          ],
+          "correctAnswer": "They had to come back with a proper plan that included data.",
+          "explanation": "Ms Okafor said she would supervise 'only if you come with a proper plan, not just feelings' and emphasised the need for data."
+        },
+        {
+          "order": 3,
+          "question": "Which sentence is an example of the first conditional?",
+          "options": [
+            "If she had known about the park, she would have started the club sooner.",
+            "If the council doesn't act, the stream will be completely polluted.",
+            "If only the council would listen to young people more often.",
+            "If the dog hadn't stopped, Priya wouldn't have noticed the litter."
+          ],
+          "correctAnswer": "If the council doesn't act, the stream will be completely polluted.",
+          "explanation": "First conditional: if + present simple, will + verb. This sentence describes a likely future result of real inaction. The others are second or third conditional forms."
+        },
+        {
+          "order": 4,
+          "question": "What did Rosa's research reveal about the pond?",
+          "options": [
+            "It had been cleaned up once before but the litter returned quickly.",
+            "It used to support fourteen bird species but now only supports three.",
+            "The council had already approved a biodiversity project for the area.",
+            "Pollution from the park was flowing into the local water supply."
+          ],
+          "correctAnswer": "It used to support fourteen bird species but now only supports three.",
+          "explanation": "Rosa found that the pond once supported fourteen species of bird and was now home to only three — a dramatic decline."
+        },
+        {
+          "order": 5,
+          "question": "What does the phrase 'conservation work doesn't stop when one door closes' mean?",
+          "options": [
+            "Environmental projects must always be done indoors.",
+            "You should not give up if one attempt fails — try again.",
+            "The door to the council building is always locked.",
+            "Ms Okafor is too busy to help with a second proposal."
+          ],
+          "correctAnswer": "You should not give up if one attempt fails — try again.",
+          "explanation": "Ms Okafor is using a metaphor: if the council rejects the proposal (one door closes), they should revise and resubmit (try another door)."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "title": "A Different World",
+      "vocabulary": [
+        {
+          "word": "aspire",
+          "definition": "to have a strong desire to achieve or become something",
+          "exampleSentence": "Rosa aspired to become an environmental lawyer, but she had told almost no one because it sounded impossible.",
+          "emoji": "🎯"
+        },
+        {
+          "word": "determination",
+          "definition": "a firm decision to do something, no matter how difficult it becomes",
+          "exampleSentence": "The council official looked surprised by Tariq's determination — he answered every question without flinching.",
+          "emoji": "🔥"
+        },
+        {
+          "word": "obstacle",
+          "definition": "something that makes it difficult to move forward or achieve a goal",
+          "exampleSentence": "The biggest obstacle was not the litter itself but the attitude that nothing could really change.",
+          "emoji": "🚧"
+        },
+        {
+          "word": "sacrifice",
+          "definition": "giving up something you value for the sake of something more important",
+          "exampleSentence": "They sacrificed their lunch breaks for three weeks running to prepare the presentation, and none of them complained.",
+          "emoji": "🙏"
+        },
+        {
+          "word": "vision",
+          "definition": "a clear idea or picture of what you want the future to look like",
+          "exampleSentence": "Priya's vision for the park included native wildflower meadows, bat boxes, and a path with no single-use plastic anywhere along it.",
+          "emoji": "🔭"
+        },
+        {
+          "word": "realistic",
+          "definition": "based on what is actually possible, rather than what you might wish for",
+          "exampleSentence": "Ms Okafor told them the wildflower plan was lovely but they needed to be realistic about what one school group could achieve in a single term.",
+          "emoji": "⚖️"
+        },
+        {
+          "word": "potential",
+          "definition": "the qualities or abilities that could develop into something good in the future",
+          "exampleSentence": "The park had enormous potential — it was large, central, and had not been built on. It just needed attention.",
+          "emoji": "✨"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Second Conditional",
+        "explanation": "Use the second conditional to talk about imaginary or unlikely situations in the present or future, and their hypothetical results. Structure: 'If + past simple, would + verb.' The situation is not real — it is a wish, dream, or hypothetical. Use 'were' instead of 'was' in formal English: 'If I were you...' You can also use 'could' or 'might' instead of 'would' to express less certainty. Compare with first conditional: 'If it rains, I'll stay in' (real/likely) vs 'If it rained every day, I'd move' (imaginary/unlikely).",
+        "examples": [
+          "If every student at our school picked up one piece of litter a day, the park would be clean within a month. (imaginary — not what is happening)",
+          "If I were the council leader, I would close all roads around the park to traffic. (imaginary present)",
+          "Tariq said: 'If we had more funding, we could plant wildflowers across the whole park.' (hypothetical condition → hypothetical result)",
+          "If people really understood the damage, they might stop dropping litter altogether. (might = less certain result)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "The council meeting was held in a room that smelled of carpet and old decisions. Priya, Rosa, and Tariq sat in a row at the back, dressed in the smartest things they owned. They had sacrificed their lunch breaks for three weeks to prepare the slides. Tariq had printed two extra copies of the data in case the projector failed. The councillors filed in, looking tired, and one of them — a short man with reading glasses pushed up on his forehead — looked at the three teenagers and said, in a tone that was not unkind but not encouraging either: 'Are you certain you're in the right room?'"
+        },
+        {
+          "order": 2,
+          "text": "Rosa stood up and answered him. She was the one who could do this — stay calm, speak clearly, not be put off by a look. She had aspired to be a lawyer since she was eleven, and this felt like a rehearsal. 'If every school in the borough adopted one green space,' she began, 'the biodiversity loss across the district would stop within a generation. We're asking for permission to start with Eastgate Park.' The councillors exchanged glances. The short man took his glasses down from his forehead and put them on."
+        },
+        {
+          "order": 3,
+          "text": "The grant was approved for one term. It was smaller than they had hoped. But Ms Okafor had told them to be realistic, and a realistic start was still a start. 'If we had more funding,' Tariq said on the walk home, 'we could plant wildflowers across the whole eastern section.' 'We can apply again in spring,' said Priya. 'If we showed results this term, we'd have a much stronger case.' Rosa was already writing notes on her phone."
+        },
+        {
+          "order": 4,
+          "text": "The clean-up day was held the following Saturday. Forty-three students came. If they had asked for volunteers without the petition, maybe five would have shown up — but the petition had made the project visible, and visible things attract people. By noon, seven bin bags were filled. A small group of Year 7 students, who had not been asked, appeared at the pond edge with gloves they had brought from home. Tariq looked at them and turned to Priya: 'If I were a teacher, I would give all of them full marks in geography right now.'"
+        },
+        {
+          "order": 5,
+          "text": "By the end of the day, the pond was clear. A moorhen that nobody had seen in two years came back to the bank and sat there, looking unimpressed but present. Priya took a photograph. The park was not transformed. There was still broken glass in the corner by the fence, and the stream behind the trees was still running that particular shade of brown. But the potential was visible now — really visible, not just imagined. Priya's vision for the place had always been simple: a space where something lived and grew and was looked after. If they kept the determination going, this place could be that. The question was not whether it was possible. The question was whether enough people would decide it was worth the obstacle of trying."
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Why did the councillor ask if they were in the right room?",
+          "options": [
+            "They had entered through the wrong entrance of the building.",
+            "He was surprised to see teenagers at a formal council meeting.",
+            "The meeting had been moved to a different room at the last minute.",
+            "He could not see them clearly without his reading glasses."
+          ],
+          "correctAnswer": "He was surprised to see teenagers at a formal council meeting.",
+          "explanation": "The question was condescending — he didn't expect school students to present at an official council meeting. It was a way of showing mild disbelief."
+        },
+        {
+          "order": 2,
+          "question": "Which sentence uses the second conditional correctly?",
+          "options": [
+            "If every school adopts a green space, biodiversity will improve.",
+            "If every school adopted a green space, biodiversity would improve.",
+            "If every school adopted a green space, biodiversity will improve.",
+            "If every school had adopted a green space, biodiversity would have improved."
+          ],
+          "correctAnswer": "If every school adopted a green space, biodiversity would improve.",
+          "explanation": "Second conditional: if + past simple, would + verb. Option A is first conditional (real/likely). Option C mixes tenses incorrectly. Option D is third conditional."
+        },
+        {
+          "order": 3,
+          "question": "Why did forty-three students volunteer on clean-up day?",
+          "options": [
+            "Ms Okafor made attendance compulsory for all geography students.",
+            "The council offered a small cash reward for each bin bag filled.",
+            "The petition had made the project visible and attracted supporters.",
+            "Priya, Rosa, and Tariq personally contacted every student in the school."
+          ],
+          "correctAnswer": "The petition had made the project visible and attracted supporters.",
+          "explanation": "Priya observes that the petition made the project visible, and 'visible things attract people.' Without it, maybe five people would have come."
+        },
+        {
+          "order": 4,
+          "question": "What does Tariq mean when he says he'd give the Year 7 students 'full marks in geography'?",
+          "options": [
+            "He thinks the younger students are smarter than their own year group.",
+            "He is making a humorous point that their practical action shows real understanding.",
+            "He plans to tell their geography teacher about their work.",
+            "He wishes the school gave grades for environmental activities."
+          ],
+          "correctAnswer": "He is making a humorous point that their practical action shows real understanding.",
+          "explanation": "Tariq is making an affectionate joke — those students brought their own gloves and came without being asked, which is exactly what geography teaches: responsible action."
+        },
+        {
+          "order": 5,
+          "question": "What does the phrase 'visible things attract people' tell us about the campaign?",
+          "options": [
+            "The students used bright colours on their posters to get attention.",
+            "Making the problem publicly known encouraged others to get involved.",
+            "The pond was cleaned so that people walking by could see the water.",
+            "The council only agreed to help because the park was visible from their office."
+          ],
+          "correctAnswer": "Making the problem publicly known encouraged others to get involved.",
+          "explanation": "Priya is reflecting on why so many students came: because the petition gave the problem a public presence. Causes that are seen attract supporters."
+        },
+        {
+          "order": 6,
+          "question": "What is suggested by the moorhen returning to the pond?",
+          "options": [
+            "The students had secretly installed a bird feeder near the water.",
+            "The council's clean-up team had already visited before Saturday.",
+            "Even small changes in the environment can begin to attract wildlife back.",
+            "Moorhens are not actually rare and return to ponds every autumn."
+          ],
+          "correctAnswer": "Even small changes in the environment can begin to attract wildlife back.",
+          "explanation": "The moorhen hadn't been seen in two years. Its return after just one clean-up day suggests that restoring an environment — even partially — can have real, immediate effects."
+        }
+      ]
+    }
+  ]
+}

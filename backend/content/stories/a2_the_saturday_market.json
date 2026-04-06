@@ -1,0 +1,258 @@
+{
+  "story": {
+    "title": "The Saturday Market",
+    "description": "Zoe is twelve and thinks Saturday mornings are for sleeping. Her grandfather thinks otherwise. Together, they explore the weekly market — and Zoe discovers that knowing how to choose, compare, and care for things is a kind of knowledge worth having.",
+    "level": "A2",
+    "coverEmoji": "🛒",
+    "author": "ReadWell",
+    "tags": ["family", "food", "shopping", "health"]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "The Best Stall",
+      "vocabulary": [
+        {
+          "word": "stall",
+          "definition": "a small open shop or table in a market where things are sold",
+          "exampleSentence": "Grandpa Joe walked past the first three stalls because the prices were too high.",
+          "emoji": "🏪"
+        },
+        {
+          "word": "compare",
+          "definition": "to look at two or more things together to find the differences or similarities",
+          "exampleSentence": "Zoe compared the two apples carefully before choosing the darker one.",
+          "emoji": "⚖️"
+        },
+        {
+          "word": "ingredient",
+          "definition": "one of the foods or substances used to make a dish or recipe",
+          "exampleSentence": "Grandpa Joe checked every ingredient before putting it in his shopping bag.",
+          "emoji": "🧅"
+        },
+        {
+          "word": "flavour",
+          "definition": "the taste that a food or drink has",
+          "exampleSentence": "Grandpa Joe said the dark bread had the best flavour in the whole market.",
+          "emoji": "😋"
+        },
+        {
+          "word": "bargain",
+          "definition": "something that is good quality and also sold at a low price",
+          "exampleSentence": "Grandpa Joe found a bargain on tomatoes — three bags for the price of one.",
+          "emoji": "💰"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Comparatives and Superlatives",
+        "explanation": "We use comparatives to compare two things (bigger, more expensive, better). We use superlatives to say something is the top of a group (the biggest, the most expensive, the best). For short adjectives, add -er and -est. For longer adjectives, use more and most. Some adjectives are irregular: good → better → best; bad → worse → worst.",
+        "examples": [
+          "The darker apple smells stronger and richer than the light one.",
+          "The stalls near the entrance are more expensive than the ones in the middle.",
+          "This loaf has the best flavour in the whole market.",
+          "The walk home was longer than I expected, but the bags were lighter."
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Zoe did not want to go to the market on Saturday morning. She wanted to stay at home and watch television. But Grandpa Joe was already at the front door with his old brown shopping bag and his hat. \"Come on,\" he said. \"I need someone to carry things. You're stronger than me.\" Zoe looked at him. He was not smaller than her. He was not weaker than her. But she liked him too much to say so. She put on her coat and followed him out.",
+          "imagePlaceholder": "🌅"
+        },
+        {
+          "order": 2,
+          "text": "The market was bigger than Zoe expected. It filled three streets. There were at least forty stalls selling fruit, vegetables, bread, cheese, fish, flowers, and things she could not name. Grandpa Joe walked straight past the first four stalls without stopping. \"Those are the most expensive,\" he said. \"The better the location, the higher the price. You want to walk further in — the best bargains are never at the entrance.\" Zoe followed him. The market was louder and busier further in, but the prices on the signs were smaller.",
+          "imagePlaceholder": "🛒"
+        },
+        {
+          "order": 3,
+          "text": "At a stall near the middle, there were apples in four different colours. Grandpa Joe picked one up, smelled it, and put it back. Then he picked up a smaller, darker one. \"This one's sweeter,\" he said. \"And cheaper.\" He gave it to Zoe. She didn't know you could smell the difference between apples. This one smelled richer and stronger than the light one. \"Can I compare them?\" she asked. He handed her both. She held them side by side. The darker one was clearly better. She chose it.",
+          "imagePlaceholder": "🍎"
+        },
+        {
+          "order": 4,
+          "text": "They moved from stall to stall. Grandpa Joe knew most of the sellers by name. He compared prices, checked ingredients, looked at colours, smelled things. At the bread stall, he found a bargain on tomatoes — three bags for the price of one — and then bought a small dark loaf. \"Best flavour in the market,\" he told the seller. The seller nodded, as if this was simply a fact and not a compliment. \"How do you know which stall is better?\" Zoe asked. Grandpa Joe thought about this. \"Forty years,\" he said.",
+          "imagePlaceholder": "🍞"
+        },
+        {
+          "order": 5,
+          "text": "They walked home with two full bags, one heavier than the other. Zoe carried the heavier one. \"That took longer than I thought,\" she said. \"Was it more boring than staying at home?\" Grandpa Joe asked. Zoe thought about the apple, the bread, the sellers who nodded at Grandpa Joe like old colleagues. \"No,\" she said honestly. \"It was actually the most interesting Saturday I've had in a while.\" Grandpa Joe smiled. It was a smaller smile than usual, but it was the best kind — the kind that meant he was really pleased.",
+          "imagePlaceholder": "🏡"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Why does Grandpa Joe walk past the first four stalls without stopping?",
+          "options": [
+            "He doesn't like the sellers at those stalls.",
+            "The stalls near the entrance are the most expensive.",
+            "The fruit at those stalls is lower quality than the others.",
+            "He already bought things there last week."
+          ],
+          "correctAnswer": "The stalls near the entrance are the most expensive.",
+          "explanation": "Paragraph 2 says: 'Those are the most expensive. The better the location, the higher the price.' Grandpa Joe knows that stalls in the best position charge more, so he goes further in."
+        },
+        {
+          "order": 2,
+          "question": "Which sentence uses a comparative or superlative correctly?",
+          "options": [
+            "The dark apple smells more stronger than the light one.",
+            "This bread is the most best in the market.",
+            "The stalls in the middle are cheaper than the ones at the entrance.",
+            "Grandpa Joe is more older than Zoe."
+          ],
+          "correctAnswer": "The stalls in the middle are cheaper than the ones at the entrance.",
+          "explanation": "'Cheaper' is the correct comparative form of 'cheap'. The other options have errors: 'more stronger' and 'most best' are double comparatives (wrong), and 'more older' should be just 'older'. Only 'cheaper than' is correct."
+        },
+        {
+          "order": 3,
+          "question": "What does 'compare' mean in paragraph 3?",
+          "options": [
+            "To buy two things at the same time",
+            "To smell food before buying it",
+            "To look at two things together to find differences",
+            "To ask the seller for a lower price"
+          ],
+          "correctAnswer": "To look at two things together to find differences",
+          "explanation": "In paragraph 3, Zoe asks 'Can I compare them?' and then Grandpa Joe gives her both apples. She 'held them side by side' and noticed the difference. This shows that comparing means looking at two things together."
+        },
+        {
+          "order": 4,
+          "question": "At the end, Zoe says it was 'the most interesting Saturday she'd had in a while.' What does this tell us about her opinion of the market?",
+          "options": [
+            "She found it interesting but also very tiring.",
+            "She changed her mind and now enjoys going to the market.",
+            "She is being polite but still thinks it was boring.",
+            "She wants to become a market seller one day."
+          ],
+          "correctAnswer": "She changed her mind and now enjoys going to the market.",
+          "explanation": "At the start, Zoe did not want to go. She said 'I didn't want to come.' By the end, she uses the superlative 'most interesting' — saying it was better than other recent Saturdays. This shows a genuine change of opinion, not politeness."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "title": "The Cook's Advice",
+      "vocabulary": [
+        {
+          "word": "symptom",
+          "definition": "a sign of an illness or health problem, such as a pain, fever, or tiredness",
+          "exampleSentence": "Grandpa Joe described his symptoms: an ache in his back and no energy.",
+          "emoji": "🤒"
+        },
+        {
+          "word": "recover",
+          "definition": "to get better after an illness or injury",
+          "exampleSentence": "By Monday, Grandpa Joe was beginning to recover after resting and drinking water.",
+          "emoji": "💪"
+        },
+        {
+          "word": "diet",
+          "definition": "the food and drinks that a person usually eats",
+          "exampleSentence": "Zoe had been reading about healthy diet and wanted to share what she had learned.",
+          "emoji": "🥗"
+        },
+        {
+          "word": "energetic",
+          "definition": "having a lot of energy and being active",
+          "exampleSentence": "Grandpa Joe said he felt much more energetic after a good rest and some soup.",
+          "emoji": "⚡"
+        },
+        {
+          "word": "ache",
+          "definition": "a continuous, dull pain in part of your body",
+          "exampleSentence": "Grandpa Joe had an ache in his back and his legs that would not go away.",
+          "emoji": "😣"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Modal Verbs – can, could, should, must",
+        "explanation": "Modal verbs are used before the main verb to express ability (can/could), advice (should/shouldn't), or obligation and necessity (must/mustn't). They do not change form and are followed by the infinitive without 'to'. 'Could' is also used for past ability or polite possibility.",
+        "examples": [
+          "You should eat something, even if it's small. (advice)",
+          "You must drink water — it's very important. (strong necessity)",
+          "Can you eat soup? — I think I can. (ability: present)",
+          "When he was younger, he could walk for hours without stopping. (past ability)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "The following Sunday, Grandpa Joe called Zoe. He said he was not feeling well. His back had an ache, he had no energy, and he didn't want to eat. \"You should eat something,\" Zoe told him immediately. \"Even something small. And you must drink water.\" She heard him laugh softly. \"Since when do you know so much about health?\" he asked. \"Since last Saturday,\" she said. \"I've been reading about diet.\" She got on her bicycle before he could say anything else.",
+          "imagePlaceholder": "📞"
+        },
+        {
+          "order": 2,
+          "text": "Grandpa Joe was in his armchair when she arrived. He looked pale and tired. \"What are your symptoms?\" Zoe asked. She had read this question in a health article and liked the way it sounded. Grandpa Joe raised his eyebrows. \"I ache everywhere,\" he said. \"My back, my legs, my head. I could have a cold, or I could just be getting old. It's hard to tell the difference.\" \"Could you eat some soup?\" Zoe asked. He thought about this. \"I think I can,\" he said.",
+          "imagePlaceholder": "😷"
+        },
+        {
+          "order": 3,
+          "text": "Zoe made soup from the vegetables they had bought at the market. She added the dark bread, cut into small pieces. While it cooked, she sat at the kitchen table and talked. \"You should eat more of those dark apples,\" she told him. \"They're better for you.\" Grandpa Joe looked at her over his reading glasses. \"Could you possibly know that for certain?\" he asked. \"I read it,\" Zoe said firmly. \"You must eat more fruit. It's in the article, and the article has a doctor's name on it.\"",
+          "imagePlaceholder": "🍲"
+        },
+        {
+          "order": 4,
+          "text": "Grandpa Joe's friend Dr Nair came to visit in the afternoon. He was a retired doctor, but still gave advice freely. He looked at Grandpa Joe, listened to his chest, and nodded. \"He should rest,\" he told Zoe. \"He must drink plenty of water. He can have soup and soft food, but not too much salt.\" He looked at Zoe's notes on the kitchen table. \"Could you be a doctor yourself one day?\" he asked. Zoe considered this seriously. \"Maybe,\" she said. \"I should read more first.\"",
+          "imagePlaceholder": "👨‍⚕️"
+        },
+        {
+          "order": 5,
+          "text": "By Monday evening, Grandpa Joe was beginning to recover. He sent Zoe a short message: \"The soup helped. I feel more energetic today. You were right about the water. Can you come next Saturday? I think we should go to the market again.\" Zoe read this three times. She felt something she hadn't expected — a quiet kind of satisfaction. She had given advice, and the advice worked. She wrote back: \"Yes. I'll carry the bags.\" Then she went to find the health article. There was a section on diet and exercise she had not read yet.",
+          "imagePlaceholder": "📱"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "What advice does Zoe give Grandpa Joe when he calls on Sunday?",
+          "options": [
+            "She tells him to go to the hospital immediately.",
+            "She tells him he should eat something and must drink water.",
+            "She tells him to rest and not to eat anything.",
+            "She tells him to call Dr Nair."
+          ],
+          "correctAnswer": "She tells him he should eat something and must drink water.",
+          "explanation": "Paragraph 1 says Zoe told him 'You should eat something' and 'you must drink water.' These are two separate pieces of advice — one using 'should' (advice) and one using 'must' (strong necessity)."
+        },
+        {
+          "order": 2,
+          "question": "What does Grandpa Joe mean when he says 'I could have a cold, or I could just be getting old'?",
+          "options": [
+            "He is certain he has a cold.",
+            "He thinks he is too old to get better.",
+            "He is suggesting two possible explanations for his symptoms.",
+            "He is asking Zoe to help him get a diagnosis."
+          ],
+          "correctAnswer": "He is suggesting two possible explanations for his symptoms.",
+          "explanation": "'Could' in this context expresses possibility — not certainty. He is saying there are two possible reasons for how he feels: illness or age. He doesn't know which one it is."
+        },
+        {
+          "order": 3,
+          "question": "What does the word 'symptom' mean in the context of paragraph 2?",
+          "options": [
+            "A medicine you take when you are ill",
+            "A sign of an illness such as pain or tiredness",
+            "A question a doctor asks a patient",
+            "The name of a health condition"
+          ],
+          "correctAnswer": "A sign of an illness such as pain or tiredness",
+          "explanation": "In paragraph 2, Zoe asks 'What are your symptoms?' and Grandpa Joe answers by listing physical problems: his back aches, his legs ache, his head aches. These are the signs that something is wrong — which is what symptoms are."
+        },
+        {
+          "order": 4,
+          "question": "What shows that Zoe genuinely enjoyed helping Grandpa Joe, rather than just feeling she had to?",
+          "options": [
+            "She read an article about diet because her teacher told her to.",
+            "She felt 'a quiet kind of satisfaction' when her advice worked.",
+            "She agreed to go back to the market because she had nothing else to do.",
+            "She did not want to leave Grandpa Joe's house."
+          ],
+          "correctAnswer": "She felt 'a quiet kind of satisfaction' when her advice worked.",
+          "explanation": "Paragraph 5 says Zoe 'felt something she hadn't expected — a quiet kind of satisfaction.' This inner feeling shows that she genuinely cared about helping, and that seeing the advice work gave her real pleasure — not just duty."
+        }
+      ]
+    }
+  ]
+}

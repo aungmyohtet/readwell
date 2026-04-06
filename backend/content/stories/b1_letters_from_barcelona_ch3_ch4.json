@@ -1,0 +1,313 @@
+{
+  "story": {
+    "title": "Letters from Barcelona",
+    "description": "Nadia travels from her small hometown to Barcelona for a summer language programme. Through letters home, she discovers that distance changes more than just your address.",
+    "level": "B1",
+    "coverEmoji": "✉️",
+    "author": "ReadWell",
+    "tags": [
+      "travel",
+      "friendship",
+      "coming-of-age",
+      "city life"
+    ]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 3,
+      "title": "The Work Behind the Words",
+      "vocabulary": [
+        {
+          "word": "commit",
+          "definition": "to dedicate yourself fully to something, giving it your time and energy",
+          "exampleSentence": "She had committed herself to learning Spanish before the programme ended, and she was not going to give up.",
+          "emoji": "💪"
+        },
+        {
+          "word": "consistent",
+          "definition": "doing something the same way, regularly, without stopping",
+          "exampleSentence": "Being consistent — showing up to every class and every shift — was harder than she had expected.",
+          "emoji": "📅"
+        },
+        {
+          "word": "distraction",
+          "definition": "something that takes your attention away from what you should be focusing on",
+          "exampleSentence": "The noise from the street was a constant distraction when she tried to study at the café tables.",
+          "emoji": "🔔"
+        },
+        {
+          "word": "demanding",
+          "definition": "requiring a lot of effort, skill, or attention",
+          "exampleSentence": "The morning classes were demanding — four hours of grammar and speaking practice with almost no break.",
+          "emoji": "📚"
+        },
+        {
+          "word": "rewarding",
+          "definition": "giving you a satisfying feeling that your effort was worth it",
+          "exampleSentence": "By the third week, ordering coffee and making small talk felt genuinely rewarding rather than terrifying.",
+          "emoji": "🌟"
+        },
+        {
+          "word": "productive",
+          "definition": "achieving a lot of useful results in a given time",
+          "exampleSentence": "Her most productive hours were early morning, before the city woke up and the café filled with tourists.",
+          "emoji": "⚡"
+        },
+        {
+          "word": "deadline",
+          "definition": "a fixed time by which something must be finished",
+          "exampleSentence": "The writing portfolio had a strict deadline — twenty pages submitted by the last Friday of the programme.",
+          "emoji": "⏰"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Present Perfect Continuous",
+        "explanation": "Use the present perfect continuous (have/has been + verb-ing) to show that an action started in the past and is still happening now, or recently stopped. It focuses on the duration or the ongoing nature of the activity. Common time phrases: for, since, all day, lately, recently. Compare: 'I have read the book' (completed) vs 'I have been reading the book' (still reading, or just finished).",
+        "examples": [
+          "Nadia has been studying Spanish for three weeks and her vocabulary has grown enormously. (started weeks ago, still ongoing)",
+          "She has been working at Café Marta since Monday, serving tourists and practising her pronunciation. (ongoing since a point in the past)",
+          "Her hands have been aching from all the writing she has been doing in class. (recent, explains present state)",
+          "How long have you been living in Barcelona? — I've been here for two months. (asking about ongoing duration)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Dear Mum, I have been meaning to write this letter for four days now, but every evening I have been so tired that I fall asleep before I can pick up a pen. I am not complaining — the tiredness feels like proof that something real is happening here. I have been studying Spanish for three weeks and, slowly, it is starting to work."
+        },
+        {
+          "order": 2,
+          "text": "The classes are more demanding than anything I have done at school. Four hours every morning with a teacher called Señora Valls, who speaks quickly on purpose and refuses to switch to English even when we look completely lost. I have been sitting in the front row because I want to commit fully — no distractions, no whispering with the students at the back. It has not been easy. But it has been consistent, and I think that is what is making the difference."
+        },
+        {
+          "order": 3,
+          "text": "In the afternoons I have been working at a small café called Café Marta, two streets from the language school. The owner, Dolors, has been running the café for thirty-one years and speaks a Catalan dialect that I cannot follow at all. But her son, Marc, speaks slow and careful Spanish with me, and we have been having short conversations about the neighbourhood while I clear tables. Last Tuesday a customer asked me where the nearest metro station was, and I answered without thinking. Then I stood there for a moment, realising what had just happened. It felt rewarding in a way that is hard to explain."
+        },
+        {
+          "order": 4,
+          "text": "The writing portfolio has a deadline — the last Friday of the programme — and I have been working on my longest piece all week. It is a description of the street outside my window at six in the morning: the fruit seller who sets up before sunrise, the woman who walks two small dogs the same colour as the pavement, the distant sound of someone practising guitar. I have been getting up early just to watch, because the most productive hours in this city are the ones before the tourists arrive."
+        },
+        {
+          "order": 5,
+          "text": "I miss home. I am not going to pretend otherwise. But I have been discovering something I did not expect: the harder a thing is, the more real it feels. Tell Dad his Spanish phrase book is finally getting used — I have been carrying it in my bag since the very first week. — Nadia"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Why has Nadia been too tired to write in the evenings?",
+          "options": [
+            "She has been going out with friends after class.",
+            "She has been studying and working every day.",
+            "The café job starts very early in the morning.",
+            "She has been feeling unwell since she arrived."
+          ],
+          "correctAnswer": "She has been studying and working every day.",
+          "explanation": "Nadia explains that the tiredness comes from doing something real — her demanding classes and afternoon work at the café."
+        },
+        {
+          "order": 2,
+          "question": "What does Nadia mean when she says the tiredness 'feels like proof that something real is happening'?",
+          "options": [
+            "She thinks she is becoming ill from overwork.",
+            "She is satisfied because her effort shows she is genuinely learning.",
+            "She wants her mother to feel sorry for her.",
+            "She is surprised the programme is more difficult than expected."
+          ],
+          "correctAnswer": "She is satisfied because her effort shows she is genuinely learning.",
+          "explanation": "Nadia frames the tiredness positively — it is evidence that she is committing fully to her goal, not wasting time."
+        },
+        {
+          "order": 3,
+          "question": "Which sentence uses the present perfect continuous correctly?",
+          "options": [
+            "She has been study Spanish for three weeks.",
+            "She has been studied Spanish for three weeks.",
+            "She has been studying Spanish for three weeks.",
+            "She is been studying Spanish for three weeks."
+          ],
+          "correctAnswer": "She has been studying Spanish for three weeks.",
+          "explanation": "Present perfect continuous: have/has + been + verb-ing. 'She has been studying' is the correct form."
+        },
+        {
+          "order": 4,
+          "question": "What was rewarding about the moment with the tourist?",
+          "options": [
+            "The tourist paid her extra money for helping.",
+            "Dolors complimented her Spanish in front of the café.",
+            "She answered a question in Spanish automatically, without planning.",
+            "Marc translated for her and she understood every word."
+          ],
+          "correctAnswer": "She answered a question in Spanish automatically, without planning.",
+          "explanation": "Nadia answered without thinking — the language came naturally. That automatic response showed real progress."
+        },
+        {
+          "order": 5,
+          "question": "What has Nadia been observing for her writing portfolio?",
+          "options": [
+            "The daily routine inside Café Marta during lunch service.",
+            "The language school courtyard and its students.",
+            "The street outside her window in the early morning.",
+            "The metro station near her accommodation."
+          ],
+          "correctAnswer": "The street outside her window in the early morning.",
+          "explanation": "Nadia describes getting up early to watch the street — the fruit seller, the dog walker, the distant guitar — and writing about it."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "title": "The Way Things Were",
+      "vocabulary": [
+        {
+          "word": "nostalgic",
+          "definition": "feeling a warm, sometimes sad emotion when thinking about the past",
+          "exampleSentence": "She felt nostalgic reading her old notebooks — everything from that time seemed simpler and softer.",
+          "emoji": "🕰️"
+        },
+        {
+          "word": "carefree",
+          "definition": "without worries or responsibilities; relaxed and easy",
+          "exampleSentence": "Those summer afternoons used to be completely carefree — no plans, no deadlines, just her bicycle and the long road by the river.",
+          "emoji": "☀️"
+        },
+        {
+          "word": "tradition",
+          "definition": "a custom or habit that has been followed regularly over a long time, often in a family or community",
+          "exampleSentence": "It was a tradition in her family to eat dinner outside on warm evenings, even when it was already getting dark.",
+          "emoji": "🏡"
+        },
+        {
+          "word": "upbringing",
+          "definition": "the way a person was raised and the values they were taught as a child",
+          "exampleSentence": "Her upbringing in a small, quiet town had not prepared her for the noise and speed of Barcelona.",
+          "emoji": "👨‍👩‍👧"
+        },
+        {
+          "word": "identity",
+          "definition": "who a person is — the qualities, beliefs, and experiences that make them unique",
+          "exampleSentence": "Living abroad for the first time, Nadia began to think about her identity in ways she never had at home.",
+          "emoji": "🪞"
+        },
+        {
+          "word": "adolescence",
+          "definition": "the period of life between childhood and adulthood, roughly between 12 and 18",
+          "exampleSentence": "Her grandmother said adolescence was the time when you finally start asking questions that have no easy answers.",
+          "emoji": "🌱"
+        },
+        {
+          "word": "peer",
+          "definition": "a person who is the same age or at the same level as you",
+          "exampleSentence": "At school, she had never felt quite in step with her peers — they talked about things she found uninteresting.",
+          "emoji": "👥"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Used To + Would (Past Habits)",
+        "explanation": "Use 'used to + verb' for past states or habits that are no longer true. Use 'would + verb' for repeated past actions (but NOT for past states). Both describe things that happened regularly in the past but do not happen now. 'Would' is often used when the context already makes the past time clear. Negative: 'didn't use to'. Question: 'Did you use to...?'",
+        "examples": [
+          "Nadia used to cycle to school every morning. She doesn't anymore. (past habit, no longer true)",
+          "She didn't use to enjoy writing. Now she loves it. (past negative state, now changed)",
+          "Every summer, her grandmother would make lemonade and they would sit on the step until it was dark. (repeated past action)",
+          "Did you use to live near the market? (question about past habit or state)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Dear Gran, I am writing to you separately because this letter is different from the ones I send Mum. Mum wants to know if I am eating and sleeping enough. You want to know something else. I have been thinking about home — not because I am unhappy here, but because being somewhere new makes the old place more visible, somehow. Like looking at a photograph you forgot you had taken."
+        },
+        {
+          "order": 2,
+          "text": "I used to cycle to school every morning on the old blue bicycle, the one that made a clicking sound on cold days. I used to leave early enough to take the long road by the river, even though the shorter route saved twelve minutes. I didn't use to understand why I chose the longer way. I think I understand now. It was the only part of the day that belonged completely to me. Every spring, the wild flowers would come up along the fence by the mill, and I would slow down to look at them even when I was already late. I never told anyone I did that."
+        },
+        {
+          "order": 3,
+          "text": "We used to have a tradition on Sunday evenings. Dad would carry the wooden table out to the garden, even if the sky looked uncertain, and we would eat dinner outside. Mum would pretend to complain about the flies. You would always bring something — a tart, or those small pastries with the sugar on top. After dinner, when it got dark, nobody would want to go inside, and we would stay out there talking until the candles burned down. I used to think that was just an ordinary evening. I didn't use to know it was the kind of thing people miss."
+        },
+        {
+          "order": 4,
+          "text": "I didn't use to think much about my identity. That is not a word teenagers in my town used very often. But living here — among people with different upbringings, different languages, different ways of being in the world — I have started asking questions about it. Who am I when nobody around me knows who I used to be? The answer, I think, is that I am the same person. But something is being added. Like a second language growing alongside the first."
+        },
+        {
+          "order": 5,
+          "text": "My peers at the language school are lovely, Gran. There is a girl from Poland named Zosia who makes me laugh, and a very serious boy from Japan who always finishes the grammar exercises first but looks genuinely surprised when a joke lands. We didn't use to talk much — adolescence makes everyone a little cautious. But this week we walked to the harbour after class and watched the light on the water and talked about nothing in particular. It was carefree. It reminded me of the river road. — Nadia"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Why does Nadia write a separate letter to her grandmother?",
+          "options": [
+            "She does not want her mother to read about her feelings.",
+            "Her grandmother is the only one who writes back.",
+            "She wants to share a different, more reflective kind of letter.",
+            "She is angry at her mother and refuses to write to her."
+          ],
+          "correctAnswer": "She wants to share a different, more reflective kind of letter.",
+          "explanation": "Nadia explains directly: this letter is different from the practical ones she sends her mum. Her grandmother is someone she can reflect with."
+        },
+        {
+          "order": 2,
+          "question": "Why did Nadia choose the longer road to school?",
+          "options": [
+            "The short route was under construction in winter.",
+            "It was the only time in the day that was entirely her own.",
+            "Her friends used to wait for her along the river path.",
+            "The bicycle was too old to take the steeper road."
+          ],
+          "correctAnswer": "It was the only time in the day that was entirely her own.",
+          "explanation": "Nadia says she now understands: the long road by the river was the one part of her day that belonged completely to her."
+        },
+        {
+          "order": 3,
+          "question": "Which sentence uses 'would' correctly to describe a past habit?",
+          "options": [
+            "She would be shy when she was young.",
+            "She would go to bed early every Saturday as a child.",
+            "She would have a dog when she lived at home.",
+            "She would know all the neighbours by name."
+          ],
+          "correctAnswer": "She would go to bed early every Saturday as a child.",
+          "explanation": "'Would' is used for repeated past actions, not states. 'Go to bed early' is an action. 'Be shy', 'have a dog', and 'know' describe states, which use 'used to', not 'would'."
+        },
+        {
+          "order": 4,
+          "question": "What does Nadia mean when she says 'something is being added, like a second language growing alongside the first'?",
+          "options": [
+            "She is literally learning a second language in Barcelona.",
+            "Her identity is expanding — new experiences are building on who she already is.",
+            "She is forgetting her native language because she speaks Spanish all day.",
+            "She plans to add more language courses when she returns home."
+          ],
+          "correctAnswer": "Her identity is expanding — new experiences are building on who she already is.",
+          "explanation": "Nadia uses learning a second language as a metaphor for personal growth — the new experiences do not replace her identity, they extend it."
+        },
+        {
+          "order": 5,
+          "question": "What made the walk to the harbour feel carefree?",
+          "options": [
+            "The class had been cancelled so there was no homework that evening.",
+            "Nadia and her new friends walked and talked without any particular plan or purpose.",
+            "They went to a market and Nadia spent money she had been saving.",
+            "Zosia told a long funny story that distracted everyone from their worries."
+          ],
+          "correctAnswer": "Nadia and her new friends walked and talked without any particular plan or purpose.",
+          "explanation": "Nadia describes the harbour walk as 'talking about nothing in particular' — relaxed and unplanned, like the river road mornings at home."
+        },
+        {
+          "order": 6,
+          "question": "Which is an example of 'used to' describing a past STATE (not a repeated action)?",
+          "options": [
+            "She used to cycle to school every morning.",
+            "They would eat dinner outside on Sunday evenings.",
+            "She didn't use to think much about her identity.",
+            "Gran would always bring something to the table."
+          ],
+          "correctAnswer": "She didn't use to think much about her identity.",
+          "explanation": "'Didn't use to think' describes a past mental state (no longer true). The others describe repeated actions, which can use 'would'."
+        }
+      ]
+    }
+  ]
+}

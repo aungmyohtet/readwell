@@ -1,0 +1,284 @@
+{
+  "story": {
+    "title": "A Town Called Fernwood",
+    "description": "Amir has just moved to Fernwood and is seeing it for the first time. As he explores the town centre and then the local nature reserve with a new friend, he begins to feel that this strange place might become home.",
+    "level": "A2",
+    "coverEmoji": "🏘️",
+    "author": "ReadWell",
+    "tags": ["town", "nature", "friendship", "new beginnings"]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "Welcome to Fernwood",
+      "vocabulary": [
+        {
+          "word": "square",
+          "definition": "an open area in the centre of a town, usually surrounded by buildings and paved with stone",
+          "exampleSentence": "Amir stood at the edge of Fernwood town square and looked around slowly.",
+          "emoji": "🏙️"
+        },
+        {
+          "word": "fountain",
+          "definition": "a structure in a public space that pushes water up into the air as decoration",
+          "exampleSentence": "There was a fountain in the middle of the square, and a few pigeons sat on its edge.",
+          "emoji": "⛲"
+        },
+        {
+          "word": "pavement",
+          "definition": "the hard surface at the side of a road that people walk on",
+          "exampleSentence": "A lot of green trees lined both sides of the pavement on the walk home.",
+          "emoji": "🚶"
+        },
+        {
+          "word": "bakery",
+          "definition": "a shop where bread, cakes, and pastries are made and sold",
+          "exampleSentence": "There was a small bakery next to the post office, and the smell of fresh bread drifted out.",
+          "emoji": "🥐"
+        },
+        {
+          "word": "notice board",
+          "definition": "a flat board fixed to a wall where people pin up notices, posters, and information",
+          "exampleSentence": "Near the library entrance, there was a large notice board covered in posters and leaflets.",
+          "emoji": "📋"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "There is / There are + Quantifiers",
+        "explanation": "We use 'there is' with singular nouns and uncountable nouns, and 'there are' with plural nouns. We use quantifiers like some, any, a lot of, a few, and a little to show how much or how many there is of something. For questions, we use 'How many?' with countable nouns and 'How much?' with uncountable nouns.",
+        "examples": [
+          "There is a fountain in the middle of the square.",
+          "There are some swimming lessons starting next week.",
+          "There aren't any large supermarkets in Fernwood.",
+          "How many parks are there in the town?",
+          "There wasn't much to do on his own yet."
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Amir stood at the edge of Fernwood town square and looked around slowly. He had moved here just three days ago, and this was his first time in the town centre. \"There are a lot of buildings,\" he said quietly. His mother smiled. \"There is a map over there,\" she said, pointing to a wooden post near the entrance. \"Let's start with that.\" Amir followed her across the uneven paving stones.",
+          "imagePlaceholder": "🏙️"
+        },
+        {
+          "order": 2,
+          "text": "The square was busy but not crowded. There was a fountain in the middle, and a few pigeons were sitting on its stone edge. Around the square, there were several small shops — a bakery, a post office, and a bookshop with bright green paint on its door. There was also a library at the far end, its windows full of colourful posters. There weren't any large supermarkets, but there was a small market on one side selling vegetables and fresh fruit.",
+          "imagePlaceholder": "⛲"
+        },
+        {
+          "order": 3,
+          "text": "Near the library entrance, there was a large notice board covered in paper. There were some posters about after-school clubs, a few leaflets about local events, and some handwritten notes from people selling things. \"Is there anything for children?\" Amir asked. His mother leaned forward and read carefully. \"There are some swimming lessons starting next week,\" she said. \"And there is a football club on Wednesday evenings.\"",
+          "imagePlaceholder": "📋"
+        },
+        {
+          "order": 4,
+          "text": "\"How many parks are there?\" Amir asked, studying the map on the post. \"There are two,\" his mother said, tracing her finger along the paper. \"One is quite small, but there is a bigger one near your school. There is a pond there and some picnic tables too.\" Amir thought about this. There wasn't much to do on his own yet, but that would change. He needed to find some people to explore with.",
+          "imagePlaceholder": "🗺️"
+        },
+        {
+          "order": 5,
+          "text": "On the walk home, Amir counted the things he had seen. There were four cafés, a few benches, and a lot of green trees lining both sides of the pavement. There was even a small stage in one corner of the square — and there were some chairs arranged around it, as if something was about to happen there. Fernwood was not so strange now. There were a lot of good things here, Amir thought. He just hadn't found them all yet.",
+          "imagePlaceholder": "🌳"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "What did Amir's mother point to near the entrance of the square?",
+          "options": [
+            "A wooden post with a map on it",
+            "A large notice board",
+            "The fountain in the middle",
+            "A bookshop with green paint on its door"
+          ],
+          "correctAnswer": "A wooden post with a map on it",
+          "explanation": "The text says: 'There is a map over there,' she said, pointing to a wooden post near the entrance."
+        },
+        {
+          "order": 2,
+          "question": "Which three shops are mentioned around the square?",
+          "options": [
+            "A bakery, a post office, and a bookshop",
+            "A bakery, a supermarket, and a post office",
+            "A library, a bakery, and a café",
+            "A bookshop, a market, and a chemist"
+          ],
+          "correctAnswer": "A bakery, a post office, and a bookshop",
+          "explanation": "Paragraph 2 lists 'a bakery, a post office, and a bookshop with bright green paint on its door' as the shops around the square."
+        },
+        {
+          "order": 3,
+          "question": "What activities for children did Amir's mother find on the notice board?",
+          "options": [
+            "A painting class and a chess club",
+            "Swimming lessons and a football club",
+            "A football club and a tennis club",
+            "Swimming lessons and a dance class"
+          ],
+          "correctAnswer": "Swimming lessons and a football club",
+          "explanation": "The notice board showed 'some swimming lessons starting next week' and 'a football club on Wednesday evenings'."
+        },
+        {
+          "order": 4,
+          "question": "How many parks are there in Fernwood?",
+          "options": [
+            "One",
+            "Two",
+            "Three",
+            "Four"
+          ],
+          "correctAnswer": "Two",
+          "explanation": "Amir's mother says 'There are two' parks — one small and one bigger near the school."
+        },
+        {
+          "order": 5,
+          "question": "Why does Amir say he needs to 'find some people to explore with'?",
+          "options": [
+            "Because his mother does not want to walk any further",
+            "Because the parks are too far to visit without a map",
+            "Because he is new to Fernwood and has not made any friends yet",
+            "Because there is too much to see in one afternoon"
+          ],
+          "correctAnswer": "Because he is new to Fernwood and has not made any friends yet",
+          "explanation": "Amir has only been in Fernwood for three days and does not know anyone yet, which is why he needs someone to explore with."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "title": "The Nature Reserve",
+      "vocabulary": [
+        {
+          "word": "oak",
+          "definition": "a large, strong tree that produces acorns and is very common in British woodlands",
+          "exampleSentence": "Near the path, there was an oak tree with a thick trunk that Amir could not get his arms around.",
+          "emoji": "🌳"
+        },
+        {
+          "word": "sparrow",
+          "definition": "a small brown bird commonly found in gardens, parks, and hedgerows across Britain",
+          "exampleSentence": "A sparrow landed on a low branch and looked at the two children curiously.",
+          "emoji": "🐦"
+        },
+        {
+          "word": "hedgehog",
+          "definition": "a small nocturnal animal covered in sharp spines that rolls into a ball when frightened",
+          "exampleSentence": "Priya told Amir that she had found a hedgehog sitting quietly by the pond last autumn.",
+          "emoji": "🦔"
+        },
+        {
+          "word": "meadow",
+          "definition": "an area of open, flat land covered in grass and wild flowers",
+          "exampleSentence": "Beyond the pond, a wide meadow stretched out towards the fence at the edge of the reserve.",
+          "emoji": "🌿"
+        },
+        {
+          "word": "habitat",
+          "definition": "the natural environment where a particular animal or plant lives and grows",
+          "exampleSentence": "Priya explained that every animal needs its own habitat in order to survive.",
+          "emoji": "🏞️"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Articles \u2013 a, an, the, zero article",
+        "explanation": "We use 'a' or 'an' when we mention something for the first time or when we are not being specific. We use 'an' before a vowel sound. We use 'the' when both the speaker and listener know which specific thing is meant. We use zero article (no article at all) for general statements about all things of a kind. We also use 'the' with unique nouns like the sun, the sky, and the moon.",
+        "examples": [
+          "Amir met a girl from his class called Priya. (a — first mention, not specific)",
+          "There was an oak tree with a thick trunk near the path. (an — before a vowel sound)",
+          "That is the oldest tree in Fernwood. (the — unique reference: we know exactly which one)",
+          "Sparrows love oak trees. (zero article — general statement about all sparrows)",
+          "The sun had come out by the time they reached the gate. (the — unique noun)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "A week later, Amir met a girl from his class called Priya. She knew Fernwood well and offered to show him the nature reserve near the school. \"It is not a big place,\" she said as they walked through the gate, \"but there is a lot to see if you look carefully.\" The sky was grey, and the air smelled like earth and damp leaves. Amir had never visited a nature reserve before.",
+          "imagePlaceholder": "🌿"
+        },
+        {
+          "order": 2,
+          "text": "They followed a narrow path through the trees. On one side, there was an oak tree with a thick trunk that Amir could not get his arms around. \"That is the oldest tree in Fernwood,\" said Priya. A sparrow landed on a low branch and looked at the two children. \"Sparrows love oak trees,\" Priya said softly. \"They find insects in the bark.\" She spoke quietly so she would not frighten the bird away.",
+          "imagePlaceholder": "🌳"
+        },
+        {
+          "order": 3,
+          "text": "The path led them to a pond. It was small but clear, with green plants growing around the edges. \"I found a hedgehog here last autumn,\" said Priya, \"just sitting by the water.\" Amir looked carefully, but there was no hedgehog today. A few ducks were resting on the far bank. Beyond the pond, a wide meadow stretched out towards the fence at the edge of the reserve. The grass was long and wet from last night's rain.",
+          "imagePlaceholder": "🦔"
+        },
+        {
+          "order": 4,
+          "text": "\"Why is this called a nature reserve?\" Amir asked, walking beside Priya through the meadow. \"Because it is protected,\" she said. \"Nobody can build here. The wildlife can live in its natural habitat without being disturbed.\" Amir thought about that. He had learned about habitats at his old school — every animal needs a particular kind of place to survive. \"A hedgehog needs plants and insects,\" Priya said. \"Remove those, and the hedgehog disappears.\"",
+          "imagePlaceholder": "🌾"
+        },
+        {
+          "order": 5,
+          "text": "By the time they reached the gate again, the sun had come out. The meadow looked completely different in the light — greener, brighter, full of colour. \"Is this your favourite place in Fernwood?\" Amir asked. Priya thought for a moment. \"One of them,\" she said with a small smile. On the walk back to the road, Amir decided that he liked the reserve. It was a quiet place, but an interesting one. He was already planning to come back.",
+          "imagePlaceholder": "☀️"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "How does Priya describe the nature reserve to Amir?",
+          "options": [
+            "Very large, with many different animals and plants",
+            "Not a big place, but with a lot to see if you look carefully",
+            "A popular place that many people visit every weekend",
+            "A protected forest with tall trees and a river"
+          ],
+          "correctAnswer": "Not a big place, but with a lot to see if you look carefully",
+          "explanation": "Priya says: 'It is not a big place, but there is a lot to see if you look carefully.'"
+        },
+        {
+          "order": 2,
+          "question": "Why does Priya speak quietly near the oak tree?",
+          "options": [
+            "Because she does not want to wake the hedgehog",
+            "Because she does not want to frighten the sparrow away",
+            "Because there is a sign asking visitors to be quiet",
+            "Because Amir asked her to lower her voice"
+          ],
+          "correctAnswer": "Because she does not want to frighten the sparrow away",
+          "explanation": "The text says: 'She spoke quietly so she would not frighten the bird away.'"
+        },
+        {
+          "order": 3,
+          "question": "What does Priya say about the nature reserve being 'protected'?",
+          "options": [
+            "That it is owned by the school and only students can visit",
+            "That nobody can build there so wildlife can live undisturbed",
+            "That volunteers come every weekend to clean and repair it",
+            "That the pond was built to attract wildlife from other areas"
+          ],
+          "correctAnswer": "That nobody can build there so wildlife can live undisturbed",
+          "explanation": "Priya says: 'Nobody can build here. The wildlife can live in its natural habitat without being disturbed.'"
+        },
+        {
+          "order": 4,
+          "question": "What has Amir already learned about habitats at his old school?",
+          "options": [
+            "That hedgehogs can only survive near water",
+            "That every animal needs a particular kind of place to survive",
+            "That sparrows are the most common bird in British woodlands",
+            "That protected areas must have at least one pond"
+          ],
+          "correctAnswer": "That every animal needs a particular kind of place to survive",
+          "explanation": "The text says: 'He had learned about habitats at his old school — every animal needs a particular kind of place to survive.'"
+        },
+        {
+          "order": 5,
+          "question": "What does the final sentence tell us about how Amir feels about the nature reserve?",
+          "options": [
+            "He found it too quiet and does not want to return",
+            "He enjoyed it and is already thinking about coming back",
+            "He wants to bring his mother on the next visit",
+            "He is nervous about going back without Priya"
+          ],
+          "correctAnswer": "He enjoyed it and is already thinking about coming back",
+          "explanation": "The text says 'He was already planning to come back,' which shows he enjoyed the visit and looks forward to returning."
+        }
+      ]
+    }
+  ]
+}

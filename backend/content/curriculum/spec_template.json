@@ -1,0 +1,66 @@
+{
+  "_instructions": "Fill in this spec before generating a chapter. Delete all _comment fields before using as input. The more precise the spec, the better the output.",
+
+  "storyTitle": "The New School",
+  "_comment_storyTitle": "The parent story this chapter belongs to. Must already exist in stories/ or be created alongside.",
+
+  "level": "A2",
+  "_comment_level": "A2 | B1 | B2",
+
+  "curriculumUnit": 2,
+  "_comment_curriculumUnit": "Which unit number from curriculum.json this chapter covers.",
+
+  "grammarTarget": "Simple Past – Regular Verbs",
+  "_comment_grammarTarget": "Copy the grammar field from curriculum.json. This is the primary teaching focus.",
+
+  "grammarKeyStructures": [
+    "verb + -ed",
+    "did + not + verb",
+    "Did + subject + verb?",
+    "time markers: yesterday, last week, ago"
+  ],
+  "_comment_grammarKeyStructures": "Copy keyStructures from curriculum.json. These must all appear naturally in the story.",
+
+  "chapterNumber": 1,
+  "chapterTitle": "The First Day",
+  "_comment_chapterTitle": "Engaging chapter title. Should hint at the story without spoiling it.",
+
+  "storyTopic": "A girl's first day at a new school",
+  "_comment_storyTopic": "One sentence describing the story premise. Should be relatable and age-appropriate.",
+
+  "setting": "A middle school in a small English town",
+  "_comment_setting": "Specific setting helps Claude generate consistent atmosphere.",
+
+  "mainCharacters": [
+    { "name": "Emma", "description": "12-year-old girl, quiet but curious, just moved from Bristol" },
+    { "name": "Ms Clarke", "description": "Kind but firm teacher" },
+    { "name": "Sophie", "description": "Friendly classmate who notices Emma" }
+  ],
+
+  "vocabularyTheme": "school_life",
+  "_comment_vocabularyTheme": "Must match a key in curriculum.json vocabularyThemes for this level.",
+
+  "targetWords": ["nervous", "hallway", "introduce", "locker"],
+  "_comment_targetWords": "4–6 words for A2, 5–7 for B1, 6–8 for B2. Must be: (1) useful for the level, (2) used naturally in the story at least once each, (3) not too obscure.",
+
+  "comprehensionQuestionTypes": ["literal", "literal", "inferential", "vocabulary_in_context"],
+  "_comment_comprehensionQuestionTypes": "Mix of: literal (answer is directly in text), inferential (reader must deduce), vocabulary_in_context (what does X mean in paragraph Y?). Minimum 1 inferential per chapter.",
+
+  "toneAndStyle": "Warm, engaging third-person narrative. Simple sentence structures. Short paragraphs.",
+  "_comment_toneAndStyle": "A2: warm and simple. B1: descriptive and slightly complex. B2: nuanced, mature, some literary devices.",
+
+  "emotionalArc": "nervous → unsure → a small moment of connection → hopeful",
+  "_comment_emotionalArc": "The feeling the reader follows. Helps generate meaningful, non-flat stories.",
+
+  "paragraphEmojis": ["🌅", "🎒", "🏫", "👩‍🏫", "😊"],
+  "_comment_paragraphEmojis": "One emoji per paragraph as image placeholder. Approximate — generator can adjust.",
+
+  "recycledVocabulary": [],
+  "_comment_recycledVocabulary": "Words introduced in previous chapters of this story that should appear again (without re-defining).",
+
+  "avoidTopics": [],
+  "_comment_avoidTopics": "Any topics or words to avoid (e.g. violence, specific cultural references that may not translate).",
+
+  "notes": "",
+  "_comment_notes": "Anything else the content creator wants to communicate to the generator."
+}

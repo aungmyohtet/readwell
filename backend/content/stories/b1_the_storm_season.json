@@ -1,0 +1,296 @@
+{
+  "story": {
+    "title": "The Storm Season",
+    "description": "Zara lives in a small coastal town where strange things happen during autumn. A mysterious light on the water leads her and her friend Callum on a two-day investigation — and then the season's first major storm teaches her something she will not forget.",
+    "level": "B1",
+    "coverEmoji": "⛈️",
+    "author": "ReadWell",
+    "tags": ["mystery", "weather", "coastal", "investigation"]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "Something Isn't Right",
+      "vocabulary": [
+        {
+          "word": "investigate",
+          "definition": "to examine a situation carefully in order to discover the truth about it",
+          "exampleSentence": "Zara and Callum decided to investigate the mysterious light before drawing any conclusions.",
+          "emoji": "🔍"
+        },
+        {
+          "word": "clue",
+          "definition": "a piece of information or evidence that helps to explain something or solve a mystery",
+          "exampleSentence": "Callum said that you start with clues and follow them until you reach an answer.",
+          "emoji": "🧩"
+        },
+        {
+          "word": "witness",
+          "definition": "a person who has seen or heard something that happened and can describe it",
+          "exampleSentence": "Zara said they needed more witnesses before they could be sure what the light was.",
+          "emoji": "👁️"
+        },
+        {
+          "word": "evidence",
+          "definition": "facts, objects, or information that help to prove whether something is true",
+          "exampleSentence": "Callum wrote down the time, position, and colour of the light as evidence.",
+          "emoji": "📋"
+        },
+        {
+          "word": "mysterious",
+          "definition": "strange, unknown, or difficult to explain, creating a sense of curiosity or unease",
+          "exampleSentence": "A mysterious light had been seen on the water for three nights in a row.",
+          "emoji": "🌙"
+        },
+        {
+          "word": "conclusion",
+          "definition": "a judgement or decision reached after thinking carefully about the available facts",
+          "exampleSentence": "It was not a dramatic conclusion, but it was an honest and accurate one.",
+          "emoji": "💡"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Modal Verbs \u2013 might, may, must, can't (Deduction)",
+        "explanation": "We use modal verbs to express how certain we are about something. 'Must' expresses strong certainty about something we believe is true. 'Can't' expresses strong certainty that something is impossible or untrue. 'Might' and 'may' express possibility — we think something could be true but we are not certain. For deductions about the past, we use 'must have + past participle', 'can't have + past participle', and 'might have + past participle'.",
+        "examples": [
+          "It must be a research vessel — it has been anchored there for three nights. (must — strong positive deduction)",
+          "It can't be a plane — planes move and this light was completely stationary. (can't — strong negative deduction)",
+          "It might be a private boat with its lights on. (might — weak positive possibility)",
+          "It can't have been there for three nights without someone reporting it. (can't have + pp — past impossibility)",
+          "It may have been anchored there since the beginning of the week. (may have + pp — past possibility)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Zara had heard about the light from Mrs Patel, who lived next door and slept badly. For three nights in a row, a pale glow had appeared on the water about a kilometre from the shore, always between midnight and two in the morning. \"It might be a fishing boat,\" Zara's father had said. But the fishing boats did not go out at midnight. Zara thought there had to be another explanation. She mentioned it to Callum the following morning, and he immediately wanted to investigate.",
+          "imagePlaceholder": "🌊"
+        },
+        {
+          "order": 2,
+          "text": "\"It must be something out there,\" Callum said as they walked to school. \"But what?\" Zara asked. \"There are no platforms in that area.\" Callum thought for a moment. \"It could be a research vessel,\" he said. \"Or it might be a private boat with its lights on. It can't be a plane — planes move. This thing was stationary.\" Zara had already asked Mrs Patel to describe what she saw, and Mrs Patel had confirmed it was a fixed source of light, not a moving one. \"We need more witnesses,\" Zara said. \"One person might be mistaken.\"",
+          "imagePlaceholder": "🔍"
+        },
+        {
+          "order": 3,
+          "text": "That evening, Callum brought a notebook and they went to the harbour wall after supper. They waited. At ten o'clock, nothing had appeared. At eleven, the sea was dark and empty. Then, just before midnight, Callum pointed. \"There,\" he said quietly. A soft yellow light was glowing on the horizon, about a kilometre out. \"It must be anchored,\" Zara said. \"It hasn't moved.\" Callum wrote down the time, the position, and the colour of the light. \"Whatever it is, someone must know about it,\" he said. \"It can't have been there for three nights without being officially reported.\"",
+          "imagePlaceholder": "🌙"
+        },
+        {
+          "order": 4,
+          "text": "The next day, Zara went to the harbour master's office. The harbour master, a large woman called Ms Vane, listened carefully and then looked at her computer. \"Ah yes,\" she said. \"There is a research team that has permission to anchor in that area. They are studying the seabed. They must have arrived early this week.\" Zara felt a small sense of disappointment — the mystery had lasted only two days. But she also felt satisfied. \"We could not have solved it without collecting evidence,\" she told Callum on the way home. \"That is the thing about investigating,\" Callum said. \"You start with clues and follow them.\"",
+          "imagePlaceholder": "📝"
+        },
+        {
+          "order": 5,
+          "text": "Walking back along the harbour, Zara thought about what they had done. A mysterious light on the water had turned out to be a research vessel with a permit. It was not a dramatic conclusion, but it was a real and honest one. \"Next time something strange happens,\" she said to Callum, \"we investigate properly — collect evidence, find witnesses, and follow every clue to the end.\" Callum grinned. \"You sound like a detective,\" he said. \"Maybe I am,\" Zara replied. Behind them, the sea was dark and calm. She suspected there would be other mysteries. There always were.",
+          "imagePlaceholder": "🔭"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "How does Callum argue that the light cannot be an aeroplane?",
+          "options": [
+            "Because the light appeared too close to the surface of the water",
+            "Because it was the wrong colour for aircraft navigation lights",
+            "Because aeroplanes move and the light was completely stationary",
+            "Because no flights are permitted over the harbour at night"
+          ],
+          "correctAnswer": "Because aeroplanes move and the light was completely stationary",
+          "explanation": "Callum says: 'It can't be a plane — planes move. This thing was stationary.'"
+        },
+        {
+          "order": 2,
+          "question": "What does Callum record when they go to the harbour wall at night?",
+          "options": [
+            "The direction and speed of the light's movement",
+            "The time, the position, and the colour of the light",
+            "The name of any boats they can see near the light",
+            "The weather conditions and wind direction"
+          ],
+          "correctAnswer": "The time, the position, and the colour of the light",
+          "explanation": "The text says: 'Callum wrote down the time, the position, and the colour of the light.'"
+        },
+        {
+          "order": 3,
+          "question": "What does the harbour master tell Zara about the light?",
+          "options": [
+            "That nobody has reported it and it needs to be investigated further",
+            "That a research team has permission to anchor in that area",
+            "That a research vessel had been reported missing that week",
+            "That the light is from a scientific buoy placed by the local university"
+          ],
+          "correctAnswer": "That a research team has permission to anchor in that area",
+          "explanation": "Ms Vane says: 'There is a research team that has permission to anchor in that area. They are studying the seabed.'"
+        },
+        {
+          "order": 4,
+          "question": "What does Callum say is the key to investigating a mystery?",
+          "options": [
+            "Starting with the most likely explanation and proving it correct",
+            "Contacting the authorities before trying to investigate yourself",
+            "Starting with clues and following them",
+            "Finding at least three witnesses before drawing any conclusion"
+          ],
+          "correctAnswer": "Starting with clues and following them",
+          "explanation": "Callum says: 'That is the thing about investigating. You start with clues and follow them.'"
+        },
+        {
+          "order": 5,
+          "question": "Why does Zara feel 'a small sense of disappointment' when she learns the truth?",
+          "options": [
+            "Because she had hoped to write a story about the discovery for the school newspaper",
+            "Because the investigation had taken a long time and led nowhere interesting",
+            "Because the mystery turned out to have a simple, ordinary explanation rather than a dramatic one",
+            "Because Callum had worked out the answer before she did"
+          ],
+          "correctAnswer": "Because the mystery turned out to have a simple, ordinary explanation rather than a dramatic one",
+          "explanation": "The text says 'It was not a dramatic conclusion, but it was a real and honest one' — suggesting Zara had hoped for something more exciting."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "title": "The Morning After",
+      "vocabulary": [
+        {
+          "word": "approach",
+          "definition": "to come nearer to something in distance or time",
+          "exampleSentence": "A storm had been approaching the coast for days, and Zara's father had been watching the forecast.",
+          "emoji": "🌪️"
+        },
+        {
+          "word": "forecast",
+          "definition": "a statement about what is expected to happen in the future, especially the weather",
+          "exampleSentence": "Zara's father had been checking the weather forecast every evening that week.",
+          "emoji": "🌤️"
+        },
+        {
+          "word": "shelter",
+          "definition": "protection from bad weather or danger; or a building that provides such protection",
+          "exampleSentence": "While the storm raged outside, the family took shelter inside the house.",
+          "emoji": "🏠"
+        },
+        {
+          "word": "damage",
+          "definition": "harm or injury caused to something that reduces its value or usefulness",
+          "exampleSentence": "Zara's father said that storms always damage something, however well you prepare.",
+          "emoji": "🌪️"
+        },
+        {
+          "word": "inspect",
+          "definition": "to look at something carefully in order to check its condition or find any problems",
+          "exampleSentence": "Ms Vane told the team they had to inspect everything before the harbour could reopen.",
+          "emoji": "🔍"
+        },
+        {
+          "word": "transform",
+          "definition": "to change something completely, making it very different from what it was before",
+          "exampleSentence": "The storm had transformed the sea overnight — by morning it was calm and pale blue.",
+          "emoji": "🌅"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Time Clauses",
+        "explanation": "Time clauses tell us when something happens in relation to another event. They begin with words like: when, while, as, before, after, until, as soon as, and by the time. When a time clause refers to the future, we use the present simple or present perfect in the time clause, NOT a future form. For example: 'Before it arrives, we must be ready' (not 'before it will arrive'). Time clauses can come at the beginning or end of a sentence.",
+        "examples": [
+          "Before the storm reaches the coast, we need to bring in the outdoor furniture. (before + present simple — future reference)",
+          "As soon as they had finished, the first drops of rain began to fall. (as soon as — immediate sequence)",
+          "While the storm was at its height, nobody could go outside. (while — simultaneous events)",
+          "By the time morning came, the sky was pale and clean. (by the time — completion before another event)",
+          "When a storm this strong has passed through, you cannot assume anything is undamaged. (when + present perfect — condition)"
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "A storm had been approaching the coast for days. Zara's father checked the forecast every evening. \"Before it arrives, we need to bring in the outdoor furniture,\" he said. Zara helped him move the chairs from the patio into the garage. As soon as they had finished, the first drops of rain began to fall. By the time the wind picked up, the sky was dark and grey from horizon to horizon. Zara stood at the kitchen window and watched the clouds close in from the sea.",
+          "imagePlaceholder": "🌪️"
+        },
+        {
+          "order": 2,
+          "text": "While the storm was at its height, the family took shelter inside the house. The power went off at nine o'clock in the evening. When the lights went out, Zara's mother found the torch and lit a few candles. They sat in the living room, listening to the rain against the windows. The wind was louder than Zara had expected — not a steady sound, but sudden, unpredictable bursts that shook the window frames. \"After tonight, the harbour will need checking,\" her father said. \"Storms always damage something.\" Zara looked out at the dark garden.",
+          "imagePlaceholder": "⛈️"
+        },
+        {
+          "order": 3,
+          "text": "As the storm passed, the wind dropped slowly. By the time morning came, the sky was pale and washed clean. Zara went outside before her parents had woken up. The garden was covered in leaves and broken branches. One of the fence panels had blown flat. On the street, three wheelie bins had tipped into the road. Until she walked to the end of the lane, she had not understood how much had fallen. As soon as she reached the seafront, she stopped. Two small boats had been pushed onto the beach during the night.",
+          "imagePlaceholder": "🌅"
+        },
+        {
+          "order": 4,
+          "text": "The harbour master, Ms Vane, was already there when Zara arrived at the seafront. A group of volunteers had come to help. After the boats were pulled back into the water, the team began to check the harbour wall for cracks. While they worked, Zara helped stack the loose planks that had blown off the jetty. \"Before we open the harbour again, we have to inspect everything,\" Ms Vane told her. \"When a storm this strong has passed through, you cannot assume that anything is undamaged.\" Zara nodded. She was beginning to understand what a working harbour really meant.",
+          "imagePlaceholder": "🔧"
+        },
+        {
+          "order": 5,
+          "text": "By lunchtime, the harbour was almost clear. Zara walked home along the seafront. The storm had transformed the sea overnight — it was now calm and pale blue, as though nothing had happened at all. But the marks were everywhere: the broken branches, the scattered planks, the two boats still drying on the sand. When she reached home, her mother was at the door. \"How does it look?\" she asked. \"Different,\" Zara said. \"But okay.\" As soon as she sat down for lunch, she decided to write everything down. She never wanted to forget what the morning after a storm looked like.",
+          "imagePlaceholder": "✨"
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "What does Zara's father ask the family to do before the storm arrives?",
+          "options": [
+            "Board up the ground-floor windows",
+            "Bring the outdoor furniture into the garage",
+            "Fill containers with water in case the power goes off",
+            "Move the car to a safer location"
+          ],
+          "correctAnswer": "Bring the outdoor furniture into the garage",
+          "explanation": "Zara's father says: 'Before it arrives, we need to bring in the outdoor furniture.' Zara then helps him move the chairs into the garage."
+        },
+        {
+          "order": 2,
+          "question": "What happens at nine o'clock in the evening during the storm?",
+          "options": [
+            "The wind reaches its highest speed",
+            "The power goes off",
+            "A large branch falls on the garden fence",
+            "The phone signal is lost"
+          ],
+          "correctAnswer": "The power goes off",
+          "explanation": "The text says: 'The power went off at nine o'clock in the evening.'"
+        },
+        {
+          "order": 3,
+          "question": "What does Zara find when she reaches the seafront the next morning?",
+          "options": [
+            "That part of the harbour wall has collapsed",
+            "That two small boats have been pushed onto the beach",
+            "That several seafront shops have flooded",
+            "That Ms Vane's office has lost its roof"
+          ],
+          "correctAnswer": "That two small boats have been pushed onto the beach",
+          "explanation": "The text says: 'Two small boats had been pushed onto the beach during the night.'"
+        },
+        {
+          "order": 4,
+          "question": "What does Ms Vane say must happen before the harbour can reopen?",
+          "options": [
+            "The boats on the beach must be fully repaired",
+            "A damage report must be submitted to the local council",
+            "Everything must be inspected, because nothing can be assumed to be undamaged",
+            "All the loose planks on the jetty must be replaced"
+          ],
+          "correctAnswer": "Everything must be inspected, because nothing can be assumed to be undamaged",
+          "explanation": "Ms Vane says: 'Before we open the harbour again, we have to inspect everything. When a storm this strong has passed through, you cannot assume that anything is undamaged.'"
+        },
+        {
+          "order": 5,
+          "question": "Why does Zara decide to write everything down at the end of the story?",
+          "options": [
+            "Because her teacher has asked her to keep a weather journal",
+            "Because she wants to send a report to the local newspaper",
+            "Because she wants to remember the experience and never forget what the morning after a storm looked like",
+            "Because she needs to document the damage for Ms Vane's harbour report"
+          ],
+          "correctAnswer": "Because she wants to remember the experience and never forget what the morning after a storm looked like",
+          "explanation": "The text says: 'She decided to write everything down. She never wanted to forget what the morning after a storm looked like.'"
+        }
+      ]
+    }
+  ]
+}
