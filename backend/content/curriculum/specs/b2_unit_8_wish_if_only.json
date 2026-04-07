@@ -1,0 +1,70 @@
+{
+  "storyTitle": "Fault Line",
+  "level": "B2",
+  "curriculumUnit": 8,
+  "grammarTarget": "Wish / If Only",
+  "grammarKeyStructures": [
+    "wish + past simple (present regret)",
+    "wish + would + verb (annoyance)",
+    "wish + past perfect (past regret)",
+    "if only"
+  ],
+  "chapterNumber": 2,
+  "chapterTitle": "Things Left Unsaid",
+  "storyTopic": "In the days after the incident, two close friends try to repair trust while confronting the quieter regrets, irritations, and emotional evasions that the public discussion never touched.",
+  "setting": "The same outdoor centre after the inquiry meeting, with scenes in the equipment room, on a wet bus ride home, and outside Mira's house in the evening",
+  "mainCharacters": [
+    {
+      "name": "Mira",
+      "description": "17-year-old participant, emotionally intelligent but defensive when hurt"
+    },
+    {
+      "name": "Jonah",
+      "description": "18-year-old volunteer leader, reliable in crises but less skilled at speaking honestly about emotion"
+    },
+    {
+      "name": "Ruth",
+      "description": "programme director, present only briefly, but her measured honesty shapes how the younger characters think afterward"
+    }
+  ],
+  "vocabularyTheme": "relationships_and_emotions",
+  "targetWords": [
+    "empathy",
+    "vulnerability",
+    "resentment",
+    "reconcile",
+    "estranged",
+    "affection",
+    "attachment"
+  ],
+  "comprehensionQuestionTypes": [
+    "literal",
+    "inferential",
+    "literal",
+    "inferential",
+    "vocabulary_in_context",
+    "literal"
+  ],
+  "toneAndStyle": "Emotionally precise B2 prose with restrained dialogue and believable teenage interiority. The chapter should feel intimate and honest rather than sentimental. The target structures should come naturally from regret, frustration, and emotional self-correction.",
+  "emotionalArc": "distance -> irritation -> guarded honesty -> difficult reconciliation",
+  "paragraphEmojis": [
+    "🎒",
+    "🚌",
+    "🌧️",
+    "🪟",
+    "💬",
+    "🫱",
+    "🌙"
+  ],
+  "recycledVocabulary": [
+    "integrity",
+    "transparency",
+    "autonomy"
+  ],
+  "avoidTopics": [
+    "soap-opera dialogue",
+    "instant forgiveness",
+    "adult-sounding emotional speeches"
+  ],
+  "notes": "This chapter should shift from public accountability to private emotional truth. Include present regret with wish + past simple, annoyance with wish + would, and past regret with wish + past perfect. Use if only in at least two meaningful places, one spoken and one internal. The story should end with partial repair, not perfect closure. The emotional movement matters as much as the grammar target."
+}

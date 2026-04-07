@@ -1,0 +1,432 @@
+{
+  "story": {
+    "title": "Fault Line",
+    "description": "After a mistake during a youth leadership expedition, the people involved are forced to reconstruct what happened and live with what can no longer be changed. As public accountability gives way to private honesty, two friends discover how differently blame and regret can feel from the inside.",
+    "level": "B2",
+    "coverEmoji": "🥾",
+    "author": "ReadWell",
+    "tags": [
+      "ethics",
+      "friendship",
+      "leadership",
+      "responsibility"
+    ]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "The Missing Hour",
+      "vocabulary": [
+        {
+          "word": "integrity",
+          "definition": "the quality of being honest and acting according to clear moral principles",
+          "exampleSentence": "Ruth said integrity mattered most when the facts were incomplete and everyone wanted a quick answer.",
+          "emoji": "🧭"
+        },
+        {
+          "word": "obligation",
+          "definition": "a duty or responsibility to do something",
+          "exampleSentence": "Jonah felt an obligation to explain every decision because he had been the senior student leader on the ridge.",
+          "emoji": "📌"
+        },
+        {
+          "word": "transparency",
+          "definition": "the practice of being open and clear so that nothing important is hidden",
+          "exampleSentence": "Ruth insisted on transparency, even when honesty made everyone in the room more uncomfortable.",
+          "emoji": "🔍"
+        },
+        {
+          "word": "complicit",
+          "definition": "involved in something wrong because you allowed it or failed to stop it",
+          "exampleSentence": "Elliot worried that if he had stayed quiet at the wrong moment, he might have been complicit in the mistake.",
+          "emoji": "⚠️"
+        },
+        {
+          "word": "autonomy",
+          "definition": "the freedom to make your own decisions without being controlled by others",
+          "exampleSentence": "The programme gave student leaders autonomy, but the expedition showed how heavy that freedom could become.",
+          "emoji": "🗺️"
+        },
+        {
+          "word": "moral",
+          "definition": "connected with ideas about right and wrong behaviour",
+          "exampleSentence": "What troubled Mira most was not the practical mistake but the moral habit of guessing before listening.",
+          "emoji": "⚖️"
+        },
+        {
+          "word": "conflict of interest",
+          "definition": "a situation in which personal feelings or loyalties could affect fair judgement",
+          "exampleSentence": "Ruth asked whether friendship had created a conflict of interest when Jonah delayed reporting what had happened.",
+          "emoji": "🔀"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Modal Perfect",
+        "explanation": "Modal perfect forms help us speculate, criticise, or reflect on the past. We use forms such as must have, might have, could have, should have, and needn't have plus a past participle to talk about what was probably true, possibly true, possible but unrealised, wrong, or unnecessary in an earlier situation.",
+        "examples": [
+          "He must have seen the weather changing before the others did.",
+          "They might have turned off the path when the fog thickened.",
+          "Jonah could have called Ruth earlier, but he kept hoping the group would reappear.",
+          "They needn't have climbed that last section once the light began to go."
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "By breakfast, everyone at the centre knew the group had been found before midnight and that no one had been seriously hurt. That should have been enough. It was not. The missing hour on the ridge, which had ended with cold hands, a twisted ankle, and an emergency search, had already started hardening into different versions. Jonah sat at the end of the long table stirring tea he had forgotten to drink. Across from him, Mira buttered toast with careful anger. Nobody mentioned the fog, the missed turning, or the late radio call. Yet each silence felt like an accusation waiting for grammar.",
+          "imagePlaceholder": "🌫️",
+          "grammarAnnotations": [
+            {
+              "targetText": "That should have been enough.",
+              "tone": "modal",
+              "note": "criticism about the past"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "text": "Ruth called the student leaders into the equipment room after breakfast. Coils of wet rope lay in blue plastic trays, and the smell of damp canvas made the room feel smaller still. Ruth said the review would begin with transparency, not self-protection. Elliot spoke first because silence frightened him more than blame did. He said Tomas must have ignored the marker posts and kept pushing the pace. Jonah replied that Tomas might have missed the last marker because snow had drifted across it. Mira, leaning against the shelves with her arms folded, said both explanations were too convenient. \"You're both talking like the mountain owed us clarity,\" she said.",
+          "imagePlaceholder": "🥾",
+          "grammarAnnotations": [
+            {
+              "targetText": "He said Tomas must have ignored the marker posts",
+              "tone": "modal",
+              "note": "strong deduction about the past"
+            },
+            {
+              "targetText": "Tomas might have missed the last marker",
+              "tone": "modal",
+              "note": "possibility in the past"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "text": "Once the first accusation had been spoken, the rest arrived too easily. Elliot said Jonah could have radioed Ruth twenty minutes earlier. Jonah answered that they needn't have climbed the final traverse at all once the wind turned. Mira said she should have challenged both of them sooner instead of assuming the argument would burn itself out. Ruth wrote three times on the whiteboard: facts, guesses, hindsight. Her handwriting was as controlled as her face. \"Integrity,\" she said, \"begins with knowing which of those three you are speaking from.\" Nobody looked pleased to hear it, which suggested it was the right thing to say.",
+          "imagePlaceholder": "🧭",
+          "grammarAnnotations": [
+            {
+              "targetText": "Jonah could have radioed Ruth twenty minutes earlier.",
+              "tone": "modal",
+              "note": "possible past action not taken"
+            },
+            {
+              "targetText": "they needn't have climbed the final traverse at all",
+              "tone": "modal",
+              "note": "unnecessary past action"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "text": "They reconstructed the route from the map. The group had left the shelter at 3:40, reached the narrow ridge by 4:25, and disappeared from the planned timeline after that. Jonah traced the line with one finger and felt his own memory resisting him. He had wanted the others to keep their autonomy; that had been part of the programme's design. Student leaders were supposed to make decisions before adults stepped in. But now the principle felt less noble. It felt like an obligation he had carried badly. If he had called sooner, he thought, Ruth would still have been angry, but the search team would have started with daylight left. The moral question was no longer abstract.",
+          "imagePlaceholder": "📋",
+          "grammarAnnotations": []
+        },
+        {
+          "order": 5,
+          "text": "The crucial detail came from Mira, not because she had been the calmest but because she had been watching while the others argued. She said Tomas had wanted to cut across a shallow bowl of snow to save time. Jonah had refused. Elliot had laughed and said they could probably do it if they moved quickly. Nobody did. They stayed on the marked path. The real mistake, she said, happened later, after the argument had technically ended. Jonah had assumed Elliot was behind him. Elliot had assumed Jonah was checking the rear of the line. For ten minutes, nobody was. \"So which of us was in charge?\" Elliot asked. Ruth did not answer immediately. A conflict of interest, she said at last, can begin when friendship makes a person assume more understanding than has actually been earned.",
+          "imagePlaceholder": "⚠️",
+          "grammarAnnotations": []
+        },
+        {
+          "order": 6,
+          "text": "That was the moment the room changed. Up to then, everyone had been trying not to be blamed. Now they were beginning to sound afraid of being complicit. Jonah said he had kept defending the decision because he did not want the whole expedition reduced to one bad hour. Mira answered that refusing the right explanation was another way of protecting yourself. Elliot looked at the floor and admitted he had joked when the visibility was collapsing because he had not wanted to sound nervous. Ruth wrote that sentence down. Then she said the formal report would mention weather, procedure, and timing; however, the real lesson was about responsibility becoming vague whenever people hoped someone else was watching.",
+          "imagePlaceholder": "🪵",
+          "grammarAnnotations": []
+        },
+        {
+          "order": 7,
+          "text": "When the meeting ended, nobody felt relieved. The facts were clearer, but the shape of the blame was not. Jonah left last and stood outside the equipment room while rain tapped against the metal fire steps. Ruth came out a minute later and closed the door behind her. \"You don't have to decide in one morning whether you're fit to lead,\" she said. \"But you do have to decide what honesty costs you.\" Jonah nodded without trusting himself to speak. He had wanted clarity; instead he had received something harder. The expedition had not failed in one dramatic instant. It had frayed through small assumptions, each easy to excuse until viewed together.",
+          "imagePlaceholder": "🕯️",
+          "grammarAnnotations": []
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Why is the atmosphere at breakfast still tense even though everyone has been found safely?",
+          "options": [
+            "Because the weather is still too dangerous for anyone to leave the centre",
+            "Because people are already forming different explanations of what happened during the missing hour",
+            "Because Ruth has announced that the expedition programme will be cancelled permanently",
+            "Because Tomas has refused to speak to anyone after the rescue"
+          ],
+          "correctAnswer": "Because people are already forming different explanations of what happened during the missing hour",
+          "explanation": "Paragraph 1 shows that the practical danger has ended, but the emotional problem has not. Different versions of the missing hour are already forming, and the silence feels accusatory."
+        },
+        {
+          "order": 2,
+          "question": "What is Mira criticising when she says, 'You're both talking like the mountain owed us clarity'?",
+          "options": [
+            "She thinks Jonah and Elliot are pretending the conditions should have been easier than they were.",
+            "She thinks Ruth should have cancelled the expedition earlier.",
+            "She believes Tomas was the only person who understood the terrain properly.",
+            "She is accusing the group of ignoring the official route entirely."
+          ],
+          "correctAnswer": "She thinks Jonah and Elliot are pretending the conditions should have been easier than they were.",
+          "explanation": "Mira objects to the neat certainty in their explanations. She suggests they are blaming the situation as though difficult conditions should have produced easy answers."
+        },
+        {
+          "order": 3,
+          "question": "Which sentence from the story is an example of 'needn't have' used for an unnecessary past action?",
+          "options": [
+            "Tomas must have ignored the marker posts.",
+            "They might have missed the last marker because of the snow.",
+            "They needn't have climbed the final traverse at all once the wind turned.",
+            "Jonah could have radioed Ruth twenty minutes earlier."
+          ],
+          "correctAnswer": "They needn't have climbed the final traverse at all once the wind turned.",
+          "explanation": "'Needn't have' is used when an action happened but, looking back, was unnecessary. Here the group did climb the traverse, but the speaker judges it as needless."
+        },
+        {
+          "order": 4,
+          "question": "What does Ruth mean by saying integrity begins with knowing whether you are speaking from facts, guesses, or hindsight?",
+          "options": [
+            "People should avoid speaking at all until the report is complete.",
+            "Honesty requires recognising the difference between what is known, what is assumed, and what is only obvious afterward.",
+            "Good leaders should trust their instincts more than their memory.",
+            "The group should focus on procedure rather than morality."
+          ],
+          "correctAnswer": "Honesty requires recognising the difference between what is known, what is assumed, and what is only obvious afterward.",
+          "explanation": "Ruth writes 'facts, guesses, hindsight' on the board to separate reliable knowledge from speculation and retrospective criticism. Her point is that ethical honesty depends on keeping those categories clear."
+        },
+        {
+          "order": 5,
+          "question": "What does the word 'complicit' in paragraph 6 most likely mean?",
+          "options": [
+            "fully in control of a difficult situation",
+            "quietly involved in something wrong because you allowed it or failed to stop it",
+            "uncertain about who gave the correct instruction",
+            "protected from blame by a stronger leader"
+          ],
+          "correctAnswer": "quietly involved in something wrong because you allowed it or failed to stop it",
+          "explanation": "Paragraph 6 contrasts being blamed with being complicit. The characters begin to fear not only obvious mistakes but also their own passive role in allowing those mistakes to grow."
+        },
+        {
+          "order": 6,
+          "question": "What understanding has Jonah reached by the end of the chapter?",
+          "options": [
+            "That the whole incident was mainly Tomas's fault",
+            "That good leadership means never letting students make autonomous decisions",
+            "That the expedition broke down through several small assumptions rather than one single dramatic error",
+            "That Ruth intends to remove him from the programme immediately"
+          ],
+          "correctAnswer": "That the expedition broke down through several small assumptions rather than one single dramatic error",
+          "explanation": "The final paragraph states this directly: the expedition did not fail in one dramatic instant but frayed through small assumptions that looked harmless in isolation."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "title": "Things Left Unsaid",
+      "vocabulary": [
+        {
+          "word": "empathy",
+          "definition": "the ability to understand and share another person's feelings",
+          "exampleSentence": "Mira wanted empathy, not a neat apology that protected Jonah from discomfort.",
+          "emoji": "🤍"
+        },
+        {
+          "word": "vulnerability",
+          "definition": "the state of being open to emotional hurt or harm",
+          "exampleSentence": "Jonah was more afraid of vulnerability than of being criticised in front of Ruth.",
+          "emoji": "🪟"
+        },
+        {
+          "word": "resentment",
+          "definition": "a lasting feeling of anger because you think something was unfair",
+          "exampleSentence": "Mira could feel resentment returning whenever people spoke as if the event were already neatly understood.",
+          "emoji": "🌧️"
+        },
+        {
+          "word": "reconcile",
+          "definition": "to repair a damaged relationship or make two opposing things fit together again",
+          "exampleSentence": "Neither of them knew whether they could reconcile immediately, but both understood that silence would not help.",
+          "emoji": "🤝"
+        },
+        {
+          "word": "estranged",
+          "definition": "no longer close to someone you were once connected to",
+          "exampleSentence": "By the bus ride home, Jonah and Mira felt almost estranged, though they had worked side by side for months.",
+          "emoji": "↔️"
+        },
+        {
+          "word": "affection",
+          "definition": "warm liking or love for someone",
+          "exampleSentence": "Their affection had not disappeared, but it had become harder to trust while the argument was still raw.",
+          "emoji": "💛"
+        },
+        {
+          "word": "attachment",
+          "definition": "a strong emotional connection to a person, place, or idea",
+          "exampleSentence": "Mira realised her attachment to the team had made the whole incident feel more personal, not less.",
+          "emoji": "🪢"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Wish / If Only",
+        "explanation": "We use wish and if only to express regret, frustration, or a strong desire for things to be different. We can use wish plus the past simple for present regrets, wish plus would for irritation about behaviour, and wish plus the past perfect for regrets about the past. If only is usually more emotional and intense.",
+        "examples": [
+          "Mira wished the whole centre were quieter so she could think clearly.",
+          "Jonah wished Elliot would stop making jokes every time a room became uncomfortable.",
+          "If only he had spoken honestly the night before, the morning would have felt less sharp.",
+          "Mira wished she had said what she meant while they were still on the bus."
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "The equipment room felt smaller after the meeting than it had during it. Mira came back for her waterproofs and found Jonah there, folding ropes that did not need folding. For a few seconds neither of them spoke. She wished the room were louder, messier, less good at amplifying every small movement. Instead, all she could hear was the soft drag of nylon over metal. Jonah said he had been waiting for her, which sounded both brave and badly timed. Mira nodded as though she had heard something less awkward than that.",
+          "imagePlaceholder": "🎒",
+          "grammarAnnotations": [
+            {
+              "targetText": "She wished the room were louder, messier, less good at amplifying every small movement.",
+              "tone": "structure",
+              "note": "wish for a different present"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "text": "They ended up on the bus into town because neither of them had the energy to wait for the later minibus. Rain ran across the windows in long grey lines, breaking the world outside into pieces. Jonah sat one seat ahead at first, then moved back beside her when the bus emptied. \"I wish Elliot would stop pretending jokes count as honesty,\" Mira said, still looking out of the window. Jonah almost smiled, then realised smiling would be a mistake. The problem, he said, was that Elliot was not the only person who had hidden behind tone. That landed more sharply than she expected because it was true.",
+          "imagePlaceholder": "🚌",
+          "grammarAnnotations": [
+            {
+              "targetText": "I wish Elliot would stop pretending jokes count as honesty,",
+              "tone": "structure",
+              "note": "wish with would for annoyance"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "text": "By the second stop, the conversation had become careful enough to be honest. Jonah said he wished he had called Ruth the moment the group slowed on the ridge. Mira answered that if only it had been as simple as one call, she would have been angrier and less tired. What had exhausted her was the feeling of becoming invisible while decisions were being made around her. Jonah started to apologise, stopped, and tried again. He said he had mistaken calm for leadership and distance for control. Mira, who had spent most of the morning wrapped in resentment, hated how close that came to the centre of it.",
+          "imagePlaceholder": "🌧️",
+          "grammarAnnotations": [
+            {
+              "targetText": "he wished he had called Ruth the moment the group slowed on the ridge.",
+              "tone": "structure",
+              "note": "wish about a past regret"
+            },
+            {
+              "targetText": "if only it had been as simple as one call,",
+              "tone": "structure",
+              "note": "emphatic regret"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "text": "At Mira's stop, neither of them stood up quickly enough, so the driver had to brake harder than necessary. They laughed despite themselves, which felt strange and faintly disloyal to the seriousness of the day. Outside her house, with evening rain dripping from the gutter, Jonah said he did not want them to become estranged over one expedition. Mira answered that people rarely became estranged over one event. They became estranged through repetition, through silence, through choosing the easier version too many times. The sentence came out colder than she intended. Yet she did not take it back. Affection, she was beginning to realise, was not the same thing as trust.",
+          "imagePlaceholder": "🪟",
+          "grammarAnnotations": []
+        },
+        {
+          "order": 5,
+          "text": "Jonah looked at the wet pavement for so long that she almost told him to go home. Then he said, quietly, that he wished she were wrong about repetition. Not because he doubted her, but because he knew she had seen something he had not wanted to see in himself. He had liked being reliable. He had liked the attachment people in the group seemed to have to his steadiness. Admitting that he had failed them threatened more than his reputation; it threatened the story he had been telling about himself. Mira felt empathy arrive in spite of herself, which annoyed her because she was not done being angry. Vulnerability, she thought, was inconvenient mostly because it ruined tidy emotions.",
+          "imagePlaceholder": "💬",
+          "grammarAnnotations": [
+            {
+              "targetText": "he wished she were wrong about repetition.",
+              "tone": "structure",
+              "note": "wish for a different present"
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "text": "They stood there long enough for the kitchen light to come on behind the frosted glass. Mira said she was not ready to reconcile everything that had happened into one comforting lesson, and Jonah said he was not asking for that. What he wanted, he said, was a chance not to hide the next time things became difficult. \"If only we'd spoken like this yesterday,\" Mira said. Jonah nodded. \"We probably couldn't have,\" he answered. It was the first generous thing either of them had said all day, and because it was modest, she trusted it. Some part of her resentment loosened. Not vanished, not forgiven, but loosened enough to make room for something else.",
+          "imagePlaceholder": "🫱",
+          "grammarAnnotations": [
+            {
+              "targetText": "If only we'd spoken like this yesterday,",
+              "tone": "structure",
+              "note": "if only for past regret"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "text": "Before he left, Jonah asked whether she would message him after the written review came out. Mira said yes, but not lightly. After he walked away, she stayed under the porch a moment longer, listening to the rain tick through the drainpipe. Nothing had been solved completely. The expedition would still be written up, discussed, perhaps reduced. Yet the private truth felt slightly less damaged than it had that morning. She still carried resentment; she also carried affection, and the two no longer felt like enemies. When she finally went inside, she knew the friendship had not returned to what it had been. It had become something less certain and, perhaps because of that, more honest.",
+          "imagePlaceholder": "🌙",
+          "grammarAnnotations": []
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Why does Mira wish the equipment room were louder and messier at the start of the chapter?",
+          "options": [
+            "Because she wants to avoid hearing the staff meeting happening next door",
+            "Because a quieter room makes the awkwardness between her and Jonah feel stronger",
+            "Because she is worried somebody will overhear their conversation",
+            "Because she thinks the room has become unsafe after the expedition"
+          ],
+          "correctAnswer": "Because a quieter room makes the awkwardness between her and Jonah feel stronger",
+          "explanation": "Paragraph 1 shows that the silence makes every movement feel amplified. Mira wishes the room were less quiet because the stillness intensifies the awkward tension between them."
+        },
+        {
+          "order": 2,
+          "question": "What does Mira mean when she says people rarely become estranged over one event?",
+          "options": [
+            "She means the expedition was not serious enough to damage any friendship.",
+            "She means distance usually grows through repeated patterns of silence and avoidance.",
+            "She means Jonah should stop worrying about the friendship immediately.",
+            "She means conflicts are always caused by outside pressure rather than personal choices."
+          ],
+          "correctAnswer": "She means distance usually grows through repeated patterns of silence and avoidance.",
+          "explanation": "In paragraph 4, Mira explains that estrangement grows through repetition, silence, and choosing the easier version too many times. She is describing a gradual process, not a single dramatic break."
+        },
+        {
+          "order": 3,
+          "question": "Which sentence from the story is an example of wish + would used for irritation?",
+          "options": [
+            "She wished the room were louder.",
+            "He wished he had called Ruth earlier.",
+            "I wish Elliot would stop pretending jokes count as honesty.",
+            "If only we'd spoken like this yesterday."
+          ],
+          "correctAnswer": "I wish Elliot would stop pretending jokes count as honesty.",
+          "explanation": "Wish + would is often used to complain about another person's behaviour. Here Mira is irritated by Elliot's habit of hiding behind jokes."
+        },
+        {
+          "order": 4,
+          "question": "Why does Mira begin to feel empathy for Jonah in paragraph 5?",
+          "options": [
+            "Because he finally blames Elliot directly for the expedition mistake",
+            "Because she sees that admitting failure threatens the identity he had built around being reliable",
+            "Because he promises the friendship will return to normal quickly",
+            "Because she realises Ruth has already forgiven him completely"
+          ],
+          "correctAnswer": "Because she sees that admitting failure threatens the identity he had built around being reliable",
+          "explanation": "Paragraph 5 explains that Jonah's problem is not only reputational. Admitting failure threatens the story he tells about himself, and Mira recognises that vulnerability even while still being angry."
+        },
+        {
+          "order": 5,
+          "question": "What does the word 'resentment' in the chapter most likely mean?",
+          "options": [
+            "a temporary feeling of embarrassment that fades quickly",
+            "a deep and lasting sense of anger caused by unfair treatment",
+            "a strong wish to avoid emotional closeness forever",
+            "a habit of refusing to speak during an argument"
+          ],
+          "correctAnswer": "a deep and lasting sense of anger caused by unfair treatment",
+          "explanation": "Mira's resentment is not brief irritation. It is the lingering anger she feels because decisions were made around her and because the public explanation felt incomplete."
+        },
+        {
+          "order": 6,
+          "question": "What is the most accurate description of the ending of the chapter?",
+          "options": [
+            "The friendship returns fully to how it was before the expedition.",
+            "Mira decides the relationship cannot be repaired at all.",
+            "The friendship is not fully repaired, but a more honest version of it becomes possible.",
+            "Jonah chooses to leave the programme so that Mira can move on."
+          ],
+          "correctAnswer": "The friendship is not fully repaired, but a more honest version of it becomes possible.",
+          "explanation": "The final paragraph says nothing has been solved completely and that the friendship has not returned to what it was. However, it has become more honest, which suggests partial repair rather than total restoration or collapse."
+        }
+      ]
+    }
+  ]
+}

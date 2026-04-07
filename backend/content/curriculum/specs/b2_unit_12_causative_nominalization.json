@@ -1,0 +1,73 @@
+{
+  "storyTitle": "Pressure Lines",
+  "level": "B2",
+  "curriculumUnit": 12,
+  "grammarTarget": "Causative Have/Get + Nominalization",
+  "grammarKeyStructures": [
+    "have/get + object + past participle",
+    "nominalization: decide → decision, fail → failure",
+    "formal writing register"
+  ],
+  "chapterNumber": 2,
+  "chapterTitle": "After the Report",
+  "storyTopic": "After the expedition triggers a formal review, the student leader must navigate institutional language, procedural control, and the strange distance between lived experience and the official version written about it.",
+  "setting": "A school administration office, a risk review meeting, and the corridor outside after the final decision is issued",
+  "mainCharacters": [
+    {
+      "name": "Elena",
+      "description": "18-year-old expedition lead, more composed now but frustrated by how institutional language edits human reality"
+    },
+    {
+      "name": "Dr Keane",
+      "description": "expedition supervisor, calm under institutional scrutiny, careful not to let procedure erase context"
+    },
+    {
+      "name": "Ms Voss",
+      "description": "school compliance officer, precise, formal, not cruel but deeply shaped by systems and protocol"
+    },
+    {
+      "name": "Tomas",
+      "description": "team member whose defensiveness makes the review more tense and politically fragile"
+    }
+  ],
+  "vocabularyTheme": "systems_and_institutions",
+  "targetWords": [
+    "bureaucracy",
+    "protocol",
+    "framework",
+    "comply",
+    "jurisdiction",
+    "mandate",
+    "amendment"
+  ],
+  "comprehensionQuestionTypes": [
+    "literal",
+    "inferential",
+    "literal",
+    "inferential",
+    "vocabulary_in_context",
+    "literal"
+  ],
+  "toneAndStyle": "Controlled, incisive B2 prose with a more formal texture than the expedition chapter. The grammar target should arise naturally from official procedure, institutional phrasing, and Elena's reactions to it.",
+  "emotionalArc": "contained frustration -> procedural pressure -> sharpened self-possession -> sober acceptance",
+  "paragraphEmojis": [
+    "🏢",
+    "📄",
+    "⚖️",
+    "🪑",
+    "🖊️",
+    "🚪",
+    "🌫️"
+  ],
+  "recycledVocabulary": [
+    "endurance",
+    "accountability",
+    "obligation"
+  ],
+  "avoidTopics": [
+    "cartoonishly evil authority figures",
+    "dense legal jargon for its own sake",
+    "perfect vindication"
+  ],
+  "notes": "The chapter should include natural uses of have/get something done and formal nominalized language such as decision, recommendation, assessment, failure, revision, and approval. Show the tension between active lived memory and passive institutional framing. The ending should not be triumphant; it should show Elena understanding the system more clearly, even if she does not fully agree with it."
+}

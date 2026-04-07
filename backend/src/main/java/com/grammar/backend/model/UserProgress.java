@@ -1,6 +1,7 @@
 package com.grammar.backend.model;
 
 import java.time.Instant;
+import java.util.List;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.CompoundIndex;
@@ -19,9 +20,22 @@ public class UserProgress {
 
   private String chapterId;
 
+  private String grammarRule;
+
   private int score;
 
   private int totalQuestions;
 
   private Instant completedAt;
+
+  private List<QuestionMistake> mistakes;
+
+  @Data
+  public static class QuestionMistake {
+    private int questionOrder;
+    private String question;
+    private String selectedAnswer;
+    private String correctAnswer;
+    private String explanation;
+  }
 }

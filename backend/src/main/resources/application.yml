@@ -1,6 +1,11 @@
 server:
   port: 8082
 
+firebase:
+  credentials:
+    json: ${FIREBASE_CREDENTIALS_JSON:}
+    path: ${FIREBASE_CREDENTIALS_PATH:C:/Users/aungm/Projects/grammar-app/dailybrain-78864-firebase-adminsdk-fbsvc-2d498e2c47.json}
+
 spring:
   application:
     name: grammar-backend

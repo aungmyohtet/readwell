@@ -1,0 +1,76 @@
+{
+  "storyTitle": "The Public Square",
+  "level": "B2",
+  "curriculumUnit": 11,
+  "grammarTarget": "Advanced Connectors and Discourse Markers",
+  "grammarKeyStructures": [
+    "despite/in spite of",
+    "nevertheless, nonetheless",
+    "furthermore, moreover",
+    "as a result, consequently",
+    "although vs even though vs however"
+  ],
+  "chapterNumber": 2,
+  "chapterTitle": "After the Hearing",
+  "storyTopic": "After publishing a careful article about a divisive redevelopment hearing, a student journalist must follow the public reaction and decide how to write a second piece that acknowledges conflict without flattening complexity.",
+  "setting": "The same riverfront district, the council chamber, and the school newsroom in the two days after a highly charged public hearing",
+  "mainCharacters": [
+    {
+      "name": "Nadia",
+      "description": "17-year-old student journalist, thoughtful, disciplined, and increasingly aware of the weight of framing"
+    },
+    {
+      "name": "Mr Mercer",
+      "description": "editor of the school paper, demanding about clarity and fairness, allergic to lazy argument"
+    },
+    {
+      "name": "Leila Rahman",
+      "description": "campaign organiser who understands strategy but is tired of being simplified by the media"
+    },
+    {
+      "name": "Councillor Vale",
+      "description": "careful public official whose position is defensible on paper but politically costly in practice"
+    }
+  ],
+  "vocabularyTheme": "global_challenges",
+  "targetWords": [
+    "governance",
+    "infrastructure",
+    "disparity",
+    "humanitarian",
+    "diplomacy",
+    "geopolitical",
+    "refugee"
+  ],
+  "comprehensionQuestionTypes": [
+    "literal",
+    "inferential",
+    "literal",
+    "inferential",
+    "vocabulary_in_context",
+    "literal"
+  ],
+  "toneAndStyle": "Nuanced, mature B2 narrative with strong cohesion, public tension, and reflective interiority. The connectors should shape the reasoning and emotional movement of the chapter rather than sit on top of it mechanically.",
+  "emotionalArc": "measured confidence -> public friction -> moral complexity -> steadier conviction",
+  "paragraphEmojis": [
+    "🏛️",
+    "🗣️",
+    "📰",
+    "🌧️",
+    "⚖️",
+    "🧩",
+    "🕯️"
+  ],
+  "recycledVocabulary": [
+    "consensus",
+    "polarise",
+    "reform",
+    "advocacy"
+  ],
+  "avoidTopics": [
+    "graphic violence",
+    "didactic speeches",
+    "simplistic moral resolution"
+  ],
+  "notes": "This chapter should function as the consequence chapter for Story A. Nadia has already published a careful first article. Now she must watch how different groups respond. The chapter must naturally use contrast, concession, addition, and result markers in both narration and dialogue. Include at least one moment where Nadia realises that a technically balanced article can still be emotionally incomplete. The ending should show growth in judgement: she chooses precision and context over performative neutrality. Keep the story rooted in local redevelopment, public trust, and how language can clarify or distort shared reality."
+}

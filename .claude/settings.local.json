@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python backend/content/validate.py backend/content/stories/b2_the_public_square.json)",
+      "Bash(python backend/content/validate.py backend/content/stories/b2_fault_line.json)"
+    ]
+  }
+}

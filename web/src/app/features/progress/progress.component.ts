@@ -1,7 +1,8 @@
 import { Component, OnInit, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { forkJoin } from 'rxjs';
 import { ProgressService } from '../../core/services/progress.service';
-import { ProgressRecord } from '../../core/models/progress.model';
+import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation } from '../../core/models/progress.model';
 
 @Component({
   selector: 'app-progress',
@@ -46,7 +47,7 @@ import { ProgressRecord } from '../../core/models/progress.model';
             <div class="stat-label">Total Points</div>
           </div>
           <div class="stat-card card">
-            <div class="stat-value">{{ averagePct() }}%</div>
+            <div class="stat-value">{{ dashboardAveragePct() }}%</div>
             <div class="stat-label">Average Score</div>
           </div>
           <div class="stat-card card accent-card">
@@ -68,6 +69,51 @@ import { ProgressRecord } from '../../core/models/progress.model';
           </div>
         </section>
 
+        @if (reviewQueue().length > 0) {
+          <section class="review-queue section-card">
+            <div class="section-heading">
+              <div>
+                <span class="eyebrow">Adaptive Review</span>
+                <h2 class="section-title">Recommended next review</h2>
+              </div>
+              <p class="section-note">These chapters are the best places to revisit before moving ahead.</p>
+            </div>
+
+            <div class="review-list">
+              @for (item of reviewQueue(); track item.chapterId) {
+                <a class="review-item card" [routerLink]="['/chapters', item.chapterId]">
+                  <div class="review-copy">
+                    <strong>{{ item.storyTitle }}</strong>
+                    <span>Ch. {{ item.chapterNumber }}: {{ item.chapterTitle }}</span>
+                    <p>{{ item.grammarRule }} · {{ item.reason }}</p>
+                  </div>
+                  <div class="review-score">{{ item.lastScorePct }}%</div>
+                </a>
+              }
+            </div>
+          </section>
+        }
+
+        @if (weakAreas().length > 0) {
+          <section class="weak-areas section-card">
+            <div class="section-heading compact">
+              <div>
+                <span class="eyebrow">Weak Areas</span>
+                <h2 class="section-title">Grammar to revisit</h2>
+              </div>
+            </div>
+
+            <div class="weak-area-list">
+              @for (area of weakAreas(); track area.grammarRule) {
+                <div class="weak-area-chip card">
+                  <strong>{{ area.grammarRule }}</strong>
+                  <span>{{ area.missCount }} missed answers across {{ area.chapterCount }} chapter{{ area.chapterCount === 1 ? '' : 's' }}</span>
+                </div>
+              }
+            </div>
+          </section>
+        }
+
         <h2 class="section-title">History</h2>
         <div class="history-list">
           @for (record of history(); track record.id) {
@@ -86,6 +132,34 @@ import { ProgressRecord } from '../../core/models/progress.model';
             </div>
           }
         </div>
+
+        @if (mistakeBank().length > 0) {
+          <section class="mistake-bank section-card">
+            <div class="section-heading compact">
+              <div>
+                <span class="eyebrow">Mistake Bank</span>
+                <h2 class="section-title">Recent questions to learn from</h2>
+              </div>
+            </div>
+
+            <div class="mistake-list">
+              @for (item of mistakeBank(); track item.chapterId + '-' + item.questionOrder + '-' + item.completedAt) {
+                <div class="mistake-item card">
+                  <div class="mistake-topline">
+                    <strong>{{ item.storyTitle }} · Ch. {{ item.chapterNumber }}</strong>
+                    <span>{{ formatMistakeDate(item.completedAt) }}</span>
+                  </div>
+                  <div class="mistake-rule">{{ item.grammarRule }}</div>
+                  <p class="mistake-question">Q{{ item.questionOrder }}. {{ item.question }}</p>
+                  <p class="mistake-answer wrong-answer">Your answer: <strong>{{ item.selectedAnswer || 'No answer' }}</strong></p>
+                  <p class="mistake-answer correct-answer">Correct answer: <strong>{{ item.correctAnswer }}</strong></p>
+                  <p class="mistake-explanation">{{ item.explanation }}</p>
+                  <a class="mistake-link" [routerLink]="['/chapters', item.chapterId]">Review chapter →</a>
+                </div>
+              }
+            </div>
+          </section>
+        }
       }
     </div>
   `,
@@ -129,6 +203,15 @@ import { ProgressRecord } from '../../core/models/progress.model';
     .insight-title { display: block; font-size: 0.78rem; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.35rem; }
     .insight-card strong { display: block; font-size: 1.4rem; margin-bottom: 0.2rem; }
     .insight-card p { color: var(--muted); font-size: 0.88rem; }
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .section-heading.compact { margin-bottom: 0.85rem; }
+    .section-note { color: var(--muted); max-width: 28rem; font-size: 0.88rem; }
     .section-title { font-size: 1.15rem; font-weight: 800; margin-bottom: 12px; color: var(--ink); }
     .history-list { display: flex; flex-direction: column; gap: 10px; }
     .history-item { display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: rgba(255, 252, 247, 0.8); }
@@ -138,6 +221,41 @@ import { ProgressRecord } from '../../core/models/progress.model';
     .history-score { text-align: right; }
     .score-value { font-size: 1.25rem; font-weight: 800; color: var(--accent-strong); &.perfect { color: #236342; } }
     .score-pct { font-size: 0.8rem; color: var(--muted); }
+    .review-queue, .weak-areas, .mistake-bank { margin-bottom: 1rem; }
+    .review-list, .mistake-list { display: flex; flex-direction: column; gap: 0.85rem; }
+    .review-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: inherit;
+      background: linear-gradient(180deg, rgba(15, 118, 110, 0.08), rgba(255, 252, 247, 0.95));
+    }
+    .review-copy { display: flex; flex-direction: column; gap: 0.18rem; }
+    .review-copy span, .review-copy p { color: var(--muted); font-size: 0.88rem; }
+    .review-score { font-size: 1.4rem; font-weight: 800; color: var(--accent-strong); white-space: nowrap; }
+    .weak-area-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.85rem; }
+    .weak-area-chip { display: flex; flex-direction: column; gap: 0.25rem; background: rgba(255, 247, 237, 0.92); }
+    .weak-area-chip span { color: var(--muted); font-size: 0.85rem; }
+    .mistake-item { background: rgba(255, 255, 255, 0.78); }
+    .mistake-topline { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 0.3rem; font-size: 0.82rem; }
+    .mistake-topline span { color: var(--muted); white-space: nowrap; }
+    .mistake-rule {
+      display: inline-flex;
+      width: fit-content;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(15, 118, 110, 0.12);
+      color: var(--accent-strong);
+      font-size: 0.76rem;
+      font-weight: 700;
+      margin-bottom: 0.55rem;
+    }
+    .mistake-question { font-weight: 700; margin-bottom: 0.5rem; }
+    .mistake-answer, .mistake-explanation { font-size: 0.9rem; margin-bottom: 0.32rem; }
+    .wrong-answer { color: #b45309; }
+    .mistake-link { display: inline-flex; margin-top: 0.35rem; font-weight: 700; color: var(--accent-strong); text-decoration: none; }
 
     @media (max-width: 860px) {
       .progress-hero,
@@ -147,6 +265,10 @@ import { ProgressRecord } from '../../core/models/progress.model';
 
       .stats-row {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .weak-area-list {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -195,6 +317,13 @@ import { ProgressRecord } from '../../core/models/progress.model';
         border-radius: 1.15rem;
       }
 
+      .section-heading,
+      .review-item,
+      .mistake-topline {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
       .history-info {
         width: 100%;
       }
@@ -228,14 +357,22 @@ import { ProgressRecord } from '../../core/models/progress.model';
 })
 export class ProgressComponent implements OnInit {
   history = signal<ProgressRecord[]>([]);
+  insights = signal<ProgressInsights | null>(null);
   loading = signal(false);
 
   constructor(private progressService: ProgressService) {}
 
   ngOnInit() {
     this.loading.set(true);
-    this.progressService.getHistory().subscribe({
-      next: (data) => { this.history.set(data); this.loading.set(false); },
+    forkJoin({
+      history: this.progressService.getHistory(),
+      insights: this.progressService.getInsights(),
+    }).subscribe({
+      next: ({ history, insights }) => {
+        this.history.set(history);
+        this.insights.set(insights);
+        this.loading.set(false);
+      },
       error: () => this.loading.set(false),
     });
   }
@@ -251,6 +388,10 @@ export class ProgressComponent implements OnInit {
     return Math.round(total / h.length);
   }
 
+  dashboardAveragePct(): number {
+    return this.insights()?.averageScorePct ?? this.averagePct();
+  }
+
   pct(r: ProgressRecord): number {
     if (!r.totalQuestions) return 0;
     return Math.round((r.score / r.totalQuestions) * 100);
@@ -260,6 +401,10 @@ export class ProgressComponent implements OnInit {
     return new Date(iso).toLocaleDateString('en-GB', {
       day: 'numeric', month: 'short', year: 'numeric',
     });
+  }
+
+  formatMistakeDate(iso: string): string {
+    return this.formatDate(iso);
   }
 
   storiesExplored(): number {
@@ -274,5 +419,17 @@ export class ProgressComponent implements OnInit {
     const cutoff = new Date();
     cutoff.setDate(cutoff.getDate() - 30);
     return this.history().filter((record) => new Date(record.completedAt) >= cutoff).length;
+  }
+
+  reviewQueue(): ReviewRecommendation[] {
+    return this.insights()?.reviewQueue ?? [];
+  }
+
+  weakAreas() {
+    return this.insights()?.weakAreas ?? [];
+  }
+
+  mistakeBank(): MistakeBankItem[] {
+    return this.insights()?.mistakeBank ?? [];
   }
 }

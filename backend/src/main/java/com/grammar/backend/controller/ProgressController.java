@@ -1,6 +1,7 @@
 package com.grammar.backend.controller;
 
 import com.grammar.backend.dto.ProgressResponse;
+import com.grammar.backend.dto.ProgressInsightsResponse;
 import com.grammar.backend.dto.SubmitProgressRequest;
 import com.grammar.backend.service.ProgressService;
 import jakarta.validation.Valid;
@@ -33,5 +34,11 @@ public class ProgressController {
   public List<ProgressResponse> getHistory(Authentication auth) {
     String userId = (String) auth.getPrincipal();
     return progressService.getHistory(userId);
+  }
+
+  @GetMapping("/insights")
+  public ProgressInsightsResponse getInsights(Authentication auth) {
+    String userId = (String) auth.getPrincipal();
+    return progressService.getInsights(userId);
   }
 }

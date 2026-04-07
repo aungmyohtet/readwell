@@ -272,19 +272,13 @@ Story files live in `content/stories/`. Each file contains one story and one or 
 
 ## Remaining Content Gaps
 
-### A2 (units still without stories)
-- U9 There is/are + Quantifiers
-- U10 Articles
-- U11 Question Forms
-- U12 Countable & Uncountable Nouns
+### A2
+- Curriculum coverage is now complete.
+- Launch focus is maintenance, validation, and preserving the current editorial standard.
 
-### B1 (units still without stories)
-- U7 Passive Voice
-- U8 Reported Speech
-- U9 Defining Relative Clauses
-- U10 Gerunds & Infinitives
-- U11 Modal Verbs – Deduction
-- U12 Time Clauses
+### B1
+- Story coverage is now materially broader than the original plan.
+- Launch focus is no longer coverage first; it is a consistent final editorial pass across the existing B1 catalogue.
 
 ### B2 (units still without stories)
 - U5 Reported Speech Complex

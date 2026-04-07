@@ -1,0 +1,75 @@
+{
+  "storyTitle": "Fault Line",
+  "level": "B2",
+  "curriculumUnit": 7,
+  "grammarTarget": "Modal Perfect",
+  "grammarKeyStructures": [
+    "must have + pp",
+    "should have + pp",
+    "could have + pp",
+    "might have + pp",
+    "needn't have + pp"
+  ],
+  "chapterNumber": 1,
+  "chapterTitle": "The Missing Hour",
+  "storyTopic": "After a serious mistake during a youth leadership programme in the hills, two students and their instructor try to reconstruct what happened, using speculation, blame, and hindsight to make sense of one missing hour.",
+  "setting": "An outdoor leadership centre on the edge of a national park, the morning after an emergency search",
+  "mainCharacters": [
+    {
+      "name": "Jonah",
+      "description": "18-year-old volunteer leader, capable and calm in public, privately shaken by the previous night"
+    },
+    {
+      "name": "Mira",
+      "description": "17-year-old participant, perceptive, proud, unwilling to let adults oversimplify what happened"
+    },
+    {
+      "name": "Ruth",
+      "description": "programme director, responsible, fair-minded, conscious that leadership includes admitting uncertainty"
+    },
+    {
+      "name": "Elliot",
+      "description": "another student leader, quick to speculate and uncomfortable with blame landing near him"
+    }
+  ],
+  "vocabularyTheme": "ethics_and_responsibility",
+  "targetWords": [
+    "integrity",
+    "obligation",
+    "transparency",
+    "complicit",
+    "autonomy",
+    "moral",
+    "conflict of interest"
+  ],
+  "comprehensionQuestionTypes": [
+    "literal",
+    "inferential",
+    "literal",
+    "inferential",
+    "vocabulary_in_context",
+    "literal"
+  ],
+  "toneAndStyle": "Tense but controlled B2 narrative with emotional restraint, precise reconstruction, and credible dialogue. The modal perfect forms should emerge through uncertainty, responsibility, and hindsight, not as grammar display.",
+  "emotionalArc": "controlled anxiety -> defensive speculation -> painful clarity -> uneasy honesty",
+  "paragraphEmojis": [
+    "🌫️",
+    "🥾",
+    "🧭",
+    "📋",
+    "⚠️",
+    "🪵",
+    "🕯️"
+  ],
+  "recycledVocabulary": [
+    "dilemma",
+    "accountability",
+    "mitigate"
+  ],
+  "avoidTopics": [
+    "graphic injury",
+    "melodrama",
+    "clear villain framing"
+  ],
+  "notes": "The story should center on a real ethical tension: how people talk after a mistake before all facts are known. Include at least one example each of must have, might have, should have, could have, and needn't have. Some should be wrong or contested in dialogue, because the whole point is that speculation can drift into blame. End with partial clarity rather than total resolution: the facts become clearer, but the moral weight remains shared and uncomfortable."
+}

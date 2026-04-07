@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import { ProgressRecord, SubmitProgressRequest } from '../models/progress.model';
+import { ProgressInsights, ProgressRecord, SubmitProgressRequest } from '../models/progress.model';
 
 @Injectable({ providedIn: 'root' })
 export class ProgressService {
@@ -16,5 +16,9 @@ export class ProgressService {
 
   getHistory(): Observable<ProgressRecord[]> {
     return this.http.get<ProgressRecord[]>(`${this.base}/api/progress/history`);
+  }
+
+  getInsights(): Observable<ProgressInsights> {
+    return this.http.get<ProgressInsights>(`${this.base}/api/progress/insights`);
   }
 }

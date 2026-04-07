@@ -776,7 +776,16 @@ export class ReaderComponent implements OnInit {
     });
     this.score.set(correct);
     this.quizSubmitted.set(true);
-    this.progressService.submit({ storyId: chapter.storyId, chapterId: chapter.id, score: correct, totalQuestions: chapter.comprehension.length }).subscribe();
+    this.progressService.submit({
+      storyId: chapter.storyId,
+      chapterId: chapter.id,
+      score: correct,
+      totalQuestions: chapter.comprehension.length,
+      questionAttempts: chapter.comprehension.map((question) => ({
+        questionOrder: question.order,
+        selectedAnswer: this.answers()[question.order] ?? '',
+      })),
+    }).subscribe();
   }
 
   retryQuiz() {

@@ -1,0 +1,70 @@
+{
+  "storyTitle": "Borrowed Names",
+  "level": "B2",
+  "curriculumUnit": 10,
+  "grammarTarget": "Emphasis – Cleft Sentences and Inversion",
+  "grammarKeyStructures": [
+    "It was X that/who...",
+    "What I need is...",
+    "Not only...but also",
+    "Rarely/Never/Seldom + inversion"
+  ],
+  "chapterNumber": 2,
+  "chapterTitle": "What the Label Leaves Out",
+  "storyTopic": "As the exhibition opens, Amina has to introduce her grandmother publicly and chooses to speak in a way that resists simplification, using emphasis to reclaim what the official labels leave out.",
+  "setting": "Opening night at the museum, moving between the gallery floor, Amina's short speech, and a quiet final exchange after the guests leave",
+  "mainCharacters": [
+    {
+      "name": "Amina",
+      "description": "17-year-old student, more self-possessed now, determined to speak honestly without turning her family into a performance"
+    },
+    {
+      "name": "Nadia Karim",
+      "description": "Amina's grandmother, composed and exacting, moved by truthfulness more than praise"
+    },
+    {
+      "name": "Ms Hargreaves",
+      "description": "museum curator who listens carefully when she realises the official framing is incomplete"
+    }
+  ],
+  "vocabularyTheme": "arts_and_expression",
+  "targetWords": [
+    "narrative",
+    "metaphor",
+    "composition",
+    "evocative",
+    "ambiguous",
+    "interpret",
+    "resonate"
+  ],
+  "comprehensionQuestionTypes": [
+    "literal",
+    "inferential",
+    "literal",
+    "inferential",
+    "vocabulary_in_context",
+    "literal"
+  ],
+  "toneAndStyle": "Poised, expressive B2 prose with rhetorical control and emotional precision. The emphasis structures should appear in speech, inner reflection, and narration with a real dramatic function, not as isolated grammar examples.",
+  "emotionalArc": "tension -> self-command -> public truth -> quiet release",
+  "paragraphEmojis": [
+    "🕯️",
+    "🎤",
+    "🖼️",
+    "👥",
+    "💡",
+    "🤝",
+    "🌃"
+  ],
+  "recycledVocabulary": [
+    "heritage",
+    "representation",
+    "diaspora"
+  ],
+  "avoidTopics": [
+    "speechifying",
+    "flat inspirational tone",
+    "perfect reconciliation"
+  ],
+  "notes": "This chapter should use emphasis structures to show Amina gaining rhetorical control. Include at least one meaningful example each of an it-cleft, a wh-cleft, and inversion after a negative adverbial. The focus is not performance for its own sake, but reclaiming narrative accuracy. The ending should be emotionally understated: what matters is that the grandmother feels seen, not celebrated in a simplistic way."
+}

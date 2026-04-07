@@ -1,0 +1,69 @@
+{
+  "storyTitle": "Borrowed Names",
+  "level": "B2",
+  "curriculumUnit": 6,
+  "grammarTarget": "Non-Defining Relative Clauses",
+  "grammarKeyStructures": [
+    "who, which, where, whose + commas",
+    "contrast with defining clauses",
+    "relative clauses replacing sentences: which surprised us all"
+  ],
+  "chapterNumber": 1,
+  "chapterTitle": "The Glass Cases",
+  "storyTopic": "A sixth-form student helping curate a cultural exhibition about her grandmother's migration begins to understand that public versions of identity, which sound neat in captions and speeches, often hide more complicated private histories.",
+  "setting": "A local museum preparing a new community exhibition, with scenes in the archive room, the gallery space, and the family kitchen later that evening",
+  "mainCharacters": [
+    {
+      "name": "Amina",
+      "description": "17-year-old student, observant, artistically minded, proud of her family but uneasy about simplifying their history"
+    },
+    {
+      "name": "Nadia Karim",
+      "description": "Amina's grandmother, elegant, sharp-witted, generous with stories on her own terms but resistant to being reduced to a symbol"
+    },
+    {
+      "name": "Ms Hargreaves",
+      "description": "museum curator, thoughtful and well-meaning, experienced in public storytelling but sometimes too tidy in her framing"
+    }
+  ],
+  "vocabularyTheme": "culture_and_identity",
+  "targetWords": [
+    "heritage",
+    "diaspora",
+    "representation",
+    "stereotype",
+    "subculture",
+    "assimilate",
+    "minority"
+  ],
+  "comprehensionQuestionTypes": [
+    "literal",
+    "inferential",
+    "literal",
+    "inferential",
+    "vocabulary_in_context",
+    "literal"
+  ],
+  "toneAndStyle": "Reflective, intimate B2 narrative with elegant but readable sentences. The grammar should feel woven into descriptions, memories, and exhibition language rather than highlighted by artificial repetition.",
+  "emotionalArc": "pride -> discomfort -> deeper listening -> clearer understanding",
+  "paragraphEmojis": [
+    "🏛️",
+    "🖼️",
+    "📦",
+    "🍵",
+    "🧵",
+    "💬",
+    "✨"
+  ],
+  "recycledVocabulary": [
+    "legacy",
+    "representation",
+    "consensus"
+  ],
+  "avoidTopics": [
+    "caricatured cultural conflict",
+    "lecture-like exposition",
+    "easy resolution"
+  ],
+  "notes": "The chapter should naturally include multiple non-defining relative clauses, especially in narrative description and family recollection. Make clear by contrast that the clauses add extra information rather than identify the noun. Include at least one sentence where the relative clause comments on a whole previous idea, such as 'which unsettled her' or 'which surprised them both.' The emotional core is that Amina realises her grandmother, who has been publicly praised for resilience, does not want to be displayed as a simplified museum lesson."
+}

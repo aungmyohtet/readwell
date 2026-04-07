@@ -1,0 +1,73 @@
+{
+  "storyTitle": "The Public Square",
+  "level": "B2",
+  "curriculumUnit": 5,
+  "grammarTarget": "Reported Speech – Complex",
+  "grammarKeyStructures": [
+    "advised/warned/insisted/denied/refused + gerund or infinitive",
+    "reported questions with whether/if",
+    "reported imperatives"
+  ],
+  "chapterNumber": 1,
+  "chapterTitle": "What They Said Happened",
+  "storyTopic": "A sixth-form student journalist investigates a disputed redevelopment plan and discovers that the real conflict lies not only in what people believe, but in how their words are repeated, softened, denied, and reframed.",
+  "setting": "A riverfront district in a medium-sized English city during the week before a decisive council hearing",
+  "mainCharacters": [
+    {
+      "name": "Nadia",
+      "description": "17-year-old student journalist, sharp, calm under pressure, more observant than outspoken"
+    },
+    {
+      "name": "Mr Mercer",
+      "description": "editor of the school paper, ethical and demanding, insists on precise sourcing"
+    },
+    {
+      "name": "Leila Rahman",
+      "description": "local campaign organiser, articulate, strategic, deeply tired but still controlled"
+    },
+    {
+      "name": "Councillor Vale",
+      "description": "polished public official who avoids direct admission and speaks in careful, defensible language"
+    }
+  ],
+  "vocabularyTheme": "social_issues_and_debate",
+  "targetWords": [
+    "inequality",
+    "advocacy",
+    "legislation",
+    "grassroots",
+    "reform",
+    "consensus",
+    "polarise"
+  ],
+  "comprehensionQuestionTypes": [
+    "literal",
+    "inferential",
+    "literal",
+    "inferential",
+    "vocabulary_in_context",
+    "literal"
+  ],
+  "toneAndStyle": "Nuanced, contemporary B2 narrative with natural dialogue, civic tension, and precise emotional detail. The prose should feel mature and readable, not like a policy article.",
+  "emotionalArc": "confident curiosity -> mounting ambiguity -> moral pressure -> focused determination",
+  "paragraphEmojis": [
+    "📰",
+    "🏙️",
+    "🎙️",
+    "📄",
+    "⚖️",
+    "🌉",
+    "🧭"
+  ],
+  "recycledVocabulary": [
+    "legacy",
+    "implication",
+    "rigorous"
+  ],
+  "avoidTopics": [
+    "graphic violence",
+    "party-political slogans",
+    "simplistic villainisation"
+  ],
+  "notes": "The chapter must include at least three distinct reported-speech moves inside meaningful scenes: one reported question using whether/if, one reported command or request, and one sentence using a reporting verb like insisted, denied, warned, advised, or refused. Keep the conflict rooted in redevelopment, fairness, and public trust. The ending should point forward to the council hearing and Nadia's decision to publish a careful piece rather than an inflammatory one."
+}

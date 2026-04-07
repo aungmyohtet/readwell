@@ -15,6 +15,25 @@ grammar-app/
 
 ## Quick Start
 
+### One-Command Startup
+
+From the repo root, run:
+
+```powershell
+.\start-local.ps1
+```
+
+The script will:
+- start MongoDB if the Windows service exists but is stopped
+- start the backend on `http://localhost:8082` if it is not already running
+- start the frontend on `http://localhost:4201` if it is not already running
+
+If PowerShell blocks local scripts on your machine, use:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\start-local.ps1
+```
+
 ### Prerequisites
 
 - Java 21+
@@ -26,10 +45,20 @@ grammar-app/
 
 ```bash
 cd backend
-export GOOGLE_APPLICATION_CREDENTIALS=path/to/firebase-adminsdk.json
-./mvnw spring-boot:run
-# Runs on http://localhost:8081
+mvn spring-boot:run
+# Runs on http://localhost:8082
 ```
+
+Local backend defaults are stored in [backend/src/main/resources/application.yml](backend/src/main/resources/application.yml).
+For local development, Firebase credentials default to the checked-in Admin SDK JSON path in the repo root.
+If needed, you can still override those values with `FIREBASE_CREDENTIALS_PATH`, `FIREBASE_CREDENTIALS_JSON`, `MONGODB_URI`, `MONGODB_DATABASE`, or `CORS_ALLOWED_ORIGINS`.
+
+Current local defaults:
+- backend port: `8082`
+- frontend URL: `http://localhost:4201`
+- MongoDB URI: `mongodb://localhost:27017`
+- MongoDB database: `grammar`
+- Firebase credentials path: `C:/Users/aungm/Projects/grammar-app/dailybrain-78864-firebase-adminsdk-fbsvc-2d498e2c47.json`
 
 ### Frontend
 
@@ -50,6 +79,8 @@ python content/import.py --clear          # clear and re-import
 python content/validate.py content/stories/my_story.json  # validate before import
 ```
 
+Content tooling uses the same repo-local defaults for MongoDB as the backend unless you override them with environment variables.
+
 ## Technology Stack
 
 | Layer    | Technology                        |
@@ -63,7 +94,7 @@ python content/validate.py content/stories/my_story.json  # validate before impo
 
 | Environment | URL                    |
 |-------------|------------------------|
-| Local       | http://localhost:8081  |
+| Local       | http://localhost:8082  |
 | Frontend    | http://localhost:4201  |
 
 ## Key API Endpoints

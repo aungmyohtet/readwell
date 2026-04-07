@@ -14,10 +14,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FirebaseConfig {
 
-  @Value("${FIREBASE_CREDENTIALS_JSON:}")
+  @Value("${firebase.credentials.json:}")
   private String credentialsJson;
 
-  @Value("${FIREBASE_CREDENTIALS_PATH:}")
+  @Value("${firebase.credentials.path:}")
   private String credentialsPath;
 
   @jakarta.annotation.PostConstruct
@@ -40,6 +40,7 @@ public class FirebaseConfig {
     }
     throw new IllegalStateException(
         "Firebase credentials not configured. "
-            + "Set FIREBASE_CREDENTIALS_JSON or FIREBASE_CREDENTIALS_PATH.");
+            + "Set firebase.credentials.json / firebase.credentials.path, "
+            + "or override them with FIREBASE_CREDENTIALS_JSON / FIREBASE_CREDENTIALS_PATH.");
   }
 }

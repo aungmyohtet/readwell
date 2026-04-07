@@ -1,0 +1,483 @@
+{
+  "story": {
+    "title": "The Public Square",
+    "description": "Student journalist Nadia Karim begins covering a redevelopment dispute in her city and learns that public truth is shaped not only by facts, but by how facts are repeated, softened, and arranged. As the debate intensifies, she has to decide what responsible reporting really sounds like.",
+    "level": "B2",
+    "coverEmoji": "📰",
+    "author": "ReadWell",
+    "tags": [
+      "journalism",
+      "community",
+      "public-trust",
+      "debate"
+    ]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "What They Said Happened",
+      "vocabulary": [
+        {
+          "word": "inequality",
+          "definition": "an unfair difference between groups of people in money, chances, or treatment",
+          "exampleSentence": "Residents argued that the project would deepen inequality because wealthier people would benefit most from the new housing.",
+          "emoji": "⚖️"
+        },
+        {
+          "word": "advocacy",
+          "definition": "public support for a cause, idea, or group of people",
+          "exampleSentence": "Leila's advocacy for the riverfront families had made her one of the most trusted voices in the district.",
+          "emoji": "📣"
+        },
+        {
+          "word": "legislation",
+          "definition": "a law or a group of laws made by a government",
+          "exampleSentence": "Councillor Vale claimed that national legislation limited what the city could promise local residents.",
+          "emoji": "📜"
+        },
+        {
+          "word": "grassroots",
+          "definition": "coming from ordinary people in a community rather than from leaders or institutions",
+          "exampleSentence": "What began as a grassroots petition grew into a weekly meeting that filled the old market hall.",
+          "emoji": "🌱"
+        },
+        {
+          "word": "reform",
+          "definition": "a change made to improve a system, law, or organisation",
+          "exampleSentence": "The council described the plan as reform, but many residents thought it was simply displacement in polished language.",
+          "emoji": "🔧"
+        },
+        {
+          "word": "consensus",
+          "definition": "general agreement among a group of people",
+          "exampleSentence": "There was no consensus in the room, only a temporary pause while people decided how far they trusted one another.",
+          "emoji": "🤝"
+        },
+        {
+          "word": "polarise",
+          "definition": "to divide people into two strongly opposing groups",
+          "exampleSentence": "The leaked minutes threatened to polarise the neighbourhood even further because each side read them differently.",
+          "emoji": "🧲"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Reported Speech – Complex",
+        "explanation": "Complex reported speech lets us report commands, questions, denials, and advice without repeating the exact original words. At this level, we often use reporting verbs such as advised, warned, insisted, denied, or refused, as well as structures like whether or if for reported questions and infinitives for reported commands.",
+        "examples": [
+          "Mr Mercer asked whether Nadia had written down the phrase exactly as it had been spoken.",
+          "Leila warned her not to turn the district into a symbol before she had listened properly.",
+          "Councillor Vale denied having promised that no family would be moved.",
+          "A staff member said the deputy had told them to keep the public wording positive."
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "By the time Nadia reached the school newsroom on Tuesday afternoon, the riverfront leaflet had already been reposted and mistrusted in six group chats. It promised reform for St Anne's Wharf, where old warehouses stood beside discount supermarkets and temporary flats. It also claimed, with far more certainty than sourcing, that nobody would be forced to leave. Mr Mercer held up the printout. \"Properly or not at all,\" he said. Then he asked whether Nadia had time to visit the district before the evening meeting. She said yes before thinking about homework or dinner.",
+          "imagePlaceholder": "📰",
+          "grammarAnnotations": [
+            {
+              "targetText": "Then he asked whether Nadia had time to visit the district before the evening meeting.",
+              "tone": "question",
+              "note": "reported question with whether"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "text": "The square outside the old market hall was fuller than she expected. A grassroots campaign table stood under a canvas awning, and hand-drawn arrows pointed newcomers to the entrance. Leila Rahman, who had become the public face of the campaign almost by accident, was handing out tea. When Nadia introduced herself, Leila said, \"Don't turn this into a pretty street story.\" Then she warned Nadia not to write as though the whole argument were about one picturesque block. The real issue, she said, was inequality: who absorbed risk, who gained from delay, and who was always told to wait for benefits that arrived elsewhere first.",
+          "imagePlaceholder": "🏙️",
+          "grammarAnnotations": [
+            {
+              "targetText": "Then she warned Nadia not to write as though the whole argument were about one picturesque block.",
+              "tone": "structure",
+              "note": "reported warning and infinitive"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "text": "Inside the hall, plastic chairs had been arranged in careful rows that nobody respected. A youth worker said a planning officer had told her to send concerns through the official portal and to avoid posting unofficial maps online. An elderly shopkeeper said the deputy leader had insisted on calling the project balanced even after three traders received relocation letters. A parent in a navy coat stood up and said, \"Ask them whether they understand what happens when a child's route to school is broken twice in five years.\" Nadia wrote quickly, then more slowly. She was used to collecting quotes; she was less used to hearing how fast public language could shrink a person's actual life.",
+          "imagePlaceholder": "🎙️",
+          "grammarAnnotations": [
+            {
+              "targetText": "a planning officer had told her to send concerns through the official portal",
+              "tone": "structure",
+              "note": "reported imperative"
+            },
+            {
+              "targetText": "Ask them whether they understand what happens when a child's route to school is broken twice in five years.",
+              "tone": "question",
+              "note": "reported question"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "text": "She crossed to the council building before it closed and waited in reception long enough to understand that silence could be more useful than urgency. Councillor Vale eventually came down with a folder under his arm. \"The city remains committed to consultation,\" he said. When Nadia asked about the leaflet, he denied having approved the wording and denied having promised that no homes would be lost. He added that recent legislation had narrowed the city's options. When she asked if residents would see the internal impact report before the hearing, he refused to answer directly. Instead, he said the administration advised the public to wait for verified documents, not emotionally edited extracts.",
+          "imagePlaceholder": "📄",
+          "grammarAnnotations": [
+            {
+              "targetText": "he denied having approved the wording and denied having promised that no homes would be lost.",
+              "tone": "structure",
+              "note": "reported denial with having"
+            },
+            {
+              "targetText": "he refused to answer directly.",
+              "tone": "structure",
+              "note": "reported refusal"
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "text": "Back in the newsroom, Mr Mercer listened without interrupting until Nadia finished. Then he advised her to separate claims, evidence, and atmosphere before she wrote a sentence. \"Advocacy can belong in a quote,\" he said, \"but it can't replace reporting.\" He also asked whether she had noticed something harder: both sides were speaking as though consensus had once existed and had merely been damaged. In fact, he said, there might never have been any real consensus at all. Nadia looked at her notes again and realised the story was not simply about who was lying. It was about the kind of language people used when they wanted to sound reasonable while protecting themselves.",
+          "imagePlaceholder": "📚",
+          "grammarAnnotations": [
+            {
+              "targetText": "Then he advised her to separate claims, evidence, and atmosphere before she wrote a sentence.",
+              "tone": "structure",
+              "note": "reported advice"
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "text": "At half past nine, a volunteer from the campaign phoned her with a detail that changed the shape of the evening. He said a council staff member had warned colleagues not to mention the unfinalised school-access forecast during public meetings because it would polarise the district before the hearing. The volunteer had no recording, only a transcript passed between three people. Nadia almost used it anyway. The line was dramatic and perfectly designed to travel. But when she read it aloud, it sounded like borrowed certainty. She remembered Leila saying the district was tired of being translated by people who preferred a sharp sentence to a difficult truth.",
+          "imagePlaceholder": "📞",
+          "grammarAnnotations": [
+            {
+              "targetText": "a council staff member had warned colleagues not to mention the unfinalised school-access forecast",
+              "tone": "structure",
+              "note": "reported warning"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "text": "So Nadia wrote something slower. Her article said the council described the project as reform, residents described it as displacement, and neither description was complete without the numbers nobody had yet released. She reported that Leila had said the campaign was fighting for ordinary families, that Vale had said the city was operating within legal limits, and that trust had become the real shortage in the square. The piece ended by noting that the hearing would take place on Thursday. Mr Mercer read the draft twice, circled one adjective, and said, \"That version listened before it decided.\" Nadia left the newsroom tired but steadier.",
+          "imagePlaceholder": "🧭",
+          "grammarAnnotations": [
+            {
+              "targetText": "She reported that Leila had said the campaign was fighting for ordinary families, that Vale had said the city was operating within legal limits",
+              "tone": "structure",
+              "note": "layered reported speech"
+            }
+          ]
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Why does Mr Mercer give the story to Nadia at the start of the chapter?",
+          "options": [
+            "He wants her to defend the council's position before the hearing.",
+            "He believes the story should be covered carefully rather than repeated from rumours.",
+            "He knows Nadia is close friends with Leila Rahman.",
+            "He wants the school paper to publish the leaflet without checking it first."
+          ],
+          "correctAnswer": "He believes the story should be covered carefully rather than repeated from rumours.",
+          "explanation": "Paragraph 1 says the leaflet has already been reposted and mistrusted in many chats, and Mr Mercer says the paper will cover the story 'properly or not at all.' That shows he wants careful reporting, not rumour-sharing."
+        },
+        {
+          "order": 2,
+          "question": "What is Leila's main warning to Nadia?",
+          "options": [
+            "Not to interview anyone from the council before the hearing",
+            "Not to reduce the issue to a simple, picturesque story about one street",
+            "Not to mention inequality because it will upset local businesses",
+            "Not to quote campaign volunteers unless they have written statements"
+          ],
+          "correctAnswer": "Not to reduce the issue to a simple, picturesque story about one street",
+          "explanation": "In paragraph 2, Leila warns Nadia not to write as though the argument is about 'one picturesque street.' She wants Nadia to see the larger issue of inequality and risk."
+        },
+        {
+          "order": 3,
+          "question": "Which example from the story shows a reported imperative?",
+          "options": [
+            "He denied having approved the wording.",
+            "A parent asked whether anyone understood the effect on children.",
+            "A planning officer had told her to send concerns through the official portal.",
+            "Mr Mercer asked whether Nadia had time to visit the district."
+          ],
+          "correctAnswer": "A planning officer had told her to send concerns through the official portal.",
+          "explanation": "A reported imperative often uses a verb like told, asked, warned, or advised plus an infinitive. Here, 'told her to send concerns' reports a command or instruction."
+        },
+        {
+          "order": 4,
+          "question": "Why does Nadia decide not to use the volunteer's final claim immediately?",
+          "options": [
+            "She realises the campaign has already published the same line elsewhere.",
+            "She is afraid Mr Mercer will remove it for political reasons.",
+            "She thinks the line is dramatic but too uncertain after being passed from person to person.",
+            "She decides that the council's version is probably more reliable."
+          ],
+          "correctAnswer": "She thinks the line is dramatic but too uncertain after being passed from person to person.",
+          "explanation": "Paragraph 6 says the volunteer has no recording, only a transcript passed between three people. Nadia feels it sounds like 'borrowed certainty,' so she chooses not to rely on it."
+        },
+        {
+          "order": 5,
+          "question": "What does the word 'polarise' in paragraph 6 most likely mean?",
+          "options": [
+            "to force people to agree quickly",
+            "to divide people into opposing sides",
+            "to make a document legally stronger",
+            "to hide information from the public"
+          ],
+          "correctAnswer": "to divide people into opposing sides",
+          "explanation": "The staff member is said to fear that mentioning the forecast would make the district more divided before the hearing. In this context, 'polarise' means separating people into strongly opposing groups."
+        },
+        {
+          "order": 6,
+          "question": "What has Nadia understood by the end of the chapter?",
+          "options": [
+            "That one side is clearly honest and the other is clearly dishonest",
+            "That advocacy and reporting are exactly the same activity",
+            "That careful listening matters because language can hide, soften, or reshape responsibility",
+            "That the most effective article is the one with the strongest emotional accusation"
+          ],
+          "correctAnswer": "That careful listening matters because language can hide, soften, or reshape responsibility",
+          "explanation": "By the end, Nadia realises the story is not only about facts but about how people use language to protect themselves and shape public understanding. Her final draft becomes stronger because it listens before deciding."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "title": "After the Hearing",
+      "vocabulary": [
+        {
+          "word": "governance",
+          "definition": "the way a city, organisation, or country is directed and controlled",
+          "exampleSentence": "The hearing made Nadia realise that governance was not an abstract idea but something that affected who was heard and who was delayed.",
+          "emoji": "🏛️"
+        },
+        {
+          "word": "infrastructure",
+          "definition": "the basic systems and structures a place needs, such as roads, transport, and public services",
+          "exampleSentence": "Councillor Vale argued that the district's ageing infrastructure could no longer support the number of people living there.",
+          "emoji": "🛣️"
+        },
+        {
+          "word": "disparity",
+          "definition": "a clear and unfair difference between two things or groups",
+          "exampleSentence": "The hearing exposed the disparity between what officials called manageable disruption and what residents experienced as daily instability.",
+          "emoji": "📉"
+        },
+        {
+          "word": "humanitarian",
+          "definition": "concerned with protecting people and reducing suffering",
+          "exampleSentence": "One speaker argued that the issue was not only economic but humanitarian because temporary housing had become normal for too many families.",
+          "emoji": "🫶"
+        },
+        {
+          "word": "diplomacy",
+          "definition": "skill in dealing with people carefully so conflict does not become worse",
+          "exampleSentence": "Leila showed diplomacy in public, but Nadia could see how much effort it cost her to stay measured.",
+          "emoji": "🤲"
+        },
+        {
+          "word": "geopolitical",
+          "definition": "connected to the way world politics and international events affect places and decisions",
+          "exampleSentence": "A consultant tried to justify the delay by referring to geopolitical supply pressures, though the residents cared more about rents than shipping routes.",
+          "emoji": "🌍"
+        },
+        {
+          "word": "refugee",
+          "definition": "a person who has been forced to leave their country to escape danger or war",
+          "exampleSentence": "A volunteer from the community kitchen reminded the chamber that several refugee families now depended on the district's cheapest flats and bus links.",
+          "emoji": "🧳"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Advanced Connectors and Discourse Markers",
+        "explanation": "Advanced connectors help speakers and writers organise thought clearly. They show contrast, concession, addition, and result: words such as however, despite, moreover, nevertheless, consequently, and in spite of help us guide the reader through complex ideas without losing coherence.",
+        "examples": [
+          "Despite the calm tone of the hearing, the room was full of anger that had simply learned better manners.",
+          "The council promised transparency; however, the key figures were still missing from the public report.",
+          "Leila sounded controlled; nevertheless, Nadia could hear how exhausted she was.",
+          "The transport figures were delayed and, as a result, nobody could test the council's claims properly."
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Despite the rain, people were already queuing outside the chamber when Nadia arrived on Thursday evening. Her first article had travelled further than usual; as a result, strangers now glanced at her press badge with unsettling recognition. Inside, the hearing opened in the language of governance: agenda items, procedural notes, declarations of interest. However, the room was listening for something less formal. It wanted to know whose account of the district would survive the night. The polished phrasing did not calm anyone. If anything, it made the tension easier to hear.",
+          "imagePlaceholder": "🏛️",
+          "grammarAnnotations": [
+            {
+              "targetText": "Despite the rain, people were already queuing outside the chamber",
+              "tone": "structure",
+              "note": "connector of concession"
+            },
+            {
+              "targetText": "as a result, strangers now glanced at her press badge",
+              "tone": "structure",
+              "note": "result marker"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "text": "Councillor Vale spoke first. \"The district's infrastructure has been neglected for decades,\" he said. He listed drainage problems, unsafe crossings, and bus routes that no longer met demand. Moreover, he argued that waiting another year would raise costs without reducing harm. Then a housing researcher replied that the numbers in the public paper concealed a deeper disparity: residents with savings could absorb delay, whereas renters living month to month could not. Although both speakers used the language of evidence, they were describing different realities. One spoke about systems. The other spoke about what systems felt like when they pressed against a person's week.",
+          "imagePlaceholder": "🗣️",
+          "grammarAnnotations": [
+            {
+              "targetText": "Moreover, he argued that waiting another year would raise costs without reducing harm.",
+              "tone": "structure",
+              "note": "addition marker"
+            },
+            {
+              "targetText": "Although both speakers used the language of evidence, they were describing different realities.",
+              "tone": "structure",
+              "note": "contrast clause"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "text": "The sharpest testimony came from a volunteer who ran the community kitchen in the church basement. \"This is not only administrative,\" she said. \"It's humanitarian.\" Several refugee families, she explained, had settled in the area because the rents were low enough and the bus links close enough to schools, clinics, and English classes. In spite of that, the transport appendix still had not been released in full. A consultant tried to redirect the room by referring to geopolitical supply instability and long-term planning. Nobody had come to hear a global explanation for a local silence. Nevertheless, the phrase ended up in Nadia's notebook because it revealed how often institutions reached for scale when intimacy became inconvenient.",
+          "imagePlaceholder": "📰",
+          "grammarAnnotations": [
+            {
+              "targetText": "In spite of that, the transport appendix still had not been released in full.",
+              "tone": "structure",
+              "note": "concession marker"
+            },
+            {
+              "targetText": "Nevertheless, the phrase ended up in Nadia's notebook",
+              "tone": "structure",
+              "note": "contrast and persistence"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "text": "After a short break, Nadia found Leila in the corridor holding a paper cup she was no longer drinking from. \"The article helped,\" Leila said. \"However, it also left something out.\" Nadia asked what. Leila answered with more diplomacy than the moment required. Fairness on the page, she said, could still feel cold to the people whose flats and nerves were being discussed. A sentence could be balanced and still incomplete. Nadia did not argue. She had written the first piece as though emotional distance were the same as accuracy. They were not identical, only sometimes neighbours.",
+          "imagePlaceholder": "🌧️",
+          "grammarAnnotations": [
+            {
+              "targetText": "However, it also left something out.",
+              "tone": "structure",
+              "note": "contrast marker"
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "text": "Mr Mercer, when she called him from the stairwell, was less gentle. He said a second article should not pretend the hearing had produced resolution simply because everyone had taken turns at the microphone. Furthermore, he said, the real story might now be about framing: whose pain became a statistic, whose patience was renamed resilience, and whose delay was described as unavoidable. \"Neutrality looks tidy,\" he told her. \"Tidy is not the same as truthful.\" Nadia leaned against the cold wall. Rarely had she felt so aware of a sentence before writing it.",
+          "imagePlaceholder": "⚖️",
+          "grammarAnnotations": [
+            {
+              "targetText": "Furthermore, he said, the real story might now be about framing",
+              "tone": "structure",
+              "note": "addition and emphasis"
+            },
+            {
+              "targetText": "Rarely had she felt so aware of a sentence before writing it.",
+              "tone": "structure",
+              "note": "inversion for emphasis"
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "text": "So she wrote the second piece differently. She kept the infrastructure figures, the timetable, and the official responses. She also described the room itself: wet umbrellas under chairs, the father rubbing his sleeve, the volunteer whose voice stayed calm while she spoke about humanitarian strain. She wrote that the hearing exposed a disparity not only of income but of language. Some people had terms like viability and compliance; others had bus fares, childcare, and mould in the bathroom ceiling. Consequently, the argument never fully became a shared one, because it was not being spoken in a shared register. Once she wrote that line, the article finally sounded like something only this evening could have taught her.",
+          "imagePlaceholder": "🧩",
+          "grammarAnnotations": [
+            {
+              "targetText": "Consequently, the argument never fully became a shared one",
+              "tone": "structure",
+              "note": "result connector"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "text": "She sent the draft just before midnight. Mr Mercer replied with one message telling her not to soften the fourth paragraph. Leila later wrote, \"Difficult to read. Worth reading anyway.\" From her bedroom window, the city looked ordinary again: buses, wet pavements, late shop lights. Even though the hearing had ended without a vote, something had shifted in her. She no longer believed that good reporting meant standing outside human feeling and naming it from a safe distance. What mattered, she thought, was precision with context around it. The public square would still be there next week. She intended to keep listening.",
+          "imagePlaceholder": "🕯️",
+          "grammarAnnotations": [
+            {
+              "targetText": "Even though the hearing had ended without a vote, something had shifted in her.",
+              "tone": "structure",
+              "note": "concession with even though"
+            }
+          ]
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Why do strangers recognise Nadia at the hearing?",
+          "options": [
+            "She has recently appeared on local television.",
+            "Her first article about the district has spread beyond the usual school-paper audience.",
+            "Leila has introduced her to everyone in the campaign.",
+            "The council has publicly criticised her reporting."
+          ],
+          "correctAnswer": "Her first article about the district has spread beyond the usual school-paper audience.",
+          "explanation": "Paragraph 1 says the article had travelled further than the school paper usually travelled, and as a result strangers now recognised her press badge."
+        },
+        {
+          "order": 2,
+          "question": "What contrast does Nadia notice between the two main speeches in the chamber?",
+          "options": [
+            "One speaker uses statistics while the other refuses to use any evidence.",
+            "One speaker talks about systems and planning, while the other talks about how those systems affect everyday life.",
+            "One speaker supports redevelopment and the other opposes all change in the district.",
+            "One speaker is calm and the other becomes openly aggressive."
+          ],
+          "correctAnswer": "One speaker talks about systems and planning, while the other talks about how those systems affect everyday life.",
+          "explanation": "Paragraph 2 says that although both speakers use evidence, one speaks about systems and the other about what systems feel like in a person's ordinary week."
+        },
+        {
+          "order": 3,
+          "question": "Why does the consultant's reference to 'geopolitical supply instability' affect the room badly?",
+          "options": [
+            "It reveals that the consultant has misunderstood the redevelopment figures.",
+            "It sounds like an abstract global explanation for a very local problem people want addressed directly.",
+            "It proves that the district has become internationally important.",
+            "It makes the volunteer's earlier speech sound exaggerated."
+          ],
+          "correctAnswer": "It sounds like an abstract global explanation for a very local problem people want addressed directly.",
+          "explanation": "Paragraph 3 says nobody had come to hear a global explanation for a local silence. The consultant's language feels detached from the residents' immediate concerns."
+        },
+        {
+          "order": 4,
+          "question": "What does Leila mean when she says the first article left something out?",
+          "options": [
+            "It ignored the official figures from the council report.",
+            "It described the campaign too emotionally and not formally enough.",
+            "It was fair, but it did not fully convey what the issue felt like to the people living through it.",
+            "It focused too much on refugee families instead of long-term residents."
+          ],
+          "correctAnswer": "It was fair, but it did not fully convey what the issue felt like to the people living through it.",
+          "explanation": "In paragraph 4, Leila says fairness on the page can still feel cold. She means the first article was balanced, but emotionally incomplete."
+        },
+        {
+          "order": 5,
+          "question": "What does the word 'disparity' in paragraph 2 most likely mean?",
+          "options": [
+            "a careful compromise between two positions",
+            "a large and unfair difference between groups or situations",
+            "a delay caused by poor planning",
+            "a public disagreement that quickly becomes personal"
+          ],
+          "correctAnswer": "a large and unfair difference between groups or situations",
+          "explanation": "The researcher uses 'disparity' to show that some residents can absorb disruption while others cannot. The word points to an unequal difference with real consequences."
+        },
+        {
+          "order": 6,
+          "question": "How has Nadia's understanding of reporting changed by the end of the chapter?",
+          "options": [
+            "She now believes reporters should openly support whichever side seems morally right.",
+            "She now thinks neutral language is always dishonest.",
+            "She now sees that precision matters, but precision without context can still miss the truth of a situation.",
+            "She now prefers writing opinion pieces because facts alone are too limiting."
+          ],
+          "correctAnswer": "She now sees that precision matters, but precision without context can still miss the truth of a situation.",
+          "explanation": "By the end, Nadia realises that good reporting is not cold distance. It is precise language with context, so the human meaning of events is not erased."
+        }
+      ]
+    }
+  ]
+}

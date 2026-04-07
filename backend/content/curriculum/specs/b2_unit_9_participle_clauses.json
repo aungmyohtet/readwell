@@ -1,0 +1,69 @@
+{
+  "storyTitle": "Pressure Lines",
+  "level": "B2",
+  "curriculumUnit": 9,
+  "grammarTarget": "Participle Clauses",
+  "grammarKeyStructures": [
+    "present participle: Running late, he missed the bus.",
+    "past participle: Exhausted by the climb, she sat down.",
+    "having + pp"
+  ],
+  "chapterNumber": 1,
+  "chapterTitle": "Above the Snow Line",
+  "storyTopic": "During a demanding winter training expedition, a student leader has to make rapid decisions on exposed terrain, discovering that endurance, fear, and responsibility compress time in ways that change how every action is remembered.",
+  "setting": "A multi-day training climb in a remote mountain range, with scenes on a steep approach, at a temporary shelter, and during a worsening weather window",
+  "mainCharacters": [
+    {
+      "name": "Elena",
+      "description": "18-year-old expedition lead, capable, disciplined, and increasingly aware of the cost of projecting confidence"
+    },
+    {
+      "name": "Tomas",
+      "description": "team member, physically strong but impatient, often pushing the pace faster than conditions allow"
+    },
+    {
+      "name": "Dr Keane",
+      "description": "expedition supervisor, experienced and exacting, allowing the students enough autonomy to reveal their strengths and limits"
+    }
+  ],
+  "vocabularyTheme": "adventure_and_challenge",
+  "targetWords": [
+    "endurance",
+    "treacherous",
+    "navigate",
+    "solitude",
+    "threshold",
+    "adrenaline",
+    "perseverance"
+  ],
+  "comprehensionQuestionTypes": [
+    "literal",
+    "inferential",
+    "literal",
+    "inferential",
+    "vocabulary_in_context",
+    "literal"
+  ],
+  "toneAndStyle": "Lean, atmospheric B2 narrative with physical immediacy and reflective clarity. Participle clauses should help compress action and viewpoint, making the prose feel more controlled and fluid rather than more academic.",
+  "emotionalArc": "focus -> strain -> sharpened fear -> earned steadiness",
+  "paragraphEmojis": [
+    "🏔️",
+    "🥾",
+    "🌨️",
+    "🧭",
+    "⛺",
+    "🔥",
+    "🌄"
+  ],
+  "recycledVocabulary": [
+    "integrity",
+    "accountability",
+    "mitigate"
+  ],
+  "avoidTopics": [
+    "graphic injury",
+    "action-movie exaggeration",
+    "heroic invincibility"
+  ],
+  "notes": "Use participle clauses naturally in movement, decision-making, and reflection. Include at least one clear present participle clause, one past participle clause, and one having + past participle structure. The chapter should show how compressed grammar can mirror compressed decision time. End with the team crossing into temporary safety, but with enough unresolved tension to support an institutional follow-up chapter."
+}

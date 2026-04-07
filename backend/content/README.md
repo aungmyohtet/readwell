@@ -1,5 +1,22 @@
 # Content Management
 
+## Local Dev Defaults
+
+For this repo, local backend defaults are stored in [backend/src/main/resources/application.yml](backend/src/main/resources/application.yml).
+That means local content import and validation can use the repo defaults without re-setting Firebase or MongoDB environment variables after every machine restart.
+
+Useful local defaults:
+- backend API port: `8082`
+- MongoDB URI: `mongodb://localhost:27017`
+- MongoDB database: `grammar`
+- Firebase credentials path: `C:/Users/aungm/Projects/grammar-app/dailybrain-78864-firebase-adminsdk-fbsvc-2d498e2c47.json`
+
+To start the full app from the repo root, use:
+
+```powershell
+.\start-local.ps1
+```
+
 ## Adding New Stories
 
 1. Create a JSON file in `content/stories/` following the structure below.
