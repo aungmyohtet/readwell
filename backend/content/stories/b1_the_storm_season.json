@@ -292,15 +292,15 @@
         },
         {
           "order": 6,
-          "question": "Which sentence best shows a time clause meaning 'immediately after something else happened'?",
+          "question": "What does Zara mean when she says the sea looked 'as though nothing had happened at all' — and why is this significant?",
           "options": [
-            "Before it arrives, we need to bring in the outdoor furniture.",
-            "As soon as they had finished, the first drops of rain began to fall.",
-            "While the storm was at its height, the power went off.",
-            "By the time morning came, the sky was pale and washed clean."
+            "She means the storm was not as serious as her father had feared, so the damage was minimal",
+            "She means the sea had returned to its calm, ordinary appearance while the physical evidence of the storm remained all around her",
+            "She means the town had been repaired so quickly that no signs of the storm were left",
+            "She means she had slept through most of the storm and was not sure how bad it had been"
           ],
-          "correctAnswer": "As soon as they had finished, the first drops of rain began to fall.",
-          "explanation": "'As soon as' shows immediate sequence. It means the rain began right after they finished bringing in the furniture."
+          "correctAnswer": "She means the sea had returned to its calm, ordinary appearance while the physical evidence of the storm remained all around her",
+          "explanation": "Paragraph 5 describes the sea as 'calm and pale blue, as though nothing had happened at all' — but then immediately adds 'the marks were everywhere': branches, planks, boats on the sand. The contrast is the point. Nature has moved on; the human world has not yet recovered. This is an inferential question because the text shows the contrast without explaining it directly."
         }
       ]
     }

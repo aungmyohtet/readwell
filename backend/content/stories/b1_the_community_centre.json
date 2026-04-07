@@ -292,15 +292,15 @@
         },
         {
           "order": 6,
-          "question": "Which sentence from the chapter shows a verb followed by a gerund?",
+          "question": "What does the ending — Tom looking forward to both classes each week — suggest about what the community centre has given him?",
           "options": [
-            "He had decided to sign up for the coding workshop.",
-            "He had always wanted to learn how to code.",
-            "Tom enjoyed reading about the options.",
-            "The coding workshop starts next Tuesday."
+            "A set of qualifications that will help him find work after school",
+            "A building he visits out of obligation to Nina rather than genuine interest",
+            "A structured routine involving real challenge and enjoyment that he had been avoiding without realising it",
+            "A chance to compete with other students in cooking and coding competitions"
           ],
-          "correctAnswer": "Tom enjoyed reading about the options.",
-          "explanation": "After 'enjoy', we use a gerund, so 'reading' is the correct form here. The sentences with 'decided' and 'wanted' use infinitives instead."
+          "correctAnswer": "A structured routine involving real challenge and enjoyment that he had been avoiding without realising it",
+          "explanation": "Paragraph 5 shows Tom genuinely looking forward to both classes. Combined with Q5's answer — that he regrets spending so long avoiding these things — the ending shows the centre gave him a meaningful weekly routine, not just a hobby."
         }
       ]
     }

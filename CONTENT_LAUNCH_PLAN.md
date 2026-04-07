@@ -55,28 +55,26 @@ Needs:
 
 ### B2
 
-Status: not launch-ready.
+Status: curriculum coverage complete. Final editorial review required before launch.
 
-Present in catalogue:
-- Unit 1: Present Perfect Continuous vs Simple
-- Unit 2: Third Conditional
-- Unit 3: Mixed Conditionals
-- Unit 4: Passive Voice - All Tenses
-
-Missing for true B2 coverage:
-- Unit 5: Reported Speech - Complex
-- Unit 6: Non-Defining Relative Clauses
-- Unit 7: Modal Perfect
-- Unit 8: Wish / If Only
-- Unit 9: Participle Clauses
-- Unit 10: Cleft Sentences & Inversion
-- Unit 11: Advanced Connectors
-- Unit 12: Causative Have/Get + Nominalization
+Present in catalogue — all 12 units:
+- Unit 1: Present Perfect Continuous vs Simple (The Last Library Ch2)
+- Unit 2: Third Conditional (The Last Library Ch1)
+- Unit 3: Mixed Conditionals (The Bridge Year Ch1)
+- Unit 4: Passive Voice — All Tenses (The Bridge Year Ch2)
+- Unit 5: Reported Speech — Complex (The Public Square Ch1)
+- Unit 6: Non-Defining Relative Clauses (Borrowed Names Ch1)
+- Unit 7: Modal Perfect (Fault Line Ch1)
+- Unit 8: Wish / If Only (Fault Line Ch2)
+- Unit 9: Participle Clauses (Pressure Lines Ch1)
+- Unit 10: Cleft Sentences and Inversion (Borrowed Names Ch2)
+- Unit 11: Advanced Connectors (The Public Square Ch2)
+- Unit 12: Causative Have/Get + Nominalization (Pressure Lines Ch2)
 
 ## Priority Order
 
-1. Finish B2 coverage.
-2. Apply a final B1 editorial quality pass.
+1. Apply a final B1 editorial quality pass.
+2. Run a B2 editorial review pass (stories now exist for all 12 units).
 3. Reconfirm A2 as the benchmark set.
 4. Run validator and import checks across the full launch catalogue.
 

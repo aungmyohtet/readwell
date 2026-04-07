@@ -25,18 +25,18 @@ Current reference files:
 - Prefer two-chapter story arcs so the level feels like a curated graded-reader set rather than isolated drills.
 - Validate spec first, then generate, then validate story JSON, then import.
 
-## Remaining Units
+## All Units — Completed (2026-04-07)
 
-| Priority | Unit | Grammar | Vocab Theme | Proposed Story Slot | Status |
+| Priority | Unit | Grammar | Vocab Theme | Story | Status |
 |---|---:|---|---|---|---|
-| 1 | 5 | Reported Speech - Complex | social_issues_and_debate | New Story A, Chapter 1 | ready for generation |
-| 2 | 7 | Modal Perfect | ethics_and_responsibility | New Story B, Chapter 1 | ready for generation |
-| 3 | 8 | Wish / If Only | relationships_and_emotions | New Story B, Chapter 2 | ready for generation |
-| 4 | 11 | Advanced Connectors and Discourse Markers | global_challenges | New Story A, Chapter 2 | ready for generation |
-| 5 | 6 | Non-Defining Relative Clauses | culture_and_identity | New Story C, Chapter 1 | ready for generation |
-| 6 | 9 | Participle Clauses | adventure_and_challenge | New Story D, Chapter 1 | ready for generation |
-| 7 | 10 | Emphasis - Cleft Sentences and Inversion | arts_and_expression | New Story C, Chapter 2 | ready for generation |
-| 8 | 12 | Causative Have/Get + Nominalization | systems_and_institutions | New Story D, Chapter 2 | ready for generation |
+| 1 | 5 | Reported Speech - Complex | social_issues_and_debate | The Public Square Ch1 | ✓ imported |
+| 2 | 7 | Modal Perfect | ethics_and_responsibility | Fault Line Ch1 | ✓ imported |
+| 3 | 8 | Wish / If Only | relationships_and_emotions | Fault Line Ch2 | ✓ imported |
+| 4 | 11 | Advanced Connectors and Discourse Markers | global_challenges | The Public Square Ch2 | ✓ imported |
+| 5 | 6 | Non-Defining Relative Clauses | culture_and_identity | Borrowed Names Ch1 | ✓ imported |
+| 6 | 9 | Participle Clauses | adventure_and_challenge | Pressure Lines Ch1 | ✓ imported |
+| 7 | 10 | Emphasis - Cleft Sentences and Inversion | arts_and_expression | Borrowed Names Ch2 | ✓ imported |
+| 8 | 12 | Causative Have/Get + Nominalization | systems_and_institutions | Pressure Lines Ch2 | ✓ imported |
 
 ## Proposed Story Bundles
 

@@ -156,15 +156,15 @@
         },
         {
           "order": 2,
-          "question": "Which sentence uses a comparative or superlative correctly?",
+          "question": "How does Grandpa Joe decide which apple to buy in paragraph 3?",
           "options": [
-            "The dark apple smells more stronger than the light one.",
-            "This bread is the most best in the market.",
-            "The stalls in the middle are cheaper than the ones at the entrance.",
-            "Grandpa Joe is more older than Zoe."
+            "He reads the price label and picks the cheapest one.",
+            "He asks the seller which apple is the best.",
+            "He smells and handles each one, then picks the smaller, darker apple.",
+            "He asks Zoe to choose for him."
           ],
-          "correctAnswer": "The stalls in the middle are cheaper than the ones at the entrance.",
-          "explanation": "'Cheaper' is the correct comparative form of 'cheap'. The other options have errors: 'more stronger' and 'most best' are double comparatives (wrong), and 'more older' should be just 'older'. Only 'cheaper than' is correct."
+          "correctAnswer": "He smells and handles each one, then picks the smaller, darker apple.",
+          "explanation": "Paragraph 3 says Grandpa Joe 'picked one up, smelled it, and put it back.' Then he picked a 'smaller, darker one', saying it was sweeter and cheaper. He uses his senses and experience rather than just the price."
         },
         {
           "order": 3,

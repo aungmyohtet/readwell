@@ -182,7 +182,19 @@
             "The expedition will teach Maya important facts about mountains."
           ],
           "correctAnswer": "Because Maya has never done this before, the experience could be especially meaningful.",
-          "explanation": "Zara says this directly after Maya says 'I've never done anything like this.' The implication is that doing something genuinely new — outside your experience — is what gives it meaning and impact. This is an inferential question: the text doesn't explain it, but context makes the meaning clear."
+          "explanation": "Zara says this directly after Maya says 'I've never done anything like this.' The implication is that doing something genuinely new — outside your experience — is what gives it meaning and impact. The text doesn't explain it directly, but context makes the meaning clear."
+        },
+        {
+          "order": 5,
+          "question": "Maya's teacher once described her face as 'a window with no curtain.' What does this suggest about her?",
+          "options": [
+            "That she has trouble concentrating when others can see her face",
+            "That her emotions are immediately visible to anyone who looks at her",
+            "That she tends to watch other people closely without being noticed",
+            "That she prefers to stay indoors rather than face difficult situations"
+          ],
+          "correctAnswer": "That her emotions are immediately visible to anyone who looks at her",
+          "explanation": "A window with no curtain lets anyone see straight through it. The metaphor suggests Maya cannot hide her feelings — her face shows exactly what she is experiencing. This explains why she finds it difficult to project calm when she is nervous, unlike Zara."
         }
       ]
     },
@@ -329,15 +341,15 @@
         },
         {
           "order": 2,
-          "question": "What does Mr Osei's question 'How long have you been feeling this way?' tell us about the grammar focus?",
+          "question": "What does Mr Osei notice about Maya during the climb, and why does he consider it significant?",
           "options": [
-            "It uses the simple past to ask about a specific moment in the past.",
-            "It uses the present perfect continuous to ask about an ongoing state that started earlier.",
-            "It uses the present simple to ask about Maya's permanent feelings.",
-            "It uses the future tense to ask about how Maya will feel later."
+            "He notices she is faster than expected and considers this proof of her fitness.",
+            "He notices she has been struggling but has not stopped, asked to rest, or thought about giving up, which he values more than speed.",
+            "He notices she is watching Marcus and decides to warn her that she will fall behind.",
+            "He notices she has lost confidence and pulls her to the front of the group to motivate her."
           ],
-          "correctAnswer": "It uses the present perfect continuous to ask about an ongoing state that started earlier.",
-          "explanation": "'How long have you been feeling...' is the present perfect continuous question form. It asks about a state (feeling tired) that started at some point in the past and is still continuing now — which is exactly the grammar focus of this chapter."
+          "correctAnswer": "He notices she has been struggling but has not stopped, asked to rest, or thought about giving up, which he values more than speed.",
+          "explanation": "Mr Osei tells Maya he has been watching her and lists three specific things she has not done: stopped, asked to rest, or told herself a story about giving up. He then says 'That is worth more than fast legs.' His observation is about inner resilience, not physical performance."
         },
         {
           "order": 3,
@@ -362,6 +374,18 @@
           ],
           "correctAnswer": "That she can keep going consistently even when it is very hard.",
           "explanation": "Paragraph 5 shows Maya reviewing what she did: she was 'consistent, steady', she 'had not stopped when she wanted to', and 'had not turned around.' This is new self-knowledge — she proved something about herself that she didn't know before."
+        },
+        {
+          "order": 5,
+          "question": "Why does Zara say the climb was 'rewarding' at the end of the chapter, even though Maya described it as exhausting?",
+          "options": [
+            "Because Zara found it physically easier than Maya and did not tire",
+            "Because reaching the camp after sustained effort produces a satisfaction that difficulty alone cannot",
+            "Because Mr Osei had promised them a reward if they completed the section",
+            "Because Zara had been faster than Marcus and felt proud of her performance"
+          ],
+          "correctAnswer": "Because reaching the camp after sustained effort produces a satisfaction that difficulty alone cannot",
+          "explanation": "The vocabulary definition introduces 'rewarding' as producing satisfaction from effort. Zara uses the word here to complete a promise she made earlier in the chapter. The exhaustion and the reward are not opposites — they come together, as the word 'deeply rewarding' suggests."
         }
       ]
     },
@@ -550,6 +574,18 @@
           ],
           "correctAnswer": "If they follow the conservation rules, the environment will be preserved for future generations.",
           "explanation": "'As long as' is a synonym for 'if' in first conditional sentences. Mr Osei is making a direct connection: respectful behaviour = preserved environment for future people. This links the grammar focus (first conditional with 'as long as') to the conservation theme."
+        },
+        {
+          "order": 5,
+          "question": "Why does seeing the glacier affect Maya differently from learning about climate change in school?",
+          "options": [
+            "Because the glacier was much larger than she had expected from textbook photographs",
+            "Because her teachers had not given her accurate information about glaciers",
+            "Because a physical, visible example made the consequences of emissions feel real and personal in a way that facts alone had not",
+            "Because she had not believed in climate change before and the glacier proved she was wrong"
+          ],
+          "correctAnswer": "Because a physical, visible example made the consequences of emissions feel real and personal in a way that facts alone had not",
+          "explanation": "Paragraph 2 says: 'She had learned about climate change in school but seeing a glacier in person — understanding it had been larger once, and would be smaller still — made it feel different. More real. More urgent.' The experience added emotional weight that information alone could not."
         }
       ]
     }

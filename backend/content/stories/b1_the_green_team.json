@@ -174,15 +174,15 @@
         },
         {
           "order": 3,
-          "question": "Which sentence is an example of the first conditional?",
+          "question": "Why does Ms Okafor insist the students bring data alongside their feelings?",
           "options": [
-            "If she had known about the park, she would have started the club sooner.",
-            "If the council doesn't act, the stream will be completely polluted.",
-            "If only the council would listen to young people more often.",
-            "If the dog hadn't stopped, Priya wouldn't have noticed the litter."
+            "Because the council will only accept proposals that use scientific language.",
+            "Because she doesn't believe the photographs are accurate.",
+            "Because feelings alone are not enough to persuade people — evidence gives arguments credibility.",
+            "Because she wants to test whether the students are serious about the project."
           ],
-          "correctAnswer": "If the council doesn't act, the stream will be completely polluted.",
-          "explanation": "First conditional: if + present simple, will + verb. This sentence describes a likely future result of real inaction. The others are second or third conditional forms."
+          "correctAnswer": "Because feelings alone are not enough to persuade people — evidence gives arguments credibility.",
+          "explanation": "Ms Okafor says: 'Feelings are important. But as long as you also have data, people will listen.' She values their motivation but knows that real-world decisions — especially at the council level — require factual evidence to carry weight."
         },
         {
           "order": 4,
@@ -353,15 +353,15 @@
         },
         {
           "order": 2,
-          "question": "Which sentence uses the second conditional correctly?",
+          "question": "Why does Rosa speak for the group at the council meeting rather than Priya or Tariq?",
           "options": [
-            "If every school adopts a green space, biodiversity will improve.",
-            "If every school adopted a green space, biodiversity would improve.",
-            "If every school adopted a green space, biodiversity will improve.",
-            "If every school had adopted a green space, biodiversity would have improved."
+            "Rosa had been voted team leader at the start of the project.",
+            "Priya and Tariq were too nervous to present the data.",
+            "Rosa had the most relevant data to present.",
+            "She was the one who could stay calm, speak clearly, and not be put off — a quality she had been developing since she was eleven."
           ],
-          "correctAnswer": "If every school adopted a green space, biodiversity would improve.",
-          "explanation": "Second conditional: if + past simple, would + verb. Option A is first conditional (real/likely). Option C mixes tenses incorrectly. Option D is third conditional."
+          "correctAnswer": "She was the one who could stay calm, speak clearly, and not be put off — a quality she had been developing since she was eleven.",
+          "explanation": "Paragraph 2 says Rosa 'was the one who could do this — stay calm, speak clearly, not be put off by a look' and links it to her ambition to be a lawyer since age eleven. The council meeting felt like a rehearsal. This is about character under pressure, not a team vote or data ownership."
         },
         {
           "order": 3,

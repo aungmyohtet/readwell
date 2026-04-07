@@ -1,0 +1,467 @@
+{
+  "story": {
+    "title": "Pressure Lines",
+    "description": "When a student expedition leader makes a critical route decision on dangerous terrain, she must later defend it through an institutional review that measures experience in the language of procedure. Two chapters follow one event: what happened on the mountain, and what happened when it became a document.",
+    "level": "B2",
+    "coverEmoji": "🏔️",
+    "author": "ReadWell",
+    "tags": ["leadership", "endurance", "institutions", "responsibility"]
+  },
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "title": "Above the Snow Line",
+      "vocabulary": [
+        {
+          "word": "endurance",
+          "definition": "the ability to keep going through a long period of difficulty, pain, or effort",
+          "exampleSentence": "Dr Keane had said during the briefing that endurance was not the ability to keep moving when conditions were easy.",
+          "emoji": "💪"
+        },
+        {
+          "word": "treacherous",
+          "definition": "dangerously unpredictable or unstable, especially in terms of terrain or weather conditions",
+          "exampleSentence": "The track became treacherous past the second marker, where overnight ice had glazed the scree beneath a thin layer of new snow.",
+          "emoji": "⚠️"
+        },
+        {
+          "word": "navigate",
+          "definition": "to find the correct route through a difficult environment, using skill and careful judgement",
+          "exampleSentence": "Elena navigated the final approach by memory more than by map, having studied the terrain photographs so many times that the rock shapes felt familiar.",
+          "emoji": "🧭"
+        },
+        {
+          "word": "solitude",
+          "definition": "the state of being alone, especially in a wide or quiet space; a feeling of personal isolation",
+          "exampleSentence": "Even in a group of seven, the high altitude produced a kind of solitude that narrowed each person down to their own breath and the next secure hold.",
+          "emoji": "🏔️"
+        },
+        {
+          "word": "threshold",
+          "definition": "the point at which a situation changes or begins to become more serious",
+          "exampleSentence": "Elena recognised the edge of what Dr Keane called threshold conditions: not dangerous in themselves, but dangerous because they made the next decision too easy to rush.",
+          "emoji": "🚦"
+        },
+        {
+          "word": "adrenaline",
+          "definition": "the physical energy and heightened alertness produced by danger, excitement, or intense effort",
+          "exampleSentence": "Adrenaline draining from a completed challenge has a particular quality: it leaves a person briefly transparent, easier to read than they mean to be.",
+          "emoji": "⚡"
+        },
+        {
+          "word": "perseverance",
+          "definition": "the continued effort to do something despite difficulty, setbacks, or fatigue",
+          "exampleSentence": "By the time base camp appeared below, the distinction between endurance and perseverance had stopped being theoretical.",
+          "emoji": "🎯"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Participle Clauses",
+        "explanation": "Participle clauses use a present or past participle to compress information that would otherwise need a full clause. A present participle clause (e.g. Leaving camp at five, she counted torches) shows an action happening at the same time as or just before the main verb. A past participle clause (e.g. Exhausted by the climb, she sat down) describes a state resulting from a completed action. Having + past participle (e.g. Having chosen the longer route, the group moved more carefully) shows a completed action that precedes another. These structures make prose more fluid and formal.",
+        "examples": [
+          "Leaving camp at five in the morning, Elena counted torches rather than people.",
+          "Exhausted by the concentration the climb demanded, the team ate and said very little.",
+          "Having chosen the longer route, the whole group moved with greater care.",
+          "Persuaded by logic rather than dismissed by authority, Tomas was more likely to remember the lesson."
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "Leaving camp at five in the morning, Elena counted torches rather than people. She had learned that approach from Dr Keane during the summer training circuit: headlights meant bodies, and bodies meant pace. Seven lights spread across the lower slope, which was manageable. By the time they reached the snow line, the sky had lifted from black to a flat bruised grey, and Tomas — already thirty metres ahead of the main group — was showing no sign of adjusting his pace. Exposed to the wind after the first rise, Elena knew the difficult section was still at least two hours above them. Endurance, Dr Keane had said during the briefing, was not the ability to keep moving when conditions were easy.",
+          "imagePlaceholder": "🏔️",
+          "grammarAnnotations": [
+            {
+              "targetText": "Leaving camp at five in the morning, Elena counted torches rather than people.",
+              "tone": "structure",
+              "note": "present participle clause: action simultaneous with main verb"
+            },
+            {
+              "targetText": "Exposed to the wind after the first rise, Elena knew the difficult section was still at least two hours above them.",
+              "tone": "structure",
+              "note": "past participle clause: resulting state"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "text": "The track became treacherous past the second marker, where overnight ice had glazed the scree beneath a thin layer of fresh snow. Elena moved carefully, testing each foothold before committing her weight. Tomas, having reached the steep section well ahead of the group, was already calling back that the surface was fine. It was not. She watched him slip once, recover quickly, and continue without checking whether anyone behind him had noticed. The team needed to navigate around a broad tongue of compacted ice to reach the shelter of a rock band to the left. The safer route added ten minutes. Tomas wanted the shorter direct crossing. Elena called a stop and let the silence do the arguing.",
+          "imagePlaceholder": "🥾",
+          "grammarAnnotations": [
+            {
+              "targetText": "Tomas, having reached the steep section well ahead of the group,",
+              "tone": "structure",
+              "note": "having + past participle: completed action before the main clause"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "text": "Standing at the margin of the ice tongue, she weighed the options with a deliberateness that felt out of proportion to the time available. The wind had built since sunrise, pressing against the right side of her face with a steady physical force that went beyond ordinary gusts. Feeling the temperature in the wind rather than the air, she recognised what Dr Keane described as threshold conditions: not dangerous in themselves, but dangerous because they made the next decision too easy to rush. Tomas was at her shoulder, impatient but quiet in the manner of someone who had learned when not to speak. 'We go left,' Elena said. He nodded without satisfaction but without argument. In the circumstances, that was enough.",
+          "imagePlaceholder": "🌨️",
+          "grammarAnnotations": [
+            {
+              "targetText": "Standing at the margin of the ice tongue, she weighed the options",
+              "tone": "structure",
+              "note": "present participle clause: action happening at the same time as main verb"
+            },
+            {
+              "targetText": "Feeling the temperature in the wind rather than the air, she recognised what Dr Keane described as threshold conditions:",
+              "tone": "structure",
+              "note": "present participle clause: explains the reason for the main action"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "text": "Having chosen the longer route, the whole group moved with greater care. The angle eased past the rock band, and for twenty minutes the climb settled into a rhythm that replaced deliberate thought with steady physical act. The solitude of high altitude still surprised new expedition members, even in a group; the mountain narrowed each person down to their own breath and the next secure hold. Elena navigated the final approach by memory more than by map, having studied the terrain photographs so often during the briefing that the rock shapes felt personally familiar. She had not shared this with the team. That kind of confidence was fragile and better kept private.",
+          "imagePlaceholder": "🧭",
+          "grammarAnnotations": [
+            {
+              "targetText": "Having chosen the longer route, the whole group moved with greater care.",
+              "tone": "structure",
+              "note": "having + past participle: completed action preceding the main one"
+            },
+            {
+              "targetText": "having studied the terrain photographs so often during the briefing that the rock shapes felt personally familiar.",
+              "tone": "structure",
+              "note": "having + past participle used within a longer sentence"
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "text": "The temporary shelter, built from a stone windbreak and a stretched tarpaulin, gave the group their first genuine break from wind. They ate and drank and said very little, exhausted by the concentration the climb had demanded rather than by the physical effort itself. Tomas sat apart — not unhappy but unwilling to be managed. Adrenaline draining from a completed challenge has a particular quality: it leaves a person briefly transparent, easier to read than they mean to be. Looking across the stove at him, Elena saw not defiance but the impatience of someone afraid of appearing slow. That was useful information, and she filed it away without comment.",
+          "imagePlaceholder": "⛺",
+          "grammarAnnotations": [
+            {
+              "targetText": "exhausted by the concentration the climb had demanded rather than by the physical effort itself.",
+              "tone": "structure",
+              "note": "past participle clause: completed state explaining their silence"
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "text": "Dr Keane arrived at the shelter twenty minutes after the group, having checked the rear of the line with a thoroughness that took time. He drank his coffee, studied his GPS unit, and said nothing about the route choice until Tomas raised it first. Tomas said the left traverse had been unnecessary; the direct crossing would have been manageable. Dr Keane set his cup down before answering. 'The correct route,' he said, 'is the one the lead chooses before a mistake, not after one.' He spoke without irritation, which gave the correction a particular precision. Elena watched Tomas absorb it. Persuaded by logic rather than dismissed by authority, he was more likely to retain a lesson that had cost him nothing dramatic to receive.",
+          "imagePlaceholder": "🔥",
+          "grammarAnnotations": [
+            {
+              "targetText": "Dr Keane arrived at the shelter twenty minutes after the group, having checked the rear of the line with a thoroughness that took time.",
+              "tone": "structure",
+              "note": "having + past participle: explains what he had completed before arriving"
+            },
+            {
+              "targetText": "Persuaded by logic rather than dismissed by authority, he was more likely to retain a lesson",
+              "tone": "structure",
+              "note": "past participle clause: shows the condition for the main result"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "text": "When the weather window opened briefly in the late afternoon, the group descended in less than half the time the ascent had taken. Descending unfamiliar terrain tired and in flat light, Elena kept her focus on the essential: footing, spacing, timing, and the count of lights ahead. Perseverance, she had been told, was what remained when endurance ran out. By the time base camp appeared below, that distinction had stopped being theoretical and had become the name for what she was still doing. The day had not been cinematic. Nothing had gone catastrophically wrong, and nothing had required heroism. What remained was something smaller and more durable: a decision taken carefully, a route chosen before it was necessary to choose it, and seven torches still moving together toward the lights below.",
+          "imagePlaceholder": "🌄",
+          "grammarAnnotations": [
+            {
+              "targetText": "Descending unfamiliar terrain tired and in flat light, Elena kept her focus on the essential:",
+              "tone": "structure",
+              "note": "present participle clause: simultaneous state and action"
+            }
+          ]
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "Why does Elena count torches rather than people when leaving camp?",
+          "options": [
+            "Because the expedition rules require a torch count at the start of every day",
+            "Because headlights tell her reliably where each person is and how fast the group is moving",
+            "Because she is too far from the others to see their faces in the dark",
+            "Because Dr Keane has asked her to record equipment use rather than take attendance"
+          ],
+          "correctAnswer": "Because headlights tell her reliably where each person is and how fast the group is moving",
+          "explanation": "Paragraph 1 explains this directly: headlights meant bodies, and bodies meant pace. Elena uses the torch count as a systematic way of tracking both position and group speed without needing to stop and check."
+        },
+        {
+          "order": 2,
+          "question": "What does Elena's decision to call a stop at the ice tongue reveal about her leadership?",
+          "options": [
+            "That she is not confident enough to make decisions without consulting Dr Keane first",
+            "That she prioritises safety over pace, even when it means resisting pressure from Tomas",
+            "That she agrees with Tomas but wants to appear cautious for the purposes of the expedition log",
+            "That she is unfamiliar with this section of the terrain and needs more time to study the map"
+          ],
+          "correctAnswer": "That she prioritises safety over pace, even when it means resisting pressure from Tomas",
+          "explanation": "Paragraph 3 shows Elena carefully assessing the conditions — wind temperature, surface quality, risk of rushing — before choosing the slower, safer route. She does this despite Tomas's impatience, without asking for permission."
+        },
+        {
+          "order": 3,
+          "question": "What does Dr Keane mean when he says 'the correct route is the one the lead chooses before a mistake, not after one'?",
+          "options": [
+            "That a good leader should always choose the fastest available route to minimise exposure time",
+            "That the quality of a decision is measured by when it is made, not by whether hindsight confirms it",
+            "That only experienced leaders should make route decisions on difficult terrain",
+            "That the safer route should always be the one that avoids the most ice"
+          ],
+          "correctAnswer": "That the quality of a decision is measured by when it is made, not by whether hindsight confirms it",
+          "explanation": "Dr Keane rejects Tomas's retrospective argument that the shorter route would have been fine. His point is that Elena made the right decision at the right moment, with the information available to her. That is the only standard that matters."
+        },
+        {
+          "order": 4,
+          "question": "Why does Elena choose not to tell the group that she navigated the final section by memory?",
+          "options": [
+            "Because she is concerned Dr Keane would consider it a safety violation",
+            "Because she knows that kind of personal confidence is fragile and does not survive group scrutiny",
+            "Because Tomas would argue that memory is less reliable than GPS navigation",
+            "Because the group is spread too far apart to hear her while she is leading"
+          ],
+          "correctAnswer": "Because she knows that kind of personal confidence is fragile and does not survive group scrutiny",
+          "explanation": "Paragraph 4 states directly that this kind of confidence was fragile and better kept private. Elena understands that some forms of effective personal knowledge are undermined rather than strengthened when exposed to group questioning."
+        },
+        {
+          "order": 5,
+          "question": "What does the word 'threshold' most likely mean in paragraph 3?",
+          "options": [
+            "the physical entrance to the temporary shelter used by the expedition",
+            "the point at which conditions shift toward becoming genuinely dangerous",
+            "a measurement category used in official expedition risk assessments",
+            "the point at which a weather forecast becomes unreliable"
+          ],
+          "correctAnswer": "the point at which conditions shift toward becoming genuinely dangerous",
+          "explanation": "In paragraph 3, threshold conditions are described as not dangerous in themselves, but dangerous because they make the next decision too easy to rush. The word marks the boundary between manageable difficulty and escalating risk."
+        },
+        {
+          "order": 6,
+          "question": "What is the significance of the final image — seven torches still moving together?",
+          "options": [
+            "It confirms the group has completed the safety check required before entering base camp",
+            "It marks the undramatic but durable success of the day: a careful decision, a sound route, and the team intact",
+            "It indicates that Dr Keane has introduced a new torch-counting protocol for future expeditions",
+            "It suggests that Tomas has finally accepted his position at the back of the group"
+          ],
+          "correctAnswer": "It marks the undramatic but durable success of the day: a careful decision, a sound route, and the team intact",
+          "explanation": "The final paragraph explicitly states that nothing had been cinematic or heroic. The seven torches echo the seven counted at the start, confirming a quiet success: the group made it through whole, together, and without drama."
+        }
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "title": "After the Report",
+      "vocabulary": [
+        {
+          "word": "bureaucracy",
+          "definition": "a system of official rules and procedures, often experienced as slow or impersonal",
+          "exampleSentence": "The bureaucracy around outdoor education incidents had been designed for consistency, Elena understood, not for accuracy.",
+          "emoji": "🏢"
+        },
+        {
+          "word": "protocol",
+          "definition": "an official set of rules about the correct way to act in a formal situation",
+          "exampleSentence": "Ms Voss managed the school's protocol for outdoor education incidents with a precision that left no room for ambiguity.",
+          "emoji": "📋"
+        },
+        {
+          "word": "framework",
+          "definition": "a system of rules or principles used to guide decisions and actions within an institution",
+          "exampleSentence": "The review framework required the institution to assess whether proper training and supervision had been in place before the expedition.",
+          "emoji": "🔲"
+        },
+        {
+          "word": "comply",
+          "definition": "to act in accordance with a rule, instruction, or official requirement",
+          "exampleSentence": "Elena could comply with the new logging requirement without difficulty; what she could not accept was the reasoning behind it.",
+          "emoji": "✅"
+        },
+        {
+          "word": "jurisdiction",
+          "definition": "the official authority of an organisation to make decisions within a particular area",
+          "exampleSentence": "The county outdoor education board, whose jurisdiction covered all off-site activities involving students under nineteen, had required a formal risk assessment.",
+          "emoji": "⚖️"
+        },
+        {
+          "word": "mandate",
+          "definition": "an official instruction or requirement that must be followed",
+          "exampleSentence": "The committee issued a mandate requiring all future expedition leaders to record route changes in real time using the field log.",
+          "emoji": "📜"
+        },
+        {
+          "word": "amendment",
+          "definition": "a change or addition made to an official document, rule, or set of guidelines",
+          "exampleSentence": "Ms Voss introduced an amendment to the original agenda that extended the timeline by one day to accommodate additional witness statements.",
+          "emoji": "🖊️"
+        }
+      ],
+      "grammarFocus": {
+        "rule": "Causative Have/Get + Nominalization",
+        "explanation": "The causative structure have or get + object + past participle describes arranging for something to be done by someone else: The school had the risk assessment completed within five days. Get is slightly more informal than have. Nominalization turns verbs and adjectives into nouns to create formal or impersonal language: decide becomes decision, fail becomes failure, assess becomes assessment, revise becomes revision. Nominalization is very common in institutional documents, formal reports, and academic writing.",
+        "examples": [
+          "The school had a formal risk assessment completed within five working days.",
+          "Ms Voss had the route map annotated and projected on the wall before the session began.",
+          "The committee's recommendation called for an amendment to the expedition guidelines.",
+          "Elena got her account of the decision clarified in her own mind before entering the room."
+        ]
+      },
+      "content": [
+        {
+          "order": 1,
+          "text": "The notification arrived by email at 7:43 on the Thursday following the expedition. Elena had the committee's letter printed and on the table before her mother had finished making coffee. The school had received formal notification from the county outdoor education board, whose jurisdiction covered all off-site activities involving students under nineteen, and had been required to have a formal risk assessment completed within five working days. The word required appeared seven times across three paragraphs. Tomas texted to say his parents had been called in separately, which Elena found immediately concerning but not entirely surprising. Bureaucracy, she had come to understand, moved in two streams: the official and the personal. Only one of them was predictable.",
+          "imagePlaceholder": "🏢",
+          "grammarAnnotations": [
+            {
+              "targetText": "had been required to have a formal risk assessment completed within five working days.",
+              "tone": "structure",
+              "note": "causative have + object + past participle: school arranged for this to be done"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "text": "The review meeting was held in the compliance office, a room with correct lighting and no comfortable chairs. Ms Voss, who managed the institution's protocol for outdoor education incidents, opened the session by having the original expedition paperwork read into the record by an administrator. Dr Keane sat to Elena's left and said nothing during this opening phase, which had been agreed between them beforehand. The framework for the review, Ms Voss explained, required the institution to assess whether proper training and supervision had been in place, to verify that all students had complied with pre-expedition requirements, and to determine whether any amendment to future guidelines was needed. Elena listened without expression. Writing too soon committed you to someone else's timeline.",
+          "imagePlaceholder": "📄",
+          "grammarAnnotations": [
+            {
+              "targetText": "having the original expedition paperwork read into the record by an administrator.",
+              "tone": "structure",
+              "note": "causative have + object + past participle: arranged for papers to be read aloud"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "text": "The first substantive question came an hour in, after Ms Voss had had the route map annotated and projected on the wall. She asked Elena to account for the decision to take the longer traverse. Elena described it in precise factual terms: wind speed estimate, surface condition observed, route choice made, time cost accepted, no injury sustained. Ms Voss made a note. The committee would need to have an independent risk assessment completed, she said, reviewing specifically whether the route deviation had fallen within the mandate of the student expedition leader. 'Was the decision yours to make?' she asked. 'Yes,' said Elena. The sentence left her cleanly and she did not add to it.",
+          "imagePlaceholder": "⚖️",
+          "grammarAnnotations": [
+            {
+              "targetText": "Ms Voss had had the route map annotated and projected on the wall.",
+              "tone": "structure",
+              "note": "causative had + object + past participle: arranged for map to be annotated"
+            },
+            {
+              "targetText": "The committee would need to have an independent risk assessment completed,",
+              "tone": "structure",
+              "note": "causative have + object + past participle"
+            }
+          ]
+        },
+        {
+          "order": 4,
+          "text": "Tomas, interviewed separately that afternoon, had apparently argued that the route discussion had not constituted a formal decision but an open debate. Elena learned this from Dr Keane during the break, standing in the corridor over coffee from the machine. She was not angry; she was disappointed in the quieter and more lasting way. The institutional language around the incident — assessment, review, recommendation, approval, failure — had a way of making lived experience sound like a draft document waiting for correction. She had got her account of the decision clarified in her own mind three times by now. The committee would reach the same conclusion, she thought, by a longer and less honest route.",
+          "imagePlaceholder": "🪑",
+          "grammarAnnotations": [
+            {
+              "targetText": "She had got her account of the decision clarified in her own mind three times by now.",
+              "tone": "structure",
+              "note": "causative get + object + past participle: informal causative"
+            }
+          ]
+        },
+        {
+          "order": 5,
+          "text": "Ms Voss returned after lunch with an amendment to the original agenda: the committee needed to have two additional witness statements included in the record, which extended the timeline by one day. She explained this with a professional neutrality that Elena had begun to understand was not coldness but compliance with its own internal logic. The framework did not accommodate tone. Dr Keane said the extension was reasonable, which Elena read as a signal not to resist it. The bureaucracy was not hostile, she had concluded; it was simply shaped for a world in which everything could be written down and made consistent. The difficulty was that what had happened on the mountain could not be made consistent without becoming a different event entirely.",
+          "imagePlaceholder": "🖊️",
+          "grammarAnnotations": [
+            {
+              "targetText": "the committee needed to have two additional witness statements included in the record,",
+              "tone": "structure",
+              "note": "causative have + object + past participle"
+            }
+          ]
+        },
+        {
+          "order": 6,
+          "text": "The final session presented the committee's recommendation. The expedition had been conducted within the jurisdiction and training guidelines; however, the route deviation had not been logged at the time it occurred, which the committee classified as a procedural failure rather than a safety one. A mandate would be issued requiring all future expedition leaders to get any significant route changes recorded in the field log in real time. Elena could comply with that requirement without difficulty. What she found harder to accept, privately, was the implication it carried: that a real-time log would have made the decision wiser. The decision had already been correct. The log would simply have made the committee more comfortable reviewing it.",
+          "imagePlaceholder": "🚪",
+          "grammarAnnotations": [
+            {
+              "targetText": "requiring all future expedition leaders to get any significant route changes recorded in the field log in real time.",
+              "tone": "structure",
+              "note": "causative get + object + past participle"
+            }
+          ]
+        },
+        {
+          "order": 7,
+          "text": "Dr Keane walked with her to the car park afterward. The afternoon was grey and still in the way that promises more wind by evening. Elena said she thought the committee had arrived at the correct conclusion through the incorrect reasoning. Dr Keane replied that this was generally how institutions worked, and that understanding the difference was a more durable skill than frustration. She appreciated the honesty more than she would have appreciated reassurance. She had walked in that morning expecting to defend a decision she was certain about. What she had received instead was something harder to name: an education in the distance between what you lived and what becomes the official record. The experience was still hers. The record would be approved tomorrow, and they were not the same thing.",
+          "imagePlaceholder": "🌫️",
+          "grammarAnnotations": []
+        }
+      ],
+      "comprehension": [
+        {
+          "order": 1,
+          "question": "What has the school been formally required to do following the expedition?",
+          "options": [
+            "Cancel the outdoor education programme until further notice",
+            "Have a formal risk assessment completed within five working days of the notification",
+            "Submit a written apology to the county outdoor education board",
+            "Provide Tomas's parents with a full copy of the expedition route log"
+          ],
+          "correctAnswer": "Have a formal risk assessment completed within five working days of the notification",
+          "explanation": "Paragraph 1 states clearly that the school had received formal notification and had been required to have a formal risk assessment completed within five working days. This is what triggered the review process."
+        },
+        {
+          "order": 2,
+          "question": "Why does Elena choose not to write anything down during Ms Voss's opening explanation?",
+          "options": [
+            "Because the compliance office rules prohibit note-taking during official proceedings",
+            "Because writing too early would commit her to a timeline set by the institution rather than her own understanding",
+            "Because she expects Dr Keane to write a summary for her after the session",
+            "Because she already has a complete written record from the expedition itself"
+          ],
+          "correctAnswer": "Because writing too early would commit her to a timeline set by the institution rather than her own understanding",
+          "explanation": "The final sentence of paragraph 2 states Elena's reasoning directly: writing too soon committed you to someone else's timeline. She is deliberately keeping her own pace of response rather than being pulled into the institution's framing."
+        },
+        {
+          "order": 3,
+          "question": "What additional procedural failure does the committee identify?",
+          "options": [
+            "That the student leader failed to carry the required GPS equipment",
+            "That the group did not complete the required pre-departure weather check",
+            "That the route deviation was not recorded in the field log when it occurred",
+            "That Tomas had not completed the required pre-expedition safety briefing"
+          ],
+          "correctAnswer": "That the route deviation was not recorded in the field log when it occurred",
+          "explanation": "Paragraph 6 describes the committee's finding: the route deviation had not been logged at the time it occurred. This was classified as a procedural failure, not a safety one — the decision itself was sound, but the record-keeping was not."
+        },
+        {
+          "order": 4,
+          "question": "What does Elena mean when she says the committee reached the correct conclusion through incorrect reasoning?",
+          "options": [
+            "That the committee made a factual error in its assessment of the route conditions",
+            "That while the committee approves the expedition, it does so on procedural grounds rather than genuine understanding of why the route decision was right",
+            "That the committee received inaccurate evidence from Tomas during his separate interview",
+            "That she believes the committee should have rejected the entire expedition programme"
+          ],
+          "correctAnswer": "That while the committee approves the expedition, it does so on procedural grounds rather than genuine understanding of why the route decision was right",
+          "explanation": "In paragraph 7, Elena distinguishes between outcome and reasoning. The committee finds the expedition was conducted within guidelines, which is correct; but they approve it via procedural compliance rather than any real understanding of what the conditions demanded at the ice tongue."
+        },
+        {
+          "order": 5,
+          "question": "What does the word 'jurisdiction' most likely mean in paragraph 1?",
+          "options": [
+            "a formal request from a government department for statistical information",
+            "the official area of authority within which an organisation has the power to make decisions",
+            "the physical territory covered by a school's outdoor education programme",
+            "a form of liability insurance required for all expedition activities"
+          ],
+          "correctAnswer": "the official area of authority within which an organisation has the power to make decisions",
+          "explanation": "Paragraph 1 describes the county outdoor education board's jurisdiction as covering all off-site activities involving students under nineteen. The word defines the scope of the board's official authority to require the review."
+        },
+        {
+          "order": 6,
+          "question": "What does the final paragraph suggest about what Elena has gained from the review process?",
+          "options": [
+            "She feels triumphant: her decision has been fully vindicated in the way she hoped",
+            "She is bitter: the process has treated her unfairly and she plans to challenge the outcome",
+            "She has gained a clearer understanding of the gap between lived experience and official record, which Dr Keane identifies as a durable skill",
+            "She is uncertain: the review has made her question whether her route decision was actually correct"
+          ],
+          "correctAnswer": "She has gained a clearer understanding of the gap between lived experience and official record, which Dr Keane identifies as a durable skill",
+          "explanation": "The final paragraph describes what she received as 'an education in the distance between what you lived and what becomes the official record.' Dr Keane frames this understanding as more valuable than frustration. Elena ends sober and clear-eyed, not vindicated and not bitter."
+        }
+      ]
+    }
+  ]
+}

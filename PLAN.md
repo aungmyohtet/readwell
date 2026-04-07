@@ -267,6 +267,10 @@ Story files live in `content/stories/`. Each file contains one story and one or 
 |---|---|---|
 | The Last Library | 2 | U2 Third Conditional; U1 PP Continuous vs Simple |
 | The Bridge Year | 2 | U3 Mixed Conditionals; U4 Passive All Tenses |
+| The Public Square | 2 | U5 Reported Speech Complex; U11 Advanced Connectors |
+| Fault Line | 2 | U7 Modal Perfect; U8 Wish / If Only |
+| Borrowed Names | 2 | U6 Non-Defining Relative Clauses; U10 Cleft Sentences & Inversion |
+| Pressure Lines | 2 | U9 Participle Clauses; U12 Causative Have/Get + Nominalization |
 
 ---
 
@@ -280,15 +284,9 @@ Story files live in `content/stories/`. Each file contains one story and one or 
 - Story coverage is now materially broader than the original plan.
 - Launch focus is no longer coverage first; it is a consistent final editorial pass across the existing B1 catalogue.
 
-### B2 (units still without stories)
-- U5 Reported Speech Complex
-- U6 Non-Defining Relative Clauses
-- U7 Modal Perfect
-- U8 Wish / If Only
-- U9 Participle Clauses
-- U10 Cleft Sentences & Inversion
-- U11 Advanced Connectors
-- U12 Causative Have/Get + Nominalization
+### B2
+- Curriculum coverage now complete across all 12 units.
+- Launch focus is final editorial review, validation, and consistency pass.
 
 ---
 

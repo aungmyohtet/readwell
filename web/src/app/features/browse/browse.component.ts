@@ -31,7 +31,7 @@ const LEVELS = ['All', 'A2', 'B1', 'B2'] as const;
                 Resume Chapter {{ lastChapter()!.chapterNumber }}
               </a>
             }
-            <a class="btn btn-secondary" href="#library">Explore the library</a>
+            <button class="btn btn-secondary" (click)="scrollToLibrary()">Explore the library</button>
           </div>
 
           <div class="hero-principles">
@@ -175,6 +175,10 @@ export class BrowseComponent implements OnInit {
     } catch {
       // ignore
     }
+  }
+
+  scrollToLibrary() {
+    document.getElementById('library')?.scrollIntoView({ behavior: 'smooth' });
   }
 
   selectLevel(level: string) {

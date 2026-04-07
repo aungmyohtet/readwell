@@ -379,15 +379,15 @@
       "comprehension": [
         {
           "order": 1,
-          "question": "Which passive sentence describes an ongoing process happening at the time of the demonstration?",
+          "question": "What does Kai's remark 'It hasn't been released yet. But it will be.' at the end of paragraph 1 suggest about the device?",
           "options": [
-            "The prototype had been built by two engineers.",
-            "The interface had been redesigned four times.",
-            "Response times are being tracked across six test locations.",
-            "The first version was designed for engineers, not operators."
+            "The prototype has already failed and the engineers are working on a replacement.",
+            "The device is still in testing but the team is confident deployment is coming soon.",
+            "Kai is uncertain whether the device will receive regulatory approval.",
+            "The engineering team has decided to release the device in only one test location."
           ],
-          "correctAnswer": "Response times are being tracked across six test locations.",
-          "explanation": "'Are being tracked' is present continuous passive — it describes what is happening right now, during the testing phase. The others describe completed or historical events."
+          "correctAnswer": "The device is still in testing but the team is confident deployment is coming soon.",
+          "explanation": "Kai's phrasing — short, declarative, and without qualification — treats release as a certainty rather than a possibility. The testing across six locations is clearly a step before deployment, not an obstacle to it."
         },
         {
           "order": 2,
@@ -415,15 +415,15 @@
         },
         {
           "order": 4,
-          "question": "What tense and voice is used in: 'The algorithm is being continuously refined'?",
+          "question": "In paragraph 4, what does Selin mean when she says the task required her to 'hold two perspectives simultaneously without collapsing them into one'?",
           "options": [
-            "Present perfect passive",
-            "Past continuous passive",
-            "Present continuous passive",
-            "Simple present passive"
+            "She had to pretend to agree with both sides even when she personally disagreed with one.",
+            "She had to write separate sections for the lab and the rescue team in her report.",
+            "She had to represent both lab precision and rescue-team reliability fairly, without letting one override the other.",
+            "She had to manage two separate meetings and ensure neither side knew what the other had said."
           ],
-          "correctAnswer": "Present continuous passive",
-          "explanation": "'Is being refined' is present continuous passive: am/is/are + being + past participle. It describes an ongoing process at the current time."
+          "correctAnswer": "She had to represent both lab precision and rescue-team reliability fairly, without letting one override the other.",
+          "explanation": "Paragraph 4 explains that the lab valued precision and the rescue team valued reliability under pressure. Selin's analytical challenge was to describe both perspectives accurately in her report without reducing one to the other."
         },
         {
           "order": 5,
@@ -451,15 +451,15 @@
         },
         {
           "order": 7,
-          "question": "Which sentence is an example of a passive with a reporting verb?",
+          "question": "What does Selin mean when she says she was changed 'not in the dramatic way the brochures described' in paragraph 6?",
           "options": [
-            "The device was built in a converted basement.",
-            "It has been estimated that the system will cut response times by thirty-eight percent.",
-            "The interface has been redesigned to suit field conditions.",
-            "The algorithm was refined after every deployment."
+            "She feels the gap year brochures were dishonest about the opportunities available.",
+            "She is surprised the year did not include any adventurous or international experiences.",
+            "The change she experienced was gradual and practical — not a sudden transformation but the result of consistent, serious work.",
+            "She believes the gap year was less valuable than she had been told it would be."
           ],
-          "correctAnswer": "It has been estimated that the system will cut response times by thirty-eight percent.",
-          "explanation": "'It has been estimated that...' is a classic passive reporting verb structure. It presents a claim without specifying who made it — common in formal and technical writing."
+          "correctAnswer": "The change she experienced was gradual and practical — not a sudden transformation but the result of consistent, serious work.",
+          "explanation": "Paragraph 6 contrasts the brochure version of change — dramatic, identity-altering moments — with Selin's actual experience: quiet shifts from 'things changing when they are used regularly and taken seriously.' The gap year changed her through accumulation, not revelation."
         }
       ]
     }

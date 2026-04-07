@@ -210,15 +210,15 @@
         },
         {
           "order": 2,
-          "question": "Which sentence best describes what Emma was doing when Ms Clarke called her name?",
+          "question": "Why does Sophie's comment in paragraph 4 make Emma feel less terrible?",
           "options": [
-            "She was writing in her notebook.",
-            "She was searching her bag for the assignment.",
-            "She was talking to Sophie.",
-            "She was standing at the front of the class."
+            "Sophie offers to bring Emma's assignment from home.",
+            "Emma realises she is not the only one who has forgotten homework.",
+            "Sophie tells Emma that Ms Clarke never gives low marks for late work.",
+            "Emma decides the assignment is not important after all."
           ],
-          "correctAnswer": "She was searching her bag for the assignment.",
-          "explanation": "Paragraph 3 says Ms Clarke asked for assignments, and Emma 'searched through every pocket' of her bag. When Ms Clarke spoke to her, Emma was still looking."
+          "correctAnswer": "Emma realises she is not the only one who has forgotten homework.",
+          "explanation": "In paragraph 4, Sophie whispers 'It happened to me last term. Twice.' This tells Emma that forgetting homework is not unusual, which is why she 'almost laughed' and 'did not feel quite so terrible' after that."
         },
         {
           "order": 3,

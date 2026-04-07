@@ -51,7 +51,7 @@ function annotateSimplePresent(html: string): string {
   );
   next = transformTextSegments(next, (segment) =>
     segment.replace(thirdPersonRegex, (_match, subject: string, adverb = '', stem: string, ending: string) =>
-      `${subject}${adverb ?? ''}${stem}<mark class="gh gh-ending">${ending}</mark>`,
+      `${subject}${adverb ?? ''}<mark class="gh gh-ending">${stem}${ending}</mark>`,
     ),
   );
   return next;
@@ -60,7 +60,7 @@ function annotateSimplePresent(html: string): string {
 function annotateContinuous(html: string, helperRegex: RegExp): string {
   return transformTextSegments(html, (segment) =>
     segment.replace(helperRegex, (_match, helper: string, stem: string, ending: string) =>
-      `<mark class="gh gh-aux">${helper}</mark> ${stem}<mark class="gh gh-ending">${ending}</mark>`,
+      `<mark class="gh gh-aux">${helper}</mark> <mark class="gh gh-ending">${stem}${ending}</mark>`,
     ),
   );
 }
@@ -89,12 +89,12 @@ function annotateModalVerbs(html: string): string {
 
 function annotateComparatives(html: string): string {
   let next = wrapMatches(html, /\b(more\s+\w+\s+than|the\s+most\s+\w+|the\s+\w+est|as\s+\w+\s+as)\b/gi, 'gh-structure');
-  next = transformTextSegments(next, (segment) => segment.replace(/\b([A-Za-z]+?)(er)(\s+than)\b/gi, (_m, stem: string, ending: string, tail: string) => `${stem}<mark class="gh gh-ending">${ending}</mark><mark class="gh gh-structure">${tail}</mark>`));
+  next = transformTextSegments(next, (segment) => segment.replace(/\b([A-Za-z]+?er)(\s+than)\b/gi, (_m, word: string, tail: string) => `<mark class="gh gh-ending">${word}</mark><mark class="gh gh-structure">${tail}</mark>`));
   return next;
 }
 
 function annotateSimplePast(html: string): string {
-  let next = transformTextSegments(html, (segment) => segment.replace(/\b([A-Za-z]+?)(ed)\b/gi, (_m, stem: string, ending: string) => `${stem}<mark class="gh gh-ending">${ending}</mark>`));
+  let next = transformTextSegments(html, (segment) => segment.replace(/\b([A-Za-z]+?ed)\b/gi, (match) => `<mark class="gh gh-ending">${match}</mark>`));
   next = wrapMatches(next, /\b(went|saw|came|got|made|took|knew|felt|said|found|told|thought|left|gave|wrote|ran|heard|sat|stood|kept|let|set|put|cut|hit|read)\b/gi, 'gh-structure');
   return next;
 }
@@ -107,7 +107,7 @@ function annotatePresentPerfect(html: string): string {
 
 function annotatePassive(html: string): string {
   let next = wrapMatches(html, /\b(is|are|was|were|been|being|has been|have been|had been|will be)\b/gi, 'gh-aux');
-  next = transformTextSegments(next, (segment) => segment.replace(/\b([A-Za-z]+?)(ed|en|wn|t)\b/gi, (_m, stem: string, ending: string) => `${stem}<mark class="gh gh-ending">${ending}</mark>`));
+  next = transformTextSegments(next, (segment) => segment.replace(/\b([A-Za-z]+?(?:ed|en|wn|t))\b/gi, (match) => `<mark class="gh gh-ending">${match}</mark>`));
   return next;
 }
 

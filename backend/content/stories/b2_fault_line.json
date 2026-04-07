@@ -169,15 +169,15 @@
         },
         {
           "order": 3,
-          "question": "Which sentence from the story is an example of 'needn't have' used for an unnecessary past action?",
+          "question": "In paragraph 4, why does the principle of student autonomy begin to feel less noble to Jonah?",
           "options": [
-            "Tomas must have ignored the marker posts.",
-            "They might have missed the last marker because of the snow.",
-            "They needn't have climbed the final traverse at all once the wind turned.",
-            "Jonah could have radioed Ruth twenty minutes earlier."
+            "Ruth announces during the review that the programme's autonomy principle was a mistake.",
+            "Mira persuades him that adults should have been in direct control from the start.",
+            "Following the principle meant delaying the radio call, which had real consequences for the search.",
+            "He realises the group had never actually followed the autonomy principle during the expedition."
           ],
-          "correctAnswer": "They needn't have climbed the final traverse at all once the wind turned.",
-          "explanation": "'Needn't have' is used when an action happened but, looking back, was unnecessary. Here the group did climb the traverse, but the speaker judges it as needless."
+          "correctAnswer": "Following the principle meant delaying the radio call, which had real consequences for the search.",
+          "explanation": "Paragraph 4 explains that Jonah had wanted the group to keep their autonomy as part of the programme's design. But once he traces the timeline, the principle stops feeling like a high-minded decision and starts feeling like an obligation he carried badly — because it delayed the call to Ruth."
         },
         {
           "order": 4,
@@ -380,15 +380,15 @@
         },
         {
           "order": 3,
-          "question": "Which sentence from the story is an example of wish + would used for irritation?",
+          "question": "What does Jonah mean when he says he 'mistook calm for leadership and distance for control' in paragraph 3?",
           "options": [
-            "She wished the room were louder.",
-            "He wished he had called Ruth earlier.",
-            "I wish Elliot would stop pretending jokes count as honesty.",
-            "If only we'd spoken like this yesterday."
+            "He believed that calm weather on the ridge would guarantee a safe return for the group.",
+            "He confused appearing outwardly composed with leading well, and staying uninvolved with maintaining order.",
+            "He thought Mira's quietness was leadership and Elliot's detachment from the path was deliberate.",
+            "He realised he had been misled by the calmness of Ruth's instructions before the expedition."
           ],
-          "correctAnswer": "I wish Elliot would stop pretending jokes count as honesty.",
-          "explanation": "Wish + would is often used to complain about another person's behaviour. Here Mira is irritated by Elliot's habit of hiding behind jokes."
+          "correctAnswer": "He confused appearing outwardly composed with leading well, and staying uninvolved with maintaining order.",
+          "explanation": "Jonah is admitting two linked errors: he took his surface composure to mean he was leading effectively, and he took his emotional detachment to mean he was in control. Both were forms of passivity that looked, to him, like responsibility."
         },
         {
           "order": 4,

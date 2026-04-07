@@ -114,15 +114,15 @@
         },
         {
           "order": 3,
-          "question": "In paragraph 5, why do Jade and Sam use passive voice in 'Everything in the newspaper was checked before it was published'?",
+          "question": "What does the detail that the headline was changed three times suggest about how Jade and Sam approach their work?",
           "options": [
-            "Because they do not want readers to know who checked the article",
-            "Because passive is more formal and keeps the focus on the checking process, not the person who checks it",
-            "Because Jade cannot write active sentences clearly",
-            "Because the newspaper rules say every sentence must be passive"
+            "That they disagreed with each other and had difficulty working together",
+            "That their teacher rejected their first two headline options before approving the third",
+            "That they take their writing seriously and do not settle for the first version they produce",
+            "That writing a headline is harder than writing the article because it requires specialist skills"
           ],
-          "correctAnswer": "Because passive is more formal and keeps the focus on the checking process, not the person who checks it",
-          "explanation": "The sentence focuses on the action and rule: everything was checked before it was published. Passive voice is useful here because the important idea is the careful process, not which person checked each line."
+          "correctAnswer": "That they take their writing seriously and do not settle for the first version they produce",
+          "explanation": "Paragraph 5 mentions that they changed the headline three times as part of the normal editing session — not as a problem, but as a process. This connects to Q5's answer about their careful approach: for Jade and Sam, every element of the article receives the same editorial standard."
         },
         {
           "order": 4,
@@ -292,15 +292,15 @@
         },
         {
           "order": 6,
-          "question": "Which sentence best shows the correct word order of a reported question?",
+          "question": "What does Ms Chen's concern about whether they had 'included enough quotes from both sources' reveal about her view of good journalism?",
           "options": [
-            "Ms Chen asked whether had they included enough quotes from both sources.",
-            "Ms Chen asked whether they had included enough quotes from both sources.",
-            "Ms Chen asked whether did they include enough quotes from both sources.",
-            "Ms Chen asked whether have they included enough quotes from both sources."
+            "That a well-written article should always end by supporting one side of an argument",
+            "That fairness requires quoting exactly the same number of words from each person",
+            "That good journalism gives voice to multiple sources rather than presenting a single perspective",
+            "That journalists should not express any viewpoint and must only report facts"
           ],
-          "correctAnswer": "Ms Chen asked whether they had included enough quotes from both sources.",
-          "explanation": "Reported questions use statement word order, not question word order. That is why 'they had included' is correct, while the other options wrongly invert the subject and verb."
+          "correctAnswer": "That good journalism gives voice to multiple sources rather than presenting a single perspective",
+          "explanation": "Ms Chen is not checking spelling or structure — she specifically asks whether both sources are represented. This tells us that balance and multiple perspectives are what she considers the defining quality of a credible article."
         }
       ]
     }

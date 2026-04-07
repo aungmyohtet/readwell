@@ -184,15 +184,15 @@
         },
         {
           "order": 3,
-          "question": "Which sentence uses the present perfect continuous correctly?",
+          "question": "Why does Nadia choose to sit in the front row of class, and what does this tell us about her approach?",
           "options": [
-            "She has been study Spanish for three weeks.",
-            "She has been studied Spanish for three weeks.",
-            "She has been studying Spanish for three weeks.",
-            "She is been studying Spanish for three weeks."
+            "She sits at the front because the classroom is small and she arrives late.",
+            "She sits at the front to avoid distractions and commit fully to the class.",
+            "She is told by Señora Valls to sit at the front as a new student.",
+            "She sits at the front because she has trouble hearing the teacher from the back."
           ],
-          "correctAnswer": "She has been studying Spanish for three weeks.",
-          "explanation": "Present perfect continuous: have/has + been + verb-ing. 'She has been studying' is the correct form."
+          "correctAnswer": "She sits at the front to avoid distractions and commit fully to the class.",
+          "explanation": "Paragraph 2 states she sits in the front row 'because I want to commit fully — no distractions, no whispering with the students at the back.' This shows her deliberate, focused approach to the programme."
         },
         {
           "order": 4,
@@ -377,15 +377,15 @@
         },
         {
           "order": 3,
-          "question": "Which sentence uses 'would' correctly to describe a past habit?",
+          "question": "Why does Nadia now understand why she used to take the longer road to school, when she didn't before?",
           "options": [
-            "She would be shy when she was young.",
-            "She would go to bed early every Saturday as a child.",
-            "She would have a dog when she lived at home.",
-            "She would know all the neighbours by name."
+            "She has been reading about the psychology of habit and routine.",
+            "Living away from home has made her see how rare it was to have time that belonged entirely to herself.",
+            "Carla explained it to her in one of their early letters.",
+            "She realised the longer route was safer and more beautiful."
           ],
-          "correctAnswer": "She would go to bed early every Saturday as a child.",
-          "explanation": "'Would' is used for repeated past actions, not states. 'Go to bed early' is an action. 'Be shy', 'have a dog', and 'know' describe states, which use 'used to', not 'would'."
+          "correctAnswer": "Living away from home has made her see how rare it was to have time that belonged entirely to herself.",
+          "explanation": "Paragraph 2 says she 'didn't use to understand' why she chose the longer way but now does: 'It was the only part of the day that belonged completely to me.' Being away — surrounded by new people and obligations — has made her recognise what that solitary journey meant."
         },
         {
           "order": 4,
@@ -413,15 +413,15 @@
         },
         {
           "order": 6,
-          "question": "Which is an example of 'used to' describing a past STATE (not a repeated action)?",
+          "question": "What does the harbour walk remind Nadia of, and why is the comparison significant?",
           "options": [
-            "She used to cycle to school every morning.",
-            "They would eat dinner outside on Sunday evenings.",
-            "She didn't use to think much about her identity.",
-            "Gran would always bring something to the table."
+            "It reminds her of the Sunday dinner tradition, because both involve talking with people she loves.",
+            "It reminds her of the long road to school along the river, because both were unplanned moments that felt entirely her own.",
+            "It reminds her of her grandmother's kitchen, because both are quiet and familiar.",
+            "It reminds her of her first day in Barcelona, because she felt equally nervous on both occasions."
           ],
-          "correctAnswer": "She didn't use to think much about her identity.",
-          "explanation": "'Didn't use to think' describes a past mental state (no longer true). The others describe repeated actions, which can use 'would'."
+          "correctAnswer": "It reminds her of the long road to school along the river, because both were unplanned moments that felt entirely her own.",
+          "explanation": "The final paragraph ends: 'It was carefree. It reminded me of the river road.' The river road was the one part of her day at home that was spontaneous and hers. The harbour walk, casual and unplanned, produces the same feeling — showing she is beginning to feel at ease in Barcelona."
         }
       ]
     }
