@@ -217,7 +217,7 @@
         {
           "word": "aspire",
           "definition": "to have a strong desire to achieve or become something",
-          "exampleSentence": "Rosa aspired to become an environmental lawyer, but she had told almost no one because it sounded impossible.",
+          "exampleSentence": "Rosa aspired to become an environmental lawyer — a dream she had kept secret because it seemed impossible — and the Green Team made it feel more real.",
           "emoji": "🎯"
         },
         {
@@ -276,16 +276,16 @@
         },
         {
           "order": 2,
-          "text": "Rosa stood up and answered him. She was the one who could do this — stay calm, speak clearly, not be put off by a look. She had aspired to be a lawyer since she was eleven, and this felt like a rehearsal. \"If every school in the borough adopted one green space,\" she began, \"the biodiversity loss across the district would stop within a generation. We're asking for permission to start with Eastgate Park.\" The councillors exchanged glances. The short man took his glasses down from his forehead and put them on.",
+          "text": "Rosa stood up and answered him. She was the one who could do this — stay calm, speak clearly, not be put off by a look. She had aspired to be a lawyer since she was eleven, and this felt like a rehearsal. \"If the council approves our proposal, we'll restore Eastgate Park and document the results,\" she began. \"And if every school in the borough adopted one green space, the biodiversity loss across the district would slow dramatically. We're asking for permission to start with Eastgate Park.\" The councillors exchanged glances. The short man took his glasses down from his forehead and put them on.",
           "imagePlaceholder": "🎤",
           "grammarAnnotations": [
             {
-              "targetText": "If every school in the borough adopted one green space,",
+              "targetText": "And if every school in the borough adopted one green space,",
               "tone": "structure",
               "note": "imagined condition"
             },
             {
-              "targetText": "the biodiversity loss across the district would stop within a generation.",
+              "targetText": "the biodiversity loss across the district would slow dramatically.",
               "tone": "structure",
               "note": "hypothetical result"
             }

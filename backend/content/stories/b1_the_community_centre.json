@@ -205,7 +205,7 @@
       "content": [
         {
           "order": 1,
-          "text": "Tom returned to the centre on Thursday, as Nina had suggested. She was in the main hall arranging chairs for the evening's film club. \"Did you decide to come back?\" she said with a smile. Tom nodded. He had been thinking about signing up for something since the tour. He had always wanted to learn how to code, but he had never got around to it. \"The coding workshop starts next Tuesday,\" Nina said. \"It is worth trying.\" Tom picked up the activities leaflet from the table. He enjoyed reading about the options.",
+          "text": "Tom returned to the centre on Thursday, as Nina had suggested. She was in the main hall arranging chairs for the evening's film club. \"Did you decide to come back?\" she said with a smile. Tom nodded. He had been thinking about signing up for something since the tour. He had always wanted to learn how to code, but he had never got around to learning it. \"The coding workshop starts next Tuesday,\" Nina said. \"It is worth trying.\" Tom picked up the activities leaflet from the table. He enjoyed reading about the options.",
           "imagePlaceholder": "📚"
         },
         {
@@ -289,6 +289,18 @@
           ],
           "correctAnswer": "He regrets not trying new activities earlier because he is genuinely enjoying them",
           "explanation": "Tom has been avoiding technical and new activities for years, but now that he has started both classes he loves them — so he regrets the time he spent not trying."
+        },
+        {
+          "order": 6,
+          "question": "Which sentence from the chapter shows a verb followed by a gerund?",
+          "options": [
+            "He had decided to sign up for the coding workshop.",
+            "He had always wanted to learn how to code.",
+            "Tom enjoyed reading about the options.",
+            "The coding workshop starts next Tuesday."
+          ],
+          "correctAnswer": "Tom enjoyed reading about the options.",
+          "explanation": "After 'enjoy', we use a gerund, so 'reading' is the correct form here. The sentences with 'decided' and 'wanted' use infinitives instead."
         }
       ]
     }

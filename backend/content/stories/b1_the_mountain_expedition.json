@@ -447,7 +447,7 @@
         },
         {
           "order": 3,
-          "text": "The national park had strict conservation rules. Mr Osei went through them again as they put their packs back on. \"If you go off the marked path, you'll damage the root systems of plants that have grown here for centuries. If you leave waste of any kind, you'll face a serious fine and you'll be asked to leave the park.\" He paused. \"These rules aren't difficult to follow. As long as you treat this place with respect, it will look the same for the people who come after you.\"",
+          "text": "The national park had strict conservation rules. Mr Osei went through them again as they put their packs back on. \"If you go off the marked path, you'll damage the root systems of plants that have grown here for centuries. If you leave waste of any kind, you'll face a serious fine and you'll be asked to leave the park.\" He paused. \"These rules aren't difficult to follow. As long as you treat this place with respect, it will look the same for the people who come after you. As long as we stay on the marked route and move steadily, we'll reach the summit safely.\"",
           "imagePlaceholder": "🌲",
           "grammarAnnotations": [
             {
@@ -457,6 +457,11 @@
             },
             {
               "targetText": "As long as you treat this place with respect, it will look the same for the people who come after you.",
+              "tone": "structure",
+              "note": "condition with as long as"
+            },
+            {
+              "targetText": "As long as we stay on the marked route and move steadily, we'll reach the summit safely.",
               "tone": "structure",
               "note": "condition with as long as"
             }

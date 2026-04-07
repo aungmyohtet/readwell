@@ -289,6 +289,18 @@
           ],
           "correctAnswer": "Because she wants to remember the experience and never forget what the morning after a storm looked like",
           "explanation": "The text says: 'She decided to write everything down. She never wanted to forget what the morning after a storm looked like.'"
+        },
+        {
+          "order": 6,
+          "question": "Which sentence best shows a time clause meaning 'immediately after something else happened'?",
+          "options": [
+            "Before it arrives, we need to bring in the outdoor furniture.",
+            "As soon as they had finished, the first drops of rain began to fall.",
+            "While the storm was at its height, the power went off.",
+            "By the time morning came, the sky was pale and washed clean."
+          ],
+          "correctAnswer": "As soon as they had finished, the first drops of rain began to fall.",
+          "explanation": "'As soon as' shows immediate sequence. It means the rain began right after they finished bringing in the furniture."
         }
       ]
     }

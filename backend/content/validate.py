@@ -309,6 +309,14 @@ def validate_story(file_path: Path) -> bool:
                 if highlight_text and highlight_text not in target_text:
                     error(f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} highlightText '{highlight_text}' is not inside targetText '{target_text}'")
                     errors += 1
+                if highlight_text:
+                    highlight_clean = highlight_text.strip().lower()
+                    target_clean = target_text.strip().lower()
+                    if len(highlight_clean) <= 3 and " " in target_clean and highlight_clean not in {"s", "es", "ed"}:
+                        warn(
+                            f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} uses very short highlightText '{highlight_text}' inside a longer phrase — prefer a whole-word highlight unless teaching a true ending"
+                        )
+                        warnings += 1
                 tone = annotation.get("tone")
                 if tone and tone not in {"aux", "ending", "question", "structure", "modal"}:
                     warn(f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} tone '{tone}' is not a standard reader tone")

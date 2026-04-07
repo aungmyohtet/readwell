@@ -200,6 +200,18 @@
           ],
           "correctAnswer": "That Nadia has built a genuine friendship through commitment and effort, which is rare.",
           "explanation": "Nadia's mother explains: 'You've built a real friendship across a thousand miles. That is not easy.' She is saying that Nadia has done something unusual and difficult — maintaining a real friendship entirely through writing — and that this is worth recognising."
+        },
+        {
+          "order": 6,
+          "question": "Which sentence from the chapter best shows the present perfect being used for a life experience up to now?",
+          "options": [
+            "Nadia has never actually spoken to Carla out loud.",
+            "Nadia said yes before she had time to think.",
+            "The flight is tomorrow morning.",
+            "She will give the letter to Carla in person."
+          ],
+          "correctAnswer": "Nadia has never actually spoken to Carla out loud.",
+          "explanation": "'Has never actually spoken' uses the present perfect to describe Nadia's experience up to this moment in her life. The other options use past, present, or future forms instead."
         }
       ]
     },
@@ -297,7 +309,7 @@
           "grammarAnnotations": [
             {
               "targetText": "Has Carla told you about the bread?",
-              "highlightText": "Has",
+              "highlightText": "Has Carla told you about the bread?",
               "tone": "question",
               "note": "present perfect question"
             },

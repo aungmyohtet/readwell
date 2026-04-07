@@ -114,15 +114,15 @@
         },
         {
           "order": 3,
-          "question": "Why does Jade say that every detail in the article must be accurate?",
+          "question": "In paragraph 5, why do Jade and Sam use passive voice in 'Everything in the newspaper was checked before it was published'?",
           "options": [
-            "Because Ms Chen will give them a grade based on the quality of the writing",
-            "Because Rosa will correct any mistakes herself before publication",
-            "Because the newspaper is read by students, parents, and teachers and mistakes cannot be published",
-            "Because the article is being entered into a national journalism competition"
+            "Because they do not want readers to know who checked the article",
+            "Because passive is more formal and keeps the focus on the checking process, not the person who checks it",
+            "Because Jade cannot write active sentences clearly",
+            "Because the newspaper rules say every sentence must be passive"
           ],
-          "correctAnswer": "Because the newspaper is read by students, parents, and teachers and mistakes cannot be published",
-          "explanation": "The text says: 'Every detail had to be accurate — the newspaper was read by students, parents, and teachers, and mistakes could not be published.'"
+          "correctAnswer": "Because passive is more formal and keeps the focus on the checking process, not the person who checks it",
+          "explanation": "The sentence focuses on the action and rule: everything was checked before it was published. Passive voice is useful here because the important idea is the careful process, not which person checked each line."
         },
         {
           "order": 4,
@@ -289,6 +289,18 @@
           ],
           "correctAnswer": "That other students will feel inspired to carry out their own experiments",
           "explanation": "The article ends with Rosa's quote: 'she hoped other students would feel inspired to carry out their own experiments.'"
+        },
+        {
+          "order": 6,
+          "question": "Which sentence best shows the correct word order of a reported question?",
+          "options": [
+            "Ms Chen asked whether had they included enough quotes from both sources.",
+            "Ms Chen asked whether they had included enough quotes from both sources.",
+            "Ms Chen asked whether did they include enough quotes from both sources.",
+            "Ms Chen asked whether have they included enough quotes from both sources."
+          ],
+          "correctAnswer": "Ms Chen asked whether they had included enough quotes from both sources.",
+          "explanation": "Reported questions use statement word order, not question word order. That is why 'they had included' is correct, while the other options wrongly invert the subject and verb."
         }
       ]
     }

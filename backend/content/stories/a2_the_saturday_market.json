@@ -56,7 +56,7 @@
       "content": [
         {
           "order": 1,
-          "text": "Zoe did not want to go to the market on Saturday morning. She wanted to stay at home and watch television. But Grandpa Joe was already at the front door with his old brown shopping bag and his hat. \"Come on,\" he said. \"I need someone to carry things. You're stronger than me.\" Zoe looked at him. He was not smaller than her. He was not weaker than her. But she liked him too much to say so. She put on her coat and followed him out.",
+          "text": "Zoe did not want to go to the market on Saturday morning. She wanted to stay at home. But Grandpa Joe was already at the front door with his shopping bag and hat. \"Come on,\" he said. \"I need someone to carry things. You're stronger than me.\" Zoe looked at him. He was not smaller than her. But she liked him too much to argue. She put on her coat and followed him out.",
           "imagePlaceholder": "🌅",
           "grammarAnnotations": [
             {
@@ -65,7 +65,7 @@
               "note": "comparative form"
             },
             {
-              "targetText": "weaker than her",
+              "targetText": "smaller than her",
               "tone": "structure",
               "note": "comparative form"
             }
@@ -73,7 +73,7 @@
         },
         {
           "order": 2,
-          "text": "The market was bigger than Zoe expected. It filled three streets. There were at least forty stalls selling fruit, vegetables, bread, cheese, fish, flowers, and things she could not name. Grandpa Joe walked straight past the first four stalls without stopping. \"Those are the most expensive,\" he said. \"The better the location, the higher the price. You want to walk further in — the best bargains are never at the entrance.\" Zoe followed him. The market was louder and busier further in, but the prices on the signs were smaller.",
+          "text": "The market was bigger than Zoe expected. It filled three streets. Stalls sold fruit, vegetables, bread, cheese, flowers, and more. Grandpa Joe walked past the first four stalls. \"Those are the most expensive,\" he said. \"The best bargains are never at the entrance.\" Zoe followed him. The market was louder further in, but the prices on the signs were smaller.",
           "imagePlaceholder": "🛒",
           "grammarAnnotations": [
             {
@@ -82,7 +82,7 @@
               "note": "superlative form"
             },
             {
-              "targetText": "the best bargains",
+              "targetText": "The best bargains",
               "tone": "structure",
               "note": "best = superlative"
             }
@@ -90,7 +90,7 @@
         },
         {
           "order": 3,
-          "text": "At a stall near the middle, there were apples in four different colours. Grandpa Joe picked one up, smelled it, and put it back. Then he picked up a smaller, darker one. \"This one's sweeter,\" he said. \"And cheaper.\" He gave it to Zoe. She didn't know you could smell the difference between apples. This one smelled richer and stronger than the light one. \"Can I compare them?\" she asked. He handed her both. She held them side by side. The darker one was clearly better. She chose it.",
+          "text": "At a stall near the middle, there were apples in four colours. Grandpa Joe picked one up, smelled it, and put it back. Then he picked up a smaller, darker one. \"This one's sweeter,\" he said. \"And cheaper.\" He gave it to Zoe. This one smelled richer and stronger than the light one. \"Can I compare them?\" she asked. He handed her both. The darker one was clearly better. She chose it.",
           "imagePlaceholder": "🍎",
           "grammarAnnotations": [
             {
@@ -107,7 +107,7 @@
         },
         {
           "order": 4,
-          "text": "They moved from stall to stall. Grandpa Joe knew most of the sellers by name. He compared prices, checked ingredients, looked at colours, smelled things. At the bread stall, he found a bargain on tomatoes — three bags for the price of one — and then bought a small dark loaf. \"Best flavour in the market,\" he told the seller. The seller nodded, as if this was simply a fact and not a compliment. \"How do you know which stall is better?\" Zoe asked. Grandpa Joe thought about this. \"Forty years,\" he said.",
+          "text": "They moved from stall to stall. Grandpa Joe knew most of the sellers. He compared prices, checked ingredients, and smelled things. At the bread stall, he found a bargain on tomatoes and bought a small dark loaf. \"Best flavour in the market,\" he told the seller. \"How do you know which stall is better?\" Zoe asked. Grandpa Joe thought about this. \"Forty years,\" he said.",
           "imagePlaceholder": "🍞",
           "grammarAnnotations": [
             {
@@ -125,7 +125,7 @@
         },
         {
           "order": 5,
-          "text": "They walked home with two full bags, one heavier than the other. Zoe carried the heavier one. \"That took longer than I thought,\" she said. \"Was it more boring than staying at home?\" Grandpa Joe asked. Zoe thought about the apple, the bread, the sellers who nodded at Grandpa Joe like old colleagues. \"No,\" she said honestly. \"It was actually the most interesting Saturday I've had in a while.\" Grandpa Joe smiled. It was a smaller smile than usual, but it was the best kind — the kind that meant he was really pleased.",
+          "text": "They walked home with two full bags, one heavier than the other. Zoe carried the heavier one. \"That took longer than I thought,\" she said. \"Was it more boring than staying at home?\" Grandpa Joe asked. Zoe thought about the apple, the bread, and the sellers who knew Grandpa Joe. \"No,\" she said honestly. \"It was actually the most interesting Saturday I've had in a while.\" Grandpa Joe smiled. It was the best kind of smile — the kind that meant he was pleased.",
           "imagePlaceholder": "🏡",
           "grammarAnnotations": [
             {
@@ -229,7 +229,7 @@
       ],
       "grammarFocus": {
         "rule": "Modal Verbs – can, could, should, must",
-        "explanation": "Modal verbs are used before the main verb to express ability (can/could), advice (should/shouldn't), or obligation and necessity (must/mustn't). They do not change form and are followed by the infinitive without 'to'. 'Could' is also used for past ability or polite possibility.",
+        "explanation": "Modal verbs come before the main verb. We use them to talk about ability (can/could), advice (should/shouldn't), or strong necessity (must/mustn't). The main verb stays in its base form after the modal. 'Could' is also used for past ability or polite possibility.",
         "examples": [
           "You should eat something, even if it's small. (advice)",
           "You must drink water — it's very important. (strong necessity)",
@@ -240,7 +240,7 @@
       "content": [
         {
           "order": 1,
-          "text": "The following Sunday, Grandpa Joe called Zoe. He said he was not feeling well. His back had an ache, he had no energy, and he didn't want to eat. \"You should eat something,\" Zoe told him immediately. \"Even something small. And you must drink water.\" She heard him laugh softly. \"Since when do you know so much about health?\" he asked. \"Since last Saturday,\" she said. \"I've been reading about diet.\" She got on her bicycle before he could say anything else.",
+          "text": "The following Sunday, Grandpa Joe called Zoe. He said he was not feeling well. His back had an ache, he had no energy, and he didn't want to eat. \"You should eat something,\" Zoe told him. \"And you must drink water.\" She heard him laugh softly. \"Since when do you know so much about health?\" he asked. \"Since last Saturday,\" she said. \"I've been reading about diet.\" She got on her bicycle before he could say more.",
           "imagePlaceholder": "📞",
           "grammarAnnotations": [
             {
@@ -257,7 +257,7 @@
         },
         {
           "order": 2,
-          "text": "Grandpa Joe was in his armchair when she arrived. He looked pale and tired. \"What are your symptoms?\" Zoe asked. She had read this question in a health article and liked the way it sounded. Grandpa Joe raised his eyebrows. \"I ache everywhere,\" he said. \"My back, my legs, my head. I could have a cold, or I could just be getting old. It's hard to tell the difference.\" \"Could you eat some soup?\" Zoe asked. He thought about this. \"I think I can,\" he said.",
+          "text": "Grandpa Joe was in his armchair when she arrived. He looked pale and tired. \"What are your symptoms?\" Zoe asked. Grandpa Joe raised his eyebrows. \"I ache everywhere,\" he said. \"My back, my legs, my head. I could have a cold, or I could just be getting old.\" \"Could you eat some soup?\" Zoe asked. \"I think I can,\" he said.",
           "imagePlaceholder": "😷",
           "grammarAnnotations": [
             {
@@ -275,7 +275,7 @@
         },
         {
           "order": 3,
-          "text": "Zoe made soup from the vegetables they had bought at the market. She added the dark bread, cut into small pieces. While it cooked, she sat at the kitchen table and talked. \"You should eat more of those dark apples,\" she told him. \"They're better for you.\" Grandpa Joe looked at her over his reading glasses. \"Could you possibly know that for certain?\" he asked. \"I read it,\" Zoe said firmly. \"You must eat more fruit. It's in the article, and the article has a doctor's name on it.\"",
+          "text": "Zoe made soup from the vegetables they had bought at the market and added the dark bread in small pieces. While it cooked, she sat at the kitchen table and talked. \"You should eat more of those dark apples,\" she told him. \"They're better for you.\" Grandpa Joe looked at her over his reading glasses. \"Could you possibly know that for certain?\" he asked. \"I read it,\" Zoe said. \"You must eat more fruit. It's in the article.\"",
           "imagePlaceholder": "🍲",
           "grammarAnnotations": [
             {
@@ -292,7 +292,7 @@
         },
         {
           "order": 4,
-          "text": "Grandpa Joe's friend Dr Nair came to visit in the afternoon. He was a retired doctor, but still gave advice freely. He looked at Grandpa Joe, listened to his chest, and nodded. \"He should rest,\" he told Zoe. \"He must drink plenty of water. He can have soup and soft food, but not too much salt.\" He looked at Zoe's notes on the kitchen table. \"Could you be a doctor yourself one day?\" he asked. Zoe considered this seriously. \"Maybe,\" she said. \"I should read more first.\"",
+          "text": "Grandpa Joe's friend Dr Nair came to visit in the afternoon. He was a retired doctor. He looked at Grandpa Joe, listened to his chest, and nodded. \"He should rest,\" he told Zoe. \"He must drink plenty of water. He can have soup and soft food, but not too much salt.\" He looked at Zoe's notes. \"Could you be a doctor one day?\" he asked. Zoe thought seriously. \"Maybe,\" she said. \"I should read more first.\"",
           "imagePlaceholder": "👨‍⚕️",
           "grammarAnnotations": [
             {
@@ -309,12 +309,12 @@
         },
         {
           "order": 5,
-          "text": "By Monday evening, Grandpa Joe was beginning to recover. He sent Zoe a short message: \"The soup helped. I feel more energetic today. You were right about the water. Can you come next Saturday? I think we should go to the market again.\" Zoe read this three times. She felt something she hadn't expected — a quiet kind of satisfaction. She had given advice, and the advice worked. She wrote back: \"Yes. I'll carry the bags.\" Then she went to find the health article. There was a section on diet and exercise she had not read yet.",
+          "text": "By Monday evening, Grandpa Joe was beginning to recover. He sent Zoe a message: \"The soup helped. I feel more energetic today. You were right about the water. Can you come next Saturday? I think we should go to the market again.\" Zoe read it three times. She felt quiet satisfaction. She had given advice, and it worked. She wrote back: \"Yes. I'll carry the bags.\" Then she went to find the health article. There was a section on diet and exercise she had not read yet.",
           "imagePlaceholder": "📱",
           "grammarAnnotations": [
             {
               "targetText": "Can you come next Saturday?",
-              "highlightText": "Can",
+              "highlightText": "Can you come next Saturday?",
               "tone": "modal",
               "note": "question with can"
             },

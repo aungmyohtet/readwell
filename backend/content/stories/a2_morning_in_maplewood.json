@@ -1,7 +1,7 @@
 {
   "story": {
     "title": "Morning in Maplewood",
-    "description": "Leo is eleven years old and lives in a quiet street in Maplewood. Follow his everyday life as small moments — a basketball try-out, a neighbour's kindness, a difficult day — teach him something new about himself.",
+      "description": "Leo is eleven years old and lives in a quiet street in Maplewood. Follow his everyday life as small moments — a basketball tryout, a neighbour's kindness, a difficult day — teach him something new about himself.",
     "level": "A2",
     "coverEmoji": "🌤️",
     "author": "ReadWell",
@@ -61,7 +61,7 @@
       "content": [
         {
           "order": 1,
-          "text": "Leo wakes up every weekday morning at seven o'clock. His alarm rings once, and he turns it off immediately. He lies still for one moment — just one — then gets up. This is his routine. He always does the same things in the same order: he puts on his glasses, goes to the bathroom, washes his face, and walks downstairs. His father is already in the kitchen when Leo arrives. His father always wakes up before anyone else in the house.",
+          "text": "Leo wakes up every weekday at seven o'clock. His alarm rings once, and he turns it off immediately. He lies still for one moment, then gets up. This is his routine. He always does the same things in the same order: he puts on his glasses, washes his face, and walks downstairs. His father is already in the kitchen when Leo arrives.",
           "imagePlaceholder": "🌅",
           "grammarAnnotations": [
             {
@@ -79,7 +79,7 @@
         },
         {
           "order": 2,
-          "text": "Leo eats cereal for breakfast. He always has the same kind — small brown squares with a little sugar. He pours the milk carefully, sits down, and reads the back of the box while he eats. He knows all the text on the box by memory, but he reads it anyway. His younger sister Mia comes downstairs at twenty past seven. She sits across from him and stares at her toast without speaking. Mia does not like mornings. She never says good morning before eight o'clock.",
+          "text": "Leo eats cereal for breakfast. He always has the same kind. He pours the milk carefully and reads the back of the box while he eats. His younger sister Mia comes downstairs at twenty past seven. She sits across from him and stares at her toast without speaking. Mia does not like mornings. She never says good morning before eight o'clock.",
           "imagePlaceholder": "🥣",
           "grammarAnnotations": [
             {
@@ -97,7 +97,7 @@
         },
         {
           "order": 3,
-          "text": "After breakfast, Leo prepares his bag for school. He checks his timetable — it lives on the fridge door, under a pineapple-shaped magnet. Today is Wednesday. Wednesday means PE and science. He takes out his PE kit from the drawer and puts it in his bag, then adds his science folder. Then he checks again. His father often says Leo is careful to the point of being slow. Leo says there is no such thing as too careful. His father laughs and does not argue.",
+          "text": "After breakfast, Leo prepares his bag for school. He checks his timetable on the fridge door. Today is Wednesday, so he needs his PE kit and science folder. He puts them in his bag, then checks again. His father says Leo is careful to the point of being slow. Leo says there is no such thing as too careful. His father laughs.",
           "imagePlaceholder": "🎒",
           "grammarAnnotations": [
             {
@@ -115,7 +115,7 @@
         },
         {
           "order": 4,
-          "text": "At ten past eight, Leo and Mia leave the house. Their neighbour Mrs Park is always in her front garden at this time. She waters her plants every single morning, even when it rains, even in cold weather. She says the plants like company. She waves at Leo and Mia as they walk past. \"Morning, Leo! Morning, Mia!\" she calls. \"Morning, Mrs Park!\" they both call back. It is a small thing, but Leo likes it. It makes the walk feel like it has already started well.",
+          "text": "At ten past eight, Leo and Mia leave the house. Their neighbour Mrs Park is always in her front garden at this time. She waters her plants every morning, even when it rains. She waves at Leo and Mia as they walk past. \"Morning, Leo! Morning, Mia!\" she calls. \"Morning, Mrs Park!\" they call back. Leo likes this small part of the walk.",
           "imagePlaceholder": "🌸",
           "grammarAnnotations": [
             {
@@ -134,7 +134,7 @@
         },
         {
           "order": 5,
-          "text": "They arrive at school at twenty-five past eight. Leo's best friend Daniel is always waiting at the gate because he lives just around the corner. Daniel never wears a coat, even in November. \"You look tired,\" Daniel says to Leo. \"I'm not tired,\" Leo says. \"I just wake up slowly.\" Daniel grins. \"Me too,\" he says. \"But I look awake.\" The school bell rings at exactly half past eight. Leo and Daniel walk in together. The day begins. For Leo, it always begins the same way — and he likes it that way.",
+          "text": "They arrive at school at twenty-five past eight. Leo's best friend Daniel is waiting at the gate because he lives around the corner. \"You look tired,\" Daniel says. \"I'm not tired,\" Leo says. \"I just wake up slowly.\" Daniel grins. \"But I look awake.\" The bell rings at half past eight. Leo and Daniel walk in together. The day begins. For Leo, it always begins the same way — and he likes it.",
           "imagePlaceholder": "🏫",
           "grammarAnnotations": [
             {
@@ -206,12 +206,12 @@
     },
     {
       "chapterNumber": 2,
-      "title": "The Try-Out",
+      "title": "The Tryout",
       "vocabulary": [
         {
-          "word": "try-out",
+          "word": "tryout",
           "definition": "a test or short performance to see if someone is good enough to join a team or group",
-          "exampleSentence": "Leo arrived early for the basketball try-out because he was very nervous.",
+          "exampleSentence": "Leo arrived early for the basketball tryout because he was very nervous.",
           "emoji": "🏀"
         },
         {
@@ -229,7 +229,7 @@
         {
           "word": "confident",
           "definition": "feeling sure about your own abilities",
-          "exampleSentence": "Some of the other students at the try-out looked very confident.",
+          "exampleSentence": "Some of the other students at the tryout looked very confident.",
           "emoji": "💪"
         },
         {
@@ -252,7 +252,7 @@
       "content": [
         {
           "order": 1,
-          "text": "Leo is standing outside the gym with seven other students. He is wearing his new trainers and holding a basketball with both hands. His heart is beating fast. Today is the day of the basketball try-out, and Leo has been practising for three weeks. But right now, looking at the other students, he is not feeling confident. Two of the boys are taller than him. A girl near the wall is dribbling the ball quickly without even looking at it. Leo is watching them and wondering if he belongs here.",
+          "text": "Leo is standing outside the gym with other students. He is wearing new trainers and holding a basketball in his hands. His heart is beating fast. Today is the basketball tryout, and Leo has practised for weeks. Right now he is not feeling confident. Two boys are taller. A girl near the wall is dribbling quickly. Leo is watching and wondering if he belongs.",
           "imagePlaceholder": "🏀",
           "grammarAnnotations": [
             {
@@ -269,7 +269,7 @@
         },
         {
           "order": 2,
-          "text": "Inside the gym, Coach Williams is standing in the centre of the court. He is holding a clipboard and a whistle around his neck. He is not smiling, but he does not look unfriendly either. He calls each student one by one. When he calls Leo's name, Leo walks onto the court. The gym is bright and loud. His footsteps are making a small squeaking sound on the floor. \"Show me your dribble,\" says Coach Williams. Leo bounces the ball. He is concentrating so hard that his forehead hurts.",
+          "text": "Inside the gym, Coach Williams is standing in the centre of the court with a clipboard and whistle. He is not smiling, but he does not look unfriendly. He calls each student one by one. When he calls Leo's name, Leo walks onto the court. The gym is bright and loud. \"Show me your dribble,\" says Coach Williams. Leo bounces the ball. He is concentrating so hard that his forehead hurts.",
           "imagePlaceholder": "🏟️",
           "grammarAnnotations": [
             {
@@ -286,7 +286,7 @@
         },
         {
           "order": 3,
-          "text": "Leo runs with the ball towards the basket. He is watching the floor, watching the ring, watching his hands. He jumps and shoots. The ball hits the rim and bounces off. He runs to get it. \"Again,\" says Coach Williams. Leo shoots again. This time, the ball goes in. It makes a clean, soft sound that Leo loves. \"Not bad,\" says Coach Williams. \"Keep going.\" Leo keeps going. He finds it easier to concentrate when he stops thinking about the other students. He is just playing. For a few minutes, he is only running and shooting and improving.",
+          "text": "Leo runs with the ball towards the basket. He is watching the floor, the ring, and his hands. He jumps and shoots. The ball hits the rim and bounces off. \"Again,\" says Coach Williams. Leo shoots again. This time, the ball goes in. \"Not bad,\" says Coach Williams. \"Keep going.\" Leo finds it easier to concentrate when he stops thinking about the other students. He is just playing. For a few minutes, he is only running and shooting and improving.",
           "imagePlaceholder": "🎯",
           "grammarAnnotations": [
             {
@@ -303,7 +303,7 @@
         },
         {
           "order": 4,
-          "text": "After the try-out, Leo is sitting on the bench by the gym door. He is breathing hard and drinking from his water bottle. Coach Williams is still writing on his clipboard. Daniel is waiting outside and calls through the door: \"How did it go?\" Leo shrugs. \"He's writing things down,\" Leo says. \"That's good,\" Daniel says. \"He only writes things down about people who are interesting.\" Leo does not know if that is true, but Daniel always knows how to encourage him, even when Leo is not sure he deserves it.",
+          "text": "After the tryout, Leo is sitting on the bench by the gym door. He is breathing hard and drinking from his water bottle. Coach Williams is still writing. Daniel calls through the door: \"How did it go?\" Leo shrugs. \"He's writing things down,\" Leo says. \"That's good,\" Daniel says. \"He only writes things down about people who are interesting.\" Leo does not know if that is true, but Daniel always knows how to encourage him.",
           "imagePlaceholder": "💬",
           "grammarAnnotations": [
             {
@@ -320,7 +320,7 @@
         },
         {
           "order": 5,
-          "text": "The results are going on the board tomorrow morning. Tonight, Leo is sitting at the dinner table with his father and Mia. He is eating slowly and not saying much. \"How was school?\" his father asks. \"Fine,\" Leo says. His father looks at him. \"And the try-out?\" Leo thinks for a moment. \"I think I improved,\" he says. \"I wasn't the best, but I was better than I expected.\" His father nods. \"That's all you can ask,\" he says. Mia, who never pays attention at dinner, looks up. \"Did you get in?\" she asks. \"Tomorrow,\" Leo says. Mia nods and goes back to her food.",
+          "text": "The results are going on the board tomorrow morning. Tonight, Leo is sitting at the dinner table with his father and Mia. He is eating slowly and not saying much. \"How was school?\" his father asks. \"Fine,\" Leo says. His father looks at him. \"And the tryout?\" Leo thinks for a moment. \"I think I improved,\" he says. \"I wasn't the best, but I was better than I expected.\" His father nods. \"That's all you can ask.\" Mia looks up. \"Did you get in?\" she asks. \"Tomorrow,\" Leo says.",
           "imagePlaceholder": "🍽️",
           "grammarAnnotations": [
             {
@@ -356,7 +356,7 @@
             "He is running with the ball for the first time.",
             "He has just made a successful shot after missing the first one.",
             "He is talking to Daniel through the gym door.",
-            "He is waiting on the bench after the try-out."
+            "He is waiting on the bench after the tryout."
           ],
           "correctAnswer": "He has just made a successful shot after missing the first one.",
           "explanation": "Paragraph 3 shows the sequence: Leo shoots, the ball misses ('hits the rim and bounces off'), he shoots again, and this time 'the ball goes in.' It is after this successful shot that Coach Williams says 'Not bad.'"
@@ -380,7 +380,7 @@
             "He is certain he will make the team.",
             "He is disappointed because he made mistakes.",
             "He feels he improved, even if he was not the best.",
-            "He thinks the try-out was unfair."
+            "He thinks the tryout was unfair."
           ],
           "correctAnswer": "He feels he improved, even if he was not the best.",
           "explanation": "In paragraph 5, Leo says directly: 'I wasn't the best, but I was better than I expected.' This is his honest assessment of how he did — not perfect, but an improvement."

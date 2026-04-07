@@ -27,6 +27,9 @@ Your task is to write ONE chapter for a reading app aimed at learners of English
 - For the most important grammar moments in each paragraph, include optional `grammarAnnotations` so the UI can highlight the exact form learners should notice.
 - Use `tone` values only from this set: `aux`, `ending`, `question`, `structure`, `modal`.
 - Use `highlightText` when only part of `targetText` should be highlighted. Example: `targetText: "likes"`, `highlightText: "s"`.
+- Prefer whole-word or whole-phrase annotations unless you are teaching a true ending such as `s`, `es`, or `ed`.
+- Do NOT annotate short fragments inside unrelated words. Example: never tag `ing` inside `anything` or `something`.
+- If you use `highlightText`, it must point to the exact teachable part learners should notice, not just any repeated letter sequence.
 - Use `occurrence` only if the same `targetText` appears more than once in the paragraph. It is 1-based.
 
 **Vocabulary rule (CRITICAL):**
@@ -153,3 +156,4 @@ Before submitting the prompt:
 - **Request a specific scene**: e.g. "The story must include a moment where Emma nearly gives up but doesn't"
 - **Iterate on grammar examples**: if the grammar examples feel mechanical, ask Claude to rewrite them to sound more like real dialogue or narration
 - **Prefer explicit grammar annotations**: tag only the most teachable spans, not every possible grammar form in the paragraph
+- **Keep annotations precise**: prefer `has been working`, `does not like`, or `likes` over tiny fragments unless the grammar point is specifically a verb ending

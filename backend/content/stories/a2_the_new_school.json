@@ -43,7 +43,7 @@
       ],
       "grammarFocus": {
         "rule": "Simple Past – Regular Verbs",
-        "explanation": "We use the simple past tense to talk about actions that started and finished in the past. For regular verbs, we add -ed to the verb. Some verbs are irregular and change their form completely.",
+          "explanation": "We use the simple past tense to talk about actions that started and finished in the past. For regular verbs, we add -ed to the verb.",
         "examples": [
           "Emma walked into the classroom and looked around carefully.",
           "She felt nervous, so she sat down at the back of the room.",
@@ -54,27 +54,27 @@
       "content": [
         {
           "order": 1,
-          "text": "Emma woke up early on Monday morning. Her stomach felt strange, like it had butterflies inside. Today was her first day at Riverside Middle School. She moved to this town only two weeks ago, and she did not know anyone. She dressed slowly, ate her breakfast without speaking, and stared out of the window at the grey sky. Her mother noticed. \"You're going to be fine,\" she said softly. Emma nodded, but she did not believe it.",
+          "text": "Emma woke early on Monday morning. Her stomach felt strange, like it had butterflies inside. It was her first day at Riverside Middle School. She had moved to the town only two weeks ago, and she knew no one. She ate breakfast without speaking and stared out at the grey sky. Her mother noticed. \"You're going to be fine,\" she said softly. Emma nodded, but she did not believe it.",
           "imagePlaceholder": "🌅"
         },
         {
           "order": 2,
-          "text": "Her mother drove her to school and stopped at the gate. Emma picked up her bag — new pencils, new notebooks, a small eraser her grandmother gave her. She opened the car door, then stopped. \"What if nobody talks to me?\" she asked quietly. Her mother squeezed her hand. \"Then you talk to someone first. You've done harder things than this.\" Emma got out of the car and walked through the gate.",
+          "text": "Her mother drove her to school and stopped at the gate. Emma picked up her bag and opened the car door, then stopped. \"What if nobody talks to me?\" she asked quietly. Her mother squeezed her hand. \"Then you talk to someone first. You've done harder things than this.\" Emma got out and walked through the gate.",
           "imagePlaceholder": "🎒"
         },
         {
           "order": 3,
-          "text": "The hallway was loud and crowded. Students laughed, shouted to each other, and slammed their lockers shut. Emma found her own locker — number 47 — and tried to open it. The lock was stiff. She pulled and turned it three times before it finally opened. She put her jacket inside, took out her timetable, and looked at the paper. Room 12. She walked down the hallway slowly, trying not to bump into anyone.",
+          "text": "The hallway was loud and crowded. Students laughed, shouted, and slammed lockers shut. Emma found locker 47 and tried to open it. The lock was stiff. She pulled and turned it three times before it opened. She put her jacket inside, took out her timetable, and looked at the paper. Room 12. She walked down the hallway slowly, trying not to bump into anyone.",
           "imagePlaceholder": "🏫"
         },
         {
           "order": 4,
-          "text": "Room 12 was at the end of the corridor. A woman with short hair and bright eyes stood at the door. She looked at Emma and smiled warmly. \"You must be Emma,\" she said. \"I'm Ms Clarke. Come in — I'd like you to introduce yourself to the class.\" Emma walked to the front of the room. Twenty-four pairs of eyes looked at her. Her face felt hot. \"Hi,\" she said, almost in a whisper. \"I'm Emma. I came from Bristol.\" She sat down quickly at the nearest empty chair.",
+          "text": "Room 12 was at the end of the corridor. A woman with bright eyes stood at the door and smiled warmly. \"You must be Emma,\" she said. \"I'm Ms Clarke. Come in. I'd like you to introduce yourself to the class.\" Emma walked to the front. Twenty-four pairs of eyes looked at her. Her face felt hot. \"Hi,\" she said quietly. \"I'm Emma. I came from Bristol.\" She sat down at the nearest empty chair.",
           "imagePlaceholder": "👩‍🏫"
         },
         {
           "order": 5,
-          "text": "At lunch, Emma carried her tray to a long table and sat at the end, alone. She looked at her food and pretended to read a book. Then a girl appeared next to her. She had curly hair and a bright yellow pencil case. \"You're Emma from Bristol, right?\" the girl said cheerfully. \"I'm Sophie. I moved here last year. It was horrible at first, but it gets better. Can I sit here?\" Emma looked up and felt something loosen in her chest. \"Yes,\" she said. \"Please.\" By the end of the day, she did not feel nervous anymore.",
+          "text": "At lunch, Emma carried her tray to a long table and sat alone. She looked at her food and pretended to read a book. Then a girl with curly hair stood beside her. \"You're Emma from Bristol, right?\" she said cheerfully. \"I'm Sophie. I moved here last year. It was horrible at first, but it gets better. Can I sit here?\" Emma looked up and felt something loosen in her chest. \"Yes,\" she said. \"Please.\" By the end of the day, she did not feel nervous anymore.",
           "imagePlaceholder": "😊"
         }
       ],
