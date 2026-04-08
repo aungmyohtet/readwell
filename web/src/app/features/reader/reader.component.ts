@@ -4,6 +4,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { StoryService } from '../../core/services/story.service';
 import { ProgressService } from '../../core/services/progress.service';
 import { ChapterDetail, ComprehensionQuestion, GrammarAnnotation, Paragraph } from '../../core/models/story.model';
+import { ProgressRecord } from '../../core/models/progress.model';
 
 type Tab = 'vocabulary' | 'grammar' | 'story' | 'quiz';
 
@@ -528,6 +529,7 @@ const LESSON_TABS: LessonTabMeta[] = [
                     @if (improvementLabel()) {
                       <span class="result-badge badge-soft">{{ improvementLabel() }}</span>
                     }
+                    <span class="result-badge badge-neutral">{{ attemptSummaryLabel() }}</span>
                   </div>
                   <div class="result-stars">{{ starsDisplay() }}</div>
                   <div class="result-score">{{ score() }} / {{ chapter()!.comprehension.length }}</div>
@@ -539,8 +541,12 @@ const LESSON_TABS: LessonTabMeta[] = [
                       <span>Current accuracy</span>
                     </div>
                     <div class="result-highlight-card">
-                      <strong>{{ masteryStatusLabel() }}</strong>
-                      <span>Chapter status</span>
+                      <strong>{{ bestSavedScorePct() }}%</strong>
+                      <span>{{ bestResultLabel() }}</span>
+                    </div>
+                    <div class="result-highlight-card">
+                      <strong>{{ attemptCountForResult() }}</strong>
+                      <span>Attempts so far</span>
                     </div>
                     <div class="result-highlight-card">
                       <strong>{{ nextResultMoveLabel() }}</strong>
@@ -695,6 +701,7 @@ export class ReaderComponent implements OnInit {
   knownWords = signal<Set<string>>(new Set());
   activeVocabPopup = signal<{ word: string; definition: string; exampleSentence: string; emoji: string } | null>(null);
   lastSavedScoreBeforeSubmit = signal<number | null>(null);
+  savedProgress = signal<ProgressRecord | null>(null);
 
   readonly confettiPieces = CONFETTI_PIECES;
 
@@ -821,6 +828,7 @@ export class ReaderComponent implements OnInit {
     const chapter = this.chapter();
     if (!chapter) return;
     this.lastSavedScoreBeforeSubmit.set(chapter.completed ? chapter.score : null);
+    this.savedProgress.set(null);
     let correct = 0;
     chapter.comprehension.forEach((q) => {
       if (this.answers()[q.order] === q.correctAnswer) correct++;
@@ -837,12 +845,16 @@ export class ReaderComponent implements OnInit {
         selectedAnswer: this.answers()[question.order] ?? '',
       })),
     }).subscribe({
-      next: () => {
+      next: (saved) => {
+        this.savedProgress.set(saved);
         this.chapter.update((current) => current
           ? {
               ...current,
               completed: true,
-              score: correct,
+              score: saved.score,
+              bestScore: saved.bestScore,
+              previousScore: saved.previousScore,
+              attemptCount: saved.attemptCount,
             }
           : current);
       },
@@ -855,6 +867,7 @@ export class ReaderComponent implements OnInit {
     this.quizSubmitted.set(false);
     this.score.set(0);
     this.lastSavedScoreBeforeSubmit.set(null);
+    this.savedProgress.set(null);
   }
 
   optLetter(options: string[], opt: string): string {
@@ -939,6 +952,9 @@ export class ReaderComponent implements OnInit {
   }
 
   resultSupportMessage(): string {
+    if (this.isNewBestScore()) {
+      return 'This is your strongest saved result on this chapter so far. Build on it before the pattern fades.';
+    }
     if (this.scorePct() === 100) {
       return 'You answered everything correctly. This chapter is ready to count as secure.';
     }
@@ -961,6 +977,47 @@ export class ReaderComponent implements OnInit {
 
   correctAnswerSupport(): string {
     return 'That answer fits both the story meaning and the grammar target.';
+  }
+
+  attemptCountForResult(): number {
+    const saved = this.savedProgress();
+    if (saved) return saved.attemptCount;
+
+    const chapter = this.chapter();
+    if (!chapter) return 1;
+    const priorAttempts = chapter.attemptCount || (chapter.completed ? 1 : 0);
+    return priorAttempts + 1;
+  }
+
+  attemptSummaryLabel(): string {
+    return `Attempt ${this.attemptCountForResult()}`;
+  }
+
+  bestSavedScoreRaw(): number {
+    const saved = this.savedProgress();
+    if (saved) return saved.bestScore;
+
+    const chapter = this.chapter();
+    if (!chapter) return this.score();
+    const priorBest = chapter.bestScore || (chapter.completed ? chapter.score : 0);
+    return Math.max(priorBest, this.score());
+  }
+
+  bestSavedScorePct(): number {
+    const chapter = this.chapter();
+    if (!chapter || chapter.comprehension.length === 0) return 0;
+    return Math.round((this.bestSavedScoreRaw() / chapter.comprehension.length) * 100);
+  }
+
+  bestResultLabel(): string {
+    return this.isNewBestScore() ? 'New best result' : 'Best saved result';
+  }
+
+  isNewBestScore(): boolean {
+    const chapter = this.chapter();
+    if (!chapter) return false;
+    const priorBest = chapter.bestScore || (chapter.completed ? chapter.score : 0);
+    return this.score() > priorBest;
   }
 
   masteredWordsPct(): number {

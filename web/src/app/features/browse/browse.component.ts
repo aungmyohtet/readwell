@@ -54,7 +54,15 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
 
         <div class="hero-panel card">
           <div class="hero-next-step">
-            <span class="continue-label">{{ primaryAction().label }}</span>
+            <div class="hero-next-topline">
+              <span class="continue-label">{{ primaryAction().label }}</span>
+              @if (priorityReview()) {
+                <span class="review-stage-pill" [class.stage-rescue]="priorityReview()!.reviewStage === 'rescue'" [class.stage-now]="priorityReview()!.reviewStage === 'due-now'" [class.stage-soon]="priorityReview()!.reviewStage === 'due-soon'">{{ browseReviewStageLabel(priorityReview()!) }}</span>
+              }
+              @if (reviewAlertCount() > 0) {
+                <span class="notification-badge notification-badge-soft">{{ reviewAlertLabel() }}</span>
+              }
+            </div>
             <h2 class="hero-next-title">{{ primaryAction().title }}</h2>
             <p class="hero-next-copy">{{ primaryAction().detail }}</p>
 
@@ -202,7 +210,7 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
         } @else {
           <div class="story-grid">
             @for (story of displayedStories(); track story.id) {
-              <a class="story-card" [routerLink]="['/stories', story.id]">
+              <article class="story-card">
                 <div class="story-glow"></div>
                 <div class="cover">
                   @if (story.coverImageUrl) {
@@ -216,6 +224,9 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
                   <div class="story-header">
                     <span class="level-badge {{ story.level }}">{{ story.level }}</span>
                     <div class="story-header-meta">
+                      @if (storyReviewStage(story.id)) {
+                        <span class="review-stage-pill" [class.stage-rescue]="storyReviewStage(story.id) === 'rescue'" [class.stage-now]="storyReviewStage(story.id) === 'due-now'" [class.stage-soon]="storyReviewStage(story.id) === 'due-soon'">{{ storyReviewStageLabel(story.id) }}</span>
+                      }
                       @if (hasStoryProgress(story.id)) {
                         <span class="achievement-badge" [class.perfect]="storyBadgeClass(story.id) === 'perfect'" [class.mastered]="storyBadgeClass(story.id) === 'mastered'" [class.close]="storyBadgeClass(story.id) === 'close'" [class.review]="storyBadgeClass(story.id) === 'review'">{{ storyBadgeLabel(story.id) }}</span>
                       }
@@ -223,7 +234,9 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
                     </div>
                   </div>
 
-                  <h3>{{ story.title }}</h3>
+                  <a class="story-title-link" [routerLink]="['/stories', story.id]">
+                    <h3>{{ story.title }}</h3>
+                  </a>
                   <p class="description">{{ story.description }}</p>
 
                   @if (hasStoryProgress(story.id)) {
@@ -250,10 +263,16 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
                         </div>
                       }
                     </div>
+                    <div class="story-action-row">
+                      <a class="story-action-link" [routerLink]="['/stories', story.id]">Open story</a>
+                      @if (storyPriorityReview(story.id)) {
+                        <a class="story-action-link story-action-link-accent" [routerLink]="['/chapters', storyPriorityReview(story.id)!.chapterId]">{{ storyReviewCta(story.id) }}</a>
+                      }
+                    </div>
                     <span class="story-arrow">→</span>
                   </div>
                 </div>
-              </a>
+              </article>
             }
           </div>
         }
@@ -285,9 +304,9 @@ export class BrowseComponent implements OnInit {
 
   ngOnInit() {
     this.loadLastChapter();
+    this.initializeStudyGuide();
     this.load();
     this.loadProgressContext();
-    this.initializeStudyGuide();
   }
 
   private initializeStudyGuide() {
@@ -364,6 +383,42 @@ export class BrowseComponent implements OnInit {
     return this.stories().reduce((sum, story) => sum + story.totalChapters, 0);
   }
 
+  reviewAlertCount(): number {
+    return this.insights()?.reviewQueue.length ?? 0;
+  }
+
+  reviewAlertLabel(): string {
+    const count = this.reviewAlertCount();
+    return `${count} review ${count === 1 ? 'chapter' : 'chapters'}`;
+  }
+
+  priorityReview(): ProgressInsights['reviewQueue'][number] | null {
+    return this.insights()?.reviewQueue[0] ?? null;
+  }
+
+  browseReviewStageLabel(review: ProgressInsights['reviewQueue'][number]): string {
+    switch (review.reviewStage) {
+      case 'rescue':
+        return 'Rescue now';
+      case 'due-now':
+        return 'Due now';
+      case 'due-soon':
+        return this.reviewDueLabel(review.nextReviewAt);
+      default:
+        return 'Review next';
+    }
+  }
+
+  reviewDueLabel(nextReviewAt?: string | null): string {
+    if (!nextReviewAt) return 'Due soon';
+    const reviewDate = new Date(nextReviewAt);
+    const now = new Date();
+    const dayDiff = Math.ceil((reviewDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+    if (dayDiff <= 0) return 'Due now';
+    if (dayDiff === 1) return 'Due tomorrow';
+    return `Due in ${dayDiff} days`;
+  }
+
   storyCountFor(level: Story['level']): number {
     return this.stories().filter((story) => story.level === level).length;
   }
@@ -404,9 +459,107 @@ export class BrowseComponent implements OnInit {
     return 'review';
   }
 
+  storyReviewStage(storyId: string): 'rescue' | 'due-now' | 'due-soon' | null {
+    const records = this.history().filter((record) => record.storyId === storyId && !!record.reviewStage);
+    if (!records.length) return null;
+
+    const strongest = records
+      .slice()
+      .sort((left, right) => this.reviewStagePriority(left.reviewStage) - this.reviewStagePriority(right.reviewStage))[0];
+
+    return strongest?.reviewStage as 'rescue' | 'due-now' | 'due-soon' | null;
+  }
+
+  storyReviewStageLabel(storyId: string): string {
+    const stage = this.storyReviewStage(storyId);
+    switch (stage) {
+      case 'rescue':
+        return 'Rescue now';
+      case 'due-now':
+        return 'Due now';
+      case 'due-soon':
+        return this.storyReviewDueLine(storyId);
+      default:
+        return 'Review next';
+    }
+  }
+
+  storyReviewDueLine = (storyId: string): string => {
+    const nextDue = this.history()
+      .filter((record) => record.storyId === storyId && record.reviewStage === 'due-soon' && !!record.nextReviewAt)
+      .map((record) => new Date(record.nextReviewAt!))
+      .sort((left, right) => left.getTime() - right.getTime())[0];
+
+    if (!nextDue) return 'due soon';
+
+    const now = new Date();
+    const dayDiff = Math.ceil((nextDue.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+    if (dayDiff <= 0) return 'now';
+    if (dayDiff === 1) return 'tomorrow';
+    return `in ${dayDiff} days`;
+  };
+
+  storyPriorityReview = (storyId: string): ProgressRecord | null => {
+    const candidates = this.history()
+      .filter((record) => record.storyId === storyId && !!record.reviewStage)
+      .slice()
+      .sort((left, right) => {
+        const stageDiff = this.reviewStagePriority(left.reviewStage) - this.reviewStagePriority(right.reviewStage);
+        if (stageDiff !== 0) return stageDiff;
+
+        const leftTime = left.nextReviewAt ? new Date(left.nextReviewAt).getTime() : Number.MAX_SAFE_INTEGER;
+        const rightTime = right.nextReviewAt ? new Date(right.nextReviewAt).getTime() : Number.MAX_SAFE_INTEGER;
+        return leftTime - rightTime;
+      });
+
+    return candidates[0] ?? null;
+  };
+
+  storyReviewCta = (storyId: string): string => {
+    const review = this.storyPriorityReview(storyId);
+    if (!review) return 'Review next';
+
+    switch (review.reviewStage) {
+      case 'rescue':
+        return `Rescue Ch ${review.chapterNumber}`;
+      case 'due-now':
+        return `Review Ch ${review.chapterNumber}`;
+      case 'due-soon':
+        return `Revisit Ch ${review.chapterNumber}`;
+      default:
+        return `Review Ch ${review.chapterNumber}`;
+    }
+  };
+
+  reviewStagePriority = (stage?: string | null): number => {
+    switch (stage) {
+      case 'rescue':
+        return 0;
+      case 'due-now':
+        return 1;
+      case 'due-soon':
+        return 2;
+      default:
+        return 3;
+    }
+  };
+
   storyMetaLine(story: Story): string {
     if (!this.hasStoryProgress(story.id)) {
       return 'Interactive reading, grammar noticing, and quiz recall';
+    }
+
+    const reviewStage = this.storyReviewStage(story.id);
+    if (reviewStage === 'rescue') {
+      return 'This story has a chapter that needs rescue now before the pattern slips further.';
+    }
+
+    if (reviewStage === 'due-now') {
+      return 'A completed chapter in this story is due for review today.';
+    }
+
+    if (reviewStage === 'due-soon') {
+      return `This story has review coming up ${this.storyReviewDueLine(story.id)}.`;
     }
 
     const completed = this.completedChaptersForStory(story.id);
@@ -422,11 +575,11 @@ export class BrowseComponent implements OnInit {
   }
 
   primaryAction(): BrowseAction {
-    const review = this.insights()?.reviewQueue[0];
+    const review = this.priorityReview();
     if (review) {
       return {
-        label: 'Best next move',
-        title: `Review ${review.storyTitle}`,
+        label: review.reviewStage === 'rescue' ? 'Rescue chapter' : review.reviewStage === 'due-now' ? 'Due today' : 'Due soon',
+        title: `${this.browseReviewStageLabel(review)} in ${review.storyTitle}`,
         detail: `Chapter ${review.chapterNumber} is the most useful review right now. ${review.reason}`,
         cta: `Review Chapter ${review.chapterNumber}`,
         route: ['/chapters', review.chapterId],

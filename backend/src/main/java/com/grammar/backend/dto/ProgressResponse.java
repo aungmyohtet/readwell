@@ -13,6 +13,11 @@ public class ProgressResponse {
   private String chapterTitle;
   private int chapterNumber;
   private int score;
+  private int bestScore;
+  private Integer previousScore;
+  private int attemptCount;
   private int totalQuestions;
   private Instant completedAt;
+  private Instant nextReviewAt;
+  private String reviewStage;
 }

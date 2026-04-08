@@ -114,7 +114,7 @@ import { Story, ChapterSummary } from '../../core/models/story.model';
                       <div class="chapter-kicker">Chapter {{ ch.chapterNumber }}</div>
                       <div class="chapter-title">{{ ch.title }}</div>
                       <div class="chapter-status-row">
-                        <span class="chapter-status" [class.review]="ch.completed" [class.current]="primaryChapter()?.id === ch.id && !ch.completed">{{ chapterStateLabel(i, ch) }}</span>
+                        <span class="chapter-status" [class.review]="ch.completed && !chapterReviewStageClass(ch)" [class.current]="primaryChapter()?.id === ch.id && !ch.completed" [class.stage-rescue]="chapterReviewStageClass(ch) === 'stage-rescue'" [class.stage-now]="chapterReviewStageClass(ch) === 'stage-now'" [class.stage-soon]="chapterReviewStageClass(ch) === 'stage-soon'">{{ chapterStateLabel(i, ch) }}</span>
                         @if (ch.completed) {
                           <span class="chapter-achievement-badge" [class.perfect]="chapterBadgeClass(ch) === 'perfect'" [class.mastered]="chapterBadgeClass(ch) === 'mastered'" [class.close]="chapterBadgeClass(ch) === 'close'" [class.review]="chapterBadgeClass(ch) === 'review'">{{ chapterBadgeLabel(ch) }}</span>
                         }
@@ -123,12 +123,16 @@ import { Story, ChapterSummary } from '../../core/models/story.model';
                       <div class="chapter-meta">
                         <span>{{ ch.vocabularyCount }} vocabulary targets</span>
                         <span>{{ ch.comprehensionCount }} quiz prompts</span>
+                        @if (ch.completed) {
+                          <span>{{ chapterAttemptLabel(ch) }}</span>
+                        }
                       </div>
                     </div>
                     <div class="chapter-right">
                       @if (ch.completed) {
                         <div class="stars">{{ starsDisplay(ch) }}</div>
-                        <div class="score-text">{{ ch.score }}/{{ ch.comprehensionCount }}</div>
+                        <div class="score-text">Latest {{ ch.score }}/{{ ch.comprehensionCount }}</div>
+                        <div class="score-subtext">Best {{ chapterBestPct(ch) }}%</div>
                       } @else {
                         <span class="chapter-cta">{{ primaryChapter()?.id === ch.id ? 'Start now' : 'Open' }}</span>
                         <span class="arrow">→</span>
@@ -201,14 +205,29 @@ export class StoryDetailComponent implements OnInit {
 
   primaryChapter(): ChapterSummary | null {
     const chapters = this.chapters();
+    const reviewChapter = this.priorityReviewChapter();
+    if (reviewChapter) return reviewChapter;
     return chapters.find((chapter, index) => !this.isLocked(index) && !chapter.completed) ?? chapters[0] ?? null;
+  }
+
+  priorityReviewChapter(): ChapterSummary | null {
+    return this.chapters()
+      .filter((chapter) => chapter.completed && !!chapter.reviewStage)
+      .sort((left, right) => {
+        const stageDiff = this.reviewStagePriority(left.reviewStage) - this.reviewStagePriority(right.reviewStage);
+        if (stageDiff !== 0) return stageDiff;
+
+        const leftTime = left.nextReviewAt ? new Date(left.nextReviewAt).getTime() : Number.MAX_SAFE_INTEGER;
+        const rightTime = right.nextReviewAt ? new Date(right.nextReviewAt).getTime() : Number.MAX_SAFE_INTEGER;
+        return leftTime - rightTime;
+      })[0] ?? null;
   }
 
   primaryChapterCta(): string {
     const chapter = this.primaryChapter();
     if (!chapter) return 'Start reading';
+    if (chapter.completed) return this.chapterReviewCta(chapter);
     if (this.completedCount() === 0) return `Start Chapter ${chapter.chapterNumber}`;
-    if (chapter.completed) return `Review Chapter ${chapter.chapterNumber}`;
     return `Continue Chapter ${chapter.chapterNumber}`;
   }
 
@@ -226,12 +245,13 @@ export class StoryDetailComponent implements OnInit {
   nextStepSummary(): string {
     const chapter = this.primaryChapter();
     if (!chapter) return 'Choose a chapter and begin.';
+    if (chapter.completed) return `${this.chapterReviewStageLabel(chapter)} in Chapter ${chapter.chapterNumber} is the clearest next move.`;
     if (this.completedCount() === 0) return 'Start the opening chapter and build the story world first.';
     return `Chapter ${chapter.chapterNumber} is the clearest next step.`;
   }
 
   chapterStateLabel(index: number, chapter: ChapterSummary): string {
-    if (chapter.completed) return 'Completed';
+    if (chapter.completed) return this.chapterReviewStageLabel(chapter);
     if (this.primaryChapter()?.id === chapter.id) return 'Ready now';
     if (!this.isLocked(index)) return 'Available';
     return 'Locked';
@@ -251,5 +271,77 @@ export class StoryDetailComponent implements OnInit {
     if (pct >= 80) return 'mastered';
     if (pct >= 60) return 'close';
     return 'review';
+  }
+
+  chapterAttemptLabel(chapter: ChapterSummary): string {
+    const attempts = chapter.attemptCount || 1;
+    return `${attempts} ${attempts === 1 ? 'attempt' : 'attempts'}`;
+  }
+
+  chapterBestPct(chapter: ChapterSummary): number {
+    if (!chapter.comprehensionCount) return 0;
+    return Math.round(((chapter.bestScore || chapter.score) / chapter.comprehensionCount) * 100);
+  }
+
+  chapterReviewStageLabel(chapter: ChapterSummary): string {
+    switch (chapter.reviewStage) {
+      case 'rescue':
+        return 'Rescue now';
+      case 'due-now':
+        return 'Due now';
+      case 'due-soon':
+        return this.reviewDueLabel(chapter.nextReviewAt);
+      default:
+        return 'Completed';
+    }
+  }
+
+  chapterReviewStageClass(chapter: ChapterSummary): 'stage-rescue' | 'stage-now' | 'stage-soon' | '' {
+    switch (chapter.reviewStage) {
+      case 'rescue':
+        return 'stage-rescue';
+      case 'due-now':
+        return 'stage-now';
+      case 'due-soon':
+        return 'stage-soon';
+      default:
+        return '';
+    }
+  }
+
+  chapterReviewCta(chapter: ChapterSummary): string {
+    switch (chapter.reviewStage) {
+      case 'rescue':
+        return `Rescue Chapter ${chapter.chapterNumber}`;
+      case 'due-now':
+        return `Review Chapter ${chapter.chapterNumber}`;
+      case 'due-soon':
+        return `Revisit Chapter ${chapter.chapterNumber}`;
+      default:
+        return `Review Chapter ${chapter.chapterNumber}`;
+    }
+  }
+
+  reviewDueLabel(nextReviewAt?: string | null): string {
+    if (!nextReviewAt) return 'Due soon';
+    const reviewDate = new Date(nextReviewAt);
+    const now = new Date();
+    const dayDiff = Math.ceil((reviewDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+    if (dayDiff <= 0) return 'Due now';
+    if (dayDiff === 1) return 'Due tomorrow';
+    return `Due in ${dayDiff} days`;
+  }
+
+  reviewStagePriority(stage?: string | null): number {
+    switch (stage) {
+      case 'rescue':
+        return 0;
+      case 'due-now':
+        return 1;
+      case 'due-soon':
+        return 2;
+      default:
+        return 3;
+    }
   }
 }

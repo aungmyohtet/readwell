@@ -19,6 +19,11 @@ export interface ChapterSummary {
   comprehensionCount: number;
   completed: boolean;
   score: number;
+  bestScore: number;
+  previousScore?: number | null;
+  attemptCount: number;
+  nextReviewAt?: string | null;
+  reviewStage?: string | null;
 }
 
 export interface VocabularyItem {
@@ -69,4 +74,9 @@ export interface ChapterDetail {
   comprehension: ComprehensionQuestion[];
   completed: boolean;
   score: number;
+  bestScore: number;
+  previousScore?: number | null;
+  attemptCount: number;
+  nextReviewAt?: string | null;
+  reviewStage?: string | null;
 }

@@ -21,7 +21,12 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
         </div>
 
         <div class="hero-mini card">
-          <span class="mini-label">Next focus</span>
+          <div class="hero-mini-topline">
+            <span class="mini-label">Next focus</span>
+            @if (reviewAlertCount() > 0) {
+              <span class="notification-badge">{{ reviewAlertLabel() }}</span>
+            }
+          </div>
           <strong>{{ focusHeadline() }}</strong>
           <p>{{ focusSupport() }}</p>
           <div class="hero-mini-actions">
@@ -85,12 +90,12 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
           <div class="insight-card card">
             <span class="insight-title">Recommended habit</span>
             <strong>Read → notice → quiz</strong>
-            <p>Revisit chapters below 80% before moving too far ahead.</p>
+            <p>Use rescue, due now, and due soon signals to decide what to revisit next.</p>
           </div>
           <div class="insight-card card">
-            <span class="insight-title">Review threshold</span>
-            <strong>Below 80%</strong>
-            <p>Treat those chapters as active review, not finished work.</p>
+            <span class="insight-title">Review rhythm</span>
+            <strong>{{ reviewRhythmLabel() }}</strong>
+            <p>Weak chapters are rescued immediately. Stronger ones come back on a short schedule.</p>
           </div>
         </section>
 
@@ -99,7 +104,10 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
             <div class="section-shell review-shell">
               <div class="section-heading">
                 <div>
-                  <span class="section-kicker">Adaptive Review</span>
+                  <div class="section-heading-meta">
+                    <span class="section-kicker">Adaptive Review</span>
+                    <span class="notification-badge">{{ reviewAlertLabel() }}</span>
+                  </div>
                   <h2 class="section-title">Recommended next review</h2>
                 </div>
                 <p class="section-note">These chapters are the best places to revisit before moving ahead.</p>
@@ -112,6 +120,9 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
                       <strong>{{ item.storyTitle }}</strong>
                       <span>Ch. {{ item.chapterNumber }}: {{ item.chapterTitle }}</span>
                       <p>{{ item.grammarRule }} · {{ item.reason }}</p>
+                      <span class="review-stage-label" [class.stage-rescue]="item.reviewStage === 'rescue'" [class.stage-now]="item.reviewStage === 'due-now'" [class.stage-soon]="item.reviewStage === 'due-soon'">
+                        {{ reviewStageLabel(item) }}
+                      </span>
                     </div>
                     <div class="review-meta">
                       <span class="achievement-badge" [class.close]="reviewBadgeClass(item.lastScorePct) === 'close'" [class.review]="reviewBadgeClass(item.lastScorePct) === 'review'">{{ reviewBadgeLabel(item.lastScorePct) }}</span>
@@ -126,20 +137,23 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
 
         @if (weakAreas().length > 0) {
           <section class="weak-areas section-card">
-            <div class="section-heading compact">
-              <div>
-                <span class="section-kicker">Weak Areas</span>
-                <h2 class="section-title">Grammar to revisit</h2>
-              </div>
-            </div>
-
-            <div class="weak-area-list">
-              @for (area of weakAreas(); track area.grammarRule) {
-                <div class="weak-area-chip card">
-                  <strong>{{ area.grammarRule }}</strong>
-                  <span>{{ area.missCount }} missed answers across {{ area.chapterCount }} chapter{{ area.chapterCount === 1 ? '' : 's' }}</span>
+            <div class="section-shell weak-shell">
+              <div class="section-heading compact">
+                <div>
+                  <span class="section-kicker">Weak Areas</span>
+                  <h2 class="section-title">Grammar to revisit</h2>
                 </div>
-              }
+                <p class="section-note">These patterns are showing up repeatedly in missed answers.</p>
+              </div>
+
+              <div class="weak-area-list">
+                @for (area of weakAreas(); track area.grammarRule) {
+                  <div class="weak-area-chip card">
+                    <strong>{{ area.grammarRule }}</strong>
+                    <span>{{ area.missCount }} missed answers across {{ area.chapterCount }} chapter{{ area.chapterCount === 1 ? '' : 's' }}</span>
+                  </div>
+                }
+              </div>
             </div>
           </section>
         }
@@ -160,6 +174,7 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
                     <div class="story-name">{{ record.storyTitle || 'Story' }}</div>
                     <div class="chapter-name">Ch. {{ record.chapterNumber }}: {{ record.chapterTitle }}</div>
                     <div class="completed-date">{{ formatDate(record.completedAt) }}</div>
+                    <div class="history-subline">{{ historyProgressMeta(record) }}</div>
                   </div>
                   <div class="history-score">
                     <span class="achievement-badge" [class.perfect]="historyBadgeClass(record) === 'perfect'" [class.mastered]="historyBadgeClass(record) === 'mastered'" [class.close]="historyBadgeClass(record) === 'close'" [class.review]="historyBadgeClass(record) === 'review'">{{ historyBadgeLabel(record) }}</span>
@@ -176,28 +191,34 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
 
         @if (mistakeBank().length > 0) {
           <section class="mistake-bank section-card">
-            <div class="section-heading compact">
-              <div>
-                <span class="section-kicker">Mistake Bank</span>
-                <h2 class="section-title">Recent questions to learn from</h2>
-              </div>
-            </div>
-
-            <div class="mistake-list">
-              @for (item of mistakeBank(); track item.chapterId + '-' + item.questionOrder + '-' + item.completedAt) {
-                <div class="mistake-item card">
-                  <div class="mistake-topline">
-                    <strong>{{ item.storyTitle }} · Ch. {{ item.chapterNumber }}</strong>
-                    <span>{{ formatMistakeDate(item.completedAt) }}</span>
+            <div class="section-shell mistake-shell">
+              <div class="section-heading compact">
+                <div>
+                  <div class="section-heading-meta">
+                    <span class="section-kicker">Mistake Bank</span>
+                    <span class="notification-badge">{{ mistakeAlertLabel() }}</span>
                   </div>
-                  <div class="mistake-rule">{{ item.grammarRule }}</div>
-                  <p class="mistake-question">Q{{ item.questionOrder }}. {{ item.question }}</p>
-                  <p class="mistake-answer wrong-answer">Your answer: <strong>{{ item.selectedAnswer || 'No answer' }}</strong></p>
-                  <p class="mistake-answer correct-answer">Correct answer: <strong>{{ item.correctAnswer }}</strong></p>
-                  <p class="mistake-explanation">{{ item.explanation }}</p>
-                  <a class="mistake-link" [routerLink]="['/chapters', item.chapterId]">Review chapter →</a>
+                  <h2 class="section-title">Recent questions to learn from</h2>
                 </div>
-              }
+                <p class="section-note">Use these as targeted review prompts, not as a second quiz to rush through.</p>
+              </div>
+
+              <div class="mistake-list">
+                @for (item of mistakeBank(); track item.chapterId + '-' + item.questionOrder + '-' + item.completedAt) {
+                  <div class="mistake-item card">
+                    <div class="mistake-topline">
+                      <strong>{{ item.storyTitle }} · Ch. {{ item.chapterNumber }}</strong>
+                      <span>{{ formatMistakeDate(item.completedAt) }}</span>
+                    </div>
+                    <div class="mistake-rule">{{ item.grammarRule }}</div>
+                    <p class="mistake-question">Q{{ item.questionOrder }}. {{ item.question }}</p>
+                    <p class="mistake-answer wrong-answer">Your answer: <strong>{{ item.selectedAnswer || 'No answer' }}</strong></p>
+                    <p class="mistake-answer correct-answer">Correct answer: <strong>{{ item.correctAnswer }}</strong></p>
+                    <p class="mistake-explanation">{{ item.explanation }}</p>
+                    <a class="mistake-link" [routerLink]="['/chapters', item.chapterId]">Review chapter →</a>
+                  </div>
+                }
+              </div>
             </div>
           </section>
         }
@@ -298,12 +319,33 @@ export class ProgressComponent implements OnInit {
     return this.insights()?.reviewQueue ?? [];
   }
 
+  reviewAlertCount(): number {
+    return this.reviewQueue().length;
+  }
+
+  reviewAlertLabel(): string {
+    const count = this.reviewAlertCount();
+    return `${count} review ${count === 1 ? 'chapter' : 'chapters'}`;
+  }
+
+  reviewRhythmLabel(): string {
+    const queue = this.reviewQueue();
+    if (queue.some((item) => item.reviewStage === 'rescue')) return 'Rescue first';
+    if (queue.some((item) => item.reviewStage === 'due-now')) return 'Due today';
+    return 'Due soon';
+  }
+
   weakAreas() {
     return this.insights()?.weakAreas ?? [];
   }
 
   mistakeBank(): MistakeBankItem[] {
     return this.insights()?.mistakeBank ?? [];
+  }
+
+  mistakeAlertLabel(): string {
+    const count = this.mistakeBank().length;
+    return `${count} ${count === 1 ? 'question' : 'questions'}`;
   }
 
   historyBadgeLabel(record: ProgressRecord): string {
@@ -328,5 +370,34 @@ export class ProgressComponent implements OnInit {
 
   reviewBadgeClass(scorePct: number): 'close' | 'review' {
     return scorePct >= 60 ? 'close' : 'review';
+  }
+
+  reviewStageLabel(item: ReviewRecommendation): string {
+    switch (item.reviewStage) {
+      case 'rescue':
+        return 'Rescue now';
+      case 'due-now':
+        return 'Due now';
+      case 'due-soon':
+        return this.reviewDueLabel(item.nextReviewAt);
+      default:
+        return 'Review soon';
+    }
+  }
+
+  reviewDueLabel(nextReviewAt?: string | null): string {
+    if (!nextReviewAt) return 'Due soon';
+    const reviewDate = new Date(nextReviewAt);
+    const now = new Date();
+    const dayDiff = Math.ceil((reviewDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+    if (dayDiff <= 0) return 'Due now';
+    if (dayDiff === 1) return 'Due tomorrow';
+    return `Due in ${dayDiff} days`;
+  }
+
+  historyProgressMeta(record: ProgressRecord): string {
+    const attempts = record.attemptCount || 1;
+    const bestPct = record.totalQuestions ? Math.round(((record.bestScore || record.score) / record.totalQuestions) * 100) : 0;
+    return `${attempts} ${attempts === 1 ? 'attempt' : 'attempts'} · best ${bestPct}%`;
   }
 }

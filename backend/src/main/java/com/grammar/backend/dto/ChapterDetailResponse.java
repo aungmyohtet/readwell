@@ -1,6 +1,7 @@
 package com.grammar.backend.dto;
 
 import com.grammar.backend.model.Chapter;
+import java.time.Instant;
 import java.util.List;
 import lombok.Data;
 
@@ -16,4 +17,9 @@ public class ChapterDetailResponse {
   private List<Chapter.ComprehensionQuestion> comprehension;
   private boolean completed;
   private int score;
+  private int bestScore;
+  private Integer previousScore;
+  private int attemptCount;
+  private Instant nextReviewAt;
+  private String reviewStage;
 }

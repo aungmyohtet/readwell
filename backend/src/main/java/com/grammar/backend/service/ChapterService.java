@@ -59,6 +59,11 @@ public class ChapterService {
     if (progress != null) {
       r.setCompleted(true);
       r.setScore(progress.getScore());
+      r.setBestScore(bestScoreOrLegacy(progress));
+      r.setPreviousScore(progress.getPreviousScore());
+      r.setAttemptCount(attemptCountOrLegacy(progress));
+      r.setNextReviewAt(progress.getNextReviewAt());
+      r.setReviewStage(progress.getReviewStage());
     }
     return r;
   }
@@ -76,7 +81,26 @@ public class ChapterService {
     if (progress != null) {
       r.setCompleted(true);
       r.setScore(progress.getScore());
+      r.setBestScore(bestScoreOrLegacy(progress));
+      r.setPreviousScore(progress.getPreviousScore());
+      r.setAttemptCount(attemptCountOrLegacy(progress));
+      r.setNextReviewAt(progress.getNextReviewAt());
+      r.setReviewStage(progress.getReviewStage());
     }
     return r;
+  }
+
+  private int attemptCountOrLegacy(UserProgress progress) {
+    if (progress.getAttemptCount() > 0) {
+      return progress.getAttemptCount();
+    }
+    return progress.getCompletedAt() != null ? 1 : 0;
+  }
+
+  private int bestScoreOrLegacy(UserProgress progress) {
+    if (progress.getBestScore() > 0 || attemptCountOrLegacy(progress) > 1) {
+      return progress.getBestScore();
+    }
+    return progress.getCompletedAt() != null ? progress.getScore() : 0;
   }
 }

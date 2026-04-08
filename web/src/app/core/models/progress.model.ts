@@ -7,8 +7,13 @@ export interface ProgressRecord {
   chapterTitle: string;
   chapterNumber: number;
   score: number;
+  bestScore: number;
+  previousScore?: number | null;
+  attemptCount: number;
   totalQuestions: number;
   completedAt: string;
+  nextReviewAt?: string | null;
+  reviewStage?: string | null;
 }
 
 export interface QuestionAttemptRequest {
@@ -30,6 +35,8 @@ export interface ReviewRecommendation {
   chapterNumber: number;
   grammarRule: string;
   lastScorePct: number;
+  nextReviewAt?: string | null;
+  reviewStage?: string | null;
   reason: string;
 }
 

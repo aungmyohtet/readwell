@@ -1,5 +1,6 @@
 package com.grammar.backend.dto;
 
+import java.time.Instant;
 import java.util.List;
 import lombok.Data;
 
@@ -26,6 +27,8 @@ public class ProgressInsightsResponse {
     private int chapterNumber;
     private String grammarRule;
     private int lastScorePct;
+    private Instant nextReviewAt;
+    private String reviewStage;
     private String reason;
   }
 

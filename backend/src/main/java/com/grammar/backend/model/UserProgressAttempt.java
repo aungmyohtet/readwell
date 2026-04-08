@@ -4,13 +4,11 @@ import java.time.Instant;
 import java.util.List;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.index.CompoundIndex;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@Document(collection = "user_progress")
-@CompoundIndex(name = "user_chapter_idx", def = "{'userId': 1, 'chapterId': 1}", unique = true)
-public class UserProgress {
+@Document(collection = "user_progress_attempts")
+public class UserProgressAttempt {
 
   @Id private String id;
 
@@ -24,19 +22,9 @@ public class UserProgress {
 
   private int score;
 
-  private int bestScore;
-
-  private Integer previousScore;
-
-  private int attemptCount;
-
   private int totalQuestions;
 
   private Instant completedAt;
-
-  private Instant nextReviewAt;
-
-  private String reviewStage;
 
   private List<ProgressQuestionMistake> mistakes;
 }
