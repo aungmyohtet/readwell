@@ -41,6 +41,24 @@ import { Story, ChapterSummary } from '../../core/models/story.model';
                 <p class="author">Written by {{ story()!.author }}</p>
               }
 
+              <div class="hero-actions">
+                @if (primaryChapter()) {
+                  <a class="btn btn-primary" [routerLink]="['/chapters', primaryChapter()!.id]">{{ primaryChapterCta() }}</a>
+                }
+                <a class="btn btn-secondary" routerLink="/progress">View progress</a>
+              </div>
+
+              <div class="story-highlights">
+                <div class="highlight-chip">
+                  <strong>{{ estimatedStoryMinutes() }}</strong>
+                  <span>Estimated study time</span>
+                </div>
+                <div class="highlight-chip">
+                  <strong>{{ completedCount() === 0 ? 'Fresh start' : 'Pick up next' }}</strong>
+                  <span>{{ nextStepSummary() }}</span>
+                </div>
+              </div>
+
               <div class="hero-metrics">
                 <div class="metric card">
                   <span class="metric-value">{{ chapters().length }}</span>
@@ -95,6 +113,10 @@ import { Story, ChapterSummary } from '../../core/models/story.model';
                     <div class="chapter-info">
                       <div class="chapter-kicker">Chapter {{ ch.chapterNumber }}</div>
                       <div class="chapter-title">{{ ch.title }}</div>
+                      <div class="chapter-status-row">
+                        <span class="chapter-status" [class.review]="ch.completed" [class.current]="primaryChapter()?.id === ch.id && !ch.completed">{{ chapterStateLabel(i, ch) }}</span>
+                        <span class="chapter-time">{{ chapterStudyMinutes(ch) }} min study</span>
+                      </div>
                       <div class="chapter-meta">
                         <span>{{ ch.vocabularyCount }} vocabulary targets</span>
                         <span>{{ ch.comprehensionCount }} quiz prompts</span>
@@ -105,6 +127,7 @@ import { Story, ChapterSummary } from '../../core/models/story.model';
                         <div class="stars">{{ starsDisplay(ch) }}</div>
                         <div class="score-text">{{ ch.score }}/{{ ch.comprehensionCount }}</div>
                       } @else {
+                        <span class="chapter-cta">{{ primaryChapter()?.id === ch.id ? 'Start now' : 'Open' }}</span>
                         <span class="arrow">→</span>
                       }
                     </div>
@@ -172,5 +195,43 @@ export class StoryDetailComponent implements OnInit {
 
   totalQuestions(): number {
     return this.chapters().reduce((sum, chapter) => sum + chapter.comprehensionCount, 0);
+  }
+
+  primaryChapter(): ChapterSummary | null {
+    const chapters = this.chapters();
+    return chapters.find((chapter, index) => !this.isLocked(index) && !chapter.completed) ?? chapters[0] ?? null;
+  }
+
+  primaryChapterCta(): string {
+    const chapter = this.primaryChapter();
+    if (!chapter) return 'Start reading';
+    if (this.completedCount() === 0) return `Start Chapter ${chapter.chapterNumber}`;
+    if (chapter.completed) return `Review Chapter ${chapter.chapterNumber}`;
+    return `Continue Chapter ${chapter.chapterNumber}`;
+  }
+
+  estimatedStoryMinutes(): string {
+    const chapters = this.chapters();
+    if (!chapters.length) return '0 min';
+    const total = chapters.reduce((sum, chapter) => sum + this.chapterStudyMinutes(chapter), 0);
+    return `${Math.max(8, total - chapters.length)}-${total + chapters.length} min`;
+  }
+
+  chapterStudyMinutes(chapter: ChapterSummary): number {
+    return Math.max(6, Math.round(chapter.vocabularyCount * 0.9 + chapter.comprehensionCount * 1.5 + 2));
+  }
+
+  nextStepSummary(): string {
+    const chapter = this.primaryChapter();
+    if (!chapter) return 'Choose a chapter and begin.';
+    if (this.completedCount() === 0) return 'Start the opening chapter and build the story world first.';
+    return `Chapter ${chapter.chapterNumber} is the clearest next step.`;
+  }
+
+  chapterStateLabel(index: number, chapter: ChapterSummary): string {
+    if (chapter.completed) return 'Completed';
+    if (this.primaryChapter()?.id === chapter.id) return 'Ready now';
+    if (!this.isLocked(index)) return 'Available';
+    return 'Locked';
   }
 }

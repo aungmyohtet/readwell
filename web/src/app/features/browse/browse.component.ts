@@ -1,13 +1,24 @@
 import { Component, OnInit, computed, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { forkJoin } from 'rxjs';
 import { StoryService } from '../../core/services/story.service';
 import { Story } from '../../core/models/story.model';
+import { ProgressService } from '../../core/services/progress.service';
+import { ProgressInsights, ProgressRecord } from '../../core/models/progress.model';
 
 interface LastChapter {
   chapterId: string;
   storyId: string;
   chapterNumber: number;
   chapterTitle: string;
+}
+
+interface BrowseAction {
+  label: string;
+  title: string;
+  detail: string;
+  cta: string;
+  route: string[];
 }
 
 const LEVELS = ['All', 'A2', 'B1', 'B2'] as const;
@@ -31,42 +42,62 @@ const LEVELS = ['All', 'A2', 'B1', 'B2'] as const;
                 Resume Chapter {{ lastChapter()!.chapterNumber }}
               </a>
             }
-            <button class="btn btn-secondary" (click)="scrollToLibrary()">Explore the library</button>
+            <button class="btn btn-warm" (click)="scrollToLibrary()">Explore the library</button>
           </div>
 
-          <div class="hero-principles">
-            <div class="principle-pill">Notice grammar in authentic lines</div>
-            <div class="principle-pill">Tap vocabulary in the story itself</div>
-            <div class="principle-pill">Review with immediate quiz feedback</div>
-          </div>
+          <button class="hero-toggle" (click)="toggleHomeTips()">
+            {{ showHomeTips() ? 'Hide study tips' : 'Show study tips' }}
+          </button>
+
+          @if (showHomeTips()) {
+            <div class="hero-principles">
+              <div class="principle-pill">Notice grammar in authentic lines</div>
+              <div class="principle-pill">Tap vocabulary in the story itself</div>
+              <div class="principle-pill">Review with immediate quiz feedback</div>
+            </div>
+          }
         </div>
 
         <div class="hero-panel card">
-          <div class="hero-stat">
-            <span class="stat-value">{{ stories().length || '...' }}</span>
-            <span class="stat-label">Story paths</span>
-          </div>
-          <div class="hero-stat">
-            <span class="stat-value">{{ totalChapters() || '...' }}</span>
-            <span class="stat-label">Chapters ready</span>
-          </div>
-          <div class="hero-stat">
-            <span class="stat-value">3</span>
-            <span class="stat-label">CEFR bands</span>
+          <div class="hero-next-step">
+            <span class="continue-label">{{ primaryAction().label }}</span>
+            <h2 class="hero-next-title">{{ primaryAction().title }}</h2>
+            <p class="hero-next-copy">{{ primaryAction().detail }}</p>
+
+            <div class="hero-next-actions">
+              <a class="btn btn-primary" [routerLink]="primaryAction().route">{{ primaryAction().cta }}</a>
+              @if (shouldShowResumeAction()) {
+                <a class="btn btn-secondary" [routerLink]="['/chapters', lastChapter()!.chapterId]">Resume last chapter</a>
+              }
+            </div>
           </div>
 
-          @if (lastChapter()) {
-            <a class="continue-banner" [routerLink]="['/chapters', lastChapter()!.chapterId]">
-              <span class="continue-icon">▶</span>
-              <div class="continue-text">
-                <span class="continue-label">Continue reading</span>
-                <span class="continue-chapter">Chapter {{ lastChapter()!.chapterNumber }} · {{ lastChapter()!.chapterTitle }}</span>
+          <div class="hero-stat-row">
+            <div class="hero-stat">
+              <span class="stat-value">{{ stories().length || '...' }}</span>
+              <span class="stat-label">Story paths</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-value">{{ totalChapters() || '...' }}</span>
+              <span class="stat-label">Chapters ready</span>
+            </div>
+            <div class="hero-stat">
+              <span class="stat-value">{{ averageScorePct() }}%</span>
+              <span class="stat-label">Average quiz score</span>
+            </div>
+          </div>
+
+          @if (showHomeTips()) {
+            <div class="hero-insight-row">
+              <div class="coach-note compact-note">
+                <strong>{{ weakestAreaLabel() }}</strong>
+                <p>{{ weakestAreaDetail() }}</p>
               </div>
-            </a>
-          } @else {
-            <div class="coach-note">
-              <strong>Best first step</strong>
-              <p>Start with an A2 or B1 story, finish one chapter, then use the progress view to track your growth.</p>
+
+              <div class="coach-note compact-note">
+                <strong>{{ momentumLabel() }}</strong>
+                <p>{{ momentumDetail() }}</p>
+              </div>
             </div>
           }
         </div>
@@ -89,6 +120,19 @@ const LEVELS = ['All', 'A2', 'B1', 'B2'] as const;
               >{{ lvl }}</button>
             }
           </div>
+        </div>
+
+        <div class="path-overview">
+          @for (lvl of ['A2', 'B1', 'B2']; track lvl) {
+            <button class="path-card" [class.active]="selectedLevel() === lvl" (click)="selectLevel(lvl)">
+              <div class="path-topline">
+                <span class="level-badge {{ lvl }}">{{ lvl }}</span>
+                <span class="path-count">{{ storyCountFor(levelAsStoryLevel(lvl)) }} stories</span>
+              </div>
+              <strong>{{ levelHeading(lvl) }}</strong>
+              <p>{{ levelDescription(lvl) }}</p>
+            </button>
+          }
         </div>
 
         @if (loading()) {
@@ -160,12 +204,19 @@ export class BrowseComponent implements OnInit {
   });
   loading = signal(false);
   lastChapter = signal<LastChapter | null>(null);
+  history = signal<ProgressRecord[]>([]);
+  insights = signal<ProgressInsights | null>(null);
+  showHomeTips = signal(false);
 
-  constructor(private storyService: StoryService) {}
+  constructor(
+    private storyService: StoryService,
+    private progressService: ProgressService,
+  ) {}
 
   ngOnInit() {
     this.loadLastChapter();
     this.load();
+    this.loadProgressContext();
   }
 
   private loadLastChapter() {
@@ -185,11 +236,31 @@ export class BrowseComponent implements OnInit {
     this.selectedLevel.set(level);
   }
 
+  toggleHomeTips() {
+    this.showHomeTips.update((value) => !value);
+  }
+
   private load() {
     this.loading.set(true);
     this.storyService.getStories().subscribe({
       next: (data) => { this.stories.set(data); this.loading.set(false); },
       error: () => this.loading.set(false),
+    });
+  }
+
+  private loadProgressContext() {
+    forkJoin({
+      history: this.progressService.getHistory(),
+      insights: this.progressService.getInsights(),
+    }).subscribe({
+      next: ({ history, insights }) => {
+        this.history.set(history);
+        this.insights.set(insights);
+      },
+      error: () => {
+        this.history.set([]);
+        this.insights.set(null);
+      },
     });
   }
 
@@ -199,5 +270,119 @@ export class BrowseComponent implements OnInit {
 
   storyCountFor(level: Story['level']): number {
     return this.stories().filter((story) => story.level === level).length;
+  }
+
+  levelAsStoryLevel(level: string): Story['level'] {
+    return level as Story['level'];
+  }
+
+  primaryAction(): BrowseAction {
+    const review = this.insights()?.reviewQueue[0];
+    if (review) {
+      return {
+        label: 'Best next move',
+        title: `Review ${review.storyTitle}`,
+        detail: `Chapter ${review.chapterNumber} is the most useful review right now. ${review.reason}`,
+        cta: `Review Chapter ${review.chapterNumber}`,
+        route: ['/chapters', review.chapterId],
+      };
+    }
+
+    const lastChapter = this.lastChapter();
+    if (lastChapter) {
+      return {
+        label: 'Continue learning',
+        title: `Pick up Chapter ${lastChapter.chapterNumber}`,
+        detail: `Return to ${lastChapter.chapterTitle} and keep the story active in memory before too much fades.`,
+        cta: 'Continue chapter',
+        route: ['/chapters', lastChapter.chapterId],
+      };
+    }
+
+    const starter = this.stories()[0];
+    if (starter) {
+      return {
+        label: 'Start your path',
+        title: `Begin with ${starter.title}`,
+        detail: 'One finished chapter is enough to create useful progress data and make the next recommendation smarter.',
+        cta: 'Open story',
+        route: ['/stories', starter.id],
+      };
+    }
+
+    return {
+      label: 'Library warming up',
+      title: 'Stories are loading',
+      detail: 'Once content is ready, choose a level and enter a story world that matches your confidence.',
+      cta: 'Explore the library',
+      route: ['/browse'],
+    };
+  }
+
+  shouldShowResumeAction(): boolean {
+    const lastChapter = this.lastChapter();
+    if (!lastChapter) return false;
+    const [route, chapterId] = this.primaryAction().route;
+    return route !== '/chapters' || chapterId !== lastChapter.chapterId;
+  }
+
+  averageScorePct(): number {
+    const history = this.history();
+    if (!history.length) return 0;
+    const total = history.reduce((sum, item) => sum + (item.score / item.totalQuestions) * 100, 0);
+    return Math.round(total / history.length);
+  }
+
+  weakestAreaLabel(): string {
+    const weakest = this.insights()?.weakAreas[0];
+    return weakest ? `Revisit ${weakest.grammarRule}` : 'Best first step';
+  }
+
+  weakestAreaDetail(): string {
+    const weakest = this.insights()?.weakAreas[0];
+    if (!weakest) {
+      return 'Finish one chapter, then use the progress view to see where review will matter most.';
+    }
+    return `${weakest.missCount} missed answers across ${weakest.chapterCount} chapter${weakest.chapterCount === 1 ? '' : 's'}.`;
+  }
+
+  momentumLabel(): string {
+    const count = this.history().length;
+    if (!count) return 'Momentum starts small';
+    if (count === 1) return 'You have started the habit';
+    return 'Recent momentum';
+  }
+
+  momentumDetail(): string {
+    const count = this.history().length;
+    if (!count) return 'Complete one chapter to unlock smarter review suggestions and progress trends.';
+    if (count === 1) return 'One chapter finished. The next chapter will make the progress dashboard more useful.';
+    return `${count} chapters completed so far. Alternate new reading with review to keep gains stable.`;
+  }
+
+  levelHeading(level: string): string {
+    switch (level) {
+      case 'A2':
+        return 'Build confidence with clear, high-frequency English';
+      case 'B1':
+        return 'Deepen inference, fluency, and flexible grammar control';
+      case 'B2':
+        return 'Read for nuance, style, and more demanding structures';
+      default:
+        return 'Choose a level';
+    }
+  }
+
+  levelDescription(level: string): string {
+    switch (level) {
+      case 'A2':
+        return 'Best for establishing routine, spotting core forms, and finishing chapters with confidence.';
+      case 'B1':
+        return 'A balanced step for learners ready to connect grammar, meaning, and longer story arcs.';
+      case 'B2':
+        return 'Designed for richer language, subtler clues, and more advanced comprehension pressure.';
+      default:
+        return '';
+    }
   }
 }

@@ -23,10 +23,19 @@ From the repo root, run:
 .\start-local.ps1
 ```
 
+On macOS, run:
+
+```bash
+chmod +x ./start-local.sh
+./start-local.sh
+```
+
 The script will:
 - start MongoDB if the Windows service exists but is stopped
 - start the backend on `http://localhost:8082` if it is not already running
 - start the frontend on `http://localhost:4201` if it is not already running
+
+The macOS script uses Homebrew services for MongoDB when available and opens backend/frontend in new Terminal windows.
 
 If PowerShell blocks local scripts on your machine, use:
 

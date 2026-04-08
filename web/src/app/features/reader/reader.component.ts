@@ -28,6 +28,11 @@ interface LessonTabMeta {
   icon: string;
 }
 
+interface StageMetric {
+  label: string;
+  value: string;
+}
+
 const TEXT_SEGMENT_SPLIT = /(<[^>]+>)/g;
 const THIRD_PERSON_SUBJECT = String.raw`(?:He|She|It|[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?|[A-Z][a-z]+'s\s+[A-Za-z]+|His\s+[A-Za-z]+|Her\s+[A-Za-z]+|Their\s+[A-Za-z]+)`;
 const FREQUENCY_ADVERB = String.raw`(?:always|usually|often|sometimes|never|already|still|just|really)`;
@@ -312,6 +317,30 @@ const LESSON_TABS: LessonTabMeta[] = [
           </div>
         </div>
 
+        <div class="session-compass card">
+          <div class="session-compass-copy">
+            <span class="eyebrow">Next best move</span>
+            <h3>{{ activeStageTitle() }}</h3>
+            <p>{{ activeStageGuidance() }}</p>
+          </div>
+
+          <div class="session-metrics">
+            @for (metric of activeStageMetrics(); track metric.label) {
+              <div class="session-metric">
+                <strong>{{ metric.value }}</strong>
+                <span>{{ metric.label }}</span>
+              </div>
+            }
+          </div>
+
+          <div class="session-actions">
+            @if (activeTab() === 'quiz' && quizSubmitted()) {
+              <button class="btn btn-secondary" (click)="retryQuiz()">Retry quiz</button>
+            }
+            <button class="btn btn-primary" [disabled]="primaryActionDisabled()" (click)="runPrimaryAction()">{{ primaryActionLabel() }}</button>
+          </div>
+        </div>
+
         <div class="mobile-stage-nav card">
           <div class="mobile-stage-topline">
             <span class="mobile-stage-count">Step {{ activeTabIndex() + 1 }} of {{ lessonTabs.length }}</span>
@@ -516,6 +545,7 @@ const LESSON_TABS: LessonTabMeta[] = [
 
                 <div class="result-actions">
                   <button class="btn btn-secondary" (click)="retryQuiz()">Retry Quiz</button>
+                  <button class="btn btn-secondary" (click)="reviewStoryWithHighlights()">Review story with highlights</button>
                   <a [routerLink]="['/stories', chapter()!.storyId]" class="btn btn-primary">Back to Story</a>
                 </div>
               </div>
@@ -886,6 +916,116 @@ export class ReaderComponent implements OnInit {
       case 'quiz':
         return 'Finish the questions, then review the feedback before moving on.';
     }
+  }
+
+  activeStageTitle(): string {
+    switch (this.activeTab()) {
+      case 'vocabulary':
+        return 'Preview meaning before you read';
+      case 'grammar':
+        return 'Notice the grammar signal before the story starts';
+      case 'story':
+        return 'Read for meaning, then move when the chapter feels clear';
+      case 'quiz':
+        return this.quizSubmitted() ? 'Use the feedback to close the loop' : 'Retrieve what the chapter taught you';
+    }
+  }
+
+  activeStageGuidance(): string {
+    switch (this.activeTab()) {
+      case 'vocabulary':
+        return 'Flip the key words, mark the ones you know, and reduce the reading load before the story begins.';
+      case 'grammar':
+        return 'Study the examples first so the target form feels familiar when it appears inside the story.';
+      case 'story':
+        return 'Read for meaning first. Use grammar highlights only when you need help noticing the target structure.';
+      case 'quiz':
+        return this.quizSubmitted()
+          ? 'Review any missed questions, then return to the story with highlights if you want to reinforce the pattern.'
+          : 'Answer each question once, then use the results to decide whether to review or move on.';
+    }
+  }
+
+  activeStageMetrics(): StageMetric[] {
+    const chapter = this.chapter();
+    if (!chapter) return [];
+
+    switch (this.activeTab()) {
+      case 'vocabulary':
+        return [
+          { label: 'Words mastered', value: `${this.knownWords().size}/${chapter.vocabulary.length}` },
+          { label: 'Cards flipped', value: `${this.flippedCards().size}` },
+        ];
+      case 'grammar':
+        return [
+          { label: 'Worked examples', value: `${chapter.grammarFocus.examples.length}` },
+          { label: 'Highlight cues', value: `${this.grammarLegend().length || 1}` },
+        ];
+      case 'story':
+        return [
+          { label: 'Paragraphs', value: `${chapter.content.length}` },
+          { label: 'Reading progress', value: `${Math.round(this.readingProgress())}%` },
+        ];
+      case 'quiz':
+        return this.quizSubmitted()
+          ? [
+              { label: 'Score', value: `${this.score()}/${chapter.comprehension.length}` },
+              { label: 'Wrong answers', value: `${chapter.comprehension.length - this.score()}` },
+            ]
+          : [
+              { label: 'Answered', value: `${this.revealedQuestions().size}/${chapter.comprehension.length}` },
+              { label: 'Correct so far', value: `${this.currentCorrectAnswers()}` },
+            ];
+    }
+  }
+
+  primaryActionLabel(): string {
+    switch (this.activeTab()) {
+      case 'vocabulary':
+        return 'Continue to grammar focus';
+      case 'grammar':
+        return 'Start reading the chapter';
+      case 'story':
+        return 'Move to the quiz';
+      case 'quiz':
+        return this.quizSubmitted() ? 'Review the story again' : this.allAnswered() ? 'See quiz results' : 'Answer all questions first';
+    }
+  }
+
+  primaryActionDisabled(): boolean {
+    return this.activeTab() === 'quiz' && !this.quizSubmitted() && !this.allAnswered();
+  }
+
+  runPrimaryAction() {
+    switch (this.activeTab()) {
+      case 'vocabulary':
+        this.goToTab('grammar');
+        break;
+      case 'grammar':
+        this.goToTab('story');
+        break;
+      case 'story':
+        this.goToTab('quiz');
+        break;
+      case 'quiz':
+        if (this.quizSubmitted()) {
+          this.reviewStoryWithHighlights();
+        } else if (this.allAnswered()) {
+          this.submitQuiz();
+        }
+        break;
+    }
+  }
+
+  reviewStoryWithHighlights() {
+    this.grammarMode.set(true);
+    this.goToTab('story');
+  }
+
+  currentCorrectAnswers(): number {
+    const chapter = this.chapter();
+    if (!chapter) return 0;
+    return chapter.comprehension.filter((question) => this.answers()[question.order] === question.correctAnswer).length;
   }
 
   grammarLegend(): GrammarLegendItem[] {
