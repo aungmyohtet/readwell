@@ -28,6 +28,10 @@ import { ProgressRecord } from '../../core/models/progress.model';
           <span class="note-label">Current direction</span>
           <strong>{{ focusMessage() }}</strong>
           <p>{{ focusDetail() }}</p>
+          <div class="hero-note-meta">
+            <span>{{ readingIdentity() }}</span>
+            <span>{{ studyPaceLabel() }}</span>
+          </div>
         </div>
       </section>
 
@@ -48,10 +52,23 @@ import { ProgressRecord } from '../../core/models/progress.model';
               <span>Stories explored</span>
             </div>
           </div>
+          <div class="trajectory-strip">
+            <div class="trajectory-card">
+              <span class="trajectory-label">Current band</span>
+              <strong>{{ readinessLabel() }}</strong>
+              <p>{{ readinessCopy() }}</p>
+            </div>
+            <div class="trajectory-card">
+              <span class="trajectory-label">Study rhythm</span>
+              <strong>{{ studyPaceLabel() }}</strong>
+              <p>{{ studyPaceCopy() }}</p>
+            </div>
+          </div>
         </section>
 
         <section class="card guidance-panel">
-          <h2>Recommended next step</h2>
+          <span class="eyebrow">Recommended next step</span>
+          <h2>{{ recommendationHeadline() }}</h2>
           <p>{{ recommendation() }}</p>
           <div class="guidance-actions">
             <a routerLink="/browse" class="btn btn-primary">Go to Library</a>
@@ -136,6 +153,24 @@ import { ProgressRecord } from '../../core/models/progress.model';
     .hero-note strong {
       font-size: 1.35rem;
     }
+    .hero-note-meta {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.65rem;
+    }
+    .hero-note-meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 1.9rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.74);
+      border: 1px solid rgba(29, 42, 40, 0.08);
+      color: var(--ink);
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
     .hero-note p,
     .muted-copy {
       color: var(--muted);
@@ -200,6 +235,33 @@ import { ProgressRecord } from '../../core/models/progress.model';
     .habit-list {
       color: var(--muted);
     }
+    .trajectory-strip {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+    .trajectory-card {
+      padding: 0.95rem;
+      border-radius: 1rem;
+      background: rgba(255, 255, 255, 0.62);
+      border: 1px solid rgba(29, 42, 40, 0.08);
+    }
+    .trajectory-label {
+      display: inline-flex;
+      margin-bottom: 0.35rem;
+      color: var(--muted);
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .trajectory-card strong {
+      display: block;
+      margin-bottom: 0.22rem;
+      font-size: 1rem;
+    }
+    .trajectory-card p { color: var(--muted); font-size: 0.86rem; line-height: 1.5; }
     .guidance-actions {
       display: flex;
       gap: 0.8rem;
@@ -238,7 +300,8 @@ import { ProgressRecord } from '../../core/models/progress.model';
     @media (max-width: 860px) {
       .profile-hero,
       .profile-grid,
-      .summary-stats {
+      .summary-stats,
+      .trajectory-strip {
         grid-template-columns: 1fr;
       }
     }
@@ -380,6 +443,49 @@ export class ProfileComponent implements OnInit {
     if (this.averagePct() >= 85) return 'Try a higher-level story or revisit grammar mode to notice more nuanced patterns.';
     if (this.averagePct() >= 70) return 'Keep going, but revisit incorrect answers and compare them with the highlighted grammar.';
     return 'Re-read completed chapters with grammar highlighting turned on before attempting new material.';
+  }
+
+  readingIdentity(): string {
+    if (!this.history().length) return 'New learner';
+    if (this.averagePct() >= 85) return 'Confident reader';
+    if (this.averagePct() >= 70) return 'Steady learner';
+    return 'Careful rebuilder';
+  }
+
+  studyPaceLabel(): string {
+    const recent = this.recentHistory().length;
+    if (!this.history().length) return 'No recent rhythm yet';
+    if (recent >= 4) return 'Active this week';
+    if (recent >= 2) return 'Steady progress';
+    return 'Light momentum';
+  }
+
+  studyPaceCopy(): string {
+    const recent = this.recentHistory().length;
+    if (!this.history().length) return 'Complete one chapter to start building a study pattern.';
+    if (recent >= 4) return 'You are building repetition well. Keep review and new reading balanced.';
+    if (recent >= 2) return 'You have a workable rhythm. Stay consistent rather than speeding up too much.';
+    return 'A little more repetition this week would make the learning feel more stable.';
+  }
+
+  readinessLabel(): string {
+    if (!this.history().length) return 'Starting point';
+    if (this.averagePct() >= 85) return 'Ready to stretch';
+    if (this.averagePct() >= 70) return 'Building confidence';
+    return 'Review before pushing ahead';
+  }
+
+  readinessCopy(): string {
+    if (!this.history().length) return 'Choose an accessible story and complete one full chapter first.';
+    if (this.averagePct() >= 85) return 'Your results suggest you can handle harder chapters or a higher level.';
+    if (this.averagePct() >= 70) return 'You are progressing well, but keep reinforcing errors before leveling up.';
+    return 'Consolidate recent chapters first so the next challenge does not become noise.';
+  }
+
+  recommendationHeadline(): string {
+    if (!this.history().length) return 'Begin with one complete chapter';
+    if (this.averagePct() < 80) return 'Review before adding difficulty';
+    return 'Continue while the momentum is strong';
   }
 
   recommendation(): string {

@@ -21,9 +21,16 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
         </div>
 
         <div class="hero-mini card">
-          <span class="mini-label">Recent momentum</span>
-          <strong>{{ recentCompletions() }}</strong>
-          <p>chapters completed in the last 30 days</p>
+          <span class="mini-label">Next focus</span>
+          <strong>{{ focusHeadline() }}</strong>
+          <p>{{ focusSupport() }}</p>
+          <div class="hero-mini-actions">
+            @if (priorityReview()) {
+              <a class="btn btn-primary btn-full" [routerLink]="['/chapters', priorityReview()!.chapterId]">Review chapter</a>
+            } @else {
+              <a class="btn btn-primary btn-full" routerLink="/browse">Choose a story</a>
+            }
+          </div>
         </div>
       </section>
 
@@ -56,40 +63,60 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
           </div>
         </div>
 
-        <section class="insight-strip">
-          <div class="insight-card card">
-            <span class="insight-title">Best result</span>
+        <section class="focus-board">
+          <div class="focus-card card focus-card-strong">
+            <span class="focus-label">Current direction</span>
+            <strong>{{ focusHeadline() }}</strong>
+            <p>{{ focusSupport() }}</p>
+          </div>
+          <div class="focus-card card">
+            <span class="focus-label">Recent momentum</span>
+            <strong>{{ recentCompletions() }}</strong>
+            <p>chapters completed in the last 30 days</p>
+          </div>
+          <div class="focus-card card">
+            <span class="focus-label">Best result</span>
             <strong>{{ strongestResult() }}%</strong>
             <p>Your top quiz performance so far.</p>
           </div>
+        </section>
+
+        <section class="insight-strip">
           <div class="insight-card card">
             <span class="insight-title">Recommended habit</span>
             <strong>Read → notice → quiz</strong>
             <p>Revisit chapters below 80% before moving too far ahead.</p>
           </div>
+          <div class="insight-card card">
+            <span class="insight-title">Review threshold</span>
+            <strong>Below 80%</strong>
+            <p>Treat those chapters as active review, not finished work.</p>
+          </div>
         </section>
 
         @if (reviewQueue().length > 0) {
           <section class="review-queue section-card">
-            <div class="section-heading">
-              <div>
-                <span class="eyebrow">Adaptive Review</span>
-                <h2 class="section-title">Recommended next review</h2>
+            <div class="section-shell review-shell">
+              <div class="section-heading">
+                <div>
+                  <span class="section-kicker">Adaptive Review</span>
+                  <h2 class="section-title">Recommended next review</h2>
+                </div>
+                <p class="section-note">These chapters are the best places to revisit before moving ahead.</p>
               </div>
-              <p class="section-note">These chapters are the best places to revisit before moving ahead.</p>
-            </div>
 
-            <div class="review-list">
-              @for (item of reviewQueue(); track item.chapterId) {
-                <a class="review-item card" [routerLink]="['/chapters', item.chapterId]">
-                  <div class="review-copy">
-                    <strong>{{ item.storyTitle }}</strong>
-                    <span>Ch. {{ item.chapterNumber }}: {{ item.chapterTitle }}</span>
-                    <p>{{ item.grammarRule }} · {{ item.reason }}</p>
-                  </div>
-                  <div class="review-score">{{ item.lastScorePct }}%</div>
-                </a>
-              }
+              <div class="review-list grouped-list">
+                @for (item of reviewQueue(); track item.chapterId) {
+                  <a class="review-item list-row" [routerLink]="['/chapters', item.chapterId]">
+                    <div class="review-copy">
+                      <strong>{{ item.storyTitle }}</strong>
+                      <span>Ch. {{ item.chapterNumber }}: {{ item.chapterTitle }}</span>
+                      <p>{{ item.grammarRule }} · {{ item.reason }}</p>
+                    </div>
+                    <div class="review-score">{{ item.lastScorePct }}%</div>
+                  </a>
+                }
+              </div>
             </div>
           </section>
         }
@@ -98,7 +125,7 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
           <section class="weak-areas section-card">
             <div class="section-heading compact">
               <div>
-                <span class="eyebrow">Weak Areas</span>
+                <span class="section-kicker">Weak Areas</span>
                 <h2 class="section-title">Grammar to revisit</h2>
               </div>
             </div>
@@ -114,30 +141,40 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
           </section>
         }
 
-        <h2 class="section-title">History</h2>
-        <div class="history-list">
-          @for (record of history(); track record.id) {
-            <div class="history-item card">
-              <div class="history-info">
-                <div class="story-name">{{ record.storyTitle || 'Story' }}</div>
-                <div class="chapter-name">Ch. {{ record.chapterNumber }}: {{ record.chapterTitle }}</div>
-                <div class="completed-date">{{ formatDate(record.completedAt) }}</div>
+        <section class="history-section section-card">
+          <div class="section-shell history-shell">
+            <div class="section-heading compact history-heading">
+              <div>
+                <span class="section-kicker">History</span>
+                <h2 class="section-title">Completed chapters</h2>
               </div>
-              <div class="history-score">
-                <div class="score-value" [class.perfect]="record.score === record.totalQuestions">
-                  {{ record.score }}/{{ record.totalQuestions }}
-                </div>
-                <div class="score-pct">{{ pct(record) }}%</div>
-              </div>
+              <p class="section-note">Use this as your trail of finished work, not your next-action list.</p>
             </div>
-          }
-        </div>
+            <div class="history-list grouped-list">
+              @for (record of history(); track record.id) {
+                <div class="history-item list-row">
+                  <div class="history-info">
+                    <div class="story-name">{{ record.storyTitle || 'Story' }}</div>
+                    <div class="chapter-name">Ch. {{ record.chapterNumber }}: {{ record.chapterTitle }}</div>
+                    <div class="completed-date">{{ formatDate(record.completedAt) }}</div>
+                  </div>
+                  <div class="history-score">
+                    <div class="score-value" [class.perfect]="record.score === record.totalQuestions">
+                      {{ record.score }}/{{ record.totalQuestions }}
+                    </div>
+                    <div class="score-pct">{{ pct(record) }}%</div>
+                  </div>
+                </div>
+              }
+            </div>
+          </div>
+        </section>
 
         @if (mistakeBank().length > 0) {
           <section class="mistake-bank section-card">
             <div class="section-heading compact">
               <div>
-                <span class="eyebrow">Mistake Bank</span>
+                <span class="section-kicker">Mistake Bank</span>
                 <h2 class="section-title">Recent questions to learn from</h2>
               </div>
             </div>
@@ -179,9 +216,10 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
       gap: 0.35rem;
       background: linear-gradient(180deg, rgba(15, 118, 110, 0.12), rgba(245, 158, 11, 0.12));
     }
-    .hero-mini strong { font-size: 2.4rem; line-height: 1; }
+    .hero-mini strong { font-size: 1.45rem; line-height: 1.1; }
     .mini-label { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-strong); }
     .hero-mini p { color: var(--muted); font-size: 0.88rem; }
+    .hero-mini-actions { margin-top: 0.75rem; }
     .progress-hero-actions {
       display: flex;
       gap: 0.75rem;
@@ -198,23 +236,73 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
     .accent-card { background: linear-gradient(180deg, rgba(245, 158, 11, 0.12), rgba(239, 111, 83, 0.12)); }
     .stat-value { font-size: 2rem; font-weight: 800; color: var(--accent-strong); }
     .stat-label { font-size: 0.8rem; color: var(--muted); margin-top: 4px; }
+    .focus-board { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 14px; margin-bottom: 1rem; }
+    .focus-card { background: rgba(255, 255, 255, 0.74); }
+    .focus-card-strong { background: linear-gradient(160deg, rgba(15, 118, 110, 0.14), rgba(255, 255, 255, 0.92) 60%, rgba(245, 158, 11, 0.08)); }
+    .focus-label { display: block; font-size: 0.76rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 0.45rem; }
+    .focus-card strong { display: block; font-size: 1.3rem; margin-bottom: 0.25rem; }
+    .focus-card p { color: var(--muted); font-size: 0.88rem; line-height: 1.5; }
     .insight-strip { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 1rem; }
     .insight-card { background: rgba(255, 255, 255, 0.7); }
     .insight-title { display: block; font-size: 0.78rem; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.35rem; }
     .insight-card strong { display: block; font-size: 1.4rem; margin-bottom: 0.2rem; }
     .insight-card p { color: var(--muted); font-size: 0.88rem; }
+    .section-kicker {
+      display: inline-flex;
+      margin-bottom: 0.35rem;
+      color: var(--muted);
+      font-size: 0.74rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .section-shell {
+      padding: 1rem 1rem 1.05rem;
+      border-radius: calc(var(--radius-lg) - 4px);
+      background: rgba(255, 255, 255, 0.58);
+      border: 1px solid rgba(29, 42, 40, 0.06);
+    }
+    .review-shell {
+      background: linear-gradient(180deg, rgba(15, 118, 110, 0.08), rgba(255, 255, 255, 0.7));
+    }
+    .history-shell {
+      background: rgba(255, 252, 247, 0.76);
+    }
     .section-heading {
       display: flex;
       align-items: end;
       justify-content: space-between;
       gap: 1rem;
       margin-bottom: 1rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px solid rgba(29, 42, 40, 0.08);
     }
     .section-heading.compact { margin-bottom: 0.85rem; }
     .section-note { color: var(--muted); max-width: 28rem; font-size: 0.88rem; }
-    .section-title { font-size: 1.15rem; font-weight: 800; margin-bottom: 12px; color: var(--ink); }
-    .history-list { display: flex; flex-direction: column; gap: 10px; }
-    .history-item { display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: rgba(255, 252, 247, 0.8); }
+    .section-title { font-size: 1.15rem; font-weight: 800; margin-bottom: 0; color: var(--ink); }
+    .history-section { margin-bottom: 1rem; }
+    .history-heading { margin-top: 0; }
+    .grouped-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border: 1px solid rgba(29, 42, 40, 0.08);
+      border-radius: calc(var(--radius-md) + 2px);
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.78);
+    }
+    .history-list { display: flex; flex-direction: column; }
+    .list-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem 1.05rem;
+      background: transparent;
+    }
+    .list-row + .list-row {
+      border-top: 1px solid rgba(29, 42, 40, 0.08);
+    }
+    .history-item { align-items: center; }
     .story-name { font-weight: 800; font-size: 1rem; }
     .chapter-name { font-size: 0.88rem; color: var(--ink); margin: 3px 0; }
     .completed-date { font-size: 0.78rem; color: var(--muted); }
@@ -222,23 +310,29 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
     .score-value { font-size: 1.25rem; font-weight: 800; color: var(--accent-strong); &.perfect { color: #236342; } }
     .score-pct { font-size: 0.8rem; color: var(--muted); }
     .review-queue, .weak-areas, .mistake-bank { margin-bottom: 1rem; }
-    .review-list, .mistake-list { display: flex; flex-direction: column; gap: 0.85rem; }
+    .review-list, .mistake-list { display: flex; flex-direction: column; }
     .review-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
+      align-items: flex-start;
       text-decoration: none;
       color: inherit;
-      background: linear-gradient(180deg, rgba(15, 118, 110, 0.08), rgba(255, 252, 247, 0.95));
+      background: transparent;
     }
     .review-copy { display: flex; flex-direction: column; gap: 0.18rem; }
     .review-copy span, .review-copy p { color: var(--muted); font-size: 0.88rem; }
-    .review-score { font-size: 1.4rem; font-weight: 800; color: var(--accent-strong); white-space: nowrap; }
+    .review-score {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--accent-strong);
+      white-space: nowrap;
+      padding: 0.45rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(15, 118, 110, 0.12);
+    }
     .weak-area-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.85rem; }
     .weak-area-chip { display: flex; flex-direction: column; gap: 0.25rem; background: rgba(255, 247, 237, 0.92); }
     .weak-area-chip span { color: var(--muted); font-size: 0.85rem; }
-    .mistake-item { background: rgba(255, 255, 255, 0.78); }
+    .mistake-item { background: rgba(255, 255, 255, 0.78); padding: 1rem 1.05rem; }
     .mistake-topline { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: 0.3rem; font-size: 0.82rem; }
     .mistake-topline span { color: var(--muted); white-space: nowrap; }
     .mistake-rule {
@@ -259,7 +353,8 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
 
     @media (max-width: 860px) {
       .progress-hero,
-      .insight-strip {
+      .insight-strip,
+      .focus-board {
         grid-template-columns: 1fr;
       }
 
@@ -278,6 +373,10 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
         gap: 1rem;
       }
 
+      .section-shell {
+        padding: 0.85rem 0.85rem 0.9rem;
+      }
+
       .progress-hero-actions {
         display: grid;
         grid-template-columns: 1fr;
@@ -288,7 +387,8 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
       }
 
       .stats-row,
-      .insight-strip {
+      .insight-strip,
+      .focus-board {
         display: flex;
         overflow-x: auto;
         gap: 0.85rem;
@@ -299,12 +399,14 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
       }
 
       .stats-row::-webkit-scrollbar,
-      .insight-strip::-webkit-scrollbar {
+      .insight-strip::-webkit-scrollbar,
+      .focus-board::-webkit-scrollbar {
         display: none;
       }
 
       .stat-card,
-      .insight-card {
+      .insight-card,
+      .focus-card {
         min-width: min(82vw, 15.5rem);
         flex: 0 0 auto;
         scroll-snap-align: start;
@@ -319,9 +421,15 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
 
       .section-heading,
       .review-item,
+      .history-item,
       .mistake-topline {
         flex-direction: column;
         align-items: flex-start;
+      }
+
+      .review-score,
+      .history-score {
+        text-align: left;
       }
 
       .history-info {
@@ -413,6 +521,28 @@ export class ProgressComponent implements OnInit {
 
   strongestResult(): number {
     return this.history().reduce((best, record) => Math.max(best, this.pct(record)), 0);
+  }
+
+  priorityReview(): ReviewRecommendation | null {
+    return this.reviewQueue()[0] ?? null;
+  }
+
+  focusHeadline(): string {
+    const review = this.priorityReview();
+    if (review) return `Review ${review.storyTitle} Chapter ${review.chapterNumber}`;
+    if (!this.history().length) return 'Build your first reading habit';
+    if (this.dashboardAveragePct() >= 85) return 'You are ready for harder chapters';
+    if (this.dashboardAveragePct() >= 70) return 'Your comprehension is developing well';
+    return 'Slow down and review more deliberately';
+  }
+
+  focusSupport(): string {
+    const review = this.priorityReview();
+    if (review) return `${review.grammarRule} is the strongest review target right now. ${review.reason}`;
+    if (!this.history().length) return 'Finish one chapter and use the quiz feedback to create your first progress signal.';
+    if (this.dashboardAveragePct() >= 85) return 'Continue to the next unlocked chapter or step into a harder level if reading feels comfortable.';
+    if (this.dashboardAveragePct() >= 70) return 'Keep moving, but revisit incorrect answers and compare them with the highlighted grammar.';
+    return 'Re-read completed chapters with grammar highlighting turned on before attempting new material.';
   }
 
   recentCompletions(): number {
