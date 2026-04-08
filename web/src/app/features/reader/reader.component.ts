@@ -434,7 +434,7 @@ const LESSON_TABS: LessonTabMeta[] = [
               <div>
                 <span class="eyebrow">Reading Lens</span>
                 <h3>Look for {{ chapter()!.grammarFocus.rule.toLowerCase() }} while you read.</h3>
-                <p>{{ chapter()!.grammarFocus.explanation }}</p>
+                <p>{{ grammarCoachTip() }}</p>
               </div>
               <div class="focus-metrics">
                 <div>
