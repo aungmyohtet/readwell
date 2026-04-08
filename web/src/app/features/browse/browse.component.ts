@@ -215,15 +215,33 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
                 <div class="story-info">
                   <div class="story-header">
                     <span class="level-badge {{ story.level }}">{{ story.level }}</span>
-                    <span class="chapter-count">{{ story.totalChapters }} chapters</span>
+                    <div class="story-header-meta">
+                      @if (hasStoryProgress(story.id)) {
+                        <span class="achievement-badge" [class.perfect]="storyBadgeClass(story.id) === 'perfect'" [class.mastered]="storyBadgeClass(story.id) === 'mastered'" [class.close]="storyBadgeClass(story.id) === 'close'" [class.review]="storyBadgeClass(story.id) === 'review'">{{ storyBadgeLabel(story.id) }}</span>
+                      }
+                      <span class="chapter-count">{{ story.totalChapters }} chapters</span>
+                    </div>
                   </div>
 
                   <h3>{{ story.title }}</h3>
                   <p class="description">{{ story.description }}</p>
 
+                  @if (hasStoryProgress(story.id)) {
+                    <div class="story-progress-snapshot">
+                      <div class="snapshot-item">
+                        <strong>{{ completedChaptersForStory(story.id) }}/{{ story.totalChapters }}</strong>
+                        <span>chapters done</span>
+                      </div>
+                      <div class="snapshot-item">
+                        <strong>{{ bestScorePctForStory(story.id) }}%</strong>
+                        <span>best result</span>
+                      </div>
+                    </div>
+                  }
+
                   <div class="story-footer">
                     <div class="meta-stack">
-                      <span class="meta-line">Interactive reading, grammar noticing, and quiz recall</span>
+                      <span class="meta-line">{{ storyMetaLine(story) }}</span>
                       @if (story.tags.length) {
                         <div class="tags">
                           @for (tag of story.tags.slice(0, 3); track tag) {
@@ -242,7 +260,6 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
       </section>
     </div>
   `,
-  styles: [``],
 })
 export class BrowseComponent implements OnInit {
   levels = LEVELS;
@@ -349,6 +366,55 @@ export class BrowseComponent implements OnInit {
 
   storyCountFor(level: Story['level']): number {
     return this.stories().filter((story) => story.level === level).length;
+  }
+
+  hasStoryProgress(storyId: string): boolean {
+    return this.history().some((record) => record.storyId === storyId);
+  }
+
+  completedChaptersForStory(storyId: string): number {
+    return new Set(this.history().filter((record) => record.storyId === storyId).map((record) => record.chapterId)).size;
+  }
+
+  bestScorePctForStory(storyId: string): number {
+    return this.history()
+      .filter((record) => record.storyId === storyId)
+      .reduce((best, record) => Math.max(best, Math.round((record.score / record.totalQuestions) * 100)), 0);
+  }
+
+  latestScorePctForStory(storyId: string): number {
+    const latest = this.history().find((record) => record.storyId === storyId);
+    if (!latest || !latest.totalQuestions) return 0;
+    return Math.round((latest.score / latest.totalQuestions) * 100);
+  }
+
+  storyBadgeLabel(storyId: string): string {
+    const pct = this.latestScorePctForStory(storyId);
+    if (pct === 100) return 'Perfect';
+    if (pct >= 80) return 'Mastered';
+    if (pct >= 60) return 'Almost there';
+    return 'Review';
+  }
+
+  storyBadgeClass(storyId: string): 'perfect' | 'mastered' | 'close' | 'review' {
+    const pct = this.latestScorePctForStory(storyId);
+    if (pct === 100) return 'perfect';
+    if (pct >= 80) return 'mastered';
+    if (pct >= 60) return 'close';
+    return 'review';
+  }
+
+  storyMetaLine(story: Story): string {
+    if (!this.hasStoryProgress(story.id)) {
+      return 'Interactive reading, grammar noticing, and quiz recall';
+    }
+
+    const completed = this.completedChaptersForStory(story.id);
+    if (completed >= story.totalChapters) {
+      return 'All chapters attempted. Revisit weaker spots or aim for stronger mastery.';
+    }
+
+    return `${completed} chapter${completed === 1 ? '' : 's'} completed. Keep the story path moving.`;
   }
 
   levelAsStoryLevel(level: string): Story['level'] {

@@ -115,6 +115,9 @@ import { Story, ChapterSummary } from '../../core/models/story.model';
                       <div class="chapter-title">{{ ch.title }}</div>
                       <div class="chapter-status-row">
                         <span class="chapter-status" [class.review]="ch.completed" [class.current]="primaryChapter()?.id === ch.id && !ch.completed">{{ chapterStateLabel(i, ch) }}</span>
+                        @if (ch.completed) {
+                          <span class="chapter-achievement-badge" [class.perfect]="chapterBadgeClass(ch) === 'perfect'" [class.mastered]="chapterBadgeClass(ch) === 'mastered'" [class.close]="chapterBadgeClass(ch) === 'close'" [class.review]="chapterBadgeClass(ch) === 'review'">{{ chapterBadgeLabel(ch) }}</span>
+                        }
                         <span class="chapter-time">{{ chapterStudyMinutes(ch) }} min study</span>
                       </div>
                       <div class="chapter-meta">
@@ -140,7 +143,6 @@ import { Story, ChapterSummary } from '../../core/models/story.model';
       </div>
     </div>
   `,
-  styles: [``],
 })
 export class StoryDetailComponent implements OnInit {
   @Input() storyId!: string;
@@ -233,5 +235,21 @@ export class StoryDetailComponent implements OnInit {
     if (this.primaryChapter()?.id === chapter.id) return 'Ready now';
     if (!this.isLocked(index)) return 'Available';
     return 'Locked';
+  }
+
+  chapterBadgeLabel(chapter: ChapterSummary): string {
+    const pct = chapter.comprehensionCount ? Math.round((chapter.score / chapter.comprehensionCount) * 100) : 0;
+    if (pct === 100) return 'Perfect';
+    if (pct >= 80) return 'Mastered';
+    if (pct >= 60) return 'Almost there';
+    return 'Review';
+  }
+
+  chapterBadgeClass(chapter: ChapterSummary): 'perfect' | 'mastered' | 'close' | 'review' {
+    const pct = chapter.comprehensionCount ? Math.round((chapter.score / chapter.comprehensionCount) * 100) : 0;
+    if (pct === 100) return 'perfect';
+    if (pct >= 80) return 'mastered';
+    if (pct >= 60) return 'close';
+    return 'review';
   }
 }

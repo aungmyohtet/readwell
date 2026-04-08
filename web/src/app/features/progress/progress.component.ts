@@ -113,7 +113,10 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
                       <span>Ch. {{ item.chapterNumber }}: {{ item.chapterTitle }}</span>
                       <p>{{ item.grammarRule }} · {{ item.reason }}</p>
                     </div>
-                    <div class="review-score">{{ item.lastScorePct }}%</div>
+                    <div class="review-meta">
+                      <span class="achievement-badge" [class.close]="reviewBadgeClass(item.lastScorePct) === 'close'" [class.review]="reviewBadgeClass(item.lastScorePct) === 'review'">{{ reviewBadgeLabel(item.lastScorePct) }}</span>
+                      <div class="review-score">{{ item.lastScorePct }}%</div>
+                    </div>
                   </a>
                 }
               </div>
@@ -159,6 +162,7 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
                     <div class="completed-date">{{ formatDate(record.completedAt) }}</div>
                   </div>
                   <div class="history-score">
+                    <span class="achievement-badge" [class.perfect]="historyBadgeClass(record) === 'perfect'" [class.mastered]="historyBadgeClass(record) === 'mastered'" [class.close]="historyBadgeClass(record) === 'close'" [class.review]="historyBadgeClass(record) === 'review'">{{ historyBadgeLabel(record) }}</span>
                     <div class="score-value" [class.perfect]="record.score === record.totalQuestions">
                       {{ record.score }}/{{ record.totalQuestions }}
                     </div>
@@ -300,5 +304,29 @@ export class ProgressComponent implements OnInit {
 
   mistakeBank(): MistakeBankItem[] {
     return this.insights()?.mistakeBank ?? [];
+  }
+
+  historyBadgeLabel(record: ProgressRecord): string {
+    const pct = this.pct(record);
+    if (pct === 100) return 'Perfect';
+    if (pct >= 80) return 'Mastered';
+    if (pct >= 60) return 'Almost there';
+    return 'Review';
+  }
+
+  historyBadgeClass(record: ProgressRecord): 'perfect' | 'mastered' | 'close' | 'review' {
+    const pct = this.pct(record);
+    if (pct === 100) return 'perfect';
+    if (pct >= 80) return 'mastered';
+    if (pct >= 60) return 'close';
+    return 'review';
+  }
+
+  reviewBadgeLabel(scorePct: number): string {
+    return scorePct >= 60 ? 'Almost there' : 'Review';
+  }
+
+  reviewBadgeClass(scorePct: number): 'close' | 'review' {
+    return scorePct >= 60 ? 'close' : 'review';
   }
 }

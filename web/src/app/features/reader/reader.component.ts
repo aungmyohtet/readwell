@@ -1,4 +1,4 @@
-import { Component, OnInit, signal, Input, HostListener } from '@angular/core';
+import { Component, OnInit, signal, Input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { StoryService } from '../../core/services/story.service';
@@ -250,7 +250,6 @@ const CONFETTI_PIECES = Array.from({ length: 50 }, (_, i) => ({
   width: `${6 + (i % 5)}px`,
   height: `${8 + (i % 5) * 2}px`,
 }));
-
 const LESSON_TABS: LessonTabMeta[] = [
   { id: 'vocabulary', label: 'Vocabulary', shortLabel: 'Words', icon: '📚' },
   { id: 'grammar', label: 'Grammar', shortLabel: 'Grammar', icon: '✏️' },
@@ -455,24 +454,24 @@ const LESSON_TABS: LessonTabMeta[] = [
           }
 
           @if (activeTab() === 'story') {
-            <div class="reading-progress-bar">
-              <div class="reading-progress-fill" [style.width.%]="readingProgress()"></div>
-            </div>
-
             <div class="story-focus card">
               <div>
-                <span class="eyebrow">Reading Lens</span>
-                <h3>Look for {{ chapter()!.grammarFocus.rule.toLowerCase() }} while you read.</h3>
-                <p>{{ grammarCoachTip() }}</p>
+                <span class="eyebrow">Quiz Lens</span>
+                <h3>Read with the questions in mind.</h3>
+                <p>The quiz next checks story meaning and {{ chapter()!.grammarFocus.rule.toLowerCase() }}, so notice both while you read.</p>
               </div>
               <div class="focus-metrics">
                 <div>
-                  <strong>{{ readingStageLabel() }}</strong>
-                  <span>Current reading stage</span>
+                  <strong>{{ chapter()!.comprehension.length }}</strong>
+                  <span>Questions next</span>
                 </div>
                 <div>
-                  <strong>{{ readingProgress().toFixed(0) }}%</strong>
-                  <span>Page progress</span>
+                  <strong>{{ storyQuizChecksLabel() }}</strong>
+                  <span>Quiz checks</span>
+                </div>
+                <div>
+                  <strong>{{ storyNextMoveLabel() }}</strong>
+                  <span>Next move</span>
                 </div>
               </div>
             </div>
@@ -523,9 +522,32 @@ const LESSON_TABS: LessonTabMeta[] = [
               }
 
               <div class="quiz-result card">
-                <div class="result-stars">{{ starsDisplay() }}</div>
-                <div class="result-score">{{ score() }} / {{ chapter()!.comprehension.length }}</div>
-                <p class="result-label">{{ resultMessage() }}</p>
+                <div class="result-hero" [class.mastery]="isMasteryScore()" [class.improved]="improvedSinceLastAttempt()" [class.needs-review]="needsReviewScore()">
+                  <div class="result-badge-row">
+                    <span class="result-badge">{{ resultBadgeLabel() }}</span>
+                    @if (improvementLabel()) {
+                      <span class="result-badge badge-soft">{{ improvementLabel() }}</span>
+                    }
+                  </div>
+                  <div class="result-stars">{{ starsDisplay() }}</div>
+                  <div class="result-score">{{ score() }} / {{ chapter()!.comprehension.length }}</div>
+                  <p class="result-label">{{ resultMessage() }}</p>
+                  <p class="result-support">{{ resultSupportMessage() }}</p>
+                  <div class="result-highlights">
+                    <div class="result-highlight-card">
+                      <strong>{{ scorePct() }}%</strong>
+                      <span>Current accuracy</span>
+                    </div>
+                    <div class="result-highlight-card">
+                      <strong>{{ masteryStatusLabel() }}</strong>
+                      <span>Chapter status</span>
+                    </div>
+                    <div class="result-highlight-card">
+                      <strong>{{ nextResultMoveLabel() }}</strong>
+                      <span>Best next move</span>
+                    </div>
+                  </div>
+                </div>
 
                 <div class="result-answers">
                   @for (q of chapter()!.comprehension; track q.order) {
@@ -602,6 +624,16 @@ const LESSON_TABS: LessonTabMeta[] = [
                         <span>{{ q.explanation }}</span>
                       </div>
                     }
+
+                    @if (revealedQuestions().has(q.order) && isCorrect(q)) {
+                      <div class="inline-celebration">
+                        <span class="celebration-icon">✓</span>
+                        <div>
+                          <strong>{{ correctAnswerHeadline() }}</strong>
+                          <span>{{ correctAnswerSupport() }}</span>
+                        </div>
+                      </div>
+                    }
                   </div>
                 }
 
@@ -646,7 +678,6 @@ const LESSON_TABS: LessonTabMeta[] = [
       </div>
     }
   `,
-  styles: [``],
 })
 export class ReaderComponent implements OnInit {
   @Input() chapterId!: string;
@@ -663,7 +694,7 @@ export class ReaderComponent implements OnInit {
   flippedCards = signal<Set<string>>(new Set());
   knownWords = signal<Set<string>>(new Set());
   activeVocabPopup = signal<{ word: string; definition: string; exampleSentence: string; emoji: string } | null>(null);
-  readingProgress = signal(0);
+  lastSavedScoreBeforeSubmit = signal<number | null>(null);
 
   readonly confettiPieces = CONFETTI_PIECES;
 
@@ -687,17 +718,6 @@ export class ReaderComponent implements OnInit {
       chapterNumber: c.chapterNumber,
       chapterTitle: c.title,
     }));
-  }
-
-  @HostListener('window:scroll')
-  onWindowScroll() {
-    if (this.activeTab() !== 'story') return;
-    const el = document.querySelector('.story-content') as HTMLElement | null;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    const totalHeight = el.offsetHeight;
-    const scrolled = -rect.top + window.innerHeight * 0.6;
-    this.readingProgress.set(Math.min(100, Math.max(0, (scrolled / totalHeight) * 100)));
   }
 
   toggleCard(word: string) {
@@ -800,6 +820,7 @@ export class ReaderComponent implements OnInit {
   submitQuiz() {
     const chapter = this.chapter();
     if (!chapter) return;
+    this.lastSavedScoreBeforeSubmit.set(chapter.completed ? chapter.score : null);
     let correct = 0;
     chapter.comprehension.forEach((q) => {
       if (this.answers()[q.order] === q.correctAnswer) correct++;
@@ -815,7 +836,17 @@ export class ReaderComponent implements OnInit {
         questionOrder: question.order,
         selectedAnswer: this.answers()[question.order] ?? '',
       })),
-    }).subscribe();
+    }).subscribe({
+      next: () => {
+        this.chapter.update((current) => current
+          ? {
+              ...current,
+              completed: true,
+              score: correct,
+            }
+          : current);
+      },
+    });
   }
 
   retryQuiz() {
@@ -823,6 +854,7 @@ export class ReaderComponent implements OnInit {
     this.revealedQuestions.set(new Set());
     this.quizSubmitted.set(false);
     this.score.set(0);
+    this.lastSavedScoreBeforeSubmit.set(null);
   }
 
   optLetter(options: string[], opt: string): string {
@@ -851,6 +883,86 @@ export class ReaderComponent implements OnInit {
     return 'Keep practising — you can do it!';
   }
 
+  scorePct(): number {
+    const chapter = this.chapter();
+    if (!chapter || chapter.comprehension.length === 0) return 0;
+    return Math.round((this.score() / chapter.comprehension.length) * 100);
+  }
+
+  previousScorePct(): number | null {
+    const chapter = this.chapter();
+    const previousScore = this.lastSavedScoreBeforeSubmit();
+    if (!chapter || previousScore === null || chapter.comprehension.length === 0) return null;
+    return Math.round((previousScore / chapter.comprehension.length) * 100);
+  }
+
+  improvedSinceLastAttempt(): boolean {
+    const previous = this.previousScorePct();
+    return previous !== null && this.scorePct() > previous;
+  }
+
+  needsReviewScore(): boolean {
+    return this.scorePct() < 80;
+  }
+
+  isMasteryScore(): boolean {
+    return this.scorePct() >= 80;
+  }
+
+  improvementLabel(): string | null {
+    const previous = this.previousScorePct();
+    if (previous === null) return null;
+    const delta = this.scorePct() - previous;
+    if (delta > 0) return `+${delta}% from last time`;
+    if (delta < 0) return `${delta}% from last time`;
+    return 'Same as last time';
+  }
+
+  resultBadgeLabel(): string {
+    if (this.scorePct() === 100) return 'Perfect finish';
+    if (this.isMasteryScore()) return 'Chapter mastered';
+    if (this.scorePct() >= 60) return 'Almost there';
+    return 'Keep building';
+  }
+
+  masteryStatusLabel(): string {
+    if (this.scorePct() === 100) return 'Perfect';
+    if (this.isMasteryScore()) return 'Mastered';
+    if (this.scorePct() >= 60) return 'Close';
+    return 'Review needed';
+  }
+
+  nextResultMoveLabel(): string {
+    if (this.scorePct() === 100) return 'Move ahead';
+    if (this.isMasteryScore()) return 'Keep momentum';
+    return 'Review chapter';
+  }
+
+  resultSupportMessage(): string {
+    if (this.scorePct() === 100) {
+      return 'You answered everything correctly. This chapter is ready to count as secure.';
+    }
+    if (this.improvedSinceLastAttempt()) {
+      return 'Your score improved from the last saved attempt. That kind of progress is what review is for.';
+    }
+    if (this.isMasteryScore()) {
+      return 'You are above the review threshold. Keep the pattern fresh and move on with confidence.';
+    }
+    if (this.scorePct() >= 60) {
+      return 'You are close. One focused review of the story and grammar cues should lift this chapter.';
+    }
+    return 'Use the review feedback below, then revisit the chapter with grammar highlights before trying again.';
+  }
+
+  correctAnswerHeadline(): string {
+    if (this.scorePct() >= 80) return 'Correct. You are locking the pattern in.';
+    return 'Correct. Keep stacking accurate answers.';
+  }
+
+  correctAnswerSupport(): string {
+    return 'That answer fits both the story meaning and the grammar target.';
+  }
+
   masteredWordsPct(): number {
     const total = this.chapter()?.vocabulary.length ?? 0;
     if (!total) return 0;
@@ -863,11 +975,12 @@ export class ReaderComponent implements OnInit {
     return Math.round((this.revealedQuestions().size / total) * 100);
   }
 
-  readingStageLabel(): string {
-    const progress = this.readingProgress();
-    if (progress < 33) return 'Entering the chapter';
-    if (progress < 75) return 'Building understanding';
-    return 'Ready to retrieve';
+  storyQuizChecksLabel(): string {
+    return 'Meaning + grammar';
+  }
+
+  storyNextMoveLabel(): string {
+    return 'Read, then answer';
   }
 
   activeTabIndex(): number {
@@ -912,7 +1025,7 @@ export class ReaderComponent implements OnInit {
       case 'grammar':
         return 'Use the examples to notice the exact pattern before reading.';
       case 'story':
-        return 'Read carefully, tap vocabulary, and toggle grammar cues when needed.';
+        return 'Read for meaning now, then use the quiz to check understanding and grammar accuracy.';
       case 'quiz':
         return 'Finish the questions, then review the feedback before moving on.';
     }
@@ -925,7 +1038,7 @@ export class ReaderComponent implements OnInit {
       case 'grammar':
         return 'Notice the grammar signal before the story starts';
       case 'story':
-        return 'Read for meaning, then move when the chapter feels clear';
+        return 'Read first, then let the questions check what you understood';
       case 'quiz':
         return this.quizSubmitted() ? 'Use the feedback to close the loop' : 'Retrieve what the chapter taught you';
     }
@@ -938,7 +1051,7 @@ export class ReaderComponent implements OnInit {
       case 'grammar':
         return 'Study the examples first so the target form feels familiar when it appears inside the story.';
       case 'story':
-        return 'Read for meaning first. Use grammar highlights only when you need help noticing the target structure.';
+        return 'Read for meaning first. The questions next will test story details and the target grammar, so notice both as you go.';
       case 'quiz':
         return this.quizSubmitted()
           ? 'Review any missed questions, then return to the story with highlights if you want to reinforce the pattern.'
@@ -963,8 +1076,8 @@ export class ReaderComponent implements OnInit {
         ];
       case 'story':
         return [
-          { label: 'Paragraphs', value: `${chapter.content.length}` },
-          { label: 'Reading progress', value: `${Math.round(this.readingProgress())}%` },
+          { label: 'Questions next', value: `${chapter.comprehension.length}` },
+          { label: 'Quiz checks', value: this.storyQuizChecksLabel() },
         ];
       case 'quiz':
         return this.quizSubmitted()
