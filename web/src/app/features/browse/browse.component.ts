@@ -1,4 +1,4 @@
-import { Component, OnInit, computed, signal } from '@angular/core';
+import { Component, HostListener, OnInit, computed, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { forkJoin } from 'rxjs';
 import { StoryService } from '../../core/services/story.service';
@@ -22,6 +22,7 @@ interface BrowseAction {
 }
 
 const LEVELS = ['All', 'A2', 'B1', 'B2'] as const;
+const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
 
 @Component({
   selector: 'app-browse',
@@ -45,17 +46,10 @@ const LEVELS = ['All', 'A2', 'B1', 'B2'] as const;
             <button class="btn btn-warm" (click)="scrollToLibrary()">Explore the library</button>
           </div>
 
-          <button class="hero-toggle" (click)="toggleHomeTips()">
-            {{ showHomeTips() ? 'Hide study tips' : 'Show study tips' }}
+          <button class="hero-toggle" (click)="openHomeTips('manual')">
+            <span class="hero-toggle-icon">?</span>
+            <span>How ReadWell works</span>
           </button>
-
-          @if (showHomeTips()) {
-            <div class="hero-principles">
-              <div class="principle-pill">Notice grammar in authentic lines</div>
-              <div class="principle-pill">Tap vocabulary in the story itself</div>
-              <div class="principle-pill">Review with immediate quiz feedback</div>
-            </div>
-          }
         </div>
 
         <div class="hero-panel card">
@@ -86,22 +80,80 @@ const LEVELS = ['All', 'A2', 'B1', 'B2'] as const;
               <span class="stat-label">Average quiz score</span>
             </div>
           </div>
+        </div>
 
-          @if (showHomeTips()) {
-            <div class="hero-insight-row">
-              <div class="coach-note compact-note">
-                <strong>{{ weakestAreaLabel() }}</strong>
-                <p>{{ weakestAreaDetail() }}</p>
+      </section>
+
+      @if (showHomeTips()) {
+        <div class="guide-modal-backdrop" (click)="closeHomeTips()">
+          <div class="guide-modal" (click)="$event.stopPropagation()">
+            <div class="hero-study-guide card">
+              <div class="guide-header">
+                <div>
+                  <span class="eyebrow">{{ guideMode() === 'onboarding' ? 'Welcome to ReadWell' : 'Study Guide' }}</span>
+                  <h3 class="guide-title">Use one chapter as a full lesson, not just a text to finish.</h3>
+                  <p class="guide-subtitle">
+                    {{ guideMode() === 'onboarding'
+                      ? 'This quick onboarding shows the reading routine that makes the app feel easiest and most effective from the first chapter.'
+                      : 'ReadWell works best when learners move through one clear loop: preview, notice, retrieve, then review only where needed.' }}
+                  </p>
+                </div>
+
+                <button class="guide-close" (click)="closeHomeTips()">Close</button>
               </div>
 
-              <div class="coach-note compact-note">
-                <strong>{{ momentumLabel() }}</strong>
-                <p>{{ momentumDetail() }}</p>
+              <div class="guide-grid">
+                <div class="guide-card-grid">
+                  <div class="guide-card">
+                    <div class="guide-card-topline">
+                      <span class="guide-card-kicker">Words</span>
+                      <span class="guide-card-number">01</span>
+                    </div>
+                    <strong class="guide-card-title">Preview the words first</strong>
+                    <p class="guide-card-copy">Flip vocabulary cards before reading so the story feels lighter and faster to process.</p>
+                  </div>
+
+                  <div class="guide-card">
+                    <div class="guide-card-topline">
+                      <span class="guide-card-kicker">Pattern</span>
+                      <span class="guide-card-number">02</span>
+                    </div>
+                    <strong class="guide-card-title">Notice the grammar in context</strong>
+                    <p class="guide-card-copy">Use the grammar view to spot the pattern, then return to the story and see it working in real lines.</p>
+                  </div>
+
+                  <div class="guide-card">
+                    <div class="guide-card-topline">
+                      <span class="guide-card-kicker">Recall</span>
+                      <span class="guide-card-number">03</span>
+                    </div>
+                    <strong class="guide-card-title">Use the quiz as retrieval</strong>
+                    <p class="guide-card-copy">Finish with the quiz, then review missed answers inside the story instead of moving on too quickly.</p>
+                  </div>
+
+                  <div class="guide-card guide-card-accent">
+                    <div class="guide-card-topline">
+                      <span class="guide-card-kicker">{{ guideInsightKicker() }}</span>
+                      <span class="guide-card-number">04</span>
+                    </div>
+                    <strong class="guide-card-title">{{ guideInsightTitle() }}</strong>
+                    <p class="guide-card-copy">{{ guideInsightSummary() }}</p>
+                    <span class="guide-card-meta">{{ guideInsightMeta() }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="guide-footer">
+                <span class="guide-footer-copy">{{ guideMode() === 'onboarding' ? 'You will only see this automatically once.' : 'Reopen this anytime from the homepage.' }}</span>
+                <div class="guide-footer-actions">
+                  <button class="btn btn-secondary" (click)="closeHomeTips()">Close guide</button>
+                  <button class="btn btn-primary" (click)="closeHomeTips(); scrollToLibrary()">Go to library</button>
+                </div>
               </div>
             </div>
-          }
+          </div>
         </div>
-      </section>
+      }
 
       <section id="library" class="library-section">
         <div class="library-header">
@@ -207,6 +259,7 @@ export class BrowseComponent implements OnInit {
   history = signal<ProgressRecord[]>([]);
   insights = signal<ProgressInsights | null>(null);
   showHomeTips = signal(false);
+  guideMode = signal<'onboarding' | 'manual'>('manual');
 
   constructor(
     private storyService: StoryService,
@@ -217,6 +270,20 @@ export class BrowseComponent implements OnInit {
     this.loadLastChapter();
     this.load();
     this.loadProgressContext();
+    this.initializeStudyGuide();
+  }
+
+  private initializeStudyGuide() {
+    try {
+      if (!localStorage.getItem(STUDY_GUIDE_STORAGE_KEY)) {
+        localStorage.setItem(STUDY_GUIDE_STORAGE_KEY, 'seen');
+        this.guideMode.set('onboarding');
+        this.showHomeTips.set(true);
+      }
+    } catch {
+      this.guideMode.set('onboarding');
+      this.showHomeTips.set(true);
+    }
   }
 
   private loadLastChapter() {
@@ -236,8 +303,20 @@ export class BrowseComponent implements OnInit {
     this.selectedLevel.set(level);
   }
 
-  toggleHomeTips() {
-    this.showHomeTips.update((value) => !value);
+  openHomeTips(mode: 'onboarding' | 'manual') {
+    this.guideMode.set(mode);
+    this.showHomeTips.set(true);
+  }
+
+  closeHomeTips() {
+    this.showHomeTips.set(false);
+  }
+
+  @HostListener('document:keydown.escape')
+  onEscapeKey() {
+    if (this.showHomeTips()) {
+      this.closeHomeTips();
+    }
   }
 
   private load() {
@@ -331,6 +410,37 @@ export class BrowseComponent implements OnInit {
     if (!history.length) return 0;
     const total = history.reduce((sum, item) => sum + (item.score / item.totalQuestions) * 100, 0);
     return Math.round(total / history.length);
+  }
+
+  showProgressSignals(): boolean {
+    if (this.guideMode() !== 'manual') return false;
+    return this.history().length > 0 && (this.insights()?.weakAreas.length ?? 0) > 0;
+  }
+
+  guideInsightKicker(): string {
+    return this.showProgressSignals() ? 'Signals' : 'Review';
+  }
+
+  guideInsightTitle(): string {
+    return this.showProgressSignals()
+      ? 'Use your progress to decide what to revisit'
+      : 'Know when to review and when to move on';
+  }
+
+  guideInsightSummary(): string {
+    if (this.showProgressSignals()) {
+      return `${this.weakestAreaLabel()}. ${this.weakestAreaDetail()}`;
+    }
+
+    return 'After the quiz, move on when the score is strong. Review only the unstable parts, and turn highlights on when meaning starts to slip.';
+  }
+
+  guideInsightMeta(): string {
+    if (this.showProgressSignals()) {
+      return this.momentumLabel();
+    }
+
+    return 'Read for meaning first, then add support with purpose.';
   }
 
   weakestAreaLabel(): string {
