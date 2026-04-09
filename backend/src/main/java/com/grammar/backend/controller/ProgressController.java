@@ -2,12 +2,15 @@ package com.grammar.backend.controller;
 
 import com.grammar.backend.dto.ProgressResponse;
 import com.grammar.backend.dto.ProgressInsightsResponse;
+import com.grammar.backend.dto.RetrySessionResponse;
 import com.grammar.backend.dto.SubmitProgressRequest;
+import com.grammar.backend.dto.SubmitRetryRequest;
 import com.grammar.backend.service.ProgressService;
 import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -30,6 +33,13 @@ public class ProgressController {
     return progressService.submit(userId, request);
   }
 
+  @PostMapping("/retry")
+  public ProgressResponse submitRetry(
+      @Valid @RequestBody SubmitRetryRequest request, Authentication auth) {
+    String userId = (String) auth.getPrincipal();
+    return progressService.submitRetry(userId, request);
+  }
+
   @GetMapping("/history")
   public List<ProgressResponse> getHistory(Authentication auth) {
     String userId = (String) auth.getPrincipal();
@@ -40,5 +50,11 @@ public class ProgressController {
   public ProgressInsightsResponse getInsights(Authentication auth) {
     String userId = (String) auth.getPrincipal();
     return progressService.getInsights(userId);
+  }
+
+  @GetMapping("/retry/{chapterId}")
+  public RetrySessionResponse getRetrySession(@PathVariable String chapterId, Authentication auth) {
+    String userId = (String) auth.getPrincipal();
+    return progressService.getRetrySession(userId, chapterId);
   }
 }

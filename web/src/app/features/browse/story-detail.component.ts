@@ -263,18 +263,23 @@ export class StoryDetailComponent implements OnInit {
   }
 
   chapterBadgeLabel(chapter: ChapterSummary): string {
-    const pct = chapter.comprehensionCount ? Math.round((chapter.score / chapter.comprehensionCount) * 100) : 0;
-    if (pct === 100) return 'Perfect';
-    if (pct >= 80) return 'Mastered';
-    if (pct >= 60) return 'Almost there';
-    return 'Review';
+    switch (chapter.masteryState) {
+      case 'mastered':
+        return chapter.comprehensionCount && chapter.score === chapter.comprehensionCount ? 'Perfect' : 'Mastered';
+      case 'stabilising':
+        return 'Stabilising';
+      case 'needs_review':
+        return 'Needs review';
+      default:
+        return 'Available';
+    }
   }
 
   chapterBadgeClass(chapter: ChapterSummary): 'perfect' | 'mastered' | 'close' | 'review' {
-    const pct = chapter.comprehensionCount ? Math.round((chapter.score / chapter.comprehensionCount) * 100) : 0;
-    if (pct === 100) return 'perfect';
-    if (pct >= 80) return 'mastered';
-    if (pct >= 60) return 'close';
+    if (chapter.masteryState === 'mastered') {
+      return chapter.comprehensionCount && chapter.score === chapter.comprehensionCount ? 'perfect' : 'mastered';
+    }
+    if (chapter.masteryState === 'stabilising') return 'close';
     return 'review';
   }
 
@@ -297,7 +302,7 @@ export class StoryDetailComponent implements OnInit {
       case 'due-soon':
         return this.reviewDueLabel(chapter.nextReviewAt);
       default:
-        return 'Completed';
+        return chapter.masteryState === 'mastered' ? 'Mastered' : chapter.masteryState === 'stabilising' ? 'Stabilising' : 'Completed';
     }
   }
 

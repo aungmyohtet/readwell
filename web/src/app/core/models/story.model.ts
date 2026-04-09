@@ -7,6 +7,7 @@ export interface Story {
   coverImageUrl?: string;
   author: string;
   tags: string[];
+  grammarRules: string[];
   totalChapters: number;
 }
 
@@ -24,6 +25,7 @@ export interface ChapterSummary {
   attemptCount: number;
   nextReviewAt?: string | null;
   reviewStage?: string | null;
+  masteryState?: 'not_started' | 'needs_review' | 'stabilising' | 'mastered' | string;
 }
 
 export interface VocabularyItem {
@@ -94,4 +96,5 @@ export interface ChapterDetail {
   attemptCount: number;
   nextReviewAt?: string | null;
   reviewStage?: string | null;
+  masteryState?: 'not_started' | 'needs_review' | 'stabilising' | 'mastered' | string;
 }

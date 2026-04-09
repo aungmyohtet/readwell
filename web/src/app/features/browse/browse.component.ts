@@ -5,6 +5,8 @@ import { StoryService } from '../../core/services/story.service';
 import { ChapterSummary, Story } from '../../core/models/story.model';
 import { ProgressService } from '../../core/services/progress.service';
 import { ProgressInsights, ProgressRecord } from '../../core/models/progress.model';
+import { PlacementResult } from '../../core/models/placement.model';
+import { PlacementService } from '../../core/services/placement.service';
 
 interface LastChapter {
   chapterId: string;
@@ -31,10 +33,10 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
     <div class="container">
       <section class="browse-hero section-card">
         <div class="hero-copy">
-          <span class="eyebrow">English Through Story Worlds</span>
-          <h1 class="page-title">A reading app that teaches grammar in context, not in isolation.</h1>
+          <span class="eyebrow">Story-First English</span>
+          <h1 class="page-title">Choose a story path, then keep the next chapter easy to find.</h1>
           <p class="page-subtitle">
-            Build vocabulary, notice grammar patterns inside real paragraphs, and finish each chapter with retrieval-based quizzes.
+            The library is for picking the right next read. Each chapter then handles vocabulary, grammar, story, and quiz inside one clear loop.
           </p>
 
           <div class="hero-actions">
@@ -48,7 +50,7 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
 
           <button class="hero-toggle" (click)="openHomeTips('manual')">
             <span class="hero-toggle-icon">?</span>
-            <span>How ReadWell works</span>
+            <span>How to use one chapter</span>
           </button>
         </div>
 
@@ -92,6 +94,28 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
 
       </section>
 
+      @if (showPlacementCallout()) {
+        <section class="card placement-callout">
+          <div>
+            <span class="eyebrow">Starting Point</span>
+            <strong>{{ placementCalloutTitle() }}</strong>
+            <p>{{ placementCalloutCopy() }}</p>
+            @if (placement()) {
+              <div class="placement-level-pills">
+                <span class="filter-chip active">Chosen {{ placement()!.chosenLevel }}</span>
+                <span class="filter-chip">Recommended {{ placement()!.recommendedLevel }}</span>
+              </div>
+            }
+          </div>
+          <div class="placement-action-row">
+            <a class="btn btn-primary" [routerLink]="placement() ? ['/browse'] : ['/placement']" (click)="placement() ? selectLevel(placement()!.chosenLevel) : null">
+              {{ placement() ? 'Open recommended level' : 'Start placement check' }}
+            </a>
+            <a class="btn btn-secondary" routerLink="/placement">{{ placement() ? 'Retake placement' : 'Skip and choose manually' }}</a>
+          </div>
+        </section>
+      }
+
       @if (showHomeTips()) {
         <div class="guide-modal-backdrop" (click)="closeHomeTips()">
           <div class="guide-modal" (click)="$event.stopPropagation()">
@@ -99,11 +123,11 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
               <div class="guide-header">
                 <div>
                   <span class="eyebrow">{{ guideMode() === 'onboarding' ? 'Welcome to ReadWell' : 'Study Guide' }}</span>
-                  <h3 class="guide-title">Use one chapter as a full lesson, not just a text to finish.</h3>
+                  <h3 class="guide-title">Use one chapter as a short study cycle, not just a text to finish.</h3>
                   <p class="guide-subtitle">
                     {{ guideMode() === 'onboarding'
-                      ? 'This quick onboarding shows the reading routine that makes the app feel easiest and most effective from the first chapter.'
-                      : 'ReadWell works best when learners move through one clear loop: preview, notice, retrieve, then review only where needed.' }}
+                      ? 'This quick onboarding shows the simplest way to move through a chapter without wasting effort.'
+                      : 'Use the chapter loop to decide what to preview, what to notice, and what deserves review after the quiz.' }}
                   </p>
                 </div>
 
@@ -168,7 +192,7 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
           <div>
             <span class="eyebrow">Library</span>
             <h2 class="library-title">Choose a level, then enter a story world.</h2>
-            <p class="library-guidance">A2 builds confidence, B1 deepens inference, and B2 focuses on nuance and style.</p>
+            <p class="library-guidance">A2 helps you settle in, B1 asks for more control, and B2 rewards slower, closer reading.</p>
           </div>
 
           <div class="level-tabs">
@@ -178,6 +202,54 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
                 [class.active]="selectedLevel() === lvl"
                 (click)="selectLevel(lvl)"
               >{{ lvl }}</button>
+            }
+          </div>
+        </div>
+
+        <div class="library-filters card">
+          <div class="filter-input-shell">
+            <label class="filter-label" for="library-search">Search stories</label>
+            <input
+              id="library-search"
+              class="filter-input"
+              type="search"
+              [value]="searchTerm()"
+              (input)="setSearchTerm($any($event.target).value)"
+              placeholder="Search by title, grammar, or topic"
+            />
+          </div>
+
+          <div class="filter-select-grid">
+            <div class="filter-select-shell">
+              <label class="filter-label" for="grammar-filter">Grammar</label>
+              <select id="grammar-filter" class="filter-select" [value]="selectedGrammar()" (change)="setGrammarFilter($any($event.target).value)">
+                @for (rule of grammarOptions(); track rule) {
+                  <option [value]="rule">{{ rule }}</option>
+                }
+              </select>
+            </div>
+
+            <div class="filter-select-shell">
+              <label class="filter-label" for="topic-filter">Topic</label>
+              <select id="topic-filter" class="filter-select" [value]="selectedTopic()" (change)="setTopicFilter($any($event.target).value)">
+                @for (topic of topicOptions(); track topic) {
+                  <option [value]="topic">{{ topic }}</option>
+                }
+              </select>
+            </div>
+          </div>
+
+          <div class="filter-chip-row">
+            <button class="filter-chip" [class.active]="selectedReviewFilter() === 'all'" (click)="setReviewFilter('all')">All stories</button>
+            <button class="filter-chip" [class.active]="selectedReviewFilter() === 'needs-review'" (click)="setReviewFilter('needs-review')">Needs review</button>
+            <button class="filter-chip" [class.active]="selectedReviewFilter() === 'continue'" (click)="setReviewFilter('continue')">Continue learning</button>
+            <button class="filter-chip" [class.active]="selectedReviewFilter() === 'new'" (click)="setReviewFilter('new')">New to me</button>
+          </div>
+
+          <div class="filter-summary-row">
+            <span class="filter-summary">{{ displayedStories().length }} {{ displayedStories().length === 1 ? 'story' : 'stories' }} shown</span>
+            @if (hasActiveFilters()) {
+              <button class="filter-clear" (click)="clearFilters()">Clear filters</button>
             }
           </div>
         </div>
@@ -204,8 +276,8 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
         } @else if (displayedStories().length === 0) {
           <div class="empty-state section-card">
             <div class="empty-icon">📚</div>
-            <h3>No stories in this level yet</h3>
-            <p>Choose another CEFR band or add new story content to expand the path.</p>
+            <h3>{{ hasActiveFilters() ? 'No stories match these filters yet' : 'No stories in this level yet' }}</h3>
+            <p>{{ hasActiveFilters() ? 'Try clearing one or two filters to widen the library.' : 'Choose another CEFR band or add new story content to expand the path.' }}</p>
           </div>
         } @else {
           <div class="story-grid">
@@ -282,24 +354,66 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
 export class BrowseComponent implements OnInit {
   levels = LEVELS;
   selectedLevel = signal<string>('All');
+  searchTerm = signal('');
+  selectedGrammar = signal('All grammar');
+  selectedTopic = signal('All topics');
+  selectedReviewFilter = signal<'all' | 'needs-review' | 'continue' | 'new'>('all');
   stories = signal<Story[]>([]);
   storyChapters = signal<Record<string, ChapterSummary[]>>({});
+  grammarOptions = computed(() => {
+    const rules = this.stories()
+      .flatMap((story) => story.grammarRules ?? [])
+      .map((rule) => rule.trim())
+      .filter(Boolean);
+
+    return ['All grammar', ...Array.from(new Set(rules)).sort((left, right) => left.localeCompare(right))];
+  });
+  topicOptions = computed(() => {
+    const topics = this.stories()
+      .flatMap((story) => story.tags ?? [])
+      .map((tag) => tag.trim())
+      .filter(Boolean);
+
+    return ['All topics', ...Array.from(new Set(topics)).sort((left, right) => left.localeCompare(right))];
+  });
   displayedStories = computed(() => {
     const selectedLevel = this.selectedLevel();
-    const stories = this.stories();
-    if (selectedLevel === 'All') return stories;
-    return stories.filter((story) => story.level === selectedLevel);
+    const selectedGrammar = this.selectedGrammar();
+    const selectedTopic = this.selectedTopic();
+    const selectedReviewFilter = this.selectedReviewFilter();
+    const searchTerm = this.searchTerm().trim().toLowerCase();
+
+    return this.stories().filter((story) => {
+      if (selectedLevel !== 'All' && story.level !== selectedLevel) return false;
+      if (selectedGrammar !== 'All grammar' && !(story.grammarRules ?? []).includes(selectedGrammar)) return false;
+      if (selectedTopic !== 'All topics' && !(story.tags ?? []).includes(selectedTopic)) return false;
+      if (!this.matchesReviewFilter(story, selectedReviewFilter)) return false;
+
+      if (!searchTerm) return true;
+
+      const searchHaystack = [
+        story.title,
+        story.description,
+        ...(story.tags ?? []),
+        ...(story.grammarRules ?? []),
+      ].join(' ').toLowerCase();
+
+      return searchHaystack.includes(searchTerm);
+    });
   });
   loading = signal(false);
   lastChapter = signal<LastChapter | null>(null);
   history = signal<ProgressRecord[]>([]);
   insights = signal<ProgressInsights | null>(null);
+  placement = signal<PlacementResult | null>(null);
   showHomeTips = signal(false);
   guideMode = signal<'onboarding' | 'manual'>('manual');
+  private placementApplied = false;
 
   constructor(
     private storyService: StoryService,
     private progressService: ProgressService,
+    private placementService: PlacementService,
   ) {}
 
   ngOnInit() {
@@ -336,7 +450,34 @@ export class BrowseComponent implements OnInit {
   }
 
   selectLevel(level: string) {
+    this.placementApplied = true;
     this.selectedLevel.set(level);
+  }
+
+  setSearchTerm(value: string) {
+    this.searchTerm.set(value);
+  }
+
+  setGrammarFilter(value: string) {
+    this.selectedGrammar.set(value);
+  }
+
+  setTopicFilter(value: string) {
+    this.selectedTopic.set(value);
+  }
+
+  setReviewFilter(value: 'all' | 'needs-review' | 'continue' | 'new') {
+    this.selectedReviewFilter.set(value);
+  }
+
+  clearFilters() {
+    this.searchTerm.set('');
+    this.selectedGrammar.set('All grammar');
+    this.selectedTopic.set('All topics');
+    this.selectedReviewFilter.set('all');
+    this.placementApplied = false;
+    this.selectedLevel.set('All');
+    this.applyPlacementRecommendation();
   }
 
   openHomeTips(mode: 'onboarding' | 'manual') {
@@ -397,16 +538,27 @@ export class BrowseComponent implements OnInit {
     forkJoin({
       history: this.progressService.getHistory(),
       insights: this.progressService.getInsights(),
+      placement: this.placementService.getPlacement().pipe(catchError(() => of(null))),
     }).subscribe({
-      next: ({ history, insights }) => {
+      next: ({ history, insights, placement }) => {
         this.history.set(history);
         this.insights.set(insights);
+        this.placement.set(placement);
+        this.applyPlacementRecommendation();
       },
       error: () => {
         this.history.set([]);
         this.insights.set(null);
+        this.placement.set(null);
       },
     });
+  }
+
+  private applyPlacementRecommendation() {
+    if (this.placementApplied) return;
+    const placement = this.placement();
+    if (!placement || this.history().length) return;
+    this.selectedLevel.set(placement.chosenLevel);
   }
 
   totalChapters(): number {
@@ -459,6 +611,48 @@ export class BrowseComponent implements OnInit {
     return this.stories().filter((story) => story.level === level).length;
   }
 
+  hasActiveFilters(): boolean {
+    return this.selectedLevel() !== 'All'
+      || this.selectedGrammar() !== 'All grammar'
+      || this.selectedTopic() !== 'All topics'
+      || this.selectedReviewFilter() !== 'all'
+      || !!this.searchTerm().trim();
+  }
+
+  showPlacementCallout(): boolean {
+    return !this.history().length;
+  }
+
+  placementCalloutTitle(): string {
+    const placement = this.placement();
+    if (!placement) return 'Use the placement check to avoid starting too high or too low.';
+    return `${placement.chosenLevel} is your current starting band.`;
+  }
+
+  placementCalloutCopy(): string {
+    const placement = this.placement();
+    if (!placement) {
+      return 'A short self-check will recommend A2, B1, or B2 before you commit to a story path.';
+    }
+    if (placement.confidenceBand === 'mixed') {
+      return `Your answers were mixed, so ${placement.recommendedLevel} is a reasonable start and ${placement.chosenLevel} is the band currently selected for the library.`;
+    }
+    return `${placement.recommendedLevel} is the recommended band and the library is ready to start there unless you want to override it.`;
+  }
+
+  matchesReviewFilter(story: Story, filter: 'all' | 'needs-review' | 'continue' | 'new'): boolean {
+    switch (filter) {
+      case 'needs-review':
+        return this.storyReviewStage(story.id) !== null;
+      case 'continue':
+        return this.hasStoryProgress(story.id) && this.nextStudyChapter(story.id) !== null;
+      case 'new':
+        return !this.hasStoryProgress(story.id);
+      default:
+        return true;
+    }
+  }
+
   hasStoryProgress(storyId: string): boolean {
     return this.history().some((record) => record.storyId === storyId);
   }
@@ -505,18 +699,25 @@ export class BrowseComponent implements OnInit {
   }
 
   storyBadgeLabel(storyId: string): string {
-    const pct = this.latestScorePctForStory(storyId);
-    if (pct === 100) return 'Perfect';
-    if (pct >= 80) return 'Mastered';
-    if (pct >= 60) return 'Almost there';
-    return 'Review';
+    const latest = this.history().find((record) => record.storyId === storyId);
+    switch (latest?.masteryState) {
+      case 'mastered':
+        return this.latestScorePctForStory(storyId) === 100 ? 'Perfect' : 'Mastered';
+      case 'stabilising':
+        return 'Stabilising';
+      case 'needs_review':
+        return 'Needs review';
+      default:
+        return 'In progress';
+    }
   }
 
   storyBadgeClass(storyId: string): 'perfect' | 'mastered' | 'close' | 'review' {
-    const pct = this.latestScorePctForStory(storyId);
-    if (pct === 100) return 'perfect';
-    if (pct >= 80) return 'mastered';
-    if (pct >= 60) return 'close';
+    const latest = this.history().find((record) => record.storyId === storyId);
+    if (latest?.masteryState === 'mastered') {
+      return this.latestScorePctForStory(storyId) === 100 ? 'perfect' : 'mastered';
+    }
+    if (latest?.masteryState === 'stabilising') return 'close';
     return 'review';
   }
 
@@ -625,16 +826,16 @@ export class BrowseComponent implements OnInit {
 
   storyMetaLine(story: Story): string {
     if (!this.hasStoryProgress(story.id)) {
-      return 'Interactive reading, grammar noticing, and quiz recall';
+      return 'Story reading, grammar noticing, and quiz recall in one loop.';
     }
 
     const reviewStage = this.storyReviewStage(story.id);
     if (reviewStage === 'rescue') {
-      return 'This story has a chapter that needs rescue now before the pattern slips further.';
+      return 'This story has a chapter that needs rescue before the pattern slips further.';
     }
 
     if (reviewStage === 'due-now') {
-      return 'A completed chapter in this story is due for review today.';
+      return 'A completed chapter in this story is due for review now.';
     }
 
     if (reviewStage === 'due-soon') {
@@ -643,10 +844,10 @@ export class BrowseComponent implements OnInit {
 
     const completed = this.completedChaptersForStory(story.id);
     if (completed >= story.totalChapters) {
-      return 'All chapters attempted. Revisit weaker spots or aim for stronger mastery.';
+      return 'All chapters attempted. Revisit weaker spots or push for a cleaner finish.';
     }
 
-    return `${completed} chapter${completed === 1 ? '' : 's'} completed. Keep the story path moving.`;
+    return `${completed} chapter${completed === 1 ? '' : 's'} completed. The next step is ready.`;
   }
 
   levelAsStoryLevel(level: string): Story['level'] {
@@ -659,7 +860,7 @@ export class BrowseComponent implements OnInit {
       return {
         label: review.reviewStage === 'rescue' ? 'Rescue chapter' : review.reviewStage === 'due-now' ? 'Due today' : 'Due soon',
         title: `${this.browseReviewStageLabel(review)} in ${review.storyTitle}`,
-        detail: `Chapter ${review.chapterNumber} is the most useful review right now. ${review.reason}`,
+        detail: `Chapter ${review.chapterNumber} is the best review target right now. ${review.reason}`,
         cta: `Review Chapter ${review.chapterNumber}`,
         route: ['/chapters', review.chapterId],
       };
@@ -673,7 +874,7 @@ export class BrowseComponent implements OnInit {
         label: hasProgress ? 'Continue learning' : 'Start your path',
         title: `${hasProgress ? 'Pick up' : 'Begin'} Chapter ${recommendedChapter.chapterNumber}`,
         detail: story
-          ? `${recommendedChapter.title} is ready next in ${story.title}. Keep the story moving while the last chapter is still fresh.`
+          ? `${recommendedChapter.title} is the clearest next chapter in ${story.title}.`
           : 'A clear next chapter is ready for you.',
         cta: hasProgress ? 'Continue chapter' : 'Start chapter',
         route: ['/chapters', recommendedChapter.id],
@@ -685,7 +886,7 @@ export class BrowseComponent implements OnInit {
       return {
         label: 'Continue learning',
         title: `Pick up Chapter ${lastChapter.chapterNumber}`,
-        detail: `Return to ${lastChapter.chapterTitle} and keep the story active in memory before too much fades.`,
+        detail: `Return to ${lastChapter.chapterTitle} if you want to resume exactly where you left off.`,
         cta: 'Continue chapter',
         route: ['/chapters', lastChapter.chapterId],
       };
@@ -696,7 +897,7 @@ export class BrowseComponent implements OnInit {
       return {
         label: 'Start your path',
         title: `Begin with ${starter.title}`,
-        detail: 'One finished chapter is enough to create useful progress data and make the next recommendation smarter.',
+        detail: 'One finished chapter is enough to establish a baseline and make the next recommendation more useful.',
         cta: 'Open story',
         route: ['/stories', starter.id],
       };
@@ -788,9 +989,9 @@ export class BrowseComponent implements OnInit {
       case 'A2':
         return 'Build confidence with clear, high-frequency English';
       case 'B1':
-        return 'Deepen inference, fluency, and flexible grammar control';
+        return 'Handle longer scenes, stronger inference, and more flexible grammar';
       case 'B2':
-        return 'Read for nuance, style, and more demanding structures';
+        return 'Read for nuance, pressure points, and more demanding structures';
       default:
         return 'Choose a level';
     }
@@ -799,11 +1000,11 @@ export class BrowseComponent implements OnInit {
   levelDescription(level: string): string {
     switch (level) {
       case 'A2':
-        return 'Best for establishing routine, spotting core forms, and finishing chapters with confidence.';
+        return 'Best for establishing routine, spotting core forms, and finishing short chapters confidently.';
       case 'B1':
         return 'A balanced step for learners ready to connect grammar, meaning, and longer story arcs.';
       case 'B2':
-        return 'Designed for richer language, subtler clues, and more advanced comprehension pressure.';
+        return 'Designed for richer language, subtler clues, and tighter comprehension pressure.';
       default:
         return '';
     }

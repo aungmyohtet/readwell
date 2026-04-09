@@ -13,5 +13,6 @@ public class StorySummaryResponse {
   private String coverImageUrl;
   private String author;
   private List<String> tags;
+  private List<String> grammarRules;
   private int totalChapters;
 }

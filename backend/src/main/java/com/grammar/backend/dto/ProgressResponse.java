@@ -23,4 +23,5 @@ public class ProgressResponse {
   private Instant completedAt;
   private Instant nextReviewAt;
   private String reviewStage;
+  private String masteryState;
 }

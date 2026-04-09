@@ -18,4 +18,5 @@ public class ChapterSummaryResponse {
   private int attemptCount;
   private Instant nextReviewAt;
   private String reviewStage;
+  private String masteryState;
 }

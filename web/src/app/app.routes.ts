@@ -15,6 +15,12 @@ export const routes: Routes = [
       import('./features/browse/browse.component').then((m) => m.BrowseComponent),
   },
   {
+    path: 'placement',
+    canActivate: [authGuard],
+    loadComponent: () =>
+      import('./features/placement/placement.component').then((m) => m.PlacementComponent),
+  },
+  {
     path: 'stories/:storyId',
     canActivate: [authGuard],
     loadComponent: () =>

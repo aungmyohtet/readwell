@@ -36,7 +36,7 @@ function Stop-ProcessesOnPort {
     return
   }
 
-  Write-Host "Stopping $Label process(es) on port $Port: $($processIds -join ', ')"
+  Write-Host "Stopping $Label process(es) on port ${Port}: $($processIds -join ', ')"
   foreach ($processId in $processIds) {
     try {
       Stop-Process -Id $processId -Force -ErrorAction Stop

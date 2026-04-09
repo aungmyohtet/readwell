@@ -17,6 +17,7 @@ export interface ProgressRecord {
   completedAt: string;
   nextReviewAt?: string | null;
   reviewStage?: string | null;
+  masteryState?: 'needs_review' | 'stabilising' | 'mastered' | string;
 }
 
 export interface QuestionAttemptRequest {
@@ -86,5 +87,43 @@ export interface SubmitProgressRequest {
   score: number;
   totalQuestions: number;
   questionAttempts: QuestionAttemptRequest[];
+  grammarPracticeAttempts?: GrammarPracticeAttemptRequest[];
+}
+
+export interface RetryQuizItem {
+  order: number;
+  question: string;
+  options: string[];
+  previousAnswer: string;
+  correctAnswer: string;
+  explanation: string;
+}
+
+export interface RetryPracticeItem {
+  order: number;
+  type: 'multiple_choice' | 'fill_blank' | 'error_correction' | 'sentence_transformation';
+  prompt: string;
+  options?: string[];
+  previousAnswer: string;
+  correctAnswer: string;
+  explanation: string;
+  skillTag?: string | null;
+}
+
+export interface RetrySession {
+  storyId: string;
+  storyTitle: string;
+  chapterId: string;
+  chapterTitle: string;
+  chapterNumber: number;
+  grammarRule: string;
+  quizItems: RetryQuizItem[];
+  practiceItems: RetryPracticeItem[];
+}
+
+export interface SubmitRetryRequest {
+  storyId: string;
+  chapterId: string;
+  questionAttempts?: QuestionAttemptRequest[];
   grammarPracticeAttempts?: GrammarPracticeAttemptRequest[];
 }

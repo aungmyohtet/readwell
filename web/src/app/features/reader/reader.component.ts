@@ -1,12 +1,23 @@
 import { Component, OnInit, signal, Input } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { StoryService } from '../../core/services/story.service';
 import { ProgressService } from '../../core/services/progress.service';
 import { ChapterDetail, ComprehensionQuestion, GrammarAnnotation, GrammarPracticeItem, Paragraph } from '../../core/models/story.model';
-import { ProgressRecord } from '../../core/models/progress.model';
+import { ProgressRecord, RetryPracticeItem, RetryQuizItem, RetrySession } from '../../core/models/progress.model';
 
 type Tab = 'vocabulary' | 'grammar' | 'story' | 'practice' | 'quiz';
+
+type PracticeItemLike = {
+  order: number;
+  type: 'multiple_choice' | 'fill_blank' | 'error_correction' | 'sentence_transformation';
+  correctAnswer: string;
+};
+
+type QuizItemLike = {
+  order: number;
+  correctAnswer: string;
+};
 
 type GrammarTone = 'aux' | 'ending' | 'question' | 'structure' | 'modal';
 
@@ -491,7 +502,7 @@ const LESSON_TABS: LessonTabMeta[] = [
           <div class="chapter-meta">
             <div>
               <h2>{{ chapter()!.title }}</h2>
-              <p class="chapter-subtitle">{{ chapter()!.grammarFocus.rule }} taught through reading, guided practice, and retrieval.</p>
+              <p class="chapter-subtitle">{{ retryMode() ? retrySubtitle() : chapter()!.grammarFocus.rule + ' taught through reading, guided practice, and retrieval.' }}</p>
             </div>
 
             <div class="chapter-stats">
@@ -504,16 +515,27 @@ const LESSON_TABS: LessonTabMeta[] = [
                 <span>Paragraphs</span>
               </div>
               <div class="stat-pill">
-                <strong>{{ chapter()!.grammarPractice?.length || 0 }}</strong>
+                <strong>{{ practiceItemCount() }}</strong>
                 <span>Practice</span>
               </div>
               <div class="stat-pill">
-                <strong>{{ chapter()!.comprehension.length }}</strong>
+                <strong>{{ quizItemCount() }}</strong>
                 <span>Questions</span>
               </div>
             </div>
           </div>
         </div>
+
+        @if (retryMode()) {
+          <div class="retry-banner card">
+            <div>
+              <span class="eyebrow">Focused Retry</span>
+              <strong>{{ retryBannerTitle() }}</strong>
+              <p>{{ retryBannerCopy() }}</p>
+            </div>
+            <a class="btn btn-secondary" [routerLink]="['/chapters', chapter()!.id]">Open full chapter</a>
+          </div>
+        }
 
         <div class="learning-loop card">
           <div class="loop-step" [class.active]="activeTab() === 'vocabulary'">
@@ -924,7 +946,7 @@ const LESSON_TABS: LessonTabMeta[] = [
                     <span class="result-badge badge-neutral">{{ attemptSummaryLabel() }}</span>
                   </div>
                   <div class="result-stars">{{ starsDisplay() }}</div>
-                  <div class="result-score">{{ score() }} / {{ chapter()!.comprehension.length }}</div>
+                  <div class="result-score">{{ score() }} / {{ quizItemCount() }}</div>
                   <p class="result-label">{{ resultMessage() }}</p>
                   <p class="result-support">{{ resultSupportMessage() }}</p>
                   <div class="result-highlights">
@@ -954,7 +976,7 @@ const LESSON_TABS: LessonTabMeta[] = [
                 </div>
 
                 <div class="result-answers">
-                  @for (q of chapter()!.comprehension; track q.order) {
+                  @for (q of quizItems(); track q.order) {
                     <div class="answer-review" [class.correct]="answers()[q.order] === q.correctAnswer" [class.wrong]="answers()[q.order] !== q.correctAnswer">
                       <div class="review-status-icon">{{ answers()[q.order] === q.correctAnswer ? '✓' : '✗' }}</div>
                       <div class="review-body">
@@ -970,6 +992,9 @@ const LESSON_TABS: LessonTabMeta[] = [
                 </div>
 
                 <div class="result-actions">
+                  @if (hasRetryableMistakes()) {
+                    <a class="btn btn-secondary" [routerLink]="['/chapters', chapter()!.id]" [queryParams]="{ retry: 'missed' }">Retry missed items</a>
+                  }
                   <button class="btn btn-secondary" (click)="retryQuiz()">Retry Quiz</button>
                   <button class="btn btn-secondary" (click)="reviewStoryWithHighlights()">Review story with highlights</button>
                   <a [routerLink]="['/stories', chapter()!.storyId]" class="btn btn-primary">Back to Story</a>
@@ -977,17 +1002,17 @@ const LESSON_TABS: LessonTabMeta[] = [
               </div>
             } @else {
               <div class="quiz-progress-row">
-                <span class="quiz-progress-text">{{ revealedQuestions().size }} / {{ chapter()!.comprehension.length }} answered</span>
+                <span class="quiz-progress-text">{{ revealedQuestions().size }} / {{ quizItemCount() }} answered</span>
                 <span class="quiz-progress-pct">{{ quizProgressPct() }}%</span>
                 <div class="quiz-progress-dots">
-                  @for (q of chapter()!.comprehension; track q.order) {
+                  @for (q of quizItems(); track q.order) {
                     <span class="q-dot" [class.answered]="revealedQuestions().has(q.order)" [class.correct]="revealedQuestions().has(q.order) && answers()[q.order] === q.correctAnswer"></span>
                   }
                 </div>
               </div>
 
               <div class="quiz-questions">
-                @for (q of chapter()!.comprehension; track q.order) {
+                @for (q of quizItems(); track q.order) {
                   <div class="question-block card" [class.revealed]="revealedQuestions().has(q.order)">
                     <div class="question-header">
                       <span class="q-number">Q{{ q.order }}</span>
@@ -1102,6 +1127,9 @@ export class ReaderComponent implements OnInit {
   activeVocabPopup = signal<{ word: string; definition: string; exampleSentence: string; emoji: string } | null>(null);
   lastSavedScoreBeforeSubmit = signal<number | null>(null);
   savedProgress = signal<ProgressRecord | null>(null);
+  retryMode = signal(false);
+  retryLoading = signal(false);
+  retrySession = signal<RetrySession | null>(null);
 
   readonly confettiPieces = CONFETTI_PIECES;
 
@@ -1109,15 +1137,59 @@ export class ReaderComponent implements OnInit {
     private storyService: StoryService,
     private progressService: ProgressService,
     private sanitizer: DomSanitizer,
+    private route: ActivatedRoute,
+    private router: Router,
   ) {}
 
   ngOnInit() {
+    this.loadChapter();
+    this.route.queryParamMap.subscribe((params) => {
+      const retryRequested = params.get('retry') === 'missed';
+      this.retryMode.set(retryRequested);
+      if (retryRequested) {
+        this.loadRetrySession();
+      } else {
+        this.retrySession.set(null);
+      }
+    });
+  }
+
+  private loadChapter() {
     this.storyService.getChapter(this.chapterId).subscribe((c) => {
       this.chapter.set(c);
-      this.practiceAnswers.set({});
-      this.checkedPractice.set(new Set());
+      this.resetInteractiveState();
       this.saveLastChapter(c);
+      if (this.retryMode()) {
+        this.loadRetrySession();
+      }
     });
+  }
+
+  private loadRetrySession() {
+    if (!this.chapterId) return;
+    this.retryLoading.set(true);
+    this.progressService.getRetrySession(this.chapterId).subscribe({
+      next: (session) => {
+        this.retrySession.set(session);
+        this.retryLoading.set(false);
+        this.activeTab.set(session.practiceItems?.length ? 'practice' : 'quiz');
+      },
+      error: () => {
+        this.retrySession.set(null);
+        this.retryLoading.set(false);
+      },
+    });
+  }
+
+  private resetInteractiveState() {
+    this.practiceAnswers.set({});
+    this.checkedPractice.set(new Set());
+    this.answers.set({});
+    this.revealedQuestions.set(new Set());
+    this.quizSubmitted.set(false);
+    this.score.set(0);
+    this.lastSavedScoreBeforeSubmit.set(null);
+    this.savedProgress.set(null);
   }
 
   private saveLastChapter(c: ChapterDetail) {
@@ -1175,8 +1247,18 @@ export class ReaderComponent implements OnInit {
     this.activeTab.set(tab);
   }
 
-  practiceItems(): GrammarPracticeItem[] {
+  practiceItems(): Array<GrammarPracticeItem | RetryPracticeItem> {
+    if (this.retryMode()) {
+      return this.retrySession()?.practiceItems ?? [];
+    }
     return this.chapter()?.grammarPractice ?? [];
+  }
+
+  quizItems(): Array<ComprehensionQuestion | RetryQuizItem> {
+    if (this.retryMode()) {
+      return this.retrySession()?.quizItems ?? [];
+    }
+    return this.chapter()?.comprehension ?? [];
   }
 
   hasGrammarPractice(): boolean {
@@ -1187,11 +1269,15 @@ export class ReaderComponent implements OnInit {
     return this.practiceItems().length;
   }
 
+  quizItemCount(): number {
+    return this.quizItems().length;
+  }
+
   updatePracticeAnswer(order: number, value: string) {
     this.practiceAnswers.update((answers) => ({ ...answers, [order]: value }));
   }
 
-  selectPracticeOption(item: GrammarPracticeItem, option: string) {
+  selectPracticeOption(item: PracticeItemLike, option: string) {
     if (this.isPracticeChecked(item.order)) return;
     this.updatePracticeAnswer(item.order, option);
     this.checkPracticeItem(item.order);
@@ -1214,7 +1300,7 @@ export class ReaderComponent implements OnInit {
     return this.checkedPractice().has(order);
   }
 
-  isPracticeCorrect(item: GrammarPracticeItem): boolean {
+  isPracticeCorrect(item: PracticeItemLike): boolean {
     return this.normalizePracticeAnswer(this.practiceAnswers()[item.order] ?? '') === this.normalizePracticeAnswer(item.correctAnswer);
   }
 
@@ -1254,7 +1340,7 @@ export class ReaderComponent implements OnInit {
     return `As you read, look for the same grammar signals you just practised and notice how they support the story meaning, not just the form.`;
   }
 
-  practiceTypeLabel(item: GrammarPracticeItem): string {
+  practiceTypeLabel(item: PracticeItemLike): string {
     switch (item.type) {
       case 'multiple_choice':
         return 'Choose';
@@ -1267,7 +1353,7 @@ export class ReaderComponent implements OnInit {
     }
   }
 
-  usesPracticeTextarea(item: GrammarPracticeItem): boolean {
+  usesPracticeTextarea(item: PracticeItemLike): boolean {
     return item.type === 'error_correction' || item.type === 'sentence_transformation';
   }
 
@@ -1312,14 +1398,14 @@ export class ReaderComponent implements OnInit {
     });
   }
 
-  isCorrect(q: ComprehensionQuestion): boolean {
+  isCorrect(q: QuizItemLike): boolean {
     return this.answers()[q.order] === q.correctAnswer;
   }
 
   allAnswered(): boolean {
-    const chapter = this.chapter();
-    if (!chapter) return false;
-    return chapter.comprehension.every((q) => this.revealedQuestions().has(q.order));
+    const questions = this.quizItems();
+    if (!questions.length) return false;
+    return questions.every((q) => this.revealedQuestions().has(q.order));
   }
 
   submitQuiz() {
@@ -1328,25 +1414,40 @@ export class ReaderComponent implements OnInit {
     this.lastSavedScoreBeforeSubmit.set(chapter.completed ? chapter.score : null);
     this.savedProgress.set(null);
     let correct = 0;
-    chapter.comprehension.forEach((q) => {
+    this.quizItems().forEach((q) => {
       if (this.answers()[q.order] === q.correctAnswer) correct++;
     });
     this.score.set(correct);
     this.quizSubmitted.set(true);
-    this.progressService.submit({
-      storyId: chapter.storyId,
-      chapterId: chapter.id,
-      score: correct,
-      totalQuestions: chapter.comprehension.length,
-      questionAttempts: chapter.comprehension.map((question) => ({
-        questionOrder: question.order,
-        selectedAnswer: this.answers()[question.order] ?? '',
-      })),
-      grammarPracticeAttempts: this.practiceItems().map((item) => ({
-        practiceOrder: item.order,
-        selectedAnswer: this.practiceAnswers()[item.order] ?? '',
-      })),
-    }).subscribe({
+    const request$ = this.retryMode()
+      ? this.progressService.submitRetry({
+          storyId: chapter.storyId,
+          chapterId: chapter.id,
+          questionAttempts: this.quizItems().map((question) => ({
+            questionOrder: question.order,
+            selectedAnswer: this.answers()[question.order] ?? '',
+          })),
+          grammarPracticeAttempts: this.practiceItems().map((item) => ({
+            practiceOrder: item.order,
+            selectedAnswer: this.practiceAnswers()[item.order] ?? '',
+          })),
+        })
+      : this.progressService.submit({
+          storyId: chapter.storyId,
+          chapterId: chapter.id,
+          score: correct,
+          totalQuestions: this.quizItemCount(),
+          questionAttempts: this.quizItems().map((question) => ({
+            questionOrder: question.order,
+            selectedAnswer: this.answers()[question.order] ?? '',
+          })),
+          grammarPracticeAttempts: this.practiceItems().map((item) => ({
+            practiceOrder: item.order,
+            selectedAnswer: this.practiceAnswers()[item.order] ?? '',
+          })),
+        });
+
+    request$.subscribe({
       next: (saved) => {
         this.savedProgress.set(saved);
         this.chapter.update((current) => current
@@ -1357,8 +1458,13 @@ export class ReaderComponent implements OnInit {
               bestScore: saved.bestScore,
               previousScore: saved.previousScore,
               attemptCount: saved.attemptCount,
+              reviewStage: saved.reviewStage,
+              masteryState: saved.masteryState,
             }
           : current);
+        if (this.retryMode()) {
+          this.loadRetrySession();
+        }
       },
     });
   }
@@ -1377,7 +1483,7 @@ export class ReaderComponent implements OnInit {
   }
 
   getStars(): number {
-    const total = this.chapter()?.comprehension.length ?? 1;
+    const total = this.quizItemCount() || 1;
     const pct = this.score() / total;
     if (pct === 1) return 3;
     if (pct >= 0.8) return 2;
@@ -1399,56 +1505,69 @@ export class ReaderComponent implements OnInit {
   }
 
   scorePct(): number {
-    const chapter = this.chapter();
-    if (!chapter || chapter.comprehension.length === 0) return 0;
-    return Math.round((this.score() / chapter.comprehension.length) * 100);
+    const total = this.quizItemCount();
+    if (!total) return 0;
+    return Math.round((this.score() / total) * 100);
+  }
+
+  private fullChapterQuizCount(): number {
+    return this.savedProgress()?.totalQuestions || this.chapter()?.comprehension.length || this.quizItemCount() || 1;
+  }
+
+  private pctFromRawScore(score: number | null | undefined, total: number): number | null {
+    if (score === null || score === undefined || !total) return null;
+    return Math.round((score / total) * 100);
+  }
+
+  private resultComparisonPct(): number {
+    if (this.retryMode() && this.savedProgress()) {
+      return this.pctFromRawScore(this.savedProgress()!.score, this.fullChapterQuizCount()) ?? 0;
+    }
+    return this.scorePct();
   }
 
   previousScorePct(): number | null {
-    const chapter = this.chapter();
-    const previousScore = this.lastSavedScoreBeforeSubmit();
-    if (!chapter || previousScore === null || chapter.comprehension.length === 0) return null;
-    return Math.round((previousScore / chapter.comprehension.length) * 100);
+    return this.pctFromRawScore(this.lastSavedScoreBeforeSubmit(), this.fullChapterQuizCount());
   }
 
   improvedSinceLastAttempt(): boolean {
     const previous = this.previousScorePct();
-    return previous !== null && this.scorePct() > previous;
+    return previous !== null && this.resultComparisonPct() > previous;
   }
 
   needsReviewScore(): boolean {
-    return this.scorePct() < 80;
+    return this.resultComparisonPct() < 80;
   }
 
   isMasteryScore(): boolean {
-    return this.scorePct() >= 80;
+    return this.resultComparisonPct() >= 80;
   }
 
   improvementLabel(): string | null {
     const previous = this.previousScorePct();
     if (previous === null) return null;
-    const delta = this.scorePct() - previous;
+    const delta = this.resultComparisonPct() - previous;
     if (delta > 0) return `+${delta}% from last time`;
     if (delta < 0) return `${delta}% from last time`;
     return 'Same as last time';
   }
 
   resultBadgeLabel(): string {
-    if (this.scorePct() === 100) return 'Perfect finish';
+    if (this.resultComparisonPct() === 100) return 'Perfect finish';
     if (this.isMasteryScore()) return 'Chapter mastered';
-    if (this.scorePct() >= 60) return 'Almost there';
+    if (this.resultComparisonPct() >= 60) return 'Almost there';
     return 'Keep building';
   }
 
   masteryStatusLabel(): string {
-    if (this.scorePct() === 100) return 'Perfect';
+    if (this.resultComparisonPct() === 100) return 'Perfect';
     if (this.isMasteryScore()) return 'Mastered';
-    if (this.scorePct() >= 60) return 'Close';
+    if (this.resultComparisonPct() >= 60) return 'Close';
     return 'Review needed';
   }
 
   nextResultMoveLabel(): string {
-    if (this.scorePct() === 100) return 'Move ahead';
+    if (this.resultComparisonPct() === 100) return 'Move ahead';
     if (this.isMasteryScore()) return 'Keep momentum';
     return 'Review chapter';
   }
@@ -1457,7 +1576,7 @@ export class ReaderComponent implements OnInit {
     if (this.isNewBestScore()) {
       return 'This is your strongest saved result on this chapter so far. Build on it before the pattern fades.';
     }
-    if (this.scorePct() === 100) {
+    if (this.resultComparisonPct() === 100) {
       return 'You answered everything correctly. This chapter is ready to count as secure.';
     }
     if (this.improvedSinceLastAttempt()) {
@@ -1466,7 +1585,7 @@ export class ReaderComponent implements OnInit {
     if (this.isMasteryScore()) {
       return 'You are above the review threshold. Keep the pattern fresh and move on with confidence.';
     }
-    if (this.scorePct() >= 60) {
+    if (this.resultComparisonPct() >= 60) {
       return 'You are close. One focused review of the story and grammar cues should lift this chapter.';
     }
     return 'Use the review feedback below, then revisit the chapter with grammar highlights before trying again.';
@@ -1506,9 +1625,7 @@ export class ReaderComponent implements OnInit {
   }
 
   bestSavedScorePct(): number {
-    const chapter = this.chapter();
-    if (!chapter || chapter.comprehension.length === 0) return 0;
-    return Math.round((this.bestSavedScoreRaw() / chapter.comprehension.length) * 100);
+    return this.pctFromRawScore(this.bestSavedScoreRaw(), this.fullChapterQuizCount()) ?? 0;
   }
 
   bestResultLabel(): string {
@@ -1516,6 +1633,12 @@ export class ReaderComponent implements OnInit {
   }
 
   isNewBestScore(): boolean {
+    const saved = this.savedProgress();
+    if (this.retryMode() && saved) {
+      const priorBest = this.chapter()?.bestScore || 0;
+      return saved.bestScore > priorBest;
+    }
+
     const chapter = this.chapter();
     if (!chapter) return false;
     const priorBest = chapter.bestScore || (chapter.completed ? chapter.score : 0);
@@ -1529,9 +1652,34 @@ export class ReaderComponent implements OnInit {
   }
 
   quizProgressPct(): number {
-    const total = this.chapter()?.comprehension.length ?? 0;
+    const total = this.quizItemCount();
     if (!total) return 0;
     return Math.round((this.revealedQuestions().size / total) * 100);
+  }
+
+  retrySubtitle(): string {
+    return 'Missed items only. Clean up weak answers without replaying the whole chapter.';
+  }
+
+  retryBannerTitle(): string {
+    if (this.retryLoading()) return 'Loading missed items';
+    const quizCount = this.retrySession()?.quizItems.length ?? 0;
+    const practiceCount = this.retrySession()?.practiceItems.length ?? 0;
+    if (!quizCount && !practiceCount) return 'Nothing left in the retry queue';
+    return `${quizCount + practiceCount} item${quizCount + practiceCount === 1 ? '' : 's'} selected for focused retry`;
+  }
+
+  retryBannerCopy(): string {
+    if (this.retryLoading()) return 'Pulling the last saved misses from this chapter.';
+    const quizCount = this.retrySession()?.quizItems.length ?? 0;
+    const practiceCount = this.retrySession()?.practiceItems.length ?? 0;
+    if (!quizCount && !practiceCount) return 'You have already cleared the currently saved mistakes for this chapter. Open the full chapter if you want a full retake.';
+    return `This mode keeps only the items you last missed: ${practiceCount} practice task${practiceCount === 1 ? '' : 's'} and ${quizCount} quiz question${quizCount === 1 ? '' : 's'}.`;
+  }
+
+  hasRetryableMistakes(): boolean {
+    return this.hasGrammarPractice() && this.practiceCorrectCount() < this.practiceItemCount()
+      || this.quizItems().some((item) => this.answers()[item.order] !== item.correctAnswer);
   }
 
   storyQuizChecksLabel(): string {
@@ -1580,6 +1728,7 @@ export class ReaderComponent implements OnInit {
   mobileSupportText(): string {
     switch (this.activeTab()) {
       case 'vocabulary':
+        if (this.retryMode()) return 'Focused retry keeps the chapter open, but your main target is the missed practice and quiz items.';
         return 'Flip cards, review meaning, then continue when ready.';
       case 'grammar':
         return 'Use the examples to notice the exact pattern before reading.';
@@ -1590,41 +1739,47 @@ export class ReaderComponent implements OnInit {
       case 'story':
         return 'Read for meaning now that the form is fresh, then use the quiz to check understanding and grammar accuracy.';
       case 'quiz':
-        return 'Finish the questions, then review the feedback before moving on.';
+        return this.retryMode() ? 'Clear the missed questions here, then return to the full chapter only if you want a full retake.' : 'Finish the questions, then review the feedback before moving on.';
     }
   }
 
   activeStageTitle(): string {
     switch (this.activeTab()) {
       case 'vocabulary':
+        if (this.retryMode()) return 'Stay focused on the weak items, then use the chapter again only if you need wider review.';
         return 'Preview meaning before you read';
       case 'grammar':
         return 'Notice the grammar signal before the story starts';
       case 'practice':
-        return this.hasGrammarPractice() ? 'Tighten the form before reading the full story' : 'No dedicated practice in this chapter';
+        return this.retryMode() ? 'Retry only the practice items that last went wrong' : this.hasGrammarPractice() ? 'Tighten the form before reading the full story' : 'No dedicated practice in this chapter';
       case 'story':
-        return 'Read in context after the grammar is already familiar';
+        return this.retryMode() ? 'Re-read only if the missed items still feel noisy' : 'Read in context after the grammar is already familiar';
       case 'quiz':
-        return this.quizSubmitted() ? 'Use the feedback to close the loop' : 'Retrieve what the chapter taught you';
+        return this.retryMode() ? (this.quizSubmitted() ? 'Use the focused results to close the remaining gaps' : 'Retry only the questions you last missed') : this.quizSubmitted() ? 'Use the feedback to close the loop' : 'Retrieve what the chapter taught you';
     }
   }
 
   activeStageGuidance(): string {
     switch (this.activeTab()) {
       case 'vocabulary':
+        if (this.retryMode()) return 'You are in a compact retry pass. Vocabulary is optional here unless you need a quick reminder before answering again.';
         return 'Flip the key words, mark the ones you know, and reduce the reading load before the story begins.';
       case 'grammar':
         return 'Study the examples first so the target form feels familiar when it appears inside the story.';
       case 'practice':
-        return this.hasGrammarPractice()
+        return this.retryMode()
+          ? 'Only the practice items you last missed are shown here. Clear them, then move to the quiz retry.'
+          : this.hasGrammarPractice()
           ? 'Use the short exercises to confirm the form, fix small errors, and make the grammar feel more deliberate before reading the chapter more fully.'
           : 'There is no dedicated practice for this chapter yet, so move into the story after the grammar explanation.';
       case 'story':
-        return 'Read for meaning now that the pattern is fresher. The quiz next will test both story understanding and the target grammar.';
+        return this.retryMode()
+          ? 'Use the story selectively here. The main goal is to fix the missed items without redoing the full lesson loop.'
+          : 'Read for meaning now that the pattern is fresher. The quiz next will test both story understanding and the target grammar.';
       case 'quiz':
         return this.quizSubmitted()
           ? 'Review any missed questions, then return to the story with highlights if you want to reinforce the pattern.'
-          : 'Answer each question once, then use the results to decide whether to review or move on.';
+          : this.retryMode() ? 'Answer only the saved misses here. A clean retry should reduce the weak points without extra repetition.' : 'Answer each question once, then use the results to decide whether to review or move on.';
     }
   }
 
@@ -1650,17 +1805,17 @@ export class ReaderComponent implements OnInit {
         ];
       case 'story':
         return [
-          { label: 'Questions next', value: `${chapter.comprehension.length}` },
+          { label: 'Questions next', value: `${this.quizItemCount()}` },
           { label: 'Quiz checks', value: this.storyQuizChecksLabel() },
         ];
       case 'quiz':
         return this.quizSubmitted()
           ? [
-              { label: 'Score', value: `${this.score()}/${chapter.comprehension.length}` },
-              { label: 'Wrong answers', value: `${chapter.comprehension.length - this.score()}` },
+              { label: 'Score', value: `${this.score()}/${this.quizItemCount()}` },
+              { label: 'Wrong answers', value: `${this.quizItemCount() - this.score()}` },
             ]
           : [
-              { label: 'Answered', value: `${this.revealedQuestions().size}/${chapter.comprehension.length}` },
+              { label: 'Answered', value: `${this.revealedQuestions().size}/${this.quizItemCount()}` },
               { label: 'Correct so far', value: `${this.currentCorrectAnswers()}` },
             ];
     }
@@ -1677,7 +1832,7 @@ export class ReaderComponent implements OnInit {
       case 'story':
         return 'Move to the quiz';
       case 'quiz':
-        return this.quizSubmitted() ? 'Review the story again' : this.allAnswered() ? 'See quiz results' : 'Answer all questions first';
+        return this.quizSubmitted() ? (this.retryMode() ? 'Return to the story' : 'Review the story again') : this.allAnswered() ? 'See quiz results' : 'Answer all questions first';
     }
   }
 
@@ -1704,7 +1859,7 @@ export class ReaderComponent implements OnInit {
         break;
       case 'quiz':
         if (this.quizSubmitted()) {
-          this.reviewStoryWithHighlights();
+          this.retryMode() ? this.router.navigate(['/stories', this.chapter()!.storyId]) : this.reviewStoryWithHighlights();
         } else if (this.allAnswered()) {
           this.submitQuiz();
         }
@@ -1718,9 +1873,7 @@ export class ReaderComponent implements OnInit {
   }
 
   currentCorrectAnswers(): number {
-    const chapter = this.chapter();
-    if (!chapter) return 0;
-    return chapter.comprehension.filter((question) => this.answers()[question.order] === question.correctAnswer).length;
+    return this.quizItems().filter((question) => this.answers()[question.order] === question.correctAnswer).length;
   }
 
   private normalizePracticeAnswer(value: string): string {

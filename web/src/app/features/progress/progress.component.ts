@@ -12,8 +12,8 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
       <section class="progress-hero section-card">
         <div>
           <span class="eyebrow">Learning Dashboard</span>
-          <h1 class="page-title">See what you are mastering, not just what you finished.</h1>
-          <p class="page-subtitle">Use your history to spot strengths, weak points, and where to review next.</p>
+          <h1 class="page-title">Use progress to decide what to review, repeat, or leave alone.</h1>
+          <p class="page-subtitle">This page is for triage: what improved, what still slips, and which chapter is worth reopening.</p>
           <div class="progress-hero-actions">
             <a routerLink="/browse" class="btn btn-primary">Browse Stories</a>
             <a routerLink="/profile" class="btn btn-secondary">Study Profile</a>
@@ -88,14 +88,14 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
 
         <section class="insight-strip">
           <div class="insight-card card">
-            <span class="insight-title">Recommended habit</span>
-            <strong>Read → notice → quiz</strong>
-            <p>Use rescue, due now, and due soon signals to decide what to revisit next.</p>
+            <span class="insight-title">Use This Page For</span>
+            <strong>Review triage</strong>
+            <p>Check the queue first, then use weak areas and mistakes only when they point to a real pattern.</p>
           </div>
           <div class="insight-card card">
             <span class="insight-title">Review rhythm</span>
             <strong>{{ reviewRhythmLabel() }}</strong>
-            <p>Weak chapters are rescued immediately. Stronger ones come back on a short schedule.</p>
+            <p>{{ reviewRhythmSupport() }}</p>
           </div>
         </section>
 
@@ -131,6 +131,7 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
                       <span class="achievement-badge" [class.close]="reviewBadgeClass(item.lastScorePct) === 'close'" [class.review]="reviewBadgeClass(item.lastScorePct) === 'review'">{{ reviewBadgeLabel(item.lastScorePct) }}</span>
                       <div class="review-score">{{ item.lastScorePct }}%</div>
                       <span class="review-score-note">quiz + practice</span>
+                      <a class="history-action-link" [routerLink]="['/chapters', item.chapterId]" [queryParams]="{ retry: 'missed' }">Retry weak items</a>
                     </div>
                   </a>
                 }
@@ -190,6 +191,9 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
                       {{ record.score }}/{{ record.totalQuestions }}
                     </div>
                     <div class="score-pct">{{ pct(record) }}%</div>
+                    @if (canRetryRecord(record)) {
+                      <a class="history-action-link" [routerLink]="['/chapters', record.chapterId]" [queryParams]="{ retry: 'missed' }">Retry missed items</a>
+                    }
                   </div>
                 </div>
               }
@@ -229,7 +233,10 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
                     <p class="mistake-answer wrong-answer">Your answer: <strong>{{ item.selectedAnswer || 'No answer' }}</strong></p>
                     <p class="mistake-answer correct-answer">Correct answer: <strong>{{ item.correctAnswer }}</strong></p>
                     <p class="mistake-explanation">{{ item.explanation }}</p>
-                    <a class="mistake-link" [routerLink]="['/chapters', item.chapterId]">Review chapter →</a>
+                    <div class="mistake-actions-row">
+                      <a class="mistake-link" [routerLink]="['/chapters', item.chapterId]">Review chapter →</a>
+                      <a class="mistake-link" [routerLink]="['/chapters', item.chapterId]" [queryParams]="{ retry: 'missed' }">Retry weak items →</a>
+                    </div>
                   </div>
                 }
               </div>
@@ -308,19 +315,19 @@ export class ProgressComponent implements OnInit {
   focusHeadline(): string {
     const review = this.priorityReview();
     if (review) return `Review ${review.storyTitle} Chapter ${review.chapterNumber}`;
-    if (!this.history().length) return 'Build your first reading habit';
-    if (this.dashboardAveragePct() >= 85) return 'You are ready for harder chapters';
-    if (this.dashboardAveragePct() >= 70) return 'Your comprehension is developing well';
-    return 'Slow down and review more deliberately';
+    if (!this.history().length) return 'No review decisions yet';
+    if (this.dashboardAveragePct() >= 85) return 'Move forward or move up';
+    if (this.dashboardAveragePct() >= 70) return 'Keep pace, but clean up misses';
+    return 'Stabilise recent chapters first';
   }
 
   focusSupport(): string {
     const review = this.priorityReview();
     if (review) return `${review.grammarRule} is the strongest review target right now. ${review.reason}`;
-    if (!this.history().length) return 'Finish one chapter and use the quiz feedback to create your first progress signal.';
-    if (this.dashboardAveragePct() >= 85) return 'Continue to the next unlocked chapter or step into a harder level if reading feels comfortable.';
-    if (this.dashboardAveragePct() >= 70) return 'Keep moving, but revisit incorrect answers and compare them with the highlighted grammar.';
-    return 'Re-read completed chapters with grammar highlighting turned on before attempting new material.';
+    if (!this.history().length) return 'Finish one chapter so this dashboard has something real to rank and compare.';
+    if (this.dashboardAveragePct() >= 85) return 'The current level looks secure enough that you can continue or stretch into a harder path.';
+    if (this.dashboardAveragePct() >= 70) return 'You do not need to slow down completely, but recent mistakes should be cleared before they stack up.';
+    return 'Review with intention before adding fresh material, especially where the same grammar keeps reappearing.';
   }
 
   recentCompletions(): number {
@@ -344,9 +351,18 @@ export class ProgressComponent implements OnInit {
 
   reviewRhythmLabel(): string {
     const queue = this.reviewQueue();
+    if (!queue.length) return 'No review queued';
     if (queue.some((item) => item.reviewStage === 'rescue')) return 'Rescue first';
     if (queue.some((item) => item.reviewStage === 'due-now')) return 'Due today';
     return 'Due soon';
+  }
+
+  reviewRhythmSupport(): string {
+    const queue = this.reviewQueue();
+    if (!queue.length) {
+      return 'Nothing is scheduled for review right now. Use weak areas and recent mistakes as optional cleanup, not urgent tasks.';
+    }
+    return 'Weak chapters are rescued immediately. Stronger ones come back on a short schedule.';
   }
 
   weakAreas() {
@@ -363,18 +379,23 @@ export class ProgressComponent implements OnInit {
   }
 
   historyBadgeLabel(record: ProgressRecord): string {
-    const pct = this.effectivePct(record);
-    if (pct === 100) return 'Perfect';
-    if (pct >= 80) return 'Mastered';
-    if (pct >= 60) return 'Almost there';
-    return 'Review';
+    switch (record.masteryState) {
+      case 'mastered':
+        return this.pct(record) === 100 ? 'Perfect' : 'Mastered';
+      case 'stabilising':
+        return 'Stabilising';
+      case 'needs_review':
+        return 'Needs review';
+      default:
+        return 'Completed';
+    }
   }
 
   historyBadgeClass(record: ProgressRecord): 'perfect' | 'mastered' | 'close' | 'review' {
-    const pct = this.effectivePct(record);
-    if (pct === 100) return 'perfect';
-    if (pct >= 80) return 'mastered';
-    if (pct >= 60) return 'close';
+    if (record.masteryState === 'mastered') {
+      return this.pct(record) === 100 ? 'perfect' : 'mastered';
+    }
+    if (record.masteryState === 'stabilising') return 'close';
     return 'review';
   }
 
@@ -384,6 +405,10 @@ export class ProgressComponent implements OnInit {
 
   reviewBadgeClass(scorePct: number): 'close' | 'review' {
     return scorePct >= 60 ? 'close' : 'review';
+  }
+
+  canRetryRecord(record: ProgressRecord): boolean {
+    return (record.masteryState ?? '') !== 'mastered' || this.effectivePct(record) < 100;
   }
 
   reviewStageLabel(item: ReviewRecommendation): string {
@@ -417,7 +442,9 @@ export class ProgressComponent implements OnInit {
     const attempts = record.attemptCount || 1;
     const bestPct = record.totalQuestions ? Math.round(((record.bestScore || record.score) / record.totalQuestions) * 100) : 0;
     const practicePart = record.practiceTotal > 0 ? ` · practice ${record.practiceScore}/${record.practiceTotal}` : '';
-    return `${attempts} ${attempts === 1 ? 'attempt' : 'attempts'} · best ${bestPct}% · effective ${this.effectivePct(record)}%${practicePart}`;
+    const overallPart = record.practiceTotal > 0 ? ` · overall ${this.effectivePct(record)}% incl. practice` : '';
+    const masteryPart = record.masteryState ? ` · ${this.historyBadgeLabel(record).toLowerCase()}` : '';
+    return `${attempts} ${attempts === 1 ? 'attempt' : 'attempts'} · best quiz ${bestPct}%${overallPart}${practicePart}${masteryPart}`;
   }
 
   mistakeSourceLabel(item: MistakeBankItem): string {

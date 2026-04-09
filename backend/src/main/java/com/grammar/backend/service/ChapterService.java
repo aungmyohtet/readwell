@@ -64,6 +64,9 @@ public class ChapterService {
       r.setAttemptCount(attemptCountOrLegacy(progress));
       r.setNextReviewAt(progress.getNextReviewAt());
       r.setReviewStage(progress.getReviewStage());
+      r.setMasteryState(masteryState(progress));
+    } else {
+      r.setMasteryState("not_started");
     }
     return r;
   }
@@ -87,8 +90,43 @@ public class ChapterService {
       r.setAttemptCount(attemptCountOrLegacy(progress));
       r.setNextReviewAt(progress.getNextReviewAt());
       r.setReviewStage(progress.getReviewStage());
+      r.setMasteryState(masteryState(progress));
+    } else {
+      r.setMasteryState("not_started");
     }
     return r;
+  }
+
+  private String masteryState(UserProgress progress) {
+    String reviewStage = storedOrDerivedReviewStage(progress);
+    int effectivePct = effectiveScorePct(progress);
+
+    if ("rescue".equals(reviewStage) || "due-now".equals(reviewStage)) {
+      return "needs_review";
+    }
+    if (effectivePct >= 90) {
+      return "mastered";
+    }
+    return "stabilising";
+  }
+
+  private String storedOrDerivedReviewStage(UserProgress progress) {
+    if (progress.getReviewStage() != null && !progress.getReviewStage().isBlank()) {
+      return progress.getReviewStage();
+    }
+    return effectiveScorePct(progress) < 60 ? "rescue" : effectiveScorePct(progress) < 80 ? "due-now" : "due-soon";
+  }
+
+  private int effectiveScorePct(UserProgress progress) {
+    int totalQuestions = Math.max(0, progress.getTotalQuestions());
+    int practiceTotal = Math.max(0, progress.getPracticeTotal());
+    int combinedTotal = totalQuestions + practiceTotal;
+    if (combinedTotal <= 0) {
+      return 0;
+    }
+
+    int combinedCorrect = Math.max(0, progress.getScore()) + Math.max(0, progress.getPracticeScore());
+    return Math.round((combinedCorrect * 100f) / combinedTotal);
   }
 
   private int attemptCountOrLegacy(UserProgress progress) {

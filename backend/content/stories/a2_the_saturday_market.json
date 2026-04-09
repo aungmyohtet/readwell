@@ -254,14 +254,14 @@
           "order": 5,
           "type": "multiple_choice",
           "prompt": "Choose the sentence that best fits Zoe's final opinion of the market.",
-          "correctAnswer": "It was the most interesting Saturday she had had in a while.",
-          "explanation": "Use the superlative because Zoe compares that Saturday with many other Saturdays.",
+          "correctAnswer": "It was the most interesting Saturday in a long time.",
+          "explanation": "Use the superlative because Zoe compares that Saturday with many other Saturdays she remembers.",
           "skillTag": "superlative_opinion",
           "options": [
-            "It was more interesting Saturday she had had in a while.",
-            "It was the most interesting Saturday she had had in a while.",
+            "It was more interesting Saturday in a long time.",
+            "It was the most interesting Saturday in a long time.",
             "It was the interestingest Saturday she had had in a while.",
-            "It was the more interesting Saturday she had had in a while."
+            "It was the more interesting Saturday in a long time."
           ]
         }
       ]

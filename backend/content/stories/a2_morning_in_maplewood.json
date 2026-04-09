@@ -119,8 +119,8 @@
           "options": [
             "Leo is checking his timetable every Wednesday before school.",
             "Leo checks his timetable every Wednesday before school.",
-            "Leo checks his timetable every Wednesday before school.",
-            "Leo does check his timetable every Wednesday before school."
+            "Leo check his timetable every Wednesday before school.",
+            "Leo does checks his timetable every Wednesday before school."
           ],
           "correctAnswer": "Leo checks his timetable every Wednesday before school.",
           "explanation": "Use the simple present for routines that happen regularly, like Leo's Wednesday habit.",
@@ -155,7 +155,8 @@
               "targetText": "eats",
               "highlightText": "s",
               "tone": "ending",
-              "note": "habit verb ending"
+              "note": "habit verb ending",
+              "occurrence": 1
             },
             {
               "targetText": "does not like",
@@ -173,7 +174,8 @@
               "targetText": "checks",
               "highlightText": "s",
               "tone": "ending",
-              "note": "he/she/it ending"
+              "note": "he/she/it ending",
+              "occurrence": 1
             },
             {
               "targetText": "there is",

@@ -23,4 +23,5 @@ public class ChapterDetailResponse {
   private int attemptCount;
   private Instant nextReviewAt;
   private String reviewStage;
+  private String masteryState;
 }

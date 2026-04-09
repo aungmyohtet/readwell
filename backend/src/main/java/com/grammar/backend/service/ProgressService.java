@@ -2,7 +2,9 @@ package com.grammar.backend.service;
 
 import com.grammar.backend.dto.ProgressResponse;
 import com.grammar.backend.dto.ProgressInsightsResponse;
+import com.grammar.backend.dto.RetrySessionResponse;
 import com.grammar.backend.dto.SubmitProgressRequest;
+import com.grammar.backend.dto.SubmitRetryRequest;
 import com.grammar.backend.model.Chapter;
 import com.grammar.backend.model.ProgressQuestionMistake;
 import com.grammar.backend.model.Story;
@@ -18,10 +20,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
@@ -122,6 +126,126 @@ public class ProgressService {
     return response;
   }
 
+  public RetrySessionResponse getRetrySession(String userId, String chapterId) {
+    Chapter chapter = chapterRepository.findById(chapterId).orElse(null);
+    UserProgress progress = progressRepository.findByUserIdAndChapterId(userId, chapterId).orElse(null);
+
+    RetrySessionResponse response = new RetrySessionResponse();
+    if (chapter == null) {
+      response.setQuizItems(List.of());
+      response.setPracticeItems(List.of());
+      return response;
+    }
+
+    response.setStoryId(chapter.getStoryId());
+    response.setChapterId(chapter.getId());
+    response.setChapterTitle(chapter.getTitle());
+    response.setChapterNumber(chapter.getChapterNumber());
+    response.setGrammarRule(chapter.getGrammarFocus() != null ? chapter.getGrammarFocus().getRule() : null);
+    storyRepository.findById(chapter.getStoryId()).map(Story::getTitle).ifPresent(response::setStoryTitle);
+
+    List<ProgressQuestionMistake> mistakes = progress != null && progress.getMistakes() != null ? progress.getMistakes() : List.of();
+    Map<Integer, ProgressQuestionMistake> quizMistakes = mistakes.stream()
+        .filter(mistake -> !"practice".equals(mistake.getSource()))
+        .collect(Collectors.toMap(ProgressQuestionMistake::getQuestionOrder, mistake -> mistake, (left, _right) -> left));
+    Map<Integer, ProgressQuestionMistake> practiceMistakes = mistakes.stream()
+        .filter(mistake -> "practice".equals(mistake.getSource()))
+        .collect(Collectors.toMap(ProgressQuestionMistake::getQuestionOrder, mistake -> mistake, (left, _right) -> left));
+
+    response.setQuizItems((chapter.getComprehension() == null ? List.<RetrySessionResponse.RetryQuizItem>of() : chapter.getComprehension().stream()
+        .filter(question -> quizMistakes.containsKey(question.getOrder()))
+        .map(question -> {
+          ProgressQuestionMistake mistake = quizMistakes.get(question.getOrder());
+          RetrySessionResponse.RetryQuizItem item = new RetrySessionResponse.RetryQuizItem();
+          item.setOrder(question.getOrder());
+          item.setQuestion(question.getQuestion());
+          item.setOptions(question.getOptions());
+          item.setPreviousAnswer(mistake.getSelectedAnswer());
+          item.setCorrectAnswer(question.getCorrectAnswer());
+          item.setExplanation(question.getExplanation());
+          return item;
+        })
+        .toList()));
+
+    response.setPracticeItems((chapter.getGrammarPractice() == null ? List.<RetrySessionResponse.RetryPracticeItem>of() : chapter.getGrammarPractice().stream()
+        .filter(item -> practiceMistakes.containsKey(item.getOrder()))
+        .map(item -> {
+          ProgressQuestionMistake mistake = practiceMistakes.get(item.getOrder());
+          RetrySessionResponse.RetryPracticeItem retryItem = new RetrySessionResponse.RetryPracticeItem();
+          retryItem.setOrder(item.getOrder());
+          retryItem.setType(item.getType());
+          retryItem.setPrompt(item.getPrompt());
+          retryItem.setOptions(item.getOptions());
+          retryItem.setPreviousAnswer(mistake.getSelectedAnswer());
+          retryItem.setCorrectAnswer(item.getCorrectAnswer());
+          retryItem.setExplanation(item.getExplanation());
+          retryItem.setSkillTag(item.getSkillTag());
+          return retryItem;
+        })
+        .toList()));
+
+    return response;
+  }
+
+  public ProgressResponse submitRetry(String userId, SubmitRetryRequest req) {
+    Chapter chapter = chapterRepository.findById(req.getChapterId()).orElse(null);
+    Optional<UserProgress> existing = progressRepository.findByUserIdAndChapterId(userId, req.getChapterId());
+
+    if (chapter == null || existing.isEmpty()) {
+      SubmitProgressRequest fallback = new SubmitProgressRequest();
+      fallback.setStoryId(req.getStoryId());
+      fallback.setChapterId(req.getChapterId());
+      fallback.setScore(0);
+      fallback.setTotalQuestions(Math.max(1, chapter != null && chapter.getComprehension() != null ? chapter.getComprehension().size() : 1));
+      fallback.setQuestionAttempts(req.getQuestionAttempts());
+      fallback.setGrammarPracticeAttempts(req.getGrammarPracticeAttempts());
+      return submit(userId, fallback);
+    }
+
+    UserProgress progress = existing.get();
+    List<ProgressQuestionMistake> priorMistakes = progress.getMistakes() != null ? progress.getMistakes() : List.of();
+    List<ProgressQuestionMistake> quizMistakes = mergeQuizMistakes(chapter, priorMistakes, req.getQuestionAttempts());
+    List<ProgressQuestionMistake> practiceMistakes = mergePracticeMistakes(chapter, priorMistakes, req.getGrammarPracticeAttempts());
+    List<ProgressQuestionMistake> mistakes = new ArrayList<>(quizMistakes);
+    mistakes.addAll(practiceMistakes);
+
+    int totalQuestions = chapter.getComprehension() != null ? chapter.getComprehension().size() : progress.getTotalQuestions();
+    int practiceTotal = chapter.getGrammarPractice() != null ? chapter.getGrammarPractice().size() : progress.getPracticeTotal();
+    int score = Math.max(0, totalQuestions - quizMistakes.size());
+    int practiceScore = Math.max(0, practiceTotal - practiceMistakes.size());
+    Instant completedAt = Instant.now();
+
+    UserProgressAttempt attempt = new UserProgressAttempt();
+    attempt.setUserId(userId);
+    attempt.setStoryId(req.getStoryId());
+    attempt.setChapterId(req.getChapterId());
+    attempt.setGrammarRule(progress.getGrammarRule());
+    attempt.setScore(score);
+    attempt.setTotalQuestions(totalQuestions);
+    attempt.setPracticeScore(practiceScore);
+    attempt.setPracticeTotal(practiceTotal);
+    attempt.setCompletedAt(completedAt);
+    attempt.setMistakes(mistakes);
+    attemptRepository.save(attempt);
+
+    int previousAttemptCount = attemptCountOrLegacy(progress);
+    int previousBestScore = bestScoreOrLegacy(progress);
+    int previousScore = progress.getScore();
+    progress.setScore(score);
+    progress.setBestScore(Math.max(previousBestScore, score));
+    progress.setPreviousScore(previousScore);
+    progress.setAttemptCount(previousAttemptCount + 1);
+    progress.setTotalQuestions(totalQuestions);
+    progress.setPracticeScore(practiceScore);
+    progress.setPracticeTotal(practiceTotal);
+    progress.setCompletedAt(completedAt);
+    progress.setMistakes(mistakes);
+    progress.setReviewStage(determineReviewStage(score, totalQuestions, practiceScore, practiceTotal));
+    progress.setNextReviewAt(determineNextReviewAt(completedAt, score, totalQuestions, practiceScore, practiceTotal));
+
+    return toResponse(progressRepository.save(progress));
+  }
+
   private List<ProgressQuestionMistake> buildQuizMistakes(Chapter chapter, SubmitProgressRequest req) {
     if (chapter == null || chapter.getComprehension() == null || req.getQuestionAttempts() == null) {
       return List.of();
@@ -153,6 +277,45 @@ public class ProgressService {
       mistakes.add(mistake);
     }
     return mistakes;
+  }
+
+  private List<ProgressQuestionMistake> mergeQuizMistakes(
+      Chapter chapter,
+      List<ProgressQuestionMistake> priorMistakes,
+      List<SubmitProgressRequest.QuestionAttemptRequest> retryAttempts) {
+    if (chapter == null || chapter.getComprehension() == null) {
+      return List.of();
+    }
+
+    Map<Integer, ProgressQuestionMistake> priorByOrder = priorMistakes.stream()
+        .filter(mistake -> !"practice".equals(mistake.getSource()))
+        .collect(Collectors.toMap(ProgressQuestionMistake::getQuestionOrder, mistake -> mistake, (left, _right) -> left));
+    Map<Integer, SubmitProgressRequest.QuestionAttemptRequest> retryByOrder = (retryAttempts == null ? List.<SubmitProgressRequest.QuestionAttemptRequest>of() : retryAttempts).stream()
+        .collect(Collectors.toMap(SubmitProgressRequest.QuestionAttemptRequest::getQuestionOrder, attempt -> attempt, (left, _right) -> left));
+
+    List<ProgressQuestionMistake> merged = new ArrayList<>();
+    for (Chapter.ComprehensionQuestion question : chapter.getComprehension()) {
+      SubmitProgressRequest.QuestionAttemptRequest retryAttempt = retryByOrder.get(question.getOrder());
+      if (retryAttempt != null) {
+        if (!Objects.equals(question.getCorrectAnswer(), retryAttempt.getSelectedAnswer())) {
+          ProgressQuestionMistake mistake = new ProgressQuestionMistake();
+          mistake.setQuestionOrder(question.getOrder());
+          mistake.setSource("quiz");
+          mistake.setQuestion(question.getQuestion());
+          mistake.setSelectedAnswer(retryAttempt.getSelectedAnswer());
+          mistake.setCorrectAnswer(question.getCorrectAnswer());
+          mistake.setExplanation(question.getExplanation());
+          merged.add(mistake);
+        }
+        continue;
+      }
+
+      ProgressQuestionMistake prior = priorByOrder.get(question.getOrder());
+      if (prior != null) {
+        merged.add(prior);
+      }
+    }
+    return merged;
   }
 
   private List<ProgressQuestionMistake> buildPracticeMistakes(Chapter chapter, SubmitProgressRequest req) {
@@ -187,6 +350,46 @@ public class ProgressService {
       mistakes.add(mistake);
     }
     return mistakes;
+  }
+
+  private List<ProgressQuestionMistake> mergePracticeMistakes(
+      Chapter chapter,
+      List<ProgressQuestionMistake> priorMistakes,
+      List<SubmitProgressRequest.GrammarPracticeAttemptRequest> retryAttempts) {
+    if (chapter == null || chapter.getGrammarPractice() == null) {
+      return List.of();
+    }
+
+    Map<Integer, ProgressQuestionMistake> priorByOrder = priorMistakes.stream()
+        .filter(mistake -> "practice".equals(mistake.getSource()))
+        .collect(Collectors.toMap(ProgressQuestionMistake::getQuestionOrder, mistake -> mistake, (left, _right) -> left));
+    Map<Integer, SubmitProgressRequest.GrammarPracticeAttemptRequest> retryByOrder = (retryAttempts == null ? List.<SubmitProgressRequest.GrammarPracticeAttemptRequest>of() : retryAttempts).stream()
+        .collect(Collectors.toMap(SubmitProgressRequest.GrammarPracticeAttemptRequest::getPracticeOrder, attempt -> attempt, (left, _right) -> left));
+
+    List<ProgressQuestionMistake> merged = new ArrayList<>();
+    for (Chapter.GrammarPracticeItem item : chapter.getGrammarPractice()) {
+      SubmitProgressRequest.GrammarPracticeAttemptRequest retryAttempt = retryByOrder.get(item.getOrder());
+      if (retryAttempt != null) {
+        if (!sameAnswer(item.getCorrectAnswer(), retryAttempt.getSelectedAnswer())) {
+          ProgressQuestionMistake mistake = new ProgressQuestionMistake();
+          mistake.setQuestionOrder(item.getOrder());
+          mistake.setSource("practice");
+          mistake.setSkillTag(item.getSkillTag());
+          mistake.setQuestion(item.getPrompt());
+          mistake.setSelectedAnswer(retryAttempt.getSelectedAnswer());
+          mistake.setCorrectAnswer(item.getCorrectAnswer());
+          mistake.setExplanation(item.getExplanation());
+          merged.add(mistake);
+        }
+        continue;
+      }
+
+      ProgressQuestionMistake prior = priorByOrder.get(item.getOrder());
+      if (prior != null) {
+        merged.add(prior);
+      }
+    }
+    return merged;
   }
 
   private int averageScorePct(List<UserProgress> history) {
@@ -333,6 +536,7 @@ public class ProgressService {
     r.setCompletedAt(p.getCompletedAt());
     r.setNextReviewAt(nextReviewAtOrFallback(p));
     r.setReviewStage(reviewStageOrFallback(p, Instant.now(), Instant.now().plus(Duration.ofDays(2))));
+    r.setMasteryState(masteryState(p));
 
     storyRepository.findById(p.getStoryId()).map(Story::getTitle).ifPresent(r::setStoryTitle);
     chapterRepository
@@ -508,6 +712,19 @@ public class ProgressService {
     }
     return determineReviewStage(
         progress.getScore(), progress.getTotalQuestions(), progress.getPracticeScore(), progress.getPracticeTotal());
+  }
+
+  private String masteryState(UserProgress progress) {
+    String reviewStage = storedOrDerivedReviewStage(progress);
+    int effectivePct = effectiveScorePct(progress);
+
+    if ("rescue".equals(reviewStage) || "due-now".equals(reviewStage)) {
+      return "needs_review";
+    }
+    if (effectivePct >= 90) {
+      return "mastered";
+    }
+    return "stabilising";
   }
 
   private int practicePct(UserProgress progress) {

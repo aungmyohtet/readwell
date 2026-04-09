@@ -1,8 +1,11 @@
 import { Component, OnInit, computed, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { catchError, of } from 'rxjs';
 import { AuthService } from '../../core/services/auth.service';
 import { ProgressService } from '../../core/services/progress.service';
 import { ProgressRecord } from '../../core/models/progress.model';
+import { PlacementResult } from '../../core/models/placement.model';
+import { PlacementService } from '../../core/services/placement.service';
 
 @Component({
   selector: 'app-profile',
@@ -25,7 +28,7 @@ import { ProgressRecord } from '../../core/models/progress.model';
         </div>
 
         <div class="hero-note card">
-          <span class="note-label">Current direction</span>
+          <span class="note-label">Reading identity</span>
           <strong>{{ focusMessage() }}</strong>
           <p>{{ focusDetail() }}</p>
           <div class="hero-note-meta">
@@ -75,6 +78,18 @@ import { ProgressRecord } from '../../core/models/progress.model';
             <a routerLink="/progress" class="btn btn-secondary">Review Progress</a>
           </div>
         </section>
+
+        <section class="card guidance-panel">
+          <span class="eyebrow">Placement</span>
+          <h2>{{ placementHeadline() }}</h2>
+          <p>{{ placementCopy() }}</p>
+          <div class="guidance-actions">
+            <a routerLink="/placement" class="btn btn-primary">{{ placement() ? 'Retake placement' : 'Start placement' }}</a>
+            @if (placement()) {
+              <a routerLink="/browse" class="btn btn-secondary">Open {{ placement()!.chosenLevel }} library</a>
+            }
+          </div>
+        </section>
       </div>
 
       <section class="profile-grid secondary-grid">
@@ -113,6 +128,7 @@ import { ProgressRecord } from '../../core/models/progress.model';
 })
 export class ProfileComponent implements OnInit {
   history = signal<ProgressRecord[]>([]);
+  placement = signal<PlacementResult | null>(null);
 
   readonly displayName = computed(() => this.auth.user()?.displayName || 'Reader');
   readonly email = computed(() => this.auth.user()?.email || '');
@@ -124,11 +140,15 @@ export class ProfileComponent implements OnInit {
   constructor(
     private auth: AuthService,
     private progressService: ProgressService,
+    private placementService: PlacementService,
   ) {}
 
   ngOnInit() {
     this.progressService.getHistory().subscribe({
       next: (records) => this.history.set(records),
+    });
+    this.placementService.getPlacement().pipe(catchError(() => of(null))).subscribe({
+      next: (result) => this.placement.set(result),
     });
   }
 
@@ -153,17 +173,17 @@ export class ProfileComponent implements OnInit {
   }
 
   focusMessage(): string {
-    if (!this.history().length) return 'Build your first reading habit';
-    if (this.averagePct() >= 85) return 'You are ready for harder chapters';
-    if (this.averagePct() >= 70) return 'Your comprehension is developing well';
-    return 'Slow down and review more deliberately';
+    if (!this.history().length) return 'You are still at the starting line';
+    if (this.averagePct() >= 85) return 'You look comfortable at the current level';
+    if (this.averagePct() >= 70) return 'You are building steadier control';
+    return 'You are still rebuilding confidence';
   }
 
   focusDetail(): string {
-    if (!this.history().length) return 'Start with one story chapter and aim to finish the quiz with feedback.';
-    if (this.averagePct() >= 85) return 'Try a higher-level story or revisit grammar mode to notice more nuanced patterns.';
-    if (this.averagePct() >= 70) return 'Keep going, but revisit incorrect answers and compare them with the highlighted grammar.';
-    return 'Re-read completed chapters with grammar highlighting turned on before attempting new material.';
+    if (!this.history().length) return 'One completed chapter is enough to turn this page from a placeholder into something useful.';
+    if (this.averagePct() >= 85) return 'Your results suggest the current level is manageable and that a harder path would not be unreasonable.';
+    if (this.averagePct() >= 70) return 'The base is there. What matters now is turning decent scores into steadier, repeatable control.';
+    return 'The fastest way forward is not more volume. It is cleaner review on the chapters you have already opened.';
   }
 
   readingIdentity(): string {
@@ -205,13 +225,28 @@ export class ProfileComponent implements OnInit {
 
   recommendationHeadline(): string {
     if (!this.history().length) return 'Begin with one complete chapter';
-    if (this.averagePct() < 80) return 'Review before adding difficulty';
-    return 'Continue while the momentum is strong';
+    if (this.averagePct() < 80) return 'Consolidate before stretching';
+    return 'Keep the current pace';
   }
 
   recommendation(): string {
     if (!this.history().length) return 'Choose a level-appropriate story and finish one full chapter today.';
-    if (this.averagePct() < 80) return 'Review your recent lower-scoring chapters and retry them before moving to a new story.';
-    return 'Continue to the next unlocked chapter or step up to a harder level if reading feels comfortable.';
+    if (this.averagePct() < 80) return 'Review your weaker recent chapters first, then add something new once the errors feel less noisy.';
+    return 'Continue to the next unlocked chapter and move up only if the current level is starting to feel easy.';
+  }
+
+  placementHeadline(): string {
+    const placement = this.placement();
+    if (!placement) return 'No placement saved yet';
+    return `${placement.chosenLevel} is your current library start point`;
+  }
+
+  placementCopy(): string {
+    const placement = this.placement();
+    if (!placement) return 'Take the short placement check so the library opens at a level that feels realistic from the first chapter.';
+    if (placement.chosenLevel !== placement.recommendedLevel) {
+      return `The placement check recommended ${placement.recommendedLevel}, but you chose ${placement.chosenLevel}. That override is saved and currently drives your starting band.`;
+    }
+    return `${placement.recommendedLevel} is the saved recommendation. Retake the check any time if your confidence or reading load has shifted.`;
   }
 }

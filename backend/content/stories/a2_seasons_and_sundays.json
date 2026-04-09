@@ -162,15 +162,15 @@
         {
           "order": 1,
           "type": "multiple_choice",
-          "prompt": "Choose the correct question.",
+          "prompt": "Choose the correct question about today's forecast.",
           "options": [
-            "Where Mia buys bread on Sundays?",
-            "Where does Mia buy bread on Sundays?",
-            "Where do Mia buys bread on Sundays?",
-            "Where is Mia buy bread on Sundays?"
+            "What the forecast says for today?",
+            "What does the forecast say for today?",
+            "What does say the forecast for today?",
+            "What is the forecast say for today?"
           ],
-          "correctAnswer": "Where does Mia buy bread on Sundays?",
-          "explanation": "Use does for present simple questions with he, she, or it.",
+          "correctAnswer": "What does the forecast say for today?",
+          "explanation": "Use does + subject + base verb for a present simple wh-question.",
           "skillTag": "present_simple_question_do_does"
         },
         {
