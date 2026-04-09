@@ -132,7 +132,7 @@
         },
         {
           "order": 3,
-          "text": "In the afternoons I have been working at a small café called Café Marta, two streets from the language school. The owner, Dolors, has been running the café for thirty-one years and speaks a Catalan dialect that I cannot follow at all. But her son, Marc, speaks slow and careful Spanish with me, and we have been having short conversations about the neighbourhood while I clear tables. Last Tuesday a customer asked me where the nearest metro station was, and I answered without thinking. Then I stood there for a moment, realising what had just happened. \"You answered before you even thought,\" Marc said later. It felt rewarding in a way that is hard to explain.",
+          "text": "In the afternoons I have been working at a small café called Café Marta, two streets from the language school. The owner, Dolors, has been running the café for thirty-one years and speaks a Catalan dialect that I cannot follow at all. But her son, Marc, speaks slowly and carefully with me, and we have been having short conversations about the neighbourhood while I clear tables. Last Tuesday a customer asked me where the nearest metro station was, and I answered without thinking. Then I stood there for a moment, realising what had just happened. \"You answered before you even thought,\" Marc said later. It felt rewarding in a way that is hard to explain.",
           "imagePlaceholder": "☕",
           "grammarAnnotations": [
             {
@@ -166,11 +166,6 @@
               "targetText": "have been getting up early",
               "tone": "structure",
               "note": "habit in progress"
-            },
-            {
-              "targetText": "the tourists arrive",
-              "tone": "structure",
-              "note": "present time reference inside description"
             }
           ]
         },

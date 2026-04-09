@@ -105,13 +105,13 @@
         },
         {
           "order": 2,
-          "text": "She pushed the gate open and went inside. The library smelled of old paper and wood polish and something faintly sweet she could not identify. A man in his mid-seventies sat behind the main desk, reading. He looked up without alarm. \"I saw the sign,\" Mara said. She was not sure what else to say. The man — his name badge read MR FENNICK — nodded slowly. \"If the council had listened to us three years ago, we wouldn't be in this situation,\" he said. \"We submitted a heritage petition. Thirty-seven signatures. They rejected it.\" He opened a drawer beneath the desk and placed a manila folder between them. \"But if you have a few minutes, and if you're interested in why this building matters, I think you should look at this.\"",
+          "text": "She pushed the gate open and went inside. The library smelled of old paper and wood polish and something faintly sweet she could not identify. A man in his mid-seventies sat behind the main desk, reading. He looked up without alarm. \"I saw the sign,\" Mara said. She was not sure what else to say. The man — his name badge read MR FENNICK — nodded slowly. \"If the council had listened to us three years ago, we might have saved the building,\" he said. \"We submitted a heritage petition. Thirty-seven signatures. They rejected it.\" He opened a drawer beneath the desk and placed a manila folder between them. \"But if you have a few minutes, and if you're interested in why this building matters, I think you should look at this.\"",
           "imagePlaceholder": "📖",
           "grammarAnnotations": [
             {
-              "targetText": "If the council had listened to us three years ago, we wouldn't be in this situation",
+              "targetText": "If the council had listened to us three years ago, we might have saved the building",
               "tone": "structure",
-              "note": "past cause, present result"
+              "note": "imagined different past result"
             },
             {
               "targetText": "if you have a few minutes, and if you're interested in why this building matters, I think you should look at this.",
@@ -144,11 +144,11 @@
         },
         {
           "order": 4,
-          "text": "Mara carried the folder to a corner table and read for an hour. The letters revealed that Agnes was not certain she would succeed. In one letter, written in the autumn of 1943, she wrote: \"If I had known at the outset how difficult this would be, I am not sure I would have started. But here is what I also know: if I hadn't started, no one else would have. And that thought, more than any other, is enough to keep me going.\" Mara read the lines three times and thought about the sign in the window and the thirty-seven signatures. Agnes's decision to continue had been pivotal. If the petition had reached more people, if someone with more influence had cared, would the building still be standing in fifty years? Would Agnes's legacy still be intact?",
+          "text": "Mara carried the folder to a corner table and read for an hour. The letters revealed that Agnes was not certain she would succeed. In one letter, written in the autumn of 1943, she wrote: \"If I had known at the outset how difficult this would be, I might not have started. But here is what I also know: if I hadn't started, no one else would have. And that thought, more than any other, is enough to keep me going.\" Mara read the lines three times and thought about the sign in the window and the thirty-seven signatures. Agnes's decision to continue had been pivotal. If the petition had reached more people, if someone with more influence had cared, might the building have been saved? Would Agnes's legacy still be intact?",
           "imagePlaceholder": "💭",
           "grammarAnnotations": [
             {
-              "targetText": "If I had known at the outset how difficult this would be, I am not sure I would have started.",
+              "targetText": "If I had known at the outset how difficult this would be, I might not have started.",
               "tone": "structure",
               "note": "imagined different past"
             },
@@ -158,7 +158,7 @@
               "note": "imaginary past consequence"
             },
             {
-              "targetText": "If the petition had reached more people, if someone with more influence had cared, would the building still be standing in fifty years?",
+              "targetText": "If the petition had reached more people, if someone with more influence had cared, might the building have been saved?",
               "tone": "question",
               "note": "layered hypothetical reflection"
             }
@@ -222,7 +222,7 @@
             "It uses it only in the grammar focus section, not in the story itself."
           ],
           "correctAnswer": "It uses it to reflect on past events — imagining different outcomes if Agnes or the community had acted differently.",
-          "explanation": "Throughout the story, Mr Fennick says 'If the council had listened... we wouldn't be in this situation.' Agnes writes 'If I hadn't started, no one else would have.' Mara thinks 'If the petition had reached more people...' These all use third conditional to reflect on how past choices shaped present reality."
+          "explanation": "Throughout the story, Mr Fennick says 'If the council had listened... we might have saved the building.' Agnes writes 'If I hadn't started, no one else would have.' Mara thinks 'If the petition had reached more people...' These all use third conditional to reflect on how past choices might have changed the outcome."
         },
         {
           "order": 3,
@@ -234,7 +234,7 @@
             "She was angry at the council for refusing to help her."
           ],
           "correctAnswer": "She doubted whether she would succeed, but chose to continue because she knew no one else would.",
-          "explanation": "In paragraph 4, Agnes writes: 'If I had known how difficult this would be, I am not sure I would have started. But if I hadn't started, no one else would have.' This directly expresses doubt alongside a reason to persist — she continued not from certainty, but from necessity."
+          "explanation": "In paragraph 4, Agnes writes: 'If I had known how difficult this would be, I might not have started. But if I hadn't started, no one else would have.' This directly expresses doubt alongside a reason to persist — she continued not from certainty, but from necessity."
         },
         {
           "order": 4,
