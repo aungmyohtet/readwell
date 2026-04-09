@@ -205,14 +205,19 @@ export class StoryDetailComponent implements OnInit {
 
   primaryChapter(): ChapterSummary | null {
     const chapters = this.chapters();
-    const reviewChapter = this.priorityReviewChapter();
-    if (reviewChapter) return reviewChapter;
-    return chapters.find((chapter, index) => !this.isLocked(index) && !chapter.completed) ?? chapters[0] ?? null;
+    const nextIncomplete = chapters.find((chapter, index) => !this.isLocked(index) && !chapter.completed) ?? null;
+    const urgentReviewChapter = this.priorityReviewChapter();
+    if (urgentReviewChapter) return urgentReviewChapter;
+    return nextIncomplete ?? chapters[0] ?? null;
   }
 
   priorityReviewChapter(): ChapterSummary | null {
     return this.chapters()
-      .filter((chapter) => chapter.completed && !!chapter.reviewStage)
+      .filter(
+        (chapter) =>
+          chapter.completed &&
+          (chapter.reviewStage === 'rescue' || chapter.reviewStage === 'due-now'),
+      )
       .sort((left, right) => {
         const stageDiff = this.reviewStagePriority(left.reviewStage) - this.reviewStagePriority(right.reviewStage);
         if (stageDiff !== 0) return stageDiff;

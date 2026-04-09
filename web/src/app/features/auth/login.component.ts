@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, effect, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../core/services/auth.service';
@@ -60,6 +60,9 @@ import { AuthService } from '../../core/services/auth.service';
             <button class="btn btn-google btn-full" (click)="signInGoogle()" [disabled]="loading()">
               <span class="google-mark">G</span> Continue with Google
             </button>
+            <button class="link-btn" type="button" (click)="signInGoogleInThisTab()" [disabled]="loading()">
+              Continue with Google in this tab
+            </button>
             <p class="switch-link">
               Don't have an account?
               <button class="link-btn" (click)="showSignUp.set(true)">Create one</button>
@@ -102,7 +105,13 @@ export class LoginComponent {
   constructor(
     private auth: AuthService,
     private router: Router,
-  ) {}
+  ) {
+    effect(() => {
+      if (this.auth.initialized() && this.auth.isLoggedIn()) {
+        this.router.navigate(['/browse']);
+      }
+    });
+  }
 
   async signIn() {
     this.error.set('');
@@ -137,10 +146,29 @@ export class LoginComponent {
       await this.auth.signInWithGoogle();
       this.router.navigate(['/browse']);
     } catch (e: any) {
+      if (this.shouldUseGoogleRedirect(e?.code)) {
+        await this.auth.signInWithGoogleRedirect();
+        return;
+      }
       this.error.set(this.friendlyError(e.code));
     } finally {
       this.loading.set(false);
     }
+  }
+
+  async signInGoogleInThisTab() {
+    this.error.set('');
+    this.loading.set(true);
+    try {
+      await this.auth.signInWithGoogleRedirect();
+    } catch (e: any) {
+      this.error.set(this.friendlyError(e.code));
+      this.loading.set(false);
+    }
+  }
+
+  private shouldUseGoogleRedirect(code?: string): boolean {
+    return code === 'auth/popup-blocked' || code === 'auth/web-storage-unsupported';
   }
 
   private friendlyError(code: string): string {
@@ -153,6 +181,8 @@ export class LoginComponent {
         return 'Email already in use. Try signing in.';
       case 'auth/weak-password':
         return 'Password must be at least 6 characters.';
+      case 'auth/popup-blocked':
+        return 'The Google sign-in popup was blocked. Try continuing with Google in this tab.';
       case 'auth/popup-closed-by-user':
         return 'Sign-in popup was closed.';
       default:

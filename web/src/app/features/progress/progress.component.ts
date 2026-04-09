@@ -120,6 +120,9 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
                       <strong>{{ item.storyTitle }}</strong>
                       <span>Ch. {{ item.chapterNumber }}: {{ item.chapterTitle }}</span>
                       <p>{{ item.grammarRule }} · {{ item.reason }}</p>
+                      @if (item.focusSkillLabel) {
+                        <span class="review-subskill">Focus skill: {{ item.focusSkillLabel }}</span>
+                      }
                       <span class="review-stage-label" [class.stage-rescue]="item.reviewStage === 'rescue'" [class.stage-now]="item.reviewStage === 'due-now'" [class.stage-soon]="item.reviewStage === 'due-soon'">
                         {{ reviewStageLabel(item) }}
                       </span>
@@ -127,6 +130,7 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
                     <div class="review-meta">
                       <span class="achievement-badge" [class.close]="reviewBadgeClass(item.lastScorePct) === 'close'" [class.review]="reviewBadgeClass(item.lastScorePct) === 'review'">{{ reviewBadgeLabel(item.lastScorePct) }}</span>
                       <div class="review-score">{{ item.lastScorePct }}%</div>
+                      <span class="review-score-note">quiz + practice</span>
                     </div>
                   </a>
                 }
@@ -151,6 +155,10 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
                   <div class="weak-area-chip card">
                     <strong>{{ area.grammarRule }}</strong>
                     <span>{{ area.missCount }} missed answers across {{ area.chapterCount }} chapter{{ area.chapterCount === 1 ? '' : 's' }}</span>
+                    @if (area.focusSkillLabel) {
+                      <div class="weak-area-skill">Focus skill: {{ area.focusSkillLabel }} · {{ area.focusSkillMissCount }} practice miss{{ area.focusSkillMissCount === 1 ? '' : 'es' }}</div>
+                    }
+                    <div class="weak-area-breakdown">Quiz {{ area.quizMissCount }} · Practice {{ area.practiceMissCount }}</div>
                   </div>
                 }
               </div>
@@ -210,7 +218,13 @@ import { MistakeBankItem, ProgressInsights, ProgressRecord, ReviewRecommendation
                       <strong>{{ item.storyTitle }} · Ch. {{ item.chapterNumber }}</strong>
                       <span>{{ formatMistakeDate(item.completedAt) }}</span>
                     </div>
-                    <div class="mistake-rule">{{ item.grammarRule }}</div>
+                    <div class="mistake-rule-row">
+                      <div class="mistake-rule">{{ item.grammarRule }}</div>
+                      <span class="mistake-source-badge" [class.practice]="item.source === 'practice'" [class.quiz]="item.source !== 'practice'">{{ mistakeSourceLabel(item) }}</span>
+                      @if (item.skillLabel) {
+                        <span class="mistake-skill-badge">{{ item.skillLabel }}</span>
+                      }
+                    </div>
                     <p class="mistake-question">Q{{ item.questionOrder }}. {{ item.question }}</p>
                     <p class="mistake-answer wrong-answer">Your answer: <strong>{{ item.selectedAnswer || 'No answer' }}</strong></p>
                     <p class="mistake-answer correct-answer">Correct answer: <strong>{{ item.correctAnswer }}</strong></p>
@@ -284,7 +298,7 @@ export class ProgressComponent implements OnInit {
   }
 
   strongestResult(): number {
-    return this.history().reduce((best, record) => Math.max(best, this.pct(record)), 0);
+    return this.history().reduce((best, record) => Math.max(best, this.effectivePct(record)), 0);
   }
 
   priorityReview(): ReviewRecommendation | null {
@@ -349,7 +363,7 @@ export class ProgressComponent implements OnInit {
   }
 
   historyBadgeLabel(record: ProgressRecord): string {
-    const pct = this.pct(record);
+    const pct = this.effectivePct(record);
     if (pct === 100) return 'Perfect';
     if (pct >= 80) return 'Mastered';
     if (pct >= 60) return 'Almost there';
@@ -357,7 +371,7 @@ export class ProgressComponent implements OnInit {
   }
 
   historyBadgeClass(record: ProgressRecord): 'perfect' | 'mastered' | 'close' | 'review' {
-    const pct = this.pct(record);
+    const pct = this.effectivePct(record);
     if (pct === 100) return 'perfect';
     if (pct >= 80) return 'mastered';
     if (pct >= 60) return 'close';
@@ -395,9 +409,18 @@ export class ProgressComponent implements OnInit {
     return `Due in ${dayDiff} days`;
   }
 
+  effectivePct(record: ProgressRecord): number {
+    return record.effectiveScorePct || this.pct(record);
+  }
+
   historyProgressMeta(record: ProgressRecord): string {
     const attempts = record.attemptCount || 1;
     const bestPct = record.totalQuestions ? Math.round(((record.bestScore || record.score) / record.totalQuestions) * 100) : 0;
-    return `${attempts} ${attempts === 1 ? 'attempt' : 'attempts'} · best ${bestPct}%`;
+    const practicePart = record.practiceTotal > 0 ? ` · practice ${record.practiceScore}/${record.practiceTotal}` : '';
+    return `${attempts} ${attempts === 1 ? 'attempt' : 'attempts'} · best ${bestPct}% · effective ${this.effectivePct(record)}%${practicePart}`;
+  }
+
+  mistakeSourceLabel(item: MistakeBankItem): string {
+    return item.source === 'practice' ? 'Practice' : 'Quiz';
   }
 }

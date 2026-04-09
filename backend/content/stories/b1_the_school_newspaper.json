@@ -5,7 +5,12 @@
     "level": "B1",
     "coverEmoji": "📰",
     "author": "ReadWell",
-    "tags": ["journalism", "school", "science", "teamwork"]
+    "tags": [
+      "journalism",
+      "school",
+      "science",
+      "teamwork"
+    ]
   },
   "chapters": [
     {
@@ -50,7 +55,7 @@
         }
       ],
       "grammarFocus": {
-        "rule": "Passive Voice \u2013 Present and Past",
+        "rule": "Passive Voice – Present and Past",
         "explanation": "We use the passive when we want to focus on what happened rather than who did it. We form the passive with 'be' + past participle. In the present simple, we use 'is/are + past participle'. In the past simple, we use 'was/were + past participle'. We can add 'by + agent' to say who or what performed the action, but we often leave this out when the agent is unknown or unimportant. Passive forms with modals use 'modal + be + past participle'.",
         "examples": [
           "The newspaper is published every two weeks. (present simple passive — no agent)",
@@ -58,6 +63,21 @@
           "Rosa's entry was judged by the science teachers and awarded first place. (past simple passive)",
           "Mistakes cannot be published — everything must be checked first. (passive with modal)",
           "The article will be reviewed by Ms Chen before it is sent to the printer. (future passive)"
+        ],
+        "formGuide": [
+          "Use the correct form of be plus the past participle.",
+          "Choose the tense of be based on whether the passive sentence is present or past.",
+          "Add by + agent only when the doer matters."
+        ],
+        "usageNotes": [
+          "Use the passive when the action or result matters more than the person doing it.",
+          "Use it often in news and reports where the focus is on what happened."
+        ],
+        "contrastWith": "The active voice focuses on the doer, while the passive focuses on the action or thing affected.",
+        "commonMistakes": [
+          "Using the wrong past participle after be.",
+          "Leaving out be in the passive form.",
+          "Using the active structure when the sentence needs passive emphasis."
         ]
       },
       "content": [
@@ -148,6 +168,60 @@
           "correctAnswer": "They are proud of their work and take their responsibility to publish accurate content seriously",
           "explanation": "The rule that 'everything was checked before it was published — and had never been broken' shows they take accuracy seriously. Jade's smile and 'another deadline met' shows quiet pride in their work."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct passive sentence.",
+          "correctAnswer": "The newspaper is printed every Friday.",
+          "explanation": "Use be + past participle in the passive voice.",
+          "skillTag": "passive_be_past_participle",
+          "options": [
+            "The newspaper prints every Friday.",
+            "The newspaper is printed every Friday.",
+            "The newspaper is print every Friday.",
+            "The newspaper was print every Friday."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: The final article was ___ by the editor.",
+          "correctAnswer": "checked",
+          "explanation": "Use the past participle after was in the passive.",
+          "skillTag": "past_participle_in_passive"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: The photos were took by Sam.",
+          "correctAnswer": "The photos were taken by Sam.",
+          "explanation": "The past participle of take is taken.",
+          "skillTag": "irregular_passive_participle"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite in the passive: The editor writes the headline.",
+          "correctAnswer": "The headline is written by the editor.",
+          "explanation": "Move the object to the subject position and use is written.",
+          "skillTag": "active_to_passive_present"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that sounds most like a newspaper report.",
+          "correctAnswer": "The article was published on the front page this morning.",
+          "explanation": "The passive keeps the focus on the article and the result.",
+          "skillTag": "reporting_passive",
+          "options": [
+            "The article published on the front page this morning.",
+            "The article was published on the front page this morning.",
+            "The article was publish on the front page this morning.",
+            "The article has publish on the front page this morning."
+          ]
+        }
       ]
     },
     {
@@ -200,6 +274,21 @@
           "He explained that the fair gave students a chance to investigate their own questions. (explain + that)",
           "Ms Chen asked whether they had included enough quotes from both sources. (asked whether — reported Yes/No question)",
           "Rosa confirmed that the experiment could be repeated at home. (modal backshift: can → could)"
+        ],
+        "formGuide": [
+          "Report the idea using a reporting verb like said, told, or asked.",
+          "Backshift the tense when needed, especially after a past reporting verb.",
+          "Use statement word order in reported questions."
+        ],
+        "usageNotes": [
+          "Use reported speech to retell what someone said without quoting every word.",
+          "Choose told when there is an object, and said when there is not."
+        ],
+        "contrastWith": "Direct speech uses quotation marks and the speaker's exact words. Reported speech changes the structure and often the tense.",
+        "commonMistakes": [
+          "Keeping question word order in a reported question.",
+          "Using told without an object.",
+          "Forgetting to backshift when the reporting verb is in the past."
         ]
       },
       "content": [
@@ -301,6 +390,60 @@
           ],
           "correctAnswer": "That good journalism gives voice to multiple sources rather than presenting a single perspective",
           "explanation": "Ms Chen is not checking spelling or structure — she specifically asks whether both sources are represented. This tells us that balance and multiple perspectives are what she considers the defining quality of a credible article."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct reported sentence.",
+          "correctAnswer": "Mia said that the meeting started at six.",
+          "explanation": "Reported speech often shifts the tense back one step.",
+          "skillTag": "backshift_past_simple",
+          "options": [
+            "Mia said that the meeting start at six.",
+            "Mia said that the meeting started at six.",
+            "Mia said the meeting starts at six yesterday.",
+            "Mia told that the meeting started at six."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Tom said he ___ tired after the interview. (be)",
+          "correctAnswer": "was",
+          "explanation": "The reported form of am or is here becomes was.",
+          "skillTag": "reported_be_was"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: She told that she needed more time.",
+          "correctAnswer": "She said that she needed more time.",
+          "explanation": "Use said that, or told someone that. Told cannot stand alone here.",
+          "skillTag": "said_that_vs_told"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Report the sentence: 'I cannot stay late,' Ben said.",
+          "correctAnswer": "Ben said that he could not stay late.",
+          "explanation": "Backshift cannot to could not in reported speech.",
+          "skillTag": "reported_modal_backshift"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the best reported version of the witness statement.",
+          "correctAnswer": "The student said that the editor had changed the headline.",
+          "explanation": "After a past reporting verb, the past perfect often fits to show the earlier action.",
+          "skillTag": "reported_earlier_action",
+          "options": [
+            "The student said that the editor changed the headline yesterday.",
+            "The student said that the editor had changed the headline.",
+            "The student told that the editor had changed the headline.",
+            "The student said had changed the editor the headline."
+          ]
         }
       ]
     }

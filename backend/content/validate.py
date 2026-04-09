@@ -35,6 +35,16 @@ def warn(msg):  print(f"  {YELLOW}[WARN]{RESET}  {msg}")
 def error(msg): print(f"  {RED}[ERR]{RESET}  {msg}")
 
 
+def count_dialogue_spans(text):
+    patterns = [
+        r'"[^"\n]+"',
+        r'“[^”\n]+”',
+        r"(?<![A-Za-z])'[^'\n]{2,}'(?![A-Za-z])",
+        r"(?<![A-Za-z])‘[^’\n]{2,}’(?![A-Za-z])",
+    ]
+    return sum(len(re.findall(pattern, text)) for pattern in patterns)
+
+
 # ─────────────────────────────────────────────
 # Load curriculum
 # ─────────────────────────────────────────────
@@ -240,12 +250,88 @@ def validate_story(file_path: Path) -> bool:
         if not grammar.get("explanation"):
             error("  grammarFocus.explanation is missing")
             errors += 1
+
+        optional_list_fields = ["formGuide", "usageNotes", "commonMistakes"]
+        for field in optional_list_fields:
+            value = grammar.get(field)
+            if value is None:
+                continue
+            if not isinstance(value, list) or not all(isinstance(item, str) and item.strip() for item in value):
+                error(f"  grammarFocus.{field} must be a non-empty string list when provided")
+                errors += 1
+            else:
+                ok(f"  grammarFocus.{field}: present ({len(value)} item(s))")
+
+        contrast = grammar.get("contrastWith")
+        if contrast is not None:
+            if not isinstance(contrast, str) or not contrast.strip():
+                error("  grammarFocus.contrastWith must be a non-empty string when provided")
+                errors += 1
+            else:
+                ok("  grammarFocus.contrastWith: present")
+
+        if level in ("A2", "B1", "B2") and not grammar.get("formGuide"):
+            warn("  grammarFocus.formGuide is missing — add structure notes so the grammar tab teaches form, not only meaning")
+            warnings += 1
+        if level in ("A2", "B1", "B2") and not grammar.get("usageNotes"):
+            warn("  grammarFocus.usageNotes is missing — add short teaching notes for when learners should use this form")
+            warnings += 1
+        if level in ("A2", "B1", "B2") and not grammar.get("commonMistakes"):
+            warn("  grammarFocus.commonMistakes is missing — add likely learner mistakes for stronger instruction")
+            warnings += 1
+
         examples = grammar.get("examples", [])
         if len(examples) < 3:
             warn(f"  grammarFocus has {len(examples)} example(s) — recommend at least 4")
             warnings += 1
         else:
             ok(f"  grammarFocus has {len(examples)} examples")
+
+        # ── Grammar practice checks ──
+        grammar_practice = ch.get("grammarPractice")
+        if grammar_practice is not None:
+            if not isinstance(grammar_practice, list):
+                error("  grammarPractice must be an array when provided")
+                errors += 1
+            else:
+                allowed_types = {
+                    "multiple_choice",
+                    "fill_blank",
+                    "error_correction",
+                    "sentence_transformation",
+                }
+                ok(f"  grammarPractice items: {len(grammar_practice)}")
+                for item in grammar_practice:
+                    order = item.get("order", "?")
+                    prefix = f"  grammarPractice item {order}"
+
+                    for field in ["order", "type", "prompt", "correctAnswer", "explanation"]:
+                        if field not in item or item[field] in (None, "", []):
+                            error(f"{prefix} missing {field}")
+                            errors += 1
+
+                    item_type = item.get("type")
+                    if item_type and item_type not in allowed_types:
+                        error(f"{prefix} has invalid type '{item_type}'")
+                        errors += 1
+
+                    options = item.get("options")
+                    if options is not None:
+                        if not isinstance(options, list) or not all(isinstance(opt, str) and opt.strip() for opt in options):
+                            error(f"{prefix} options must be a non-empty string list when provided")
+                            errors += 1
+                        elif item_type == "multiple_choice" and item.get("correctAnswer") not in options:
+                            error(f"{prefix} correctAnswer must exactly match one option for multiple_choice")
+                            errors += 1
+
+                    if item_type == "multiple_choice" and (not options or len(options) < 2):
+                        error(f"{prefix} multiple_choice items need at least 2 options")
+                        errors += 1
+
+                practice_recommendation = {"A2": 4, "B1": 5, "B2": 5}.get(level)
+                if practice_recommendation and len(grammar_practice) < practice_recommendation:
+                    warn(f"  grammarPractice has {len(grammar_practice)} item(s) — recommend at least {practice_recommendation} for {level}")
+                    warnings += 1
 
         # ── Comprehension checks ──
         questions = ch.get("comprehension", [])
@@ -279,12 +365,10 @@ def validate_story(file_path: Path) -> bool:
                 ok(f"  Q{q.get('order','?')}: structure valid")
 
         # ── Dialogue check ──
-        has_dialogue = '"' in all_text or '\u201c' in all_text or "'" in all_text
-        dialogue_count = all_text.count('"') + all_text.count('\u201c')
+        dialogue_count = count_dialogue_spans(all_text)
         min_dialogue = {"A2": 2, "B1": 3, "B2": 3}.get(level, 2)
-        # Rough check: count opening quotes
         if dialogue_count < min_dialogue:
-            warn(f"  Story may have too little dialogue ({dialogue_count} quote marks) — aim for natural conversation")
+            warn(f"  Story may have too little dialogue ({dialogue_count} dialogue span(s)) — aim for natural conversation")
             warnings += 1
         else:
             ok(f"  Dialogue present")
@@ -296,22 +380,59 @@ def validate_story(file_path: Path) -> bool:
                 warnings += 1
 
             annotations = p.get("grammarAnnotations", [])
+            if annotations is not None and not isinstance(annotations, list):
+                error(f"  Paragraph {p.get('order','?')} grammarAnnotations must be an array when provided")
+                errors += 1
+                continue
+
             for idx, annotation in enumerate(annotations, start=1):
+                if not isinstance(annotation, dict):
+                    error(f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} must be an object")
+                    errors += 1
+                    continue
+
                 target_text = annotation.get("targetText", "")
                 highlight_text = annotation.get("highlightText", "")
+                occurrence = annotation.get("occurrence")
                 if not target_text:
                     error(f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} is missing targetText")
                     errors += 1
                     continue
-                if target_text not in p.get("text", ""):
+
+                if occurrence is not None and (not isinstance(occurrence, int) or occurrence < 1):
+                    error(
+                        f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} occurrence must be a positive integer when provided"
+                    )
+                    errors += 1
+
+                paragraph_text = p.get("text", "")
+                target_count = len(re.findall(re.escape(target_text), paragraph_text))
+                if target_count == 0:
                     error(f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} targetText '{target_text}' does not appear in paragraph text")
                     errors += 1
+                elif occurrence is None and target_count > 1:
+                    warn(
+                        f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} targetText '{target_text}' appears {target_count} times — add occurrence to avoid ambiguous highlighting"
+                    )
+                    warnings += 1
+                elif isinstance(occurrence, int) and occurrence > target_count:
+                    error(
+                        f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} occurrence {occurrence} exceeds {target_count} matching targetText occurrence(s) in the paragraph"
+                    )
+                    errors += 1
+
                 if highlight_text and highlight_text not in target_text:
                     error(f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} highlightText '{highlight_text}' is not inside targetText '{target_text}'")
                     errors += 1
                 if highlight_text:
                     highlight_clean = highlight_text.strip().lower()
                     target_clean = target_text.strip().lower()
+                    highlight_count = len(re.findall(re.escape(highlight_text), target_text))
+                    if highlight_count > 1:
+                        warn(
+                            f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} highlightText '{highlight_text}' appears {highlight_count} times inside targetText — the reader will highlight only the first match"
+                        )
+                        warnings += 1
                     if len(highlight_clean) <= 3 and " " in target_clean and highlight_clean not in {"s", "es", "ed"}:
                         warn(
                             f"  Paragraph {p.get('order','?')} grammarAnnotation {idx} uses very short highlightText '{highlight_text}' inside a longer phrase — prefer a whole-word highlight unless teaching a true ending"

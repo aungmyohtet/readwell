@@ -5,7 +5,12 @@
     "level": "B1",
     "coverEmoji": "🏛️",
     "author": "ReadWell",
-    "tags": ["community", "volunteering", "learning", "friendship"]
+    "tags": [
+      "community",
+      "volunteering",
+      "learning",
+      "friendship"
+    ]
   },
   "chapters": [
     {
@@ -58,6 +63,21 @@
           "Mrs Obi is the person whose paintings are displayed in the corridor. (whose — possession)",
           "There were groups that supported elderly people who lived alone. (who — person, subject)",
           "Tom picked up a leaflet that listed every activity available that month. (that — thing, object)"
+        ],
+        "formGuide": [
+          "Place the relative clause directly after the noun it describes.",
+          "Use who for people, which or that for things, and where for places.",
+          "Do not use commas in defining relative clauses because the clause is necessary information."
+        ],
+        "usageNotes": [
+          "Use it when you need to identify exactly which person, thing, or place you mean.",
+          "Use it to combine two short ideas into one more natural sentence."
+        ],
+        "contrastWith": "Defining relative clauses give essential information, unlike non-defining ones, which only add extra detail.",
+        "commonMistakes": [
+          "Using which for people instead of who.",
+          "Adding commas around a defining relative clause.",
+          "Leaving the clause too far away from the noun it describes."
         ]
       },
       "content": [
@@ -148,6 +168,60 @@
           "correctAnswer": "He sees all the names of regular volunteers on the noticeboard and wants to join them",
           "explanation": "The text says Tom looked at the noticeboard 'covered in names — names of people who gave their time here every week. He decided he wanted to be one of them.'"
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence with a defining relative clause.",
+          "correctAnswer": "The volunteer who runs the cafe knows everyone.",
+          "explanation": "A defining relative clause identifies exactly which person we mean.",
+          "skillTag": "who_for_people",
+          "options": [
+            "The volunteer, who runs the cafe, knows everyone.",
+            "The volunteer who runs the cafe knows everyone.",
+            "The volunteer which runs the cafe knows everyone.",
+            "The volunteer who runs the cafe, knows everyone."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: The room ___ we meet is upstairs.",
+          "correctAnswer": "where",
+          "explanation": "Use where for a place in a relative clause.",
+          "skillTag": "where_for_place"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: The girl which teaches art is my neighbour.",
+          "correctAnswer": "The girl who teaches art is my neighbour.",
+          "explanation": "Use who for people.",
+          "skillTag": "who_for_people"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Combine the sentences: I borrowed a book. The book explains first aid.",
+          "correctAnswer": "I borrowed a book that explains first aid.",
+          "explanation": "Use that to join the information into one defining relative clause.",
+          "skillTag": "that_for_things"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that clearly identifies a person at the community centre.",
+          "correctAnswer": "The woman who organises the art class remembers every student's name.",
+          "explanation": "The relative clause shows exactly which woman is meant.",
+          "skillTag": "identifying_person_relative_clause",
+          "options": [
+            "The woman, who organises the art class, remembers every student's name.",
+            "The woman who organises the art class remembers every student's name.",
+            "The woman which organises the art class remembers every student's name.",
+            "The woman who organises the art class, remembers every student's name."
+          ]
+        }
       ]
     },
     {
@@ -200,6 +274,21 @@
           "Dana suggested spending at least twenty minutes a day on the exercises. (suggest + gerund)",
           "Tom did not want to fall behind the rest of the group. (want + infinitive)",
           "He had been avoiding anything too technical for years. (avoid + gerund)"
+        ],
+        "formGuide": [
+          "Some verbs are followed by the gerund, like enjoy, avoid, and suggest.",
+          "Some verbs are followed by the infinitive, like decide, hope, and want.",
+          "Learn the verb pattern as part of the verb, not as a separate rule."
+        ],
+        "usageNotes": [
+          "Check the main verb first because it controls the form that comes next.",
+          "Use the gerund for activities and the infinitive for intentions when the verb pattern requires it."
+        ],
+        "contrastWith": "Not every verb can take both forms. Suggest doing is correct, but suggest to do is not in this structure.",
+        "commonMistakes": [
+          "Using an infinitive after a verb that needs a gerund.",
+          "Using a gerund after a verb that needs an infinitive.",
+          "Adding to after a verb followed directly by a gerund."
         ]
       },
       "content": [
@@ -301,6 +390,60 @@
           ],
           "correctAnswer": "A structured routine involving real challenge and enjoyment that he had been avoiding without realising it",
           "explanation": "Paragraph 5 shows Tom genuinely looking forward to both classes. Combined with Q5's answer — that he regrets spending so long avoiding these things — the ending shows the centre gave him a meaningful weekly routine, not just a hobby."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct sentence.",
+          "correctAnswer": "She decided to join the class after school.",
+          "explanation": "Some verbs, like decide, are followed by the infinitive.",
+          "skillTag": "infinitive_after_decide",
+          "options": [
+            "She decided join the class after school.",
+            "She decided to join the class after school.",
+            "She decided joining the class after school.",
+            "She deciding to join the class after school."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Mina enjoys ___ new recipes at the centre.",
+          "correctAnswer": "trying",
+          "explanation": "Enjoy is followed by a gerund.",
+          "skillTag": "gerund_after_enjoy"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: They suggested to start earlier.",
+          "correctAnswer": "They suggested starting earlier.",
+          "explanation": "Suggest is followed by a gerund, not an infinitive.",
+          "skillTag": "gerund_after_suggest"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite beginning with Remember: Do not forget to lock the door.",
+          "correctAnswer": "Remember to lock the door.",
+          "explanation": "Remember + infinitive can be used for things we need to do.",
+          "skillTag": "remember_to_infinitive"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the best sentence about learning at the centre.",
+          "correctAnswer": "Rina enjoys helping in the kitchen, but she hopes to lead the class one day.",
+          "explanation": "Enjoy takes a gerund, while hope takes an infinitive.",
+          "skillTag": "mixed_gerund_infinitive_patterns",
+          "options": [
+            "Rina enjoys to help in the kitchen, but she hopes leading the class one day.",
+            "Rina enjoys helping in the kitchen, but she hopes to lead the class one day.",
+            "Rina enjoys helping in the kitchen, but she hopes lead the class one day.",
+            "Rina enjoys help in the kitchen, but she hopes to leading the class one day."
+          ]
         }
       ]
     }

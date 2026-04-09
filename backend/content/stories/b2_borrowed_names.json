@@ -5,7 +5,12 @@
     "level": "B2",
     "coverEmoji": "🏛️",
     "author": "ReadWell",
-    "tags": ["heritage", "identity", "culture", "family"]
+    "tags": [
+      "heritage",
+      "identity",
+      "culture",
+      "family"
+    ]
   },
   "chapters": [
     {
@@ -63,12 +68,27 @@
           "Ms Hargreaves, who had been overseeing the exhibition for four months, stood reviewing the floor plan.",
           "She lifted a photograph of a woman in a pale headscarf, who was looking slightly away from the camera.",
           "Her grandmother's comment stayed with her through dinner, which was not a comfortable meal."
+        ],
+        "formGuide": [
+          "Put commas around the extra information in a non-defining relative clause.",
+          "Use who for people and which for things.",
+          "Do not use that in most non-defining relative clauses."
+        ],
+        "usageNotes": [
+          "Use this structure when the listener already knows which person or thing you mean.",
+          "The clause adds extra detail but is not essential to identify the noun."
+        ],
+        "contrastWith": "Non-defining relative clauses add extra information, while defining relative clauses tell you exactly which person or thing is meant.",
+        "commonMistakes": [
+          "Leaving out the commas.",
+          "Using that instead of who or which.",
+          "Writing the clause as if it were essential information."
         ]
       },
       "content": [
         {
           "order": 1,
-          "text": "The archive room, which smelled of old cardboard and cold stone, was nothing like the gallery space upstairs. Amina had expected bright lights and neatly labelled items; instead she found three folding tables covered in folders, unlabelled boxes, and a dense stack of photographs that nobody had yet sorted into any order. Ms Hargreaves, who had been overseeing the exhibition for the past four months, stood at the far end reviewing a printout of the floor plan. She looked genuinely pleased to see Amina, which surprised her slightly, because the curator usually preferred working with objects rather than people. 'The community section still needs a student perspective,' Ms Hargreaves said, spreading the plan across the nearest table. 'And frankly, Amina, you are the one here who understands what this material means to families like yours.'",
+          "text": "The archive room, which smelled of old cardboard and cold stone, was nothing like the gallery space upstairs. Amina had expected bright lights and neatly labelled items; instead she found three folding tables covered in folders, unlabelled boxes, and unsorted photographs. Ms Hargreaves, who had been overseeing the exhibition for the past four months, stood at the far end reviewing the floor plan. 'The community section still needs a student perspective,' Ms Hargreaves said, spreading the plan across the nearest table. 'And frankly, Amina, you are the one here who understands what this material means to families like yours.'",
           "imagePlaceholder": "🏛️",
           "grammarAnnotations": [
             {
@@ -85,7 +105,7 @@
         },
         {
           "order": 2,
-          "text": "The photographs were mostly black and white, though a few had been printed from digital copies already stripped of colour. Women at street corners, men with luggage at dock gates, children in coats too large for them. Amina lifted an image of a woman in a pale headscarf, who was looking slightly away from the camera as if she understood a photograph was not quite the right container for what she was feeling. The caption read: Community arrival, 1968. Heritage preserved through family memory. Amina turned the photograph over. Nothing on the back. The word heritage, she thought, was doing a great deal of work in that single line. It was not wrong, exactly. It simply left out everything that made the arrival real.",
+          "text": "The photographs were mostly black and white, though a few had been printed from digital copies. Women at street corners, men with luggage at dock gates, children in coats too large for them. Amina lifted an image of a woman in a pale headscarf, who was looking slightly away from the camera as if she understood a photograph was not quite the right container for what she was feeling. The caption read: Community arrival, 1968. Heritage preserved through family memory. The word heritage, she thought, was doing a great deal of work. It was not wrong. It simply left out everything that made the arrival real.",
           "imagePlaceholder": "🖼️",
           "grammarAnnotations": [
             {
@@ -97,7 +117,7 @@
         },
         {
           "order": 3,
-          "text": "She found her grandmother's material in a smaller box near the window, where the morning light made the old paper curl at the corners. There were three letters, a programme from a ceremony Amina did not recognise, and a photograph of a young woman who could only be Nadia at twenty, standing beside a tree in what looked like a public park. None of the letters carried a full address. The diaspora the exhibition described as a unified movement had, in Nadia's case, begun with a borrowed coat and no working knowledge of the city buses. Amina turned the word representation over in her mind as she held the programme, whose cover showed a building she had never managed to identify. How accurately could seven photographs and three captions represent one person's actual passage through a life?",
+          "text": "She found her grandmother's material in a smaller box near the window, where the morning light made the old paper curl at the corners. There were three letters, a programme from a ceremony Amina did not recognise, and a photograph of a young woman who could only be Nadia at twenty, standing beside a tree in what looked like a park. The diaspora the exhibition described as a unified movement had, in Nadia's case, begun with a borrowed coat and no knowledge of the city buses. Amina turned the word representation over in her mind as she held the programme, whose cover showed a building she had never managed to identify. How accurately could seven photographs and three captions represent one person's passage through a life?",
           "imagePlaceholder": "📦",
           "grammarAnnotations": [
             {
@@ -114,7 +134,7 @@
         },
         {
           "order": 4,
-          "text": "That evening, Amina brought the photocopies home. Her grandmother, who had been reading at the kitchen table when Amina came in, took one look at the programme and set down her tea. For a moment she was quiet in a way that was not comfortable. 'They want to include this in the exhibition?' she said at last. Amina explained that the goal was to show how different communities had arrived in the city and begun to assimilate into daily life, each carrying their own culture and adapting gradually. Her grandmother's expression did not change, but something behind it did. 'Assimilate,' she repeated, as if testing whether the word would dissolve on her tongue. 'What they mean is that we stopped insisting quite so loudly. That is not the same thing at all.'",
+          "text": "That evening, Amina brought the photocopies home. Her grandmother, who had been reading at the kitchen table when Amina came in, took one look at the programme and set down her tea. 'They want to include this in the exhibition?' she said at last. Amina explained that the goal was to show how different communities had arrived in the city and begun to assimilate into daily life. Her grandmother's expression did not change, but something behind it did. 'Assimilate,' she repeated, as if testing whether the word would dissolve on her tongue. 'What they mean is that we stopped insisting quite so loudly. That is not the same thing at all.'",
           "imagePlaceholder": "🍵",
           "grammarAnnotations": [
             {
@@ -126,7 +146,7 @@
         },
         {
           "order": 5,
-          "text": "The comment, which Amina had not been quick enough to answer at the time, remained with her through dinner. She had believed the exhibition was doing something genuinely valuable; now she was less certain what the value was for. She raised the question of minority experience more carefully after the plates were cleared, asking whether there was a way the show could represent it without reducing it to a stereotype. Nadia put the photocopies back in careful order before answering. She said the difficulty with museum exhibitions was not dishonesty but tidiness. 'A stereotype,' she said, 'is not always a lie. It is a truth made too comfortable to challenge. People visit an exhibition and leave with the sense that they have understood something, which is sometimes worse than knowing nothing at all.'",
+          "text": "The comment, which Amina had not been quick enough to answer at the time, remained with her through dinner. She had believed the exhibition was doing something valuable; now she was less certain. She raised the question of minority experience more carefully after the plates were cleared, asking whether there was a way the show could represent it without reducing it to a stereotype. Nadia put the photocopies back in order before answering. She said the difficulty with museum exhibitions was not dishonesty but tidiness. 'A stereotype,' she said, 'is not always a lie. It is a truth made too comfortable to challenge. People visit an exhibition and leave with the sense that they have understood something, which is sometimes worse than knowing nothing at all.'",
           "imagePlaceholder": "🧵",
           "grammarAnnotations": [
             {
@@ -143,7 +163,7 @@
         },
         {
           "order": 6,
-          "text": "After dinner, Amina asked whether Nadia would be willing to meet Ms Hargreaves and speak directly about the archive material. Her grandmother considered this for longer than felt polite. 'The woman is thoughtful and skilled at her work,' Nadia said at last. 'But she has spent her career telling other people's histories, which gives her a particular kind of confidence I find tiring.' She paused, then continued more quietly. 'Still. I will come.' She folded the photocopies and returned them to Amina. 'I belong to a subculture your exhibition cannot name properly. But I can make sure it does not explain me incorrectly. That is different from agreeing to be explained.' Amina entered the appointment in her phone before her grandmother could consider changing her mind.",
+          "text": "After dinner, Amina asked whether Nadia would be willing to meet Ms Hargreaves and speak directly about the archive material. 'The woman is thoughtful and skilled at her work,' Nadia said at last. 'But she has spent her career telling other people's histories, which gives her a particular kind of confidence I find tiring.' 'Still. I will come.' She folded the photocopies and returned them to Amina. 'I belong to a subculture your exhibition cannot name properly. But I can make sure it does not explain me incorrectly. That is different from agreeing to be explained.'",
           "imagePlaceholder": "💬",
           "grammarAnnotations": [
             {
@@ -155,7 +175,7 @@
         },
         {
           "order": 7,
-          "text": "Walking to the bus stop later, Amina thought about the photograph of the woman looking sideways from the camera. The woman, whose name appeared in no caption, had understood something about the limits of images that was not yet in any exhibition plan. Amina had spent the afternoon believing the show would give those early arrivals a public voice; her grandmother had spent thirty years knowing the difference between a voice and a caption. She did not know yet how to repair the archive material, or whether repair was the right word for what it needed. But she understood now that the most important part of the whole project, which had not been scheduled into any timeline, was the conversation she had just had in a kitchen over cold tea.",
+          "text": "Walking to the bus stop later, Amina thought about the photograph of the woman looking sideways from the camera. The woman, whose name appeared in no caption, had understood something about the limits of images that was not yet in any exhibition plan. Amina had spent the afternoon believing the show would give those early arrivals a public voice; her grandmother had spent thirty years knowing the difference between a voice and a caption. She did not know yet how to repair the archive material. But she understood now that the most important part of the whole project, which had not been scheduled into any timeline, was the conversation she had just had over cold tea.",
           "imagePlaceholder": "✨",
           "grammarAnnotations": [
             {
@@ -244,6 +264,60 @@
           "correctAnswer": "She agrees but makes clear she will prevent misrepresentation, not simply endorse the exhibition",
           "explanation": "In paragraph 6, Nadia says she can make sure the exhibition does not explain her incorrectly, and adds: 'That is different from agreeing to be explained.' She will attend not to approve the exhibition but to correct it where necessary."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence with a non-defining relative clause.",
+          "correctAnswer": "The museum, which closes on Mondays, was full of visitors.",
+          "explanation": "Non-defining clauses add extra information and are separated by commas.",
+          "skillTag": "non_defining_which",
+          "options": [
+            "The museum which closes on Mondays was full of visitors.",
+            "The museum, which closes on Mondays, was full of visitors.",
+            "The museum, that closes on Mondays, was full of visitors.",
+            "The museum which, closes on Mondays, was full of visitors."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Mr Rahman, ___ works with my aunt, donated the photographs.",
+          "correctAnswer": "who",
+          "explanation": "Use who for extra information about a person.",
+          "skillTag": "non_defining_who"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: My sister, that lives in Seoul, is visiting next week.",
+          "correctAnswer": "My sister, who lives in Seoul, is visiting next week.",
+          "explanation": "That is not normally used in non-defining relative clauses.",
+          "skillTag": "non_defining_who"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Combine the sentences using a non-defining relative clause: Agnes Hartwell founded the library. She was a determined organiser.",
+          "correctAnswer": "Agnes Hartwell, who was a determined organiser, founded the library.",
+          "explanation": "Add the extra information between commas.",
+          "skillTag": "non_defining_who"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that adds extra information correctly.",
+          "correctAnswer": "The archive, which was closed for years, has reopened to the public.",
+          "explanation": "The clause is extra information, so commas and which are correct.",
+          "skillTag": "extra_information_relative_clause",
+          "options": [
+            "The archive which was closed for years has reopened to the public.",
+            "The archive, which was closed for years, has reopened to the public.",
+            "The archive, that was closed for years, has reopened to the public.",
+            "The archive which, was closed for years, has reopened to the public."
+          ]
+        }
       ]
     },
     {
@@ -301,12 +375,27 @@
           "What Amina had finally written was different from anything she had shown Ms Hargreaves.",
           "Never had Amina felt so precisely the distance between making something and releasing it.",
           "Rarely did a museum display begin by admitting its own limits."
+        ],
+        "formGuide": [
+          "Use a cleft sentence like what ... is ... to highlight one idea strongly.",
+          "Use inversion after negative or limiting adverbs such as rarely, never, or only later.",
+          "Keep the auxiliary before the subject in the inversion pattern."
+        ],
+        "usageNotes": [
+          "Use these structures to make a formal or emphatic point.",
+          "They are useful when a normal sentence would sound too flat."
+        ],
+        "contrastWith": "These forms are marked and emphatic. A simple sentence communicates the idea, but the cleft or inversion structure places special focus on it.",
+        "commonMistakes": [
+          "Forgetting inversion after only or rarely.",
+          "Building the cleft sentence without a complete second half.",
+          "Using these forms when the sentence actually needs plain word order."
         ]
       },
       "content": [
         {
           "order": 1,
-          "text": "The gallery looked different with guests in it. What had seemed like an arrangement of photographs and objects during the preparation week had become, in the forty minutes since the doors opened, something closer to a story being read in real time. Amina stood near the entrance watching people move through the composition of panels and cases Ms Hargreaves had spent two months refining. Some visitors slowed at the evocative black-and-white photographs; others moved directly to the text blocks without pausing. Never had Amina felt so precisely the distance between making something and releasing it. Her grandmother, who had arrived early and taken a seat near the window, had not yet looked at the exhibition at all. She was watching the visitors instead.",
+          "text": "The gallery looked different with guests. What had seemed like an arrangement of photographs and objects during the preparation week had become, in the forty minutes since the doors opened, something closer to a story being read in real time. Amina stood near the entrance watching people move through the panels and cases Ms Hargreaves had spent two months refining. Some visitors slowed at the evocative black-and-white photographs; others moved directly to the text blocks. Never had Amina felt so precisely the distance between making something and releasing it. Her grandmother, who had arrived early and taken a seat near the window, had not yet looked at the exhibition. She was watching the visitors instead.",
           "imagePlaceholder": "🕯️",
           "grammarAnnotations": [
             {
@@ -318,7 +407,7 @@
         },
         {
           "order": 2,
-          "text": "Ms Hargreaves had asked Amina to say a few words about what the project meant to her personally. The speech, which Amina had rewritten four times, was folded in her jacket pocket. She had discarded an earlier draft that opened with the official narrative of her grandmother's arrival — it had read correctly but resonated with nobody she had shown it to, including herself. What she had finally written was different from anything she had shown Ms Hargreaves. It began not with heritage but with a missing address on the back of a letter, and it argued that the most honest thing the exhibition could do was acknowledge what it could not contain. She was not certain Ms Hargreaves would welcome that. She was quite certain her grandmother would.",
+          "text": "Ms Hargreaves had asked Amina to say a few words about what the project meant to her. The speech, which Amina had rewritten four times, was folded in her jacket pocket. She had discarded an earlier draft that opened with the official narrative of her grandmother's arrival — it had read correctly but resonated with nobody she had shown it to. What she had finally written was different from anything she had shown Ms Hargreaves. It began with a missing address on the back of a letter, and it argued that the most honest thing the exhibition could do was acknowledge what it could not contain. She was not certain Ms Hargreaves would welcome that. She was quite certain her grandmother would.",
           "imagePlaceholder": "🎤",
           "grammarAnnotations": [
             {
@@ -330,7 +419,7 @@
         },
         {
           "order": 3,
-          "text": "The gallery light was warm and even in the way only careful planning produced. Amina moved through the room while she waited, stopping at the panel that included the photograph of the woman in the pale headscarf, which had been enlarged to fill most of the display space. The composition placed it beside a contemporary image of the same street photographed from the same angle — Ms Hargreaves had described this pairing as a way of showing continuity. Amina looked at the two images together and felt the metaphor working and failing simultaneously. Continuity was the right word for what had been framed, but not for what it was actually framing. The woman in the headscarf was not a symbol of continuity. She had simply been alive.",
+          "text": "The gallery light was warm and even in the way only careful planning produced. Amina moved through the room while she waited, stopping at the panel that included the photograph of the woman in the pale headscarf, which had been enlarged to fill most of the display space. The composition placed it beside a contemporary image of the same street photographed from the same angle. Amina looked at the two images together and felt the metaphor working and failing at the same time. Continuity was the right word for what had been framed, but not for what it was actually framing. The woman in the headscarf was not a symbol of continuity. She had simply been alive.",
           "imagePlaceholder": "🖼️",
           "grammarAnnotations": [
             {
@@ -342,7 +431,7 @@
         },
         {
           "order": 4,
-          "text": "When Ms Hargreaves introduced her, Amina stepped forward. It was not the audience that made her pause but the ambiguous expression on her grandmother's face, which she could not interpret from across the room. She unfolded the speech, then refolded it, then set it on the table beside her. She spoke from her notes instead. She said that what the exhibition showed was real, documented, and carefully prepared. She said that what it could not show was the space between the documents: the borrowed coat, the wrong bus, the forty years that passed before anyone called it heritage. Rarely did a museum display begin by admitting its own limits, she added, and she was not claiming this one did. She wanted the visitors to leave holding an ambiguous feeling rather than a satisfied one.",
+          "text": "When Ms Hargreaves introduced her, Amina stepped forward. It was not the audience that made her pause but the ambiguous expression on her grandmother's face, which she could not interpret from across the room. She set the speech on the table beside her. She spoke from her notes instead. She said that what the exhibition showed was real, documented, and carefully prepared. She said that what it could not show was the space between the documents: the borrowed coat, the wrong bus, the forty years that passed before anyone called it heritage. Rarely did a museum display begin by admitting its own limits, she added, and she was not claiming this one did. She wanted visitors to leave holding an ambiguous feeling rather than a satisfied one.",
           "imagePlaceholder": "👥",
           "grammarAnnotations": [
             {
@@ -359,7 +448,7 @@
         },
         {
           "order": 5,
-          "text": "There was more quiet than applause when she finished. Ms Hargreaves smiled with a precision that suggested she was processing rather than responding. Three visitors near the far wall exchanged a look that seemed to resonate: not quite discomfort, not quite recognition, but something between the two that only an honest metaphor could have produced. What Amina had needed, she understood now, was not approval but accuracy. She folded the unused speech and returned it to her pocket. Her grandmother had turned, finally, to look at the exhibition. She had stopped in front of the woman in the headscarf. Her expression was no longer ambiguous. It was private, and that felt more truthful than anything else the evening had produced.",
+          "text": "There was quiet when she finished. Ms Hargreaves smiled with a precision that suggested she was processing. Three visitors near the far wall exchanged a look that seemed to resonate: not quite discomfort, not quite recognition, but something between the two an honest metaphor could have produced. What Amina had needed, she understood now, was not approval but accuracy. Her grandmother had turned to look at the exhibition. She had stopped in front of the woman in the headscarf. Her expression was no longer ambiguous. It was private, and that felt more truthful than anything else the evening produced.",
           "imagePlaceholder": "💡",
           "grammarAnnotations": [
             {
@@ -371,7 +460,7 @@
         },
         {
           "order": 6,
-          "text": "Ms Hargreaves joined Amina near the back wall once the crowd began to thin. She said that what Amina had done with the speech had surprised her, and that surprise, in this case, was a positive thing. 'You made it harder,' she said, 'which I think was correct.' She paused. 'It was the framing, not the material, that needed to change. I should have seen that before tonight.' Amina said the existing panels were still worth preserving. 'Can you come back Thursday?' Ms Hargreaves asked. 'I would like to get your perspective included in the revision.' Amina said she would. It was, she thought, the first time the curator had asked rather than directed, which was itself a kind of progress.",
+          "text": "Ms Hargreaves joined Amina near the back wall once the crowd began to thin. She said that what Amina had done with the speech had surprised her, and that surprise, in this case, was a positive thing. 'You made it harder,' she said, 'which I think was correct.' 'It was the framing, not the material, that needed to change. I should have seen that before tonight.' Amina said the existing panels were still worth preserving. 'Can you come back Thursday?' Ms Hargreaves asked. 'I would like to get your perspective included in the revision.' Amina said she would.",
           "imagePlaceholder": "🤝",
           "grammarAnnotations": [
             {
@@ -383,7 +472,7 @@
         },
         {
           "order": 7,
-          "text": "After the guests had gone, Amina sat with her grandmother in the empty gallery while the cleaners worked in the corridor outside. The lights were still at full brightness, which made everything look more resolved than it felt. Her grandmother said only one thing about the speech: 'You did not explain me. You left room.' Amina had spent two weeks thinking about the exhibition's capacity to represent or misrepresent. What she had not anticipated was that the most important response would be those four words, offered without sentiment, resonating precisely because they were so carefully chosen. Her grandmother stood, straightened her coat, and said she was ready to go. Some things, Amina thought, resisted being interpreted into lessons. That was, she suspected, exactly the point.",
+          "text": "After the guests had gone, Amina sat with her grandmother in the empty gallery while the cleaners worked in the corridor outside. The lights were still at full brightness, which made everything look more resolved than it felt. Her grandmother said only one thing about the speech: 'You did not explain me. You left room.' Amina had spent two weeks thinking about the exhibition's capacity to represent or misrepresent. What she had not anticipated was that the most important response would be those four words, offered without sentiment, resonating because they were carefully chosen. Her grandmother stood, straightened her coat, and said she was ready to go. Some things, Amina thought, resisted being interpreted into lessons. That was exactly the point.",
           "imagePlaceholder": "🌃",
           "grammarAnnotations": [
             {
@@ -466,6 +555,60 @@
           ],
           "correctAnswer": "That she valued being represented without being reduced to a single finished interpretation",
           "explanation": "Throughout both chapters Nadia has resisted simplification. Her final comment praises Amina for exactly that: speaking about her without turning her into a lesson or a symbol. Leaving room means allowing complexity to remain."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the cleft sentence.",
+          "correctAnswer": "What the label leaves out is the human story.",
+          "explanation": "A what-cleft gives special emphasis to one part of the message.",
+          "skillTag": "what_cleft",
+          "options": [
+            "The label leaves out what is the human story.",
+            "What the label leaves out is the human story.",
+            "What does the label leave out is the human story.",
+            "The human story is what the label leaves out it."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Rarely ___ a single object change the mood of a room so quickly.",
+          "correctAnswer": "does",
+          "explanation": "After a negative adverb like rarely, use inversion with does.",
+          "skillTag": "inversion_after_negative_adverb"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: Only later I understood the full meaning.",
+          "correctAnswer": "Only later did I understand the full meaning.",
+          "explanation": "Use inversion after only + time expression.",
+          "skillTag": "inversion_after_only"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite as a cleft sentence: The missing name mattered most.",
+          "correctAnswer": "What mattered most was the missing name.",
+          "explanation": "Use a what-cleft to emphasise the important idea.",
+          "skillTag": "what_cleft"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence with correct inversion after a limiting phrase.",
+          "correctAnswer": "Only later did Nadia understand what the label omitted.",
+          "explanation": "After only later, the auxiliary comes before the subject.",
+          "skillTag": "inversion_after_limiting_phrase",
+          "options": [
+            "Only later Nadia understood what the label omitted.",
+            "Only later did Nadia understand what the label omitted.",
+            "Only later did Nadia understood what the label omitted.",
+            "Only later Nadia did understand what the label omitted."
+          ]
         }
       ]
     }

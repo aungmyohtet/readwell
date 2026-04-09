@@ -15,7 +15,12 @@ public class ProgressInsightsResponse {
   public static class GrammarWeakness {
     private String grammarRule;
     private int missCount;
+    private int quizMissCount;
+    private int practiceMissCount;
     private int chapterCount;
+    private String focusSkillTag;
+    private String focusSkillLabel;
+    private int focusSkillMissCount;
   }
 
   @Data
@@ -30,6 +35,8 @@ public class ProgressInsightsResponse {
     private Instant nextReviewAt;
     private String reviewStage;
     private String reason;
+    private String focusSkillTag;
+    private String focusSkillLabel;
   }
 
   @Data
@@ -41,6 +48,9 @@ public class ProgressInsightsResponse {
     private int chapterNumber;
     private String grammarRule;
     private int questionOrder;
+    private String source;
+    private String skillTag;
+    private String skillLabel;
     private String question;
     private String selectedAnswer;
     private String correctAnswer;

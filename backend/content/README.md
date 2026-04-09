@@ -51,6 +51,17 @@ To start the full app from the repo root, use:
         "explanation": "Explanation of the rule.",
         "examples": ["Example 1.", "Example 2."]
       },
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct sentence.",
+          "options": ["Option A", "Option B", "Option C", "Option D"],
+          "correctAnswer": "Option B",
+          "explanation": "Why this answer is correct.",
+          "skillTag": "he_she_it_endings"
+        }
+      ],
       "content": [
         {
           "order": 1,

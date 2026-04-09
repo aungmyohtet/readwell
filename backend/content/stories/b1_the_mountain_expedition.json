@@ -5,7 +5,12 @@
     "level": "B1",
     "coverEmoji": "⛰️",
     "author": "ReadWell",
-    "tags": ["adventure", "teamwork", "nature", "challenge"]
+    "tags": [
+      "adventure",
+      "teamwork",
+      "nature",
+      "challenge"
+    ]
   },
   "chapters": [
     {
@@ -51,6 +56,21 @@
           "They have trained for eight weeks. (duration — started in past, relevant now)",
           "Mr Osei has led groups up this mountain for twelve years. (ongoing situation)",
           "Maya has signed up for the expedition on impulse — and now she wonders if it was right. (recent action with present consequence)"
+        ],
+        "formGuide": [
+          "Use has or have plus the past participle.",
+          "Choose has with he, she, or it and have with I, you, we, or they.",
+          "Use words like already, yet, ever, never, since, and for when they help show the time link."
+        ],
+        "usageNotes": [
+          "Use it for experiences, recent results, and situations that started in the past and still matter now.",
+          "Use it when the exact finished past time is not the main focus."
+        ],
+        "contrastWith": "Do not use the present perfect with a finished past-time marker like yesterday or last year. Use the simple past for those.",
+        "commonMistakes": [
+          "Using the past simple after has or have.",
+          "Choosing has or have with the wrong subject.",
+          "Mixing the present perfect with a finished time expression."
         ]
       },
       "content": [
@@ -68,6 +88,11 @@
               "targetText": "had signed up for the expedition on impulse",
               "tone": "structure",
               "note": "past action with present consequence"
+            },
+            {
+              "targetText": "was beginning to wonder",
+              "tone": "aux",
+              "note": "developing thought in the past"
             }
           ]
         },
@@ -85,6 +110,11 @@
               "targetText": "had led groups up this mountain for twelve years",
               "tone": "structure",
               "note": "long experience"
+            },
+            {
+              "targetText": "We will go steadily and we will reach it.",
+              "tone": "aux",
+              "note": "future reassurance"
             }
           ]
         },
@@ -102,6 +132,11 @@
               "targetText": "had never been on a hiking trip either",
               "tone": "structure",
               "note": "past experience"
+            },
+            {
+              "targetText": "was already affecting her",
+              "tone": "aux",
+              "note": "ongoing past effect"
             }
           ]
         },
@@ -119,6 +154,11 @@
               "targetText": "I've never done anything like this",
               "tone": "structure",
               "note": "experience up to now"
+            },
+            {
+              "targetText": "I've learned that seeming nervous and being nervous are two different things.",
+              "tone": "aux",
+              "note": "lesson with present relevance"
             }
           ]
         },
@@ -136,6 +176,11 @@
               "targetText": "has never been someone who gave up easily",
               "tone": "structure",
               "note": "life experience and identity"
+            },
+            {
+              "targetText": "has never been tested quite like this",
+              "tone": "aux",
+              "note": "experience up to that point"
             }
           ]
         }
@@ -144,7 +189,12 @@
         {
           "order": 1,
           "question": "How long has Mr Osei been leading groups up the mountain?",
-          "options": ["Eight weeks", "Two years", "Twelve years", "Since the previous September"],
+          "options": [
+            "Eight weeks",
+            "Two years",
+            "Twelve years",
+            "Since the previous September"
+          ],
           "correctAnswer": "Twelve years",
           "explanation": "Paragraph 2 says: 'Mr Osei, their guide, had led groups up this mountain for twelve years.' This uses the past perfect because the narration is set in the past, but it reflects the same meaning as the present perfect."
         },
@@ -196,6 +246,60 @@
           "correctAnswer": "That her emotions are immediately visible to anyone who looks at her",
           "explanation": "A window with no curtain lets anyone see straight through it. The metaphor suggests Maya cannot hide her feelings — her face shows exactly what she is experiencing. This explains why she finds it difficult to project calm when she is nervous, unlike Zara."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly uses the present perfect.",
+          "correctAnswer": "The team has climbed three training routes this week.",
+          "explanation": "Use has or have with the past participle.",
+          "skillTag": "have_has_past_participle",
+          "options": [
+            "The team has climb three training routes this week.",
+            "The team has climbed three training routes this week.",
+            "The team climbed three training routes this week and still does.",
+            "The team has climbing three training routes this week."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Maya ___ already packed her safety kit.",
+          "correctAnswer": "has",
+          "explanation": "Use has with a third-person singular subject.",
+          "skillTag": "have_has_agreement"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: They have went above the tree line before.",
+          "correctAnswer": "They have gone above the tree line before.",
+          "explanation": "After has or have, use the past participle gone.",
+          "skillTag": "past_participle_choice"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite using the present perfect with for: Leo trains every weekend. He started three months ago and still does it.",
+          "correctAnswer": "Leo has trained every weekend for three months.",
+          "explanation": "Use the present perfect with for to connect the past to the present.",
+          "skillTag": "duration_for_since"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that best fits a progress update during the expedition.",
+          "correctAnswer": "The team has reached base camp three times this month.",
+          "explanation": "Use the present perfect because this month is still connected to now.",
+          "skillTag": "unfinished_time_present_perfect",
+          "options": [
+            "The team reached base camp three times this month and still does.",
+            "The team has reached base camp three times this month.",
+            "The team has reach base camp three times this month.",
+            "The team is reached base camp three times this month."
+          ]
+        }
       ]
     },
     {
@@ -241,6 +345,21 @@
           "How long have you been feeling like this? — Since about the second hour.",
           "Zara has been watching the path, not the other students, and she's making steadier progress.",
           "I've been telling myself I can do this since yesterday evening."
+        ],
+        "formGuide": [
+          "Use has or have been plus the -ing form of the verb.",
+          "Use since for the starting point and for for the duration.",
+          "Keep the focus on the activity or its duration, not just the finished result."
+        ],
+        "usageNotes": [
+          "Use it for actions that started in the past and are still happening now.",
+          "Use it when a recent activity explains a present result, like tiredness or progress."
+        ],
+        "contrastWith": "Compare it with the present perfect simple. The continuous focuses on the ongoing activity; the simple often focuses on the completed result.",
+        "commonMistakes": [
+          "Leaving out been before the -ing form.",
+          "Using the past participle after been instead of the -ing form.",
+          "Choosing the continuous when the sentence is really about a finished amount or result."
         ]
       },
       "content": [
@@ -258,6 +377,11 @@
               "targetText": "had been leading people through it for years",
               "tone": "structure",
               "note": "duration before now"
+            },
+            {
+              "targetText": "had trained consistently for eight weeks",
+              "tone": "aux",
+              "note": "background effort before the climb"
             }
           ]
         },
@@ -270,6 +394,11 @@
               "targetText": "had been walking on flat ground for most of her life",
               "tone": "aux",
               "note": "long background situation"
+            },
+            {
+              "targetText": "had trained in a gym",
+              "tone": "structure",
+              "note": "earlier preparation"
             }
           ]
         },
@@ -287,6 +416,11 @@
               "targetText": "He's been running ahead since we started.",
               "tone": "structure",
               "note": "action continuing from the start"
+            },
+            {
+              "targetText": "were falling behind",
+              "tone": "aux",
+              "note": "action in progress in the past"
             }
           ]
         },
@@ -305,6 +439,11 @@
               "targetText": "I've been watching you,",
               "tone": "structure",
               "note": "action over recent time"
+            },
+            {
+              "targetText": "They had been climbing for three hours.",
+              "tone": "aux",
+              "note": "duration before the rest stop moment"
             }
           ]
         },
@@ -322,6 +461,11 @@
               "targetText": "You've been working hard today,",
               "tone": "structure",
               "note": "today so far"
+            },
+            {
+              "targetText": "had not stopped when she wanted to",
+              "tone": "aux",
+              "note": "completed resistance during the climb"
             }
           ]
         }
@@ -387,6 +531,60 @@
           "correctAnswer": "Because reaching the camp after sustained effort produces a satisfaction that difficulty alone cannot",
           "explanation": "The vocabulary definition introduces 'rewarding' as producing satisfaction from effort. Zara uses the word here to complete a promise she made earlier in the chapter. The exhaustion and the reward are not opposites — they come together, as the word 'deeply rewarding' suggests."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly uses the present perfect continuous.",
+          "correctAnswer": "Nadia has been translating interviews all morning.",
+          "explanation": "Use has or have been plus verb-ing for an activity continuing until now.",
+          "skillTag": "have_been_ing",
+          "options": [
+            "Nadia has been translated interviews all morning.",
+            "Nadia has been translating interviews all morning.",
+            "Nadia is translating interviews since morning.",
+            "Nadia has translating interviews all morning."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: She ___ been working on the article since breakfast.",
+          "correctAnswer": "has",
+          "explanation": "Use has been with a third-person singular subject.",
+          "skillTag": "have_has_been_agreement"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: They have been worked on the mural for hours.",
+          "correctAnswer": "They have been working on the mural for hours.",
+          "explanation": "Use been + verb-ing, not been + past participle, here.",
+          "skillTag": "been_plus_ing"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite using the present perfect continuous: Leo started training two hours ago and he is still training.",
+          "correctAnswer": "Leo has been training for two hours.",
+          "explanation": "Use the present perfect continuous for an action that began in the past and is still in progress.",
+          "skillTag": "duration_continuous"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that best explains Nadia's tiredness in Barcelona.",
+          "correctAnswer": "She has been studying and working every day this month.",
+          "explanation": "Use the present perfect continuous to show the repeated ongoing effort that explains the result now.",
+          "skillTag": "ongoing_effort_result",
+          "options": [
+            "She has studied and worked every day this month and now tired.",
+            "She has been studying and working every day this month.",
+            "She has been studied and worked every day this month.",
+            "She is studying and working every day since this month."
+          ]
+        }
       ]
     },
     {
@@ -432,6 +630,21 @@
           "Unless we leave within the hour, we won't reach the summit before dark.",
           "As long as we stay together, we'll be fine.",
           "When we get to the top, the view will be worth everything."
+        ],
+        "formGuide": [
+          "Use if + present simple in the condition clause.",
+          "Use will + base verb in the result clause.",
+          "Keep will out of the if-clause."
+        ],
+        "usageNotes": [
+          "Use it for likely future results when the condition is possible.",
+          "Use it often for warnings, plans, and consequences."
+        ],
+        "contrastWith": "Do not confuse it with the second conditional. The first conditional talks about a realistic future possibility, not an imagined present situation.",
+        "commonMistakes": [
+          "Using will in the if-clause.",
+          "Using the past simple in the if-clause when the meaning is realistic and future.",
+          "Dropping will from the result clause when the sentence is truly conditional."
         ]
       },
       "content": [
@@ -449,6 +662,11 @@
               "targetText": "we'll turn back immediately",
               "tone": "structure",
               "note": "likely result"
+            },
+            {
+              "targetText": "They had been on the mountain long enough to understand",
+              "tone": "aux",
+              "note": "experience built up before that point"
             }
           ]
         },
@@ -466,6 +684,11 @@
               "targetText": "this glacier will be gone within thirty years",
               "tone": "structure",
               "note": "predicted result"
+            },
+            {
+              "targetText": "had been coming here",
+              "tone": "aux",
+              "note": "ongoing action over years before then"
             }
           ]
         },
@@ -488,6 +711,11 @@
               "targetText": "As long as we stay on the marked route and move steadily, we'll reach the summit safely.",
               "tone": "structure",
               "note": "condition with as long as"
+            },
+            {
+              "targetText": "you'll face a serious fine and you'll be asked to leave the park.",
+              "tone": "aux",
+              "note": "future consequences"
             }
           ]
         },
@@ -505,6 +733,11 @@
               "targetText": "When we make it,",
               "tone": "structure",
               "note": "certain future event"
+            },
+            {
+              "targetText": "The wind had picked up slightly",
+              "tone": "aux",
+              "note": "change already in progress before the next moment"
             }
           ]
         },
@@ -522,6 +755,11 @@
               "targetText": "if we look after this, it will still be here",
               "tone": "structure",
               "note": "real future result"
+            },
+            {
+              "targetText": "Everyone who started has arrived.",
+              "tone": "aux",
+              "note": "present perfect result at the summit"
             }
           ]
         }
@@ -586,6 +824,60 @@
           ],
           "correctAnswer": "Because a physical, visible example made the consequences of emissions feel real and personal in a way that facts alone had not",
           "explanation": "Paragraph 2 says: 'She had learned about climate change in school but seeing a glacier in person — understanding it had been larger once, and would be smaller still — made it feel different. More real. More urgent.' The experience added emotional weight that information alone could not."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct first conditional sentence.",
+          "correctAnswer": "If we plant more trees, the park will feel cooler.",
+          "explanation": "Use if + present simple, then will + base verb.",
+          "skillTag": "if_present_will",
+          "options": [
+            "If we will plant more trees, the park feels cooler.",
+            "If we plant more trees, the park will feel cooler.",
+            "If we planted more trees, the park will feel cooler.",
+            "If we plant more trees, the park would feel cooler."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: If it rains, we ___ stay inside.",
+          "correctAnswer": "will",
+          "explanation": "Use will in the main clause to talk about a likely future result.",
+          "skillTag": "will_main_clause"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: If the club will meet today, I will come.",
+          "correctAnswer": "If the club meets today, I will come.",
+          "explanation": "Do not use will in the if-clause of the first conditional.",
+          "skillTag": "no_will_in_if_clause"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite as a first conditional: Maybe we recycle more. Then the school will save money.",
+          "correctAnswer": "If we recycle more, the school will save money.",
+          "explanation": "Use if + present simple and will for the result.",
+          "skillTag": "if_present_will"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that best fits an environmental warning from the story.",
+          "correctAnswer": "If we ignore the leak, the river will get worse by next week.",
+          "explanation": "Use the first conditional for a likely future consequence.",
+          "skillTag": "environmental_consequence",
+          "options": [
+            "If we will ignore the leak, the river gets worse by next week.",
+            "If we ignore the leak, the river will get worse by next week.",
+            "If we ignored the leak, the river will get worse by next week.",
+            "If we ignore the leak, the river would get worse by next week."
+          ]
         }
       ]
     }

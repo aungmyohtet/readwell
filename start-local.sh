@@ -11,6 +11,40 @@ is_port_listening() {
   lsof -nP -iTCP:"$port" -sTCP:LISTEN >/dev/null 2>&1
 }
 
+get_port_pids() {
+  local port="$1"
+  lsof -tiTCP:"$port" -sTCP:LISTEN 2>/dev/null | awk '!seen[$0]++'
+}
+
+stop_processes_on_port() {
+  local port="$1"
+  local label="$2"
+  local pids
+
+  pids="$(get_port_pids "$port")"
+  if [[ -z "$pids" ]]; then
+    echo "No existing process found on port $port for $label."
+    return
+  fi
+
+  echo "Stopping $label process(es) on port $port: $(echo "$pids" | tr '\n' ' ' | xargs)"
+  while IFS= read -r pid; do
+    [[ -z "$pid" ]] && continue
+    kill -9 "$pid" 2>/dev/null || echo "Warning: Could not stop process $pid on port $port." >&2
+  done <<< "$pids"
+
+  for _ in {1..20}; do
+    if ! is_port_listening "$port"; then
+      echo "$label port $port is free."
+      return
+    fi
+    sleep 0.3
+  done
+
+  echo "Error: $label port $port is still busy after stopping the process(es)." >&2
+  exit 1
+}
+
 open_terminal_window() {
   local working_dir="$1"
   local command="$2"
@@ -43,18 +77,13 @@ else
   fi
 fi
 
-if is_port_listening 8082; then
-  echo "Backend is already running on http://localhost:8082"
-else
-  open_terminal_window "$backend_path" "mvn spring-boot:run"
-  echo "Starting backend on http://localhost:8082"
-fi
+stop_processes_on_port 8082 "Backend"
+stop_processes_on_port 4201 "Frontend"
 
-if is_port_listening 4201; then
-  echo "Frontend is already running on http://localhost:4201"
-else
-  open_terminal_window "$web_path" "npm run start"
-  echo "Starting frontend on http://localhost:4201"
-fi
+open_terminal_window "$backend_path" "mvn spring-boot:run"
+echo "Starting backend on http://localhost:8082"
+
+open_terminal_window "$web_path" "npm run start"
+echo "Starting frontend on http://localhost:4201"
 
 echo "Startup command finished."

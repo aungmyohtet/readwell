@@ -1,8 +1,8 @@
 import { Component, HostListener, OnInit, computed, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { forkJoin } from 'rxjs';
+import { catchError, forkJoin, map, of } from 'rxjs';
 import { StoryService } from '../../core/services/story.service';
-import { Story } from '../../core/models/story.model';
+import { ChapterSummary, Story } from '../../core/models/story.model';
 import { ProgressService } from '../../core/services/progress.service';
 import { ProgressInsights, ProgressRecord } from '../../core/models/progress.model';
 
@@ -38,9 +38,9 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
           </p>
 
           <div class="hero-actions">
-            @if (lastChapter()) {
-              <a class="btn btn-primary" [routerLink]="['/chapters', lastChapter()!.chapterId]">
-                Resume Chapter {{ lastChapter()!.chapterNumber }}
+            @if (primaryAction().route[0] !== '/browse') {
+              <a class="btn btn-primary" [routerLink]="primaryAction().route">
+                {{ primaryAction().cta }}
               </a>
             }
             <button class="btn btn-warm" (click)="scrollToLibrary()">Explore the library</button>
@@ -265,11 +265,10 @@ const STUDY_GUIDE_STORAGE_KEY = 'browseStudyGuideSeen';
                     </div>
                     <div class="story-action-row">
                       <a class="story-action-link" [routerLink]="['/stories', story.id]">Open story</a>
-                      @if (storyPriorityReview(story.id)) {
-                        <a class="story-action-link story-action-link-accent" [routerLink]="['/chapters', storyPriorityReview(story.id)!.chapterId]">{{ storyReviewCta(story.id) }}</a>
+                      @if (storyUrgentReview(story.id)) {
+                        <a class="story-action-link story-action-link-accent" [routerLink]="['/chapters', storyUrgentReview(story.id)!.chapterId]">{{ storyReviewCta(story.id) }}</a>
                       }
                     </div>
-                    <span class="story-arrow">→</span>
                   </div>
                 </div>
               </article>
@@ -284,6 +283,7 @@ export class BrowseComponent implements OnInit {
   levels = LEVELS;
   selectedLevel = signal<string>('All');
   stories = signal<Story[]>([]);
+  storyChapters = signal<Record<string, ChapterSummary[]>>({});
   displayedStories = computed(() => {
     const selectedLevel = this.selectedLevel();
     const stories = this.stories();
@@ -358,8 +358,38 @@ export class BrowseComponent implements OnInit {
   private load() {
     this.loading.set(true);
     this.storyService.getStories().subscribe({
-      next: (data) => { this.stories.set(data); this.loading.set(false); },
-      error: () => this.loading.set(false),
+      next: (data) => {
+        this.stories.set(data);
+        this.loadStoryChapters(data);
+        this.loading.set(false);
+      },
+      error: () => {
+        this.storyChapters.set({});
+        this.loading.set(false);
+      },
+    });
+  }
+
+  private loadStoryChapters(stories: Story[]) {
+    if (!stories.length) {
+      this.storyChapters.set({});
+      return;
+    }
+
+    forkJoin(
+      stories.map((story) =>
+        this.storyService.getChapters(story.id).pipe(
+          map((chapters) => ({ storyId: story.id, chapters })),
+          catchError(() => of({ storyId: story.id, chapters: [] as ChapterSummary[] })),
+        ),
+      ),
+    ).subscribe((results) => {
+      const chaptersByStory = results.reduce<Record<string, ChapterSummary[]>>((acc, result) => {
+        acc[result.storyId] = result.chapters;
+        return acc;
+      }, {});
+
+      this.storyChapters.set(chaptersByStory);
     });
   }
 
@@ -396,6 +426,12 @@ export class BrowseComponent implements OnInit {
     return this.insights()?.reviewQueue[0] ?? null;
   }
 
+  urgentPriorityReview(): ProgressInsights['reviewQueue'][number] | null {
+    return this.insights()?.reviewQueue.find(
+      (review) => review.reviewStage === 'rescue' || review.reviewStage === 'due-now',
+    ) ?? null;
+  }
+
   browseReviewStageLabel(review: ProgressInsights['reviewQueue'][number]): string {
     switch (review.reviewStage) {
       case 'rescue':
@@ -429,6 +465,31 @@ export class BrowseComponent implements OnInit {
 
   completedChaptersForStory(storyId: string): number {
     return new Set(this.history().filter((record) => record.storyId === storyId).map((record) => record.chapterId)).size;
+  }
+
+  nextStudyChapter(storyId: string): ChapterSummary | null {
+    const chapters = this.storyChapters()[storyId] ?? [];
+    return chapters.find((chapter, index) => !this.isChapterLocked(chapters, index) && !chapter.completed) ?? null;
+  }
+
+  isChapterLocked(chapters: ChapterSummary[], index: number): boolean {
+    if (index === 0) return false;
+    return !chapters[index - 1]?.completed;
+  }
+
+  recommendedChapter(): ChapterSummary | null {
+    const lastChapter = this.lastChapter();
+    if (lastChapter) {
+      const lastStoryNextChapter = this.nextStudyChapter(lastChapter.storyId);
+      if (lastStoryNextChapter) return lastStoryNextChapter;
+    }
+
+    for (const story of this.stories()) {
+      const nextChapter = this.nextStudyChapter(story.id);
+      if (nextChapter) return nextChapter;
+    }
+
+    return null;
   }
 
   bestScorePctForStory(storyId: string): number {
@@ -515,8 +576,26 @@ export class BrowseComponent implements OnInit {
     return candidates[0] ?? null;
   };
 
+  storyUrgentReview = (storyId: string): ProgressRecord | null => {
+    return this.history()
+      .filter(
+        (record) =>
+          record.storyId === storyId &&
+          (record.reviewStage === 'rescue' || record.reviewStage === 'due-now'),
+      )
+      .slice()
+      .sort((left, right) => {
+        const stageDiff = this.reviewStagePriority(left.reviewStage) - this.reviewStagePriority(right.reviewStage);
+        if (stageDiff !== 0) return stageDiff;
+
+        const leftTime = left.nextReviewAt ? new Date(left.nextReviewAt).getTime() : Number.MAX_SAFE_INTEGER;
+        const rightTime = right.nextReviewAt ? new Date(right.nextReviewAt).getTime() : Number.MAX_SAFE_INTEGER;
+        return leftTime - rightTime;
+      })[0] ?? null;
+  };
+
   storyReviewCta = (storyId: string): string => {
-    const review = this.storyPriorityReview(storyId);
+    const review = this.storyUrgentReview(storyId);
     if (!review) return 'Review next';
 
     switch (review.reviewStage) {
@@ -575,7 +654,7 @@ export class BrowseComponent implements OnInit {
   }
 
   primaryAction(): BrowseAction {
-    const review = this.priorityReview();
+    const review = this.urgentPriorityReview();
     if (review) {
       return {
         label: review.reviewStage === 'rescue' ? 'Rescue chapter' : review.reviewStage === 'due-now' ? 'Due today' : 'Due soon',
@@ -583,6 +662,21 @@ export class BrowseComponent implements OnInit {
         detail: `Chapter ${review.chapterNumber} is the most useful review right now. ${review.reason}`,
         cta: `Review Chapter ${review.chapterNumber}`,
         route: ['/chapters', review.chapterId],
+      };
+    }
+
+    const recommendedChapter = this.recommendedChapter();
+    if (recommendedChapter) {
+      const story = this.stories().find((item) => item.id === recommendedChapter.storyId);
+      const hasProgress = this.hasStoryProgress(recommendedChapter.storyId);
+      return {
+        label: hasProgress ? 'Continue learning' : 'Start your path',
+        title: `${hasProgress ? 'Pick up' : 'Begin'} Chapter ${recommendedChapter.chapterNumber}`,
+        detail: story
+          ? `${recommendedChapter.title} is ready next in ${story.title}. Keep the story moving while the last chapter is still fresh.`
+          : 'A clear next chapter is ready for you.',
+        cta: hasProgress ? 'Continue chapter' : 'Start chapter',
+        route: ['/chapters', recommendedChapter.id],
       };
     }
 

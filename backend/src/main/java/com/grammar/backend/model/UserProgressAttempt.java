@@ -24,6 +24,10 @@ public class UserProgressAttempt {
 
   private int totalQuestions;
 
+  private int practiceScore;
+
+  private int practiceTotal;
+
   private Instant completedAt;
 
   private List<ProgressQuestionMistake> mistakes;

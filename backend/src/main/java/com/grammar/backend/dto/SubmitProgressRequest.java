@@ -17,11 +17,20 @@ public class SubmitProgressRequest {
   private int totalQuestions;
 
   private List<QuestionAttemptRequest> questionAttempts;
+  private List<GrammarPracticeAttemptRequest> grammarPracticeAttempts;
 
   @Data
   public static class QuestionAttemptRequest {
     @Min(1)
     private int questionOrder;
+
+    private String selectedAnswer;
+  }
+
+  @Data
+  public static class GrammarPracticeAttemptRequest {
+    @Min(1)
+    private int practiceOrder;
 
     private String selectedAnswer;
   }

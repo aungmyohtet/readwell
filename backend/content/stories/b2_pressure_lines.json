@@ -5,7 +5,12 @@
     "level": "B2",
     "coverEmoji": "🏔️",
     "author": "ReadWell",
-    "tags": ["leadership", "endurance", "institutions", "responsibility"]
+    "tags": [
+      "leadership",
+      "endurance",
+      "institutions",
+      "responsibility"
+    ]
   },
   "chapters": [
     {
@@ -63,12 +68,27 @@
           "Exhausted by the concentration the climb demanded, the team ate and said very little.",
           "Having chosen the longer route, the whole group moved with greater care.",
           "Persuaded by logic rather than dismissed by authority, Tomas was more likely to remember the lesson."
+        ],
+        "formGuide": [
+          "Use a present participle clause to show an action happening at the same time or as a background action.",
+          "Use a past participle clause when the noun receives the action.",
+          "Make sure the subject of the participle clause matches the subject of the main clause."
+        ],
+        "usageNotes": [
+          "Use participle clauses to make writing more compact and advanced.",
+          "They work best when the relationship between the actions is clear."
+        ],
+        "contrastWith": "A participle clause is shorter than a full clause, but it must still connect clearly to the main subject.",
+        "commonMistakes": [
+          "Creating a dangling participle with the wrong subject.",
+          "Using the wrong participle form.",
+          "Using a participle clause when a full clause would be clearer."
         ]
       },
       "content": [
         {
           "order": 1,
-          "text": "Leaving camp at five in the morning, Elena counted torches rather than people. She had learned that approach from Dr Keane during the summer training circuit: headlights meant bodies, and bodies meant pace. Seven lights spread across the lower slope, which was manageable. By the time they reached the snow line, the sky had lifted from black to a flat bruised grey, and Tomas — already thirty metres ahead of the main group — was showing no sign of adjusting his pace. Exposed to the wind after the first rise, Elena knew the difficult section was still at least two hours above them. Endurance, Dr Keane had said during the briefing, was not the ability to keep moving when conditions were easy.",
+          "text": "Leaving camp at five in the morning, Elena counted torches rather than people. She had learned that approach from Dr Keane: headlights meant bodies, and bodies meant pace. Seven lights spread across the lower slope, which was manageable. By the time they reached the snow line, the sky had lifted to a flat grey, and Tomas — already thirty metres ahead of the main group — was showing no sign of adjusting his pace. Exposed to the wind after the first rise, Elena knew the difficult section was still at least two hours above them. Endurance, Dr Keane had said, was not the ability to keep moving when conditions were easy.",
           "imagePlaceholder": "🏔️",
           "grammarAnnotations": [
             {
@@ -80,24 +100,34 @@
               "targetText": "Exposed to the wind after the first rise, Elena knew the difficult section was still at least two hours above them.",
               "tone": "structure",
               "note": "past participle clause: resulting state"
+            },
+            {
+              "targetText": "which was manageable.",
+              "tone": "aux",
+              "note": "relative clause giving brief extra comment"
             }
           ]
         },
         {
           "order": 2,
-          "text": "The track became treacherous past the second marker, where overnight ice had glazed the scree beneath a thin layer of fresh snow. Elena moved carefully, testing each foothold before committing her weight. Tomas, having reached the steep section well ahead of the group, was already calling back that the surface was fine. It was not. She watched him slip once, recover quickly, and continue without checking whether anyone behind him had noticed. The team needed to navigate around a broad tongue of compacted ice to reach the shelter of a rock band to the left. The safer route added ten minutes. Tomas wanted the shorter direct crossing. Elena called a stop and let the silence do the arguing.",
+          "text": "The track became treacherous past the second marker, where overnight ice had glazed the scree beneath a thin layer of fresh snow. Elena moved carefully, testing each foothold before committing her weight. Tomas, having reached the steep section well ahead of the group, was already calling back that the surface was fine. It was not. She watched him slip once, recover, and continue without checking whether anyone behind him had noticed. The team needed to navigate around a broad tongue of compacted ice to reach the shelter of a rock band to the left. The safer route added ten minutes. Tomas wanted the shorter direct crossing. Elena called a stop.",
           "imagePlaceholder": "🥾",
           "grammarAnnotations": [
             {
               "targetText": "Tomas, having reached the steep section well ahead of the group,",
               "tone": "structure",
               "note": "having + past participle: completed action before the main clause"
+            },
+            {
+              "targetText": "testing each foothold before committing her weight.",
+              "tone": "aux",
+              "note": "present participle phrase showing the manner of movement"
             }
           ]
         },
         {
           "order": 3,
-          "text": "Standing at the margin of the ice tongue, she weighed the options with a deliberateness that felt out of proportion to the time available. The wind had built since sunrise, pressing against the right side of her face with a steady physical force that went beyond ordinary gusts. Feeling the temperature in the wind rather than the air, she recognised what Dr Keane described as threshold conditions: not dangerous in themselves, but dangerous because they made the next decision too easy to rush. Tomas was at her shoulder, impatient but quiet in the manner of someone who had learned when not to speak. 'We go left,' Elena said. He nodded without satisfaction but without argument. In the circumstances, that was enough.",
+          "text": "Standing at the margin of the ice tongue, she weighed the options with a deliberateness that felt out of proportion to the time available. The wind had built since sunrise, pressing against the right side of her face with a steady force. Feeling the temperature in the wind rather than the air, she recognised what Dr Keane described as threshold conditions: not dangerous in themselves, but dangerous because they made the next decision too easy to rush. Tomas was at her shoulder, impatient but quiet in the manner of someone who had learned when not to speak. 'We go left,' Elena said. He nodded without satisfaction but without argument.",
           "imagePlaceholder": "🌨️",
           "grammarAnnotations": [
             {
@@ -109,12 +139,17 @@
               "targetText": "Feeling the temperature in the wind rather than the air, she recognised what Dr Keane described as threshold conditions:",
               "tone": "structure",
               "note": "present participle clause: explains the reason for the main action"
+            },
+            {
+              "targetText": "impatient but quiet in the manner of someone who had learned when not to speak.",
+              "tone": "aux",
+              "note": "past perfect inside a descriptive clause"
             }
           ]
         },
         {
           "order": 4,
-          "text": "Having chosen the longer route, the whole group moved with greater care. The angle eased past the rock band, and for twenty minutes the climb settled into a rhythm that replaced deliberate thought with steady physical act. The solitude of high altitude still surprised new expedition members, even in a group; the mountain narrowed each person down to their own breath and the next secure hold. Elena navigated the final approach by memory more than by map, having studied the terrain photographs so often during the briefing that the rock shapes felt personally familiar. She had not shared this with the team. That kind of confidence was fragile and better kept private.",
+          "text": "Having chosen the longer route, the whole group moved with greater care. The angle eased past the rock band, and for twenty minutes the climb settled into a rhythm that replaced deliberate thought with steady physical act. The solitude of high altitude still surprised new expedition members; the mountain narrowed each person down to their own breath and the next secure hold. Elena navigated the final approach by memory more than by map, having studied the terrain photographs so often during the briefing that the rock shapes felt personally familiar. She had not shared this with the team. That kind of confidence was fragile.",
           "imagePlaceholder": "🧭",
           "grammarAnnotations": [
             {
@@ -126,24 +161,34 @@
               "targetText": "having studied the terrain photographs so often during the briefing that the rock shapes felt personally familiar.",
               "tone": "structure",
               "note": "having + past participle used within a longer sentence"
+            },
+            {
+              "targetText": "the mountain narrowed each person down to their own breath and the next secure hold.",
+              "tone": "aux",
+              "note": "narrative phrasing supporting the clause focus"
             }
           ]
         },
         {
           "order": 5,
-          "text": "The temporary shelter, built from a stone windbreak and a stretched tarpaulin, gave the group their first genuine break from wind. They ate and drank and said very little, exhausted by the concentration the climb had demanded rather than by the physical effort itself. Tomas sat apart — not unhappy but unwilling to be managed. Adrenaline draining from a completed challenge has a particular quality: it leaves a person briefly transparent, easier to read than they mean to be. Looking across the stove at him, Elena saw not defiance but the impatience of someone afraid of appearing slow. That was useful information, and she filed it away without comment.",
+          "text": "The temporary shelter, built from a stone windbreak and a stretched tarpaulin, gave the group their first genuine break from wind. They ate and drank and said very little, exhausted by the concentration the climb had demanded rather than by the physical effort itself. Tomas sat apart — not unhappy but unwilling to be managed. Adrenaline draining from a completed challenge has a particular quality: it leaves a person briefly transparent. Looking across the stove at him, Elena saw not defiance but the impatience of someone afraid of appearing slow. That was useful information.",
           "imagePlaceholder": "⛺",
           "grammarAnnotations": [
             {
               "targetText": "exhausted by the concentration the climb had demanded rather than by the physical effort itself.",
               "tone": "structure",
               "note": "past participle clause: completed state explaining their silence"
+            },
+            {
+              "targetText": "Adrenaline draining from a completed challenge has a particular quality:",
+              "tone": "aux",
+              "note": "present participle phrase used as a compressed observation"
             }
           ]
         },
         {
           "order": 6,
-          "text": "Dr Keane arrived at the shelter twenty minutes after the group, having checked the rear of the line with a thoroughness that took time. He drank his coffee, studied his GPS unit, and said nothing about the route choice until Tomas raised it first. Tomas said the left traverse had been unnecessary; the direct crossing would have been manageable. Dr Keane set his cup down before answering. 'The correct route,' he said, 'is the one the lead chooses before a mistake, not after one.' He spoke without irritation, which gave the correction a particular precision. Elena watched Tomas absorb it. Persuaded by logic rather than dismissed by authority, he was more likely to retain a lesson that had cost him nothing dramatic to receive.",
+          "text": "Dr Keane arrived at the shelter twenty minutes after the group, having checked the rear of the line with a thoroughness that took time. He drank his coffee, studied his GPS unit, and said nothing about the route choice until Tomas raised it first. Tomas said the left traverse had been unnecessary; the direct crossing would have been manageable. Dr Keane set his cup down before answering. 'The correct route,' he said, 'is the one the lead chooses before a mistake, not after one.' He spoke without irritation, which gave the correction a particular precision. Elena watched Tomas absorb it. Persuaded by logic rather than dismissed by authority, he was more likely to retain the lesson.",
           "imagePlaceholder": "🔥",
           "grammarAnnotations": [
             {
@@ -152,21 +197,31 @@
               "note": "having + past participle: explains what he had completed before arriving"
             },
             {
-              "targetText": "Persuaded by logic rather than dismissed by authority, he was more likely to retain a lesson",
+              "targetText": "Persuaded by logic rather than dismissed by authority, he was more likely to retain the lesson.",
               "tone": "structure",
               "note": "past participle clause: shows the condition for the main result"
+            },
+            {
+              "targetText": "He spoke without irritation, which gave the correction a particular precision.",
+              "tone": "aux",
+              "note": "relative clause commenting on the whole idea"
             }
           ]
         },
         {
           "order": 7,
-          "text": "When the weather window opened briefly in the late afternoon, the group descended in less than half the time the ascent had taken. Descending unfamiliar terrain tired and in flat light, Elena kept her focus on the essential: footing, spacing, timing, and the count of lights ahead. Perseverance, she had been told, was what remained when endurance ran out. By the time base camp appeared below, that distinction had stopped being theoretical and had become the name for what she was still doing. The day had not been cinematic. Nothing had gone catastrophically wrong, and nothing had required heroism. What remained was something smaller and more durable: a decision taken carefully, a route chosen before it was necessary to choose it, and seven torches still moving together toward the lights below.",
+          "text": "When the weather window opened briefly in the late afternoon, the group descended in less than half the time the ascent had taken. Descending unfamiliar terrain tired and in flat light, Elena kept her focus on the essential: footing, spacing, timing, and the count of lights ahead. Perseverance, she had been told, was what remained when endurance ran out. By the time base camp appeared below, that distinction had stopped being theoretical and had become the name for what she was still doing. The day had not been cinematic. Nothing had required heroism. What remained was something smaller and more durable: a decision taken carefully, a route chosen before it was necessary to choose it, and seven torches still moving together toward the lights below.",
           "imagePlaceholder": "🌄",
           "grammarAnnotations": [
             {
               "targetText": "Descending unfamiliar terrain tired and in flat light, Elena kept her focus on the essential:",
               "tone": "structure",
               "note": "present participle clause: simultaneous state and action"
+            },
+            {
+              "targetText": "a route chosen before it was necessary to choose it,",
+              "tone": "aux",
+              "note": "past participle phrase in the final summary"
             }
           ]
         }
@@ -244,6 +299,60 @@
           "correctAnswer": "It marks the undramatic but durable success of the day: a careful decision, a sound route, and the team intact",
           "explanation": "The final paragraph explicitly states that nothing had been cinematic or heroic. The seven torches echo the seven counted at the start, confirming a quiet success: the group made it through whole, together, and without drama."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence with a participle clause.",
+          "correctAnswer": "Walking along the ridge, Maya checked the weather report.",
+          "explanation": "Walking along the ridge adds background information about Maya.",
+          "skillTag": "present_participle_clause",
+          "options": [
+            "Walking along the ridge, the weather report was checked by Maya.",
+            "Walking along the ridge, Maya checked the weather report.",
+            "Maya walking along the ridge checked the weather report.",
+            "Walking along the ridge Maya was checked the weather report."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: ___ by the warning, the climbers turned back early.",
+          "correctAnswer": "Alarmed",
+          "explanation": "Use a past participle clause to show the reason for the action.",
+          "skillTag": "past_participle_clause"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: Having finish the report, Leo sent it to Birte.",
+          "correctAnswer": "Having finished the report, Leo sent it to Birte.",
+          "explanation": "Use the past participle finished after having.",
+          "skillTag": "having_plus_past_participle"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite with a participle clause: Because she was encouraged by her coach, Mara tried again.",
+          "correctAnswer": "Encouraged by her coach, Mara tried again.",
+          "explanation": "Use a past participle clause to shorten the sentence.",
+          "skillTag": "past_participle_clause"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence with a clear participle clause.",
+          "correctAnswer": "Checking the ridge map again, Mara noticed a safer route.",
+          "explanation": "The participle clause clearly refers to Mara and adds background action.",
+          "skillTag": "clear_participle_subject",
+          "options": [
+            "Checking the ridge map again, a safer route was noticed by Mara.",
+            "Checking the ridge map again, Mara noticed a safer route.",
+            "Checking the ridge map again, the safer route noticed Mara.",
+            "Mara, checking the ridge map again noticed a safer route."
+          ]
+        }
       ]
     },
     {
@@ -301,36 +410,61 @@
           "Ms Voss had the route map annotated and projected on the wall before the session began.",
           "The committee's recommendation called for an amendment to the expedition guidelines.",
           "Elena got her account of the decision clarified in her own mind before entering the room."
+        ],
+        "formGuide": [
+          "Use have or get plus object plus past participle when someone else performs the action for you.",
+          "Use nominalization to turn a verb into a noun, such as decide becoming decision or expand becoming expansion.",
+          "Choose the structure based on whether you want to focus on arranging an action or naming the action as an idea."
+        ],
+        "usageNotes": [
+          "Use causative forms when the subject arranges the action but does not do it personally.",
+          "Use nominalization when you want a more formal, report-like style."
+        ],
+        "contrastWith": "Do not confuse the causative with the active voice. 'She repaired the laptop' means she did it herself, while 'She had the laptop repaired' means someone else did it.",
+        "commonMistakes": [
+          "Leaving out the object in the causative structure.",
+          "Using the base verb instead of the past participle.",
+          "Building a nominalization that sounds unnatural or too heavy."
         ]
       },
       "content": [
         {
           "order": 1,
-          "text": "The notification arrived by email at 7:43 on the Thursday following the expedition. Elena had the committee's letter printed and on the table before her mother had finished making coffee. The school had received formal notification from the county outdoor education board, whose jurisdiction covered all off-site activities involving students under nineteen, and had been required to have a formal risk assessment completed within five working days. The word required appeared seven times across three paragraphs. Tomas texted to say his parents had been called in separately, which Elena found immediately concerning but not entirely surprising. Bureaucracy, she had come to understand, moved in two streams: the official and the personal. Only one of them was predictable.",
+          "text": "The notification arrived by email at 7:43 on the Thursday following the expedition. Elena had the committee's letter printed and on the table before her mother had finished making coffee. The school had received formal notification from the county outdoor education board, whose jurisdiction covered all off-site activities involving students under nineteen, and had been required to have a formal risk assessment completed within five working days. The word required appeared seven times across three paragraphs. Tomas texted to say his parents had been called in separately, which Elena found concerning but not surprising. Bureaucracy, she had come to understand, moved in two streams: the official and the personal.",
           "imagePlaceholder": "🏢",
           "grammarAnnotations": [
             {
               "targetText": "had been required to have a formal risk assessment completed within five working days.",
               "tone": "structure",
               "note": "causative have + object + past participle: school arranged for this to be done"
+            },
+            {
+              "targetText": "Elena had the committee's letter printed and on the table",
+              "tone": "aux",
+              "note": "causative have with printed as the arranged action"
             }
           ]
         },
         {
           "order": 2,
-          "text": "The review meeting was held in the compliance office, a room with correct lighting and no comfortable chairs. Ms Voss, who managed the institution's protocol for outdoor education incidents, opened the session by having the original expedition paperwork read into the record by an administrator. Dr Keane sat to Elena's left and said nothing during this opening phase, which had been agreed between them beforehand. The framework for the review, Ms Voss explained, required the institution to assess whether proper training and supervision had been in place, to verify that all students had complied with pre-expedition requirements, and to determine whether any amendment to future guidelines was needed. Elena listened without expression. Writing too soon committed you to someone else's timeline.",
+          "text": "The review meeting was held in the compliance office, a room with correct lighting and no comfortable chairs. Ms Voss, who managed the institution's protocol for outdoor education incidents, opened the session by having the original expedition paperwork read into the record by an administrator. Dr Keane sat to Elena's left and said nothing during this opening phase, which had been agreed between them beforehand. The framework for the review, Ms Voss explained, required the institution to assess whether proper training and supervision had been in place, to verify that all students had complied with pre-expedition requirements, and to determine whether any amendment to future guidelines was needed. Elena listened without expression.",
           "imagePlaceholder": "📄",
           "grammarAnnotations": [
             {
               "targetText": "having the original expedition paperwork read into the record by an administrator.",
               "tone": "structure",
               "note": "causative have + object + past participle: arranged for papers to be read aloud"
+            },
+            {
+              "targetText": "whether any amendment to future guidelines was needed.",
+              "tone": "aux",
+              "note": "nominalization in formal review language"
             }
           ]
         },
         {
           "order": 3,
-          "text": "The first substantive question came an hour in, after Ms Voss had had the route map annotated and projected on the wall. She asked Elena to account for the decision to take the longer traverse. Elena described it in precise factual terms: wind speed estimate, surface condition observed, route choice made, time cost accepted, no injury sustained. Ms Voss made a note. The committee would need to have an independent risk assessment completed, she said, reviewing specifically whether the route deviation had fallen within the mandate of the student expedition leader. 'Was the decision yours to make?' she asked. 'Yes,' said Elena. The sentence left her cleanly and she did not add to it.",
+          "text": "The first substantive question came an hour in, after Ms Voss had had the route map annotated and projected on the wall. She asked Elena to account for the decision to take the longer traverse. Elena described it in precise factual terms: wind speed estimate, surface condition observed, route choice made, time cost accepted, no injury sustained. Ms Voss made a note. The committee would need to have an independent risk assessment completed, she said, reviewing specifically whether the route deviation had fallen within the mandate of the student expedition leader. 'Was the decision yours to make?' she asked. 'Yes,' said Elena.",
           "imagePlaceholder": "⚖️",
           "grammarAnnotations": [
             {
@@ -342,50 +476,81 @@
               "targetText": "The committee would need to have an independent risk assessment completed,",
               "tone": "structure",
               "note": "causative have + object + past participle"
+            },
+            {
+              "targetText": "the decision to take the longer traverse.",
+              "tone": "aux",
+              "note": "nominalization: decision as a formal noun"
             }
           ]
         },
         {
           "order": 4,
-          "text": "Tomas, interviewed separately that afternoon, had apparently argued that the route discussion had not constituted a formal decision but an open debate. Elena learned this from Dr Keane during the break, standing in the corridor over coffee from the machine. She was not angry; she was disappointed in the quieter and more lasting way. The institutional language around the incident — assessment, review, recommendation, approval, failure — had a way of making lived experience sound like a draft document waiting for correction. She had got her account of the decision clarified in her own mind three times by now. The committee would reach the same conclusion, she thought, by a longer and less honest route.",
+          "text": "Tomas, interviewed separately that afternoon, had apparently argued that the route discussion had not constituted a formal decision but an open debate. Elena learned this from Dr Keane during the break, standing in the corridor over coffee from the machine. She was not angry; she was disappointed. The institutional language around the incident — assessment, review, recommendation, approval, failure — had a way of making lived experience sound like a draft document waiting for correction. She had got her account of the decision clarified in her own mind three times by now. The committee would reach the same conclusion, she thought, by a longer and less honest route.",
           "imagePlaceholder": "🪑",
           "grammarAnnotations": [
             {
               "targetText": "She had got her account of the decision clarified in her own mind three times by now.",
               "tone": "structure",
               "note": "causative get + object + past participle: informal causative"
+            },
+            {
+              "targetText": "The institutional language around the incident — assessment, review, recommendation, approval, failure —",
+              "tone": "aux",
+              "note": "cluster of nominalizations typical of formal review language"
             }
           ]
         },
         {
           "order": 5,
-          "text": "Ms Voss returned after lunch with an amendment to the original agenda: the committee needed to have two additional witness statements included in the record, which extended the timeline by one day. She explained this with a professional neutrality that Elena had begun to understand was not coldness but compliance with its own internal logic. The framework did not accommodate tone. Dr Keane said the extension was reasonable, which Elena read as a signal not to resist it. The bureaucracy was not hostile, she had concluded; it was simply shaped for a world in which everything could be written down and made consistent. The difficulty was that what had happened on the mountain could not be made consistent without becoming a different event entirely.",
+          "text": "Ms Voss returned after lunch with an amendment to the original agenda: the committee needed to have two additional witness statements included in the record, which extended the timeline by one day. She explained this with a professional neutrality that Elena had begun to understand was not coldness but compliance with its own internal logic. The framework did not accommodate tone. 'We'll wait,' Dr Keane said. The extension was reasonable, which Elena read as a signal not to resist it. The bureaucracy was not hostile, she had concluded; it was shaped for a world in which everything could be written down and made consistent. The difficulty was that what had happened on the mountain could not be made consistent without becoming a different event entirely.",
           "imagePlaceholder": "🖊️",
           "grammarAnnotations": [
             {
               "targetText": "the committee needed to have two additional witness statements included in the record,",
               "tone": "structure",
               "note": "causative have + object + past participle"
+            },
+            {
+              "targetText": "with an amendment to the original agenda:",
+              "tone": "aux",
+              "note": "nominalization in institutional context"
             }
           ]
         },
         {
           "order": 6,
-          "text": "The final session presented the committee's recommendation. The expedition had been conducted within the jurisdiction and training guidelines; however, the route deviation had not been logged at the time it occurred, which the committee classified as a procedural failure rather than a safety one. A mandate would be issued requiring all future expedition leaders to get any significant route changes recorded in the field log in real time. Elena could comply with that requirement without difficulty. What she found harder to accept, privately, was the implication it carried: that a real-time log would have made the decision wiser. The decision had already been correct. The log would simply have made the committee more comfortable reviewing it.",
+          "text": "The final session presented the committee's recommendation. The expedition had been conducted within the jurisdiction and training guidelines; however, the route deviation had not been logged at the time it occurred, which the committee classified as a procedural failure rather than a safety one. A mandate would be issued requiring all future expedition leaders to get any significant route changes recorded in the field log in real time. 'Understood,' Elena said. She could comply with that requirement without difficulty. What she found harder to accept was the implication it carried: that a real-time log would have made the decision wiser. The decision had already been correct. The log would simply have made the committee more comfortable reviewing it.",
           "imagePlaceholder": "🚪",
           "grammarAnnotations": [
             {
               "targetText": "requiring all future expedition leaders to get any significant route changes recorded in the field log in real time.",
               "tone": "structure",
               "note": "causative get + object + past participle"
+            },
+            {
+              "targetText": "which the committee classified as a procedural failure rather than a safety one.",
+              "tone": "aux",
+              "note": "nominalization in the committee's conclusion"
             }
           ]
         },
         {
           "order": 7,
-          "text": "Dr Keane walked with her to the car park afterward. The afternoon was grey and still in the way that promises more wind by evening. Elena said she thought the committee had arrived at the correct conclusion through the incorrect reasoning. Dr Keane replied that this was generally how institutions worked, and that understanding the difference was a more durable skill than frustration. She appreciated the honesty more than she would have appreciated reassurance. She had walked in that morning expecting to defend a decision she was certain about. What she had received instead was something harder to name: an education in the distance between what you lived and what becomes the official record. The experience was still hers. The record would be approved tomorrow, and they were not the same thing.",
+          "text": "Dr Keane walked with her to the car park afterward. The afternoon was grey and still. Elena said she thought the committee had arrived at the correct conclusion through the incorrect reasoning. Dr Keane replied that this was generally how institutions worked, and that understanding the difference was a more durable skill than frustration. She appreciated the honesty more than reassurance. She had walked in that morning expecting to defend a decision she was certain about. What she had received instead was something harder to name: an education in the distance between what you lived and what becomes the official record. The experience was still hers. The record would be approved tomorrow, and they were not the same thing.",
           "imagePlaceholder": "🌫️",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "What she had received instead was something harder to name:",
+              "tone": "aux",
+              "note": "wh-cleft-style emphasis in reflective narration"
+            },
+            {
+              "targetText": "The record would be approved tomorrow,",
+              "tone": "structure",
+              "note": "passive future result in institutional language"
+            }
+          ]
         }
       ],
       "comprehension": [
@@ -460,6 +625,60 @@
           ],
           "correctAnswer": "She has gained a clearer understanding of the gap between lived experience and official record, which Dr Keane identifies as a durable skill",
           "explanation": "The final paragraph describes what she received as 'an education in the distance between what you lived and what becomes the official record.' Dr Keane frames this understanding as more valuable than frustration. Elena ends sober and clear-eyed, not vindicated and not bitter."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct causative sentence.",
+          "correctAnswer": "We had the printer repaired before the meeting.",
+          "explanation": "Use have + object + past participle when someone else does the action for you.",
+          "skillTag": "have_object_past_participle",
+          "options": [
+            "We had repaired the printer before the meeting.",
+            "We had the printer repaired before the meeting.",
+            "We had the printer repair before the meeting.",
+            "We had repair the printer before the meeting."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: The team got the data ___ before lunch.",
+          "correctAnswer": "checked",
+          "explanation": "Use get + object + past participle in the causative.",
+          "skillTag": "get_object_past_participle"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: She had repaired the laptop by a technician.",
+          "correctAnswer": "She had the laptop repaired by a technician.",
+          "explanation": "The causative form is have + object + past participle.",
+          "skillTag": "have_object_past_participle"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite using a nominalization: They decided to expand the service.",
+          "correctAnswer": "They made the decision to expand the service.",
+          "explanation": "A nominalization turns the verb decide into the noun decision.",
+          "skillTag": "verb_to_noun_nominalization"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly uses a causative structure.",
+          "correctAnswer": "Birte had the damaged radio replaced before the drill began.",
+          "explanation": "Had + object + past participle shows that someone arranged the replacement.",
+          "skillTag": "causative_repair_action",
+          "options": [
+            "Birte had replaced the damaged radio before the drill began.",
+            "Birte had the damaged radio replaced before the drill began.",
+            "Birte had the damaged radio replace before the drill began.",
+            "Birte got replace the damaged radio before the drill began."
+          ]
         }
       ]
     }

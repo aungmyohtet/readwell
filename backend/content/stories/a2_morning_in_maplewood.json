@@ -1,7 +1,7 @@
 {
   "story": {
     "title": "Morning in Maplewood",
-      "description": "Leo is eleven years old and lives in a quiet street in Maplewood. Follow his everyday life as small moments — a basketball tryout, a neighbour's kindness, a difficult day — teach him something new about himself.",
+    "description": "Leo is eleven years old and lives in a quiet street in Maplewood. Follow his everyday life as small moments — a basketball tryout, a neighbour's kindness, a difficult day — teach him something new about himself.",
     "level": "A2",
     "coverEmoji": "🌤️",
     "author": "ReadWell",
@@ -51,6 +51,21 @@
       "grammarFocus": {
         "rule": "Simple Present",
         "explanation": "We use the simple present tense to talk about habits, routines, and things that are always true. For he/she/it, we add -s or -es to the verb. We use do/does to make questions and negatives.",
+        "formGuide": [
+          "Use the base verb with I, you, we, and they.",
+          "Add -s or -es to the verb with he, she, and it.",
+          "Use do or does before the subject in questions and before not in negatives."
+        ],
+        "usageNotes": [
+          "Use it for routines that happen again and again, like Leo's morning habits.",
+          "Use it for facts and regular behaviour, not for actions happening right now."
+        ],
+        "contrastWith": "Do not mix it with the present continuous. 'Leo eats breakfast' is his routine. 'Leo is eating breakfast' describes what is happening now.",
+        "commonMistakes": [
+          "Forgetting the -s with he, she, or it: 'Leo eat' should be 'Leo eats'.",
+          "Using do instead of does with he, she, or it questions.",
+          "Adding am, is, or are before a main verb that should stay in the simple present."
+        ],
         "examples": [
           "Leo eats cereal for breakfast every morning.",
           "Mrs Park waters her plants before eight o'clock.",
@@ -58,6 +73,60 @@
           "Does Mia like mornings? No, she doesn't."
         ]
       },
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct sentence about Leo's routine.",
+          "options": [
+            "Leo eat cereal every morning.",
+            "Leo eats cereal every morning.",
+            "Leo is eat cereal every morning.",
+            "Leo eating cereal every morning."
+          ],
+          "correctAnswer": "Leo eats cereal every morning.",
+          "explanation": "With he, she, or it in the simple present, the main verb usually takes -s or -es.",
+          "skillTag": "third_person_s"
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Mia ___ not like mornings before eight o'clock.",
+          "correctAnswer": "does",
+          "explanation": "Use does in simple present negatives with he, she, or it.",
+          "skillTag": "do_does_negative"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: Leo check his timetable before school.",
+          "correctAnswer": "Leo checks his timetable before school.",
+          "explanation": "With he, she, or it, add -s or -es to the main verb in the simple present.",
+          "skillTag": "third_person_s"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite as a question: Mia likes mornings.",
+          "correctAnswer": "Does Mia like mornings?",
+          "explanation": "Simple present questions with he, she, or it use does + subject + base verb.",
+          "skillTag": "do_does_question"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly describes Leo's routine, not an action happening right now.",
+          "options": [
+            "Leo is checking his timetable every Wednesday before school.",
+            "Leo checks his timetable every Wednesday before school.",
+            "Leo checks his timetable every Wednesday before school.",
+            "Leo does check his timetable every Wednesday before school."
+          ],
+          "correctAnswer": "Leo checks his timetable every Wednesday before school.",
+          "explanation": "Use the simple present for routines that happen regularly, like Leo's Wednesday habit.",
+          "skillTag": "routine_simple_present"
+        }
+      ],
       "content": [
         {
           "order": 1,
@@ -242,6 +311,21 @@
       "grammarFocus": {
         "rule": "Present Continuous",
         "explanation": "We use the present continuous to talk about actions that are happening right now or around now. The form is: am/is/are + verb-ing. We also use it for temporary situations that are not permanent habits.",
+        "formGuide": [
+          "Use am, is, or are first.",
+          "Add the -ing form of the main verb after the be verb.",
+          "Keep both parts together: 'is running', 'are waiting', 'am trying'."
+        ],
+        "usageNotes": [
+          "Use it for actions happening at this moment or around this time.",
+          "Use it when you want the reader to picture something in progress."
+        ],
+        "contrastWith": "Do not mix it with the simple present. 'Leo trains on Tuesdays' is a routine. 'Leo is training now' describes the action in progress.",
+        "commonMistakes": [
+          "Leaving out am, is, or are before the -ing verb.",
+          "Using the base verb instead of the -ing form after am, is, or are.",
+          "Using the present continuous for a routine when the simple present fits better."
+        ],
         "examples": [
           "Leo is standing outside the gym and his heart is beating fast.",
           "Two boys are shooting hoops at the far end of the court.",
@@ -249,6 +333,60 @@
           "\"What are you doing?\" \"I'm concentrating — please be quiet.\""
         ]
       },
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly describes an action happening now.",
+          "options": [
+            "Leo stands outside the gym right now.",
+            "Leo is standing outside the gym right now.",
+            "Leo standing outside the gym right now.",
+            "Leo does standing outside the gym right now."
+          ],
+          "correctAnswer": "Leo is standing outside the gym right now.",
+          "explanation": "The present continuous uses am, is, or are plus the -ing form.",
+          "skillTag": "be_plus_ing"
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Two boys ___ shooting hoops at the far end of the court.",
+          "correctAnswer": "are",
+          "explanation": "Use are with plural subjects in the present continuous.",
+          "skillTag": "be_verb_agreement"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: Coach Williams writing on his clipboard.",
+          "correctAnswer": "Coach Williams is writing on his clipboard.",
+          "explanation": "The present continuous needs a be verb before the -ing form.",
+          "skillTag": "missing_be"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite in the present continuous: Leo watches the tryout now.",
+          "correctAnswer": "Leo is watching the tryout now.",
+          "explanation": "Change the simple present into am/is/are + verb-ing to show an action in progress now.",
+          "skillTag": "simple_to_continuous"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly contrasts Leo's usual routine with what is happening now.",
+          "options": [
+            "Leo trains after school on Tuesdays, but right now he waits outside the gym.",
+            "Leo trains after school on Tuesdays, but right now he is waiting outside the gym.",
+            "Leo is training after school on Tuesdays, but right now he waits outside the gym.",
+            "Leo is training after school on Tuesdays, but right now he is wait outside the gym."
+          ],
+          "correctAnswer": "Leo trains after school on Tuesdays, but right now he is waiting outside the gym.",
+          "explanation": "Use the simple present for a routine and the present continuous for an action happening now.",
+          "skillTag": "routine_vs_now"
+        }
+      ],
       "content": [
         {
           "order": 1,

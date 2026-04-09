@@ -21,6 +21,37 @@
   ],
   "_comment_grammarKeyStructures": "Copy keyStructures from curriculum.json. These must all appear naturally in the story.",
 
+  "grammarFormGuide": [
+    "Use the base verb for I/you/we/they.",
+    "Add -s or -es for he/she/it.",
+    "Use do/does for negatives and questions."
+  ],
+  "_comment_grammarFormGuide": "Short teaching points that explain how the structure is built. These should map directly into grammarFocus.formGuide.",
+
+  "grammarUsageNotes": [
+    "Use it for habits and routines.",
+    "Use it for facts that are generally true."
+  ],
+  "_comment_grammarUsageNotes": "Short teaching points that explain when learners should use this form. These should map into grammarFocus.usageNotes.",
+
+  "grammarContrastWith": "Do not confuse this with the present continuous, which is used for actions happening now or around now.",
+  "_comment_grammarContrastWith": "One short contrast note about the nearby form learners commonly confuse with this target. This should map into grammarFocus.contrastWith.",
+
+  "grammarCommonMistakes": [
+    "Forgetting the -s with he/she/it.",
+    "Using is or are before a main verb that should stay in the simple present.",
+    "Using do instead of does with he/she/it questions."
+  ],
+  "_comment_grammarCommonMistakes": "1-3 likely learner mistakes. These should map into grammarFocus.commonMistakes.",
+
+  "grammarPracticeTypes": [
+    "multiple_choice",
+    "fill_blank",
+    "error_correction",
+    "sentence_transformation"
+  ],
+  "_comment_grammarPracticeTypes": "The target mix of practice item types to generate for this chapter. The final chapter JSON should include these inside grammarPractice.",
+
   "chapterNumber": 1,
   "chapterTitle": "The First Day",
   "_comment_chapterTitle": "Engaging chapter title. Should hint at the story without spoiling it.",

@@ -32,6 +32,10 @@ public class UserProgress {
 
   private int totalQuestions;
 
+  private int practiceScore;
+
+  private int practiceTotal;
+
   private Instant completedAt;
 
   private Instant nextReviewAt;

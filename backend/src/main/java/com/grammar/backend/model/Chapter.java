@@ -22,6 +22,8 @@ public class Chapter {
 
   private GrammarFocus grammarFocus;
 
+  private List<GrammarPracticeItem> grammarPractice;
+
   private List<Paragraph> content;
 
   private List<ComprehensionQuestion> comprehension;
@@ -38,7 +40,22 @@ public class Chapter {
   public static class GrammarFocus {
     private String rule;
     private String explanation;
+    private List<String> formGuide;
+    private List<String> usageNotes;
+    private String contrastWith;
+    private List<String> commonMistakes;
     private List<String> examples;
+  }
+
+  @Data
+  public static class GrammarPracticeItem {
+    private int order;
+    private String type;
+    private String prompt;
+    private List<String> options;
+    private String correctAnswer;
+    private String explanation;
+    private String skillTag;
   }
 
   @Data

@@ -78,8 +78,23 @@ Every story file must follow this exact structure for the validator and importer
   "grammarFocus": {
     "rule": "...",
     "explanation": "...",
+    "formGuide": ["...", "..."],
+    "usageNotes": ["...", "..."],
+    "contrastWith": "...",
+    "commonMistakes": ["...", "..."],
     "examples": ["...", "...", "...", "..."]
   },
+  "grammarPractice": [
+    {
+      "order": 1,
+      "type": "multiple_choice",
+      "prompt": "...",
+      "options": ["...", "...", "...", "..."],
+      "correctAnswer": "...",
+      "explanation": "...",
+      "skillTag": "..."
+    }
+  ],
   "content": [
     { "order": 1, "text": "..." }
   ],
@@ -96,6 +111,10 @@ Every story file must follow this exact structure for the validator and importer
 ```
 
 **Critical:** `correctAnswer` must be the **full text string** of the correct option, not an index number.
+
+`grammarFocus.formGuide`, `grammarFocus.usageNotes`, `grammarFocus.contrastWith`, and `grammarFocus.commonMistakes` are optional for legacy chapters, but new or revised content should include them so the grammar tab teaches form, use, contrast, and likely errors clearly.
+
+`grammarPractice` is optional for legacy chapters, but new or revised content should start including short grammar exercises so the app can move from noticing to controlled practice.
 
 ### Level Targets
 

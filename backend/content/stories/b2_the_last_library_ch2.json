@@ -75,6 +75,21 @@
           "She has found three legal irregularities in the demolition order. (simple — focus on completed discoveries, specific result)",
           "Her eyes have been aching from reading microfiche all afternoon. (continuous — explains present physical state, recently stopped)",
           "She has read every document in Box 7 twice. (simple — completed action, emphasis on the fact it is done)"
+        ],
+        "formGuide": [
+          "Use the present perfect continuous for an activity that has been in progress over time.",
+          "Use the present perfect simple for a finished result, total, or completed amount.",
+          "Choose the form based on whether the focus is the activity itself or the completed outcome."
+        ],
+        "usageNotes": [
+          "Use the continuous when the ongoing effort matters more than the count.",
+          "Use the simple when the number or finished result matters more than the process."
+        ],
+        "contrastWith": "Both connect the past to now, but the continuous highlights duration and the simple highlights completion or result.",
+        "commonMistakes": [
+          "Using the continuous for a counted finished result.",
+          "Using the simple when the sentence clearly describes an action still in progress.",
+          "Mixing the two forms without a reason for the shift in focus."
         ]
       },
       "content": [
@@ -82,7 +97,18 @@
           "order": 1,
           "text": "Vera Marsh had been working in the Aldwich Street Library for thirty years when the demolition notice arrived. She had catalogued nearly eleven thousand items in that time — books, pamphlets, maps, correspondence, the miscellaneous documents that accumulate in old institutions like sediment at the bottom of a river. She knew the layout of the archive the way other people know their own kitchens. When the notice was slid under the door one Wednesday morning and she picked it up and read it, she did not make a sound. She scrutinised it once more, set it down, and went to her office to think.",
           "imagePlaceholder": "📄",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "had been working in the Aldwich Street Library for thirty years",
+              "tone": "aux",
+              "note": "focus on duration"
+            },
+            {
+              "targetText": "had catalogued nearly eleven thousand items",
+              "tone": "structure",
+              "note": "focus on completed total"
+            }
+          ]
         },
         {
           "order": 2,
@@ -98,6 +124,11 @@
               "targetText": "I've found procedural errors in the demolition order",
               "tone": "structure",
               "note": "focus on result"
+            },
+            {
+              "targetText": "She had been scrutinising the council's records for weeks",
+              "tone": "aux",
+              "note": "ongoing activity before the consultant arrived"
             }
           ]
         },
@@ -105,7 +136,18 @@
           "order": 3,
           "text": "The most important document was in Box 19 — a box Vera had not opened since 2017 because its contents were listed in the index as 'administrative correspondence, 1880–1920, miscellaneous' and nothing she had needed before had pointed her there. She had been working methodically through the archive since the notice arrived, and Box 19 came in sequence. She opened it on a Tuesday afternoon. The deed was on the third page, folded inside a letter about gas lighting repairs, dated September the fourth, 1891. Vera read it once, then again. Then she called Professor Osei at the university.",
           "imagePlaceholder": "📦",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "had not opened since 2017",
+              "tone": "aux",
+              "note": "earlier completed state before this search"
+            },
+            {
+              "targetText": "had been working methodically through the archive since the notice arrived",
+              "tone": "structure",
+              "note": "ongoing activity leading to the discovery"
+            }
+          ]
         },
         {
           "order": 4,
@@ -116,6 +158,11 @@
               "targetText": "You have been working toward this without knowing what you'd find,",
               "tone": "aux",
               "note": "ongoing effort up to now"
+            },
+            {
+              "targetText": "had been donated to the city by a merchant named Thomas Aldwich",
+              "tone": "structure",
+              "note": "present perfect simple result"
             }
           ]
         },
@@ -123,13 +170,35 @@
           "order": 5,
           "text": "The council's legal team confirmed the finding on a Friday. There would be no demolition in the spring. Vera sat at her desk after the phone call and looked at the room: the card catalogue that nobody used anymore, the shelf of local history monographs that smelled faintly of damp, the window that overlooked a street she had watched change its shops four times since she began. She had been defending this place for months. She had found what she needed to defend it.",
           "imagePlaceholder": "☎️",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "had been defending this place for months",
+              "tone": "aux",
+              "note": "duration leading to the result"
+            },
+            {
+              "targetText": "had found what she needed to defend it",
+              "tone": "structure",
+              "note": "completed result of the search"
+            }
+          ]
         },
         {
           "order": 6,
           "text": "The two things were separate — the work and the discovery — but they had arrived together, and the result was the same. The library would stand. For now, that was enough. She had synthesised forty-three days of evidence into one document, rigorous and clear. She turned back to the shelf. There were still fourteen boxes she had not opened.",
           "imagePlaceholder": "📚",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "had arrived together",
+              "tone": "aux",
+              "note": "present perfect simple focus on completed arrival"
+            },
+            {
+              "targetText": "had synthesised forty-three days of evidence into one document",
+              "tone": "structure",
+              "note": "completed result after sustained work"
+            }
+          ]
         }
       ],
       "comprehension": [
@@ -216,6 +285,60 @@
           ],
           "correctAnswer": "She has found three legal errors in the order.",
           "explanation": "Present perfect simple: has + past participle. 'Has found' focuses on the completed result — three errors have been found. Option A is wrong form; C is past continuous; D is simple past."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the best sentence for an activity still in progress.",
+          "correctAnswer": "They have been cataloguing the letters all afternoon.",
+          "explanation": "Use the present perfect continuous to show an activity continuing until now.",
+          "skillTag": "continuous_for_ongoing_activity",
+          "options": [
+            "They have catalogued the letters all afternoon.",
+            "They have been cataloguing the letters all afternoon.",
+            "They have been catalogued the letters all afternoon.",
+            "They are cataloguing the letters since afternoon."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: She ___ written three pages so far.",
+          "correctAnswer": "has",
+          "explanation": "Use has written to focus on the finished amount.",
+          "skillTag": "simple_for_completed_result"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: I have been read that report twice.",
+          "correctAnswer": "I have read that report twice.",
+          "explanation": "Use the present perfect simple for completed actions with a counted result.",
+          "skillTag": "simple_for_completed_result"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite using the present perfect continuous: Leo started waiting an hour ago and he is still waiting.",
+          "correctAnswer": "Leo has been waiting for an hour.",
+          "explanation": "Use the continuous form for an action that is still happening.",
+          "skillTag": "continuous_for_ongoing_activity"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that best focuses on a finished amount rather than the ongoing process.",
+          "correctAnswer": "Mara has catalogued twelve letters this afternoon.",
+          "explanation": "The simple form works because the important idea is the finished total of twelve letters.",
+          "skillTag": "finished_total_simple",
+          "options": [
+            "Mara has been cataloguing twelve letters this afternoon.",
+            "Mara has catalogued twelve letters this afternoon.",
+            "Mara has been catalogued twelve letters this afternoon.",
+            "Mara catalogued twelve letters this afternoon and still does."
+          ]
         }
       ]
     }

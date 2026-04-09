@@ -17,6 +17,9 @@ public class ProgressResponse {
   private Integer previousScore;
   private int attemptCount;
   private int totalQuestions;
+  private int practiceScore;
+  private int practiceTotal;
+  private int effectiveScorePct;
   private Instant completedAt;
   private Instant nextReviewAt;
   private String reviewStage;

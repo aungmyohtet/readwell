@@ -5,7 +5,12 @@
     "level": "A2",
     "coverEmoji": "🌦️",
     "author": "ReadWell",
-    "tags": ["weather", "family", "food", "curiosity"]
+    "tags": [
+      "weather",
+      "family",
+      "food",
+      "curiosity"
+    ]
   },
   "chapters": [
     {
@@ -44,7 +49,7 @@
         }
       ],
       "grammarFocus": {
-        "rule": "Question Forms \u2013 all types",
+        "rule": "Question Forms – all types",
         "explanation": "In English, we form questions in different ways depending on the type. For Yes/No questions with most verbs, we use Do/Does (present) or Did (past) before the subject. For Wh- questions, we put the question word (What, When, Where, Why, How) before Do/Does/Did + subject. For subject questions, we use Who or What directly before the verb, without Do/Did.",
         "examples": [
           "Does it always rain in October? (Yes/No question — does + subject + verb)",
@@ -52,6 +57,21 @@
           "When did it last snow here? (Wh- question — when + did + subject + verb)",
           "Who decides the weather forecast? (Subject question — who + verb, no Do/Did)",
           "Do they always get the forecast right? (Yes/No question — do + subject + verb)"
+        ],
+        "formGuide": [
+          "Put the question word first when you need extra information, like what, where, when, why, or how.",
+          "Use do or does for present simple questions unless the question word is the subject.",
+          "Keep the verb be before the subject in questions with am, is, or are."
+        ],
+        "usageNotes": [
+          "Use yes-no questions when you only need confirmation.",
+          "Use wh- questions when you need a specific detail or reason."
+        ],
+        "contrastWith": "Do not keep statement word order in a question. 'You like rainy days' is a statement, but 'Do you like rainy days?' is the question form.",
+        "commonMistakes": [
+          "Leaving out do or does in a present simple question.",
+          "Using do or does after the verb be.",
+          "Keeping the subject before the auxiliary in a wh-question."
         ]
       },
       "content": [
@@ -137,6 +157,54 @@
           "correctAnswer": "She is curious and likes to record what she learns",
           "explanation": "Maya asks many questions and writes them down — this shows she is a curious person who enjoys learning and keeping a record of what she discovers."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct question.",
+          "options": [
+            "Where Mia buys bread on Sundays?",
+            "Where does Mia buy bread on Sundays?",
+            "Where do Mia buys bread on Sundays?",
+            "Where is Mia buy bread on Sundays?"
+          ],
+          "correctAnswer": "Where does Mia buy bread on Sundays?",
+          "explanation": "Use does for present simple questions with he, she, or it.",
+          "skillTag": "present_simple_question_do_does"
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the question: ___ are you carrying an umbrella today?",
+          "correctAnswer": "Why",
+          "explanation": "Why asks for a reason.",
+          "skillTag": "question_word_why"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the question: You like rainy days?",
+          "correctAnswer": "Do you like rainy days?",
+          "explanation": "Present simple yes-no questions need do or does.",
+          "skillTag": "present_simple_yes_no_question"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite as a question: He is leaving now. Ask about the time.",
+          "correctAnswer": "When is he leaving?",
+          "explanation": "Use when to ask about time with the verb be before the subject.",
+          "skillTag": "question_word_order_be"
+        },
+        {
+          "order": 5,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite as a question: Maya wants to know the warmest month of the year.",
+          "correctAnswer": "What is the warmest month of the year?",
+          "explanation": "Use what for the missing information and keep is before the subject phrase.",
+          "skillTag": "wh_question_with_be"
+        }
       ]
     },
     {
@@ -183,6 +251,21 @@
           "Can I have a little honey, please? (uncountable — a little, not a few)",
           "How many strawberries do you want? (countable — use many)",
           "There is a lot of milk in the fridge. (a lot of — works with both types)"
+        ],
+        "formGuide": [
+          "Countable nouns can be singular or plural and can use numbers.",
+          "Uncountable nouns do not usually use a plural form and are measured with words like much, a little, or some.",
+          "Use many or a few with countable nouns and much or a little with uncountable nouns."
+        ],
+        "usageNotes": [
+          "Choose the noun type first, then choose the matching quantifier.",
+          "Use some with both countable plurals and uncountable nouns in positive sentences."
+        ],
+        "contrastWith": "Do not treat uncountable nouns like countable ones. You can say 'some milk' or 'a bottle of milk', but not 'three milks' in this context.",
+        "commonMistakes": [
+          "Using many with an uncountable noun.",
+          "Using a plural verb with an uncountable noun when the sentence is singular.",
+          "Forgetting that some nouns need a container phrase to become countable."
         ]
       },
       "content": [
@@ -267,6 +350,60 @@
           ],
           "correctAnswer": "She is playfully joining in with the list of what they have and do not have",
           "explanation": "When her dad lists what they would need more of (eggs, flour), Maya cheerfully adds what they do have plenty of — milk. It is a playful, humorous moment between them."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct sentence.",
+          "options": [
+            "There are many butter left in the dish.",
+            "There is much butter left in the dish.",
+            "There is a butter left in the dish.",
+            "There are a few butter left in the dish."
+          ],
+          "correctAnswer": "There is much butter left in the dish.",
+          "explanation": "Butter is uncountable, so use is and much.",
+          "skillTag": "much_with_uncountable"
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: How ___ milk do we need for the pancakes?",
+          "correctAnswer": "much",
+          "explanation": "Use much with uncountable nouns like milk.",
+          "skillTag": "much_with_uncountable"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: There are too many sugar in the bowl.",
+          "correctAnswer": "There is too much sugar in the bowl.",
+          "explanation": "Sugar is uncountable, so use is and much.",
+          "skillTag": "uncountable_agreement"
+        },
+        {
+          "order": 4,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence with countable nouns used correctly.",
+          "options": [
+            "We bought much apples and some cheese.",
+            "We bought a few apples and some cheese.",
+            "We bought many cheese and an apple.",
+            "We bought a little apples and some cheese."
+          ],
+          "correctAnswer": "We bought a few apples and some cheese.",
+          "explanation": "Use a few with plural countable nouns like apples.",
+          "skillTag": "a_few_with_countable"
+        },
+        {
+          "order": 5,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite using much: There isn't a lot of flour left in the bag.",
+          "correctAnswer": "There isn't much flour left in the bag.",
+          "explanation": "Flour is uncountable, so much is the natural quantifier here.",
+          "skillTag": "much_with_uncountable"
         }
       ]
     }

@@ -3,10 +3,10 @@ import { RouterLink } from '@angular/router';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { StoryService } from '../../core/services/story.service';
 import { ProgressService } from '../../core/services/progress.service';
-import { ChapterDetail, ComprehensionQuestion, GrammarAnnotation, Paragraph } from '../../core/models/story.model';
+import { ChapterDetail, ComprehensionQuestion, GrammarAnnotation, GrammarPracticeItem, Paragraph } from '../../core/models/story.model';
 import { ProgressRecord } from '../../core/models/progress.model';
 
-type Tab = 'vocabulary' | 'grammar' | 'story' | 'quiz';
+type Tab = 'vocabulary' | 'grammar' | 'story' | 'practice' | 'quiz';
 
 type GrammarTone = 'aux' | 'ending' | 'question' | 'structure' | 'modal';
 
@@ -37,6 +37,116 @@ interface StageMetric {
 const TEXT_SEGMENT_SPLIT = /(<[^>]+>)/g;
 const THIRD_PERSON_SUBJECT = String.raw`(?:He|She|It|[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?|[A-Z][a-z]+'s\s+[A-Za-z]+|His\s+[A-Za-z]+|Her\s+[A-Za-z]+|Their\s+[A-Za-z]+)`;
 const FREQUENCY_ADVERB = String.raw`(?:always|usually|often|sometimes|never|already|still|just|really)`;
+const DETERMINER_SUBJECT = String.raw`(?:(?:[Tt]he|[Aa]|[Aa]n|[Tt]his|[Tt]hat|[Tt]hese|[Tt]hose|[Mm]y|[Yy]our|[Hh]is|[Hh]er|[Oo]ur|[Tt]heir)\s+(?:[A-Za-z]+'s\s+)?(?:[A-Za-z]+\s+){0,2}[A-Za-z]+)`;
+const POSSESSIVE_NAME_SUBJECT = String.raw`(?:[A-Z][a-z]+'s\s+(?:[A-Za-z]+\s+){0,2}[A-Za-z]+)`;
+const SIMPLE_PRESENT_SUBJECT = String.raw`(?:He|She|It|${DETERMINER_SUBJECT}|${POSSESSIVE_NAME_SUBJECT}|[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)`;
+const SIMPLE_PAST_SUBJECT = String.raw`(?:I|You|He|She|It|We|They|${DETERMINER_SUBJECT}|${POSSESSIVE_NAME_SUBJECT}|[A-Z][a-z]+(?:\s+[A-Z][a-z]+)?)`;
+const SIMPLE_PAST_LINKER = String.raw`(?:and|then|but|so|after|before|when)`;
+const SIMPLE_PAST_ADVERB = String.raw`(?:quickly|slowly|carefully|quietly|suddenly|immediately|finally|later|early|gently|happily|nervously|calmly|eagerly|silently)`;
+const PERFECT_ADVERB = String.raw`(?:already|just|never|ever|yet|only|still|really|recently|lately)`;
+const SIMPLE_PAST_EXCLUDED_ED_WORDS = new Set([
+  'bed',
+  'bled',
+  'bred',
+  'red',
+  'shed',
+  'thread',
+]);
+const SIMPLE_PRESENT_EXCLUDED_S_WORDS = new Set([
+  'always',
+  'glass',
+  'glasses',
+  'news',
+  'series',
+  'species',
+  'stairs',
+  'towards',
+]);
+const PASSIVE_IRREGULAR_PARTICIPLES = new Set([
+  'been',
+  'born',
+  'bought',
+  'bound',
+  'brought',
+  'built',
+  'caught',
+  'chosen',
+  'cut',
+  'done',
+  'driven',
+  'fed',
+  'felt',
+  'found',
+  'given',
+  'grown',
+  'heard',
+  'held',
+  'hit',
+  'kept',
+  'known',
+  'led',
+  'left',
+  'lost',
+  'made',
+  'meant',
+  'met',
+  'paid',
+  'put',
+  'read',
+  'released',
+  'reported',
+  'run',
+  'said',
+  'seen',
+  'sent',
+  'set',
+  'shown',
+  'sold',
+  'spent',
+  'stood',
+  'taught',
+  'thought',
+  'told',
+  'taken',
+  'understood',
+  'won',
+  'written',
+]);
+const PASSIVE_PARTICIPLE_EXCLUSIONS = new Set([
+  'bed',
+  'crooked',
+  'crowded',
+  'excited',
+  'finished',
+  'frightened',
+  'interested',
+  'married',
+  'naked',
+  'pleased',
+  'ragged',
+  'red',
+  'scared',
+  'shed',
+  'supposed',
+  'surprised',
+  'thread',
+  'tired',
+  'wicked',
+  'worried',
+]);
+const PERFECT_IRREGULAR_PARTICIPLES = new Set([
+  ...PASSIVE_IRREGULAR_PARTICIPLES,
+  'become',
+  'begun',
+  'broken',
+  'eaten',
+  'gone',
+  'run',
+  'spoken',
+  'sung',
+  'swum',
+  'won',
+]);
 
 function transformTextSegments(html: string, transform: (segment: string) => string): string {
   return html
@@ -50,17 +160,31 @@ function wrapMatches(html: string, regex: RegExp, className: string): string {
 }
 
 function annotateSimplePresent(html: string): string {
-  let next = wrapMatches(html, /\b(do|does|don't|doesn't|do not|does not)\b/gi, 'gh-aux');
-  const thirdPersonRegex = new RegExp(
-    String.raw`\b(${THIRD_PERSON_SUBJECT})(\s+(?:${FREQUENCY_ADVERB})\s+)?([A-Za-z]+?)(es|s)\b`,
-    'g',
-  );
-  next = transformTextSegments(next, (segment) =>
-    segment.replace(thirdPersonRegex, (_match, subject: string, adverb = '', stem: string, ending: string) =>
-      `${subject}${adverb ?? ''}<mark class="gh gh-ending">${stem}${ending}</mark>`,
-    ),
-  );
+  let next = transformTextSegments(html, (segment) => {
+    let updated = segment.replace(/\b(do|does|don't|doesn't|do not|does not)\b/gi, (match) => `<mark class="gh gh-aux">${match}</mark>`);
+
+    const thirdPersonRegex = new RegExp(
+      String.raw`\b(${SIMPLE_PRESENT_SUBJECT})(\s+(?:${FREQUENCY_ADVERB})\s+)?([A-Za-z]+?)(es|s)\b`,
+      'g',
+    );
+
+    updated = updated.replace(thirdPersonRegex, (_match, subject: string, adverb = '', stem: string, ending: string) => {
+      const verb = `${stem}${ending}`;
+      if (!isLikelySimplePresentVerb(verb)) {
+        return `${subject}${adverb ?? ''}${verb}`;
+      }
+      return `${subject}${adverb ?? ''}<mark class="gh gh-ending">${verb}</mark>`;
+    });
+
+    return updated;
+  });
   return next;
+}
+
+function isLikelySimplePresentVerb(word: string): boolean {
+  const normalized = word.toLowerCase();
+  if (SIMPLE_PRESENT_EXCLUDED_S_WORDS.has(normalized)) return false;
+  return normalized.length >= 3 && (normalized.endsWith('s') || normalized.endsWith('es'));
 }
 
 function annotateContinuous(html: string, helperRegex: RegExp): string {
@@ -72,9 +196,25 @@ function annotateContinuous(html: string, helperRegex: RegExp): string {
 }
 
 function annotateQuestionForms(html: string): string {
-  let next = wrapMatches(html, /\b(what|when|where|why|who|how)\b/gi, 'gh-question');
-  next = wrapMatches(next, /\b(do|does|did|is|are|was|were|can|could|will|would|has|have)\b/gi, 'gh-aux');
-  return next;
+  const whQuestionRegex = /\b(what|when|where|why|who|how)\b\s+(do|does|did|is|are|was|were|can|could|will|would|has|have)\b(?=[^?]*\?)/gi;
+  const yesNoQuestionRegex = /(^|[.!]\s+|["“]\s*)(do|does|did|is|are|was|were|can|could|will|would|has|have)\b(?=[^?]*\?)/gi;
+  const subjectQuestionRegex = /\b(who|what)\b\s+([A-Za-z]+)\b(?=[^?]*\?)/gi;
+
+  return transformTextSegments(html, (segment) => {
+    let next = segment.replace(whQuestionRegex, (_match, questionWord: string, auxiliary: string) =>
+      `<mark class="gh gh-question">${questionWord}</mark> <mark class="gh gh-aux">${auxiliary}</mark>`,
+    );
+
+    next = next.replace(yesNoQuestionRegex, (_match, prefix: string, auxiliary: string) =>
+      `${prefix}<mark class="gh gh-aux">${auxiliary}</mark>`,
+    );
+
+    next = next.replace(subjectQuestionRegex, (_match, questionWord: string, verb: string) =>
+      `<mark class="gh gh-question">${questionWord}</mark> ${verb}`,
+    );
+
+    return next;
+  });
 }
 
 function annotateThereIsQuantifiers(html: string): string {
@@ -100,21 +240,88 @@ function annotateComparatives(html: string): string {
 }
 
 function annotateSimplePast(html: string): string {
-  let next = transformTextSegments(html, (segment) => segment.replace(/\b([A-Za-z]+?ed)\b/gi, (match) => `<mark class="gh gh-ending">${match}</mark>`));
+  const subjectPastRegex = new RegExp(
+    String.raw`\b(${SIMPLE_PAST_SUBJECT})(\s+(?:${SIMPLE_PAST_ADVERB})\s+)?([A-Za-z]{4,}ed)\b`,
+    'g',
+  );
+  const linkedPastRegex = new RegExp(
+    String.raw`\b(${SIMPLE_PAST_LINKER})(\s+(?:${SIMPLE_PAST_ADVERB})\s+)?([A-Za-z]{4,}ed)\b`,
+    'g',
+  );
+
+  let next = transformTextSegments(html, (segment) => {
+    const markIfPast = (verb: string) =>
+      SIMPLE_PAST_EXCLUDED_ED_WORDS.has(verb.toLowerCase()) ? verb : `<mark class="gh gh-ending">${verb}</mark>`;
+
+    let updated = segment.replace(subjectPastRegex, (_match, subject: string, adverb = '', verb: string) =>
+      `${subject}${adverb ?? ''}${markIfPast(verb)}`,
+    );
+
+    updated = updated.replace(linkedPastRegex, (_match, linker: string, adverb = '', verb: string) =>
+      `${linker}${adverb ?? ''}${markIfPast(verb)}`,
+    );
+
+    return updated;
+  });
+
   next = wrapMatches(next, /\b(went|saw|came|got|made|took|knew|felt|said|found|told|thought|left|gave|wrote|ran|heard|sat|stood|kept|let|set|put|cut|hit|read)\b/gi, 'gh-structure');
   return next;
 }
 
 function annotatePresentPerfect(html: string): string {
-  let next = wrapMatches(html, /\b(has|have)\b/gi, 'gh-aux');
-  next = wrapMatches(next, /\bbeen\b/gi, 'gh-structure');
-  return next;
+  const perfectPairRegex = new RegExp(
+    String.raw`\b(has|have)(\s+(?:${PERFECT_ADVERB})\s+)?([A-Za-z]+)\b`,
+    'gi',
+  );
+
+  return transformTextSegments(html, (segment) =>
+    segment.replace(perfectPairRegex, (match, auxiliary: string, adverb = '', participle: string) => {
+      if (!isLikelyPerfectParticiple(participle) || participle.toLowerCase() === 'been') {
+        return match;
+      }
+      return `<mark class="gh gh-aux">${auxiliary}</mark>${adverb ?? ''}<mark class="gh gh-structure">${participle}</mark>`;
+    }),
+  );
+}
+
+function annotatePresentPerfectContinuous(html: string): string {
+  const perfectContinuousRegex = new RegExp(
+    String.raw`\b(has|have)(\s+(?:${PERFECT_ADVERB})\s+)?been\s+([A-Za-z]+?)(ing)\b`,
+    'gi',
+  );
+
+  return transformTextSegments(html, (segment) =>
+    segment.replace(perfectContinuousRegex, (_match, auxiliary: string, adverb = '', stem: string, ending: string) =>
+      `<mark class="gh gh-aux">${auxiliary}</mark>${adverb ?? ''}<mark class="gh gh-structure">been</mark> <mark class="gh gh-ending">${stem}${ending}</mark>`,
+    ),
+  );
 }
 
 function annotatePassive(html: string): string {
-  let next = wrapMatches(html, /\b(is|are|was|were|been|being|has been|have been|had been|will be)\b/gi, 'gh-aux');
-  next = transformTextSegments(next, (segment) => segment.replace(/\b([A-Za-z]+?(?:ed|en|wn|t))\b/gi, (match) => `<mark class="gh gh-ending">${match}</mark>`));
-  return next;
+  const passivePairRegex = /\b(has been|have been|had been|is being|are being|was being|were being|will be|can be|cannot be|can't be|could be|must be|should be|may be|might be|is|are|was|were|be|been|being)\s+([A-Za-z]+)\b/gi;
+
+  return transformTextSegments(html, (segment) =>
+    segment.replace(passivePairRegex, (match, auxiliary: string, participle: string) => {
+      if (!isLikelyPassiveParticiple(participle)) {
+        return match;
+      }
+      return `<mark class="gh gh-aux">${auxiliary}</mark> <mark class="gh gh-ending">${participle}</mark>`;
+    }),
+  );
+}
+
+function isLikelyPassiveParticiple(word: string): boolean {
+  const normalized = word.toLowerCase();
+  if (PASSIVE_PARTICIPLE_EXCLUSIONS.has(normalized)) return false;
+  if (PASSIVE_IRREGULAR_PARTICIPLES.has(normalized)) return true;
+  return normalized.length >= 4 && (normalized.endsWith('ed') || normalized.endsWith('en'));
+}
+
+function isLikelyPerfectParticiple(word: string): boolean {
+  const normalized = word.toLowerCase();
+  if (PASSIVE_PARTICIPLE_EXCLUSIONS.has(normalized)) return false;
+  if (PERFECT_IRREGULAR_PARTICIPLES.has(normalized)) return true;
+  return normalized.length >= 4 && (normalized.endsWith('ed') || normalized.endsWith('en'));
 }
 
 const FALLBACK_GRAMMAR_PATTERNS: Record<string, RegExp> = {
@@ -209,10 +416,20 @@ const GRAMMAR_SPECS: GrammarSpec[] = [
     annotate: annotateSimplePast,
   },
   {
+    matches: ['present perfect continuous'],
+    legend: [
+      { tone: 'aux', label: 'Has or have' },
+      { tone: 'structure', label: 'Been' },
+      { tone: 'ending', label: 'Verb + -ing' },
+    ],
+    coachTip: 'Present perfect continuous works as a three-part signal: has or have, then been, then the -ing verb. Notice the full chain, not just one word inside it.',
+    annotate: annotatePresentPerfectContinuous,
+  },
+  {
     matches: ['present perfect'],
     legend: [
       { tone: 'aux', label: 'Has or have' },
-      { tone: 'structure', label: 'Been or past participle frame' },
+      { tone: 'structure', label: 'Past participle frame' },
     ],
     coachTip: 'Present perfect links past and present. Focus first on has or have, then on the participle frame that shows how the earlier action still matters now.',
     annotate: annotatePresentPerfect,
@@ -254,6 +471,7 @@ const CONFETTI_PIECES = Array.from({ length: 50 }, (_, i) => ({
 const LESSON_TABS: LessonTabMeta[] = [
   { id: 'vocabulary', label: 'Vocabulary', shortLabel: 'Words', icon: '📚' },
   { id: 'grammar', label: 'Grammar', shortLabel: 'Grammar', icon: '✏️' },
+  { id: 'practice', label: 'Practice', shortLabel: 'Practice', icon: '🧩' },
   { id: 'story', label: 'Story', shortLabel: 'Read', icon: '📖' },
   { id: 'quiz', label: 'Quiz', shortLabel: 'Quiz', icon: '🎯' },
 ];
@@ -273,7 +491,7 @@ const LESSON_TABS: LessonTabMeta[] = [
           <div class="chapter-meta">
             <div>
               <h2>{{ chapter()!.title }}</h2>
-              <p class="chapter-subtitle">{{ chapter()!.grammarFocus.rule }} taught through reading, vocabulary, and guided retrieval.</p>
+              <p class="chapter-subtitle">{{ chapter()!.grammarFocus.rule }} taught through reading, guided practice, and retrieval.</p>
             </div>
 
             <div class="chapter-stats">
@@ -284,6 +502,10 @@ const LESSON_TABS: LessonTabMeta[] = [
               <div class="stat-pill">
                 <strong>{{ chapter()!.content.length }}</strong>
                 <span>Paragraphs</span>
+              </div>
+              <div class="stat-pill">
+                <strong>{{ chapter()!.grammarPractice?.length || 0 }}</strong>
+                <span>Practice</span>
               </div>
               <div class="stat-pill">
                 <strong>{{ chapter()!.comprehension.length }}</strong>
@@ -301,15 +523,29 @@ const LESSON_TABS: LessonTabMeta[] = [
               <small>Flip cards and mark what you know.</small>
             </div>
           </div>
-          <div class="loop-step" [class.active]="activeTab() === 'grammar' || activeTab() === 'story'">
+          <div class="loop-step" [class.active]="activeTab() === 'grammar'">
             <span>2</span>
             <div>
               <strong>Notice grammar</strong>
               <small>Spot the pattern inside real sentences.</small>
             </div>
           </div>
-          <div class="loop-step" [class.active]="activeTab() === 'quiz'">
+          <div class="loop-step" [class.active]="activeTab() === 'practice'">
             <span>3</span>
+            <div>
+              <strong>Control the form</strong>
+              <small>Try short grammar exercises before reading.</small>
+            </div>
+          </div>
+          <div class="loop-step" [class.active]="activeTab() === 'story'">
+            <span>4</span>
+            <div>
+              <strong>Read in context</strong>
+              <small>Watch the target structure inside the story.</small>
+            </div>
+          </div>
+          <div class="loop-step" [class.active]="activeTab() === 'quiz'">
+            <span>5</span>
             <div>
               <strong>Retrieve meaning</strong>
               <small>Check understanding with immediate feedback.</small>
@@ -368,6 +604,9 @@ const LESSON_TABS: LessonTabMeta[] = [
           </button>
           <button class="tab" [class.active]="activeTab() === 'grammar'" (click)="goToTab('grammar')">
             <span>✏️</span> Grammar
+          </button>
+          <button class="tab" [class.active]="activeTab() === 'practice'" (click)="goToTab('practice')">
+            <span>🧩</span> Practice
           </button>
           <button class="tab" [class.active]="activeTab() === 'story'" (click)="goToTab('story')">
             <span>📖</span> Story
@@ -428,6 +667,49 @@ const LESSON_TABS: LessonTabMeta[] = [
                 <span class="eyebrow">Grammar Focus</span>
                 <h3>{{ chapter()!.grammarFocus.rule }}</h3>
                 <p class="grammar-explanation">{{ chapter()!.grammarFocus.explanation }}</p>
+                @if (chapter()!.grammarFocus.formGuide?.length || chapter()!.grammarFocus.usageNotes?.length || chapter()!.grammarFocus.contrastWith || chapter()!.grammarFocus.commonMistakes?.length) {
+                  <div class="grammar-teaching-grid">
+                    @if (chapter()!.grammarFocus.formGuide?.length) {
+                      <div class="grammar-teaching-block">
+                        <strong>How to build it</strong>
+                        <ul class="grammar-teaching-list">
+                          @for (item of chapter()!.grammarFocus.formGuide!; track item) {
+                            <li>{{ item }}</li>
+                          }
+                        </ul>
+                      </div>
+                    }
+
+                    @if (chapter()!.grammarFocus.usageNotes?.length) {
+                      <div class="grammar-teaching-block">
+                        <strong>When to use it</strong>
+                        <ul class="grammar-teaching-list">
+                          @for (item of chapter()!.grammarFocus.usageNotes!; track item) {
+                            <li>{{ item }}</li>
+                          }
+                        </ul>
+                      </div>
+                    }
+
+                    @if (chapter()!.grammarFocus.contrastWith) {
+                      <div class="grammar-teaching-block grammar-teaching-block-wide">
+                        <strong>Do not mix it with</strong>
+                        <p>{{ chapter()!.grammarFocus.contrastWith }}</p>
+                      </div>
+                    }
+
+                    @if (chapter()!.grammarFocus.commonMistakes?.length) {
+                      <div class="grammar-teaching-block grammar-teaching-block-warning">
+                        <strong>Watch out for</strong>
+                        <ul class="grammar-teaching-list">
+                          @for (item of chapter()!.grammarFocus.commonMistakes!; track item) {
+                            <li>{{ item }}</li>
+                          }
+                        </ul>
+                      </div>
+                    }
+                  </div>
+                }
                 @if (grammarLegend().length) {
                   <div class="grammar-legend">
                     @for (item of grammarLegend(); track item.label) {
@@ -457,9 +739,9 @@ const LESSON_TABS: LessonTabMeta[] = [
           @if (activeTab() === 'story') {
             <div class="story-focus card">
               <div>
-                <span class="eyebrow">Quiz Lens</span>
-                <h3>Read with the questions in mind.</h3>
-                <p>The quiz next checks story meaning and {{ chapter()!.grammarFocus.rule.toLowerCase() }}, so notice both while you read.</p>
+                <span class="eyebrow">Story Lens</span>
+                <h3>Read after the form is already fresh.</h3>
+                <p>You have already studied the rule and practised the form. Now watch how {{ chapter()!.grammarFocus.rule.toLowerCase() }} works inside the full story.</p>
               </div>
               <div class="focus-metrics">
                 <div>
@@ -512,6 +794,116 @@ const LESSON_TABS: LessonTabMeta[] = [
             </div>
           }
 
+          @if (activeTab() === 'practice') {
+            <div class="practice-overview card">
+              <div>
+                <span class="eyebrow">Practice Stage</span>
+                <h3>Use short tasks to control the grammar before the story and quiz.</h3>
+                <p>{{ hasGrammarPractice() ? 'These exercises check form, choice, and correction. Treat them as the step that belongs directly after grammar study and before reading the story more fully.' : 'This chapter does not have dedicated grammar practice yet. Use the grammar examples first, then continue into the story.' }}</p>
+              </div>
+              <div class="practice-summary">
+                <div>
+                  <strong>{{ practiceCheckedCount() }}/{{ practiceItemCount() }}</strong>
+                  <span>Checked</span>
+                </div>
+                <div>
+                  <strong>{{ practiceCorrectCount() }}</strong>
+                  <span>Correct</span>
+                </div>
+                <div>
+                  <strong>{{ practiceStatusLabel() }}</strong>
+                  <span>Current state</span>
+                </div>
+              </div>
+            </div>
+
+            @if (hasGrammarPractice()) {
+              <div class="practice-list">
+                @for (item of practiceItems(); track item.order) {
+                  <div class="practice-card card" [class.checked]="isPracticeChecked(item.order)" [class.correct]="isPracticeChecked(item.order) && isPracticeCorrect(item)" [class.wrong]="isPracticeChecked(item.order) && !isPracticeCorrect(item)">
+                    <div class="practice-card-top">
+                      <span class="practice-order">Task {{ item.order }}</span>
+                      <span class="practice-type-badge">{{ practiceTypeLabel(item) }}</span>
+                    </div>
+                    <p class="practice-prompt">{{ item.prompt }}</p>
+
+                    @if (item.type === 'multiple_choice') {
+                      <div class="practice-options">
+                        @for (opt of item.options || []; track opt) {
+                          <button
+                            class="practice-option"
+                            [class.selected]="practiceAnswers()[item.order] === opt"
+                            [class.correct]="isPracticeChecked(item.order) && opt === item.correctAnswer"
+                            [class.wrong]="isPracticeChecked(item.order) && practiceAnswers()[item.order] === opt && opt !== item.correctAnswer"
+                            [disabled]="isPracticeChecked(item.order)"
+                            (click)="selectPracticeOption(item, opt)">
+                            <span>{{ opt }}</span>
+                          </button>
+                        }
+                      </div>
+                    } @else {
+                      <div class="practice-text-entry">
+                        @if (usesPracticeTextarea(item)) {
+                          <textarea
+                            class="practice-input practice-textarea"
+                            rows="3"
+                            [value]="practiceAnswers()[item.order] || ''"
+                            [disabled]="isPracticeChecked(item.order)"
+                            (input)="updatePracticeAnswer(item.order, $any($event.target).value)"></textarea>
+                        } @else {
+                          <input
+                            class="practice-input"
+                            type="text"
+                            [value]="practiceAnswers()[item.order] || ''"
+                            [disabled]="isPracticeChecked(item.order)"
+                            (input)="updatePracticeAnswer(item.order, $any($event.target).value)" />
+                        }
+
+                        @if (!isPracticeChecked(item.order)) {
+                          <div class="practice-check-row">
+                            <button class="btn btn-secondary" [disabled]="!canCheckPractice(item.order)" (click)="checkPracticeItem(item.order)">Check answer</button>
+                          </div>
+                        }
+                      </div>
+                    }
+
+                    @if (isPracticeChecked(item.order)) {
+                      <div class="practice-feedback" [class.feedback-correct]="isPracticeCorrect(item)" [class.feedback-wrong]="!isPracticeCorrect(item)">
+                        <strong>{{ isPracticeCorrect(item) ? 'Correct' : 'Not quite' }}</strong>
+                        @if (!isPracticeCorrect(item)) {
+                          <p>Correct answer: {{ item.correctAnswer }}</p>
+                        }
+                        <p>{{ item.explanation }}</p>
+                      </div>
+                    }
+                  </div>
+                }
+              </div>
+
+              <div class="practice-bridge card">
+                <div>
+                  <span class="eyebrow">Next in the story</span>
+                  <h3>Carry this pattern into the chapter.</h3>
+                  <p>{{ practiceBridgeCopy() }}</p>
+                  @if (grammarLegend().length) {
+                    <div class="practice-bridge-chips">
+                      @for (item of grammarLegend(); track item.label) {
+                        <span class="story-legend-chip" [class.aux]="item.tone === 'aux'" [class.ending]="item.tone === 'ending'" [class.question]="item.tone === 'question'" [class.structure]="item.tone === 'structure'" [class.modal]="item.tone === 'modal'">{{ item.label }}</span>
+                      }
+                    </div>
+                  }
+                </div>
+                <button class="btn btn-primary" (click)="goToTab('story')">Read the Story →</button>
+              </div>
+            } @else {
+              <div class="practice-empty card">
+                <strong>Practice is not added for this chapter yet.</strong>
+                <p>For now, review the grammar examples first, then move into the story and use the quiz to check how secure the pattern feels.</p>
+                <button class="btn btn-primary" (click)="goToTab('story')">Continue to Story</button>
+              </div>
+            }
+          }
+
           @if (activeTab() === 'quiz') {
             @if (quizSubmitted()) {
               @if (getStars() === 3) {
@@ -540,6 +932,12 @@ const LESSON_TABS: LessonTabMeta[] = [
                       <strong>{{ scorePct() }}%</strong>
                       <span>Current accuracy</span>
                     </div>
+                    @if (hasGrammarPractice()) {
+                      <div class="result-highlight-card">
+                        <strong>{{ practiceResultSummary() }}</strong>
+                        <span>Practice result</span>
+                      </div>
+                    }
                     <div class="result-highlight-card">
                       <strong>{{ bestSavedScorePct() }}%</strong>
                       <span>{{ bestResultLabel() }}</span>
@@ -693,6 +1091,8 @@ export class ReaderComponent implements OnInit {
   chapter = signal<ChapterDetail | null>(null);
   activeTab = signal<Tab>('vocabulary');
   answers = signal<Record<number, string>>({});
+  practiceAnswers = signal<Record<number, string>>({});
+  checkedPractice = signal<Set<number>>(new Set());
   revealedQuestions = signal<Set<number>>(new Set());
   quizSubmitted = signal(false);
   score = signal(0);
@@ -714,6 +1114,8 @@ export class ReaderComponent implements OnInit {
   ngOnInit() {
     this.storyService.getChapter(this.chapterId).subscribe((c) => {
       this.chapter.set(c);
+      this.practiceAnswers.set({});
+      this.checkedPractice.set(new Set());
       this.saveLastChapter(c);
     });
   }
@@ -771,6 +1173,102 @@ export class ReaderComponent implements OnInit {
 
   goToTab(tab: Tab) {
     this.activeTab.set(tab);
+  }
+
+  practiceItems(): GrammarPracticeItem[] {
+    return this.chapter()?.grammarPractice ?? [];
+  }
+
+  hasGrammarPractice(): boolean {
+    return this.practiceItems().length > 0;
+  }
+
+  practiceItemCount(): number {
+    return this.practiceItems().length;
+  }
+
+  updatePracticeAnswer(order: number, value: string) {
+    this.practiceAnswers.update((answers) => ({ ...answers, [order]: value }));
+  }
+
+  selectPracticeOption(item: GrammarPracticeItem, option: string) {
+    if (this.isPracticeChecked(item.order)) return;
+    this.updatePracticeAnswer(item.order, option);
+    this.checkPracticeItem(item.order);
+  }
+
+  checkPracticeItem(order: number) {
+    if (!this.canCheckPractice(order)) return;
+    this.checkedPractice.update((set) => {
+      const next = new Set(set);
+      next.add(order);
+      return next;
+    });
+  }
+
+  canCheckPractice(order: number): boolean {
+    return !!this.practiceAnswers()[order]?.trim() && !this.isPracticeChecked(order);
+  }
+
+  isPracticeChecked(order: number): boolean {
+    return this.checkedPractice().has(order);
+  }
+
+  isPracticeCorrect(item: GrammarPracticeItem): boolean {
+    return this.normalizePracticeAnswer(this.practiceAnswers()[item.order] ?? '') === this.normalizePracticeAnswer(item.correctAnswer);
+  }
+
+  practiceCheckedCount(): number {
+    return this.checkedPractice().size;
+  }
+
+  practiceCorrectCount(): number {
+    return this.practiceItems().filter((item) => this.isPracticeChecked(item.order) && this.isPracticeCorrect(item)).length;
+  }
+
+  practiceAllChecked(): boolean {
+    return !this.hasGrammarPractice() || this.practiceItems().every((item) => this.isPracticeChecked(item.order));
+  }
+
+  practiceStatusLabel(): string {
+    if (!this.hasGrammarPractice()) return 'Optional';
+    if (!this.practiceCheckedCount()) return 'Not started';
+    if (!this.practiceAllChecked()) return 'In progress';
+    if (this.practiceCorrectCount() === this.practiceItemCount()) return 'Secure';
+    if (this.practiceCorrectCount() >= Math.ceil(this.practiceItemCount() / 2)) return 'Mostly secure';
+    return 'Needs review';
+  }
+
+  practiceResultSummary(): string {
+    const saved = this.savedProgress();
+    if (saved && saved.practiceTotal > 0) {
+      return `${saved.practiceScore}/${saved.practiceTotal}`;
+    }
+    return `${this.practiceCorrectCount()}/${this.practiceItemCount()}`;
+  }
+
+  practiceBridgeCopy(): string {
+    if (this.practiceCorrectCount() === this.practiceItemCount() && this.practiceItemCount() > 0) {
+      return `You have checked the form. Now look for ${this.chapter()!.grammarFocus.rule.toLowerCase()} doing real work inside the story paragraphs.`;
+    }
+    return `As you read, look for the same grammar signals you just practised and notice how they support the story meaning, not just the form.`;
+  }
+
+  practiceTypeLabel(item: GrammarPracticeItem): string {
+    switch (item.type) {
+      case 'multiple_choice':
+        return 'Choose';
+      case 'fill_blank':
+        return 'Complete';
+      case 'error_correction':
+        return 'Correct';
+      case 'sentence_transformation':
+        return 'Rewrite';
+    }
+  }
+
+  usesPracticeTextarea(item: GrammarPracticeItem): boolean {
+    return item.type === 'error_correction' || item.type === 'sentence_transformation';
   }
 
   highlightParagraph(paragraph: Paragraph): SafeHtml {
@@ -843,6 +1341,10 @@ export class ReaderComponent implements OnInit {
       questionAttempts: chapter.comprehension.map((question) => ({
         questionOrder: question.order,
         selectedAnswer: this.answers()[question.order] ?? '',
+      })),
+      grammarPracticeAttempts: this.practiceItems().map((item) => ({
+        practiceOrder: item.order,
+        selectedAnswer: this.practiceAnswers()[item.order] ?? '',
       })),
     }).subscribe({
       next: (saved) => {
@@ -1037,7 +1539,7 @@ export class ReaderComponent implements OnInit {
   }
 
   storyNextMoveLabel(): string {
-    return 'Read, then answer';
+    return 'Read, then quiz';
   }
 
   activeTabIndex(): number {
@@ -1081,8 +1583,12 @@ export class ReaderComponent implements OnInit {
         return 'Flip cards, review meaning, then continue when ready.';
       case 'grammar':
         return 'Use the examples to notice the exact pattern before reading.';
+      case 'practice':
+        return this.hasGrammarPractice()
+          ? 'Use the short tasks here to make the grammar feel deliberate before moving into the full story.'
+          : 'This chapter has no dedicated practice yet, so move from grammar into the story.';
       case 'story':
-        return 'Read for meaning now, then use the quiz to check understanding and grammar accuracy.';
+        return 'Read for meaning now that the form is fresh, then use the quiz to check understanding and grammar accuracy.';
       case 'quiz':
         return 'Finish the questions, then review the feedback before moving on.';
     }
@@ -1094,8 +1600,10 @@ export class ReaderComponent implements OnInit {
         return 'Preview meaning before you read';
       case 'grammar':
         return 'Notice the grammar signal before the story starts';
+      case 'practice':
+        return this.hasGrammarPractice() ? 'Tighten the form before reading the full story' : 'No dedicated practice in this chapter';
       case 'story':
-        return 'Read first, then let the questions check what you understood';
+        return 'Read in context after the grammar is already familiar';
       case 'quiz':
         return this.quizSubmitted() ? 'Use the feedback to close the loop' : 'Retrieve what the chapter taught you';
     }
@@ -1107,8 +1615,12 @@ export class ReaderComponent implements OnInit {
         return 'Flip the key words, mark the ones you know, and reduce the reading load before the story begins.';
       case 'grammar':
         return 'Study the examples first so the target form feels familiar when it appears inside the story.';
+      case 'practice':
+        return this.hasGrammarPractice()
+          ? 'Use the short exercises to confirm the form, fix small errors, and make the grammar feel more deliberate before reading the chapter more fully.'
+          : 'There is no dedicated practice for this chapter yet, so move into the story after the grammar explanation.';
       case 'story':
-        return 'Read for meaning first. The questions next will test story details and the target grammar, so notice both as you go.';
+        return 'Read for meaning now that the pattern is fresher. The quiz next will test both story understanding and the target grammar.';
       case 'quiz':
         return this.quizSubmitted()
           ? 'Review any missed questions, then return to the story with highlights if you want to reinforce the pattern.'
@@ -1130,6 +1642,11 @@ export class ReaderComponent implements OnInit {
         return [
           { label: 'Worked examples', value: `${chapter.grammarFocus.examples.length}` },
           { label: 'Highlight cues', value: `${this.grammarLegend().length || 1}` },
+        ];
+      case 'practice':
+        return [
+          { label: 'Tasks checked', value: `${this.practiceCheckedCount()}/${this.practiceItemCount()}` },
+          { label: 'Correct', value: `${this.practiceCorrectCount()}` },
         ];
       case 'story':
         return [
@@ -1154,7 +1671,9 @@ export class ReaderComponent implements OnInit {
       case 'vocabulary':
         return 'Continue to grammar focus';
       case 'grammar':
-        return 'Start reading the chapter';
+        return this.hasGrammarPractice() ? 'Start grammar practice' : 'Start reading the chapter';
+      case 'practice':
+        return this.hasGrammarPractice() ? (this.practiceAllChecked() ? 'Continue to story' : 'Finish practice first') : 'Continue to story';
       case 'story':
         return 'Move to the quiz';
       case 'quiz':
@@ -1163,6 +1682,9 @@ export class ReaderComponent implements OnInit {
   }
 
   primaryActionDisabled(): boolean {
+    if (this.activeTab() === 'practice') {
+      return this.hasGrammarPractice() && !this.practiceAllChecked();
+    }
     return this.activeTab() === 'quiz' && !this.quizSubmitted() && !this.allAnswered();
   }
 
@@ -1172,6 +1694,9 @@ export class ReaderComponent implements OnInit {
         this.goToTab('grammar');
         break;
       case 'grammar':
+        this.goToTab(this.hasGrammarPractice() ? 'practice' : 'story');
+        break;
+      case 'practice':
         this.goToTab('story');
         break;
       case 'story':
@@ -1196,6 +1721,26 @@ export class ReaderComponent implements OnInit {
     const chapter = this.chapter();
     if (!chapter) return 0;
     return chapter.comprehension.filter((question) => this.answers()[question.order] === question.correctAnswer).length;
+  }
+
+  private normalizePracticeAnswer(value: string): string {
+    return value
+      .normalize('NFKC')
+      .toLowerCase()
+      .replace(/[’']/g, "'")
+      .replace(/\bwon't\b/g, 'will not')
+      .replace(/\bcan't\b/g, 'can not')
+      .replace(/\b(shan't|ain't)\b/g, (_match, contraction: string) => contraction === "shan't" ? 'shall not' : 'is not')
+      .replace(/\b(doesn't|don't|didn't|isn't|aren't|wasn't|weren't|haven't|hasn't|hadn't|wouldn't|shouldn't|couldn't|mustn't|needn't)\b/g, (match) => `${match.slice(0, -3)} not`)
+      .replace(/\bi'm\b/g, 'i am')
+      .replace(/\b([a-z]+)'re\b/g, '$1 are')
+      .replace(/\b([a-z]+)'ve\b/g, '$1 have')
+      .replace(/\b([a-z]+)'ll\b/g, '$1 will')
+      .replace(/\b([a-z]+)'d\b/g, '$1 would')
+      .replace(/["“”.,;:()[\]{}]/g, ' ')
+      .replace(/[!?]+$/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
   }
 
   grammarLegend(): GrammarLegendItem[] {

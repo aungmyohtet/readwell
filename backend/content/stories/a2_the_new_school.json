@@ -43,39 +43,124 @@
       ],
       "grammarFocus": {
         "rule": "Simple Past – Regular Verbs",
-          "explanation": "We use the simple past tense to talk about actions that started and finished in the past. For regular verbs, we add -ed to the verb.",
+        "explanation": "We use the simple past tense to talk about actions that started and finished in the past. For regular verbs, we add -ed to the verb.",
         "examples": [
           "Emma walked into the classroom and looked around carefully.",
           "She felt nervous, so she sat down at the back of the room.",
           "The teacher smiled at her and asked her to introduce herself.",
           "Sophie invited Emma to sit with her at lunch."
+        ],
+        "formGuide": [
+          "Use the same past form for all subjects in the simple past.",
+          "Add -ed to most regular verbs.",
+          "Change verbs ending in consonant + y to -ied, and watch spelling changes like stop becomes stopped."
+        ],
+        "usageNotes": [
+          "Use it for actions that started and finished in the past.",
+          "Use it often in story narration to move events forward."
+        ],
+        "contrastWith": "Do not mix it with the present simple or past continuous. 'Emma walked in' is the finished past event, while 'Emma was walking in' shows the action in progress.",
+        "commonMistakes": [
+          "Forgetting the -ed ending on regular verbs.",
+          "Adding the wrong spelling after verbs ending in y.",
+          "Using the present form after a finished past-time marker like yesterday."
         ]
       },
       "content": [
         {
           "order": 1,
           "text": "Emma woke early on Monday morning. Her stomach felt strange, like it had butterflies inside. It was her first day at Riverside Middle School. She had moved to the town only two weeks ago, and she knew no one. She ate breakfast without speaking and stared out at the grey sky. Her mother noticed. \"You're going to be fine,\" she said softly. Emma nodded, but she did not believe it.",
-          "imagePlaceholder": "🌅"
+          "imagePlaceholder": "🌅",
+          "grammarAnnotations": [
+            {
+              "targetText": "stared",
+              "highlightText": "ed",
+              "tone": "ending",
+              "note": "regular past ending"
+            },
+            {
+              "targetText": "noticed",
+              "highlightText": "ed",
+              "tone": "ending",
+              "note": "regular past ending"
+            }
+          ]
         },
         {
           "order": 2,
           "text": "Her mother drove her to school and stopped at the gate. Emma picked up her bag and opened the car door, then stopped. \"What if nobody talks to me?\" she asked quietly. Her mother squeezed her hand. \"Then you talk to someone first. You've done harder things than this.\" Emma got out and walked through the gate.",
-          "imagePlaceholder": "🎒"
+          "imagePlaceholder": "🎒",
+          "grammarAnnotations": [
+            {
+              "targetText": "stopped at the gate",
+              "highlightText": "ed",
+              "tone": "ending",
+              "note": "regular past ending"
+            },
+            {
+              "targetText": "walked",
+              "highlightText": "ed",
+              "tone": "ending",
+              "note": "regular past ending"
+            }
+          ]
         },
         {
           "order": 3,
           "text": "The hallway was loud and crowded. Students laughed, shouted, and slammed lockers shut. Emma found locker 47 and tried to open it. The lock was stiff. She pulled and turned it three times before it opened. She put her jacket inside, took out her timetable, and looked at the paper. Room 12. She walked down the hallway slowly, trying not to bump into anyone.",
-          "imagePlaceholder": "🏫"
+          "imagePlaceholder": "🏫",
+          "grammarAnnotations": [
+            {
+              "targetText": "laughed",
+              "highlightText": "ed",
+              "tone": "ending",
+              "note": "regular past ending"
+            },
+            {
+              "targetText": "walked",
+              "highlightText": "ed",
+              "tone": "ending",
+              "note": "regular past ending"
+            }
+          ]
         },
         {
           "order": 4,
           "text": "Room 12 was at the end of the corridor. A woman with bright eyes stood at the door and smiled warmly. \"You must be Emma,\" she said. \"I'm Ms Clarke. Come in. I'd like you to introduce yourself to the class.\" Emma walked to the front. Twenty-four pairs of eyes looked at her. Her face felt hot. \"Hi,\" she said quietly. \"I'm Emma. I came from Bristol.\" She sat down at the nearest empty chair.",
-          "imagePlaceholder": "👩‍🏫"
+          "imagePlaceholder": "👩‍🏫",
+          "grammarAnnotations": [
+            {
+              "targetText": "smiled",
+              "highlightText": "ed",
+              "tone": "ending",
+              "note": "regular past ending"
+            },
+            {
+              "targetText": "walked",
+              "highlightText": "ed",
+              "tone": "ending",
+              "note": "regular past ending"
+            }
+          ]
         },
         {
           "order": 5,
           "text": "At lunch, Emma carried her tray to a long table and sat alone. She looked at her food and pretended to read a book. Then a girl with curly hair stood beside her. \"You're Emma from Bristol, right?\" she said cheerfully. \"I'm Sophie. I moved here last year. It was horrible at first, but it gets better. Can I sit here?\" Emma looked up and felt something loosen in her chest. \"Yes,\" she said. \"Please.\" By the end of the day, she did not feel nervous anymore.",
-          "imagePlaceholder": "😊"
+          "imagePlaceholder": "😊",
+          "grammarAnnotations": [
+            {
+              "targetText": "carried",
+              "highlightText": "ed",
+              "tone": "ending",
+              "note": "regular past ending"
+            },
+            {
+              "targetText": "pretended",
+              "highlightText": "ed",
+              "tone": "ending",
+              "note": "regular past ending"
+            }
+          ]
         }
       ],
       "comprehension": [
@@ -127,6 +212,60 @@
           "correctAnswer": "To tell people your name for the first time",
           "explanation": "In paragraph 4, Ms Clarke asked Emma to 'introduce herself to the class', and then Emma stood up and told the class her name. This shows that 'introduce' means to tell people your name for the first time."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct simple past sentence.",
+          "options": [
+            "Emma walk into the classroom and opened her book.",
+            "Emma walked into the classroom and opened her book.",
+            "Emma walking into the classroom and opened her book.",
+            "Emma walked into the classroom and open her book."
+          ],
+          "correctAnswer": "Emma walked into the classroom and opened her book.",
+          "explanation": "Regular verbs usually add -ed in the simple past.",
+          "skillTag": "regular_past_ed"
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Yesterday Emma ___ at her new desk. (start)",
+          "correctAnswer": "started",
+          "explanation": "The simple past of start is started.",
+          "skillTag": "regular_past_spelling"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: She studyed hard after school.",
+          "correctAnswer": "She studied hard after school.",
+          "explanation": "Verbs ending in consonant + y usually change y to i before -ed.",
+          "skillTag": "y_to_ied_past"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite in the simple past: Emma plays football after class.",
+          "correctAnswer": "Emma played football after class.",
+          "explanation": "Change the present simple verb to the regular past form played.",
+          "skillTag": "regular_past_ed"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly retells Emma's first day in the past.",
+          "correctAnswer": "Sophie smiled and invited Emma to sit with her.",
+          "explanation": "Regular verbs like smiled and invited need the simple past form in a past-time narrative.",
+          "skillTag": "past_narration_regular_verbs",
+          "options": [
+            "Sophie smile and invited Emma to sit with her.",
+            "Sophie smiled and invited Emma to sit with her.",
+            "Sophie is smiling and invited Emma to sit with her.",
+            "Sophie smiled and invite Emma to sit with her."
+          ]
+        }
       ]
     },
     {
@@ -166,33 +305,111 @@
           "Her mother was cooking dinner when Emma came home.",
           "The other students were waiting quietly while Emma looked for her paper.",
           "It was raining heavily when Emma walked to school that morning."
+        ],
+        "formGuide": [
+          "Use was with singular subjects and were with plural subjects.",
+          "Add the -ing form after was or were.",
+          "Pair it with the simple past when one action interrupts another."
+        ],
+        "usageNotes": [
+          "Use it for background actions or actions in progress at a past moment.",
+          "Use it when you want the reader to picture what was happening around a finished event."
+        ],
+        "contrastWith": "Do not use it for every finished event in a story. The past continuous describes the action in progress, while the simple past marks the interrupting or completed event.",
+        "commonMistakes": [
+          "Leaving out was or were before the -ing verb.",
+          "Using the base verb instead of the -ing form.",
+          "Choosing was instead of were with plural subjects."
         ]
       },
       "content": [
         {
           "order": 1,
           "text": "On Wednesday, Ms Clarke's class had a science assignment to hand in. Emma finished it on Sunday evening. She checked it twice, put it in a blue folder, and placed the folder on top of her school bag. She felt pleased. For the first time since she moved, she felt organised. She went to bed early and slept well.",
-          "imagePlaceholder": "📋"
+          "imagePlaceholder": "📋",
+          "grammarAnnotations": [
+            {
+              "targetText": "finished",
+              "highlightText": "ed",
+              "tone": "ending",
+              "note": "completed action"
+            },
+            {
+              "targetText": "checked",
+              "highlightText": "ed",
+              "tone": "ending",
+              "note": "completed action"
+            }
+          ]
         },
         {
           "order": 2,
           "text": "But the next morning, everything went wrong. Emma was rushing to get ready because her alarm did not ring. She grabbed her bag, ran downstairs, and her mother was waiting at the car already. Emma jumped in. She did not check the bag. She did not pick up the blue folder from the table.",
-          "imagePlaceholder": "⏰"
+          "imagePlaceholder": "⏰",
+          "grammarAnnotations": [
+            {
+              "targetText": "was rushing",
+              "tone": "structure",
+              "note": "action in progress in the past"
+            },
+            {
+              "targetText": "was waiting",
+              "tone": "structure",
+              "note": "background action in progress"
+            }
+          ]
         },
         {
           "order": 3,
           "text": "In class, Ms Clarke said, \"Please hand in your assignments.\" Emma put her hand into her bag and searched through every pocket. Pencil case. Water bottle. Three erasers. But no blue folder. She searched again, more slowly this time. Her face went red. \"Emma?\" said Ms Clarke gently. \"Is everything okay?\" The other students were watching her. Emma stood up slowly. \"I finished it,\" she said. \"But I think I left it at home. I'm really sorry, Ms Clarke. I apologize.\"",
-          "imagePlaceholder": "😰"
+          "imagePlaceholder": "😰",
+          "grammarAnnotations": [
+            {
+              "targetText": "were watching",
+              "tone": "structure",
+              "note": "longer action in progress"
+            },
+            {
+              "targetText": "stood up",
+              "tone": "structure",
+              "note": "interrupting finished action"
+            }
+          ]
         },
         {
           "order": 4,
           "text": "Ms Clarke looked at her calmly. \"Bring it tomorrow. But remember — being responsible doesn't only mean finishing your work. It also means making sure it arrives here.\" Emma sat down and stared at her desk. Sophie whispered from the next chair. \"It happened to me last term. Twice.\" Emma almost laughed. She did not feel quite so terrible after that.",
-          "imagePlaceholder": "👩‍🏫"
+          "imagePlaceholder": "👩‍🏫",
+          "grammarAnnotations": [
+            {
+              "targetText": "sat down",
+              "tone": "structure",
+              "note": "finished action after the tense shift"
+            },
+            {
+              "targetText": "stared",
+              "highlightText": "ed",
+              "tone": "ending",
+              "note": "regular past ending"
+            }
+          ]
         },
         {
           "order": 5,
           "text": "That evening, Emma walked into the kitchen and saw the blue folder immediately. It was on the table, exactly where she left it. She picked it up, opened her bag, and put it carefully inside. She zipped the bag shut. Then she went back downstairs and put the bag right next to the front door. \"I'm not going to forget it again,\" she told herself. And she did not.",
-          "imagePlaceholder": "✅"
+          "imagePlaceholder": "✅",
+          "grammarAnnotations": [
+            {
+              "targetText": "was",
+              "tone": "aux",
+              "note": "past be form"
+            },
+            {
+              "targetText": "left it",
+              "tone": "structure",
+              "note": "short completed action in the past"
+            }
+          ]
         }
       ],
       "comprehension": [
@@ -243,6 +460,60 @@
           ],
           "correctAnswer": "To say sorry for making a mistake",
           "explanation": "Emma said 'I'm really sorry, Ms Clarke. I apologize.' Both sentences express the same idea — that she is saying sorry. This shows that 'apologize' means to say sorry."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct sentence.",
+          "options": [
+            "Emma was look for her folder when Ms Clarke spoke.",
+            "Emma was looking for her folder when Ms Clarke spoke.",
+            "Emma looked for her folder when Ms Clarke was spoke.",
+            "Emma were looking for her folder when Ms Clarke spoke."
+          ],
+          "correctAnswer": "Emma was looking for her folder when Ms Clarke spoke.",
+          "explanation": "Use was or were plus verb-ing for the past continuous.",
+          "skillTag": "was_were_ing"
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: The students ___ waiting quietly.",
+          "correctAnswer": "were",
+          "explanation": "Use were with a plural subject like students.",
+          "skillTag": "plural_were"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: Emma was search her bag when the teacher called.",
+          "correctAnswer": "Emma was searching her bag when the teacher called.",
+          "explanation": "After was, use the -ing form.",
+          "skillTag": "missing_ing_after_be"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Complete the sentence using the past continuous: The rain / fall / when Emma left home.",
+          "correctAnswer": "The rain was falling when Emma left home.",
+          "explanation": "Use was falling to show an action in progress in the past.",
+          "skillTag": "background_action_past_continuous"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the best sentence for an action in progress when the teacher spoke.",
+          "correctAnswer": "Emma was searching her bag when Ms Clarke called her name.",
+          "explanation": "Use the past continuous for the longer action in progress and the simple past for the interrupting event.",
+          "skillTag": "interrupted_past_action",
+          "options": [
+            "Emma searched her bag when Ms Clarke was calling her name.",
+            "Emma was searching her bag when Ms Clarke called her name.",
+            "Emma was search her bag when Ms Clarke called her name.",
+            "Emma were searching her bag when Ms Clarke called her name."
+          ]
         }
       ]
     }

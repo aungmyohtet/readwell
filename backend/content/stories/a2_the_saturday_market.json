@@ -5,7 +5,12 @@
     "level": "A2",
     "coverEmoji": "🛒",
     "author": "ReadWell",
-    "tags": ["family", "food", "shopping", "health"]
+    "tags": [
+      "family",
+      "food",
+      "shopping",
+      "health"
+    ]
   },
   "chapters": [
     {
@@ -51,6 +56,21 @@
           "The stalls near the entrance are more expensive than the ones in the middle.",
           "This loaf has the best flavour in the whole market.",
           "The walk home was longer than I expected, but the bags were lighter."
+        ],
+        "formGuide": [
+          "Use adjective + -er or more + adjective to compare two things.",
+          "Use the + adjective + -est or the most + adjective to show the highest point in a group.",
+          "Keep than after comparatives when you name the thing being compared."
+        ],
+        "usageNotes": [
+          "Use comparatives when choosing between two options.",
+          "Use superlatives when one thing stands out from all the others."
+        ],
+        "contrastWith": "Do not combine more with an adjective that already takes -er. Choose one comparative form, not both.",
+        "commonMistakes": [
+          "Using double comparatives like more fresher.",
+          "Forgetting the before a superlative.",
+          "Leaving out than after a comparative."
         ]
       },
       "content": [
@@ -190,6 +210,60 @@
           "correctAnswer": "She changed her mind and now enjoys going to the market.",
           "explanation": "At the start, Zoe did not want to go. She said 'I didn't want to come.' By the end, she uses the superlative 'most interesting' — saying it was better than other recent Saturdays. This shows a genuine change of opinion, not politeness."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct comparison.",
+          "options": [
+            "This stall is more cheap than that one.",
+            "This stall is cheaper than that one.",
+            "This stall is cheapest than that one.",
+            "This stall cheaper than that one."
+          ],
+          "correctAnswer": "This stall is cheaper than that one.",
+          "explanation": "Use comparative adjective + than to compare two things.",
+          "skillTag": "comparative_than"
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: These mangoes are the ___ fruit in the market. (sweet)",
+          "correctAnswer": "sweetest",
+          "explanation": "Use the superlative form sweetest for the top degree.",
+          "skillTag": "superlative_est"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: This bread is more fresher than the other bread.",
+          "correctAnswer": "This bread is fresher than the other bread.",
+          "explanation": "Do not use more with a short adjective that already takes -er.",
+          "skillTag": "double_comparative_error"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite using a superlative: No other stall is as popular as Lina's stall.",
+          "correctAnswer": "Lina's stall is the most popular stall.",
+          "explanation": "Use the most popular to compare one item with all the others.",
+          "skillTag": "superlative_most"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that best fits Zoe's final opinion of the market.",
+          "correctAnswer": "It was the most interesting Saturday she had had in a while.",
+          "explanation": "Use the superlative because Zoe compares that Saturday with many other Saturdays.",
+          "skillTag": "superlative_opinion",
+          "options": [
+            "It was more interesting Saturday she had had in a while.",
+            "It was the most interesting Saturday she had had in a while.",
+            "It was the interestingest Saturday she had had in a while.",
+            "It was the more interesting Saturday she had had in a while."
+          ]
+        }
       ]
     },
     {
@@ -235,6 +309,21 @@
           "You must drink water — it's very important. (strong necessity)",
           "Can you eat soup? — I think I can. (ability: present)",
           "When he was younger, he could walk for hours without stopping. (past ability)"
+        ],
+        "formGuide": [
+          "Use a modal verb directly before the base form of the main verb.",
+          "Use can or could for ability or polite possibility, should for advice, and must for strong obligation.",
+          "Do not add to after a modal verb."
+        ],
+        "usageNotes": [
+          "Choose the modal based on the speaker's purpose: advice, ability, permission, or obligation.",
+          "Use should when you want to guide someone without sounding as strong as must."
+        ],
+        "contrastWith": "Should suggests advice, while must sounds much stronger. Can and could are not the same as rules or obligations.",
+        "commonMistakes": [
+          "Adding to after a modal verb.",
+          "Using must when the sentence is only giving gentle advice.",
+          "Mixing past and present meaning without a clear reason."
         ]
       },
       "content": [
@@ -374,6 +463,60 @@
           ],
           "correctAnswer": "She felt 'a quiet kind of satisfaction' when her advice worked.",
           "explanation": "Paragraph 5 says Zoe 'felt something she hadn't expected — a quiet kind of satisfaction.' This inner feeling shows that she genuinely cared about helping, and that seeing the advice work gave her real pleasure — not just duty."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the best sentence for advice.",
+          "options": [
+            "You must taste the soup before you add more salt, or you are late.",
+            "You should taste the soup before you add more salt.",
+            "You can taste the soup before you add more salt yesterday.",
+            "You could to taste the soup before you add more salt."
+          ],
+          "correctAnswer": "You should taste the soup before you add more salt.",
+          "explanation": "Use should for advice.",
+          "skillTag": "should_for_advice"
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: You ___ wash your hands before you cook.",
+          "correctAnswer": "must",
+          "explanation": "Use must for strong obligation.",
+          "skillTag": "must_for_obligation"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: You should to ask the cook for help.",
+          "correctAnswer": "You should ask the cook for help.",
+          "explanation": "After should, use the base verb without to.",
+          "skillTag": "modal_plus_base_verb"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite with should: It is a good idea to arrive early.",
+          "correctAnswer": "You should arrive early.",
+          "explanation": "Should is a simple way to give advice.",
+          "skillTag": "should_for_advice"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the best advice Zoe could give Grandpa Joe.",
+          "correctAnswer": "You should rest this afternoon, and you must drink plenty of water.",
+          "explanation": "Should gives advice, and must shows strong necessity for the water.",
+          "skillTag": "layered_modal_meaning",
+          "options": [
+            "You should to rest this afternoon, and you must drink plenty of water.",
+            "You should rest this afternoon, and you must drink plenty of water.",
+            "You can rest this afternoon, and you should drink plenty of water or else.",
+            "You must to rest this afternoon, and you drink plenty of water."
+          ]
         }
       ]
     }

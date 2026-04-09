@@ -5,7 +5,12 @@
     "level": "B1",
     "coverEmoji": "✉️",
     "author": "ReadWell",
-    "tags": ["friendship", "travel", "culture", "identity"]
+    "tags": [
+      "friendship",
+      "travel",
+      "culture",
+      "identity"
+    ]
   },
   "chapters": [
     {
@@ -46,6 +51,21 @@
       "grammarFocus": {
         "rule": "Present Perfect Simple",
         "explanation": "We use the present perfect to connect the past to the present. Use it for experiences (with ever/never), recent events that affect now (with just/already/yet), and situations that started in the past and continue now (with since/for). Form: have/has + past participle.",
+        "formGuide": [
+          "Use has with he, she, or it, and have with I, you, we, or they.",
+          "Follow has or have with the past participle form of the verb.",
+          "Add words like already, yet, ever, never, since, and for when they clarify the time relationship."
+        ],
+        "usageNotes": [
+          "Use it when a past action or experience still matters in the present.",
+          "Use it for life experiences, recent results, and situations that began earlier and still continue now."
+        ],
+        "contrastWith": "Do not mix it with the simple past. Use the simple past for a finished time like 'last year' or 'yesterday'. Use the present perfect when the time is unfinished or when the present result matters more than the exact past moment.",
+        "commonMistakes": [
+          "Using the past simple after has or have instead of the past participle.",
+          "Adding a finished past-time marker like 'yesterday' to a present perfect sentence.",
+          "Choosing the present perfect when the sentence really needs a clear finished-time simple past form."
+        ],
         "examples": [
           "Nadia has wanted to visit Barcelona for two years. (started in past, still true now)",
           "She has already packed her suitcase three times this week. (recent action with present relevance)",
@@ -53,6 +73,68 @@
           "Mr Osei has praised her pronunciation twice this term. (recent event with present result)"
         ]
       },
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly uses the present perfect.",
+          "options": [
+            "Nadia has wrote more than forty letters.",
+            "Nadia has written more than forty letters.",
+            "Nadia wrote more than forty letters this week and still does.",
+            "Nadia has writing more than forty letters."
+          ],
+          "correctAnswer": "Nadia has written more than forty letters.",
+          "explanation": "The present perfect uses has or have plus the past participle, not the past simple or -ing form.",
+          "skillTag": "have_has_past_participle"
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Nadia ___ already packed her suitcase three times this week.",
+          "correctAnswer": "has",
+          "explanation": "Use has with a third-person singular subject like Nadia.",
+          "skillTag": "have_has_agreement"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: Nadia has went to Barcelona before.",
+          "correctAnswer": "Nadia has gone to Barcelona before.",
+          "explanation": "After has or have, use the past participle. The past participle of go is gone.",
+          "skillTag": "past_participle_choice"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite using the present perfect with for: Nadia studies Spanish. She started six months ago and still studies it now.",
+          "correctAnswer": "Nadia has studied Spanish for six months.",
+          "explanation": "Use the present perfect with for to connect a starting point in the past to the present result now.",
+          "skillTag": "duration_for_since"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that should use the simple past instead of the present perfect.",
+          "options": [
+            "She has packed her suitcase three times this week.",
+            "He has praised her pronunciation twice this term.",
+            "She has met Carla yesterday at the airport.",
+            "They have never spoken out loud before."
+          ],
+          "correctAnswer": "She has met Carla yesterday at the airport.",
+          "explanation": "Yesterday is a finished past time marker, so the simple past is needed: 'She met Carla yesterday.'",
+          "skillTag": "present_perfect_vs_past_simple"
+        },
+        {
+          "order": 6,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Nadia hasn't heard Carla's voice ___, but tomorrow she will.",
+          "correctAnswer": "yet",
+          "explanation": "Use yet in negatives to show that something has not happened up to now.",
+          "skillTag": "yet_in_negative"
+        }
+      ],
       "content": [
         {
           "order": 1,
@@ -65,9 +147,19 @@
               "note": "past linked to now"
             },
             {
+              "targetText": "have been exchanging letters ever since",
+              "tone": "structure",
+              "note": "activity continuing from the past"
+            },
+            {
               "targetText": "has already packed",
               "tone": "structure",
               "note": "recent result"
+            },
+            {
+              "targetText": "has learned more about Barcelona",
+              "tone": "aux",
+              "note": "present relevance"
             }
           ]
         },
@@ -85,6 +177,16 @@
               "targetText": "has written more than forty letters",
               "tone": "structure",
               "note": "completed quantity"
+            },
+            {
+              "targetText": "have only ever communicated in writing",
+              "tone": "aux",
+              "note": "experience up to now"
+            },
+            {
+              "targetText": "has thought about Carla almost every day",
+              "tone": "structure",
+              "note": "repeated experience until now"
             }
           ]
         },
@@ -102,6 +204,16 @@
               "targetText": "has made real progress",
               "tone": "structure",
               "note": "present result"
+            },
+            {
+              "targetText": "has praised her pronunciation twice this term",
+              "tone": "aux",
+              "note": "recent event with current meaning"
+            },
+            {
+              "targetText": "has not told anyone",
+              "tone": "structure",
+              "note": "negative present perfect"
             }
           ]
         },
@@ -119,6 +231,16 @@
               "targetText": "have planned so many things",
               "tone": "aux",
               "note": "planning up to now"
+            },
+            {
+              "targetText": "have thought about this visit since January",
+              "tone": "structure",
+              "note": "since + present perfect"
+            },
+            {
+              "targetText": "has written just two",
+              "tone": "aux",
+              "note": "recent completed action"
             }
           ]
         },
@@ -136,6 +258,16 @@
               "targetText": "hasn't heard her voice yet",
               "tone": "structure",
               "note": "yet with present perfect"
+            },
+            {
+              "targetText": "have never stood in the same room",
+              "tone": "aux",
+              "note": "experience that has not happened until now"
+            },
+            {
+              "targetText": "has tried to explain this",
+              "tone": "structure",
+              "note": "repeated effort before now"
             }
           ]
         }
@@ -264,6 +396,21 @@
           "I've been to that bookshop hundreds of times. (no specific time mentioned — present perfect)",
           "We visited the National Gallery and I got completely lost. (specific past trip — simple past)",
           "She has planned this visit since January, but she only told me yesterday. (duration = present perfect; specific moment = simple past)"
+        ],
+        "formGuide": [
+          "Use the present perfect for experiences or situations connected to now when no finished time is given.",
+          "Use the simple past for finished events at a specific past time.",
+          "Switch between them when the meaning changes from general experience to a named moment."
+        ],
+        "usageNotes": [
+          "Ask about life experiences with ever using the present perfect.",
+          "Move to the simple past when you name when the event happened."
+        ],
+        "contrastWith": "The two tenses can appear in the same conversation, but they do different jobs. The present perfect keeps the time open; the simple past closes it.",
+        "commonMistakes": [
+          "Using the present perfect with yesterday, last summer, or another finished past time.",
+          "Using the simple past when the sentence is really about experience until now.",
+          "Keeping the past participle after did or another simple past structure."
         ]
       },
       "content": [
@@ -281,6 +428,11 @@
               "targetText": "Nadia laughed",
               "tone": "structure",
               "note": "simple past finished moment"
+            },
+            {
+              "targetText": "Nadia walked through the arrivals gate",
+              "tone": "structure",
+              "note": "specific finished event"
             }
           ]
         },
@@ -299,6 +451,16 @@
               "targetText": "I went there last summer",
               "tone": "structure",
               "note": "specific time = simple past"
+            },
+            {
+              "targetText": "I've been to London too",
+              "tone": "aux",
+              "note": "experience with no finished time"
+            },
+            {
+              "targetText": "he juggled fire",
+              "tone": "structure",
+              "note": "specific past detail"
             }
           ]
         },
@@ -317,6 +479,16 @@
               "targetText": "I forgot",
               "tone": "structure",
               "note": "finished past event"
+            },
+            {
+              "targetText": "had never been hugged",
+              "tone": "aux",
+              "note": "earlier experience before that moment"
+            },
+            {
+              "targetText": "She hasn't mentioned it",
+              "tone": "structure",
+              "note": "negative present perfect"
             }
           ]
         },
@@ -334,6 +506,16 @@
               "targetText": "they went for a stroll",
               "tone": "structure",
               "note": "simple past narrative"
+            },
+            {
+              "targetText": "Nadia marvelled at the tiles",
+              "tone": "structure",
+              "note": "specific finished reaction"
+            },
+            {
+              "targetText": "She had already taken fifteen photographs",
+              "tone": "aux",
+              "note": "earlier action before another past moment"
             }
           ]
         },
@@ -352,6 +534,16 @@
               "targetText": "I've thought about this trip since January",
               "tone": "aux",
               "note": "unfinished time period"
+            },
+            {
+              "targetText": "has been what I imagined",
+              "tone": "structure",
+              "note": "present result compared with expectations"
+            },
+            {
+              "targetText": "we've only just started",
+              "tone": "aux",
+              "note": "present perfect with just"
             }
           ]
         }
@@ -416,6 +608,60 @@
           ],
           "correctAnswer": "Carla still has many plans and experiences she wants to share with Nadia.",
           "explanation": "In chapter 1, Carla's letter mentioned she has 'planned so many things.' At the end of their first day, she says 'we've only just started', meaning the trip has more good things ahead. It is also a warm way of telling Nadia that what has already been good is only the beginning."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly uses the present perfect.",
+          "correctAnswer": "Carla has visited this square many times.",
+          "explanation": "Use the present perfect for experiences without a finished past time.",
+          "skillTag": "experience_present_perfect",
+          "options": [
+            "Carla has visited this square yesterday.",
+            "Carla has visited this square many times.",
+            "Carla visited this square since Monday.",
+            "Carla has visit this square many times."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Last summer Nadia ___ in Madrid for two weeks. (stay)",
+          "correctAnswer": "stayed",
+          "explanation": "Use the simple past with a finished time expression like last summer.",
+          "skillTag": "finished_time_simple_past"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: I have met Carla yesterday.",
+          "correctAnswer": "I met Carla yesterday.",
+          "explanation": "Yesterday is a finished past time, so use the simple past.",
+          "skillTag": "present_perfect_vs_past_simple"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite using the present perfect: I know Carla. I met her two years ago and I still know her now.",
+          "correctAnswer": "I have known Carla for two years.",
+          "explanation": "Use the present perfect for a state that started in the past and continues now.",
+          "skillTag": "state_since_for"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the best exchange for a life experience followed by a specific finished time.",
+          "options": [
+            "Have you ever ridden the Barcelona metro before? Yes, I have. I went on it this morning.",
+            "Did you ever ridden the Barcelona metro before? Yes, I have went on it this morning.",
+            "Have you ever been on the Barcelona metro yesterday? Yes, I have.",
+            "Did you ever go on the Barcelona metro before? Yes, I have been."
+          ],
+          "correctAnswer": "Have you ever ridden the Barcelona metro before? Yes, I have. I went on it this morning.",
+          "explanation": "Use the present perfect for the life experience question and the simple past for the specific finished time this morning.",
+          "skillTag": "experience_then_specific_time"
         }
       ]
     }

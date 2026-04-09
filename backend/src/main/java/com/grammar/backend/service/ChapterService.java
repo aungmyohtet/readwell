@@ -76,6 +76,7 @@ public class ChapterService {
     r.setTitle(c.getTitle());
     r.setVocabulary(c.getVocabulary());
     r.setGrammarFocus(c.getGrammarFocus());
+    r.setGrammarPractice(c.getGrammarPractice());
     r.setContent(c.getContent());
     r.setComprehension(c.getComprehension());
     if (progress != null) {

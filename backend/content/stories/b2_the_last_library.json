@@ -5,7 +5,12 @@
     "level": "B2",
     "coverEmoji": "📚",
     "author": "ReadWell",
-    "tags": ["history", "community", "determination", "heritage"]
+    "tags": [
+      "history",
+      "community",
+      "determination",
+      "heritage"
+    ]
   },
   "chapters": [
     {
@@ -63,30 +68,61 @@
           "If the petition had reached more people, the council might have listened.",
           "If Mara hadn't stopped to read the sign, she would never have walked inside.",
           "Agnes wrote: 'If I had known how difficult this would be, I'm not sure I would have started.'"
+        ],
+        "formGuide": [
+          "Use if + past perfect in the condition clause.",
+          "Use would have + past participle in the result clause.",
+          "Keep the meaning fully in the past: both the cause and result are imagined."
+        ],
+        "usageNotes": [
+          "Use it for regret, speculation, and alternative past outcomes.",
+          "It is common when characters reflect on what might have happened differently."
+        ],
+        "contrastWith": "Do not confuse it with mixed conditionals. Third conditional stays in the past instead of linking to a present result.",
+        "commonMistakes": [
+          "Using would have in the if-clause.",
+          "Using the present form instead of the past participle.",
+          "Changing the result into a present consequence when the meaning is fully past."
         ]
       },
       "content": [
         {
           "order": 1,
-          "text": "In the window of the old Hartwell Library there was a sign Mara had never noticed before. She walked past it every morning on her way to school, and every afternoon on the way back. But today the sign was new — printed on white paper in clean black letters: PLANNING PERMISSION GRANTED. DEMOLITION: OCTOBER 14TH. Mara stopped on the pavement. She looked at the building properly for the first time. The iron gate. The wide stone steps, worn smooth in the middle from decades of feet. The name carved above the door: HARTWELL, 1943. She had visited this library exactly twice, both times for school projects. Now, standing in front of it, she felt inexplicably as though something important was about to be taken away — not from her exactly, but from the air around her.",
+          "text": "In the window of the old Hartwell Library there was a sign Mara had never noticed before. She walked past it every day on her way to and from school. But today the sign was new — printed in black letters: PLANNING PERMISSION GRANTED. DEMOLITION: OCTOBER 14TH. Mara stopped on the pavement. She looked at the building properly for the first time. The iron gate. The wide stone steps, worn smooth by decades of feet. The name carved above the door: HARTWELL, 1943. She had visited this library twice, both times for projects. Now, standing in front of it, she felt as though something important was about to be taken away — not from her exactly, but from the air around her.",
           "imagePlaceholder": "🏛️",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "had never noticed before",
+              "tone": "aux",
+              "note": "earlier unrealised past experience"
+            },
+            {
+              "targetText": "She had visited this library twice",
+              "tone": "structure",
+              "note": "past perfect background before the present moment"
+            }
+          ]
         },
         {
           "order": 2,
-          "text": "She pushed the gate open and went inside. The library smelled of old paper and wood polish and something faintly sweet she could not identify. A man in his mid-seventies sat behind the main desk, reading. He looked up without alarm. \"I saw the sign,\" Mara said. She was not sure what else to say. The man — his name badge read MR FENNICK — nodded slowly. \"If the council had listened to us three years ago, we wouldn't be in this situation,\" he said. \"We submitted a heritage petition. Thirty-seven signatures. They rejected it.\" He opened a drawer beneath the desk and placed a manila folder carefully on the surface between them. \"But if you have a few minutes, and if you're interested in why this building matters, I think you should look at this.\"",
+          "text": "She pushed the gate open and went inside. The library smelled of old paper and wood polish and something faintly sweet she could not identify. A man in his mid-seventies sat behind the main desk, reading. He looked up without alarm. \"I saw the sign,\" Mara said. She was not sure what else to say. The man — his name badge read MR FENNICK — nodded slowly. \"If the council had listened to us three years ago, we wouldn't be in this situation,\" he said. \"We submitted a heritage petition. Thirty-seven signatures. They rejected it.\" He opened a drawer beneath the desk and placed a manila folder between them. \"But if you have a few minutes, and if you're interested in why this building matters, I think you should look at this.\"",
           "imagePlaceholder": "📖",
           "grammarAnnotations": [
             {
               "targetText": "If the council had listened to us three years ago, we wouldn't be in this situation",
               "tone": "structure",
               "note": "past cause, present result"
+            },
+            {
+              "targetText": "if you have a few minutes, and if you're interested in why this building matters, I think you should look at this.",
+              "tone": "aux",
+              "note": "real present conditions in direct speech"
             }
           ]
         },
         {
           "order": 3,
-          "text": "The folder contained letters. Old ones — some typed on thin yellowed paper, others handwritten in a neat slanted script in faded blue ink. They were written by a woman named Agnes Hartwell. She built the library in 1943, during the second year of heavy bombing, when half the town had been evacuated and the other half was trying to carry on. Agnes had written to the town council asking for funding to create a reading room. They refused. She wrote to her neighbours, her colleagues, her former teachers. She organised fundraising events in her own kitchen. She sold her furniture — her own furniture — to cover the cost of the first books. \"If she hadn't been the catalyst she was,\" Mr Fennick said quietly, \"this library would never have existed. Three generations of this town learned to read here. If she hadn't started it, none of that would have happened.\" He looked at the shelves for a long moment.",
+          "text": "The folder contained letters. Old ones — some typed on thin yellowed paper, others handwritten in a neat slanted script in faded blue ink. They were written by a woman named Agnes Hartwell. She built the library in 1943, during heavy bombing, when half the town had been evacuated and the rest was trying to carry on. Agnes had written to the town council asking for funding to create a reading room. They refused. She wrote to neighbours, colleagues, and former teachers. She organised fundraising events in her own kitchen. She sold her furniture to buy the first books. \"If she hadn't been the catalyst she was,\" Mr Fennick said quietly, \"this library would never have existed. Three generations of this town learned to read here. If she hadn't started it, none of that would have happened.\" He looked at the shelves for a long moment.",
           "imagePlaceholder": "✉️",
           "grammarAnnotations": [
             {
@@ -98,12 +134,17 @@
               "targetText": "If she hadn't started it, none of that would have happened.",
               "tone": "structure",
               "note": "imaginary past result"
+            },
+            {
+              "targetText": "Agnes had written to the town council asking for funding to create a reading room.",
+              "tone": "aux",
+              "note": "past perfect narrative background"
             }
           ]
         },
         {
           "order": 4,
-          "text": "Mara carried the folder to a corner table and read for an hour. The letters revealed something she had not expected — Agnes was not certain she would succeed. In one letter, written in the autumn of 1943, she described the feeling precisely: \"If I had known at the outset how difficult this would be, I am not sure I would have started. But here is what I also know: if I hadn't started, no one else would have. And that thought, more than any other, is enough to keep me going.\" Mara read those two sentences three times. She thought about the sign in the window. She thought about thirty-seven signatures. Agnes's decision to continue had been pivotal — that much was clear. If the petition had reached more people, if someone with more influence had cared, would the building still be standing in fifty years? Would Agnes's legacy still be intact?",
+          "text": "Mara carried the folder to a corner table and read for an hour. The letters revealed that Agnes was not certain she would succeed. In one letter, written in the autumn of 1943, she wrote: \"If I had known at the outset how difficult this would be, I am not sure I would have started. But here is what I also know: if I hadn't started, no one else would have. And that thought, more than any other, is enough to keep me going.\" Mara read the lines three times and thought about the sign in the window and the thirty-seven signatures. Agnes's decision to continue had been pivotal. If the petition had reached more people, if someone with more influence had cared, would the building still be standing in fifty years? Would Agnes's legacy still be intact?",
           "imagePlaceholder": "💭",
           "grammarAnnotations": [
             {
@@ -115,14 +156,30 @@
               "targetText": "if I hadn't started, no one else would have.",
               "tone": "structure",
               "note": "imaginary past consequence"
+            },
+            {
+              "targetText": "If the petition had reached more people, if someone with more influence had cared, would the building still be standing in fifty years?",
+              "tone": "question",
+              "note": "layered hypothetical reflection"
             }
           ]
         },
         {
           "order": 5,
-          "text": "She photographed every letter on her phone. Then she went home and opened the town's digital archive — she had never used it before — and spent three hours searching. She found newspaper articles from 1943, photographs of the library's opening day, a typed list of the first week's borrowers. She found an interview Agnes gave in 1971, twenty-eight years after the library opened: \"The building is not the point,\" Agnes had said. \"The building is just the shape of the point. The point is what happens inside it. If we ever lose this building, I hope we don't lose the habit.\" The letters, the photographs, the interview — they were all irreplaceable. Mara understood now that to demolish the building was not simply to knock down old walls — it was to erase something that could not be recovered.",
+          "text": "She photographed every letter on her phone. Then she went home and opened the town's digital archive — she had never used it before — and spent three hours searching. She found newspaper articles from 1943, photographs of the library's opening day, a typed list of the first week's borrowers. She found an interview Agnes gave in 1971: \"The building is not the point,\" Agnes had said. \"The building is just the shape of the point. The point is what happens inside it. If we ever lose this building, I hope we don't lose the habit.\" The letters, photographs, and interview were irreplaceable. Mara understood now that to demolish the building was not simply to knock down walls — it was to erase something that could not be recovered.",
           "imagePlaceholder": "🗄️",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "had never used it before",
+              "tone": "aux",
+              "note": "past perfect experience before that evening"
+            },
+            {
+              "targetText": "Agnes had said.",
+              "tone": "structure",
+              "note": "reported speech background in the past"
+            }
+          ]
         },
         {
           "order": 6,
@@ -133,6 +190,11 @@
               "targetText": "If Agnes hadn't cared about this town in 1943, three generations of people would have grown up without this place.",
               "tone": "structure",
               "note": "imaginary past and result"
+            },
+            {
+              "targetText": "And if they hear the story, they might feel differently.",
+              "tone": "aux",
+              "note": "real future possibility in contrast with past hypotheticals"
             }
           ]
         }
@@ -209,6 +271,60 @@
           ],
           "correctAnswer": "She plans to begin by signing herself as the thirty-eighth person after the previous thirty-seven.",
           "explanation": "The previous petition had thirty-seven signatures. Mara says she is 'starting with thirty-eight', meaning she will be number thirty-eight — adding herself to where the last petition left off. The moment is emphasised when Mrs Albright then 'picked up a pen', becoming the thirty-ninth."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct third conditional sentence.",
+          "correctAnswer": "If Mara had ignored the sign, she would never have entered the library.",
+          "explanation": "Use if + past perfect and would have + past participle.",
+          "skillTag": "if_past_perfect_would_have",
+          "options": [
+            "If Mara ignored the sign, she would never have entered the library.",
+            "If Mara had ignored the sign, she would never have entered the library.",
+            "If Mara had ignored the sign, she would never enter the library.",
+            "If Mara had ignored the sign, she would never have enter the library."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: If the council had listened earlier, the building ___ have survived. (might)",
+          "correctAnswer": "might",
+          "explanation": "Use might have to show a possible past result.",
+          "skillTag": "might_have_result"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: If Agnes would have given up, the library would not exist.",
+          "correctAnswer": "If Agnes had given up, the library would not have existed.",
+          "explanation": "Use the past perfect in the if-clause and would have + past participle in the result.",
+          "skillTag": "if_past_perfect_would_have"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite as a third conditional: Mara stopped, so she saw the folder.",
+          "correctAnswer": "If Mara had not stopped, she would not have seen the folder.",
+          "explanation": "Use the third conditional to imagine the opposite past result.",
+          "skillTag": "if_past_perfect_would_have"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that best fits the library story's idea of a different past outcome.",
+          "correctAnswer": "If the town had ignored Agnes completely, the library would never have opened.",
+          "explanation": "Both parts stay in the imagined past, so the third conditional fits.",
+          "skillTag": "imagined_past_outcome",
+          "options": [
+            "If the town would have ignored Agnes completely, the library would never have opened.",
+            "If the town had ignored Agnes completely, the library would never have opened.",
+            "If the town had ignored Agnes completely, the library would never open.",
+            "If the town ignored Agnes completely, the library would never have opened."
+          ]
         }
       ]
     }

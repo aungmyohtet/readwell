@@ -55,33 +55,133 @@
           "Sophie stood at the door and gave Emma a handmade card.",
           "Emma felt something she didn't expect — this was exactly right.",
           "Her mother made the cake from her grandmother's recipe and took a photograph of everyone."
+        ],
+        "formGuide": [
+          "Use one past form for all subjects, but irregular verbs do not follow the -ed rule.",
+          "Learn the common past forms as full word changes, like go becomes went and take becomes took.",
+          "Keep the irregular past form only in positive statements; use the base form after did in questions and negatives."
+        ],
+        "usageNotes": [
+          "Use it for finished past events in stories and retelling.",
+          "Notice the most frequent verbs first because they appear again and again in reading."
+        ],
+        "contrastWith": "Do not add -ed to irregular verbs. Their past forms must be remembered as separate words.",
+        "commonMistakes": [
+          "Inventing forms like buyed or taked.",
+          "Using the irregular past after did in a question or negative.",
+          "Mixing a present form and a past form in the same past-time sentence."
         ]
       },
       "content": [
         {
           "order": 1,
-          "text": "Emma's birthday fell on a Saturday in October. She woke up later than usual and lay in bed looking at the ceiling. Last year, her best friend Jade organised a surprise party with twelve people in Jade's garden. There were balloons, a cake, and everyone she knew. This year, Emma thought there would be no surprise. Her mother told her they would have a quiet lunch, just the three of them. Emma got up slowly, went to the bathroom, and walked downstairs.",
-          "imagePlaceholder": "🌤️"
+          "text": "Emma's birthday fell on a Saturday in October. It should have felt like a special occasion, but she woke up late and lay in bed looking at the ceiling. Last year, her best friend Jade organised a surprise party in the garden. This year, Emma thought there would be no surprise. Her mother told her they would have a quiet lunch. Emma got up, went to the bathroom, and walked downstairs.",
+          "imagePlaceholder": "🌤️",
+          "grammarAnnotations": [
+            {
+              "targetText": "fell",
+              "tone": "structure",
+              "note": "irregular past form"
+            },
+            {
+              "targetText": "woke up",
+              "tone": "aux",
+              "note": "irregular past verb"
+            },
+            {
+              "targetText": "went to the bathroom",
+              "tone": "structure",
+              "note": "went is the irregular past of go"
+            }
+          ]
         },
         {
           "order": 2,
-          "text": "But when she came into the kitchen, she saw that her mother had decorated the table with a small vase of yellow flowers. There was a card against the vase and two extra chairs at the table. Emma's aunt and uncle sat in those chairs. They came from Sheffield — three hours by train — and said nothing about coming in advance. They just appeared. \"Happy birthday, Emma,\" her uncle said. He stood up and hugged her. Her aunt gave her a small box wrapped in blue paper. Emma had not expected this. She did not know what to say, so she just sat down.",
-          "imagePlaceholder": "🎂"
+          "text": "But when she came into the kitchen, she saw that her mother had decorated the table with yellow flowers. There was a card and two extra chairs at the table. Emma's aunt and uncle sat in those chairs. They came from Sheffield and said nothing about coming in advance. \"Happy birthday, Emma,\" her uncle said. He stood up and hugged her. Her aunt gave her a small box wrapped in blue paper. Emma did not know what to say, so she just sat down.",
+          "imagePlaceholder": "🎂",
+          "grammarAnnotations": [
+            {
+              "targetText": "came from Sheffield",
+              "tone": "structure",
+              "note": "came is the irregular past of come"
+            },
+            {
+              "targetText": "stood up",
+              "tone": "aux",
+              "note": "stood is the irregular past of stand"
+            },
+            {
+              "targetText": "gave her a small box",
+              "tone": "structure",
+              "note": "gave is the irregular past of give"
+            }
+          ]
         },
         {
           "order": 3,
-          "text": "The whole family gathered around the table. Her uncle told stories Emma had never heard before — stories about her mother when she was young, about a dog her grandmother once had, about a holiday where everything went wrong in the best possible way. Emma's mother laughed at things Emma had never seen her laugh at. Her aunt said something and everyone went quiet, and then they all laughed again. It was a different kind of afternoon — the kind Emma knew she would remember.",
-          "imagePlaceholder": "😄"
+          "text": "The whole family gathered around the table. Her uncle told stories Emma had never heard before about her mother when she was young and about a holiday where everything went wrong. Emma's mother laughed at things Emma had never seen her laugh at. It was a different kind of afternoon — the kind Emma knew she would remember.",
+          "imagePlaceholder": "😄",
+          "grammarAnnotations": [
+            {
+              "targetText": "told stories",
+              "tone": "structure",
+              "note": "told is the irregular past of tell"
+            },
+            {
+              "targetText": "went wrong",
+              "tone": "aux",
+              "note": "went is the irregular past of go"
+            },
+            {
+              "targetText": "knew",
+              "tone": "structure",
+              "note": "knew is the irregular past of know"
+            }
+          ]
         },
         {
           "order": 4,
-          "text": "At two o'clock, the doorbell rang. Emma's mother went to the door and came back with Sophie. Sophie stood in the hallway with a wrapped gift and a card she made herself. She looked slightly nervous. \"I hope this is okay,\" she said. \"Your mum told me it was your birthday.\" Emma took the gift and felt something she did not know how to name. It was a surprise — a real one. \"Come in,\" Emma said. \"Have some cake.\" Sophie gave her a big smile and came inside.",
-          "imagePlaceholder": "🎁"
+          "text": "At two o'clock, the doorbell rang. Emma's mother went to the door and came back with Sophie. Sophie stood in the hallway with a wrapped gift and a card she made herself. \"I hope this is okay,\" she said. \"Your mum told me it was your birthday.\" Emma took the gift and felt something she did not know how to name. It was a real surprise. \"Come in,\" Emma said. Sophie gave her a big smile and came inside.",
+          "imagePlaceholder": "🎁",
+          "grammarAnnotations": [
+            {
+              "targetText": "went to the door",
+              "tone": "structure",
+              "note": "went is the irregular past of go"
+            },
+            {
+              "targetText": "felt something",
+              "tone": "aux",
+              "note": "felt is the irregular past of feel"
+            },
+            {
+              "targetText": "gave her a big smile",
+              "tone": "structure",
+              "note": "gave is the irregular past of give"
+            }
+          ]
         },
         {
           "order": 5,
-          "text": "Her mother made the cake from a recipe that came from Emma's grandmother. Her uncle took a photograph of everyone at the table. Later, Emma thought about how different the day felt from what she expected. She thought she knew what a birthday away from home would feel like. She was wrong. That evening she wrote to Jade in Bristol. She told her about her relatives who came from Sheffield, about Sophie at the door, about the yellow flowers and the cake. She wrote: \"It was different from last year. But it was good.\" She sat back and read it twice. Then she sent it.",
-          "imagePlaceholder": "✍️"
+          "text": "Her mother made the cake from a recipe that came from Emma's grandmother. Her uncle took a photograph of everyone at the table. Later, Emma thought about how different the day felt. She thought she knew what a birthday away from home would feel like. She was wrong. That evening she wrote to Jade in Bristol. She told her about her relatives, about Sophie at the door, and about the cake. She wrote: \"It was different from last year. But it was good.\" Then she sent it.",
+          "imagePlaceholder": "✍️",
+          "grammarAnnotations": [
+            {
+              "targetText": "made the cake",
+              "tone": "structure",
+              "note": "made is the irregular past of make"
+            },
+            {
+              "targetText": "took a photograph",
+              "tone": "aux",
+              "note": "took is the irregular past of take"
+            },
+            {
+              "targetText": "wrote to Jade",
+              "tone": "structure",
+              "note": "wrote is the irregular past of write"
+            }
+          ]
         }
       ],
       "comprehension": [
@@ -133,6 +233,60 @@
           "correctAnswer": "Everyone came together around the table as a group.",
           "explanation": "Paragraph 3 says 'The whole family gathered around the table' just before describing everyone telling stories together. This shows 'gather' means to come together in one place as a group."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct sentence.",
+          "options": [
+            "Emma gived her friend a card and taked a photo.",
+            "Emma gave her friend a card and took a photo.",
+            "Emma gives her friend a card and took a photo.",
+            "Emma giving her friend a card and took a photo."
+          ],
+          "correctAnswer": "Emma gave her friend a card and took a photo.",
+          "explanation": "Irregular past forms do not take -ed.",
+          "skillTag": "irregular_past_forms"
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Last night Emma ___ home late because of the party. (go)",
+          "correctAnswer": "went",
+          "explanation": "The simple past of go is went.",
+          "skillTag": "go_went"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: She buyed a gift for her friend.",
+          "correctAnswer": "She bought a gift for her friend.",
+          "explanation": "The simple past of buy is bought.",
+          "skillTag": "buy_bought"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite in the simple past: He takes the bus to school.",
+          "correctAnswer": "He took the bus to school.",
+          "explanation": "The simple past of take is took.",
+          "skillTag": "take_took"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly retells Emma's birthday surprise.",
+          "correctAnswer": "Sophie's gift came at the right moment and made Emma smile.",
+          "explanation": "Came and made are the correct irregular and past forms for the story event.",
+          "skillTag": "story_irregular_verbs",
+          "options": [
+            "Sophie's gift come at the right moment and maked Emma smile.",
+            "Sophie's gift came at the right moment and made Emma smile.",
+            "Sophie's gift came at the right moment and make Emma smile.",
+            "Sophie's gift was coming at the right moment and made Emma smile."
+          ]
+        }
       ]
     },
     {
@@ -178,33 +332,128 @@
           "I think it will be fine. (prediction about the future)",
           "I won't know the result until next week. (future uncertainty)",
           "You're probably going to forget the words the first time. (prediction based on experience)"
+        ],
+        "formGuide": [
+          "Use be going to + base verb for plans and intentions already decided.",
+          "Use will + base verb for predictions, promises, and quick decisions.",
+          "Keep be with going to: am going to, is going to, are going to."
+        ],
+        "usageNotes": [
+          "Use going to when the speaker already has a plan in mind.",
+          "Use will when the future idea is a prediction or a decision made in the moment."
+        ],
+        "contrastWith": "Both forms talk about the future, but they are not identical. Going to sounds planned; will often sounds spontaneous or uncertain.",
+        "commonMistakes": [
+          "Leaving out to after going.",
+          "Using will when the sentence clearly describes a prior plan.",
+          "Adding another future marker after will, like 'will going to'."
         ]
       },
       "content": [
         {
           "order": 1,
-          "text": "On a Monday in November, Sophie put a yellow flyer on Emma's desk at the start of class. \"The school play,\" Sophie said. \"Mr Hughes is holding auditions next Thursday. I'm going to try for it, and you should come too.\" Emma looked at the flyer. The school play was going to be a version of A Midsummer Night's Dream. She had seen the film once. She did not understand most of it. \"I'm not an actor,\" Emma said. Sophie smiled. \"Neither am I,\" she said. \"That's why it's called an audition and not a performance.\"",
-          "imagePlaceholder": "📄"
+          "text": "On a Monday in November, Sophie put a yellow flyer on Emma's desk. \"The school play,\" Sophie said. \"Mr Hughes is holding auditions next Thursday. I'm going to try for it, and you should come too.\" Emma looked at the flyer. The school play was going to be a version of A Midsummer Night's Dream. She had seen the film once but did not understand most of it. \"I'm not an actor,\" Emma said. Sophie smiled. \"Neither am I,\" she said.",
+          "imagePlaceholder": "📄",
+          "grammarAnnotations": [
+            {
+              "targetText": "I'm going to try for it",
+              "tone": "aux",
+              "note": "going to for a plan"
+            },
+            {
+              "targetText": "should come too",
+              "tone": "structure",
+              "note": "future suggestion"
+            },
+            {
+              "targetText": "was going to be",
+              "tone": "aux",
+              "note": "future in the past plan"
+            }
+          ]
         },
         {
           "order": 2,
-          "text": "Sophie ignored every reason Emma gave. \"I'm going to help you practise,\" she said. \"We're going to do it together. It's going to be fine.\" Emma was not certain it was going to be fine. She thought about standing on a stage in front of an audience of parents and teachers and every single student in the school. \"What if I forget the words?\" she said. \"You probably will,\" Sophie said cheerfully. \"Everyone does the first time. But you won't forget all of them. And Mr Hughes won't mind.\"",
-          "imagePlaceholder": "😟"
+          "text": "Sophie ignored every reason Emma gave. \"I'm going to help you practise,\" she said. \"We're going to do it together. It's going to be fine.\" Emma was not certain it was going to be fine. She thought about standing on a stage in front of an audience. \"What if I forget the words?\" she said. \"You probably will,\" Sophie said cheerfully. \"But you won't forget all of them. And Mr Hughes won't mind.\"",
+          "imagePlaceholder": "😟",
+          "grammarAnnotations": [
+            {
+              "targetText": "I'm going to help you practise",
+              "tone": "aux",
+              "note": "planned future help"
+            },
+            {
+              "targetText": "We're going to do it together",
+              "tone": "structure",
+              "note": "shared plan"
+            },
+            {
+              "targetText": "You probably will",
+              "tone": "question",
+              "note": "will for prediction"
+            }
+          ]
         },
         {
           "order": 3,
-          "text": "That evening, Emma decided she was going to try. She wrote a list in her notebook: she was going to read the scenes tonight, she was going to rehearse her lines in front of the mirror every morning, and she was going to ask her mother to listen to her perform before Thursday. Her mother was very enthusiastic about this last part. She sat down in the kitchen chair, folded her hands in her lap, and became the most encouraging audience Emma had ever had. She clapped after every line, even the ones Emma said badly.",
-          "imagePlaceholder": "🪞"
+          "text": "That evening, Emma decided she was going to try. She wrote a list in her notebook: she was going to read the scenes that night, she was going to rehearse her lines every morning, and she was going to ask her mother to listen to her perform before Thursday. Her mother was very enthusiastic. She sat down in the kitchen and became the most encouraging audience Emma had ever had. She clapped after every line.",
+          "imagePlaceholder": "🪞",
+          "grammarAnnotations": [
+            {
+              "targetText": "was going to try",
+              "tone": "aux",
+              "note": "future plan already decided"
+            },
+            {
+              "targetText": "was going to rehearse her lines",
+              "tone": "structure",
+              "note": "planned action"
+            },
+            {
+              "targetText": "was going to ask her mother",
+              "tone": "aux",
+              "note": "another decided plan"
+            }
+          ]
         },
         {
           "order": 4,
-          "text": "On Thursday, Emma and Sophie waited outside the drama room. Mr Hughes appeared at the door. He had a kind face and a large untidy beard. \"Two today,\" he said, looking at them both. \"Good. One at a time, please — Sophie first, Emma second.\" Sophie gave Emma a quick thumbs-up and went in. Emma stood in the corridor and thought: it will be over soon, and whatever happens, it will be finished. This thought was more helpful than she expected.",
-          "imagePlaceholder": "🎭"
+          "text": "On Thursday, Emma and Sophie waited outside the drama room. Mr Hughes appeared at the door. \"Two today,\" he said, looking at them both. \"Good. One at a time, please — Sophie first, Emma second.\" Sophie gave Emma a quick thumbs-up and went in. Emma stood in the corridor and thought: it will be over soon, and whatever happens, it will be finished. This thought was more helpful than she expected.",
+          "imagePlaceholder": "🎭",
+          "grammarAnnotations": [
+            {
+              "targetText": "will be over soon",
+              "tone": "aux",
+              "note": "will for prediction"
+            },
+            {
+              "targetText": "it will be finished",
+              "tone": "structure",
+              "note": "future result"
+            }
+          ]
         },
         {
           "order": 5,
-          "text": "An hour later, Emma and Sophie sat on the bench outside school and waited for Emma's mother's car. Neither of them spoke for a moment. \"How do you think it went?\" Sophie asked. Emma considered this carefully. \"I won't know for certain until the list goes up,\" she said. \"But I didn't forget all the words.\" Sophie nodded seriously. \"I think you're going to get a role,\" she said. Emma looked at her. \"I think you probably will too,\" she said. They sat in the quiet November afternoon. Next week, they would find out.",
-          "imagePlaceholder": "🤞"
+          "text": "An hour later, Emma and Sophie sat on the bench outside school and waited for Emma's mother's car. \"How do you think it went?\" Sophie asked. Emma considered this carefully. \"I won't know for certain until the list goes up,\" she said. \"But I didn't forget all the words.\" Sophie nodded. \"I think you're going to get a role,\" she said. Emma looked at her. \"I think you probably will too,\" she said. Next week, they would find out.",
+          "imagePlaceholder": "🤞",
+          "grammarAnnotations": [
+            {
+              "targetText": "I won't know for certain",
+              "tone": "aux",
+              "note": "will for uncertain future"
+            },
+            {
+              "targetText": "you're going to get a role",
+              "tone": "structure",
+              "note": "prediction with going to"
+            },
+            {
+              "targetText": "you probably will too",
+              "tone": "aux",
+              "note": "will for prediction"
+            }
+          ]
         }
       ],
       "comprehension": [
@@ -255,6 +504,60 @@
           ],
           "correctAnswer": "Will — it describes a future situation she is not yet certain about.",
           "explanation": "'I won't know' uses 'will' in the negative. Emma is talking about a future result (the cast list) that has not been decided yet. She is not making a plan — she is describing an uncertain future state, which is a key use of 'will'."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that shows a plan.",
+          "options": [
+            "We will practise after school because we arranged it yesterday.",
+            "We are going to practise after school because we arranged it yesterday.",
+            "We going to practise after school because we arranged it yesterday.",
+            "We are going practise after school because we arranged it yesterday."
+          ],
+          "correctAnswer": "We are going to practise after school because we arranged it yesterday.",
+          "explanation": "Use be going to for plans made before the moment of speaking.",
+          "skillTag": "going_to_for_plan"
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Do not worry, I ___ help you with the costumes.",
+          "correctAnswer": "will",
+          "explanation": "Use will for a decision or promise made at the moment of speaking.",
+          "skillTag": "will_for_offer"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: Look at those dark clouds! It is going rain.",
+          "correctAnswer": "Look at those dark clouds! It is going to rain.",
+          "explanation": "Use going to for a prediction based on evidence.",
+          "skillTag": "going_to_prediction"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite using going to: We planned a picnic for Saturday.",
+          "correctAnswer": "We are going to have a picnic on Saturday.",
+          "explanation": "Use be going to for a future plan that already exists.",
+          "skillTag": "going_to_for_plan"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the best future sentence about Emma's audition plan and Sophie's prediction.",
+          "correctAnswer": "Emma is going to rehearse tonight, and Sophie thinks she will get a role.",
+          "explanation": "Use going to for Emma's plan and will for Sophie's prediction.",
+          "skillTag": "plan_vs_prediction",
+          "options": [
+            "Emma will rehearse tonight, and Sophie thinks she is going to get a role.",
+            "Emma is going to rehearse tonight, and Sophie thinks she will get a role.",
+            "Emma is rehearse tonight, and Sophie thinks she will gets a role.",
+            "Emma is going to rehearse tonight, and Sophie thinks she going to get a role."
+          ]
         }
       ]
     }

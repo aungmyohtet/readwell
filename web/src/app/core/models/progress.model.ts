@@ -11,6 +11,9 @@ export interface ProgressRecord {
   previousScore?: number | null;
   attemptCount: number;
   totalQuestions: number;
+  practiceScore: number;
+  practiceTotal: number;
+  effectiveScorePct: number;
   completedAt: string;
   nextReviewAt?: string | null;
   reviewStage?: string | null;
@@ -21,10 +24,20 @@ export interface QuestionAttemptRequest {
   selectedAnswer: string;
 }
 
+export interface GrammarPracticeAttemptRequest {
+  practiceOrder: number;
+  selectedAnswer: string;
+}
+
 export interface GrammarWeakness {
   grammarRule: string;
   missCount: number;
+  quizMissCount: number;
+  practiceMissCount: number;
   chapterCount: number;
+  focusSkillTag?: string | null;
+  focusSkillLabel?: string | null;
+  focusSkillMissCount?: number;
 }
 
 export interface ReviewRecommendation {
@@ -38,6 +51,8 @@ export interface ReviewRecommendation {
   nextReviewAt?: string | null;
   reviewStage?: string | null;
   reason: string;
+  focusSkillTag?: string | null;
+  focusSkillLabel?: string | null;
 }
 
 export interface MistakeBankItem {
@@ -48,6 +63,9 @@ export interface MistakeBankItem {
   chapterNumber: number;
   grammarRule: string;
   questionOrder: number;
+  source?: 'quiz' | 'practice' | string;
+  skillTag?: string | null;
+  skillLabel?: string | null;
   question: string;
   selectedAnswer: string;
   correctAnswer: string;
@@ -68,4 +86,5 @@ export interface SubmitProgressRequest {
   score: number;
   totalQuestions: number;
   questionAttempts: QuestionAttemptRequest[];
+  grammarPracticeAttempts?: GrammarPracticeAttemptRequest[];
 }

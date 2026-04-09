@@ -36,6 +36,10 @@ export interface VocabularyItem {
 export interface GrammarFocus {
   rule: string;
   explanation: string;
+  formGuide?: string[];
+  usageNotes?: string[];
+  contrastWith?: string;
+  commonMistakes?: string[];
   examples: string[];
 }
 
@@ -63,6 +67,16 @@ export interface ComprehensionQuestion {
   explanation: string;
 }
 
+export interface GrammarPracticeItem {
+  order: number;
+  type: 'multiple_choice' | 'fill_blank' | 'error_correction' | 'sentence_transformation';
+  prompt: string;
+  options?: string[];
+  correctAnswer: string;
+  explanation: string;
+  skillTag?: string;
+}
+
 export interface ChapterDetail {
   id: string;
   storyId: string;
@@ -70,6 +84,7 @@ export interface ChapterDetail {
   title: string;
   vocabulary: VocabularyItem[];
   grammarFocus: GrammarFocus;
+  grammarPractice?: GrammarPracticeItem[];
   content: Paragraph[];
   comprehension: ComprehensionQuestion[];
   completed: boolean;

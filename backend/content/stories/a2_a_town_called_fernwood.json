@@ -5,7 +5,12 @@
     "level": "A2",
     "coverEmoji": "🏘️",
     "author": "ReadWell",
-    "tags": ["town", "nature", "friendship", "new beginnings"]
+    "tags": [
+      "town",
+      "nature",
+      "friendship",
+      "new beginnings"
+    ]
   },
   "chapters": [
     {
@@ -52,6 +57,21 @@
           "There aren't any large supermarkets in Fernwood.",
           "How many parks are there in the town?",
           "There wasn't much to do on his own yet."
+        ],
+        "formGuide": [
+          "Use there is with singular nouns and uncountable nouns.",
+          "Use there are with plural nouns.",
+          "Add quantifiers like some, any, a few, a little, much, and many to show how much or how many there is or are."
+        ],
+        "usageNotes": [
+          "Use this pattern to introduce what exists in a place.",
+          "Choose the quantifier based on whether the noun is countable or uncountable."
+        ],
+        "contrastWith": "Do not confuse there is or there are with have or has. 'There is a pond near the school' describes what exists, while 'Amir has a map' shows possession.",
+        "commonMistakes": [
+          "Using there is with plural nouns.",
+          "Using many with uncountable nouns or much with plural countable nouns.",
+          "Forgetting to change the verb when the noun changes from singular to plural."
         ]
       },
       "content": [
@@ -142,6 +162,66 @@
           "correctAnswer": "Because he is new to Fernwood and has not made any friends yet",
           "explanation": "Amir has only been in Fernwood for three days and does not know anyone yet, which is why he needs someone to explore with."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct sentence.",
+          "options": [
+            "There is some benches in the park.",
+            "There are some benches in the park.",
+            "There are any benches in the park.",
+            "There is many benches in the park."
+          ],
+          "correctAnswer": "There are some benches in the park.",
+          "explanation": "Use there are with plural countable nouns like benches.",
+          "skillTag": "there_are_plural"
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: There ___ a small cafe near the station.",
+          "correctAnswer": "is",
+          "explanation": "Use there is with a singular noun like cafe.",
+          "skillTag": "there_is_singular"
+        },
+        {
+          "order": 3,
+          "type": "multiple_choice",
+          "prompt": "Choose the best quantifier sentence.",
+          "options": [
+            "There is much trees behind the library.",
+            "There are a few trees behind the library.",
+            "There are little trees behind the library.",
+            "There is a little trees behind the library."
+          ],
+          "correctAnswer": "There are a few trees behind the library.",
+          "explanation": "Use a few with plural countable nouns.",
+          "skillTag": "countable_quantifiers"
+        },
+        {
+          "order": 4,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: There is three shops on this street.",
+          "correctAnswer": "There are three shops on this street.",
+          "explanation": "Use there are with plural nouns.",
+          "skillTag": "there_are_plural"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the best sentence about the square in Fernwood.",
+          "correctAnswer": "There are a few posters on the notice board.",
+          "explanation": "Use there are with a plural noun like posters and a few for a small countable number.",
+          "skillTag": "quantifier_with_plural",
+          "options": [
+            "There is a few posters on the notice board.",
+            "There are a few posters on the notice board.",
+            "There are much posters on the notice board.",
+            "There is much posters on the notice board."
+          ]
+        }
       ]
     },
     {
@@ -180,7 +260,7 @@
         }
       ],
       "grammarFocus": {
-        "rule": "Articles \u2013 a, an, the, zero article",
+        "rule": "Articles – a, an, the, zero article",
         "explanation": "We use 'a' or 'an' when we mention something for the first time or when we are not being specific. We use 'an' before a vowel sound. We use 'the' when both the speaker and listener know which specific thing is meant. We use zero article (no article at all) for general statements about all things of a kind. We also use 'the' with unique nouns like the sun, the sky, and the moon.",
         "examples": [
           "Amir met a girl from his class called Priya. (a — first mention, not specific)",
@@ -188,6 +268,21 @@
           "That is the oldest tree in Fernwood. (the — unique reference: we know exactly which one)",
           "Sparrows love oak trees. (zero article — general statement about all sparrows)",
           "The sun had come out by the time they reached the gate. (the — unique noun)"
+        ],
+        "formGuide": [
+          "Use a or an with singular countable nouns when the listener does not know which one you mean.",
+          "Use an before a vowel sound, not just a vowel letter.",
+          "Use the for specific nouns and zero article when speaking about some general ideas or plural things in general."
+        ],
+        "usageNotes": [
+          "Choose the article based on whether the noun is specific, general, singular, or plural.",
+          "Use the when both people can identify the thing you mean."
+        ],
+        "contrastWith": "Do not put the in front of every noun. English often uses no article for general ideas like nature, breakfast, or school in some set phrases.",
+        "commonMistakes": [
+          "Using a before a vowel sound instead of an.",
+          "Adding the to general ideas that need zero article.",
+          "Forgetting that singular countable nouns usually need an article."
         ]
       },
       "content": [
@@ -277,6 +372,66 @@
           ],
           "correctAnswer": "He enjoyed it and is already thinking about coming back",
           "explanation": "The text says 'He was already planning to come back,' which shows he enjoyed the visit and looks forward to returning."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: We saw ___ owl in the tree.",
+          "correctAnswer": "an",
+          "explanation": "Use an before a singular noun that begins with a vowel sound.",
+          "skillTag": "an_before_vowel_sound"
+        },
+        {
+          "order": 2,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence with the correct article.",
+          "options": [
+            "River runs through the town.",
+            "A river runs through the town we live in.",
+            "The river runs through the town.",
+            "An river runs through the town."
+          ],
+          "correctAnswer": "The river runs through the town.",
+          "explanation": "Use the when both speaker and listener know which river or town is meant.",
+          "skillTag": "the_for_specific_reference"
+        },
+        {
+          "order": 3,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly uses zero article.",
+          "options": [
+            "The nature is beautiful after rain.",
+            "A nature is beautiful after rain.",
+            "Nature is beautiful after rain.",
+            "An nature is beautiful after rain."
+          ],
+          "correctAnswer": "Nature is beautiful after rain.",
+          "explanation": "We often use no article when speaking about general ideas like nature.",
+          "skillTag": "zero_article_general_noun"
+        },
+        {
+          "order": 4,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: She bought a umbrella before the storm.",
+          "correctAnswer": "She bought an umbrella before the storm.",
+          "explanation": "Use an before umbrella because it starts with a vowel sound.",
+          "skillTag": "an_before_vowel_sound"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence with the best article choice.",
+          "correctAnswer": "The reserve has a pond and the pond attracts birds.",
+          "explanation": "Use a for the first mention of pond and the when it becomes specific in the second clause.",
+          "skillTag": "first_then_specific_article",
+          "options": [
+            "Reserve has pond and pond attracts birds.",
+            "The reserve has a pond and the pond attracts birds.",
+            "The reserve has an pond and a pond attracts birds.",
+            "Reserve has the pond and pond attracts birds."
+          ]
         }
       ]
     }

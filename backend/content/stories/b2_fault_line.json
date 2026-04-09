@@ -68,6 +68,21 @@
           "They might have turned off the path when the fog thickened.",
           "Jonah could have called Ruth earlier, but he kept hoping the group would reappear.",
           "They needn't have climbed that last section once the light began to go."
+        ],
+        "formGuide": [
+          "Use a modal verb plus have plus the past participle.",
+          "Choose may have, might have, must have, or can't have based on the strength of the deduction.",
+          "Keep have after the modal, not has or had."
+        ],
+        "usageNotes": [
+          "Use modal perfect forms to speculate about past events.",
+          "Base the deduction on clues or incomplete evidence."
+        ],
+        "contrastWith": "Modal perfect looks back at the past, while present deduction looks at what is true now.",
+        "commonMistakes": [
+          "Using has after the modal.",
+          "Forgetting the past participle after have.",
+          "Choosing a stronger deduction than the evidence supports."
         ]
       },
       "content": [
@@ -80,6 +95,11 @@
               "targetText": "That should have been enough.",
               "tone": "modal",
               "note": "criticism about the past"
+            },
+            {
+              "targetText": "which had ended with cold hands, a twisted ankle, and an emergency search,",
+              "tone": "aux",
+              "note": "past perfect background detail"
             }
           ]
         },
@@ -97,6 +117,11 @@
               "targetText": "Tomas might have missed the last marker",
               "tone": "modal",
               "note": "possibility in the past"
+            },
+            {
+              "targetText": "Ruth said the review would begin with transparency, not self-protection.",
+              "tone": "aux",
+              "note": "reported framing before the deductions"
             }
           ]
         },
@@ -114,6 +139,11 @@
               "targetText": "they needn't have climbed the final traverse at all",
               "tone": "modal",
               "note": "unnecessary past action"
+            },
+            {
+              "targetText": "Mira said she should have challenged both of them sooner",
+              "tone": "modal",
+              "note": "regret and criticism about the past"
             }
           ]
         },
@@ -121,25 +151,59 @@
           "order": 4,
           "text": "They reconstructed the route from the map. The group had left the shelter at 3:40, reached the narrow ridge by 4:25, and disappeared from the planned timeline after that. Jonah traced the line with one finger and felt his own memory resisting him. He had wanted the others to keep their autonomy; that had been part of the programme's design. Student leaders were supposed to make decisions before adults stepped in. But now the principle felt less noble. It felt like an obligation he had carried badly. If he had called sooner, he thought, Ruth would still have been angry, but the search team would have started with daylight left. The moral question was no longer abstract.",
           "imagePlaceholder": "📋",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "If he had called sooner, he thought, Ruth would still have been angry, but the search team would have started with daylight left.",
+              "tone": "structure",
+              "note": "third conditional reflection on the missed call"
+            }
+          ]
         },
         {
           "order": 5,
           "text": "The crucial detail came from Mira, not because she had been the calmest but because she had been watching while the others argued. She said Tomas had wanted to cut across a shallow bowl of snow to save time. Jonah had refused. Elliot had laughed and said they could probably do it if they moved quickly. Nobody did. They stayed on the marked path. The real mistake, she said, happened later, after the argument had technically ended. Jonah had assumed Elliot was behind him. Elliot had assumed Jonah was checking the rear of the line. For ten minutes, nobody was. \"So which of us was in charge?\" Elliot asked. Ruth did not answer immediately. A conflict of interest, she said at last, can begin when friendship makes a person assume more understanding than has actually been earned.",
           "imagePlaceholder": "⚠️",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "she had been watching while the others argued.",
+              "tone": "aux",
+              "note": "past perfect continuous background"
+            },
+            {
+              "targetText": "Jonah had assumed Elliot was behind him.",
+              "tone": "structure",
+              "note": "assumption identified after the event"
+            }
+          ]
         },
         {
           "order": 6,
           "text": "That was the moment the room changed. Up to then, everyone had been trying not to be blamed. Now they were beginning to sound afraid of being complicit. Jonah said he had kept defending the decision because he did not want the whole expedition reduced to one bad hour. Mira answered that refusing the right explanation was another way of protecting yourself. Elliot looked at the floor and admitted he had joked when the visibility was collapsing because he had not wanted to sound nervous. Ruth wrote that sentence down. Then she said the formal report would mention weather, procedure, and timing; however, the real lesson was about responsibility becoming vague whenever people hoped someone else was watching.",
           "imagePlaceholder": "🪵",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "everyone had been trying not to be blamed.",
+              "tone": "aux",
+              "note": "ongoing attitude before the shift"
+            },
+            {
+              "targetText": "he had joked when the visibility was collapsing because he had not wanted to sound nervous.",
+              "tone": "structure",
+              "note": "past explanation of behaviour"
+            }
+          ]
         },
         {
           "order": 7,
           "text": "When the meeting ended, nobody felt relieved. The facts were clearer, but the shape of the blame was not. Jonah left last and stood outside the equipment room while rain tapped against the metal fire steps. Ruth came out a minute later and closed the door behind her. \"You don't have to decide in one morning whether you're fit to lead,\" she said. \"But you do have to decide what honesty costs you.\" Jonah nodded without trusting himself to speak. He had wanted clarity; instead he had received something harder. The expedition had not failed in one dramatic instant. It had frayed through small assumptions, each easy to excuse until viewed together.",
           "imagePlaceholder": "🕯️",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "He had wanted clarity; instead he had received something harder.",
+              "tone": "aux",
+              "note": "past expectation contrasted with what followed"
+            }
+          ]
         }
       ],
       "comprehension": [
@@ -215,6 +279,60 @@
           "correctAnswer": "That the expedition broke down through several small assumptions rather than one single dramatic error",
           "explanation": "The final paragraph states this directly: the expedition did not fail in one dramatic instant but frayed through small assumptions that looked harmless in isolation."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct modal perfect sentence.",
+          "correctAnswer": "She must have taken the earlier train.",
+          "explanation": "Use must have + past participle for a strong deduction about the past.",
+          "skillTag": "must_have_past_participle",
+          "options": [
+            "She must has taken the earlier train.",
+            "She must have taken the earlier train.",
+            "She must took the earlier train.",
+            "She must to have taken the earlier train."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: They ___ have missed the sign, because they turned back immediately.",
+          "correctAnswer": "can't",
+          "explanation": "Use can't have for a strong negative deduction about the past.",
+          "skillTag": "cant_have_negative_deduction"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: He might has forgotten the report.",
+          "correctAnswer": "He might have forgotten the report.",
+          "explanation": "After a modal, use have, not has.",
+          "skillTag": "modal_have_form"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite with may: Maybe the team left before dawn.",
+          "correctAnswer": "The team may have left before dawn.",
+          "explanation": "Use may have + past participle for a possible past explanation.",
+          "skillTag": "may_have_possibility"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the best past deduction from the missing report.",
+          "correctAnswer": "She can't have left it on the desk because the desk was empty all day.",
+          "explanation": "Can't have shows a strong negative deduction about the past.",
+          "skillTag": "negative_past_deduction",
+          "options": [
+            "She can't left it on the desk because the desk was empty all day.",
+            "She can't have left it on the desk because the desk was empty all day.",
+            "She can't has left it on the desk because the desk was empty all day.",
+            "She must have left it on the desk because the desk was empty all day."
+          ]
+        }
       ]
     },
     {
@@ -272,6 +390,21 @@
           "Jonah wished Elliot would stop making jokes every time a room became uncomfortable.",
           "If only he had spoken honestly the night before, the morning would have felt less sharp.",
           "Mira wished she had said what she meant while they were still on the bus."
+        ],
+        "formGuide": [
+          "Use wish or if only plus the past simple for a different present situation.",
+          "Use wish or if only plus the past perfect for regret about the past.",
+          "Do not use would unless you are complaining about another person's repeated behaviour."
+        ],
+        "usageNotes": [
+          "Use these forms to express regret, frustration, or longing.",
+          "Choose the tense based on whether the speaker regrets the present or the past."
+        ],
+        "contrastWith": "Wish and if only are emotional and unreal. They do not describe real past events the way ordinary past-tense statements do.",
+        "commonMistakes": [
+          "Using would for a simple past regret.",
+          "Using the wrong tense for present versus past regret.",
+          "Forgetting the past perfect after wish for past regret."
         ]
       },
       "content": [
@@ -284,6 +417,11 @@
               "targetText": "She wished the room were louder, messier, less good at amplifying every small movement.",
               "tone": "structure",
               "note": "wish for a different present"
+            },
+            {
+              "targetText": "Jonah said he had been waiting for her,",
+              "tone": "aux",
+              "note": "past perfect continuous background to the conversation"
             }
           ]
         },
@@ -296,6 +434,11 @@
               "targetText": "I wish Elliot would stop pretending jokes count as honesty,",
               "tone": "structure",
               "note": "wish with would for annoyance"
+            },
+            {
+              "targetText": "The problem, he said, was that Elliot was not the only person who had hidden behind tone.",
+              "tone": "aux",
+              "note": "reported explanation with past perfect"
             }
           ]
         },
@@ -313,6 +456,11 @@
               "targetText": "if only it had been as simple as one call,",
               "tone": "structure",
               "note": "emphatic regret"
+            },
+            {
+              "targetText": "He said he had mistaken calm for leadership and distance for control.",
+              "tone": "aux",
+              "note": "reported self-criticism about the past"
             }
           ]
         },
@@ -320,7 +468,13 @@
           "order": 4,
           "text": "At Mira's stop, neither of them stood up quickly enough, so the driver had to brake harder than necessary. They laughed despite themselves, which felt strange and faintly disloyal to the seriousness of the day. Outside her house, with evening rain dripping from the gutter, Jonah said he did not want them to become estranged over one expedition. Mira answered that people rarely became estranged over one event. They became estranged through repetition, through silence, through choosing the easier version too many times. The sentence came out colder than she intended. Yet she did not take it back. Affection, she was beginning to realise, was not the same thing as trust.",
           "imagePlaceholder": "🪟",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "the driver had to brake harder than necessary.",
+              "tone": "aux",
+              "note": "necessary action caused by the delay"
+            }
+          ]
         },
         {
           "order": 5,
@@ -331,6 +485,11 @@
               "targetText": "he wished she were wrong about repetition.",
               "tone": "structure",
               "note": "wish for a different present"
+            },
+            {
+              "targetText": "Admitting that he had failed them threatened more than his reputation;",
+              "tone": "aux",
+              "note": "past failure reframed in the present conversation"
             }
           ]
         },
@@ -343,6 +502,11 @@
               "targetText": "If only we'd spoken like this yesterday,",
               "tone": "structure",
               "note": "if only for past regret"
+            },
+            {
+              "targetText": "It was the first generous thing either of them had said all day,",
+              "tone": "aux",
+              "note": "past perfect with an evaluative comment"
             }
           ]
         },
@@ -350,7 +514,18 @@
           "order": 7,
           "text": "Before he left, Jonah asked whether she would message him after the written review came out. Mira said yes, but not lightly. After he walked away, she stayed under the porch a moment longer, listening to the rain tick through the drainpipe. Nothing had been solved completely. The expedition would still be written up, discussed, perhaps reduced. Yet the private truth felt slightly less damaged than it had that morning. She still carried resentment; she also carried affection, and the two no longer felt like enemies. When she finally went inside, she knew the friendship had not returned to what it had been. It had become something less certain and, perhaps because of that, more honest.",
           "imagePlaceholder": "🌙",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "Nothing had been solved completely.",
+              "tone": "aux",
+              "note": "past perfect passive result"
+            },
+            {
+              "targetText": "the friendship had not returned to what it had been.",
+              "tone": "structure",
+              "note": "past perfect reflection on change"
+            }
+          ]
         }
       ],
       "comprehension": [
@@ -425,6 +600,60 @@
           ],
           "correctAnswer": "The friendship is not fully repaired, but a more honest version of it becomes possible.",
           "explanation": "The final paragraph says nothing has been solved completely and that the friendship has not returned to what it was. However, it has become more honest, which suggests partial repair rather than total restoration or collapse."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct sentence.",
+          "correctAnswer": "I wish I had listened more carefully.",
+          "explanation": "Use wish + past perfect to regret a past action.",
+          "skillTag": "wish_past_perfect",
+          "options": [
+            "I wish I listened more carefully yesterday.",
+            "I wish I had listened more carefully.",
+            "I wish I have listened more carefully.",
+            "I wish I would listened more carefully."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: If only we ___ more time yesterday. (have)",
+          "correctAnswer": "had had",
+          "explanation": "Use the past perfect to regret a past situation.",
+          "skillTag": "if_only_past_perfect"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: I wish I would know what she meant.",
+          "correctAnswer": "I wish I knew what she meant.",
+          "explanation": "Use the past simple after wish for a present situation you want to be different.",
+          "skillTag": "wish_past_simple_present"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite with wish: I am sorry that I did not call sooner.",
+          "correctAnswer": "I wish I had called sooner.",
+          "explanation": "Use wish + past perfect to express regret about the past.",
+          "skillTag": "wish_past_perfect"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly expresses regret about a missed conversation.",
+          "correctAnswer": "I wish I had told her the truth earlier.",
+          "explanation": "Use wish + past perfect to regret an action in the past.",
+          "skillTag": "past_regret_wish",
+          "options": [
+            "I wish I told her the truth earlier.",
+            "I wish I had told her the truth earlier.",
+            "I wish I would told her the truth earlier.",
+            "I wish I have told her the truth earlier."
+          ]
         }
       ]
     }

@@ -5,7 +5,12 @@
     "level": "B1",
     "coverEmoji": "⛈️",
     "author": "ReadWell",
-    "tags": ["mystery", "weather", "coastal", "investigation"]
+    "tags": [
+      "mystery",
+      "weather",
+      "coastal",
+      "investigation"
+    ]
   },
   "chapters": [
     {
@@ -50,7 +55,7 @@
         }
       ],
       "grammarFocus": {
-        "rule": "Modal Verbs \u2013 might, may, must, can't (Deduction)",
+        "rule": "Modal Verbs – might, may, must, can't (Deduction)",
         "explanation": "We use modal verbs to express how certain we are about something. 'Must' expresses strong certainty about something we believe is true. 'Can't' expresses strong certainty that something is impossible or untrue. 'Might' and 'may' express possibility — we think something could be true but we are not certain. For deductions about the past, we use 'must have + past participle', 'can't have + past participle', and 'might have + past participle'.",
         "examples": [
           "It must be a research vessel — it has been anchored there for three nights. (must — strong positive deduction)",
@@ -58,6 +63,21 @@
           "It might be a private boat with its lights on. (might — weak positive possibility)",
           "It can't have been there for three nights without someone reporting it. (can't have + pp — past impossibility)",
           "It may have been anchored there since the beginning of the week. (may have + pp — past possibility)"
+        ],
+        "formGuide": [
+          "Use a modal verb directly before the base form of be or the main verb.",
+          "Use might or may for possibility, must for strong deduction, and can't for strong negative deduction.",
+          "Base the deduction on clues or evidence."
+        ],
+        "usageNotes": [
+          "Use these modals when the speaker is reasoning from signs rather than stating a fact.",
+          "Choose the strength of the deduction carefully: might is weaker than must."
+        ],
+        "contrastWith": "These forms express degrees of certainty, not rules or ability. Must in deduction is different from must in obligation.",
+        "commonMistakes": [
+          "Adding to after the modal.",
+          "Using can't when the meaning is only uncertain, not strongly impossible.",
+          "Choosing must when the evidence is too weak."
         ]
       },
       "content": [
@@ -148,6 +168,60 @@
           "correctAnswer": "Because the mystery turned out to have a simple, ordinary explanation rather than a dramatic one",
           "explanation": "The text says 'It was not a dramatic conclusion, but it was a real and honest one' — suggesting Zara had hoped for something more exciting."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the best sentence of deduction.",
+          "correctAnswer": "The lights are off. They might be asleep.",
+          "explanation": "Use might or may for a possible explanation.",
+          "skillTag": "might_for_possibility",
+          "options": [
+            "The lights are off. They might asleep.",
+            "The lights are off. They might be asleep.",
+            "The lights are off. They must to be asleep.",
+            "The lights are off. They can asleep."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: The road is flooded, so it ___ be safe to drive there.",
+          "correctAnswer": "can't",
+          "explanation": "Use can't for a strong negative deduction.",
+          "skillTag": "cant_for_negative_deduction"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: She has the key, so she may to open the door.",
+          "correctAnswer": "She has the key, so she may open the door.",
+          "explanation": "After may, use the base verb without to.",
+          "skillTag": "modal_plus_base_verb"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite with must: I am almost sure this is the right address.",
+          "correctAnswer": "This must be the right address.",
+          "explanation": "Use must to show strong deduction.",
+          "skillTag": "must_for_deduction"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the strongest deduction from the evidence in the storm story.",
+          "correctAnswer": "The lights are on upstairs, so they must be awake.",
+          "explanation": "Must shows a strong deduction based on visible evidence.",
+          "skillTag": "must_based_on_evidence",
+          "options": [
+            "The lights are on upstairs, so they might awake.",
+            "The lights are on upstairs, so they must be awake.",
+            "The lights are on upstairs, so they must to be awake.",
+            "The lights are on upstairs, so they can be awake."
+          ]
+        }
       ]
     },
     {
@@ -200,6 +274,21 @@
           "While the storm was at its height, nobody could go outside. (while — simultaneous events)",
           "By the time morning came, the sky was pale and clean. (by the time — completion before another event)",
           "When a storm this strong has passed through, you cannot assume anything is undamaged. (when + present perfect — condition)"
+        ],
+        "formGuide": [
+          "Use a time linker such as when, before, after, until, or as soon as.",
+          "Use the present simple in the time clause when the sentence refers to the future.",
+          "Keep the future marker in the main clause, not in the time clause."
+        ],
+        "usageNotes": [
+          "Use time clauses to show the order of future events clearly.",
+          "They are especially useful in plans, warnings, and instructions."
+        ],
+        "contrastWith": "Even when the meaning is future, the time clause itself usually stays in the present simple.",
+        "commonMistakes": [
+          "Using will in the time clause.",
+          "Mixing the order of events unclearly.",
+          "Choosing the wrong time linker for the relationship between the actions."
         ]
       },
       "content": [
@@ -301,6 +390,60 @@
           ],
           "correctAnswer": "She means the sea had returned to its calm, ordinary appearance while the physical evidence of the storm remained all around her",
           "explanation": "Paragraph 5 describes the sea as 'calm and pale blue, as though nothing had happened at all' — but then immediately adds 'the marks were everywhere': branches, planks, boats on the sand. The contrast is the point. Nature has moved on; the human world has not yet recovered. This is an inferential question because the text shows the contrast without explaining it directly."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct sentence.",
+          "correctAnswer": "We will call you as soon as we arrive.",
+          "explanation": "Use the present simple after time expressions like as soon as.",
+          "skillTag": "present_after_time_clause",
+          "options": [
+            "We will call you as soon as we will arrive.",
+            "We will call you as soon as we arrive.",
+            "We call you as soon as we will arrive.",
+            "We will call you as soon as arriving."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Before you ___ the report, check the numbers again.",
+          "correctAnswer": "send",
+          "explanation": "Use the present simple in time clauses after before.",
+          "skillTag": "present_after_time_clause"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: When the rain will stop, we will leave.",
+          "correctAnswer": "When the rain stops, we will leave.",
+          "explanation": "Do not use will inside the time clause.",
+          "skillTag": "no_will_in_time_clause"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite using after: First finish your homework. Then you can watch the film.",
+          "correctAnswer": "After you finish your homework, you can watch the film.",
+          "explanation": "Use after + present simple to link the two actions.",
+          "skillTag": "after_clause_sequence"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the best sentence for a storm warning plan.",
+          "correctAnswer": "As soon as the river level falls, the volunteers will cross the bridge.",
+          "explanation": "Use the present simple in the time clause and will in the main clause.",
+          "skillTag": "future_plan_with_time_clause",
+          "options": [
+            "As soon as the river level will fall, the volunteers will cross the bridge.",
+            "As soon as the river level falls, the volunteers will cross the bridge.",
+            "As soon as the river level fell, the volunteers will cross the bridge.",
+            "As soon as the river level falls, the volunteers cross the bridge tomorrow."
+          ]
         }
       ]
     }

@@ -5,6 +5,8 @@ import lombok.Data;
 @Data
 public class ProgressQuestionMistake {
   private int questionOrder;
+  private String source;
+  private String skillTag;
   private String question;
   private String selectedAnswer;
   private String correctAnswer;

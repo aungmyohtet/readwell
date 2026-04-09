@@ -339,6 +339,17 @@
     font-size: 0.88rem;
   }
 
+  .review-subskill {
+    display: inline-flex;
+    width: fit-content;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    background: rgba(15, 118, 110, 0.08);
+    color: var(--accent-strong);
+    font-size: 0.76rem;
+    font-weight: 700;
+  }
+
   .review-stage-label {
     display: inline-flex;
     width: fit-content;
@@ -382,6 +393,13 @@
     border: 1px solid rgba(15, 118, 110, 0.12);
   }
 
+  .review-score-note {
+    font-size: 0.74rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
   .review-meta {
     display: flex;
     flex-direction: column;
@@ -401,6 +419,21 @@
     gap: 0.25rem;
     background: rgba(255, 247, 237, 0.92);
     min-height: 100%;
+  }
+
+  .weak-area-breakdown {
+    margin-top: 0.2rem;
+    font-size: 0.76rem;
+    font-weight: 800;
+    color: #8a5a00;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .weak-area-skill {
+    font-size: 0.8rem;
+    color: var(--accent-strong);
+    font-weight: 700;
   }
 
   .mistake-list {
@@ -439,6 +472,50 @@
     font-size: 0.76rem;
     font-weight: 700;
     margin-bottom: 0.55rem;
+  }
+
+  .mistake-rule-row {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.55rem;
+  }
+
+  .mistake-source-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.18rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border: 1px solid rgba(29, 42, 40, 0.08);
+  }
+
+  .mistake-source-badge.quiz {
+    background: rgba(245, 158, 11, 0.14);
+    color: #8a5a00;
+    border-color: rgba(245, 158, 11, 0.2);
+  }
+
+  .mistake-source-badge.practice {
+    background: rgba(15, 118, 110, 0.1);
+    color: var(--accent-strong);
+    border-color: rgba(15, 118, 110, 0.16);
+  }
+
+  .mistake-skill-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.18rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: rgba(29, 42, 40, 0.06);
+    color: var(--ink);
+    border: 1px solid rgba(29, 42, 40, 0.08);
   }
 
   .mistake-question {

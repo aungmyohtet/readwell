@@ -68,6 +68,21 @@
           "She has been working at Café Marta since Monday, serving tourists and practising her pronunciation. (ongoing since a point in the past)",
           "Her hands have been aching from all the writing she has been doing in class. (recent, explains present state)",
           "How long have you been living in Barcelona? — I've been here for two months. (asking about ongoing duration)"
+        ],
+        "formGuide": [
+          "Use has or have been plus the -ing form of the verb.",
+          "Use since for the starting point and for for the duration.",
+          "Keep the focus on the activity or its duration, not just the finished result."
+        ],
+        "usageNotes": [
+          "Use it for actions that started in the past and are still happening now.",
+          "Use it when a recent activity explains a present result, like tiredness or progress."
+        ],
+        "contrastWith": "Compare it with the present perfect simple. The continuous focuses on the ongoing activity; the simple often focuses on the completed result.",
+        "commonMistakes": [
+          "Leaving out been before the -ing form.",
+          "Using the past participle after been instead of the -ing form.",
+          "Choosing the continuous when the sentence is really about a finished amount or result."
         ]
       },
       "content": [
@@ -85,6 +100,11 @@
               "targetText": "have been studying Spanish for three weeks",
               "tone": "structure",
               "note": "activity continuing over time"
+            },
+            {
+              "targetText": "have been so tired",
+              "tone": "aux",
+              "note": "recent ongoing state"
             }
           ]
         },
@@ -102,6 +122,11 @@
               "targetText": "has been consistent",
               "tone": "structure",
               "note": "continuing state up to now"
+            },
+            {
+              "targetText": "It has not been easy",
+              "tone": "aux",
+              "note": "state continuing to the present"
             }
           ]
         },
@@ -119,6 +144,11 @@
               "targetText": "have been having short conversations",
               "tone": "structure",
               "note": "repeated recent activity"
+            },
+            {
+              "targetText": "has been running the café for thirty-one years",
+              "tone": "aux",
+              "note": "long ongoing action"
             }
           ]
         },
@@ -136,6 +166,11 @@
               "targetText": "have been getting up early",
               "tone": "structure",
               "note": "habit in progress"
+            },
+            {
+              "targetText": "the tourists arrive",
+              "tone": "structure",
+              "note": "present time reference inside description"
             }
           ]
         },
@@ -153,6 +188,11 @@
               "targetText": "have been carrying it in my bag since the very first week",
               "tone": "structure",
               "note": "since + ongoing action"
+            },
+            {
+              "targetText": "is finally getting used",
+              "tone": "aux",
+              "note": "present result of ongoing use"
             }
           ]
         }
@@ -218,6 +258,60 @@
           "correctAnswer": "The street outside her window in the early morning.",
           "explanation": "Nadia describes getting up early to watch the street — the fruit seller, the dog walker, the distant guitar — and writing about it."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly uses the present perfect continuous.",
+          "correctAnswer": "Nadia has been translating interviews all morning.",
+          "explanation": "Use has or have been plus verb-ing for an activity continuing until now.",
+          "skillTag": "have_been_ing",
+          "options": [
+            "Nadia has been translated interviews all morning.",
+            "Nadia has been translating interviews all morning.",
+            "Nadia is translating interviews since morning.",
+            "Nadia has translating interviews all morning."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: She ___ been working on the article since breakfast.",
+          "correctAnswer": "has",
+          "explanation": "Use has been with a third-person singular subject.",
+          "skillTag": "have_has_been_agreement"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: They have been worked on the mural for hours.",
+          "correctAnswer": "They have been working on the mural for hours.",
+          "explanation": "Use been + verb-ing, not been + past participle, here.",
+          "skillTag": "been_plus_ing"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite using the present perfect continuous: Leo started training two hours ago and he is still training.",
+          "correctAnswer": "Leo has been training for two hours.",
+          "explanation": "Use the present perfect continuous for an action that began in the past and is still in progress.",
+          "skillTag": "duration_continuous"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that best explains Nadia's tiredness in Barcelona.",
+          "correctAnswer": "She has been studying and working every day this month.",
+          "explanation": "Use the present perfect continuous to show the repeated ongoing effort that explains the result now.",
+          "skillTag": "ongoing_effort_result",
+          "options": [
+            "She has studied and worked every day this month and now tired.",
+            "She has been studying and working every day this month.",
+            "She has been studied and worked every day this month.",
+            "She is studying and working every day since this month."
+          ]
+        }
       ]
     },
     {
@@ -275,6 +369,21 @@
           "She didn't use to enjoy writing. Now she loves it. (past negative state, now changed)",
           "Every summer, her grandmother would make lemonade and they would sit on the step until it was dark. (repeated past action)",
           "Did you use to live near the market? (question about past habit or state)"
+        ],
+        "formGuide": [
+          "Use used to + base verb for past states or habits that are no longer true.",
+          "Use would + base verb for repeated past actions when the past time is already clear.",
+          "Do not use would for past states like being shy or living somewhere."
+        ],
+        "usageNotes": [
+          "Use used to when you want to show change between the past and now.",
+          "Use would when you are retelling repeated past actions in a descriptive memory."
+        ],
+        "contrastWith": "Used to can describe both states and habits, but would normally describes only repeated actions.",
+        "commonMistakes": [
+          "Using would for a past state.",
+          "Forgetting the base form after used to.",
+          "Using use to instead of used to in a positive statement."
         ]
       },
       "content": [
@@ -282,7 +391,13 @@
           "order": 1,
           "text": "Dear Gran, I am writing to you separately because this letter is different from the ones I send Mum. Mum wants to know if I am eating and sleeping enough. You want to know something else. I have been thinking about home — not because I am unhappy here, but because being somewhere new makes the old place more visible, somehow. It has made me strangely nostalgic, like looking at a photograph you forgot you had taken.",
           "imagePlaceholder": "💌",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "I have been thinking about home",
+              "tone": "aux",
+              "note": "ongoing reflection up to now"
+            }
+          ]
         },
         {
           "order": 2,
@@ -293,6 +408,16 @@
               "targetText": "used to cycle",
               "tone": "structure",
               "note": "past habit"
+            },
+            {
+              "targetText": "used to leave early enough",
+              "tone": "aux",
+              "note": "past repeated habit"
+            },
+            {
+              "targetText": "didn't use to understand",
+              "tone": "structure",
+              "note": "past negative state"
             },
             {
               "targetText": "would slow down to look at them",
@@ -317,6 +442,16 @@
               "highlightText": "would",
               "tone": "structure",
               "note": "repeated past action"
+            },
+            {
+              "targetText": "we would eat dinner outside",
+              "tone": "aux",
+              "note": "repeated family action"
+            },
+            {
+              "targetText": "I used to think",
+              "tone": "structure",
+              "note": "past state of mind"
             }
           ]
         },
@@ -334,6 +469,11 @@
               "targetText": "used to be",
               "tone": "structure",
               "note": "past identity"
+            },
+            {
+              "targetText": "I have started asking questions about it",
+              "tone": "aux",
+              "note": "recent change with present result"
             }
           ]
         },
@@ -346,6 +486,11 @@
               "targetText": "didn't use to talk much",
               "tone": "structure",
               "note": "past negative habit"
+            },
+            {
+              "targetText": "this week we walked to the harbour after class",
+              "tone": "aux",
+              "note": "specific finished event in contrast with past habit"
             }
           ]
         }
@@ -422,6 +567,60 @@
           ],
           "correctAnswer": "It reminds her of the long road to school along the river, because both were unplanned moments that felt entirely her own.",
           "explanation": "The final paragraph ends: 'It was carefree. It reminded me of the river road.' The river road was the one part of her day at home that was spontaneous and hers. The harbour walk, casual and unplanned, produces the same feeling — showing she is beginning to feel at ease in Barcelona."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly describes a past state.",
+          "correctAnswer": "Carla used to be shy in primary school.",
+          "explanation": "Use used to for past states that are no longer true.",
+          "skillTag": "used_to_state",
+          "options": [
+            "Carla would be shy in primary school.",
+            "Carla used to be shy in primary school.",
+            "Carla used be shy in primary school.",
+            "Carla was use to be shy in primary school."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: When they were younger, they ___ visit the same beach every summer.",
+          "correctAnswer": "would",
+          "explanation": "Use would to describe repeated past actions.",
+          "skillTag": "would_repeated_action"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: I would be very nervous before school.",
+          "correctAnswer": "I used to be very nervous before school.",
+          "explanation": "Use used to, not would, for past states.",
+          "skillTag": "used_to_state"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite to show a repeated past habit: Every summer, my grandfather told us stories after dinner.",
+          "correctAnswer": "Every summer, my grandfather would tell us stories after dinner.",
+          "explanation": "Would can describe repeated past habits.",
+          "skillTag": "would_repeated_action"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly mixes a past state and a repeated past action.",
+          "correctAnswer": "Nadia used to feel carefree on the river road, and every spring she would slow down to look at the flowers.",
+          "explanation": "Use used to for the state and would for the repeated action.",
+          "skillTag": "state_and_repeated_action",
+          "options": [
+            "Nadia would feel carefree on the river road, and every spring she used to slow down to look at the flowers.",
+            "Nadia used to feel carefree on the river road, and every spring she would slow down to look at the flowers.",
+            "Nadia used to felt carefree on the river road, and every spring she would slowed down to look at the flowers.",
+            "Nadia would be carefree on the river road, and every spring she would to slow down to look at the flowers."
+          ]
         }
       ]
     }

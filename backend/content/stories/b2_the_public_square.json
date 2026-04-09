@@ -68,6 +68,21 @@
           "Leila warned her not to turn the district into a symbol before she had listened properly.",
           "Councillor Vale denied having promised that no family would be moved.",
           "A staff member said the deputy had told them to keep the public wording positive."
+        ],
+        "formGuide": [
+          "Use reporting verbs like claimed, admitted, explained, and asked to show the speaker's attitude.",
+          "Backshift tense carefully when the original statement happened earlier than the reporting moment.",
+          "Keep statement word order in reported questions and clauses."
+        ],
+        "usageNotes": [
+          "Use complex reported speech in formal summaries, hearings, and journalism.",
+          "Choose the reporting verb carefully because it shapes the meaning."
+        ],
+        "contrastWith": "Complex reported speech often carries more interpretation than simple said or told. The verb itself adds meaning.",
+        "commonMistakes": [
+          "Forgetting to backshift in a complex multi-step account.",
+          "Keeping direct-speech order inside a reported question.",
+          "Using the wrong reporting verb for the meaning."
         ]
       },
       "content": [
@@ -80,6 +95,11 @@
               "targetText": "Then he asked whether Nadia had time to visit the district before the evening meeting.",
               "tone": "question",
               "note": "reported question with whether"
+            },
+            {
+              "targetText": "Mr Mercer held up the printout.",
+              "tone": "aux",
+              "note": "reported setup before the question"
             }
           ]
         },
@@ -92,6 +112,11 @@
               "targetText": "Then she warned Nadia not to write as though the whole argument were about one picturesque block.",
               "tone": "structure",
               "note": "reported warning and infinitive"
+            },
+            {
+              "targetText": "The real issue, she said, was inequality",
+              "tone": "aux",
+              "note": "reported explanation"
             }
           ]
         },
@@ -109,6 +134,11 @@
               "targetText": "Ask them whether they understand what happens when a child's route to school is broken twice in five years.",
               "tone": "question",
               "note": "reported question"
+            },
+            {
+              "targetText": "the deputy leader had insisted on calling the project balanced",
+              "tone": "aux",
+              "note": "reported insistence"
             }
           ]
         },
@@ -126,6 +156,11 @@
               "targetText": "he refused to answer directly.",
               "tone": "structure",
               "note": "reported refusal"
+            },
+            {
+              "targetText": "the administration advised the public to wait for verified documents, not emotionally edited extracts.",
+              "tone": "aux",
+              "note": "reported advice"
             }
           ]
         },
@@ -138,6 +173,11 @@
               "targetText": "Then he advised her to separate claims, evidence, and atmosphere before she wrote a sentence.",
               "tone": "structure",
               "note": "reported advice"
+            },
+            {
+              "targetText": "He also asked whether she had noticed something harder",
+              "tone": "question",
+              "note": "reported question with whether"
             }
           ]
         },
@@ -150,6 +190,11 @@
               "targetText": "a council staff member had warned colleagues not to mention the unfinalised school-access forecast",
               "tone": "structure",
               "note": "reported warning"
+            },
+            {
+              "targetText": "He said a council staff member had warned colleagues",
+              "tone": "aux",
+              "note": "layered reporting"
             }
           ]
         },
@@ -162,6 +207,11 @@
               "targetText": "She reported that Leila had said the campaign was fighting for ordinary families, that Vale had said the city was operating within legal limits",
               "tone": "structure",
               "note": "layered reported speech"
+            },
+            {
+              "targetText": "Mr Mercer read the draft twice, circled one adjective, and said, \"That version listened before it decided.\"",
+              "tone": "aux",
+              "note": "direct speech framed by reporting"
             }
           ]
         }
@@ -239,6 +289,60 @@
           "correctAnswer": "That careful listening matters because language can hide, soften, or reshape responsibility",
           "explanation": "By the end, Nadia realises the story is not only about facts but about how people use language to protect themselves and shape public understanding. Her final draft becomes stronger because it listens before deciding."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct sentence in reported speech.",
+          "correctAnswer": "The witness claimed that he had seen the mayor leave early.",
+          "explanation": "Complex reported speech often includes a backshift to the past perfect.",
+          "skillTag": "reported_past_perfect",
+          "options": [
+            "The witness claimed that he has seen the mayor leave early.",
+            "The witness claimed that he had seen the mayor leave early.",
+            "The witness claimed that he had saw the mayor leave early.",
+            "The witness claimed he seen the mayor leave early."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: Mina explained that the figures ___ been checked twice. (have)",
+          "correctAnswer": "had",
+          "explanation": "In reported speech, have can backshift to had.",
+          "skillTag": "reported_have_to_had"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: She asked did I remember the exact time.",
+          "correctAnswer": "She asked if I remembered the exact time.",
+          "explanation": "Use if or whether and normal statement word order in reported questions.",
+          "skillTag": "reported_question_if"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Report the question: 'Why have they changed the route?' the reporter asked.",
+          "correctAnswer": "The reporter asked why they had changed the route.",
+          "explanation": "Backshift have changed to had changed in reported speech.",
+          "skillTag": "reported_question_backshift"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the best formal reported version of the witness account.",
+          "correctAnswer": "The witness insisted that she had seen the councillor leave before the crowd arrived.",
+          "explanation": "This sentence uses an appropriate reporting verb and the past perfect for the earlier action.",
+          "skillTag": "formal_reported_sequence",
+          "options": [
+            "The witness insisted she saw the councillor leave before the crowd arrived.",
+            "The witness insisted that she had seen the councillor leave before the crowd arrived.",
+            "The witness insisted that had she seen the councillor leave before the crowd arrived.",
+            "The witness insisted to see the councillor leave before the crowd arrived."
+          ]
+        }
       ]
     },
     {
@@ -296,6 +400,21 @@
           "The council promised transparency; however, the key figures were still missing from the public report.",
           "Leila sounded controlled; nevertheless, Nadia could hear how exhausted she was.",
           "The transport figures were delayed and, as a result, nobody could test the council's claims properly."
+        ],
+        "formGuide": [
+          "Choose a connector that matches the relationship between the ideas: contrast, cause, addition, or example.",
+          "Place discourse markers where they guide the reader clearly, often at the start of a clause or sentence.",
+          "Use punctuation carefully, especially with longer formal connectors."
+        ],
+        "usageNotes": [
+          "Use advanced connectors to make arguments and explanations feel more precise and mature.",
+          "Choose one strong connector instead of stacking several weaker ones together."
+        ],
+        "contrastWith": "Some connectors work with full clauses, while others work with noun phrases. For example, although takes a clause but despite takes a noun phrase.",
+        "commonMistakes": [
+          "Using although before a noun phrase.",
+          "Choosing a connector that signals the wrong relationship.",
+          "Overusing formal markers so the writing sounds forced."
         ]
       },
       "content": [
@@ -313,6 +432,11 @@
               "targetText": "as a result, strangers now glanced at her press badge",
               "tone": "structure",
               "note": "result marker"
+            },
+            {
+              "targetText": "However, the room was listening for something less formal.",
+              "tone": "aux",
+              "note": "contrast marker"
             }
           ]
         },
@@ -330,6 +454,11 @@
               "targetText": "Although both speakers used the language of evidence, they were describing different realities.",
               "tone": "structure",
               "note": "contrast clause"
+            },
+            {
+              "targetText": "whereas renters living month to month could not.",
+              "tone": "aux",
+              "note": "contrast connector within the sentence"
             }
           ]
         },
@@ -347,6 +476,11 @@
               "targetText": "Nevertheless, the phrase ended up in Nadia's notebook",
               "tone": "structure",
               "note": "contrast and persistence"
+            },
+            {
+              "targetText": "A consultant tried to redirect the room by referring to geopolitical supply instability and long-term planning.",
+              "tone": "aux",
+              "note": "setup for the contrast that follows"
             }
           ]
         },
@@ -359,6 +493,11 @@
               "targetText": "However, it also left something out.",
               "tone": "structure",
               "note": "contrast marker"
+            },
+            {
+              "targetText": "A sentence could be balanced and still incomplete.",
+              "tone": "aux",
+              "note": "paired contrast without a formal marker"
             }
           ]
         },
@@ -376,6 +515,11 @@
               "targetText": "Rarely had she felt so aware of a sentence before writing it.",
               "tone": "structure",
               "note": "inversion for emphasis"
+            },
+            {
+              "targetText": "Neutrality looks tidy,",
+              "tone": "aux",
+              "note": "contrast prepared by the next sentence"
             }
           ]
         },
@@ -388,6 +532,11 @@
               "targetText": "Consequently, the argument never fully became a shared one",
               "tone": "structure",
               "note": "result connector"
+            },
+            {
+              "targetText": "Some people had terms like viability and compliance; others had bus fares, childcare, and mould in the bathroom ceiling.",
+              "tone": "aux",
+              "note": "contrast built through parallel structure"
             }
           ]
         },
@@ -400,6 +549,11 @@
               "targetText": "Even though the hearing had ended without a vote, something had shifted in her.",
               "tone": "structure",
               "note": "concession with even though"
+            },
+            {
+              "targetText": "What mattered, she thought, was precision with context around it.",
+              "tone": "aux",
+              "note": "reflective conclusion linking the discourse markers to meaning"
             }
           ]
         }
@@ -476,6 +630,60 @@
           ],
           "correctAnswer": "She now sees that precision matters, but precision without context can still miss the truth of a situation.",
           "explanation": "By the end, Nadia realises that good reporting is not cold distance. It is precise language with context, so the human meaning of events is not erased."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence with the best connector.",
+          "correctAnswer": "The plan was risky; nevertheless, the council approved it.",
+          "explanation": "Nevertheless shows contrast between the two ideas.",
+          "skillTag": "contrast_connector_nevertheless",
+          "options": [
+            "The plan was risky; therefore, the council approved it.",
+            "The plan was risky; nevertheless, the council approved it.",
+            "The plan was risky; for example, the council approved it.",
+            "The plan was risky; in addition, the council approved it."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: The square was crowded. ___, the speeches began on time.",
+          "correctAnswer": "Nevertheless",
+          "explanation": "Nevertheless introduces a surprising contrast.",
+          "skillTag": "contrast_connector_nevertheless"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: Although the rain, the event continued.",
+          "correctAnswer": "Despite the rain, the event continued.",
+          "explanation": "Although needs a clause, but despite can be followed by a noun phrase.",
+          "skillTag": "despite_noun_phrase"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite using despite: The evidence was limited, but the argument was persuasive.",
+          "correctAnswer": "Despite the limited evidence, the argument was persuasive.",
+          "explanation": "Use despite + noun phrase to show contrast.",
+          "skillTag": "despite_noun_phrase"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence with the most suitable contrast marker.",
+          "correctAnswer": "The hearing was tense; nevertheless, both sides remained polite.",
+          "explanation": "Nevertheless signals an unexpected contrast between tension and polite behaviour.",
+          "skillTag": "formal_contrast_marker",
+          "options": [
+            "The hearing was tense; for example, both sides remained polite.",
+            "The hearing was tense; nevertheless, both sides remained polite.",
+            "The hearing was tense; because, both sides remained polite.",
+            "The hearing was tense; despite, both sides remained polite."
+          ]
         }
       ]
     }

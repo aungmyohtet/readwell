@@ -69,6 +69,21 @@
           "Unless we do something, this park will disappear. (unless = if we don't do something)",
           "As long as we keep collecting data, the petition will look credible. (condition for a positive result)",
           "When the weather improves, we'll hold the clean-up day. (certain future event — we know spring will come)"
+        ],
+        "formGuide": [
+          "Use if + present simple in the condition clause.",
+          "Use will + base verb in the result clause.",
+          "Keep will out of the if-clause."
+        ],
+        "usageNotes": [
+          "Use it for likely future results when the condition is possible.",
+          "Use it often for warnings, plans, and consequences."
+        ],
+        "contrastWith": "Do not confuse it with the second conditional. The first conditional talks about a realistic future possibility, not an imagined present situation.",
+        "commonMistakes": [
+          "Using will in the if-clause.",
+          "Using the past simple in the if-clause when the meaning is realistic and future.",
+          "Dropping will from the result clause when the sentence is truly conditional."
         ]
       },
       "content": [
@@ -76,7 +91,13 @@
           "order": 1,
           "text": "It started with a dog lead. Priya was walking her neighbour's terrier through Eastgate Park on a Tuesday afternoon when the dog stopped at the edge of the pond and refused to move. Priya looked down. The ground around the water was covered: crisp packets, broken glass, the crushed remains of a plastic bottle, a tangle of fishing wire wrapped around a fallen branch. The dog sat down and looked up at her as if to say: well?",
           "imagePlaceholder": "🐕",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "was walking her neighbour's terrier",
+              "tone": "aux",
+              "note": "background action in the past"
+            }
+          ]
         },
         {
           "order": 2,
@@ -92,6 +113,11 @@
               "targetText": "If we don't do something, who will?",
               "tone": "question",
               "note": "conditional question"
+            },
+            {
+              "targetText": "Within an hour, Rosa had replied",
+              "tone": "aux",
+              "note": "earlier completed action in past narration"
             }
           ]
         },
@@ -109,6 +135,11 @@
               "targetText": "as long as you also have data, people will listen.",
               "tone": "structure",
               "note": "condition with as long as"
+            },
+            {
+              "targetText": "I'll supervise it and help you apply for a small grant from the council.",
+              "tone": "aux",
+              "note": "future result and promise"
             }
           ]
         },
@@ -126,6 +157,11 @@
               "targetText": "they won't be able to ignore us.",
               "tone": "structure",
               "note": "future result"
+            },
+            {
+              "targetText": "had reduced the area's carbon footprint as a green space by nearly half",
+              "tone": "aux",
+              "note": "earlier result in past narration"
             }
           ]
         },
@@ -143,6 +179,11 @@
               "targetText": "If they kept going, things would change.",
               "tone": "structure",
               "note": "imagined future result"
+            },
+            {
+              "targetText": "And if they do reject it, we'll revise and resubmit.",
+              "tone": "aux",
+              "note": "first conditional response plan"
             }
           ]
         }
@@ -208,6 +249,60 @@
           "correctAnswer": "You should not give up if one attempt fails — try again.",
           "explanation": "Ms Okafor is using a metaphor: if the council rejects the proposal (one door closes), they should revise and resubmit (try another door)."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct first conditional sentence.",
+          "correctAnswer": "If we plant more trees, the park will feel cooler.",
+          "explanation": "Use if + present simple, then will + base verb.",
+          "skillTag": "if_present_will",
+          "options": [
+            "If we will plant more trees, the park feels cooler.",
+            "If we plant more trees, the park will feel cooler.",
+            "If we planted more trees, the park will feel cooler.",
+            "If we plant more trees, the park would feel cooler."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: If it rains, we ___ stay inside.",
+          "correctAnswer": "will",
+          "explanation": "Use will in the main clause to talk about a likely future result.",
+          "skillTag": "will_main_clause"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: If the club will meet today, I will come.",
+          "correctAnswer": "If the club meets today, I will come.",
+          "explanation": "Do not use will in the if-clause of the first conditional.",
+          "skillTag": "no_will_in_if_clause"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite as a first conditional: Maybe we recycle more. Then the school will save money.",
+          "correctAnswer": "If we recycle more, the school will save money.",
+          "explanation": "Use if + present simple and will for the result.",
+          "skillTag": "if_present_will"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that best fits an environmental warning from the story.",
+          "correctAnswer": "If we ignore the leak, the river will get worse by next week.",
+          "explanation": "Use the first conditional for a likely future consequence.",
+          "skillTag": "environmental_consequence",
+          "options": [
+            "If we will ignore the leak, the river gets worse by next week.",
+            "If we ignore the leak, the river will get worse by next week.",
+            "If we ignored the leak, the river will get worse by next week.",
+            "If we ignore the leak, the river would get worse by next week."
+          ]
+        }
       ]
     },
     {
@@ -265,6 +360,21 @@
           "If I were the council leader, I would close all roads around the park to traffic. (imaginary present)",
           "Tariq said: 'If we had more funding, we could plant wildflowers across the whole park.' (hypothetical condition → hypothetical result)",
           "If people really understood the damage, they might stop dropping litter altogether. (might = less certain result)"
+        ],
+        "formGuide": [
+          "Use if + past simple in the condition clause.",
+          "Use would + base verb in the result clause.",
+          "Were is common with I, he, she, and it in formal second conditional patterns."
+        ],
+        "usageNotes": [
+          "Use it for imagined or unreal present and future situations.",
+          "Use it when the speaker is thinking about a different world or different choice, not a likely plan."
+        ],
+        "contrastWith": "Do not confuse it with the first conditional. The second conditional sounds hypothetical rather than likely.",
+        "commonMistakes": [
+          "Using would in the if-clause.",
+          "Using the present simple when the meaning is unreal.",
+          "Forgetting the base verb after would."
         ]
       },
       "content": [
@@ -272,7 +382,18 @@
           "order": 1,
           "text": "The council meeting was held in a room that smelled of carpet and old decisions. Priya, Rosa, and Tariq sat in a row at the back, dressed in the smartest things they owned. They had sacrificed their lunch breaks for three weeks to prepare the slides. Tariq had printed two extra copies of the data in case the projector failed. The councillors filed in, looking tired, and one of them — a short man with reading glasses pushed up on his forehead — looked at the three teenagers and said, in a tone that was not unkind but not encouraging either: \"Are you certain you're in the right room?\"",
           "imagePlaceholder": "🏛️",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "They had sacrificed their lunch breaks for three weeks",
+              "tone": "aux",
+              "note": "earlier effort before the meeting"
+            },
+            {
+              "targetText": "Tariq had printed two extra copies of the data",
+              "tone": "structure",
+              "note": "completed preparation before that moment"
+            }
+          ]
         },
         {
           "order": 2,
@@ -288,6 +409,11 @@
               "targetText": "the biodiversity loss across the district would slow dramatically.",
               "tone": "structure",
               "note": "hypothetical result"
+            },
+            {
+              "targetText": "If the council approves our proposal, we'll restore Eastgate Park and document the results,",
+              "tone": "aux",
+              "note": "first conditional plan inside the speech"
             }
           ]
         },
@@ -305,6 +431,11 @@
               "targetText": "we could plant wildflowers across the whole eastern section.",
               "tone": "structure",
               "note": "hypothetical result"
+            },
+            {
+              "targetText": "If we showed results this term, we'd have a much stronger case.",
+              "tone": "aux",
+              "note": "second conditional prediction"
             }
           ]
         },
@@ -322,6 +453,11 @@
               "targetText": "I would give all of them full marks in geography right now.",
               "tone": "structure",
               "note": "hypothetical result"
+            },
+            {
+              "targetText": "If they had asked for volunteers without the petition, maybe five would have shown up",
+              "tone": "aux",
+              "note": "imagined past comparison"
             }
           ]
         },
@@ -334,6 +470,11 @@
               "targetText": "If they kept the determination going, this place could be that.",
               "tone": "structure",
               "note": "imagined future result"
+            },
+            {
+              "targetText": "enough people would decide it was worth the obstacle of trying",
+              "tone": "aux",
+              "note": "hypothetical future choice"
             }
           ]
         }
@@ -410,6 +551,60 @@
           ],
           "correctAnswer": "Even small changes in the environment can begin to attract wildlife back.",
           "explanation": "The moorhen hadn't been seen in two years. Its return after just one clean-up day suggests that restoring an environment — even partially — can have real, immediate effects."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct second conditional sentence.",
+          "correctAnswer": "If I had more time, I would join the campaign.",
+          "explanation": "Use if + past simple and would + base verb for imaginary present situations.",
+          "skillTag": "if_past_would",
+          "options": [
+            "If I would have more time, I would join the campaign.",
+            "If I had more time, I would join the campaign.",
+            "If I have more time, I would join the campaign.",
+            "If I had more time, I will join the campaign."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: If Lena ___ taller, she would reach the banner. (be)",
+          "correctAnswer": "were",
+          "explanation": "Were is the standard form in second conditional sentences.",
+          "skillTag": "were_in_conditional"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: If I would know the answer, I would tell you.",
+          "correctAnswer": "If I knew the answer, I would tell you.",
+          "explanation": "Use the past simple in the if-clause, not would.",
+          "skillTag": "no_would_in_if_clause"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite as a second conditional: I do not live near the beach, so I cannot walk there every day.",
+          "correctAnswer": "If I lived near the beach, I could walk there every day.",
+          "explanation": "Use the second conditional to imagine a different present situation.",
+          "skillTag": "if_past_would"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that best matches an imagined greener future.",
+          "correctAnswer": "If every family recycled more, the town would look very different.",
+          "explanation": "This is an imagined present or future result, so the second conditional fits.",
+          "skillTag": "imagined_future_change",
+          "options": [
+            "If every family will recycle more, the town would look very different.",
+            "If every family recycled more, the town would look very different.",
+            "If every family recycles more, the town would look very different.",
+            "If every family recycled more, the town will look very different."
+          ]
         }
       ]
     }

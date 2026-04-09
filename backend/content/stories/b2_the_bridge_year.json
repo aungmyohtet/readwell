@@ -75,6 +75,21 @@
           "If she were more risk-averse by nature, she probably would never have taken the gap year. (present state → explains past action)",
           "If I had chosen the safer option, I wouldn't still be asking the same questions. (past choice → present situation)",
           "If she weren't so stubborn, she might have asked for help months ago. (present trait → would have changed past)"
+        ],
+        "formGuide": [
+          "Use if + past perfect with would + base verb for a past cause and present result.",
+          "Use if + past simple with would have + past participle for a present state that changes a past result.",
+          "Choose the pattern based on which time period causes the other."
+        ],
+        "usageNotes": [
+          "Use mixed conditionals when a pure second or third conditional is not precise enough.",
+          "They are useful for regret, reflection, and complex cause-effect thinking."
+        ],
+        "contrastWith": "A third conditional stays fully in the past, but a mixed conditional connects past and present or present and past.",
+        "commonMistakes": [
+          "Using would have in the wrong mixed pattern.",
+          "Confusing the past cause with the present result.",
+          "Mixing a mixed conditional with a simple second or third conditional meaning."
         ]
       },
       "content": [
@@ -92,6 +107,11 @@
               "targetText": "if she had not met Dr Osei, she would be sitting in a first-year lecture right now, studying the wrong subject.",
               "tone": "structure",
               "note": "past cause, present result"
+            },
+            {
+              "targetText": "had been sitting in the mountain rescue briefing room for eleven minutes",
+              "tone": "aux",
+              "note": "ongoing background before realization"
             }
           ]
         },
@@ -99,13 +119,30 @@
           "order": 2,
           "text": "The gap year had been a deliberate decision, but its repercussions had been harder to foresee. Her parents had been supportive in a careful way — the kind of support that asks \"are you sure?\" at regular intervals until you are no longer sure yourself. She had mitigated their concern with a spreadsheet: two placements, measurable goals, a date by which she would re-confirm her deferred place. Accountability in a document. It had worked.",
           "imagePlaceholder": "📊",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "had been a deliberate decision",
+              "tone": "aux",
+              "note": "past perfect state before reflection"
+            },
+            {
+              "targetText": "had mitigated their concern with a spreadsheet",
+              "tone": "structure",
+              "note": "earlier action before later result"
+            }
+          ]
         },
         {
           "order": 3,
           "text": "What the spreadsheet had not accounted for was the dilemma that emerged in month four: she was good at the lab work and she was good at the rescue coordination, and the two skills pointed in opposite directions.",
           "imagePlaceholder": "⚖️",
-          "grammarAnnotations": []
+          "grammarAnnotations": [
+            {
+              "targetText": "had not accounted for",
+              "tone": "aux",
+              "note": "past perfect negative"
+            }
+          ]
         },
         {
           "order": 4,
@@ -116,6 +153,11 @@
               "targetText": "If she were less stubborn by nature, she might have asked Dr Osei what to do.",
               "tone": "structure",
               "note": "present trait, past result"
+            },
+            {
+              "targetText": "had been running operations in the valley for twenty-two years",
+              "tone": "aux",
+              "note": "long duration before that meeting"
             }
           ]
         },
@@ -128,6 +170,11 @@
               "targetText": "If she had taken the direct university path, she would now have three months of her first year behind her",
               "tone": "structure",
               "note": "past choice, present consequence"
+            },
+            {
+              "targetText": "had instead was a different kind of foundation",
+              "tone": "aux",
+              "note": "contrast in past framing"
             }
           ]
         },
@@ -140,6 +187,11 @@
               "targetText": "If she had not been here for this year, she would not know how to read a contour map under pressure",
               "tone": "structure",
               "note": "past experience, present ability"
+            },
+            {
+              "targetText": "She had learned, over the past eight months, that not knowing was, in itself, a reasonable place from which to start.",
+              "tone": "aux",
+              "note": "past learning with present relevance"
             }
           ]
         }
@@ -217,6 +269,60 @@
           "correctAnswer": "If she were less stubborn, she might have asked Dr Osei earlier.",
           "explanation": "Present state (being stubborn) → past result (might have asked earlier). Structure: if + past simple, would have + pp. Option C is a third conditional (pure past). Option A is second conditional. Option D is first conditional."
         }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct mixed conditional sentence.",
+          "correctAnswer": "If Selin had applied earlier, she would be studying in London now.",
+          "explanation": "This links an imagined past action to a present result.",
+          "skillTag": "past_to_present_mixed",
+          "options": [
+            "If Selin had applied earlier, she would have been studying in London now.",
+            "If Selin had applied earlier, she would be studying in London now.",
+            "If Selin applied earlier, she would be studying in London now.",
+            "If Selin had applied earlier, she will be studying in London now."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: If I ___ more patient by nature, I might have handled that meeting better. (be)",
+          "correctAnswer": "were",
+          "explanation": "Use were to imagine a different present trait.",
+          "skillTag": "present_trait_past_result"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: If she had asked earlier, she would had more clarity now.",
+          "correctAnswer": "If she had asked earlier, she would have more clarity now.",
+          "explanation": "After would, use have, not had, in this mixed conditional structure.",
+          "skillTag": "would_have_present_result"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite as a mixed conditional: She did not take the internship, so she is not working in the lab now.",
+          "correctAnswer": "If she had taken the internship, she would be working in the lab now.",
+          "explanation": "Use if + past perfect with would + base verb for a present result.",
+          "skillTag": "past_to_present_mixed"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that best matches Selin's reflections on the gap year.",
+          "correctAnswer": "If she had chosen the safer course, she would feel less uncertain now.",
+          "explanation": "This links an imagined past choice to a present result.",
+          "skillTag": "past_choice_present_result",
+          "options": [
+            "If she had chosen the safer course, she would have felt less uncertain now.",
+            "If she had chosen the safer course, she would feel less uncertain now.",
+            "If she chose the safer course, she would feel less uncertain now.",
+            "If she had chosen the safer course, she will feel less uncertain now."
+          ]
+        }
       ]
     },
     {
@@ -280,6 +386,21 @@
           "The algorithm is being tested across five different emergency response scenarios. (present continuous passive — ongoing process)",
           "It has been estimated that the system will reduce response times by forty percent. (present perfect passive reporting verb)",
           "The interface had been redesigned four times before it was considered ready. (past perfect passive — completed before another past event)"
+        ],
+        "formGuide": [
+          "Build the passive with the correct tense of be plus the past participle.",
+          "Change be to match the time: is being tested, was finished, has been published, will be presented.",
+          "Use by + agent only when the doer matters."
+        ],
+        "usageNotes": [
+          "Use this when the focus is on the process, result, or object affected.",
+          "Passive forms are common in reports, technical writing, and formal descriptions."
+        ],
+        "contrastWith": "Different passive tenses keep the same core pattern, but the be form changes to match the time meaning.",
+        "commonMistakes": [
+          "Using the wrong tense of be.",
+          "Forgetting the past participle.",
+          "Mixing an active and passive structure in the same clause."
         ]
       },
       "content": [
@@ -297,6 +418,11 @@
               "targetText": "was now being tested",
               "tone": "structure",
               "note": "present continuous passive"
+            },
+            {
+              "targetText": "It has been estimated that this will cut mountain rescue response times by thirty-eight percent,",
+              "tone": "aux",
+              "note": "present perfect passive reporting form"
             }
           ]
         },
@@ -314,6 +440,11 @@
               "targetText": "the algorithm is adjusted",
               "tone": "structure",
               "note": "simple present passive"
+            },
+            {
+              "targetText": "can be patched overnight and redeployed by morning",
+              "tone": "aux",
+              "note": "modal passive"
             }
           ]
         },
@@ -331,6 +462,16 @@
               "targetText": "would be retained in parallel",
               "tone": "structure",
               "note": "future in the past passive"
+            },
+            {
+              "targetText": "had been made partially obsolete by the new database",
+              "tone": "aux",
+              "note": "past perfect passive result"
+            },
+            {
+              "targetText": "would be run simultaneously",
+              "tone": "structure",
+              "note": "future passive plan"
             }
           ]
         },
@@ -348,6 +489,16 @@
               "targetText": "would be used to inform the next phase of deployment",
               "tone": "structure",
               "note": "future passive"
+            },
+            {
+              "targetText": "was expected by the end of the month",
+              "tone": "aux",
+              "note": "simple past passive expectation"
+            },
+            {
+              "targetText": "Concrete observations were required.",
+              "tone": "structure",
+              "note": "simple past passive requirement"
             }
           ]
         },
@@ -359,6 +510,11 @@
             {
               "targetText": "had been confirmed",
               "tone": "aux",
+              "note": "past perfect passive"
+            },
+            {
+              "targetText": "had been chosen",
+              "tone": "structure",
               "note": "past perfect passive"
             }
           ]
@@ -372,6 +528,11 @@
               "targetText": "had been changed by the year",
               "tone": "structure",
               "note": "past perfect passive result"
+            },
+            {
+              "targetText": "are used regularly and taken seriously",
+              "tone": "aux",
+              "note": "present passive description"
             }
           ]
         }
@@ -460,6 +621,60 @@
           ],
           "correctAnswer": "The change she experienced was gradual and practical — not a sudden transformation but the result of consistent, serious work.",
           "explanation": "Paragraph 6 contrasts the brochure version of change — dramatic, identity-altering moments — with Selin's actual experience: quiet shifts from 'things changing when they are used regularly and taken seriously.' The gap year changed her through accumulation, not revelation."
+        }
+      ],
+      "grammarPractice": [
+        {
+          "order": 1,
+          "type": "multiple_choice",
+          "prompt": "Choose the correct passive sentence.",
+          "correctAnswer": "The final report had been finished before the board arrived.",
+          "explanation": "The passive can be formed in different tenses using be + past participle.",
+          "skillTag": "passive_past_perfect",
+          "options": [
+            "The final report had been finish before the board arrived.",
+            "The final report had been finished before the board arrived.",
+            "The final report was been finished before the board arrived.",
+            "The final report had finished before the board arrived."
+          ]
+        },
+        {
+          "order": 2,
+          "type": "fill_blank",
+          "prompt": "Complete the sentence: The prototype is being ___ in the lab this week.",
+          "correctAnswer": "tested",
+          "explanation": "Use being + past participle for the present continuous passive.",
+          "skillTag": "passive_present_continuous"
+        },
+        {
+          "order": 3,
+          "type": "error_correction",
+          "prompt": "Correct the sentence: The results have been publish online already.",
+          "correctAnswer": "The results have been published online already.",
+          "explanation": "Use the past participle published after have been.",
+          "skillTag": "passive_present_perfect"
+        },
+        {
+          "order": 4,
+          "type": "sentence_transformation",
+          "prompt": "Rewrite in the passive: The team will present the plan tomorrow.",
+          "correctAnswer": "The plan will be presented tomorrow.",
+          "explanation": "Use will be + past participle for the future passive.",
+          "skillTag": "passive_future"
+        },
+        {
+          "order": 5,
+          "type": "multiple_choice",
+          "prompt": "Choose the sentence that correctly uses the passive in a lab report style.",
+          "correctAnswer": "The final prototype is being tested by three engineers this week.",
+          "explanation": "The present continuous passive is correct for an action in progress now.",
+          "skillTag": "passive_process_now",
+          "options": [
+            "The final prototype is testing by three engineers this week.",
+            "The final prototype is being tested by three engineers this week.",
+            "The final prototype has being tested by three engineers this week.",
+            "The final prototype was being test by three engineers this week."
+          ]
         }
       ]
     }

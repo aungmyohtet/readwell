@@ -13,6 +13,7 @@ public class ChapterDetailResponse {
   private String title;
   private List<Chapter.VocabularyItem> vocabulary;
   private Chapter.GrammarFocus grammarFocus;
+  private List<Chapter.GrammarPracticeItem> grammarPractice;
   private List<Chapter.Paragraph> content;
   private List<Chapter.ComprehensionQuestion> comprehension;
   private boolean completed;

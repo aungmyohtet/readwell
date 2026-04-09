@@ -6,6 +6,7 @@ import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
   signInWithPopup,
+  signInWithRedirect,
   GoogleAuthProvider,
   signOut,
   onIdTokenChanged,
@@ -49,6 +50,11 @@ export class AuthService {
   async signInWithGoogle(): Promise<void> {
     const provider = new GoogleAuthProvider();
     await signInWithPopup(firebaseAuth, provider);
+  }
+
+  async signInWithGoogleRedirect(): Promise<void> {
+    const provider = new GoogleAuthProvider();
+    await signInWithRedirect(firebaseAuth, provider);
   }
 
   async signOut(): Promise<void> {
